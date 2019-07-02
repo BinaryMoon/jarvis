@@ -27,9 +27,6 @@ Jarvis includes support for most features in [Jetpack](https://wordpress.org/plu
 
 == Changelog ==
 
-= 2.0 =
-* wordpress.com release
-
 = 1.0 =
 * Initial release
 
