@@ -29,7 +29,6 @@
 
 		<a href="#header" class="scroll-to scroll-to-top">
 <?php
-	echo jarvis_svg( 'navigate-top' ); /* WPCS: xss ok. */
 	esc_html_e( 'Top', 'jarvis' );
 ?>
 		</a>

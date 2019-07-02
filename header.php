@@ -68,7 +68,6 @@
 
 			<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
 <?php
-	jarvis_svg( 'menu-rows' );
 	esc_html_e( 'Menu', 'jarvis' );
 ?>
 			</button>

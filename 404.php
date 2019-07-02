@@ -19,10 +19,6 @@
 
 	<main id="main">
 
-		<div class="header-404">
-			<?php jarvis_svg( '404' ); ?>
-		</div>
-
 		<div class="main-content">
 
 			<?php get_template_part( 'parts/content-empty' ); ?>

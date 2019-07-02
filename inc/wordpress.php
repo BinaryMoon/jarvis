@@ -35,16 +35,7 @@ function jarvis_enqueue() {
 		array(
 			// Translation strings.
 			'i18n' => array(
-				'slide_next' => '<span class="screen-reader-text">' . esc_html__( 'Next Slide', 'jarvis' ) . '</span>',
-				'slide_prev' => '<span class="screen-reader-text">' . esc_html__( 'Previous Slide', 'jarvis' ) . '</span>',
-				/* translators: # is the slide number, it will be replaced with 1/ 2/ 3 etc */
-				'slide_number' => esc_html__( 'Slide #', 'jarvis' ),
-				'slide_controls_label' => esc_html__( 'Slider Buttons', 'jarvis' ),
 				'menu' => esc_html__( 'Menu', 'jarvis' ),
-			),
-			// Slider settings.
-			'slider' => array(
-				'autoplay' => ( get_theme_mod( 'jarvis_autoplay_slider', false ) ) ? 1 : 0,
 			),
 			// Properties that are usable through javascript.
 			'is' => array(
@@ -142,13 +133,6 @@ add_filter( 'register_post_type_args', 'jarvis_post_type_arguments', 20, 2 );
 function jarvis_content_width() {
 
 	$width = 900;
-
-	// If using 'full width' template.
-	if ( is_page_template( 'templates/full-width-page.php' ) ) {
-
-		$width = 780;
-
-	}
 
 	$GLOBALS['content_width'] = apply_filters( 'jarvis_content_width', $width );
 
@@ -337,19 +321,6 @@ add_action( 'after_setup_theme', 'jarvis_after_setup_theme' );
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  */
 function jarvis_widgets_init() {
-
-	// Sidebar.
-	register_sidebar(
-		array(
-			'name' => esc_html__( 'Sidebar Widgets', 'jarvis' ),
-			'id' => 'sidebar-1',
-			'description' => esc_html__( 'Widgets that display on the side of your website', 'jarvis' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-wrap">',
-			'after_widget' => '</div></section>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>',
-		)
-	);
 
 	// Footer Widgets.
 	register_sidebar(
@@ -669,34 +640,6 @@ function jarvis_link_pages_link( $html ) {
 }
 
 add_filter( 'wp_link_pages_link', 'jarvis_link_pages_link' );
-
-
-/**
- * Include svg symbols so that they can be 'used' with the {@see jarvis_svg}
- * function.
- *
- * This uses `wp_footer` to place the svgs at the bottom of the page, which now
- * works in all major browsers.
- */
-function jarvis_include_svg_icons() {
-
-	// Define SVG sprite file.
-	$svg_icons = get_template_directory() . '/assets/svg/svg.svg';
-
-	// If it exists, include it.
-	if ( file_exists( $svg_icons ) ) {
-
-		// The '.svg-defs' class is hidden so that the reusable svgs are not
-		// visible.
-		echo '<span class="svg-defs">';
-		require_once $svg_icons;
-		echo '</span>';
-
-	}
-
-}
-
-add_action( 'wp_footer', 'jarvis_include_svg_icons' );
 
 
 /**

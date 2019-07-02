@@ -21,6 +21,6 @@
 		<input type="search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" class="search-field text" />
 	</label>
 
-	<button class="search-submit"><?php jarvis_svg( 'search' ); ?><span class="screen-reader-text"><?php echo esc_html__( 'Search', 'jarvis' ); ?></span></button>
+	<button class="search-submit"><?php echo esc_html__( 'Search', 'jarvis' ); ?></button>
 
 </form>

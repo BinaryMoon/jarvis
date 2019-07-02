@@ -28,7 +28,6 @@
  * test theme with and without infinite scroll
  * delete unused scripts
  * delete unused customizer controls
- * delete unused svgs
  * theme tags
  * theme description
  * screenshot.png (880 x 660)
@@ -61,9 +60,6 @@
 
 // WordPress specific functionality (actions and filters).
 require get_parent_theme_file_path( 'inc/wordpress.php' );
-
-// Add backwards compatability functions.
-// require get_parent_theme_file_path( 'inc/compat.php' );
 
 // Filters that modify/ add to WordPress html classes to make them more useful.
 require get_parent_theme_file_path( 'inc/wordpress-html-classes.php' );

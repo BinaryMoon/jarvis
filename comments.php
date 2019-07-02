@@ -84,7 +84,6 @@
 					'style' => 'ol',
 					'avatar_size' => apply_filters( 'jarvis_comments_avatar_size', 80 ),
 					'short_ping' => true,
-					'reply_text' => jarvis_svg( 'reply', false ) . '<span class="screen-reader-text">' . esc_html__( 'Reply', 'jarvis' ) . '</span>',
 				)
 			);
 ?>
@@ -105,7 +104,7 @@
 					'title_reply_after'  => '</h2>',
 					'cancel_reply_before' => '',
 					'cancel_reply_after' => '',
-					'cancel_reply_link' => jarvis_svg( 'close', false ) . '<span class="screen-reader-text">' . esc_html__( 'Cancel Reply', 'jarvis' ) . '</span>',
+					'cancel_reply_link' => esc_html__( 'Cancel Reply', 'jarvis' ),
 				)
 			);
 
@@ -122,10 +121,6 @@
 <?php
 		}
 ?>
-
-		<div class="user-icon-container">
-			<?php jarvis_svg( 'user' ); ?>
-		</div>
 
 	</section>
 
