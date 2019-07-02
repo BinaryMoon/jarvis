@@ -27,11 +27,7 @@
 	jarvis_social_links();
 ?>
 
-		<a href="#header" class="scroll-to scroll-to-top">
-<?php
-	esc_html_e( 'Top', 'jarvis' );
-?>
-		</a>
+		<a href="#header" class="scroll-to scroll-to-top"><?php esc_html_e( 'Top', 'jarvis' ); ?></a>
 
 <?php
 
