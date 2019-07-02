@@ -50,13 +50,6 @@
 				the_privacy_policy_link( '', '<span role="separator" aria-hidden="true" class="sep"></span>' );
 			}
 ?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'jarvis' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'jarvis' ); ?>" rel="generator">
-<?php
-			/* Translators: %s = WordPress (cms name) */
-			printf( esc_html__( 'Proudly powered by %s', 'jarvis' ), 'WordPress' );
-?>
-			</a>
-
 			<span role="separator" aria-hidden="true" class="sep"></span>
 <?php
 			/* Translators: %1$s = theme name, %2$s = theme author website */
