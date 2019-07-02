@@ -1,0 +1,26 @@
+{
+  "name": "jarvis",
+  "version": "1.0.0",
+  "description": "Jarvis WordPress Theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BinaryMoon/jarvis.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "binarymoon",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/BinaryMoon/jarvis/issues"
+  },
+  "homepage": "https://github.com/BinaryMoon/jarvis#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
