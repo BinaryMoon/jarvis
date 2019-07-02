@@ -53,7 +53,7 @@
 			<span role="separator" aria-hidden="true" class="sep"></span>
 <?php
 			/* Translators: %1$s = theme name, %2$s = theme author website */
-			printf( esc_html__( 'Theme: %1$s by %2$s.', 'jarvis' ), 'Jarvis', '<a href="https://prothemedesign.com/">Pro Theme Design</a>' );
+			printf( esc_html__( 'Theme: %1$s by %2$s', 'jarvis' ), 'Jarvis', '<a href="https://prothemedesign.com/">Pro Theme Design</a>' );
 ?>
 		</div>
 
