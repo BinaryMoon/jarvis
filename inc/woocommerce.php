@@ -110,24 +110,3 @@ add_filter( 'is_active_sidebar', 'jarvis_wc_is_sidebar_active', 10, 2 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-
-/**
- * Remove support for Jetpack infinite scroll for WooCommerce products since it
- * uses a different html structure.
- *
- * @param  WP_Query $query The current archive object.
- */
-function jarvis_cpt_archives_settings( $query ) {
-
-	// Define the context.
-	// Not on dashboard pages when inside the main query only on cpt archives.
-	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'product' ) ) {
-
-		// Remove infinite scroll inside this context.
-		remove_theme_support( 'infinite-scroll' );
-
-	}
-
-}
-
-add_action( 'pre_get_posts', 'jarvis_cpt_archives_settings' );

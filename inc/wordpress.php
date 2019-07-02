@@ -42,10 +42,6 @@ function jarvis_enqueue() {
 
 	wp_enqueue_script( 'jarvis-script-global', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.0', false );
 
-	if ( jarvis_has_featured_posts() ) {
-		wp_enqueue_script( 'jarvis-script-slider', get_theme_file_uri( '/assets/scripts/jquery.slider.js' ), array( 'jquery' ), '1.5.3', false );
-	}
-
 	// Localized Javascript strings and provide access to common properties.
 	wp_localize_script(
 		'jarvis-script-global',

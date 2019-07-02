@@ -17,7 +17,7 @@
 	get_header();
 ?>
 
-	<main id="main">
+	<main id="main" class="main-content content-posts content-masonry">
 
 <?php
 	if ( have_posts() ) {
@@ -36,23 +36,12 @@
 
 		</header>
 
-		<div id="infinite-scroll" class="content-masonry-wrapper">
-
-			<div id="main-content" class="main-content content-posts content-masonry">
-
 <?php
 		while ( have_posts() ) {
 			the_post();
 			get_template_part( 'parts/content', 'format-' . get_post_format() );
 		}
-?>
 
-
-			</div>
-
-		</div>
-
-<?php
 		the_posts_pagination(
 			array(
 				'mid_size' => 2,
@@ -63,15 +52,9 @@
 		);
 
 	} else {
-?>
 
-		<div class="main-content">
+		get_template_part( 'parts/content-empty' );
 
-			<?php get_template_part( 'parts/content-empty' ); ?>
-
-		</div>
-
-<?php
 	}
 ?>
 

@@ -17,7 +17,7 @@
 	get_header();
 ?>
 
-	<main id="main">
+	<main id="main" class="main-content testimonials content-testimonials content-masonry">
 
 <?php
 
@@ -59,10 +59,6 @@
 
 		</header>
 
-		<div id="infinite-scroll" class="content-masonry-wrapper">
-
-			<div id="main-content" class="main-content testimonials content-testimonials content-masonry">
-
 <?php
 		while ( have_posts() ) {
 
@@ -70,23 +66,11 @@
 			get_template_part( 'parts/content', 'testimonial' );
 
 		}
-?>
 
-			</div>
-
-		</div>
-
-<?php
 	} else {
-?>
 
-		<div class="main-content">
+		get_template_part( 'parts/content-empty' );
 
-			<?php get_template_part( 'parts/content-empty' ); ?>
-
-		</div>
-
-<?php
 	}
 ?>
 

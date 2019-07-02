@@ -59,7 +59,6 @@ Tags:
 , flexible-header
 , front-page-post-form
 , full-width-template
-, infinite-scroll
 , microformats
 , multiple-menus
 , post-formats
@@ -3648,28 +3647,6 @@ a.thumbnail img {
   line-height: 1.75;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-}
-
-.infinite-scroll #infinite-handle,
-.infinite-scroll .infinite-loader {
-  width: 100%;
-}
-
-.infinite-scroll #infinite-handle button {
-  background: transparent;
-  font-weight: bold;
-}
-
-.infinite-scroll #infinite-handle button .icon {
-  height: 1em;
-  width: 1em;
-  margin-right: 0.5em;
-  margin-left: 0;
-}
-
-.infinite-scroll #infinite-handle button:focus, .infinite-scroll #infinite-handle button:hover {
-  text-decoration: underline;
-  color: #000;
 }
 
 .category-description {

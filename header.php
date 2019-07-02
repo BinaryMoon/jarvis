@@ -90,10 +90,8 @@
 
 	</header>
 
-	<?php do_action( 'before' ); ?>
-
 	<div class="container" id="site-content">
-<?php
-	jarvis_header();
 
-	get_template_part( 'parts/jetpack-featured-content' );
+<?php
+
+	jarvis_header();

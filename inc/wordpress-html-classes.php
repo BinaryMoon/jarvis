@@ -14,8 +14,6 @@
 /**
  * Add additional body classes to body_class function call.
  *
- * Checks to see if theme has featured posts using {@see jarvis_has_featured_posts}.
- *
  * @param array $classes Array of body classes.
  * @return array
  */
@@ -33,10 +31,6 @@ function jarvis_body_class( $classes ) {
 
 	if ( is_active_sidebar( 'sidebar-2' ) ) {
 		$classes[] = 'themes-sidebar2-active';
-	}
-
-	if ( jarvis_has_featured_posts() ) {
-		$classes[] = 'themes-has-featured-posts';
 	}
 
 	if ( display_header_text() ) {

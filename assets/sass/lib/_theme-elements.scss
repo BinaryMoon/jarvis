@@ -404,49 +404,6 @@ form.search-form {
 
 }
 
-
-// Infinite scroll
-.infinite-scroll {
-
-	#infinite-handle,
-	.infinite-loader {
-
-		// Used for masonry layouts
-		width: 100%;
-
-	}
-
-
-	#infinite-handle {
-
-		button {
-
-			background: transparent;
-			font-weight: bold;
-
-			.icon {
-
-				height: 1em;
-				width: 1em;
-				margin-right: $style-spacing;
-				margin-left: 0;
-
-			}
-
-			&:focus,
-			&:hover {
-
-				text-decoration: underline;
-				color: $canvas-grey-100;
-
-			}
-
-		}
-
-	}
-
-}
-
 .category-description {
 
 	margin-bottom: 0;

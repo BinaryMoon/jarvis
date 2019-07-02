@@ -6,7 +6,7 @@
  *
  * Template Name: Child Page Grid
  *
- * @package Jarvis
+ * @package Granule
  * @subpackage PageTemplate
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -19,8 +19,6 @@
 
 	<main id="main">
 
-		<div class="main-content content-single">
-
 <?php
 	if ( have_posts() ) {
 
@@ -32,11 +30,6 @@
 
 		}
 	}
-?>
-
-		</div>
-
-<?php
 
 	// Get a list of the children for the current page.
 	$child_pages = jarvis_child_pages();
@@ -45,9 +38,7 @@
 	if ( $child_pages->have_posts() ) {
 ?>
 
-		<div id="infinite-scroll" class="content-masonry-wrapper">
-
-			<div class="entry-children content-posts content-masonry">
+		<div class="entry-children content-posts content-masonry">
 
 <?php
 		while ( $child_pages->have_posts() ) {
@@ -58,8 +49,6 @@
 
 		}
 ?>
-
-			</div>
 
 		</div>
 
