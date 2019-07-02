@@ -17,7 +17,7 @@
 	get_header();
 ?>
 
-	<main id="main" class="main-content testimonials content-testimonials content-masonry">
+	<main id="main" class="main-content testimonials content-testimonials">
 
 <?php
 

@@ -13,7 +13,7 @@
 	get_header();
 ?>
 
-	<main id="main" class="main-content content-posts content-masonry">
+	<main id="main" class="main-content content-posts">
 
 <?php
 	if ( have_posts() ) {

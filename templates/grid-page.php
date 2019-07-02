@@ -38,7 +38,7 @@
 	if ( $child_pages->have_posts() ) {
 ?>
 
-		<div class="entry-children content-posts content-masonry">
+		<div class="entry-children content-posts">
 
 <?php
 		while ( $child_pages->have_posts() ) {

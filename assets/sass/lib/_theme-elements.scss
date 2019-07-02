@@ -116,13 +116,6 @@
 	@include clear();
 	display:block;
 
-	// define the base size of a masonry grid cell
-	.grid-sizer {
-
-		width: 50%;
-
-	}
-
 	.testimonial {
 
 		@include grid( 6 );

@@ -41,24 +41,8 @@ main {
 
 }
 
-// archive content
-// used for infinite scroll & often includes masonry content
-#main-content {
-
-	@include clear;
-	margin-bottom: $grid-line-height * 5;
-
-}
-
 /* archive & excerpted posts */
 .content-posts {
-
-	&.content-masonry {
-
-		@include clear;
-		position: relative;
-
-	}
 
 	article {
 

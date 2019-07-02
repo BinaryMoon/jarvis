@@ -3182,27 +3182,7 @@ main.full-width,
   display: block;
 }
 
-#main-content {
-  margin-bottom: 7.5rem;
-}
-
-#main-content:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 /* archive & excerpted posts */
-.content-posts.content-masonry {
-  position: relative;
-}
-
-.content-posts.content-masonry:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .content-posts article {
   width: 100%;
   margin-bottom: 3rem;
@@ -3400,10 +3380,6 @@ main.full-width,
   content: "";
   display: block;
   clear: both;
-}
-
-.content-testimonials .grid-sizer {
-  width: 50%;
 }
 
 .content-testimonials .testimonial {

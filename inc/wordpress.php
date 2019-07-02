@@ -34,12 +34,6 @@ function jarvis_enqueue() {
 		wp_enqueue_style( 'jarvis-fonts', $fonts_url, array(), '1.0' );
 	}
 
-	// Javascript.
-	// Always loaded in customizer for cases where widgets are added to an empty sidebar.
-	if ( is_active_sidebar( 'sidebar-2' ) || ! is_singular() || is_customize_preview() ) {
-		wp_enqueue_script( 'masonry' );
-	}
-
 	wp_enqueue_script( 'jarvis-script-global', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.0', false );
 
 	// Localized Javascript strings and provide access to common properties.

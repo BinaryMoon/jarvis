@@ -52,7 +52,7 @@
 	if ( $query->have_posts() ) {
 ?>
 
-		<div id="main-content" class="main-content content-posts content-masonry">
+		<div id="main-content" class="main-content content-posts">
 
 <?php
 		while ( $query->have_posts() ) {
