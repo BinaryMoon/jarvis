@@ -80,16 +80,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_parent_theme_file_path( 'inc/jetpack.php' );
 }
 
-// Custom Custmomizer control that adds a category dropdown select box.
-require get_parent_theme_file_path( 'inc/class-jarvis-category-dropdown-custom-control.php' );
-
-// Custom Customizer control that adds a drag and drop system for rearranging
-// content.
-require get_parent_theme_file_path( 'inc/class-jarvis-dragdrop-list-control.php' );
-
-// Custom Custmomizer control that adds a custom dropdown select box.
-require get_parent_theme_file_path( 'inc/class-jarvis-dropdown-custom-control.php' );
-
 // Customizer controls for setting theme properties.
 require get_parent_theme_file_path( 'inc/customizer.php' );
 
