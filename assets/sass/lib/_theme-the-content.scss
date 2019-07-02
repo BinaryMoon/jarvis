@@ -1,0 +1,24 @@
+/*!
+ * ## - The Content
+ * Styles for blog post content
+ * Includes special styles such as drop caps, and intro text
+ */
+// @package Jarvis
+
+.the-content {
+
+	@include clear;
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	// Remove margin on first child
+	> :first-child {
+
+		margin-top: 0;
+
+	}
+
+	// Include post content as a mixin so that it can be reproduced in the editor stylesheet.
+	// The mixin can be found in lib/_mixins.scss
+	@include the-content;
+
+}

@@ -1,0 +1,82 @@
+/*!
+ * ## - Header
+ */
+// @package Jarvis
+
+.site-header {
+
+	.custom-logo-link {
+
+		img {
+
+			max-height: 3rem;
+			width: auto;
+			display: block;
+
+		}
+
+	}
+
+	.branding {
+
+		.site-title a,
+		.site-title {
+
+			font-family: $font-family-header;
+			@include modular-scale( alpha );
+			margin: 0;
+
+		}
+
+		.site-description {
+
+			font-family: $font-family-header;
+			@include modular-scale( epsilon );
+			margin: 0;
+
+		}
+	}
+
+	// align, menu color
+	@include display-menu();
+
+	.menu {
+
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+
+		//@include modular-scale( eta );
+
+		a {
+		}
+
+		li {
+			ul {
+				li {
+					a {
+						&:hover {
+						}
+					}
+				}
+			}
+
+			&.current-menu-item > a {
+
+			}
+		}
+
+	}
+
+}
+
+a.header-image {
+
+	display: block;
+
+	img {
+
+		display: block;
+		margin: 0 auto;
+
+	}
+
+}

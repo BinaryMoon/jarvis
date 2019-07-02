@@ -1,0 +1,43 @@
+@import "lib/_variables";
+@import "lib/_mixins";
+
+@import "../../../__sass/lib/_variables";
+@import "../../../__sass/lib/_mixins";
+
+.editor-rich-text__tinymce.mce-content-body {
+
+	line-height: inherit;
+
+}
+
+//.editor-default-block-appender input[type="text"].editor-default-block-appender__content,
+.editor-post-title .editor-post-title__input {
+//.edit-post-visual-editor,
+//.edit-post-visual-editor p {
+
+	font-family: $font-family-header;
+
+}
+
+.edit-post-visual-editor {
+
+	&,
+	p {
+
+		@include body();
+
+	}
+
+	@import "../../../__sass/lib/components/_typography";
+
+	//	@include the-content();
+
+	blockquote {
+
+		@include blockquote;
+
+	}
+
+	@include the-content();
+
+}

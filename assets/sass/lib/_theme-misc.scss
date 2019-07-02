@@ -1,0 +1,31 @@
+/*!
+ * ## - Misc
+ * Other random styles that don't fit anywhere else
+ */
+// @package Jarvis
+
+.header-404 {
+
+	.icon {
+		width: 100%;
+		height: ( $grid-line-height * 10 );
+	}
+
+}
+
+.user-icon-container {
+
+	display: none;
+
+}
+
+// hide jetpack related posts categories
+#jp-relatedposts {
+
+	.jp-relatedposts-post-context {
+
+		display: none;
+
+	}
+
+}

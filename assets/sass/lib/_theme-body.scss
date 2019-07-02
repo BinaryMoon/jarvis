@@ -1,0 +1,279 @@
+/*!
+ * ## - Body
+ * Site content, blog posts etc
+ */
+// @package Jarvis
+
+/* layout */
+main {
+
+	@include grid( 8 );
+
+	&.full-width,
+	.themes-sidebar1-inactive & {
+
+		@include grid( 12 );
+
+	}
+
+}
+
+.sidebar-main {
+
+	@include grid( 4 );
+
+}
+
+// navigation
+.image-navigation,
+.comment-navigation,
+.post-navigation {
+
+	clear: both;
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	.meta-nav {
+
+		@include post-meta-data;
+		display: block;
+
+	}
+
+}
+
+// archive content
+// used for infinite scroll & often includes masonry content
+#main-content {
+
+	@include clear;
+	margin-bottom: $grid-line-height * 5;
+
+}
+
+/* archive & excerpted posts */
+.content-posts {
+
+	&.content-masonry {
+
+		@include clear;
+		position: relative;
+
+	}
+
+	article {
+
+		width: 100%;
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+		@include clear;
+
+		.thumbnail {
+
+		}
+
+		h2.entry-title {
+
+		}
+
+		// post formats
+
+		&.format-standard {
+
+		}
+
+		&.format-quote {
+
+		}
+
+		&.format-audio {
+
+			.wp-playlist,
+			.mejs-container {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
+		&.format-video {
+
+			.jetpack-video-wrapper {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
+		&.format-image {
+
+			.thumbnail {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
+		&.format-gallery {
+
+			.post-gallery,
+			.tiled-gallery {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
+		&.post-loaded {
+
+			@include animation( fade-in 0.5s );
+
+		}
+
+	}
+}
+
+/* single post and page */
+.content-single {
+
+	article {
+
+		.entry-title {
+
+			// Keep this since we swap between h1 and h2 depending upon if there
+			// is a static front page set.
+			@include modular-scale( beta );
+
+			font-weight: bold;
+
+		}
+
+	}
+
+}
+
+/* comments layout */
+.content-comments {
+
+	padding: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+	clear: both;
+
+	.comment-reply-title {
+
+		margin-bottom: 0;
+
+	}
+
+	ol.comment-list {
+
+		#respond {
+
+			// padding: 0 ( $grid-gutter / 2 );
+
+		}
+
+		li.comment,
+		li.trackback,
+		li.pingback {
+
+			.comment-body {
+
+				//padding: ( $grid-line-height ) ( $grid-gutter / 2 );
+				//margin-bottom: $border-width;
+
+				p {
+
+					&:last-child {
+
+						margin-bottom: $grid-line-height / 2;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		li.comment {
+
+			.reply {
+
+				display: inline;
+
+				a {
+
+					color: $canvas-grey-90;
+
+					.icon {
+
+						position: absolute;
+						margin-top: 0.3em;
+						width: 2em;
+						height: 1.2em;
+
+					}
+
+				}
+
+			}
+
+			&.bypostauthor {
+
+				> article {
+
+					// background: $canvas-white;
+
+					.fn {
+
+						.icon {
+
+							// color: #f00;
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.no-comments {
+
+		background: $canvas-color;
+		color: contrast( $canvas-color );
+		padding: $grid-line-height ( $grid-gutter / 2 );
+
+	}
+
+}
+
+// attachment page
+.attachment {
+
+	.attachment-image {
+
+		text-align: center;
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	}
+
+	.attachment-description {
+
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	}
+
+	.attachment-caption {
+
+		font-style: italic;
+
+	}
+
+}

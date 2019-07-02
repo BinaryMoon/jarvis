@@ -1,0 +1,15 @@
+// @package Jarvis
+
+body#tinymce.wp-editor {
+
+	@import "lib/_variables";
+	@import "lib/_mixins";
+
+	@import "../../../__sass/lib/_variables";
+	@import "../../../__sass/lib/_mixins";
+
+	@include body();
+	@import "../../../__sass/lib/components/_typography";
+	@include the-content();
+
+}
