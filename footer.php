@@ -22,7 +22,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 <?php
-	get_sidebar( 'footer' );
+	get_sidebar();
 
 	jarvis_social_links();
 ?>
