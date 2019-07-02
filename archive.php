@@ -44,14 +44,7 @@
 
 		}
 
-		the_posts_pagination(
-			array(
-				'mid_size' => 2,
-				'prev_text' => esc_html__( 'Newer', 'jarvis' ),
-				'next_text' => esc_html__( 'Older', 'jarvis' ),
-				'before_page_number' => '<span class="screen-reader-text"> ' . __( 'page', 'jarvis' ) . ' </span>',
-			)
-		);
+		get_template_part( 'parts/archive-pagination' );
 
 	} else {
 
