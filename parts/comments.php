@@ -2,7 +2,7 @@
 /**
  * Comment Form Template
  *
- * Reusable code for display comments on a page
+ * Reusable code for displaying comments on a page
  *
  * @package Jarvis
  * @subpackage TemplatePart

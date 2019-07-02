@@ -38,8 +38,10 @@
 
 <?php
 		while ( have_posts() ) {
+
 			the_post();
 			get_template_part( 'parts/content', 'format-' . get_post_format() );
+
 		}
 
 		the_posts_pagination(
