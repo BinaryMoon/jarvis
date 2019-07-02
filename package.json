@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/BinaryMoon/jarvis#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/register": "^7.4.4",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2"
   }
