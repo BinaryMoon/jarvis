@@ -17,13 +17,9 @@
 	get_header();
 ?>
 
-	<main id="main">
+	<main id="main" class="main-content">
 
-		<div class="main-content">
-
-			<?php get_template_part( 'parts/content-empty' ); ?>
-
-		</div>
+		<?php get_template_part( 'parts/content-empty' ); ?>
 
 	</main>
 
