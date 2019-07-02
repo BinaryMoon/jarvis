@@ -43,7 +43,6 @@
  * check custom page template styles
  * check custom logo properties are appropriate
  * rtl.css - "gulp rtl --theme jarvis"
- * change google font slugs so they match the font names (in jarvis_fonts() inc/wordpress.php and inc/wpcom.php)
  * theme scan
  * test site logo
  * test block colours

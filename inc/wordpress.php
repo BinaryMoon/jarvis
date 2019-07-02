@@ -15,10 +15,9 @@
  */
 
 /**
- * Enqueue scripts, styles, and fonts.
+ * Enqueue scripts, and styles.
  *
  * Also sets javascript properties that need to access PHP.
- * Fonts are created with {@see jarvis_fonts}.
  *
  * @global array $wp_scripts
  */
@@ -26,13 +25,6 @@ function jarvis_enqueue() {
 
 	// Styles.
 	wp_enqueue_style( 'jarvis-style', get_stylesheet_uri(), null, '1.0' );
-
-	// Fonts.
-	$fonts_url = jarvis_fonts();
-
-	if ( $fonts_url ) {
-		wp_enqueue_style( 'jarvis-fonts', $fonts_url, array(), '1.0' );
-	}
 
 	wp_enqueue_script( 'jarvis-script-global', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.0', false );
 
@@ -80,13 +72,6 @@ function jarvis_editor_blocks_styles() {
 
 	// Load the theme styles within Gutenberg.
 	wp_enqueue_style( 'jarvis-editor-blocks', get_theme_file_uri( '/assets/css/editor-blocks.css' ), null, '1.2' );
-
-	// Editor Style.
-	$fonts_url = jarvis_fonts();
-
-	if ( $fonts_url ) {
-		wp_enqueue_style( 'jarvis-fonts', $fonts_url, array(), '1.0' );
-	}
 
 	/**
 	 * Overwrite Core theme styles with empty styles.
@@ -173,74 +158,7 @@ add_action( 'template_redirect', 'jarvis_content_width', 0 );
 
 
 /**
- * Get url for embedding Google fonts.
- *
- * Output can be filtered with 'jarvis_fonts' filter.
- *
- * @return string|boolean Font url or false if there are no fonts.
- */
-function jarvis_fonts() {
-
-	$fonts = array();
-
-	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== esc_html_x( 'on', 'Merriweather: on or off', 'jarvis' ) ) {
-		$fonts['merriweather'] = 'Merriweather:300,700,300italic';
-	}
-
-	/* translators: If there are characters in your language that are not supported by Merriweather Sans, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== esc_html_x( 'on', 'Merriweather Sans: on or off', 'jarvis' ) ) {
-		$fonts['merriweather-sans'] = 'Merriweather Sans:300,700,300italic';
-	}
-
-	// Filter fonts. Allows them to be disabled/ added to.
-	$fonts = apply_filters( 'jarvis_fonts', $fonts );
-
-	if ( $fonts ) {
-		// Build font embed query string.
-		$query_args = array(
-			'family' => rawurlencode( implode( '|', $fonts ) ),
-			'subset' => rawurlencode( 'latin,latin-ext' ),
-			'display' => 'swap',
-		);
-
-		return add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return false;
-
-}
-
-
-/**
- * Add preconnect for Google Fonts.
- *
- * @param array  $urls          URLs to print for resource hints.
- * @param string $relation_type The relation type the URLs are printed.
- * @return array URLs to print for resource hints.
- */
-function jarvis_resource_hints( $urls, $relation_type ) {
-
-	if ( wp_style_is( 'jarvis-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
-
-		$urls[] = array(
-			'href' => 'https://fonts.gstatic.com',
-			'crossorigin',
-		);
-
-	}
-
-	return $urls;
-
-}
-
-add_filter( 'wp_resource_hints', 'jarvis_resource_hints', 10, 2 );
-
-
-/**
  * Set up all the theme properties and extras.
- *
- * Also adds fonts to editor styles {@see jarvis_fonts}.
  */
 function jarvis_after_setup_theme() {
 
@@ -405,14 +323,6 @@ function jarvis_after_setup_theme() {
 			'menu-2' => esc_html__( 'Header Bottom', 'jarvis' ),
 		)
 	);
-
-	/**
-	 * Editor Style.
-	 */
-	$fonts_url = jarvis_fonts();
-	if ( $fonts_url ) {
-		add_editor_style( $fonts_url );
-	}
 
 	add_editor_style( 'assets/css/editor-styles.css' );
 
@@ -717,8 +627,6 @@ add_filter( 'wp_page_menu', 'jarvis_change_menu' );
  * site.
  *
  * This helps to improve branding and personalisation.
- *
- * @link https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
  */
 function jarvis_theme_colour() {
 
