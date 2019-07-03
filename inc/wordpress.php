@@ -479,37 +479,6 @@ add_filter( 'the_content', 'jarvis_post_terms' );
 
 
 /**
- * Wrap post content with a standard div that can be styled in any way.
- *
- * This means the content can be customized without affecting other things that
- * get appended/ prepended to the_content such as Jetpack related posts.
- *
- * @param string $content The content to be wrapped.
- * @return string Modified content with html wrapper.
- */
-function jarvis_wrapper_content( $content ) {
-
-	if ( ! is_singular() ) {
-
-		return $content;
-
-	}
-
-	if ( empty( $content ) ) {
-
-		return $content;
-
-	}
-
-	// Includes some new line characters so that paragraphs tags are properly applied to all paragraphs.
-	return '<div class="the-content">' . "\n\n" . $content . "\n\n" . '</div>';
-
-}
-
-add_filter( 'the_content', 'jarvis_wrapper_content', 9 );
-
-
-/**
  * Add a span around the title prefix so that the prefix can be hidden with CSS
  * if desired.
  *
