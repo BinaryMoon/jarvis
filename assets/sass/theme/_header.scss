@@ -5,7 +5,17 @@
 
 .site-header {
 
+	.site-header-content {
+
+		display: flex;
+		padding: ( $grid-line-height / 2 ) 0;
+		flex-wrap: wrap;
+
+	}
+
 	.custom-logo-link {
+
+		background: black;
 
 		img {
 
@@ -19,52 +29,62 @@
 
 	.branding {
 
+		padding: 0 ( $grid-gutter );
+
 		.site-title a,
 		.site-title {
 
 			font-family: $font-family-header;
-			@include modular-scale( alpha );
+			@include modular-scale( delta );
+			font-weight: bold;
 			margin: 0;
+			color: $canvas-grey-100;
 
 		}
 
 		.site-description {
 
-			font-family: $font-family-header;
-			@include modular-scale( epsilon );
+			@include post-meta-data();
 			margin: 0;
 
 		}
-	}
 
-	// align, menu color
-	@include display-menu();
+	}
 
 	.menu {
 
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
-
-		//@include modular-scale( eta );
-
-		a {
-		}
-
-		li {
-			ul {
-				li {
-					a {
-						&:hover {
-						}
-					}
-				}
-			}
-
-			&.current-menu-item > a {
-
-			}
-		}
+		padding: 1rem;
 
 	}
+
+	// align, menu color
+	// @include display-menu();
+
+	// .menu {
+
+	// 	padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+
+	// 	//@include modular-scale( eta );
+
+	// 	a {
+	// 	}
+
+	// 	li {
+	// 		ul {
+	// 			li {
+	// 				a {
+	// 					&:hover {
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+
+	// 		&.current-menu-item > a {
+
+	// 		}
+	// 	}
+
+	// }
 
 }
 

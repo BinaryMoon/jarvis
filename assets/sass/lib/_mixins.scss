@@ -10,9 +10,10 @@
 }
 
 // reusable mixin for consistent font styling on meta elements
-@mixin post-meta-data( $font-size: eta ) {
+@mixin post-meta-data( $font-size: zeta ) {
 
 	@include modular-scale( $font-size );
+	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: $font-uppercase-spacing;
 

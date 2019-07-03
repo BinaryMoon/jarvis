@@ -1,8 +1,8 @@
 // @package Jarvis
 
 // font overrides
-$font-family-sans: 'Merriweather Sans', sans-serif;
-$font-family-serif: 'Merriweather', serif;
+$font-family-sans: Cambria, Georgia, serif;
+$font-family-serif: Cambria, Georgia, serif;
 //$font-base: 18;
 $font-family-body: $font-family-serif;
 $font-family-header: $font-family-sans;
@@ -56,7 +56,7 @@ $comments-margin: 4%;
 //$grid-line-height: $line-height * 1rem;
 //$grid-total-width: 75em;
 //$grid-line-height-multiplier: 1.5;
-//$grid-gutter: 3rem;
+$grid-gutter: 1rem;
 //$grid-column-gutter: 1 / 2;
 
 // menu properties
@@ -74,9 +74,9 @@ $font-sizes: (
 	// alpha: ( size: 4rem, height: 1.25 ),
 	// beta: ( size: 3.25rem, height: 1.25 ),
 	// gamma: ( size: 2.5rem, height: 1.25 ),
-	// delta: ( size: 1.75rem, height: 1.5 ),
+	delta: ( size: 1.625rem, height: 1.5 ),
 	// epsilon: ( size: 1.25rem, height: 1.5 ),
-	// zeta: ( size: 1rem, height: 1.75 ),
+	zeta: ( size: 0.875rem, height: 1.75 ),
 	// eta: ( size: 0.75rem, height: 1.75 ),
 	// micro: ( size: 0.5rem, height: 1.75 ),
 );
