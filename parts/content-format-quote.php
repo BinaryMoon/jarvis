@@ -34,6 +34,7 @@
 		<?php echo wp_kses_post( wpautop( $content ) ); ?>
 
 		<span class="permalink">
+
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 				<?php echo esc_html_x( '#', 'A symbol used to link to a blog post', 'jarvis' ); ?>
 				<span class="screen-reader-text">
@@ -43,6 +44,7 @@
 ?>
 				</span>
 			</a>
+
 		</span>
 
 	</blockquote>

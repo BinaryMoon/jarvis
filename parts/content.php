@@ -15,27 +15,15 @@
 
 <?php
 
-	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-
 	get_template_part( 'parts/entry-meta' );
+
+	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 ?>
 
 	<section class="entry entry-archive">
 
-<?php
-	if ( $image ) {
-?>
-
-	<a href="<?php the_permalink(); ?>" class="thumbnail" aria-hidden="true" tabindex="-1">
-		<?php echo $image; // WPCS: XSS OK. ?>
-	</a>
-
-<?php
-	}
-
-	the_excerpt();
-?>
+		<?php the_excerpt(); ?>
 
 		<p><a href="<?php the_permalink(); ?>" class="read-more"><?php jarvis_read_more_text(); ?></a></p>
 
