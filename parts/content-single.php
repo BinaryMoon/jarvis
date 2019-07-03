@@ -47,7 +47,7 @@
 
 	if ( is_singular( array( 'post' ) ) ) {
 
-		jarvis_author_bio();
+		jarvis_contributor();
 
 	}
 ?>
