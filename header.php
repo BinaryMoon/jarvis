@@ -31,22 +31,24 @@
 
 	<header class="site-header" id="header" role="banner">
 
-		<?php the_custom_logo(); ?>
+		<div class="site-header-content container">
 
-		<div class="branding">
+			<?php the_custom_logo(); ?>
+
+			<div class="branding">
 
 <?php
 	if ( is_front_page() && ! is_paged() ) {
 ?>
-			<h1 class="site-title">
-				<?php bloginfo( 'name' ); ?>
-			</h1>
+				<h1 class="site-title">
+					<?php bloginfo( 'name' ); ?>
+				</h1>
 <?php
 	} else {
 ?>
-			<p class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</p>
+				<p class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</p>
 <?php
 	}
 
@@ -55,24 +57,23 @@
 
 	if ( $description || is_customize_preview() ) {
 ?>
-			<p class="site-description">
-				<?php echo $description; /* WPCS: xss ok. */ ?>
-			</p>
+				<p class="site-description">
+					<?php echo $description; /* WPCS: xss ok. */ ?>
+				</p>
 <?php
 	}
 ?>
 
-		</div>
+			</div>
 
-		<nav class="menu menu-primary" aria-label="<?php esc_attr_e( 'Primary Menu', 'jarvis' ); ?>">
+			<nav class="menu menu-primary" aria-label="<?php esc_attr_e( 'Primary Menu', 'jarvis' ); ?>">
 
-			<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
-<?php
-	esc_html_e( 'Menu', 'jarvis' );
-?>
-			</button>
+				<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
+					<?php esc_html_e( 'Menu', 'jarvis' ); ?>
+				</button>
 
 <?php
+
 	wp_nav_menu(
 		array(
 			'theme_location' => 'menu-1',
@@ -83,9 +84,12 @@
 			'fallback_cb' => false,
 		)
 	);
+
 ?>
 
-		</nav>
+			</nav>
+
+		</div>
 
 	</header>
 
