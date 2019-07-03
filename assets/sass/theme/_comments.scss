@@ -1,0 +1,105 @@
+/*!
+ * ## - Comments
+ * Site content, blog posts etc
+ */
+// @package Jarvis
+
+/* comments layout */
+.content-comments {
+
+	padding: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+	clear: both;
+
+	.comment-reply-title {
+
+		margin-bottom: 0;
+
+	}
+
+	ol.comment-list {
+
+		#respond {
+
+			// padding: 0 ( $grid-gutter / 2 );
+
+		}
+
+		li.comment,
+		li.trackback,
+		li.pingback {
+
+			.comment-body {
+
+				//padding: ( $grid-line-height ) ( $grid-gutter / 2 );
+				//margin-bottom: $border-width;
+
+				p {
+
+					&:last-child {
+
+						margin-bottom: $grid-line-height / 2;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		li.comment {
+
+			.reply {
+
+				display: inline;
+
+				a {
+
+					color: $canvas-grey-90;
+
+					.icon {
+
+						position: absolute;
+						margin-top: 0.3em;
+						width: 2em;
+						height: 1.2em;
+
+					}
+
+				}
+
+			}
+
+			&.bypostauthor {
+
+				> article {
+
+					// background: $canvas-white;
+
+					.fn {
+
+						.icon {
+
+							// color: #f00;
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.no-comments {
+
+		background: $canvas-color;
+		color: contrast( $canvas-color );
+		padding: $grid-line-height ( $grid-gutter / 2 );
+
+	}
+
+}

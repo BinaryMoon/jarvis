@@ -1,0 +1,140 @@
+/*!
+ * ## - Body
+ * Site content, blog posts etc
+ */
+// @package Jarvis
+
+/* single post and page */
+.content-single {
+
+	article {
+
+		.entry-title {
+
+			// Keep this since we swap between h1 and h2 depending upon if there
+			// is a static front page set.
+			@include modular-scale( beta );
+
+			font-weight: bold;
+
+		}
+
+	}
+
+}
+
+// attachment page
+.attachment {
+
+	.attachment-image {
+
+		text-align: center;
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	}
+
+	.attachment-description {
+
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	}
+
+	.attachment-caption {
+
+		font-style: italic;
+
+	}
+
+}
+
+
+/* child pages (on child page template) */
+.child-page {
+
+	@include grid( 4, 8 );
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	h2 {
+
+		@include modular-scale( epsilon );
+
+	}
+
+	&:nth-child( 2n + 2 ) {
+
+		padding-right: 0;
+
+	}
+
+	&:nth-child( 2n + 1 ) {
+
+		clear: both;
+		padding-left: 0;
+
+	}
+
+}
+
+/* testimonials */
+.content-testimonials {
+
+	@include clear();
+	display: block;
+
+	.testimonial {
+
+		@include grid( 6 );
+		margin-bottom: $grid-line-height;
+
+		.entry {
+
+			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+			background: rgba( $canvas-grey-50, 0.1 );
+			margin-bottom: $grid-line-height;
+			position: relative;
+
+			&:after {
+
+				@include arrow-down( rgba( $canvas-grey-50, 0.1 ) );
+
+			}
+
+			p {
+
+				margin-bottom: $grid-line-height / 2;
+
+				&:last-child {
+
+					margin: 0;
+
+				}
+
+			}
+
+		}
+
+		.entry-meta {
+
+			h3 {
+
+				@include post-meta-data;
+				display:block;
+				text-align:center;
+
+			}
+
+			.avatar {
+
+				border: none;
+				display: block;
+				max-height: ( $grid-line-height * 3 );
+				width: auto;
+				margin: 0 auto ( $grid-line-height / 2 ) auto;
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,83 @@
+/*!
+ * ## - Archives and Excerpts.
+ * Site content, blog posts etc
+ */
+// @package Jarvis
+
+.content-posts {
+
+	article {
+
+		width: 100%;
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+		@include clear;
+
+		.thumbnail {
+
+		}
+
+		h2.entry-title {
+
+		}
+
+		// post formats
+
+		&.format-standard {
+
+		}
+
+		&.format-quote {
+
+		}
+
+		&.format-audio {
+
+			.wp-playlist,
+			.mejs-container {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
+		&.format-video {
+
+			.jetpack-video-wrapper {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
+		&.format-image {
+
+			.thumbnail {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
+		&.format-gallery {
+
+			.post-gallery,
+			.tiled-gallery {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
+		&.post-loaded {
+
+			@include animation( fade-in 0.5s );
+
+		}
+
+	}
+
+}
