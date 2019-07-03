@@ -1,16 +1,20 @@
 /* jshint esnext: true */
 'use strict';
 
-const gulp = require( 'gulp' );
+const { src, dest, parallel, watch, series } = require( 'gulp' );
 const sass = require( 'gulp-sass' );
 
+
+/**
+ * Build SASS files.
+ */
 const styles = function() {
 
 	/**
 	 * Uses node-sass options:
 	 * https://github.com/sass/node-sass#options
 	 */
-	return gulp.src( '*.scss' )
+	return src( '*.scss' )
 		.pipe( sass(
 			{
 				indentType: 'tab',
@@ -20,16 +24,16 @@ const styles = function() {
 
 			}
 		).on( 'error', sass.logError ) )
-		.pipe( gulp.dest( './' ) );
+		.pipe( dest( './' ) );
 
 };
 
 
 
-exports.build = gulp.parallel( styles );
+exports.build = parallel( styles );
 
 exports.default = () => {
 
-	gulp.watch( [ '*.scss', './assets/sass/**/*.scss' ], gulp.series( styles ) );
+	watch( [ '*.scss', './assets/sass/**/*.scss' ], series( styles ) );
 
 };
