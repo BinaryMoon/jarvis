@@ -1,46 +1,38 @@
 /*!
- * ## - Comments
- * Site content, blog posts etc
+ * ## - Navigation
+ * Main website navigation.
  */
 // @package Jarvis
 
-// pagination
-.image-navigation,
-.comment-navigation,
-.post-navigation {
+.menu-primary {
 
-	clear: both;
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	width: 100%;
 
-	.meta-nav {
+	// First menu.
+	> ul {
 
-		@include post-meta-data;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+	}
+
+	// All menus.
+	ul {
+
 		display: block;
+		background: black;
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 
-	}
+		li {
 
-}
+			a {
 
-/* pagination */
-// used on archives/ homepage/ blog post with pages
-.pagination {
+				color: white;
 
-	@include modular-scale( epsilon );
-	text-align: center;
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
-	clear: both;
+			}
 
-	> * {
-
-		padding: 0 ( $menu-link-padding / 4 );
-		display: inline-block;
-
-	}
-
-	span.current {
-
-		background: $canvas-color;
-		color: contrast( $canvas-color );
+		}
 
 	}
 
