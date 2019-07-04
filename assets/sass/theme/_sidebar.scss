@@ -1,0 +1,17 @@
+.sidebar {
+
+	.widget {
+
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+
+		.widget-title {
+
+			@include modular-scale( zeta );
+			margin-bottom: $grid-line-height / 2;
+			font-weight: bold;
+
+		}
+
+	}
+
+}

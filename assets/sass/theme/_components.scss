@@ -111,20 +111,6 @@ a.thumbnail {
 
 }
 
-/* widgets generic styles */
-.widget {
-
-	.widget-title {
-
-		@include modular-scale( zeta );
-		margin-bottom: $grid-line-height / 2;
-		font-weight: bold;
-
-	}
-
-}
-
-
 // search form
 form.search-form {
 

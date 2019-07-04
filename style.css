@@ -180,6 +180,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 html {
 	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 	text-size-adjust: 100%;
 	-ms-overflow-style: scrollbar;
 }
@@ -330,6 +333,8 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+	-webkit-appearance: button;
+	-moz-appearance: button;
 	appearance: button;
 	cursor: pointer;
 }
@@ -351,6 +356,8 @@ html input[disabled] {
 
 [type="search"],
 .searchfield {
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
 	appearance: textfield;
 }
 
@@ -367,10 +374,12 @@ html input[disabled] {
 [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration,
 .searchfield::-webkit-search-cancel-button,
 .searchfield::-webkit-search-decoration {
+	-webkit-appearance: none;
 	appearance: none;
 }
 
 ::-webkit-file-upload-button {
+	-webkit-appearance: button;
 	appearance: button;
 	font: inherit;
 }
@@ -383,6 +392,11 @@ html input[disabled] {
 textarea {
 	overflow: auto;
 	vertical-align: top;
+}
+
+::-moz-selection {
+	background: #b8960b;
+	color: #fff;
 }
 
 ::selection {
@@ -419,6 +433,7 @@ svg path {
 
 @media (prefers-reduced-motion: reduce) {
 	* {
+		-webkit-animation: none !important;
 		animation: none !important;
 		transition: none !important;
 	}
@@ -436,7 +451,9 @@ html {
 	font-family: Cambria, Georgia, serif;
 	color: #333333;
 	direction: ltr;
+	-webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
 	font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
+	-webkit-font-variant-ligatures: no-discretionary-ligatures;
 	font-variant-ligatures: no-discretionary-ligatures;
 	/*@replace: embed*/
 	unicode-bidi: normal;
@@ -481,6 +498,7 @@ h2,
 h3 {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
+	-webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "swsh" 1;
 	font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "swsh" 1;
 }
 
@@ -491,8 +509,8 @@ h1 {
 }
 
 h2 {
-	font-size: 40px;
-	font-size: 2.5rem;
+	font-size: 30px;
+	font-size: 1.875rem;
 	line-height: 1.25;
 }
 
@@ -530,6 +548,8 @@ pre {
 	display: block;
 	word-wrap: normal;
 	white-space: pre;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
 	tab-size: 4;
 }
 
@@ -794,6 +814,7 @@ input.settings-input:placeholder {
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
 	appearance: none;
 }
 
@@ -814,6 +835,8 @@ textarea {
 input[type=submit],
 a.button,
 button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	appearance: none;
 	background: #b8960b;
 	color: #fff;
@@ -998,15 +1021,6 @@ table tr:last-child td {
 	}
 }
 
-@-moz-keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
 @keyframes fade-in {
 	0% {
 		opacity: 0;
@@ -1017,15 +1031,6 @@ table tr:last-child td {
 }
 
 @-webkit-keyframes slide-from-right {
-	0% {
-		transform: translateX(2rem);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
-
-@-moz-keyframes slide-from-right {
 	0% {
 		transform: translateX(2rem);
 	}
@@ -1052,15 +1057,6 @@ table tr:last-child td {
 	}
 }
 
-@-moz-keyframes slide-from-left {
-	0% {
-		transform: translateX(-2rem);
-	}
-	100% {
-		transform: translateX(0);
-	}
-}
-
 @keyframes slide-from-left {
 	0% {
 		transform: translateX(-2rem);
@@ -1071,15 +1067,6 @@ table tr:last-child td {
 }
 
 @-webkit-keyframes slide-from-top {
-	0% {
-		transform: translateY(-100%);
-	}
-	100% {
-		transform: translateY(0);
-	}
-}
-
-@-moz-keyframes slide-from-top {
 	0% {
 		transform: translateY(-100%);
 	}
@@ -1912,6 +1899,7 @@ blockquote.alignleft, blockquote.alignright {
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
 	clip-path: inset(50%);
 	position: absolute !important;
 	padding: 0;
@@ -2898,13 +2886,16 @@ p > object:only-child {
  */
 .content-posts article {
 	width: 100%;
-	margin-bottom: 3rem;
+	margin-bottom: 4.5rem;
+	padding: 0.75rem 1rem;
 }
 
-.content-posts article:after {
-	content: "";
-	display: block;
-	clear: both;
+.content-posts article h2.entry-title {
+	font-size: 30px;
+	font-size: 1.875rem;
+	line-height: 1.25;
+	font-weight: bold;
+	margin: 0;
 }
 
 .content-posts article.format-audio .wp-playlist,
@@ -2926,6 +2917,7 @@ p > object:only-child {
 }
 
 .content-posts article.post-loaded {
+	-webkit-animation: fade-in 0.5s;
 	animation: fade-in 0.5s;
 }
 
@@ -2996,6 +2988,7 @@ p > object:only-child {
 	margin: 0 0 4.5rem 0;
 	display: grid;
 	grid-template-columns: 15% auto;
+	-moz-column-gap: 0.5rem;
 	column-gap: 0.5rem;
 }
 
@@ -3064,15 +3057,6 @@ a.thumbnail img {
 	padding-right: 0;
 }
 
-/* widgets generic styles */
-.widget .widget-title {
-	font-size: 14px;
-	font-size: 0.875rem;
-	line-height: 1.75;
-	margin-bottom: 0.75rem;
-	font-weight: bold;
-}
-
 .search-wrapper {
 	margin-bottom: 3rem;
 }
@@ -3122,17 +3106,6 @@ a.thumbnail img {
 
 #footer .footer-widgets {
 	width: 100%;
-}
-
-#footer .footer-widgets:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-#footer .footer-widgets .widget {
-	float: left;
-	width: 33.3%;
 }
 
 .site-footer {
@@ -3402,6 +3375,18 @@ a.header-image img {
 	max-height: 4.5rem;
 	width: auto;
 	margin: 0 auto 0.75rem auto;
+}
+
+.sidebar .widget {
+	padding: 0.75rem 1rem;
+}
+
+.sidebar .widget .widget-title {
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.75;
+	margin-bottom: 0.75rem;
+	font-weight: bold;
 }
 
 /*!

@@ -67,13 +67,14 @@ $grid-gutter: 1rem;
 
 $support-accessible-tagcloud: true;
 
-// default font sizes
+// default font sizes.
+// calculate the sizes with: (100 / 16 * 30) / 100
 $font-sizes: (
 	// giga: ( size: 6.25rem, height: 1 ),
 	// mega: ( size: 5rem, height: 1.25 ),
 	// alpha: ( size: 4rem, height: 1.25 ),
 	// beta: ( size: 3.25rem, height: 1.25 ),
-	// gamma: ( size: 2.5rem, height: 1.25 ),
+	gamma: ( size: 1.875rem, height: 1.25 ),
 	delta: ( size: 1.625rem, height: 1.5 ),
 	// epsilon: ( size: 1.25rem, height: 1.5 ),
 	zeta: ( size: 0.875rem, height: 1.75 ),

@@ -9,14 +9,14 @@
 	article {
 
 		width: 100%;
-		margin-bottom: $grid-line-height * $grid-line-height-multiplier;
-		@include clear;
-
-		.thumbnail {
-
-		}
+		margin-bottom: $grid-line-height * 3;
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 
 		h2.entry-title {
+
+			@include modular-scale( gamma );
+			font-weight: bold;
+			margin: 0;
 
 		}
 
