@@ -350,7 +350,7 @@ add_action( 'widgets_init', 'jarvis_widgets_init' );
  */
 function jarvis_excerpt_length( $length ) {
 
-	return 60;
+	return 30;
 
 }
 
