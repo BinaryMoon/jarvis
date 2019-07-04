@@ -28,8 +28,6 @@
 
 <aside class="footer-widgets sidebar-footer sidebar">
 
-<?php
-	dynamic_sidebar( 'sidebar-1' );
-?>
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
 </aside>
