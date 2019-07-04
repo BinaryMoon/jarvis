@@ -1,5 +1,9 @@
 .sidebar {
 
+	column-count: 4;
+	column-width: 15rem;
+	margin-bottom: $grid-line-height * 3;
+
 	.widget {
 
 		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
