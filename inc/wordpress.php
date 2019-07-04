@@ -396,28 +396,13 @@ function jarvis_nav_menu( $params ) {
 
 
 /**
- * Change the truncation text on excerpts to something more useful.
+ * Change the truncation text on excerpts to an ellipsis.
  *
- * Replaces '[...]' (appended to automatically generated excerpts) with ... and
- * a 'Continue reading' link.
- *
- * @return string 'Continue reading' link prepended with an ellipsis.
+ * @return string
  */
 function jarvis_excerpt_more() {
 
-	$link_text = sprintf(
-		/* Translators: %s: Post title */
-		esc_html_x( 'Continue Reading %s', 'Name of current post', 'jarvis' ),
-		'<span class="screen-reader-text">' . esc_html( get_the_title( get_the_ID() ) ) . '</span>'
-	);
-
-	$link = sprintf(
-		'<a href="%1$s" class="read-more">%2$s</a>',
-		esc_url( get_permalink( get_the_ID() ) ),
-		$link_text
-	);
-
-	return ' &hellip; ' . $link;
+	return ' &hellip; ';
 
 }
 
