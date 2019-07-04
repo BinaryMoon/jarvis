@@ -384,22 +384,6 @@ div.jetpack-testimonial-shortcode {
 
 	}
 
-	@include for-phone {
-
-		&.column-2,
-		&.column-3,
-		&.column-4 {
-
-			.testimonial-entry {
-
-				width: 100%;
-
-			}
-
-		}
-
-	}
-
 }
 
 // breadcrumbs

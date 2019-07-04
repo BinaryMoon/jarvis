@@ -51,7 +51,6 @@
 /* child pages (on child page template) */
 .child-page {
 
-	@include grid( 4, 8 );
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 
 	h2 {
@@ -83,7 +82,6 @@
 
 	.testimonial {
 
-		@include grid( 6 );
 		margin-bottom: $grid-line-height;
 
 		.entry {
