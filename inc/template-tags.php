@@ -381,33 +381,6 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 
 
 /**
- * Display the first category for the current blog post/ project.
- *
- * If any other post type is used then exit.
- */
-function jarvis_the_main_category() {
-
-	$term_type = 'category';
-	if ( 'jetpack-portfolio' === get_post_type() ) {
-		$term_type = 'jetpack-portfolio-type';
-	}
-
-	$category = get_the_terms( get_the_ID(), $term_type );
-
-	if ( is_array( $category ) ) {
-		$category = current( array_values( $category ) );
-
-		if ( is_object( $category ) ) {
-?>
-	<span class="post-lead-category meta"><a href="<?php echo esc_url( get_category_link( $category, $term_type ) ); ?>"><?php echo esc_html( $category->name ); ?></a></span>
-<?php
-		}
-	}
-
-}
-
-
-/**
  * Display a list of all of the project categories.
  */
 function jarvis_project_terms() {

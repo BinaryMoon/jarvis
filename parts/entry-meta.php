@@ -13,15 +13,15 @@
 	<div class="post-meta-data entry-meta">
 
 <?php
-	jarvis_post_time();
 
-	jarvis_comments_link();
+	jarvis_post_time();
 
 	jarvis_post_author();
 
-	jarvis_the_main_category();
+	jarvis_comments_link();
 
 	get_template_part( 'parts/edit-post' );
+
 ?>
 
 	</div>
