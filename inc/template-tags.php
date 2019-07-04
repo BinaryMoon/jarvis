@@ -205,11 +205,7 @@ function jarvis_post_time() {
 		jarvis_human_time_diff()
 	);
 
-	$posted_on = sprintf(
-		/* Translators: %s: Date blog post posted */
-		esc_html__( 'Posted %s', 'jarvis' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 	echo '<span class="posted-on meta">' . $posted_on . '</span>'; /* WPCS: xss ok. */
 
