@@ -1,0 +1,33 @@
+
+/*!
+ * ## - Calendar
+ */
+
+#wp-calendar {
+
+	margin: 0;
+	table-layout: fixed;
+
+	th,
+	td {
+
+		text-align: center;
+		padding: ( $grid-line-height / 4 ) 0;
+
+	}
+
+	caption {
+
+		text-align: center;
+		background: transparent;
+		padding: ( $grid-line-height / 4 ) 0;
+
+	}
+
+	#today {
+
+		font-weight: bold;
+
+	}
+
+}

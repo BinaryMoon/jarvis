@@ -1,0 +1,50 @@
+
+/*!
+ * ## - Search Form
+ */
+
+form.search-form {
+
+	position:relative;
+	width:100%;
+
+	input.search-field {
+
+		margin: 0;
+		width: 100%;
+		padding-right: 3rem;
+
+	}
+
+	button.search-submit {
+
+		position: absolute;
+		top: 0px;
+		bottom: 0;
+		right: 0;
+		background: transparent;
+		border: none;
+		padding: 0 $style-spacing;
+		opacity: 1;
+		box-shadow: none;
+		@include transition;
+
+		.icon {
+
+			height: 40%;
+			vertical-align: middle;
+			color: $form-input-icon;
+
+		}
+
+		&:focus,
+		&:hover {
+
+			opacity: $form-label-opacity;
+			@include transition;
+
+		}
+
+	}
+
+}

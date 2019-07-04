@@ -1,0 +1,59 @@
+// Social brand colours
+$canvas-facebook: #3b5998;
+$canvas-twitter: #55acee;
+$canvas-pinterest: #cc2127;
+$canvas-youtube: #e52d27;
+$canvas-dribbble: #ea4c89;
+$canvas-tumblr: #35465c;
+$canvas-blogger: #f57d00;
+$canvas-buzzfeed: #ee3322;
+$canvas-creative-market: #8ba753;
+$canvas-etsy: #d5641c;
+$canvas-google-plus: #dd4b39;
+$canvas-skype: #00aff0;
+$canvas-stumbleupon: #eb4924;
+$canvas-wordpress: #21759b;
+$canvas-yahoo: #400191;
+$canvas-amazon: #ff9900;
+$canvas-android: #a4c639;
+$canvas-windows: #00bcf2;
+$canvas-windows-phone: #68217a;
+$canvas-apple: #333;
+$canvas-rss: #ff6600;
+
+// handy colours
+$canvas-white: #ffffff !default;
+$canvas-color: #000000 !default;
+$canvas-green: #2ECC71 !default;
+$canvas-green-dark: darken( $canvas-green, 12% ) !default;
+$canvas-blue: #3498db !default;
+$canvas-blue-dark: darken( $canvas-blue, 12% ) !default;
+$canvas-red: #E74C3C !default;
+$canvas-red-dark: darken( $canvas-red, 12% ) !default;
+$canvas-purple: #9B59B6 !default;
+$canvas-purple-dark: darken( $canvas-purple, 12% ) !default;
+$canvas-yellow: #F1C40F !default;
+$canvas-yellow-dark: darken( $canvas-yellow, 12% ) !default;
+$canvas-orange: #E67E22 !default;
+$canvas-orange-dark: darken( $canvas-orange, 12% ) !default;
+
+// 50 Shades of grey
+$canvas-grey-100: #000000 !default;
+$canvas-grey-90: lighten( $canvas-grey-100, 10% ) !default;
+$canvas-grey-80: lighten( $canvas-grey-100, 20% ) !default;
+$canvas-grey-70: lighten( $canvas-grey-100, 30% ) !default;
+$canvas-grey-60: lighten( $canvas-grey-100, 40% ) !default;
+$canvas-grey-50: lighten( $canvas-grey-100, 50% ) !default;
+$canvas-grey-40: lighten( $canvas-grey-100, 60% ) !default;
+$canvas-grey-30: lighten( $canvas-grey-100, 70% ) !default;
+$canvas-grey-20: lighten( $canvas-grey-100, 80% ) !default;
+$canvas-grey-10: lighten( $canvas-grey-100, 90% ) !default;
+$canvas-grey-5: lighten( $canvas-grey-100, 95% ) !default;
+$canvas-grey-1: lighten( $canvas-grey-100, 99% ) !default;
+
+// theme colours
+$canvas-background: $canvas-white !default;
+$canvas-button-color: $canvas-green !default;
+$canvas-pre-color: $canvas-green !default;
+$canvas-pre-background: $canvas-grey-90 !default;
+$canvas-hr-color: $canvas-grey-100 !default;

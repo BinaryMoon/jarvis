@@ -1,0 +1,324 @@
+
+/*!
+ * ## - CSS Reset
+ * Set HTML styles to sensible defaults
+ * loosely based on normalize.css, with a number of customisations
+ */
+
+html {
+
+	box-sizing: border-box;
+	text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+
+}
+
+body {
+
+	@include clear;
+	background-color: $canvas-background;
+	margin: 0;
+
+}
+
+*,
+*:before,
+*:after {
+
+	box-sizing: inherit;
+
+}
+
+// https://twitter.com/LeaVerou/status/1045768279753666562
+:focus:not(:focus-visible),
+*[tabindex='-1']:focus {
+
+	outline: none;
+
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+
+	display: block;
+
+}
+
+audio,
+canvas,
+video {
+
+	display: inline-block;
+
+}
+
+embed,
+iframe,
+object {
+
+	max-width: 100%;
+
+}
+
+button,
+a {
+
+	&:focus {
+
+		outline: $style-outline;
+
+	}
+
+	&:active,
+	&:hover {
+
+		outline: none;
+
+	}
+
+}
+
+a {
+
+	background-color: transparent;
+
+}
+
+b,
+strong {
+
+	font-weight: bolder;
+
+}
+
+hr {
+
+	box-sizing: content-box;
+	height: 0;
+	clear:both;
+
+}
+
+var,
+tt,
+code,
+kbd,
+pre,
+samp {
+
+	font-family: $font-family-monospace;
+	font-size: 0.9em;
+
+}
+
+q {
+
+	background: rgba( $canvas-grey-50, 0.25 );
+	padding: 0.25em 0.5em;
+
+}
+
+small {
+
+	@include modular-scale( eta );
+
+}
+
+sub,
+sup {
+
+	@include modular-scale( eta );
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+
+}
+
+sup {
+
+	top: -0.5em;
+
+}
+
+sub {
+
+	bottom: -0.25em;
+
+}
+
+img {
+
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	border: 0;
+	font-family: $font-family-sans;
+	@include modular-scale( eta );
+
+}
+
+fieldset {
+
+	margin: 0 0 $grid-line-height 0;
+	padding: $grid-line-height ( $grid-gutter / 2 );
+
+}
+
+legend {
+
+	border: 0;
+	padding: 0;
+
+}
+
+button,
+input,
+select,
+textarea {
+
+	font: inherit;
+
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+
+	appearance: button;
+	cursor: pointer;
+
+}
+
+button[disabled],
+html input[disabled] {
+
+	cursor: not-allowed;
+
+}
+
+[type="checkbox"],
+[type="radio"] {
+
+	padding: 0;
+
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+
+	height: auto;
+
+}
+
+[type="search"],
+.searchfield {
+
+	appearance: textfield;
+
+	&:focus::-webkit-input-placeholder {
+
+		@include transition( opacity 0.5s 0.5s ease );
+		opacity: 0;
+
+	}
+
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-decoration {
+
+		appearance: none;
+
+	}
+
+}
+
+::-webkit-file-upload-button {
+
+	appearance: button;
+	font: inherit;
+
+}
+
+::-moz-focus-inner {
+
+	border: 0;
+	padding: 0;
+
+}
+
+textarea {
+
+	overflow: auto;
+	vertical-align: top;
+
+}
+
+::selection {
+
+	background: $canvas-color;
+	color: contrast( $canvas-color );
+
+}
+
+address {
+
+	margin-bottom: $grid-line-height;
+
+}
+
+acronym,
+abbr {
+
+	border-bottom: $style-outline;
+	cursor: help;
+
+}
+
+// hide svgs embedded in the page
+.svg-defs {
+
+	display: none;
+
+}
+
+// make svgs inherit the color from the parent
+svg.icon {
+
+	color: currentColor;
+	fill: currentColor;
+
+}
+
+svg path {
+
+	color: inherit;
+
+}
+
+// IE support for viewport
+@-ms-viewport {
+
+	width: device-width;
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	* {
+
+		animation: none !important;
+		transition: none !important;
+
+	}
+
+}

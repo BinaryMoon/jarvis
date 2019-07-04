@@ -1,0 +1,137 @@
+
+/*!
+ * ## - Gallery
+ * Default styles for the [gallery] shortcode
+ */
+
+.gallery {
+
+	@include clear;
+	padding: 0;
+	margin-bottom: $grid-line-height;
+
+	.gallery-item {
+
+		display: inline-block;
+		text-align: center;
+		margin: 0 0 ( $grid-line-height ) 0;
+		vertical-align: top;
+		padding: 0 ( $grid-gutter / 4 );
+
+		.gallery-icon {
+
+			margin-bottom: ( $grid-line-height / 2 );
+
+			a {
+
+				display: block;
+				line-height: 0;
+
+			}
+
+		}
+
+		.gallery-caption {
+
+			padding: 0;
+			margin: 0;
+			@include modular-scale( eta );
+			font-style: italic;
+
+		}
+
+		img {
+
+			max-width: 100%;
+			height: auto;
+			opacity: $style-opacity-element;
+			transition: opacity 0.3s ease-in-out;
+
+			&:focus,
+			&:hover {
+
+				opacity: 1;
+				transition: opacity 0.3s ease-in-out;
+
+			}
+
+		}
+
+	}
+
+	a.image {
+
+		float: none;
+
+	}
+
+	&.gallery-columns-1 .gallery-item {
+
+		width: 100%;
+
+	}
+
+	&.gallery-columns-2 .gallery-item {
+
+		width: 50%;
+
+	}
+
+	&.gallery-columns-3 .gallery-item {
+
+		width: 33.33%;
+
+	}
+
+	&.gallery-columns-4 .gallery-item {
+
+		width: 25%;
+
+	}
+
+	&.gallery-columns-5 .gallery-item {
+
+		width: 20%;
+
+	}
+
+	&.gallery-columns-6 .gallery-item {
+
+		width: 16.666%;
+
+	}
+
+	&.gallery-columns-7 .gallery-item {
+
+		width: 14.28%;
+
+	}
+
+	&.gallery-columns-8 .gallery-item {
+
+		width: 12.5%;
+
+	}
+
+	&.gallery-columns-9 .gallery-item {
+
+		width: 11.11%;
+
+	}
+
+	&.gallery-columns-10 .gallery-item {
+
+		width: 10%;
+
+	}
+
+	&.gallery-columns-6 .gallery-caption,
+	&.gallery-columns-7 .gallery-caption,
+	&.gallery-columns-8 .gallery-caption,
+	&.gallery-columns-9 .gallery-caption {
+
+		display: none;
+
+	}
+
+}

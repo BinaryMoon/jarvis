@@ -1,0 +1,44 @@
+
+// default link colour
+$link-color: $canvas-color !default;
+$link-hover-color: darken( $link-color, 15% ) !default;
+
+// outline for focused elements
+$style-outline: thin dotted !default;
+
+// useful for things like adding spacing between an icon and it's heading
+// uses em's so that it scales nicely with font size
+$style-spacing: 0.5em !default;
+
+// used for consistent spacing - for elements like lists, and tables
+$style-element-spacing: 1.5rem !default;
+
+$style-opacity-element: 0.8 !default;
+
+$style-opacity-separator: 0.3 !default;
+
+$style-list-style-type: disc !default;
+
+// border radius
+$border-radius: 0.2rem !default;
+
+// border width for elements that aren't 1px
+$border-width: 0.2rem !default;
+
+// border color
+$border-color: rgba( 0, 0, 0, 0.3 ) !default;
+
+// menu padding
+$menu-link-padding: 1em !default;
+
+// breadcrumb arrow color
+$style-breadcrumb-arrow: $canvas-grey-60 !default;
+
+// default arrow size
+$style-arrow-default-size: 0.4em !default;
+
+// alternate colour for buttons
+$button-alt-colour: $canvas-grey-5 !default;
+
+// separator - used to separate links or post meta info
+$separator: '/' !default;

@@ -1,0 +1,165 @@
+// @package Jarvis
+
+// Set element to centered with standard width
+@mixin container() {
+
+	width: 100%;
+	max-width: $grid-total-width;
+	margin: 0 auto;
+
+}
+
+// reusable mixin for consistent font styling on meta elements
+@mixin post-meta-data( $font-size: zeta ) {
+
+	@include modular-scale( $font-size );
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: $font-uppercase-spacing;
+
+}
+
+// Jetpack content headings
+// includes related posts, sharedaddy and ratings
+@mixin jetpack-heading {
+
+	@include post-meta-data();
+	font-family: $font-family-sans;
+	margin: 0 0 ( $grid-line-height / 2 ) 0;
+	display: block;
+	font-weight: bold;
+	font-style: normal;
+
+}
+
+// Reusable button style.
+@mixin button( $color: $canvas-color, $font-size: zeta ) {
+
+	background: $color;
+	color: contrast( $color );
+	display: inline-block;
+	text-decoration: none;
+	border-radius: $border-radius;
+	border: none;
+	padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+	text-transform: uppercase;
+	letter-spacing: $font-uppercase-spacing;
+	text-align: center;
+	@include transition;
+	@include modular-scale( $font-size );
+
+	&:focus,
+	&:hover {
+
+		background: darken( $color, 15% );
+		color: contrast( darken( $color, 15% ) );
+		text-decoration: none;
+
+	}
+
+}
+
+// Element divider.
+@mixin separator {
+
+	content: $separator;
+	margin-right: $style-spacing;
+	opacity: $style-opacity-separator;
+
+}
+
+// Quote styles.
+@mixin blockquote {
+
+	padding: ( $grid-line-height * $grid-line-height-multiplier ) ( $grid-gutter );
+	position: relative;
+	background: rgba( $canvas-grey-100, 0.05 );
+
+	p {
+
+		&:last-child {
+
+			margin-bottom: 0;
+
+		}
+
+	}
+
+}
+
+// Blockquote cite.
+@mixin post-cite {
+
+	@include modular-scale( zeta );
+	font-weight: normal;
+	letter-spacing: 0.05em;
+	font-style: normal;
+
+}
+
+
+// The post content layout.
+@mixin the-content {
+
+	// headings
+	h1,
+	h2,
+	h3 {
+
+		margin-top: ( $grid-line-height * 2 );
+		clear: both;
+
+	}
+
+	// clear lists
+	ul,
+	dl,
+	ol {
+
+		clear: both;
+
+	}
+
+	// intro paragraph
+	.intro {
+
+		@include modular-scale( epsilon );
+		margin-bottom: $grid-line-height * $grid-line-height-multiplier * $line-height-margin-multiplier;
+
+	}
+
+	// Drop Caps
+	.drop-cap {
+
+		float: left;
+		font-family: $font-family-serif;
+		font-weight: bold;
+		margin: 0 0.05em 0 -0.2em;
+		@include modular-scale( giga, 0.8 );
+
+	}
+
+	// Highlight
+	.highlight {
+
+		background: rgba( $canvas-yellow, 0.25 );
+		padding: 3px 6px;
+		border-radius: $border-radius;
+
+	}
+
+	// Button
+	.button {
+
+		@include button;
+
+	}
+
+	// Small caps
+	.small-caps {
+
+		font-variant: small-caps;
+
+	}
+
+}

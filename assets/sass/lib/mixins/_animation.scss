@@ -1,0 +1,24 @@
+
+// Output keyframe animations that work cross browser
+@mixin keyframes( $animation-name ) {
+
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+
+}
+
+// Display an animation
+// probably doesn't need a mixin since we're adding prefixes in SASS but am
+// maintaining for backwards compatability
+@mixin animation( $rule ) {
+
+	animation: $rule;
+
+}

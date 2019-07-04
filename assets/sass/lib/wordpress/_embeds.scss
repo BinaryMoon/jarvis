@@ -1,0 +1,64 @@
+
+/*!
+ * ## - Embeds
+ */
+
+// Shortcodes.
+iframe {
+
+	&[src*="8tracks.com"],
+	&[src*="bandcamp.com"],
+	&[src*="dailymotion.com"],
+	&[src*="itchi.io"],
+	&[src*="slideshare.net"],
+	&[src*="soundcloud.com"],
+	&[src*="viddler.com"],
+	&[src*="videopress.com"],
+	&.twitter-tweet,
+	&.twitter-follow-button {
+
+		display: block;
+		margin: ( $grid-line-height * $grid-line-height-multiplier ) auto;
+		max-width: 100%;
+
+	}
+
+	&.instagram-media {
+
+		display: block;
+		margin: ( $grid-line-height * $grid-line-height-multiplier ) auto !important;
+
+	}
+
+	// For WordPress page embeds. The embed includes a border that sometimes
+	// gets cropped when using 100% width, so we shall fix it at 99%.
+	&.wp-embedded-content {
+
+		max-width: 99.5% !important;
+
+	}
+
+}
+
+// flash/ other embeds
+object {
+
+	display: block;
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto !important;
+
+}
+
+// audio player
+.wp-playlist,
+.mejs-container {
+
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+
+}
+
+// Remove bottom on embeds that wrapped in paragraphs via wpautop.
+p > embed:only-child,
+p > iframe:only-child,
+p > object:only-child {
+	margin-bottom: 0;
+}

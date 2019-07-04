@@ -1,0 +1,14 @@
+// WordPress admin heights
+$wp-admin-bar-height: 32px;
+$wp-admin-bar-height-782: 46px;
+$wp-demo-site-height-guest: 80px;
+$wp-demo-site-height-user: 112px;
+
+// WordPress breakpoints (numbers decrease from large to small)
+$wp-responsive-width-2: 782px;
+$wp-responsive-width-1: 600px;
+
+// Jetpack customization settings
+$jp-related-posts-size: 3 !default;
+
+$support-accessible-tagcloud: false !default;

@@ -1,0 +1,26 @@
+
+/*!
+ * ## - Animations
+ * Use with: @include animation( animationName duration );
+ * eg: @include animation( fade-in 0.3s );
+ */
+
+@include keyframes( fade-in ) {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@include keyframes( slide-from-right ) {
+	0% { transform: translateX( 2rem ); }
+	100% { transform: translateX( 0 ); }
+}
+
+@include keyframes( slide-from-left ) {
+	0% { transform: translateX( -2rem ); }
+	100% { transform: translateX( 0 ); }
+}
+
+@include keyframes( slide-from-top ) {
+	0% { transform: translateY( -100% ); }
+	100% { transform: translateY( 0 ); }
+}

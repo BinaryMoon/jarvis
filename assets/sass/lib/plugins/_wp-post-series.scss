@@ -1,0 +1,41 @@
+
+/*!
+ * ## - WP Post Series
+ */
+
+.wp-post-series-box {
+
+	border: $border-width solid $border-color;
+	padding: $grid-line-height ( $grid-gutter / 2 ) 0 ( $grid-gutter / 2 );
+	margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
+
+	.wp-post-series-name {
+
+		font-weight: bold;
+		margin-bottom: $grid-line-height;
+
+	}
+
+	.wp-post-series-description {
+
+		margin: 0;
+
+		p {
+
+			margin: 0 0 $grid-line-height 0;
+
+		}
+
+	}
+
+	.wp-post-series-nav {
+
+		ol {
+
+			list-style-type: decimal;
+
+		}
+
+	}
+
+}

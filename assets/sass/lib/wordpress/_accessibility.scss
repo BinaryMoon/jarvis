@@ -1,0 +1,65 @@
+
+/*!
+ * ## - Accessibility
+ */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+
+	border: 0;
+	clip: rect( 1px, 1px, 1px, 1px );
+	clip-path: inset(50%);
+	position: absolute !important;
+	padding: 0;
+	margin: -1px;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important;
+
+	&:focus {
+
+		@include modular-scale( epsilon );
+		padding: 15px 23px 14px;
+		background: #f1f1f1;
+		color: #222;
+		font-weight: bold;
+		left: 5px;
+		top: 5px;
+		clip: auto !important;
+		display: block;
+		height: auto;
+		width: auto;
+		z-index: layer( top );
+
+	}
+
+}
+
+.screen-reader-shortcut {
+
+	padding: 15px 23px 14px;
+	background: #f1f1f1;
+	color: #0073aa;
+	max-width:200px;
+	position:absolute;
+	left:-300px;
+	top:7px;
+	word-wrap: normal !important;
+	text-align:center;
+	box-shadow: 0 0 2px 2px rgba( 0, 0, 0, 0.6 );
+	word-wrap: normal;
+
+	&:focus {
+
+		left: 6px;
+		z-index: layer( top );
+
+	}
+
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}

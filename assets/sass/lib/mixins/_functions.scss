@@ -1,0 +1,135 @@
+
+
+// calculate a colour to use for contrast based on the brightness of the background
+@function contrast($color, $color-light: $canvas-white, $color-dark: $canvas-grey-100) {
+
+	@if ( brightness( $color ) < 65 ) {
+
+		@return $canvas-white;
+
+	} @else {
+
+		@return $canvas-grey-100;
+
+	}
+
+}
+
+// Perceptual colour brightness
+// http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx
+@function brightness($color) {
+
+	// Default values for relative brightness.
+	$red-magic-number: 241;
+	$green-magic-number: 691;
+	$blue-magic-number: 68;
+	$brightness-divisor: $red-magic-number + $green-magic-number + $blue-magic-number;
+
+	// Get colour values.
+	$red-component: red( $color );
+	$green-component: green( $color );
+	$blue-component: blue( $color );
+
+	$number: sqrt( ( ($red-component * $red-component * $red-magic-number ) + ( $green-component * $green-component * $green-magic-number ) + ( $blue-component * $blue-component * $blue-magic-number ) ) / $brightness-divisor );
+
+	@return ( 100% * $number / 255 );
+
+}
+
+// Square Root
+// http://www.antimath.info/css/sass-sqrt-function/
+@function sqrt($r) {
+
+	$x0: 1;
+	$x1: $x0;
+
+	@for $i from 1 through 10 {
+		$x1: $x0 - ( $x0 * $x0 - abs( $r ) ) / ( 2 * $x0 );
+		$x0: $x1;
+	}
+
+	@return $x1;
+
+}
+
+
+// remove units from a value so we can work with the number
+@function strip-unit($value) {
+
+	@if ( type-of( $value ) == 'number' and not unitless( $value ) ) {
+
+		@return $value / ( $value * 0 + 1 );
+
+	}
+
+	@return $value;
+
+}
+
+
+// convert pixels to ems
+@function pixel-to-em($value) {
+
+	@return ( strip-unit( $value ) / $font-base ) * 1em;
+
+}
+
+
+// convert a unit from one format to another
+@function convert-unit($value, $unit) {
+
+	$units: (
+		'px': 0px,
+		'%': 0%,
+		'em': 0em,
+		'rem': 0rem,
+		'vw': 0vw,
+		'vh': 0vh,
+		'vmin': 0vmin,
+		'vmax': 0vmax,
+		'deg': 0deg,
+		'turn': 0turn,
+		'rad': 0rad,
+		'grad': 0grad,
+	);
+
+	@if ( map-has-key( $units, $unit ) ) {
+
+		@return map-get( $units, $unit ) + strip-unit( $value );
+
+	}
+
+	@error "Unknown unit `#{$unit}`.";
+
+}
+
+// get the z-index of the specified layer
+@function layer($name) {
+
+	@if map-has-key( $layer, $name ) {
+		@return map-get( $layer, $name );
+	}
+
+	@warn "The key #{$name} is not in the map ’$layer’";
+	@return null;
+
+}
+
+
+// Replace `$search` with `$replace` in `$string`
+// @author Hugo Giraudel
+// @param {String} $string - Initial string
+// @param {String} $search - Substring to replace
+// @param {String} $replace ('') - New value
+// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+
+}

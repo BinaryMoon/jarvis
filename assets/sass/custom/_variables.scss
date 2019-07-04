@@ -1,0 +1,92 @@
+// @package Jarvis
+
+// font overrides
+$font-family-sans: Cambria, Georgia, serif;
+$font-family-serif: Cambria, Georgia, serif;
+//$font-base: 18;
+$font-family-body: $font-family-serif;
+$font-family-header: $font-family-sans;
+//$line-height: 1.5;
+
+// enable/ disable debug features
+$debug: false;
+
+// colours
+$canvas-white: #fff;
+//$canvas-green: #2ECC71;
+//$canvas-green-dark: darken( $canvas-green, 12% );
+//$canvas-blue: #3498db;
+//$canvas-blue-dark: darken( $canvas-blue, 12% );
+//$canvas-red: #E74C3C;
+//$canvas-red-dark: darken( $canvas-red, 12% );
+//$canvas-purple: #9B59B6;
+//$canvas-purple-dark: darken( $canvas-purple, 12% );
+$canvas-yellow:#F1C40F;
+$canvas-yellow-dark: darken( $canvas-yellow, 12% );
+//$canvas-orange:#E67E22;
+//$canvas-orange-dark: darken( $canvas-orange, 12% );
+
+// greys
+$canvas-grey-100: #000;
+$canvas-grey-90: lighten( $canvas-grey-100, 10% );
+$canvas-grey-80: lighten( $canvas-grey-100, 20% );
+$canvas-grey-70: lighten( $canvas-grey-100, 30% );
+$canvas-grey-60: lighten( $canvas-grey-100, 40% );
+$canvas-grey-50: lighten( $canvas-grey-100, 50% );
+$canvas-grey-40: lighten( $canvas-grey-100, 60% );
+$canvas-grey-30: lighten( $canvas-grey-100, 70% );
+$canvas-grey-20: lighten( $canvas-grey-100, 80% );
+$canvas-grey-10: lighten( $canvas-grey-100, 90% );
+$canvas-grey-5: lighten( $canvas-grey-100, 95% );
+$canvas-grey-1: lighten( $canvas-grey-100, 99% );
+
+// main colour, used through the theme
+$canvas-color: $canvas-yellow-dark;
+$canvas-background: $canvas-white;
+
+//$link-color: $canvas-color;
+
+$comments-margin: 4%;
+
+// $body-copy-color: $canvas-grey-60;
+// $body-header-color: $canvas-grey-100;
+
+
+// grid sizes
+//$grid-line-height: $line-height * 1rem;
+//$grid-total-width: 75em;
+//$grid-line-height-multiplier: 1.5;
+$grid-gutter: 1rem;
+//$grid-column-gutter: 1 / 2;
+
+// menu properties
+// $menu-link-padding: $grid-gutter / 2;
+// $menu-arrow-size: 0.4rem;
+// $menu-parent-link-vertical-padding: 0;
+// $menu-dropdown-width: 20em;
+
+$support-accessible-tagcloud: true;
+
+// default font sizes.
+// calculate the sizes with: (100 / 16 * 30) / 100
+$font-sizes: (
+	// giga: ( size: 6.25rem, height: 1 ),
+	// mega: ( size: 5rem, height: 1.25 ),
+	// alpha: ( size: 4rem, height: 1.25 ),
+	// beta: ( size: 3.25rem, height: 1.25 ),
+	gamma: ( size: 1.875rem, height: 1.25 ),
+	delta: ( size: 1.625rem, height: 1.5 ),
+	// epsilon: ( size: 1.25rem, height: 1.5 ),
+	zeta: ( size: 0.875rem, height: 1.75 ),
+	// eta: ( size: 0.75rem, height: 1.75 ),
+	// micro: ( size: 0.5rem, height: 1.75 ),
+);
+
+// z-index layer positions
+$layer: (
+	base: 1,
+	showcase_nav: 50,
+	infinite_footer: 50,
+	menu_dropdown: 100,
+	top: 100000
+);

@@ -1,0 +1,79 @@
+
+// scale font size and apply dynamic line height
+@mixin modular-scale( $key, $line-height: null ) {
+
+	$font-sizes-final: map-merge(
+		(
+			// Base size. Only used by html and body elements.
+			base: ( size: 1rem, height: 1.75 ),
+
+			// Other sizes using a modular scale.
+			giga: ( size: 6.25rem, height: 1 ),
+			mega: ( size: 5rem, height: 1.25 ),
+			alpha: ( size: 4rem, height: 1.25 ),
+			beta: ( size: 3.25rem, height: 1.25 ),
+			gamma: ( size: 2.5rem, height: 1.25 ),
+			delta: ( size: 1.75rem, height: 1.5 ),
+			epsilon: ( size: 1.25rem, height: 1.5 ),
+			zeta: ( size: 1rem, height: 1.75 ),
+			eta: ( size: 0.75rem, height: 1.75 ),
+			micro: ( size: 0.5rem, height: 1.75 ),
+		),
+		$font-sizes
+	);
+
+	$font: map_get( $font-sizes-final, $key );
+	$size: map_get( $font, size );
+
+	@if ( $line-height == null ) {
+		$line-height: map_get( $font, height );
+	}
+
+	font-size: convert-unit( $size * $font-base, 'px' );
+	font-size: $size / 16 * $font-base ;
+	line-height: $line-height;
+
+}
+
+// generic body properties that sets default properties
+// used in both website styles and editor styles
+@mixin body() {
+
+	@include modular-scale( base );
+	font-weight: $font-weight;
+	font-family: $font-family-body;
+	color: $body-copy-color;
+	direction: ltr;
+	font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
+	font-variant-ligatures: no-discretionary-ligatures;
+	/*@replace: embed*/unicode-bidi: normal;
+
+}
+
+
+// set a default font size
+@function set-font-size($key, $size, $height) {
+
+	@if ( map-has-key( $font-sizes, $key ) ) {
+
+		$new: ( $key: ( size: $size, height: $height ) );
+		@debug $new;
+		$font-sizes: map-merge( $font-sizes, $new );
+
+	} @else {
+
+		@warn $key does not exist;
+
+	}
+
+	@return $font-sizes;
+
+}
+
+// set word wrap properties. Good for elements with large text or that are narrow and likely to have text that overflows
+@mixin wrap-text() {
+
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+}

@@ -1,0 +1,11 @@
+// form input colours
+$form-input-background: $canvas-grey-5 !default;
+$form-input-border-color: $canvas-grey-5 !default;
+$form-input-border-focus: $canvas-color !default;
+$form-input-border-width: null !default;
+$form-input-foreground-color: rgba( $body-copy-color, 0.5 ) !default;
+
+// input icon colour. Is used for things like the little down arrows on select boxes, and the search icon on search inputs
+$form-input-icon: $canvas-grey-90 !default;
+
+$form-label-opacity: 0.6 !default;

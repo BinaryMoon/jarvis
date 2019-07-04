@@ -1,0 +1,104 @@
+
+/*!
+ * ## - Typography
+ */
+
+body,
+html {
+
+	@include body;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+	color: $body-header-color;
+	font-family: $font-family-header;
+	font-weight: $font-weight;
+
+	a {
+
+		color: $body-header-color;
+
+		&:focus,
+		&:hover {
+
+			text-decoration: underline;
+
+		}
+
+	}
+
+}
+
+h1,
+h2,
+h3 {
+
+	@include wrap-text;
+	font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "swsh" 1;
+
+}
+
+h1 {
+
+	@include modular-scale( beta );
+
+}
+
+h2 {
+
+	@include modular-scale( gamma );
+
+}
+
+h3 {
+
+	@include modular-scale( delta );
+
+}
+
+h4 {
+
+	@include modular-scale( epsilon );
+
+}
+
+h5,
+h6 {
+
+	@include modular-scale( zeta );
+	font-weight: bold;
+
+}
+
+hr {
+
+	border: none;
+	border-bottom: $border-width solid $border-color;
+
+}
+
+pre {
+
+	background: $canvas-pre-background;
+	color: $canvas-pre-color;
+	padding: $grid-line-height $style-element-spacing;
+	overflow: auto;
+	display: block;
+	word-wrap: normal;
+	white-space: pre;
+	tab-size: 4;
+
+	&.compress {
+
+		max-height: $grid-line-height * 15;
+
+	}
+
+}

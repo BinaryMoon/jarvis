@@ -1,0 +1,517 @@
+
+/*!
+ * ## - Jetpack
+ */
+
+// WordPress.com stats
+img#wpstats {
+
+	position: absolute;
+	left: -100px;
+	bottom: 100px;
+	width: 10px;
+	height: 10px;
+
+}
+
+// video wrapper spacing
+.jetpack-video-wrapper {
+
+	width: 100%;
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+
+	iframe {
+
+		max-width: 100%;
+
+	}
+
+}
+
+// tile galleries
+.tiled-gallery {
+
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+
+}
+
+
+// share post widget
+main {
+
+	div.pd-rating,
+	div.sharedaddy,
+	div#jp-relatedposts,
+	#jp-post-flair {
+
+		clear: both;
+		margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
+		padding: 0;
+
+	}
+
+}
+
+// Post Box Headings
+// --
+// sharedaddy
+// related posts
+// ratings
+
+main div {
+
+	&.pd-rating,
+	&#jp-relatedposts,
+	&.sharedaddy {
+
+		h3.jp-relatedposts-headline em,
+		h3.sd-title {
+
+			@include jetpack-heading();
+
+			// hide the little border that appears above the headings in the default styles
+			&:before {
+
+				display: none;
+
+			}
+
+		}
+
+	}
+
+	&#jp-relatedposts {
+
+		display: none;
+
+	}
+
+}
+
+// Related posts
+#jp-relatedposts {
+
+	.jp-relatedposts-items {
+
+		display: flex;
+		justify-content: space-between;
+
+		.jp-relatedposts-post {
+
+			width: floor( 100% / $jp-related-posts-size ) - 2;
+
+		}
+
+	}
+
+	.jp-relatedposts-post-a {
+
+		display: block;
+
+		img {
+
+			display: block;
+			margin: 0 auto ( $grid-line-height / 2 ) auto;
+
+		}
+
+	}
+
+	.jp-relatedposts-post-title {
+
+		@include modular-scale( zeta );
+		margin:0;
+
+	}
+
+	.jp-relatedposts-post-excerpt {
+
+		display: none;
+
+	}
+
+	.jp-relatedposts-post-context,
+	.jp-relatedposts-post-date {
+
+		@include post-meta-data();
+		margin: 0;
+
+	}
+
+}
+
+// infinite scroll
+.infinite-scroll {
+
+	.pagination {
+
+		display: none;
+
+	}
+
+	// load more button
+	#infinite-handle {
+
+		clear: both;
+		margin-bottom: $grid-line-height;
+		text-align: center;
+
+		// reset the infinite scroll styles
+		span {
+
+			display: block;
+			width: 100%;
+			background: transparent;
+			padding: 0;
+
+		}
+
+		button {
+
+			width: 100%;
+			border: none;
+			border-radius: 0;
+			padding: $grid-line-height $grid-gutter;
+
+		}
+
+	}
+
+	// loading
+	.infinite-loader {
+
+		clear: both;
+		padding: $grid-line-height;
+		display: block;
+		// Infinite loader text colour sets colour of spinner.
+		color: $canvas-grey-100;
+
+		.spinner {
+
+			margin: 0 auto;
+			left: 0 !important;
+
+		}
+
+	}
+
+	// infinite scroll footer info
+	// based on styles from jetpack/modules/infinite-scroll/infinity.css
+	#infinite-footer {
+
+		position: fixed;
+		bottom: -50px;
+		left: 0;
+		width: 100%;
+		z-index: layer( infinite_footer );
+
+		.blog-info,
+		.blog-credits {
+
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			@include modular-scale( eta, 2rem );
+
+			a {
+
+				text-decoration:none;
+
+				&:focus,
+				&:hover {
+
+					color: #444;
+					text-decoration: underline;
+
+				}
+
+			}
+		}
+
+		.container {
+
+			background: $canvas-white;
+			margin: 0 auto;
+			overflow: hidden;
+			padding: 0 ( $grid-gutter / 3 );
+			width: 780px;
+			box-shadow:0 0 2px rgba( 0,0,0,0.2 );
+			border-radius: $border-radius $border-radius 0 0;
+
+		}
+
+		.blog-info {
+
+			float: left;
+			overflow: hidden;
+			text-align: left;
+			width: 40%;
+
+			a {
+
+				color: $canvas-grey-90;
+				font-weight: bold;
+
+			}
+
+		}
+
+		.blog-credits {
+
+			float: right;
+			width: 60%;
+			color: $canvas-grey-30;
+			text-align: right;
+
+			a {
+
+				color: $canvas-grey-60;
+
+			}
+
+		}
+
+	}
+
+	&.neverending footer#footer {
+
+		display: none;
+
+	}
+
+	&.infinity-end.neverending {
+
+		#infinite-footer {
+
+			display: none;
+
+		}
+
+		footer#footer {
+
+			display: block;
+
+		}
+
+	}
+
+}
+
+// testimonial shortcode
+div.jetpack-testimonial-shortcode {
+
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	@include clear;
+
+	.testimonial-entry {
+
+		margin: 0;
+		padding: $grid-line-height ( $grid-gutter / 2 );
+
+	}
+
+	.testimonial-entry-content {
+
+		margin: 0 0 ($grid-line-height / 2) 0;
+
+	}
+
+	.testimonial-entry-title {
+
+		display: inline-block;
+
+	}
+
+	.testimonial-featured-image {
+
+		float: left;
+
+		img {
+
+			max-height: $grid-line-height;
+			width: auto;
+			margin-right: ( $grid-gutter / 3 );
+			margin-left: 0;
+
+		}
+
+	}
+
+	&.column-2 {
+
+		.testimonial-entry {
+
+			width: 50%;
+
+			&:nth-of-type( 2n + 1 ) {
+
+				clear: both;
+
+			}
+
+		}
+
+	}
+
+	&.column-3 {
+
+		.testimonial-entry {
+
+			width: 33.3%;
+
+			&:nth-of-type( 3n + 1 ) {
+
+				clear: both;
+
+			}
+
+		}
+
+	}
+
+	&.column-4 {
+
+		.testimonial-entry {
+
+			width: 25%;
+
+			&:nth-of-type( 4n + 1 ) {
+
+				clear: both;
+
+			}
+
+		}
+
+	}
+
+	@include for-phone {
+
+		&.column-2,
+		&.column-3,
+		&.column-4 {
+
+			.testimonial-entry {
+
+				width: 100%;
+
+			}
+
+		}
+
+	}
+
+}
+
+// breadcrumbs
+.entry-breadcrumbs {
+
+	margin-bottom: ( $grid-line-height / 2 );
+
+	> a,
+	> span {
+
+		display: inline-block;
+
+	}
+
+	a {
+
+		font-weight: bold;
+		margin-right: $menu-link-padding;
+		position: relative;
+
+		&:focus,
+		&:hover {
+
+			text-decoration: none;
+
+		}
+
+		&:after {
+
+			@include arrow-right( $style-breadcrumb-arrow, 0.4em );
+			right: $menu-link-padding / -2;
+			left: auto;
+
+		}
+
+	}
+
+}
+
+
+// grunion contact form
+form.contact-form {
+
+	div {
+
+		label {
+
+			&.grunion-radio-label,
+			&.grunion-checkbox-multiple-label {
+
+				font-weight: normal;
+
+				input {
+
+					margin-bottom: 0;
+
+				}
+
+				&:last-of-type {
+
+					margin-bottom: $grid-line-height;
+
+				}
+
+			}
+
+		}
+
+		&.clear-form {
+
+			display: none;
+
+		}
+
+	}
+
+}
+
+// Cookie Consent.
+body #eu-cookie-law {
+
+	padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+	@include modular-scale( eta );
+
+	&.positive,
+	&.negative {
+
+		input {
+
+			@include button( $canvas-color, eta );
+
+		}
+
+	}
+
+}
+
+body {
+
+	// Popular posts thumbnails.
+	.widgets-list-layout img.widgets-list-layout-blavatar {
+
+		max-width: 100%;
+
+	}
+
+	// Jetpack social icons.
+	.jetpack-social-navigation ul {
+
+		margin-bottom: $grid-line-height;
+
+	}
+
+}
+

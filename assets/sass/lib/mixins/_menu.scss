@@ -1,0 +1,388 @@
+
+
+@mixin display-menu( $text-align: left, $menu-color: $canvas-color ) {
+
+	$background-color: $menu-color;
+	$background-hover-color: darken( $menu-color, 20% );
+	$foreground-color: contrast( $background-color );
+	$foreground-hover-color: contrast( $background-hover-color );
+
+	.menu {
+
+		@include clear;
+		position: relative;
+		text-align: $text-align;
+
+		ul {
+
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			z-index: layer( menu_dropdown );
+
+		}
+
+		// main navigation bar
+		li {
+
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+
+			a {
+
+				display: block;
+				padding: $menu-parent-link-vertical-padding $menu-link-padding;
+				position: relative;
+
+			}
+
+			//&.page_item_has_children > a,
+			&.menu-item-has-children > a {
+
+				padding-right: $menu-link-padding + ( $menu-arrow-size * 3 );
+				padding-left: $menu-link-padding;
+
+				// arrow pointing down to show there is a child menu
+				&:after {
+
+					@include arrow( $menu-arrow-size );
+					top: 45%;
+					top: calc( 50% - ( #{$menu-arrow-size} / 2 ) );
+					right: $menu-link-padding;
+					left: auto;
+					border-bottom-width: 0;
+					border-top-color: currentColor;
+
+				}
+
+			}
+
+			&.current-menu-item {
+
+				> a {
+
+					text-decoration: underline;
+
+				}
+
+			}
+
+			// first level dropdown
+			ul {
+
+				position: absolute;
+				width: $menu-dropdown-width;
+				background: $menu-color;
+				color: contrast( $menu-color );
+				left: -999em;
+
+				// Invisible hotspot that makes it easier to select sub menu items.
+				&:after {
+
+					display: block;
+					width: 2rem;
+					height: 2rem;
+					position: absolute;
+					left: -2rem;
+					right: auto;
+					bottom:-2rem;
+					top: $grid-line-height;
+					content: '';
+
+				}
+
+				// Second level navigation.
+				ul {
+
+					top: 0;
+					left: -999em;
+					right: auto;
+
+					&:before {
+
+						display: none;
+
+					}
+
+				}
+
+				li {
+
+					position: relative;
+					display: block;
+					float: none;
+
+					a:not(.button) {
+
+						color: $foreground-color;
+
+						&:focus,
+						&:hover {
+
+							color: $foreground-hover-color;
+							text-decoration: underline;
+
+						}
+
+					}
+
+					&.menu-item-has-children > a {
+
+						&:after {
+
+							top: 35%;
+							top: calc( 50% - #{$menu-arrow-size} );
+							border-top-color: transparent;
+							border-left-color: currentColor;
+							border-top-width: $menu-arrow-size;
+							border-bottom-width: $menu-arrow-size;
+							border-right-width: 0;
+
+						}
+
+					}
+
+					&:last-child {
+
+						border:none;
+
+					}
+
+					&.current-menu-item {
+
+						> a {
+
+							font-weight: bold;
+
+						}
+					}
+
+				}
+
+			}
+
+			// Must use left rather than display:block since it allows keyboard navigation to work properly.
+			&.focus,
+			&:hover {
+
+				> ul {
+
+					left: auto;
+					right: auto;
+
+				}
+
+			}
+
+		}
+
+		// Must use left rather than display:block since it allows keyboard navigation to work properly.
+		ul ul li {
+
+			&.focus,
+			&:hover {
+
+				> ul {
+
+					left: 100%;
+					right: auto;
+
+				}
+
+			}
+
+		}
+
+		.menu-toggle {
+
+			display: none;
+			border: none;
+			background: transparent;
+			cursor: pointer;
+			margin: 0;
+			width: 100%;
+
+			&:before {
+
+				margin-right: $style-spacing;
+				color: currentColor;
+
+			}
+
+			&:focus {
+
+				outline: $style-outline;
+
+			}
+
+			.icon {
+
+				fill: currentColor;
+
+			}
+
+		}
+
+		&.menu-on {
+
+			.menu-toggle {
+
+				margin-bottom: $grid-line-height;
+
+			}
+
+		}
+
+	}
+
+}
+
+@mixin display-menu-responsive( $background-color: $canvas-grey-100, $link-color: contrast( $background-color ) ) {
+
+	.menu {
+
+		background: $background-color;
+		width: 100%;
+		clear: both;
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
+
+		.menu-toggle {
+
+			display: block;
+			color: $link-color;
+
+			svg.icon {
+
+				height: 1em;
+				width: 1em;
+				margin-right: $style-spacing;
+				position: relative;
+				top: 0.2em;
+
+			}
+
+		}
+
+		&.menu-on {
+
+			ul {
+
+				display: block;
+
+			}
+
+		}
+
+		ul {
+
+			display: none;
+
+			&:before,
+			&:after {
+
+				display: none;
+
+			}
+
+			// must use left rather than display:block since it allows keyboard navigation to work properly.
+			ul li {
+
+				&.focus,
+				&:hover {
+
+					> ul {
+
+						left: auto;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		li {
+
+			display: list-item;
+			color: $link-color;
+
+			ul li a,
+			li a,
+			a {
+
+				&:not(.button) {
+
+					padding: ( $grid-line-height / 4 ) 0;
+					color: $link-color;
+					background: transparent;
+
+					&:focus,
+					&:hover {
+
+						color: $link-color;
+						background: transparent;
+						text-decoration: underline;
+
+					}
+
+					&:before,
+					&:after {
+
+						display: none;
+
+					}
+
+				}
+
+			}
+
+			&.icon {
+
+				&:not(.button) {
+
+					a {
+
+						&:before {
+
+							display: inline-block;
+
+						}
+
+					}
+
+				}
+
+			}
+
+			ul ul,
+			ul {
+
+				background: transparent;
+				position: relative;
+				top: auto;
+				left: auto;
+				box-shadow: none;
+				width: 100%;
+				margin: 0;
+				padding-left: ( $grid-gutter / 2 );
+				list-style-type: $style-list-style-type;
+				z-index: layer( base );
+
+				li {
+
+					display: list-item;
+					border: none;
+					left: auto;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
