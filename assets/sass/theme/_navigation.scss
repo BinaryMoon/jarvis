@@ -36,4 +36,49 @@
 
 	}
 
+	// Desktop.
+	@include for-tablet {
+
+		.menu-toggle {
+
+			display: none;
+
+		}
+
+		// First menu.
+		> ul {
+
+			> li {
+
+				display: inline-block;
+
+				&.menu-item-has-children {
+
+					.sub-menu {
+
+						display: none;
+
+					}
+
+					&:hover {
+
+						.submenu {
+
+							display: block;
+
+						}
+
+					}
+
+				}
+
+
+
+			}
+
+
+		}
+
+	}
+
 }
