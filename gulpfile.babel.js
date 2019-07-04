@@ -5,7 +5,6 @@ const { src, dest, parallel, watch, series } = require( 'gulp' );
 const sass = require( 'gulp-sass' );
 const autoprefixer = require( 'gulp-autoprefixer' );
 
-
 /**
  * Build SASS files.
  */
@@ -38,7 +37,6 @@ const styles = function() {
 		.pipe( dest( './' ) );
 
 };
-
 
 
 exports.build = parallel( styles );
