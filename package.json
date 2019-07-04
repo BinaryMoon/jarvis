@@ -14,9 +14,7 @@
 		"wordpress"
 	],
 	"browserslist": [
-		"last 2 version",
-		"> 1%",
-		"not dead"
+		"defaults"
 	],
 	"author": "binarymoon",
 	"license": "GPL-2.0",
@@ -30,5 +28,6 @@
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^6.1.0",
 		"gulp-sass": "^4.0.2"
-	}
+	},
+	"dependencies": {}
 }
