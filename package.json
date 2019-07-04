@@ -13,6 +13,11 @@
 	"keywords": [
 		"wordpress"
 	],
+	"browserslist": [
+		"last 2 version",
+		"> 1%",
+		"not dead"
+	],
 	"author": "binarymoon",
 	"license": "GPL-2.0",
 	"bugs": {
