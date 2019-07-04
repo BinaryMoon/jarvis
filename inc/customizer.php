@@ -80,62 +80,6 @@ function jarvis_customizer_settings( WP_Customize_Manager $wp_customize ) {
 	);
 
 	/**
-	 * Setting to select a category to set as featured in the main site content
-	 */
-	$wp_customize->add_setting(
-		'jarvis_primary_content_category',
-		array(
-			'default' => '',
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_int',
-		)
-	);
-
-	$wp_customize->add_control(
-		new Jarvis_Category_Dropdown_Custom_Control(
-			$wp_customize,
-			'jarvis_primary_content_category',
-			array(
-				'label' => esc_html__( 'Homepage Category', 'jarvis' ),
-				'section' => 'jarvis_options',
-			)
-		)
-	);
-
-	/**
-	 * Setting to select a category to set as featured in the main site content
-	 */
-	$wp_customize->add_setting(
-		'jarvis_archive_layout',
-		array(
-			'default' => 0,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_int',
-		)
-	);
-
-	$wp_customize->add_control(
-		new Jarvis_Dropdown_Custom_Control(
-			$wp_customize,
-			'jarvis_archive_layout',
-			array(
-				'label' => esc_html__( 'Homepage and Archive Layout', 'jarvis' ),
-				'section' => 'jarvis_options',
-				'default' => 0,
-				'params' => array(
-					0 => esc_html__( 'Jarvis Layout (default)', 'jarvis' ),
-					1 => esc_html__( 'Brick Layout', 'jarvis' ),
-					2 => esc_html__( '5 Column Grid', 'jarvis' ),
-					5 => esc_html__( '3 Column Grid', 'jarvis' ),
-					3 => esc_html__( '5 column Portrait Grid', 'jarvis' ),
-					6 => esc_html__( '3 column Portrait Grid', 'jarvis' ),
-					4 => esc_html__( 'Jumble Layout', 'jarvis' ),
-				),
-			)
-		)
-	);
-
-	/**
 	 * Setting to control whether the slider autoplays or not.
 	 */
 	$wp_customize->add_setting(
