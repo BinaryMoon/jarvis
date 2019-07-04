@@ -3,11 +3,11 @@
 // https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862#.wiu79l3xj
 //
 // I am not using the default breakpoints since the numbers I am choosing stick
-// to WordPress conventions.
+// to WordPress breakpoints.
 
 @mixin for-tablet {
 
-	@media only screen and ( min-width: $wp-responsive-width-2 ) {
+	@media ( min-width: $wp-responsive-width-2 ) {
 		@content;
 	}
 
@@ -15,7 +15,7 @@
 
 @mixin for-big-tablet {
 
-	@media only screen and ( min-width: 1000px ) {
+	@media ( min-width: 1000px ) {
 		@content;
 	}
 
@@ -23,7 +23,7 @@
 
 @mixin for-desktop {
 
-	@media only screen and ( min-width: 1200px ) {
+	@media ( min-width: 1200px ) {
 		@content;
 	}
 
@@ -31,7 +31,7 @@
 
 @mixin for-big-desktop {
 
-	@media only screen and ( min-width: 1800px ) {
+	@media ( min-width: 1800px ) {
 		@content;
 	}
 
