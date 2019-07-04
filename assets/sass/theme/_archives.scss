@@ -11,6 +11,26 @@
 		width: 100%;
 		margin-bottom: $grid-line-height * 3;
 
+		@include for-tablet {
+
+			display: grid;
+			grid-template-columns: 15% 35% 50%;
+			grid-column-gap: $grid-gutter;
+
+			.post-meta-data {
+
+				margin-top: ( $grid-line-height / 5 );
+
+				span {
+
+					display: block;
+
+				}
+
+			}
+
+		}
+
 		h2.entry-title {
 
 			@include modular-scale( gamma );
@@ -34,7 +54,7 @@
 			.wp-playlist,
 			.mejs-container {
 
-				margin-bottom: $grid-line-height / 2;
+				margin: 0;
 
 			}
 
@@ -44,6 +64,7 @@
 
 			.jetpack-video-wrapper {
 
+				margin-top: 0;
 				margin-bottom: $grid-line-height / 2;
 
 			}
@@ -81,7 +102,7 @@
 
 	.entry-archive-header {
 
-		margin-bottom: $grid-line-height * 3;
+		margin-bottom: $grid-line-height * 5;
 
 	}
 
