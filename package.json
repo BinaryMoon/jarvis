@@ -4,7 +4,7 @@
 	"description": "Jarvis WordPress Theme",
 	"main": "index.php",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"dev": "gulp"
 	},
 	"repository": {
 		"type": "git",
@@ -28,9 +28,7 @@
 		"@babel/core": "^7.4.5",
 		"@babel/register": "^7.4.4",
 		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^6.1.0",
 		"gulp-sass": "^4.0.2"
-	},
-	"scripts": {
-		"dev": "gulp"
 	}
 }
