@@ -3222,6 +3222,27 @@ a.header-image img {
 	color: #fff;
 }
 
+.sidebar {
+	-moz-column-count: 4;
+	column-count: 4;
+	-moz-column-width: 15rem;
+	column-width: 15rem;
+	margin-bottom: 4.5rem;
+}
+
+.sidebar .widget {
+	padding: 0.75rem 1rem;
+	display: inline-block;
+}
+
+.sidebar .widget .widget-title {
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.75;
+	margin-bottom: 0.75rem;
+	font-weight: bold;
+}
+
 /*!
  * ## - Body
  * Site content, blog posts etc
@@ -3325,24 +3346,4 @@ a.header-image img {
 	max-height: 4.5rem;
 	width: auto;
 	margin: 0 auto 0.75rem auto;
-}
-
-.sidebar {
-	-moz-column-count: 4;
-	column-count: 4;
-	-moz-column-width: 15rem;
-	column-width: 15rem;
-	margin-bottom: 4.5rem;
-}
-
-.sidebar .widget {
-	padding: 0.75rem 1rem;
-}
-
-.sidebar .widget .widget-title {
-	font-size: 14px;
-	font-size: 0.875rem;
-	line-height: 1.75;
-	margin-bottom: 0.75rem;
-	font-weight: bold;
 }

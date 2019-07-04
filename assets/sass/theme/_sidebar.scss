@@ -7,6 +7,7 @@
 	.widget {
 
 		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+		display: inline-block;
 
 		.widget-title {
 
