@@ -28,12 +28,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<a href="<?php the_permalink(); ?>" class="thumbnail" aria-hidden="true" tabindex="-1">
-		<?php echo $image; // WPCS: XSS OK. ?>
-	</a>
-
-	<section class="entry entry-archive">
-
 <?php
 
 	get_template_part( 'parts/entry-meta' );
@@ -42,6 +36,8 @@
 
 ?>
 
-	</section>
+	<a href="<?php the_permalink(); ?>" class="thumbnail" aria-hidden="true" tabindex="-1">
+		<?php echo $image; // WPCS: XSS OK. ?>
+	</a>
 
 </article><!-- #post-<?php the_ID(); ?> -->

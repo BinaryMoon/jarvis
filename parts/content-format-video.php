@@ -27,18 +27,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php echo jarvis_video_wrapper( $video[0] ); // WPCS: XSS OK. ?>
-
-	<section class="entry entry-archive">
-
 <?php
 
 	get_template_part( 'parts/entry-meta' );
 
 	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
-?>
+	echo jarvis_video_wrapper( $video[0] ); // WPCS: XSS OK.
 
-	</section>
+?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

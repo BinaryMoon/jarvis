@@ -25,12 +25,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="post-gallery">
-		<?php echo $gallery; // WPCS: XSS OK. ?>
-	</div>
-
-	<section class="entry entry-archive">
-
 <?php
 
 	get_template_part( 'parts/entry-meta' );
@@ -39,6 +33,8 @@
 
 ?>
 
-	</section>
+	<div class="post-gallery">
+		<?php echo $gallery; // WPCS: XSS OK. ?>
+	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

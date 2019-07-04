@@ -26,12 +26,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="entry-audio">
-		<?php echo $audio[0]; /* WPCS: xss ok. */ ?>
-	</div>
-
-	<section class="entry entry-archive">
-
 <?php
 
 	get_template_part( 'parts/entry-meta' );
@@ -40,6 +34,8 @@
 
 ?>
 
-	</section>
+	<div class="entry-audio">
+		<?php echo $audio[0]; /* WPCS: xss ok. */ ?>
+	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
