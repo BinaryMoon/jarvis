@@ -3,43 +3,17 @@
 // font overrides
 $font-family-sans: Cambria, Georgia, serif;
 $font-family-serif: Cambria, Georgia, serif;
-$font-base: 18;
+$font-base: 16;
 $font-family-body: $font-family-serif;
 $font-family-header: $font-family-sans;
 //$line-height: 1.5;
 
 
 // colours
-$canvas-white: #fff;
-//$canvas-green: #2ECC71;
-//$canvas-green-dark: darken( $canvas-green, 12% );
-//$canvas-blue: #3498db;
-//$canvas-blue-dark: darken( $canvas-blue, 12% );
-//$canvas-red: #E74C3C;
-//$canvas-red-dark: darken( $canvas-red, 12% );
-//$canvas-purple: #9B59B6;
-//$canvas-purple-dark: darken( $canvas-purple, 12% );
-// $canvas-yellow:#F1C40F;
-// $canvas-yellow-dark: darken( $canvas-yellow, 12% );
-//$canvas-orange:#E67E22;
-//$canvas-orange-dark: darken( $canvas-orange, 12% );
-
-// greys
-$canvas-grey-100: #000;
-$canvas-grey-90: lighten( $canvas-grey-100, 10% );
-$canvas-grey-80: lighten( $canvas-grey-100, 20% );
-$canvas-grey-70: lighten( $canvas-grey-100, 30% );
-$canvas-grey-60: lighten( $canvas-grey-100, 40% );
-$canvas-grey-50: lighten( $canvas-grey-100, 50% );
-$canvas-grey-40: lighten( $canvas-grey-100, 60% );
-$canvas-grey-30: lighten( $canvas-grey-100, 70% );
-$canvas-grey-20: lighten( $canvas-grey-100, 80% );
-$canvas-grey-10: lighten( $canvas-grey-100, 90% );
-$canvas-grey-5: lighten( $canvas-grey-100, 95% );
-$canvas-grey-1: lighten( $canvas-grey-100, 99% );
+$black: #000;
+$white: #fff;
 
 // main colour, used through the theme
-$canvas-color: #000;
 $canvas-background: #ffc;
 
 //$link-color: $canvas-color;
@@ -66,17 +40,17 @@ $grid-gutter: 1rem;
 $support-accessible-tagcloud: true;
 
 // default font sizes.
-// calculate the sizes with: (100 / 16 * 30) / 100
+// calculate the sizes with: (100 / 18 * 30) / 100
 $font-sizes: (
 	// giga: ( size: 6.25rem, height: 1 ),
 	// mega: ( size: 5rem, height: 1.25 ),
-	// alpha: ( size: 4rem, height: 1.25 ),
+	alpha: ( size: 4rem, height: 1.25 ),			// 64px
 	// beta: ( size: 3.25rem, height: 1.25 ),
-	gamma: ( size: 1.875rem, height: 1.25 ),
-	delta: ( size: 1.625rem, height: 1.5 ),
-	epsilon: ( size: 1rem, height: 1.5 ),
-	zeta: ( size: 0.875rem, height: 1.75 ),
-	// eta: ( size: 0.75rem, height: 1.75 ),
+	gamma: ( size: 1.875rem, height: 1.25 ),		// 30px
+	delta: ( size: 1.625rem, height: 1.5 ),			// 26px
+	epsilon: ( size: 1.125rem, height: 1.5 ),		// 18px
+	zeta: ( size: 0.875rem, height: 1.75 ),			// 14px
+	eta: ( size: 0.75rem, height: 1.75 ),			// 12px
 	// micro: ( size: 0.5rem, height: 1.75 ),
 );
 
