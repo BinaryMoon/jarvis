@@ -8,7 +8,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
 
 	margin: 0 0 ( $grid-line-height * $line-height-margin-multiplier ) 0;
 
@@ -18,11 +19,6 @@ hr {
 
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto;
 
-}
-
-p {
-
-	margin: 0 0 ( $grid-line-height * $line-height-margin-multiplier ) 0;
 }
 
 pre {

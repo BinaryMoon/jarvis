@@ -10,7 +10,6 @@
 
 		width: 100%;
 		margin-bottom: $grid-line-height * 3;
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 
 		h2.entry-title {
 
@@ -75,6 +74,48 @@
 		&.post-loaded {
 
 			@include animation( fade-in 0.5s );
+
+		}
+
+	}
+
+	.entry-archive-header {
+
+		margin-bottom: $grid-line-height * 3;
+
+	}
+
+	.entry-archive-title {
+
+		@include modular-scale( alpha );
+		letter-spacing: -0.025em;
+		font-weight: bold;
+
+		span {
+
+			display: block;
+			@include modular-scale( delta );
+			letter-spacing: initial;
+
+		}
+
+	}
+
+	.category-description {
+
+		@include modular-scale( delta );
+		max-width: ( $grid-total-width * 0.75 );
+		margin-bottom: 0;
+		margin-top: $grid-line-height;
+		font-weight: 100;
+
+		p {
+
+			&:last-child {
+
+				margin-bottom: 0;
+
+			}
 
 		}
 

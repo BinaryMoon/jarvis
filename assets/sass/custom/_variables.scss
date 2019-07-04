@@ -3,13 +3,11 @@
 // font overrides
 $font-family-sans: Cambria, Georgia, serif;
 $font-family-serif: Cambria, Georgia, serif;
-//$font-base: 18;
+$font-base: 18;
 $font-family-body: $font-family-serif;
 $font-family-header: $font-family-sans;
 //$line-height: 1.5;
 
-// enable/ disable debug features
-$debug: false;
 
 // colours
 $canvas-white: #fff;
@@ -21,8 +19,8 @@ $canvas-white: #fff;
 //$canvas-red-dark: darken( $canvas-red, 12% );
 //$canvas-purple: #9B59B6;
 //$canvas-purple-dark: darken( $canvas-purple, 12% );
-$canvas-yellow:#F1C40F;
-$canvas-yellow-dark: darken( $canvas-yellow, 12% );
+// $canvas-yellow:#F1C40F;
+// $canvas-yellow-dark: darken( $canvas-yellow, 12% );
 //$canvas-orange:#E67E22;
 //$canvas-orange-dark: darken( $canvas-orange, 12% );
 
@@ -41,8 +39,8 @@ $canvas-grey-5: lighten( $canvas-grey-100, 95% );
 $canvas-grey-1: lighten( $canvas-grey-100, 99% );
 
 // main colour, used through the theme
-$canvas-color: $canvas-yellow-dark;
-$canvas-background: $canvas-white;
+$canvas-color: #000;
+$canvas-background: #ffc;
 
 //$link-color: $canvas-color;
 
@@ -54,7 +52,7 @@ $comments-margin: 4%;
 
 // grid sizes
 //$grid-line-height: $line-height * 1rem;
-//$grid-total-width: 75em;
+$grid-total-width: 68rem;
 //$grid-line-height-multiplier: 1.5;
 $grid-gutter: 1rem;
 //$grid-column-gutter: 1 / 2;
@@ -76,7 +74,7 @@ $font-sizes: (
 	// beta: ( size: 3.25rem, height: 1.25 ),
 	gamma: ( size: 1.875rem, height: 1.25 ),
 	delta: ( size: 1.625rem, height: 1.5 ),
-	// epsilon: ( size: 1.25rem, height: 1.5 ),
+	epsilon: ( size: 1rem, height: 1.5 ),
 	zeta: ( size: 0.875rem, height: 1.75 ),
 	// eta: ( size: 0.75rem, height: 1.75 ),
 	// micro: ( size: 0.5rem, height: 1.75 ),
@@ -85,7 +83,6 @@ $font-sizes: (
 // z-index layer positions
 $layer: (
 	base: 1,
-	showcase_nav: 50,
 	infinite_footer: 50,
 	menu_dropdown: 100,
 	top: 100000

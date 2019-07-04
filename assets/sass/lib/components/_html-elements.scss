@@ -140,3 +140,22 @@ table {
 	}
 
 }
+
+pre {
+
+	background: $canvas-pre-background;
+	color: $canvas-pre-color;
+	padding: $grid-line-height $style-element-spacing;
+	overflow: auto;
+	display: block;
+	word-wrap: normal;
+	white-space: pre;
+	tab-size: 4;
+
+	&.compress {
+
+		max-height: $grid-line-height * 15;
+
+	}
+
+}

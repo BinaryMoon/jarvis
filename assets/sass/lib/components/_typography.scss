@@ -24,6 +24,7 @@ h6 {
 	a {
 
 		color: $body-header-color;
+		text-decoration: none;
 
 		&:focus,
 		&:hover {
@@ -81,24 +82,5 @@ hr {
 
 	border: none;
 	border-bottom: $border-width solid $border-color;
-
-}
-
-pre {
-
-	background: $canvas-pre-background;
-	color: $canvas-pre-color;
-	padding: $grid-line-height $style-element-spacing;
-	overflow: auto;
-	display: block;
-	word-wrap: normal;
-	white-space: pre;
-	tab-size: 4;
-
-	&.compress {
-
-		max-height: $grid-line-height * 15;
-
-	}
 
 }
