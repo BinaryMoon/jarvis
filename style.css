@@ -3160,6 +3160,21 @@ a.header-image img {
 	color: white;
 }
 
+@media (min-width: 782px) {
+	.menu-primary .menu-toggle {
+		display: none;
+	}
+	.menu-primary > ul > li {
+		display: inline-block;
+	}
+	.menu-primary > ul > li.menu-item-has-children .sub-menu {
+		display: none;
+	}
+	.menu-primary > ul > li.menu-item-has-children:hover .submenu {
+		display: block;
+	}
+}
+
 /*!
  * ## - Pagination
  */
