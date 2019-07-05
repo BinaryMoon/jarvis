@@ -19,9 +19,11 @@
 	<header class="entry-header">
 
 <?php
-	the_title( '<h1 class="entry-title">', '</h1>' );
 
 	get_template_part( 'parts/entry-meta' );
+
+	the_title( '<h1 class="entry-title">', '</h1>' );
+
 ?>
 
 	</header>

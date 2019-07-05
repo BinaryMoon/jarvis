@@ -17,7 +17,6 @@
 	<header class="entry-header">
 
 <?php
-	jarvis_breadcrumbs();
 
 	// If page is set as static homepage.
 	if ( is_front_page() ) {
@@ -26,11 +25,12 @@
 
 	} else {
 
+		jarvis_breadcrumbs();
+
 		the_title( '<h1 class="entry-title">', '</h1>' );
 
 	}
 
-	get_template_part( 'parts/entry-meta' );
 ?>
 
 	</header>
