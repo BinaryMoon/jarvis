@@ -14,7 +14,8 @@
 		@include for-tablet {
 
 			display: grid;
-			grid-template-columns: 15% 35% 50%;
+			grid-template-columns: 15% calc( 35% - #{$grid-gutter * 2} ) 50%;
+			// grid-template-columns: 1.5fr 3.5fr 5fr;
 			grid-column-gap: $grid-gutter;
 
 			.post-meta-data {
@@ -31,11 +32,39 @@
 
 		}
 
+		.post-meta-data {
+
+			@include modular-scale( eta );
+
+			a {
+
+				text-decoration: none;
+
+				&:hover {
+
+					text-decoration: underline;
+
+				}
+
+			}
+
+		}
+
 		h2.entry-title {
 
 			@include modular-scale( gamma );
 			font-weight: bold;
 			margin: 0;
+
+		}
+
+		.read-more {
+
+			@include post-meta-data;
+			font-weight: bold;
+			// Add some padding for a larger clickable area.
+			// Still an inline element so takes up the same amount of space.
+			padding: ( $grid-line-height / 2 ) 0;
 
 		}
 
