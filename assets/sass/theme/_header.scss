@@ -9,12 +9,14 @@
 
 	@include for-tablet {
 
+		margin-top: $grid-line-height;
 		margin-bottom: $grid-line-height * 4.5;
 
 	}
 
 	@include for-desktop {
 
+		margin-top: $grid-line-height * 2;
 		margin-bottom: $grid-line-height * 7;
 
 	}
