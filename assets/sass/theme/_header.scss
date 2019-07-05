@@ -5,11 +5,24 @@
 
 .site-header {
 
+	margin-bottom: $grid-line-height * 2;
+
+	@include for-tablet {
+
+		margin-bottom: $grid-line-height * 4;
+
+	}
+
+	@include for-desktop {
+
+		margin-bottom: $grid-line-height * 6;
+
+	}
+
 	.site-header-content {
 
 		display: flex;
 		padding: ( $grid-line-height / 2 ) 0;
-		flex-wrap: wrap;
 
 	}
 
