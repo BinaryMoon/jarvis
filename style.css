@@ -2764,7 +2764,7 @@ p.demo_store a {
 @media (min-width: 782px) {
 	.content-posts article {
 		display: grid;
-		grid-template-columns: 15% 35% 50%;
+		grid-template-columns: 15% calc( 35% - 2rem) 50%;
 		grid-column-gap: 1rem;
 	}
 	.content-posts article .post-meta-data {
@@ -2775,12 +2775,42 @@ p.demo_store a {
 	}
 }
 
+.content-posts article .post-meta-data {
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.75;
+}
+
+.content-posts article .post-meta-data a {
+	text-decoration: none;
+}
+
+.content-posts article .post-meta-data a:hover {
+	text-decoration: underline;
+}
+
 .content-posts article h2.entry-title {
 	font-size: 30px;
 	font-size: 1.875rem;
 	line-height: 1.25;
 	font-weight: bold;
 	margin: 0;
+}
+
+.content-posts article .read-more {
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.75;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+	padding: 0.75rem 0;
+}
+
+.content-posts article.format-quote blockquote {
+	margin: 0;
+	grid-column: 1 / -1;
 }
 
 .content-posts article.format-audio .wp-playlist,
@@ -3014,7 +3044,7 @@ a.thumbnail img {
  * ## - Footer
  */
 .site-footer {
-	text-align: center;
+	padding: 1.5rem 1rem 3rem 1rem;
 }
 
 .site-footer .sep {
@@ -3073,11 +3103,26 @@ blockquote p:last-child {
 /*!
  * ## - Header
  */
+.site-header {
+	margin-bottom: 3rem;
+}
+
+@media (min-width: 782px) {
+	.site-header {
+		margin-bottom: 6rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.site-header {
+		margin-bottom: 9rem;
+	}
+}
+
 .site-header .site-header-content {
 	display: -webkit-box;
 	display: flex;
 	padding: 0.75rem 0;
-	flex-wrap: wrap;
 }
 
 .site-header .custom-logo-link {
@@ -3156,22 +3201,38 @@ a.header-image img {
 	padding: 0.75rem 1rem;
 }
 
+.menu-primary ul li {
+	position: relative;
+	margin: 0;
+}
+
 .menu-primary ul li a {
 	color: white;
+	padding: 0.75rem 1rem;
 }
 
 @media (min-width: 782px) {
 	.menu-primary .menu-toggle {
 		display: none;
 	}
+	.menu-primary > ul {
+		background: transparent;
+	}
 	.menu-primary > ul > li {
 		display: inline-block;
 	}
-	.menu-primary > ul > li.menu-item-has-children .sub-menu {
+	.menu-primary > ul > li > a {
+		color: black;
+	}
+	.menu-primary > ul > li.menu-item-has-children > .sub-menu {
 		display: none;
 	}
-	.menu-primary > ul > li.menu-item-has-children:hover .submenu {
+	.menu-primary > ul > li.menu-item-has-children:hover > .sub-menu {
 		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 12rem;
 	}
 }
 
@@ -3233,9 +3294,9 @@ a.header-image img {
 }
 
 .sidebar .widget .widget-title {
-	font-size: 14px;
-	font-size: 0.875rem;
-	line-height: 1.75;
+	font-size: 18px;
+	font-size: 1.125rem;
+	line-height: 1.5;
 	margin-bottom: 0.75rem;
 	font-weight: bold;
 }
