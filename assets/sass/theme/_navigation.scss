@@ -26,9 +26,13 @@
 
 		li {
 
+			position: relative;
+			margin: 0;
+
 			a {
 
 				color: white;
+				padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 
 			}
 
@@ -48,13 +52,21 @@
 		// First menu.
 		> ul {
 
+			background: transparent;
+
 			> li {
 
 				display: inline-block;
 
+				> a {
+
+					color: black;
+
+				}
+
 				&.menu-item-has-children {
 
-					.sub-menu {
+					> .sub-menu {
 
 						display: none;
 
@@ -62,9 +74,13 @@
 
 					&:hover {
 
-						.submenu {
+						> .sub-menu {
 
 							display: block;
+							position: absolute;
+							top: 100%;
+							left: 0;
+							width: 12rem;
 
 						}
 
