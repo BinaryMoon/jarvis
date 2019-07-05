@@ -9,11 +9,18 @@
 
 	article {
 
+		.entry-header {
+
+			margin-bottom: ( $grid-line-height * 3 );
+
+		}
+
 		.entry-title {
 
 			// Keep this since we swap between h1 and h2 depending upon if there
 			// is a static front page set.
-			@include modular-scale( beta );
+			@include modular-scale( alpha );
+			letter-spacing: -0.01em;
 
 			font-weight: bold;
 
