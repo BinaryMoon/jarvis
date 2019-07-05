@@ -19,17 +19,12 @@
 
 	</div>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer container" role="contentinfo">
 
 <?php
 	get_sidebar();
 
 	jarvis_social_links();
-?>
-
-		<a href="#header" class="scroll-to scroll-to-top"><?php esc_html_e( 'Top', 'jarvis' ); ?></a>
-
-<?php
 
 	/**
 	 * Check to see if a custom credits option is set.
@@ -41,16 +36,24 @@
 ?>
 
 		<div class="site-info">
+
 <?php
 			if ( function_exists( 'the_privacy_policy_link' ) ) {
-				the_privacy_policy_link( '', '<span role="separator" aria-hidden="true" class="sep"></span>' );
+				the_privacy_policy_link();
 			}
 ?>
+
 			<span role="separator" aria-hidden="true" class="sep"></span>
+
 <?php
 			/* Translators: %1$s = theme name, %2$s = theme author website */
 			printf( esc_html__( 'Theme: %1$s by %2$s', 'jarvis' ), 'Jarvis', '<a href="https://prothemedesign.com/">Pro Theme Design</a>' );
 ?>
+
+			<span role="separator" aria-hidden="true" class="sep"></span>
+
+			<a href="#header" class="scroll-to scroll-to-top"><?php esc_html_e( 'Top', 'jarvis' ); ?></a>
+
 		</div>
 
 <?php

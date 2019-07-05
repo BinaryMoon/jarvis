@@ -5,7 +5,7 @@
 
 .site-footer {
 
-	text-align: center;
+	padding: ( $grid-line-height ) ( $grid-gutter ) ( $grid-line-height * 2 ) ( $grid-gutter );
 
 	.sep {
 
