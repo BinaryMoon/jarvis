@@ -183,7 +183,7 @@ html {
 }
 
 body {
-	background-color: #ffc;
+	background-color: #ff9;
 	margin: 0;
 }
 
@@ -445,7 +445,6 @@ html {
 	line-height: 1.75;
 	font-weight: normal;
 	font-family: Cambria, Georgia, serif;
-	color: #333333;
 	direction: ltr;
 	-webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
 	font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
@@ -828,7 +827,7 @@ button {
 	border: none;
 	padding: 0.75rem 2rem;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	text-align: center;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -872,7 +871,7 @@ legend {
 	padding: 0 0.5rem;
 	text-transform: uppercase;
 	font-weight: bold;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 fieldset {
@@ -974,7 +973,7 @@ table caption {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	padding: 0.75rem 1.5rem;
 	text-align: left;
 	font-weight: bold;
@@ -1630,7 +1629,7 @@ p.wp-block-subhead {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	opacity: 0.8;
 	display: block;
 	margin-bottom: 0.75rem;
@@ -1882,7 +1881,7 @@ p.wp-block-subhead {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 .content-comments ol.comment-list li.comment footer .fn {
@@ -1974,7 +1973,7 @@ p.wp-block-subhead {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 .content-comments ol.comment-list .edit-link:before {
@@ -2034,7 +2033,7 @@ p.wp-block-subhead {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 #respond p.comment-form-cookies-consent,
@@ -2176,7 +2175,7 @@ p > object:only-child {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 /*!
@@ -2221,7 +2220,7 @@ main div.sharedaddy h3.sd-title {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	font-family: Cambria, Georgia, serif;
 	margin: 0 0 0.75rem 0;
 	display: block;
@@ -2278,7 +2277,7 @@ main div#jp-relatedposts {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	margin: 0;
 }
 
@@ -2406,7 +2405,7 @@ body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
 	border: none;
 	padding: 0.75rem 2rem;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	text-align: center;
 	font-size: 12px;
 	font-size: 0.75rem;
@@ -2446,7 +2445,7 @@ body .jetpack-social-navigation ul {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	font-weight: bold;
 }
 
@@ -2469,7 +2468,7 @@ body .jetpack-social-navigation ul {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 .woocommerce .quantity .qty {
@@ -2491,7 +2490,7 @@ body .jetpack-social-navigation ul {
 	border: none;
 	padding: 0.75rem 2rem;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	text-align: center;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -2529,7 +2528,7 @@ body .jetpack-social-navigation ul {
 	border: none;
 	padding: 0.75rem 2rem;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	text-align: center;
 	font-size: 18px;
 	font-size: 1.125rem;
@@ -2794,7 +2793,6 @@ p.demo_store a {
 	font-size: 1.875rem;
 	line-height: 1.25;
 	font-weight: bold;
-	margin: 0;
 }
 
 .content-posts article .read-more {
@@ -2803,7 +2801,7 @@ p.demo_store a {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	font-weight: bold;
 	padding: 0.75rem 0;
 }
@@ -2861,7 +2859,7 @@ p.demo_store a {
 	font-size: 26px;
 	font-size: 1.625rem;
 	line-height: 1.5;
-	max-width: 51rem;
+	max-width: 44.85rem;
 	margin-bottom: 0;
 	margin-top: 1.5rem;
 	font-weight: 100;
@@ -2928,7 +2926,7 @@ p.demo_store a {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	margin: 0;
 }
 
@@ -2953,7 +2951,7 @@ p.demo_store a {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 .contributor .avatar {
@@ -2976,7 +2974,7 @@ a.thumbnail img {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 .post-gallery:after {
@@ -3020,7 +3018,7 @@ a.thumbnail img {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 .projects-terms a {
@@ -3037,7 +3035,7 @@ a.thumbnail img {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 }
 
 /*!
@@ -3057,25 +3055,27 @@ a.thumbnail img {
  */
 a {
 	color: #000000;
+	text-underline-offset: 0.1em;
+	text-decoration-thickness: 0.1em;
 }
 
 .device-click a {
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
 }
 
 a:hover {
-	color: black;
+	text-underline-offset: 0.2em;
 }
 
 .device-click a:hover {
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
 }
 
 .container {
 	width: 100%;
-	max-width: 68rem;
+	max-width: 69rem;
 	margin: 0 auto;
 }
 
@@ -3109,20 +3109,22 @@ blockquote p:last-child {
 
 @media (min-width: 782px) {
 	.site-header {
-		margin-bottom: 6rem;
+		margin-bottom: 6.75rem;
 	}
 }
 
 @media (min-width: 1200px) {
 	.site-header {
-		margin-bottom: 9rem;
+		margin-bottom: 10.5rem;
 	}
 }
 
 .site-header .site-header-content {
 	display: -webkit-box;
 	display: flex;
-	padding: 0.75rem 0;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 1.5rem 0;
 }
 
 .site-header .custom-logo-link {
@@ -3144,10 +3146,18 @@ blockquote p:last-child {
 	font-family: Cambria, Georgia, serif;
 	font-size: 26px;
 	font-size: 1.625rem;
-	line-height: 1.5;
+	line-height: 1.2;
 	font-weight: bold;
 	margin: 0;
 	color: #000000;
+}
+
+.site-header .branding .site-title a {
+	text-decoration: none;
+}
+
+.site-header .branding .site-title a:hover {
+	text-decoration: underline;
 }
 
 .site-header .branding .site-description {
@@ -3156,12 +3166,12 @@ blockquote p:last-child {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	margin: 0;
 }
 
 .site-header .menu {
-	padding: 1rem;
+	padding: 0 1rem;
 }
 
 a.header-image {
@@ -3209,6 +3219,7 @@ a.header-image img {
 .menu-primary ul li a {
 	color: white;
 	padding: 0.75rem 1rem;
+	text-decoration: none;
 }
 
 @media (min-width: 782px) {
@@ -3223,6 +3234,7 @@ a.header-image img {
 	}
 	.menu-primary > ul > li > a {
 		color: black;
+		font-weight: bold;
 	}
 	.menu-primary > ul > li.menu-item-has-children > .sub-menu {
 		display: none;
@@ -3254,7 +3266,7 @@ a.header-image img {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	display: block;
 }
 
@@ -3306,10 +3318,15 @@ a.header-image img {
  * Site content, blog posts etc
  */
 /* single post and page */
+.content-single article .entry-header {
+	margin-bottom: 4.5rem;
+}
+
 .content-single article .entry-title {
-	font-size: 52px;
-	font-size: 3.25rem;
+	font-size: 64px;
+	font-size: 4rem;
 	line-height: 1.25;
+	letter-spacing: -0.01em;
 	font-weight: bold;
 }
 
@@ -3393,7 +3410,7 @@ a.header-image img {
 	line-height: 1.75;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.15em;
 	display: block;
 	text-align: center;
 }
