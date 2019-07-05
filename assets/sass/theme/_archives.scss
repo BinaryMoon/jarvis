@@ -150,7 +150,7 @@
 		span {
 
 			display: block;
-			@include modular-scale( delta );
+			@include modular-scale( epsilon );
 			letter-spacing: initial;
 
 		}
