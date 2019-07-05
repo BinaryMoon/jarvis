@@ -11,7 +11,7 @@
 
 		.widget-title {
 
-			@include modular-scale( zeta );
+			@include modular-scale( epsilon );
 			margin-bottom: $grid-line-height / 2;
 			font-weight: bold;
 
