@@ -42,7 +42,6 @@
 	@include modular-scale( base );
 	font-weight: $font-weight;
 	font-family: $font-family-body;
-	color: $body-copy-color;
 	direction: ltr;
 	font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
 	font-variant-ligatures: no-discretionary-ligatures;

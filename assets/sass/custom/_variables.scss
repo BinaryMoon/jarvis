@@ -6,8 +6,7 @@ $font-family-serif: Cambria, Georgia, serif;
 $font-base: 16;
 $font-family-body: $font-family-serif;
 $font-family-header: $font-family-sans;
-//$line-height: 1.5;
-
+$font-uppercase-spacing: 0.15em;
 
 // colours
 $black: #000;
@@ -16,17 +15,11 @@ $white: #fff;
 // main colour, used through the theme
 $canvas-background: #ff9;
 
-//$link-color: $canvas-color;
-
 $comments-margin: 4%;
-
-// $body-copy-color: $canvas-grey-60;
-// $body-header-color: $canvas-grey-100;
-
 
 // grid sizes
 //$grid-line-height: $line-height * 1rem;
-$grid-total-width: 68rem;
+$grid-total-width: 69rem;
 //$grid-line-height-multiplier: 1.5;
 $grid-gutter: 1rem;
 //$grid-column-gutter: 1 / 2;
