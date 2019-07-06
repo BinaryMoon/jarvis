@@ -143,7 +143,7 @@
 
 	.entry-archive-title {
 
-		@include modular-scale( alpha );
+		@include modular-scale( mega );
 		letter-spacing: -0.025em;
 		font-weight: bold;
 
@@ -160,7 +160,7 @@
 	.category-description {
 
 		@include modular-scale( delta );
-		max-width: ( $grid-total-width * 0.65 );
+		max-width: $grid-small-width;
 		margin-bottom: 0;
 		margin-top: $grid-line-height;
 		font-weight: 100;

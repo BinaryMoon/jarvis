@@ -20,6 +20,7 @@ $comments-margin: 4%;
 // grid sizes
 //$grid-line-height: $line-height * 1rem;
 $grid-total-width: 69rem;
+$grid-small-width: 44rem;
 //$grid-line-height-multiplier: 1.5;
 $grid-gutter: 1rem;
 //$grid-column-gutter: 1 / 2;
@@ -36,7 +37,7 @@ $support-accessible-tagcloud: true;
 // calculate the sizes with: (100 / 18 * 30) / 100
 $font-sizes: (
 	// giga: ( size: 6.25rem, height: 1 ),
-	// mega: ( size: 5rem, height: 1.25 ),
+	mega: ( size: 6rem, height: 1.25 ),				// 96px
 	alpha: ( size: 4rem, height: 1.25 ),			// 64px
 	// beta: ( size: 3.25rem, height: 1.25 ),
 	gamma: ( size: 1.875rem, height: 1.25 ),		// 30px
