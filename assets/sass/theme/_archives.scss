@@ -143,7 +143,14 @@
 
 	.entry-archive-title {
 
-		@include modular-scale( mega );
+		@include for-tablet {
+			@include modular-scale( alpha );
+		}
+
+		@include for-desktop {
+			@include modular-scale( mega );
+		}
+
 		letter-spacing: -0.025em;
 		font-weight: bold;
 
