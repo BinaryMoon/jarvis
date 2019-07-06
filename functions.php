@@ -58,6 +58,13 @@
  * Test css on http://cssstats.com/ and make sure things look sensible.
  */
 
+
+/**
+ * Alternate styles
+ * ---
+ * paragraph - intro
+ */
+
 // WordPress specific functionality (actions and filters).
 require get_parent_theme_file_path( 'inc/wordpress.php' );
 
