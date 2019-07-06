@@ -1,7 +1,7 @@
 .sidebar {
 
-	column-count: 4;
-	column-width: 15rem;
+	column-count: 3;
+	column-width: 20rem;
 	margin-bottom: $grid-line-height * 3;
 
 	.widget {
@@ -11,7 +11,7 @@
 
 		.widget-title {
 
-			@include modular-scale( epsilon );
+			@include modular-scale( gamma );
 			margin-bottom: $grid-line-height / 2;
 			font-weight: bold;
 
