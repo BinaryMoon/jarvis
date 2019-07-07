@@ -70,9 +70,8 @@
 // Quote styles.
 @mixin blockquote {
 
-	padding: ( $grid-line-height * $grid-line-height-multiplier ) ( $grid-gutter );
 	position: relative;
-	background: rgba( $canvas-grey-100, 0.05 );
+	@include modular-scale( gamma );
 
 	p {
 
