@@ -22,7 +22,8 @@
 
 		display: block;
 		background: black;
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+		padding: 0 ( $grid-gutter );
+		color: white;
 
 		li {
 
@@ -31,7 +32,8 @@
 
 			a {
 
-				color: white;
+				line-height: 2.5;
+				color: currentColor;
 				padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 				text-decoration: none;
 
@@ -41,12 +43,48 @@
 
 	}
 
+	.menu-wrap {
+
+		display: none;
+
+	}
+
 	// Desktop.
 	@include for-tablet {
 
 		.menu-toggle {
 
 			display: none;
+
+		}
+
+		.menu-wrap {
+
+			display: block;
+			text-align: right;
+
+			ul {
+
+				text-align: left;
+				margin: 0;
+				padding: 0;
+				color: white;
+				list-style-type: none;
+
+				ul {
+
+					margin-left: 1rem;
+
+				}
+
+				a {
+
+					display: block;
+					padding: 0.5rem 1rem;
+
+				}
+
+			}
 
 		}
 
@@ -82,7 +120,8 @@
 							position: absolute;
 							top: 100%;
 							left: 0;
-							width: 12rem;
+							width: 14rem;
+							z-index: layer( menu_dropdown );
 
 						}
 
