@@ -7,7 +7,6 @@ Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
 Domain Path: /languages/
-Dev: 1
 Tags:
 
 , black
@@ -1259,9 +1258,10 @@ p.wp-block-subhead {
 .wp-block-quote,
 .wp-block-quote.is-large {
 	margin-bottom: 3rem;
-	padding: 3rem 1rem;
 	position: relative;
-	background: rgba(0, 0, 0, 0.05);
+	font-size: 30px;
+	font-size: 1.875rem;
+	line-height: 1.25;
 }
 
 .wp-block-pullquote blockquote p:last-child,
@@ -2808,7 +2808,8 @@ p.demo_store a {
 
 .content-posts article.format-quote blockquote {
 	margin: 0;
-	grid-column: 1 / -1;
+	padding: 0;
+	grid-column: 2 / -1;
 }
 
 .content-posts article.format-audio .wp-playlist,
@@ -2840,17 +2841,30 @@ p.demo_store a {
 }
 
 .content-posts .entry-archive-title {
-	font-size: 64px;
-	font-size: 4rem;
-	line-height: 1.25;
 	letter-spacing: -0.025em;
 	font-weight: bold;
 }
 
+@media (min-width: 782px) {
+	.content-posts .entry-archive-title {
+		font-size: 64px;
+		font-size: 4rem;
+		line-height: 1.25;
+	}
+}
+
+@media (min-width: 1200px) {
+	.content-posts .entry-archive-title {
+		font-size: 96px;
+		font-size: 6rem;
+		line-height: 1;
+	}
+}
+
 .content-posts .entry-archive-title span {
 	display: block;
-	font-size: 26px;
-	font-size: 1.625rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	line-height: 1.5;
 	letter-spacing: initial;
 }
@@ -2859,7 +2873,7 @@ p.demo_store a {
 	font-size: 26px;
 	font-size: 1.625rem;
 	line-height: 1.5;
-	max-width: 44.85rem;
+	max-width: 44rem;
 	margin-bottom: 0;
 	margin-top: 1.5rem;
 	font-weight: 100;
@@ -3086,9 +3100,10 @@ a:hover {
 }
 
 blockquote {
-	padding: 3rem 1rem;
 	position: relative;
-	background: rgba(0, 0, 0, 0.05);
+	font-size: 30px;
+	font-size: 1.875rem;
+	line-height: 1.25;
 }
 
 blockquote p:last-child {
@@ -3109,12 +3124,14 @@ blockquote p:last-child {
 
 @media (min-width: 782px) {
 	.site-header {
+		margin-top: 1.5rem;
 		margin-bottom: 6.75rem;
 	}
 }
 
 @media (min-width: 1200px) {
 	.site-header {
+		margin-top: 3rem;
 		margin-bottom: 10.5rem;
 	}
 }
@@ -3208,7 +3225,8 @@ a.header-image img {
 .menu-primary ul {
 	display: block;
 	background: black;
-	padding: 0.75rem 1rem;
+	padding: 0 1rem;
+	color: white;
 }
 
 .menu-primary ul li {
@@ -3217,14 +3235,37 @@ a.header-image img {
 }
 
 .menu-primary ul li a {
-	color: white;
+	line-height: 2.5;
+	color: currentColor;
 	padding: 0.75rem 1rem;
 	text-decoration: none;
+}
+
+.menu-primary .menu-wrap {
+	display: none;
 }
 
 @media (min-width: 782px) {
 	.menu-primary .menu-toggle {
 		display: none;
+	}
+	.menu-primary .menu-wrap {
+		display: block;
+		text-align: right;
+	}
+	.menu-primary .menu-wrap ul {
+		text-align: left;
+		margin: 0;
+		padding: 0;
+		color: white;
+		list-style-type: none;
+	}
+	.menu-primary .menu-wrap ul ul {
+		margin-left: 1rem;
+	}
+	.menu-primary .menu-wrap ul a {
+		display: block;
+		padding: 0.5rem 1rem;
 	}
 	.menu-primary > ul {
 		background: transparent;
@@ -3244,7 +3285,8 @@ a.header-image img {
 		position: absolute;
 		top: 100%;
 		left: 0;
-		width: 12rem;
+		width: 14rem;
+		z-index: 100;
 	}
 }
 
@@ -3291,12 +3333,13 @@ a.header-image img {
 }
 
 .sidebar {
-	-webkit-column-count: 4;
-	-moz-column-count: 4;
-	column-count: 4;
-	-webkit-column-width: 15rem;
-	-moz-column-width: 15rem;
-	column-width: 15rem;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	-webkit-column-width: 20rem;
+	-moz-column-width: 20rem;
+	column-width: 20rem;
+	margin-top: 4.5rem;
 	margin-bottom: 4.5rem;
 }
 
@@ -3306,9 +3349,9 @@ a.header-image img {
 }
 
 .sidebar .widget .widget-title {
-	font-size: 18px;
-	font-size: 1.125rem;
-	line-height: 1.5;
+	font-size: 30px;
+	font-size: 1.875rem;
+	line-height: 1.25;
 	margin-bottom: 0.75rem;
 	font-weight: bold;
 }
@@ -3318,16 +3361,33 @@ a.header-image img {
  * Site content, blog posts etc
  */
 /* single post and page */
-.content-single article .entry-header {
+.content-single .entry-header {
 	margin-bottom: 4.5rem;
 }
 
-.content-single article .entry-title {
-	font-size: 64px;
-	font-size: 4rem;
-	line-height: 1.25;
+.content-single .entry-title {
 	letter-spacing: -0.01em;
 	font-weight: bold;
+}
+
+@media (min-width: 782px) {
+	.content-single .entry-title {
+		font-size: 64px;
+		font-size: 4rem;
+		line-height: 1.25;
+	}
+}
+
+@media (min-width: 1200px) {
+	.content-single .entry-title {
+		font-size: 96px;
+		font-size: 6rem;
+		line-height: 1;
+	}
+}
+
+.content-single .entry-single > * {
+	max-width: 44rem;
 }
 
 .attachment .attachment-image {
