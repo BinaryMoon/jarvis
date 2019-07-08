@@ -63,11 +63,14 @@
 
 		}
 
+		// All menus.
+		// Top layer links.
 		.menu-wrap {
 
 			display: block;
 			text-align: right;
 
+			// First level of dropdown menus.
 			ul {
 
 				text-align: left;
@@ -94,10 +97,13 @@
 
 		}
 
+
+
 		// First menu.
-		> ul {
+		> .menu-wrap {
 
 			background: transparent;
+			color: black;
 
 			> li {
 
@@ -105,11 +111,31 @@
 
 				> a {
 
-					color: black;
 					font-weight: bold;
 					line-height: 2.5;
+					color: currentColor;
 
 				}
+
+				&.menu-item-has-children {
+
+					padding-right: 0.5em;
+
+					&:after {
+
+						content: "\25BC";
+						font-size: 10px;
+
+					}
+
+					> a {
+
+						margin-right: -0.5em;
+
+					}
+
+				}
+
 
 				&.menu-item-has-children {
 
@@ -136,8 +162,6 @@
 					}
 
 				}
-
-
 
 			}
 
