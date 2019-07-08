@@ -9,12 +9,55 @@
 .post-navigation {
 
 	clear: both;
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+
+	a {
+
+		text-decoration: none;
+
+	}
 
 	.meta-nav {
 
 		@include post-meta-data;
 		display: block;
+
+	}
+
+	.post-title {
+
+		text-decoration: underline;
+		display: block;
+
+	}
+
+	.nav-links {
+
+		div:first-child {
+
+			margin-bottom: $grid-line-height;
+
+		}
+
+		@include for-tablet {
+
+			display: flex;
+
+			div {
+
+				margin: 0;
+				width: 50%;
+				flex-grow: 1;
+
+			}
+
+			.nav-next {
+
+				text-align: right;
+
+			}
+
+		}
 
 	}
 
@@ -24,7 +67,7 @@
 // used on archives/ homepage/ blog post with pages
 .pagination {
 
-	margin: ( $grid-line-height * 2 ) 0;
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
 	clear: both;
 
 	@include for-tablet {
