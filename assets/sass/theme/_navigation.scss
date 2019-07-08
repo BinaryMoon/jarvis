@@ -37,6 +37,12 @@
 				padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 				text-decoration: none;
 
+				&:hover {
+
+					text-decoration: underline;
+
+				}
+
 			}
 
 		}
