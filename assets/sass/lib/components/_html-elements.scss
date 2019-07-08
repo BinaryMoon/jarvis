@@ -72,6 +72,8 @@ blockquote {
 	cite {
 
 		@include post-cite;
+		display: block;
+		margin-top: $grid-line-height / 4;
 
 		&:before {
 
