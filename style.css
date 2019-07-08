@@ -454,8 +454,8 @@ html {
 }
 
 body {
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
@@ -510,8 +510,8 @@ h1 {
 }
 
 h2 {
-	font-size: 30px;
-	font-size: 1.875rem;
+	font-size: 32px;
+	font-size: 2rem;
 	line-height: 1.25;
 }
 
@@ -522,8 +522,8 @@ h3 {
 }
 
 h4 {
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
@@ -1200,8 +1200,8 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 .screen-reader-text:focus {
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5;
 	padding: 15px 23px 14px;
 	background: #f1f1f1;
@@ -1244,8 +1244,8 @@ blockquote.alignleft, blockquote.alignright {
  * ## - Blocks
  */
 p.wp-block-subhead {
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5;
 	opacity: 1;
 }
@@ -1259,8 +1259,8 @@ p.wp-block-subhead {
 .wp-block-quote.is-large {
 	margin-bottom: 3rem;
 	position: relative;
-	font-size: 30px;
-	font-size: 1.875rem;
+	font-size: 32px;
+	font-size: 2rem;
 	line-height: 1.25;
 }
 
@@ -1284,8 +1284,8 @@ p.wp-block-subhead {
 }
 
 .wp-block-quote p {
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
@@ -2350,7 +2350,7 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1
 
 .entry-breadcrumbs a {
 	font-weight: bold;
-	margin-right: 1.5em;
+	margin-right: 1em;
 	position: relative;
 }
 
@@ -2370,7 +2370,7 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1
 	border-left-width: 0.4em;
 	border-right-color: transparent;
 	border-left-color: #666666;
-	right: -0.75em;
+	right: -0.5em;
 	left: auto;
 }
 
@@ -2530,8 +2530,8 @@ body .jetpack-social-navigation ul {
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 	text-align: center;
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5;
 	width: 100%;
 }
@@ -2789,8 +2789,8 @@ p.demo_store a {
 }
 
 .content-posts article h2.entry-title {
-	font-size: 30px;
-	font-size: 1.875rem;
+	font-size: 32px;
+	font-size: 2rem;
 	line-height: 1.25;
 	font-weight: bold;
 }
@@ -2863,8 +2863,8 @@ p.demo_store a {
 
 .content-posts .entry-archive-title span {
 	display: block;
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5;
 	letter-spacing: initial;
 }
@@ -3101,8 +3101,8 @@ a:hover {
 
 blockquote {
 	position: relative;
-	font-size: 30px;
-	font-size: 1.875rem;
+	font-size: 32px;
+	font-size: 2rem;
 	line-height: 1.25;
 }
 
@@ -3205,7 +3205,7 @@ a.header-image img {
  * This is where the post or page content will be displayed.
  */
 #main {
-	padding: 0.75rem 1rem;
+	padding: 0 1rem;
 }
 
 /*!
@@ -3239,6 +3239,10 @@ a.header-image img {
 	color: currentColor;
 	padding: 0.75rem 1rem;
 	text-decoration: none;
+}
+
+.menu-primary ul li a:hover {
+	text-decoration: underline;
 }
 
 .menu-primary .menu-wrap {
@@ -3314,22 +3318,42 @@ a.header-image img {
 
 /* pagination */
 .pagination {
-	font-size: 18px;
-	font-size: 1.125rem;
-	line-height: 1.5;
-	text-align: center;
-	margin-bottom: 3rem;
+	margin: 3rem 0;
 	clear: both;
 }
 
-.pagination > * {
-	padding: 0 0.375em;
+@media (min-width: 782px) {
+	.pagination {
+		margin: 6rem 0;
+	}
+}
+
+@media (min-width: 1200px) {
+	.pagination {
+		margin: 7.5rem 0;
+		font-size: 26px;
+		font-size: 1.625rem;
+		line-height: 1.5;
+	}
+}
+
+.pagination .nav-links {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	justify-content: center;
+}
+
+.pagination span, .pagination a {
+	color: #fff;
+	background: #000;
+	padding: 0.75rem 1rem;
 	display: inline-block;
 }
 
-.pagination span.current {
-	background: #000000;
-	color: #ffffff;
+.pagination .current {
+	font-weight: bold;
 }
 
 .sidebar {
@@ -3349,8 +3373,8 @@ a.header-image img {
 }
 
 .sidebar .widget .widget-title {
-	font-size: 30px;
-	font-size: 1.875rem;
+	font-size: 32px;
+	font-size: 2rem;
 	line-height: 1.25;
 	margin-bottom: 0.75rem;
 	font-weight: bold;
@@ -3409,8 +3433,8 @@ a.header-image img {
 }
 
 .child-page h2 {
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
