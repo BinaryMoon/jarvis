@@ -15,7 +15,7 @@
 
 @mixin for-big-tablet {
 
-	@media ( min-width: 1000px ) {
+	@media ( min-width: #{$grid-total-width} ) {
 		@content;
 	}
 
