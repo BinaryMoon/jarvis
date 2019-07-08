@@ -24,11 +24,10 @@
 // used on contributor custom template and blog post page when there are multiple blog authors
 .contributor {
 
-	padding: 0 0 0 ( $grid-gutter * 2.5 );
 	margin: 0 0 ( $grid-line-height * 3 ) 0;
 	display: grid;
 	grid-template-columns: 15% auto;
-	column-gap: $grid-gutter / 2;
+	column-gap: $grid-gutter;
 
 	h2 {
 
