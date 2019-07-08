@@ -1,0 +1,12 @@
+/*!
+ * ## - Blocks
+ * Block overrides.
+ */
+// @package Jarvis
+
+.wp-block-cover, .wp-block-cover-image {
+
+	min-height: 60vh;
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+}
