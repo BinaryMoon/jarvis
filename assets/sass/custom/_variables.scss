@@ -25,12 +25,6 @@ $grid-small-width: 44rem;
 $grid-gutter: 1rem;
 //$grid-column-gutter: 1 / 2;
 
-// menu properties
-// $menu-link-padding: $grid-gutter / 2;
-// $menu-arrow-size: 0.4rem;
-// $menu-parent-link-vertical-padding: 0;
-// $menu-dropdown-width: 20em;
-
 $support-accessible-tagcloud: true;
 
 // default font sizes.
@@ -40,7 +34,7 @@ $font-sizes: (
 	mega: ( size: 6rem, height: 1 ),				// 96px
 	alpha: ( size: 4rem, height: 1.25 ),			// 64px
 	// beta: ( size: 3.25rem, height: 1.25 ),
-	gamma: ( size: 1.875rem, height: 1.25 ),		// 30px
+	gamma: ( size: 2rem, height: 1.25 ),			// 32px
 	delta: ( size: 1.625rem, height: 1.5 ),			// 26px
 	epsilon: ( size: 1.25rem, height: 1.5 ),		// 20px
 	zeta: ( size: 0.875rem, height: 1.75 ),			// 14px
