@@ -3291,6 +3291,7 @@ a.header-image img {
 	.menu-primary > .menu-wrap > li > a {
 		font-weight: bold;
 		line-height: 2.5;
+<<<<<<< Updated upstream
 		color: currentColor;
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children {
@@ -3302,6 +3303,8 @@ a.header-image img {
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children > a {
 		margin-right: -0.5em;
+=======
+>>>>>>> Stashed changes
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children > .sub-menu {
 		display: none;
@@ -3474,6 +3477,7 @@ a.header-image img {
 	}
 }
 
+<<<<<<< Updated upstream
 @media (min-width: 782px) {
 	.content-single .entry-single {
 		display: grid;
@@ -3505,6 +3509,10 @@ a.header-image img {
 	.content-single .entry-single .alignfull {
 		margin-left: calc( ( 100vw - 67rem ) / -2);
 	}
+=======
+.content-single article p {
+	max-width: 44rem;
+>>>>>>> Stashed changes
 }
 
 .attachment .attachment-image {
