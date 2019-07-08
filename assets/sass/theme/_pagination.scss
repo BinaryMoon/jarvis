@@ -24,22 +24,40 @@
 // used on archives/ homepage/ blog post with pages
 .pagination {
 
-	@include modular-scale( epsilon );
-	text-align: center;
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	margin: ( $grid-line-height * 2 ) 0;
 	clear: both;
 
-	> * {
+	@include for-tablet {
+		margin: ( $grid-line-height * 4 ) 0;
+	}
 
-		padding: 0 ( $menu-link-padding / 4 );
+	@include for-desktop {
+
+		margin: ( $grid-line-height * 5 ) 0;
+		@include modular-scale( delta );
+
+	}
+
+	.nav-links {
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+	}
+
+	span, a {
+
+		color: $white;
+		background: $black;
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 		display: inline-block;
 
 	}
 
-	span.current {
+	.current {
 
-		background: $canvas-color;
-		color: contrast( $canvas-color );
+		font-weight: bold;
 
 	}
 
