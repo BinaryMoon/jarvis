@@ -32,7 +32,6 @@
 
 			a {
 
-				line-height: 2.5;
 				color: currentColor;
 				padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 				text-decoration: none;
@@ -80,6 +79,7 @@
 				ul {
 
 					margin-left: 1rem;
+					border-left: 0.1em solid white;
 
 				}
 
@@ -107,6 +107,7 @@
 
 					color: black;
 					font-weight: bold;
+					line-height: 2.5;
 
 				}
 
@@ -124,6 +125,7 @@
 
 							display: block;
 							position: absolute;
+							padding: ( $grid-line-height / 4 ) 0;
 							top: 100%;
 							left: 0;
 							width: 14rem;
