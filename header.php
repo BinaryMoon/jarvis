@@ -23,7 +23,13 @@
 
 <body <?php body_class(); ?>>
 
-<?php wp_body_open(); ?>
+<?php
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+} else {
+	do_action( 'wp_body_open' );
+}
+?>
 
 <div class="webpage">
 
