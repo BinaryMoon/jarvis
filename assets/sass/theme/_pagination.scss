@@ -87,6 +87,20 @@
 		flex-wrap: wrap;
 		justify-content: center;
 
+		// Purely decorative...
+		@include for-desktop {
+
+			&:before, &:after {
+
+				content: '';
+				background: $black;
+				width: $grid-gutter;
+				display: block;
+
+			}
+
+		}
+
 	}
 
 	span, a {
