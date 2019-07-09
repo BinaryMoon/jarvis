@@ -81,8 +81,14 @@
 
 				ul {
 
-					margin-left: 1rem;
-					border-left: 0.1em solid white;
+					padding-left: 2.5rem;
+					list-style-type: square;
+
+					a {
+
+						padding: 0.5rem 1rem 0.5rem 0;
+
+					}
 
 				}
 
@@ -153,9 +159,10 @@
 							position: absolute;
 							padding: ( $grid-line-height / 4 ) 0;
 							top: 100%;
-							left: 0;
-							width: 14rem;
+							left: 50%;
+							width: 16rem;
 							z-index: layer( menu_dropdown );
+							transform: translateX( -8rem );
 
 						}
 
