@@ -66,28 +66,7 @@
 
 			</div>
 
-			<nav class="menu menu-primary" aria-label="<?php esc_attr_e( 'Primary Menu', 'jarvis' ); ?>">
-
-				<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
-					<?php esc_html_e( 'Menu', 'jarvis' ); ?>
-				</button>
-
-<?php
-
-	wp_nav_menu(
-		array(
-			'theme_location' => 'menu-1',
-			'menu_id' => 'nav',
-			'menu_class' => 'menu-wrap',
-			'container' => false,
-			'item_spacing' => 'discard',
-			'fallback_cb' => false,
-		)
-	);
-
-?>
-
-			</nav>
+			<?php get_template_part( 'parts/navigation' ); ?>
 
 		</div>
 
