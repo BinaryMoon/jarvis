@@ -11,35 +11,6 @@
  */
 
 /**
- * Add theme support for Custom Header image.
- *
- * Sets the default properties and the custom header callback {@see jarvis_colour_styles}.
- */
-function jarvis_custom_header_support() {
-
-	add_theme_support(
-		'custom-header',
-		apply_filters(
-			'jarvis_custom_header',
-			array(
-				'default-text-color' => '000000',
-				'random-default' => false,
-				'width' => 1500,
-				'height' => 500,
-				'flex-height' => true,
-				'header-text' => true,
-				'uploads' => true,
-				'wp-head-callback' => 'jarvis_colour_styles',
-			)
-		)
-	);
-
-}
-
-add_action( 'after_setup_theme', 'jarvis_custom_header_support' );
-
-
-/**
  * Print custom header styles.
  *
  * May also change other CSS properties related to the header colours.
@@ -84,3 +55,5 @@ function jarvis_colour_styles() {
 	}
 
 }
+
+add_action( 'wp_head', 'jarvis_colour_styles' );
