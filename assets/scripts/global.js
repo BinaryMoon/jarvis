@@ -68,70 +68,12 @@
 
 	};
 
-	/**
-	 * Attachment page navigation.
-	 */
-	var attachment_page_navigation = function() {
-
-		if ( $( 'body' ).hasClass( 'attachment' ) ) {
-
-			$( document ).keydown(
-				function( e ) {
-
-					if ( $( 'textarea, input' ).is( ':focus' ) ) {
-						return;
-					}
-
-					var url = false;
-
-					switch ( e.which ) {
-
-						// Left arrow key (previous attachment).
-						case 37:
-							url = $( '.image-previous a' ).attr( 'href' );
-							break;
-
-						// Right arrow key (next attachment).
-						case 39:
-							url = $( '.image-next a' ).attr( 'href' );
-							break;
-
-					}
-
-					if ( url.length ) {
-						window.location = url;
-					}
-
-				}
-			);
-
-		}
-
-	};
-
-
-	// Trigger window resize event to fix video size issues.
-	// Don't use jqueries trigger event since that only triggers methods hooked
-	// to events, and not the events themselves.
-	var resize_window = function() {
-
-		if ( typeof ( Event ) === 'function' ) {
-			window.dispatchEvent( new Event( 'resize' ) );
-		} else {
-			var event = window.document.createEvent( 'UIEvents' );
-			event.initUIEvent( 'resize', true, false, window, 0 );
-			window.dispatchEvent( event );
-		}
-
-	};
 
 	/**
 	 * Do all the stuffs.
 	 */
 	$( document ).ready(
 		function() {
-
-			attachment_page_navigation();
 
 			// Menu toggle.
 			$( '.menu-toggle' ).on(
