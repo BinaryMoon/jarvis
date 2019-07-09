@@ -24,9 +24,21 @@
 function jarvis_enqueue() {
 
 	// Styles.
-	wp_enqueue_style( 'jarvis-style', get_stylesheet_uri(), null, '1.0' );
+	wp_enqueue_style(
+		'jarvis-style',
+		get_stylesheet_uri(),
+		null,
+		jarvis_get_theme_version( '/style.css' )
+	);
 
-	wp_enqueue_script( 'jarvis-script-global', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.0', false );
+	// Scripts.
+	wp_enqueue_script(
+		'jarvis-script-global',
+		get_theme_file_uri( '/assets/scripts/global.js' ),
+		null,
+		jarvis_get_theme_version( '/assets/scripts/global.js' ),
+		false
+	);
 
 	// Localized Javascript strings and provide access to common properties.
 	wp_localize_script(
@@ -664,3 +676,26 @@ add_filter( 'get_the_author_description', 'wptexturize' );
 add_filter( 'get_the_author_description', 'convert_chars' );
 add_filter( 'get_the_author_description', 'wpautop' );
 add_filter( 'get_the_author_description', 'shortcode_unautop' );
+
+
+/**
+ * Get the version value for the specified file.
+ * Helps to decache media.
+ *
+ * @param string filepath The file to check.
+ */
+function jarvis_get_theme_version( $filepath = '' ) {
+
+	if ( WP_DEBUG && $filepath ) {
+		return (string) filemtime( get_theme_file_path( $filepath ) );
+	}
+
+	$theme_version = null;
+
+	if ( null === $theme_version ) {
+		$theme_version = wp_get_theme( get_template() )->get( 'Version' );
+	}
+
+	return $theme_version;
+
+}
