@@ -94,7 +94,3 @@
 	</header>
 
 	<div class="container" id="site-content">
-
-<?php
-
-	jarvis_header();
