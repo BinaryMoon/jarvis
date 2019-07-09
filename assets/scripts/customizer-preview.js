@@ -19,7 +19,7 @@
 		'preview-ready',
 		function() {
 
-			// Site title.
+			// Edit site title.
 			wp.customize(
 				'blogname',
 				function( value ) {
@@ -31,7 +31,7 @@
 				}
 			);
 
-			// Site description.
+			// Edit site description.
 			wp.customize(
 				'blogdescription',
 				function( value ) {
@@ -43,7 +43,7 @@
 				}
 			);
 
-			// Header text color.
+			// Change header text color.
 			wp.customize(
 				'header_textcolor',
 				function( value ) {
@@ -51,6 +51,7 @@
 					value.bind(
 						function( to ) {
 
+							// Hide title and description.
 							if ( 'blank' === to ) {
 
 								$( '.masthead .site-title, .masthead .site-description' ).css(
