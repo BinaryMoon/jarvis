@@ -32,11 +32,7 @@
 
 	.entry-single {
 
-		@include for-tablet {
-
-			padding-right: calc( 100% - #{$grid-small-width} );
-
-		}
+		max-width: $grid-small-width;
 
 		> h1,
 		> h2,
