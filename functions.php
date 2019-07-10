@@ -83,6 +83,9 @@ require get_parent_theme_file_path( 'inc/jetpack.php' );
 // Customizer controls for setting theme properties.
 require get_parent_theme_file_path( 'inc/customizer.php' );
 
+// Backwards Compatability functions to ensure there are no errors with older WordPress.
+require get_parent_theme_file_path( 'compat.php' );
+
 /**
  * Load WooCommerce compatibility file.
  */
