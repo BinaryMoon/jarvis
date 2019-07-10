@@ -78,9 +78,7 @@ require get_parent_theme_file_path( 'inc/custom-header.php' );
 require get_parent_theme_file_path( 'inc/template-tags.php' );
 
 // Jetpack specific functionality (if Jetpack is enabled).
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_parent_theme_file_path( 'inc/jetpack.php' );
-}
+require get_parent_theme_file_path( 'inc/jetpack.php' );
 
 // Customizer controls for setting theme properties.
 require get_parent_theme_file_path( 'inc/customizer.php' );

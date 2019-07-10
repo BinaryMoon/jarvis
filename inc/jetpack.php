@@ -260,3 +260,22 @@ function jarvis_get_attachment_image_src( $post_id, $size ) {
 	}
 
 }
+
+
+/**
+ * Display social links using a custom menu.
+ *
+ * This is a wrapper for 'jetpack_social_menu' and stops PHP errors if Jetpack
+ * is not enabled.
+ */
+function jarvis_social_links() {
+
+	// Check Jetpack Social Menu is available before trying to display it.
+	if ( function_exists( 'jetpack_social_menu' ) ) {
+
+		jetpack_social_menu();
+
+	}
+
+}
+
