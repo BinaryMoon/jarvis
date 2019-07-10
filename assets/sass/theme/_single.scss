@@ -30,11 +30,43 @@
 
 	}
 
-	article {
+	.entry-single {
 
-		p {
+		@include for-tablet {
 
-			max-width: $grid-small-width;
+			padding-right: calc( 100% - #{$grid-small-width} );
+
+		}
+
+		> h1,
+		> h2,
+		> h3 {
+
+			margin-top: ( $grid-line-height * 2 );
+			clear: both;
+
+		}
+
+		.alignwide {
+
+			width: calc( 100vw - #{$grid-gutter * 2} );
+
+			@include for-big-tablet {
+				width: ( $grid-total-width - ( $grid-gutter * 2 ) );
+			}
+
+		}
+
+		.alignfull {
+
+			margin-left: -$grid-gutter;
+			width: 100vw;
+
+			@include for-big-tablet {
+
+				margin-left: calc( ( 100vw - #{$grid-total-width - $grid-gutter - $grid-gutter} ) / -2 );
+
+			}
 
 		}
 
