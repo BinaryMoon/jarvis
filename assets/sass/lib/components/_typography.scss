@@ -48,6 +48,7 @@ h3 {
 
 	@include wrap-text;
 	font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "swsh" 1;
+	font-weight: bold;
 
 }
 
@@ -86,6 +87,6 @@ h6 {
 hr {
 
 	border: none;
-	border-bottom: $border-width solid $border-color;
+	border-bottom: $border-width solid $black;
 
 }
