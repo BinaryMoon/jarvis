@@ -493,7 +493,7 @@ function jarvis_wrap_the_archive_title( $title ) {
 				),
 			)
 		);
-		$title = '<span>' . esc_html( $title_parts[0] ) . ': </span>' . $title;
+		$title = '<small>' . esc_html( $title_parts[0] ) . ': </small>' . $title;
 	}
 
 	return $title;
