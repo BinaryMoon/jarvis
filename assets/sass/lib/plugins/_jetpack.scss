@@ -246,21 +246,30 @@ div.jetpack-testimonial-shortcode {
 	a {
 
 		font-weight: bold;
-		margin-right: $menu-link-padding;
 		position: relative;
+		text-decoration: none;
+
+		span {
+
+			text-decoration: underline;
+
+		}
 
 		&:focus,
 		&:hover {
 
-			text-decoration: none;
+			span {
+
+				text-decoration: none;
+
+			}
 
 		}
 
 		&:after {
 
-			@include arrow-right( $style-breadcrumb-arrow, 0.4em );
-			right: $menu-link-padding / -2;
-			left: auto;
+			content: '\25B6';
+			margin: 0 $grid-gutter;
 
 		}
 
