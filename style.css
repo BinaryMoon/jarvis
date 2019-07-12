@@ -179,6 +179,13 @@ html {
 	-ms-text-size-adjust: 100%;
 	text-size-adjust: 100%;
 	-ms-overflow-style: scrollbar;
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
 body {
@@ -426,7 +433,7 @@ svg path {
 	width: device-width;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@incude for-reduced-motion {
 	* {
 		-webkit-animation: none !important;
 		animation: none !important;
