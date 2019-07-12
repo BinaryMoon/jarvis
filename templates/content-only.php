@@ -1,12 +1,10 @@
 <?php
 /**
- * Guestbook page template
+ * Content only page template
  *
- * Displays a full-width page, with prominent comments styles. Allows for easy
- * creation of a Guestbook on a site.
+ * Removes the site header and footer and just displays the page content.
  *
- * Template Name: Guestbook
- * Template Post Type: post, page
+ * Template Name: Content Only
  *
  * @package Jarvis
  * @subpackage PageTemplate
@@ -14,10 +12,9 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	get_header();
 ?>
 
-	<main class="full-width guestbook">
+	<main id="main">
 
 		<div class="main-content content-single">
 
@@ -29,7 +26,6 @@
 			the_post();
 
 			get_template_part( 'parts/content-single', get_post_type() );
-			get_template_part( 'parts/comments' );
 
 		}
 	}
@@ -37,7 +33,5 @@
 
 		</div>
 
-	</main>
 
-<?php
-	get_footer();
+	</main>
