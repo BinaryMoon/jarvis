@@ -84,7 +84,7 @@ require get_parent_theme_file_path( 'inc/jetpack.php' );
 require get_parent_theme_file_path( 'inc/customizer.php' );
 
 // Backwards Compatability functions to ensure there are no errors with older WordPress.
-require get_parent_theme_file_path( 'compat.php' );
+require get_parent_theme_file_path( 'inc/compat.php' );
 
 /**
  * Load WooCommerce compatibility file.
