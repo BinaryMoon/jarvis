@@ -105,7 +105,7 @@ table {
 	th {
 
 		color: $body-header-color;
-		border-bottom: $border-width solid $border-color;
+		border-bottom: $border-width solid $black;
 
 	}
 
@@ -122,7 +122,7 @@ table {
 	td {
 
 		padding: ( $grid-line-height / 2 ) $style-element-spacing;
-		border-bottom: 1px solid rgba( $border-color, $style-opacity-separator );
+		border-bottom: 1px solid $black;
 		vertical-align: top;
 
 	}
@@ -136,6 +136,12 @@ table {
 				border: none;
 
 			}
+
+		}
+
+		&:hover {
+
+			background: $white;
 
 		}
 
