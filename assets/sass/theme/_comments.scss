@@ -96,9 +96,9 @@
 
 	.no-comments {
 
-		background: $canvas-color;
-		color: contrast( $canvas-color );
-		padding: $grid-line-height ( $grid-gutter / 2 );
+		background: $black;
+		color: $white;
+		padding: $grid-line-height ( $grid-gutter );
 
 	}
 
