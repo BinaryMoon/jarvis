@@ -17,7 +17,7 @@
 	get_template_part( 'parts/featured-content' );
 ?>
 
-	<main id="main">
+	<main id="main" class="content-single">
 
 <?php
 	if ( have_posts() ) {
