@@ -181,19 +181,6 @@ function jarvis_after_setup_theme() {
 	// Feed me.
 	add_theme_support( 'automatic-feed-links' );
 
-	/**
-	 * Add support for post thumbnails.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
-	add_theme_support( 'post-thumbnails' );
-
-	// Ideal header image size.
-	add_image_size( 'jarvis-header', 1500, 500, true );
-
-	// Archive & homepage thumbnails.
-	add_image_size( 'jarvis-archive', 500, 500, true );
-
 	// Add selective refresh to widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
