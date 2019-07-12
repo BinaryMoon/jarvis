@@ -102,16 +102,19 @@
 
 		}
 
+		> span,
+		> a {
+
+			color: $white;
+			background: $black;
+			padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+			display: inline-block;
+
+		}
+
 	}
 
-	span, a {
 
-		color: $white;
-		background: $black;
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
-		display: inline-block;
-
-	}
 
 	.current {
 
