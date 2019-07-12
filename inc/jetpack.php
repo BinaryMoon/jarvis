@@ -152,15 +152,26 @@ function jarvis_breadcrumbs() {
  */
 function jarvis_remove_jetpack_stylesheets() {
 
-	// Remove contact form styles.
-	wp_dequeue_style( 'grunion.css' );
-
 	// Remove related posts styles.
 	wp_dequeue_style( 'jetpack_related-posts' );
 
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_remove_jetpack_stylesheets', 100 );
+
+
+/**
+ * Remove Grunion styles.
+ *
+ * @link https://github.com/Automattic/jetpack/blob/89a9af96b669e2e5a2ed47d3f3e07c804d6e0dd0/modules/contact-form/grunion-contact-form.php#L235-L244
+ */
+function jarvis_remove_grunion_style() {
+
+	wp_deregister_style( 'grunion.css' );
+
+}
+
+add_action( 'wp_print_styles', 'jarvis_remove_grunion_style' );
 
 
 /**

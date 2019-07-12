@@ -36,7 +36,6 @@ input.settings-input {
 	line-height: $grid-line-height;
 	min-height: $grid-line-height;
 	width: 100%;
-	border-radius: $border-radius;
 	background: transparent;
 	border: $border-width solid $black;
 
@@ -163,7 +162,9 @@ legend {
 
 fieldset {
 
-	border: 1px solid $form-input-border-color;
+	border: 1px solid $black;
+	padding: $grid-line-height ( $grid-gutter );
+	margin: ( $grid-line-height * 2 ) 0;
 
 	ul.radio {
 
