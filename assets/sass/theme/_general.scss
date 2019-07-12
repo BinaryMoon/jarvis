@@ -14,6 +14,7 @@ a {
 
 		text-underline-offset: 0.2em;
 		@include transition( all 0.1s ease-in-out );
+		text-decoration: none;
 
 	}
 
