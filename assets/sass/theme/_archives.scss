@@ -15,7 +15,6 @@
 
 			display: grid;
 			grid-template-columns: 15% calc( 35% - #{$grid-gutter * 2} ) 50%;
-			// grid-template-columns: 1.5fr 3.5fr 5fr;
 			grid-column-gap: $grid-gutter;
 
 			.post-meta-data {
@@ -54,6 +53,12 @@
 
 			@include modular-scale( gamma );
 			font-weight: bold;
+
+			@include for-tablet {
+
+				margin-bottom: 0;
+
+			}
 
 		}
 
@@ -131,6 +136,16 @@
 		&.post-loaded {
 
 			@include animation( fade-in 0.5s );
+
+		}
+
+	}
+
+	.entry-archive {
+
+		p:last-of-type {
+
+			margin-bottom: 0;
 
 		}
 
