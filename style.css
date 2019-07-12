@@ -1266,6 +1266,15 @@ p.wp-block-subhead {
 	line-height: 1.25;
 }
 
+.wp-block-pullquote blockquote blockquote:before, .wp-block-pullquote blockquote blockquote:after,
+.wp-block-quote blockquote:before,
+.wp-block-quote blockquote:after,
+.wp-block-quote.is-large blockquote:before,
+.wp-block-quote.is-large blockquote:after {
+	content: '';
+	display: block;
+}
+
 .wp-block-pullquote blockquote p:last-child,
 .wp-block-quote p:last-child,
 .wp-block-quote.is-large p:last-child {
@@ -3116,6 +3125,11 @@ blockquote {
 	line-height: 1.25;
 }
 
+blockquote blockquote:before, blockquote blockquote:after {
+	content: '';
+	display: block;
+}
+
 blockquote p:last-child {
 	margin-bottom: 0;
 }
@@ -3435,20 +3449,17 @@ a.header-image img {
 }
 
 .sidebar {
-	-webkit-column-count: 3;
-	-moz-column-count: 3;
-	column-count: 3;
-	-webkit-column-width: 20rem;
-	-moz-column-width: 20rem;
-	column-width: 20rem;
-	-webkit-column-fill: auto;
-	-moz-column-fill: auto;
-	column-fill: auto;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
 	margin-top: 4.5rem;
 	margin-bottom: 4.5rem;
 }
 
 .sidebar .widget {
+	flex-basis: 20rem;
+	-webkit-box-flex: 1;
+	flex-grow: 1;
 	padding: 0.75rem 1rem;
 	display: inline-block;
 }
