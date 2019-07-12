@@ -37,8 +37,8 @@ input.settings-input {
 	min-height: $grid-line-height;
 	width: 100%;
 	border-radius: $border-radius;
-	background: $form-input-background;
-	border: $border-width solid $form-input-border-color;
+	background: transparent;
+	border: $border-width solid $black;
 
 	@if ( $form-input-border-width != null ) {
 		border-width: $form-input-border-width;
