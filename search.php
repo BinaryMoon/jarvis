@@ -36,11 +36,12 @@
 ?>
 			</h1>
 
+			<div class="search-wrapper">
+				<?php get_search_form(); ?>
+			</div>
+
 		</header>
 
-		<div class="search-wrapper">
-			<?php get_search_form(); ?>
-		</div>
 
 <?php
 		while ( have_posts() ) {
