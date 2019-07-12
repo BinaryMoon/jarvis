@@ -6,6 +6,12 @@
 	margin-top: $grid-line-height * 3;
 	margin-bottom: $grid-line-height * 3;
 
+	@include for-desktop {
+
+		margin-top: $grid-line-height * 5;
+
+	}
+
 	.widget {
 
 		flex-basis: 20rem;
