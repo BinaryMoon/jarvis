@@ -52,7 +52,7 @@
 
 			<span role="separator" aria-hidden="true" class="sep"></span>
 
-			<a href="#header" class="scroll-to scroll-to-top"><?php esc_html_e( 'Top', 'jarvis' ); ?></a>
+			<a href="#header"><?php esc_html_e( 'Top', 'jarvis' ); ?></a>
 
 		</div>
 

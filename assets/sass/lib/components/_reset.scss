@@ -10,6 +10,11 @@ html {
 	box-sizing: border-box;
 	text-size-adjust: 100%;
 	-ms-overflow-style: scrollbar;
+	scroll-behavior: smooth;
+
+	@include for-reduced-motion {
+		scroll-behavior: auto;
+	}
 
 }
 
@@ -312,7 +317,7 @@ svg path {
 
 }
 
-@media (prefers-reduced-motion: reduce) {
+@incude for-reduced-motion {
 
 	* {
 

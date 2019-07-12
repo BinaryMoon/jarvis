@@ -69,7 +69,7 @@
 
 ?>
 
-			<a href="#respond" class="scroll-to">
+			<a href="#respond">
 				<span class="screen-reader-text"><?php esc_html_e( 'Leave a comment', 'jarvis' ); ?></span>
 				<?php esc_html_e( '&rsaquo;', 'jarvis' ); ?>
 			</a>

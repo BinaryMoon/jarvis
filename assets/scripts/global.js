@@ -27,25 +27,6 @@
 
 	};
 
-	/**
-	 * Smooth scroll to # anchor.
-	 *
-	 * @param  object e Element.
-	 * @return false
-	 */
-	var scroll_to_hash = function( e ) {
-
-		var $target = $( e.hash );
-
-		if ( $target.length ) {
-			var targetOffset = $target.offset().top - parseInt( $( 'html' ).css( 'margin-top' ) );
-			$( 'html,body' ).animate( { scrollTop: targetOffset }, 750 );
-			focus_element( e.hash );
-		}
-
-		return false;
-
-	};
 
 	/**
 	 * Set an elements focus.
@@ -53,7 +34,13 @@
 	 *
 	 * @param  string id ID of object to focus.
 	 */
-	var focus_element = function( id ) {
+	var focus_element = function( e ) {
+
+		if ( !e.target.hash ) {
+			return;
+		}
+
+		var id = e.target.hash;
 
 		var element = document.getElementById( id.replace( '#', '' ) );
 
@@ -144,6 +131,12 @@
 
 			}
 
+			$( 'a[href*=#]' ).on(
+				'click',
+				focus_element
+			);
+
+
 			/**
 			 * Add href to links without so that dropdowns work properly on
 			 * touch devices.
@@ -156,15 +149,6 @@
 
 				}
 			).attr( 'href', '#' ).addClass( 'menu-no-href' );
-
-			// Smooth scroll to element.
-			$( '.scroll-to' ).click(
-				function() {
-
-					return scroll_to_hash( this );
-
-				}
-			);
 
 			// Mobile device detection.
 			if ( is_touch_device() ) {

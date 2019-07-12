@@ -203,10 +203,6 @@ function jarvis_comments_link() {
 
 		$class = '';
 
-		if ( is_singular() ) {
-			$class = 'scroll-to';
-		}
-
 		echo '<span class="comment-count meta">';
 
 		comments_popup_link(
