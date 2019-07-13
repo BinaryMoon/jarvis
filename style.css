@@ -3298,7 +3298,7 @@ a.header-image img {
 	.menu-primary > .menu-wrap > li.menu-item-has-children > .sub-menu {
 		display: none;
 	}
-	.menu-primary > .menu-wrap > li.menu-item-has-children:focus > .sub-menu, .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
+	.menu-primary > .menu-wrap > li.menu-item-has-children.focus > .sub-menu, .menu-primary > .menu-wrap > li.menu-item-has-children:focus > .sub-menu, .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
 		display: block;
 		position: absolute;
 		padding: 0.375rem 0;
