@@ -55,6 +55,16 @@
 
 	}
 
+	&.menu-on {
+
+		.menu-wrap {
+
+			display: block;
+
+		}
+
+	}
+
 	// Desktop.
 	@include for-tablet {
 

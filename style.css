@@ -3247,6 +3247,10 @@ a.header-image img {
 	display: none;
 }
 
+.menu-primary.menu-on .menu-wrap {
+	display: block;
+}
+
 @media (min-width: 782px) {
 	.menu-primary .menu-toggle {
 		display: none;
