@@ -61,7 +61,7 @@ p.wp-block-subhead {
 	margin-right: auto;
 	max-width: 100%;
 	border-bottom-width: $border-width;
-	border-color: $border-color;
+	border-color: $black;
 
 	&.is-style-wide {
 
@@ -79,7 +79,7 @@ p.wp-block-subhead {
 			padding-left: 1em;
 			padding-right: 0;
 			line-height: 0;
-			color: $border-color;
+			color: $black;
 
 		}
 

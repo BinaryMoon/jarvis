@@ -928,7 +928,6 @@ blockquote cite:before {
 blockquote blockquote {
 	margin: 1.5rem 0;
 	padding: 1.5rem 1.5rem;
-	border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* tables */
@@ -1294,7 +1293,7 @@ p.wp-block-subhead {
 	margin-right: auto;
 	max-width: 100%;
 	border-bottom-width: 0.2rem;
-	border-color: rgba(0, 0, 0, 0.3);
+	border-color: #000;
 }
 
 .wp-block-separator.is-style-wide {
@@ -1308,7 +1307,7 @@ p.wp-block-subhead {
 	padding-left: 1em;
 	padding-right: 0;
 	line-height: 0;
-	color: rgba(0, 0, 0, 0.3);
+	color: #000;
 }
 
 .wp-block-audio audio {
