@@ -34,7 +34,7 @@ function jarvis_enqueue() {
 	// Scripts.
 	wp_enqueue_script(
 		'jarvis-script-global',
-		get_theme_file_uri( '/assets/scripts/global.js' ),
+		jarvis_get_script_file(),
 		null,
 		jarvis_get_theme_version( '/assets/scripts/global.js' ),
 		false
@@ -684,5 +684,20 @@ function jarvis_get_theme_version( $filepath = '' ) {
 	}
 
 	return $theme_version;
+
+}
+
+
+/**
+ * Get the path for the global javascript file.
+ * Get the minified version for production and the full version for dev.
+ */
+function jarvis_get_script_file() {
+
+	if ( WP_DEBUG ) {
+		return get_theme_file_uri( '/assets/scripts/global.js' );
+	}
+
+	return get_theme_file_uri( '/assets/scripts/global.min.js' );
 
 }
