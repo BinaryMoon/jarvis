@@ -37,7 +37,7 @@ function jarvis_enqueue() {
 		jarvis_get_script_file(),
 		null,
 		jarvis_get_theme_version( '/assets/scripts/global.js' ),
-		false
+		true
 	);
 
 	// Localized Javascript strings and provide access to common properties.
