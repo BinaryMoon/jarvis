@@ -10,10 +10,10 @@ a {
 	text-decoration-thickness: 0.1em;
 	@include transition( all 0.1s ease-in-out );
 
+	&:focus,
 	&:hover {
 
-		text-underline-offset: 0.2em;
-		@include transition( all 0.1s ease-in-out );
+		text-decoration-thickness: 0.2em;
 		text-decoration: none;
 
 	}

@@ -73,6 +73,13 @@
 	position: relative;
 	@include modular-scale( gamma );
 
+	blockquote:before, blockquote:after {
+
+		content: '';
+		display: block;
+
+	}
+
 	p {
 
 		&:last-child {

@@ -47,16 +47,16 @@ input.settings-input {
 
 	&:hover {
 
-		border-color: $form-input-border-focus;
+		border-color: $black;
 
 	}
 
 	&:focus {
 
 		outline: none;
-		border-color: $form-input-border-focus;
-		background: $canvas-white;
-		color: $canvas-grey-90;
+		border-color: $black;
+		background: $white;
+		color: $black;
 
 	}
 
@@ -141,7 +141,6 @@ label {
 
 	}
 
-	&:focus,
 	&:hover {
 
 		cursor:pointer;

@@ -2,45 +2,14 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 2.0
+Version: 2.0.beta-1
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
 Domain Path: /languages/
 Tags:
 
-, black
-, blue
-, brown
-, gray
-, green
-, orange
-, pink
-, purple
-, red
-, silver
-, tan
-, white
-, yellow
-, dark
-, light
-
-### Columns
-
-, one-column
-, two-columns
-, three-columns
-, four-columns
-, left-sidebar
-, right-sidebar
-
-### Widths
-
-, fixed-layout
-, fluid-layout
-, responsive-layout
-
-### Features
+black, white, yellow, one-column, three-columns, responsive-layout
 
 , accessibility-ready
 , author-bio
@@ -603,9 +572,8 @@ input.settings-input {
 	line-height: 1.5rem;
 	min-height: 1.5rem;
 	width: 100%;
-	border-radius: 0.2rem;
-	background: #f2f2f2;
-	border: 0.2rem solid #f2f2f2;
+	background: transparent;
+	border: 0.2rem solid #000;
 }
 
 .device-click input[type=text], .device-click
@@ -651,7 +619,7 @@ input.text:hover,
 select:hover,
 textarea:hover,
 input.settings-input:hover {
-	border-color: #000000;
+	border-color: #000;
 }
 
 input[type=text]:focus,
@@ -676,9 +644,9 @@ select:focus,
 textarea:focus,
 input.settings-input:focus {
 	outline: none;
-	border-color: #000000;
-	background: #ffffff;
-	color: #1a1a1a;
+	border-color: #000;
+	background: #fff;
+	color: #000;
 }
 
 input[type=text]::-webkit-input-placeholder,
@@ -867,7 +835,7 @@ label em {
 	opacity: 0.6;
 }
 
-label:focus, label:hover {
+label:hover {
 	cursor: pointer;
 }
 
@@ -882,7 +850,9 @@ legend {
 }
 
 fieldset {
-	border: 1px solid #f2f2f2;
+	border: 1px solid #000;
+	padding: 1.5rem 1rem;
+	margin: 3rem 0;
 }
 
 fieldset ul.radio {
@@ -972,7 +942,7 @@ table {
 
 table th {
 	color: #000000;
-	border-bottom: 0.2rem solid rgba(0, 0, 0, 0.3);
+	border-bottom: 0.2rem solid #000;
 }
 
 table th,
@@ -990,12 +960,16 @@ table caption {
 
 table td {
 	padding: 0.75rem 1.5rem;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid #000;
 	vertical-align: top;
 }
 
 table tr:last-child td {
 	border: none;
+}
+
+table tr:hover {
+	background: #fff;
 }
 
 pre {
@@ -2390,6 +2364,13 @@ form.contact-form div label.grunion-radio-label:last-of-type, form.contact-form 
 	margin-bottom: 1.5rem;
 }
 
+form.contact-form div label span {
+	color: #000;
+	font-style: italic;
+	padding: 0 0.5rem;
+	font-weight: normal;
+}
+
 form.contact-form div.clear-form {
 	display: none;
 }
@@ -2658,11 +2639,11 @@ li.woocommerce-cart-button .cart-contents .count {
 	opacity: 0.8;
 }
 
-li.woocommerce-cart-button .cart-contents:hover {
+li.woocommerce-cart-button .cart-contents:focus, li.woocommerce-cart-button .cart-contents:hover {
 	text-decoration: none;
 }
 
-li.woocommerce-cart-button .cart-contents:hover .amount {
+li.woocommerce-cart-button .cart-contents:focus .amount, li.woocommerce-cart-button .cart-contents:hover .amount {
 	text-decoration: underline;
 }
 
@@ -2711,7 +2692,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .remove {
 	line-height: 1em;
 }
 
-li.woocommerce-cart-button li div.widget_shopping_cart .remove:hover {
+li.woocommerce-cart-button li div.widget_shopping_cart .remove:focus, li.woocommerce-cart-button li div.widget_shopping_cart .remove:hover {
 	text-decoration: none !important;
 }
 
@@ -2788,7 +2769,7 @@ p.demo_store a {
 	text-decoration: none;
 }
 
-.content-posts article.entry .post-meta-data a:hover {
+.content-posts article.entry .post-meta-data a:focus, .content-posts article.entry .post-meta-data a:hover {
 	text-decoration: underline;
 }
 
@@ -3100,14 +3081,9 @@ a {
 	transition: all 0.1s ease-in-out;
 }
 
-a:hover {
-	text-underline-offset: 0.2em;
+a:focus, a:hover {
+	text-decoration-thickness: 0.2em;
 	text-decoration: none;
-}
-
-.device-click a:hover {
-	-webkit-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
 }
 
 .container {
@@ -3196,7 +3172,7 @@ blockquote p:last-child {
 	text-decoration: none;
 }
 
-.site-header .branding .site-title a:hover {
+.site-header .branding .site-title a:focus, .site-header .branding .site-title a:hover {
 	text-decoration: underline;
 }
 
@@ -3263,7 +3239,7 @@ a.header-image img {
 	text-decoration: none;
 }
 
-.menu-primary ul li a:hover {
+.menu-primary ul li a:focus, .menu-primary ul li a:hover {
 	text-decoration: underline;
 }
 
@@ -3322,16 +3298,14 @@ a.header-image img {
 	.menu-primary > .menu-wrap > li.menu-item-has-children > .sub-menu {
 		display: none;
 	}
-	.menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
+	.menu-primary > .menu-wrap > li.menu-item-has-children:focus > .sub-menu, .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
 		display: block;
 		position: absolute;
 		padding: 0.375rem 0;
 		top: 100%;
-		left: 50%;
 		width: 16rem;
 		z-index: 100;
-		-webkit-transform: translateX(-8rem);
-		transform: translateX(-8rem);
+		right: 0;
 	}
 }
 

@@ -36,6 +36,7 @@
 				padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 				text-decoration: none;
 
+				&:focus,
 				&:hover {
 
 					text-decoration: underline;
@@ -151,6 +152,7 @@
 
 					}
 
+					&:focus,
 					&:hover {
 
 						> .sub-menu {
@@ -159,10 +161,12 @@
 							position: absolute;
 							padding: ( $grid-line-height / 4 ) 0;
 							top: 100%;
-							left: 50%;
 							width: 16rem;
 							z-index: layer( menu_dropdown );
-							transform: translateX( -8rem );
+							right: 0;
+
+							// left: 50%;
+							// transform: translateX( -8rem );
 
 						}
 
