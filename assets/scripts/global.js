@@ -214,20 +214,21 @@
 
 } ) );
 /**
- * Focus a html element based upon a link.
+ * Focus an html element based upon a link target.
  */
 ; ( function() {
 
 	var focusElement = function( e ) {
 
+		// Make sure there is a target.
 		if ( !e.target.hash ) {
 			return;
 		}
 
-		var id = e.target.hash;
+		// Try to grab the target element.
+		var element = document.querySelector( e.target.hash );
 
-		var element = document.getElementById( id.replace( '#', '' ) );
-
+		// If there is an element to use - then let's focus it.
 		if ( element ) {
 
 			if ( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
@@ -267,7 +268,6 @@
 			parents.push( elem );
 		}
 
-		// Return our parent array
 		return parents;
 
 	};
@@ -280,12 +280,14 @@
 
 /**
  * JS mobile detection.
- * Is this a touch enabled device or not?
- *
- * @return boolean
  */
 ; ( function() {
 
+	/**
+	 * Is this a touch enabled device or not?
+	 *
+	 * @return boolean
+	 */
 	var is_touch_device = function() {
 
 		return ( ( 'ontouchstart' in window ) || ( navigator.MaxTouchPoints > 0 ) || ( navigator.msMaxTouchPoints > 0 ) );
@@ -298,10 +300,16 @@
 
 } )();
 
+/**
+ * Mobile menu toggle.
+ *
+ * Toggles the menu visibility on small screens.
+ */
 ; ( function() {
 
 	var menuToggle = function() {
 
+		// The toggle action.
 		var toggle = function( e ) {
 
 			var $parent = document.querySelector( '.menu-primary' );
@@ -310,6 +318,8 @@
 
 			$parent.classList.toggle( 'menu-on' );
 
+			// If the menu has been turned on.
+			// Add ARIA hints to help screen readers know what is active.
 			if ( $parent.classList.contains( 'menu-on' ) ) {
 
 				// Menu is shown.
@@ -326,6 +336,7 @@
 
 		};
 
+		// Setup the click event.
 		events.on(
 			'click',
 			'.menu-toggle',
@@ -340,6 +351,10 @@
 
 } )();
 
+/**
+ * Improve menu behaviour for touch devices.
+ */
+
 ; ( function() {
 
 	var menuTouch = function() {
@@ -348,8 +363,13 @@
 			return;
 		}
 
-
-		// If a dropdown menu is tapped on a touch device then focus the menu.
+		/**
+		 * If a dropdown menu is tapped on a touch device then focus the menu.
+		 * If the menu is closed don't follow the link.
+		 * If the menu is open then go to the relevant page.
+		 *
+		 * This allows dropdown menus to display properly.
+		 */
 		events.on(
 			'touchend',
 			'#nav > .menu-item-has-children > a',
@@ -364,7 +384,10 @@
 				 * and selected.
 				 * If you click a link again then the link will be followed.
 				 */
-				if ( !$parent.classList.contains( 'focus' ) && !document.querySelector( '.menu' ).classList.contains( 'menu-on' ) ) {
+				if (
+					!$parent.classList.contains( 'focus' )
+					&& !document.querySelector( '.menu' ).classList.contains( 'menu-on' )
+				) {
 					removeFocus();
 					e.preventDefault();
 				}
@@ -374,7 +397,7 @@
 			}
 		);
 
-		// If you tap on the page body then the page will remove focus from all menu items.
+		// If you tap on the page body then remove focus from all menu items.
 		events.on(
 			'touchstart',
 			'body',
@@ -395,11 +418,12 @@
 		 */
 		var removeFocus = function() {
 
+			// Grab all parents. We only use the top level so can ignore the others.
 			var list = document.querySelectorAll( '#nav > li' );
 
 			list.forEach(
-				function( item, index ) {
-					list[ index ].classList.remove( 'focus' );
+				function( item ) {
+					item.classList.remove( 'focus' );
 				}
 			);
 
@@ -531,9 +555,9 @@ jarvis.ready(
 		var menuNoLinks = document.querySelectorAll( 'a:not([href])' );
 
 		menuNoLinks.forEach(
-			function( item, index ) {
-				menuNoLinks[ index ].classList.add( 'menu-no-href' );
-				menuNoLinks[ index ].setAttribute( 'hreg', '#' );
+			function( item ) {
+				item.classList.add( 'menu-no-href' );
+				item.setAttribute( 'hreg', '#' );
 			}
 		);
 
