@@ -4,22 +4,31 @@
  * https://vanillajstoolkit.com/helpers/ready/
  * @param  {Function} fn Callback function
  */
-var ready = function( fn ) {
+; ( function() {
 
-	// Sanity check.
-	if ( 'function' !== typeof fn ) {
-		return;
-	}
+	var ready = function( fn ) {
 
-	// If document is already loaded, run method.
-	if ( 'interactive' === document.readyState || 'complete' === document.readyState ) {
-		return fn();
-	}
+		// Sanity check.
+		if ( 'function' !== typeof fn ) {
+			return;
+		}
 
-	// Otherwise, wait until document is loaded.
-	document.addEventListener( 'DOMContentLoaded', fn, false );
+		// If document is already loaded, run method.
+		if ( 'interactive' === document.readyState || 'complete' === document.readyState ) {
+			return fn();
+		}
 
-};
+		// Otherwise, wait until document is loaded.
+		document.addEventListener( 'DOMContentLoaded', fn, false );
+
+	};
+
+	window.jarvis = window.jarvis || {};
+
+	window.jarvis.ready = ready;
+
+} )();
+
 /*!
  * eventslibjs v1.2.0
  * A tiny event delegation helper library.
@@ -207,156 +216,203 @@ var ready = function( fn ) {
 /**
  * Focus a html element based upon a link.
  */
-var focusElement = function( e ) {
+; ( function() {
 
-	if ( !e.target.hash ) {
-		return;
-	}
+	var focusElement = function( e ) {
 
-	var id = e.target.hash;
-
-	var element = document.getElementById( id.replace( '#', '' ) );
-
-	if ( element ) {
-
-		if ( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
-			element.tabIndex = -1;
+		if ( !e.target.hash ) {
+			return;
 		}
 
-		element.focus();
+		var id = e.target.hash;
 
-	}
+		var element = document.getElementById( id.replace( '#', '' ) );
 
-};
-var getParents = function( elem, selector ) {
+		if ( element ) {
 
-	// Set up a parent array
-	var parents = [];
-
-	// Push each parent element to the array
-	for ( ; elem && elem !== document; elem = elem.parentNode ) {
-		if ( selector ) {
-			if ( elem.matches( selector ) ) {
-				parents.push( elem );
+			if ( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+				element.tabIndex = -1;
 			}
-			continue;
+
+			element.focus();
+
 		}
-		parents.push( elem );
-	}
 
-	// Return our parent array
-	return parents;
+	};
 
-};
+	window.jarvis = window.jarvis || {};
+
+	window.jarvis.focusElement = focusElement;
+
+} )();
+
+/**
+ * Get the parents of the specified html element.
+ */
+; ( function() {
+
+	var getParents = function( elem, selector ) {
+
+		// Set up a parent array
+		var parents = [];
+
+		// Push each parent element to the array
+		for ( ; elem && elem !== document; elem = elem.parentNode ) {
+			if ( selector ) {
+				if ( elem.matches( selector ) ) {
+					parents.push( elem );
+				}
+				continue;
+			}
+			parents.push( elem );
+		}
+
+		// Return our parent array
+		return parents;
+
+	};
+
+	window.jarvis = window.jarvis || {};
+
+	window.jarvis.getParents = getParents;
+
+} )();
+
 /**
  * JS mobile detection.
  * Is this a touch enabled device or not?
  *
  * @return boolean
  */
-var is_touch_device = function() {
+; ( function() {
 
-	return ( ( 'ontouchstart' in window ) || ( navigator.MaxTouchPoints > 0 ) || ( navigator.msMaxTouchPoints > 0 ) );
+	var is_touch_device = function() {
 
-};
-var menuToggle = function() {
-
-	var toggle = function( e ) {
-
-		var $parent = document.querySelector( '.menu-primary' );
-		var $menu = document.querySelector( '#nav' );
-		var $this = e.target;
-
-		$parent.classList.toggle( 'menu-on' );
-
-		if ( $parent.classList.contains( 'menu-on' ) ) {
-
-			// Menu is shown.
-			$menu.setAttribute( 'aria-expanded', 'true' );
-			$this.setAttribute( 'aria-expanded', 'true' );
-
-		} else {
-
-			// Menu is hidden.
-			$menu.setAttribute( 'aria-expanded', 'false' );
-			$this.setAttribute( 'aria-expanded', 'false' );
-
-		}
+		return ( ( 'ontouchstart' in window ) || ( navigator.MaxTouchPoints > 0 ) || ( navigator.msMaxTouchPoints > 0 ) );
 
 	};
 
-	events.on(
-		'click',
-		'.menu-toggle',
-		toggle
-	);
+	window.jarvis = window.jarvis || {};
 
-};
+	window.jarvis.is_touch_device = is_touch_device;
 
-var menuTouch = function() {
+} )();
 
-	if ( !is_touch_device() ) {
-		return;
-	}
+; ( function() {
 
+	var menuToggle = function() {
 
-	// If a dropdown menu is tapped on a touch device then focus the menu.
-	events.on(
-		'touchend',
-		'#nav > .menu-item-has-children > a',
-		function( e ) {
+		var toggle = function( e ) {
 
-			var $parents = getParents( e.target, 'li' );
-			var $parent = $parents[ 0 ];
+			var $parent = document.querySelector( '.menu-primary' );
+			var $menu = document.querySelector( '#nav' );
+			var $this = e.target;
 
-			/**
-			 * If the parent is not focused then cancel the click.
-			 * This prevents the page from changing before children can be seen
-			 * and selected.
-			 * If you click a link again then the link will be followed.
-			 */
-			if ( !$parent.classList.contains( 'focus' ) && !document.querySelector( '.menu' ).classList.contains( 'menu-on' ) ) {
-				removeFocus();
-				e.preventDefault();
+			$parent.classList.toggle( 'menu-on' );
+
+			if ( $parent.classList.contains( 'menu-on' ) ) {
+
+				// Menu is shown.
+				$menu.setAttribute( 'aria-expanded', 'true' );
+				$this.setAttribute( 'aria-expanded', 'true' );
+
+			} else {
+
+				// Menu is hidden.
+				$menu.setAttribute( 'aria-expanded', 'false' );
+				$this.setAttribute( 'aria-expanded', 'false' );
+
 			}
 
-			$parent.classList.add( 'focus' );
+		};
 
-		}
-	);
-
-	// If you tap on the page body then the page will remove focus from all menu items.
-	events.on(
-		'touchstart',
-		'body',
-		function( e ) {
-
-			var $parents = getParents( e.target, 'li' );
-
-			if ( !$parents.length ) {
-				removeFocus();
-			}
-
-		}
-	);
-
-
-	/**
-	 * Remove the focus from the parent menu items.
-	 */
-	var removeFocus = function() {
-
-		var list = document.querySelectorAll( '#nav > li' );
-
-		list.forEach(
-			function( item, index ) {
-				list[ index ].classList.remove( 'focus' );
-			}
+		events.on(
+			'click',
+			'.menu-toggle',
+			toggle
 		);
 
 	};
 
-};
+	window.jarvis = window.jarvis || {};
+
+	window.jarvis.menuToggle = menuToggle;
+
+} )();
+
+; ( function() {
+
+	var menuTouch = function() {
+
+		if ( !jarvis.is_touch_device() ) {
+			return;
+		}
+
+
+		// If a dropdown menu is tapped on a touch device then focus the menu.
+		events.on(
+			'touchend',
+			'#nav > .menu-item-has-children > a',
+			function( e ) {
+
+				var $parents = jarvis.getParents( e.target, 'li' );
+				var $parent = $parents[ 0 ];
+
+				/**
+				 * If the parent is not focused then cancel the click.
+				 * This prevents the page from changing before children can be seen
+				 * and selected.
+				 * If you click a link again then the link will be followed.
+				 */
+				if ( !$parent.classList.contains( 'focus' ) && !document.querySelector( '.menu' ).classList.contains( 'menu-on' ) ) {
+					removeFocus();
+					e.preventDefault();
+				}
+
+				$parent.classList.add( 'focus' );
+
+			}
+		);
+
+		// If you tap on the page body then the page will remove focus from all menu items.
+		events.on(
+			'touchstart',
+			'body',
+			function( e ) {
+
+				var $parents = jarvis.getParents( e.target, 'li' );
+
+				if ( !$parents.length ) {
+					removeFocus();
+				}
+
+			}
+		);
+
+
+		/**
+		 * Remove the focus from the parent menu items.
+		 */
+		var removeFocus = function() {
+
+			var list = document.querySelectorAll( '#nav > li' );
+
+			list.forEach(
+				function( item, index ) {
+					list[ index ].classList.remove( 'focus' );
+				}
+			);
+
+		};
+
+	};
+
+	window.jarvis = window.jarvis || {};
+
+	window.jarvis.menuTouch = menuTouch;
+
+} )();
+
 /**
  * closest() polyfill
  * @link https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
@@ -439,25 +495,25 @@ if ( !Element.prototype.matches ) {
  * @package Jarvis
  */
 
-ready(
+jarvis.ready(
 	function() {
 
 		events.on(
 			'click',
 			'a[href^="#"]',
-			focusElement
+			jarvis.focusElement
 		);
 
 		// Mobile device detection.
 		var touchClass = 'device-click';
-		if ( is_touch_device() ) {
+		if ( jarvis.is_touch_device() ) {
 			touchClass = 'device-touch';
 		}
 		document.querySelector( 'html' ).classList.add( touchClass );
 
-		menuTouch();
+		jarvis.menuTouch();
 
-		menuToggle();
+		jarvis.menuToggle();
 
 		/**
 		 * Add href to links without so that dropdowns work properly on
