@@ -9,25 +9,25 @@
  * @package Jarvis
  */
 
-ready(
+jarvis.ready(
 	function() {
 
 		events.on(
 			'click',
 			'a[href^="#"]',
-			focusElement
+			jarvis.focusElement
 		);
 
 		// Mobile device detection.
 		var touchClass = 'device-click';
-		if ( is_touch_device() ) {
+		if ( jarvis.is_touch_device() ) {
 			touchClass = 'device-touch';
 		}
 		document.querySelector( 'html' ).classList.add( touchClass );
 
-		menuTouch();
+		jarvis.menuTouch();
 
-		menuToggle();
+		jarvis.menuToggle();
 
 		/**
 		 * Add href to links without so that dropdowns work properly on

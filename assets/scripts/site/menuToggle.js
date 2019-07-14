@@ -1,33 +1,41 @@
-var menuToggle = function() {
+; ( function() {
 
-	var toggle = function( e ) {
+	var menuToggle = function() {
 
-		var $parent = document.querySelector( '.menu-primary' );
-		var $menu = document.querySelector( '#nav' );
-		var $this = e.target;
+		var toggle = function( e ) {
 
-		$parent.classList.toggle( 'menu-on' );
+			var $parent = document.querySelector( '.menu-primary' );
+			var $menu = document.querySelector( '#nav' );
+			var $this = e.target;
 
-		if ( $parent.classList.contains( 'menu-on' ) ) {
+			$parent.classList.toggle( 'menu-on' );
 
-			// Menu is shown.
-			$menu.setAttribute( 'aria-expanded', 'true' );
-			$this.setAttribute( 'aria-expanded', 'true' );
+			if ( $parent.classList.contains( 'menu-on' ) ) {
 
-		} else {
+				// Menu is shown.
+				$menu.setAttribute( 'aria-expanded', 'true' );
+				$this.setAttribute( 'aria-expanded', 'true' );
 
-			// Menu is hidden.
-			$menu.setAttribute( 'aria-expanded', 'false' );
-			$this.setAttribute( 'aria-expanded', 'false' );
+			} else {
 
-		}
+				// Menu is hidden.
+				$menu.setAttribute( 'aria-expanded', 'false' );
+				$this.setAttribute( 'aria-expanded', 'false' );
+
+			}
+
+		};
+
+		events.on(
+			'click',
+			'.menu-toggle',
+			toggle
+		);
 
 	};
 
-	events.on(
-		'click',
-		'.menu-toggle',
-		toggle
-	);
+	window.jarvis = window.jarvis || {};
 
-};
+	window.jarvis.menuToggle = menuToggle;
+
+} )();

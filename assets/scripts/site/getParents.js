@@ -1,20 +1,31 @@
-var getParents = function( elem, selector ) {
+/**
+ * Get the parents of the specified html element.
+ */
+; ( function() {
 
-	// Set up a parent array
-	var parents = [];
+	var getParents = function( elem, selector ) {
 
-	// Push each parent element to the array
-	for ( ; elem && elem !== document; elem = elem.parentNode ) {
-		if ( selector ) {
-			if ( elem.matches( selector ) ) {
-				parents.push( elem );
+		// Set up a parent array
+		var parents = [];
+
+		// Push each parent element to the array
+		for ( ; elem && elem !== document; elem = elem.parentNode ) {
+			if ( selector ) {
+				if ( elem.matches( selector ) ) {
+					parents.push( elem );
+				}
+				continue;
 			}
-			continue;
+			parents.push( elem );
 		}
-		parents.push( elem );
-	}
 
-	// Return our parent array
-	return parents;
+		// Return our parent array
+		return parents;
 
-};
+	};
+
+	window.jarvis = window.jarvis || {};
+
+	window.jarvis.getParents = getParents;
+
+} )();

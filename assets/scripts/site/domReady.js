@@ -4,19 +4,27 @@
  * https://vanillajstoolkit.com/helpers/ready/
  * @param  {Function} fn Callback function
  */
-var ready = function( fn ) {
+; ( function() {
 
-	// Sanity check.
-	if ( 'function' !== typeof fn ) {
-		return;
-	}
+	var ready = function( fn ) {
 
-	// If document is already loaded, run method.
-	if ( 'interactive' === document.readyState || 'complete' === document.readyState ) {
-		return fn();
-	}
+		// Sanity check.
+		if ( 'function' !== typeof fn ) {
+			return;
+		}
 
-	// Otherwise, wait until document is loaded.
-	document.addEventListener( 'DOMContentLoaded', fn, false );
+		// If document is already loaded, run method.
+		if ( 'interactive' === document.readyState || 'complete' === document.readyState ) {
+			return fn();
+		}
 
-};
+		// Otherwise, wait until document is loaded.
+		document.addEventListener( 'DOMContentLoaded', fn, false );
+
+	};
+
+	window.jarvis = window.jarvis || {};
+
+	window.jarvis.ready = ready;
+
+} )();
