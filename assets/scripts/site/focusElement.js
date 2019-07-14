@@ -1,18 +1,19 @@
 /**
- * Focus a html element based upon a link.
+ * Focus an html element based upon a link target.
  */
 ; ( function() {
 
 	var focusElement = function( e ) {
 
+		// Make sure there is a target.
 		if ( !e.target.hash ) {
 			return;
 		}
 
-		var id = e.target.hash;
+		// Try to grab the target element.
+		var element = document.querySelector( e.target.hash );
 
-		var element = document.getElementById( id.replace( '#', '' ) );
-
+		// If there is an element to use - then let's focus it.
 		if ( element ) {
 
 			if ( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {

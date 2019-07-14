@@ -19,7 +19,6 @@
 			parents.push( elem );
 		}
 
-		// Return our parent array
 		return parents;
 
 	};

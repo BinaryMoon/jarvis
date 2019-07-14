@@ -1,3 +1,7 @@
+/**
+ * Improve menu behaviour for touch devices.
+ */
+
 ; ( function() {
 
 	var menuTouch = function() {
@@ -6,8 +10,13 @@
 			return;
 		}
 
-
-		// If a dropdown menu is tapped on a touch device then focus the menu.
+		/**
+		 * If a dropdown menu is tapped on a touch device then focus the menu.
+		 * If the menu is closed don't follow the link.
+		 * If the menu is open then go to the relevant page.
+		 *
+		 * This allows dropdown menus to display properly.
+		 */
 		events.on(
 			'touchend',
 			'#nav > .menu-item-has-children > a',
@@ -22,7 +31,10 @@
 				 * and selected.
 				 * If you click a link again then the link will be followed.
 				 */
-				if ( !$parent.classList.contains( 'focus' ) && !document.querySelector( '.menu' ).classList.contains( 'menu-on' ) ) {
+				if (
+					!$parent.classList.contains( 'focus' )
+					&& !document.querySelector( '.menu' ).classList.contains( 'menu-on' )
+				) {
 					removeFocus();
 					e.preventDefault();
 				}
@@ -32,7 +44,7 @@
 			}
 		);
 
-		// If you tap on the page body then the page will remove focus from all menu items.
+		// If you tap on the page body then remove focus from all menu items.
 		events.on(
 			'touchstart',
 			'body',
@@ -53,11 +65,12 @@
 		 */
 		var removeFocus = function() {
 
+			// Grab all parents. We only use the top level so can ignore the others.
 			var list = document.querySelectorAll( '#nav > li' );
 
 			list.forEach(
-				function( item, index ) {
-					list[ index ].classList.remove( 'focus' );
+				function( item ) {
+					item.classList.remove( 'focus' );
 				}
 			);
 

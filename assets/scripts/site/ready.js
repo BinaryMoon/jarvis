@@ -45,9 +45,9 @@ jarvis.ready(
 		var menuNoLinks = document.querySelectorAll( 'a:not([href])' );
 
 		menuNoLinks.forEach(
-			function( item, index ) {
-				menuNoLinks[ index ].classList.add( 'menu-no-href' );
-				menuNoLinks[ index ].setAttribute( 'hreg', '#' );
+			function( item ) {
+				item.classList.add( 'menu-no-href' );
+				item.setAttribute( 'hreg', '#' );
 			}
 		);
 

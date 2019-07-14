@@ -1,7 +1,13 @@
+/**
+ * Mobile menu toggle.
+ *
+ * Toggles the menu visibility on small screens.
+ */
 ; ( function() {
 
 	var menuToggle = function() {
 
+		// The toggle action.
 		var toggle = function( e ) {
 
 			var $parent = document.querySelector( '.menu-primary' );
@@ -10,6 +16,8 @@
 
 			$parent.classList.toggle( 'menu-on' );
 
+			// If the menu has been turned on.
+			// Add ARIA hints to help screen readers know what is active.
 			if ( $parent.classList.contains( 'menu-on' ) ) {
 
 				// Menu is shown.
@@ -26,6 +34,7 @@
 
 		};
 
+		// Setup the click event.
 		events.on(
 			'click',
 			'.menu-toggle',
