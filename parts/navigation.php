@@ -16,11 +16,12 @@ if ( ! has_nav_menu( 'menu-1' ) ) {
 
 ?>
 
-<nav class="menu menu-primary" aria-label="<?php esc_attr_e( 'Primary Menu', 'jarvis' ); ?>">
+<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
+	<?php esc_html_e( 'Menu', 'jarvis' ); ?>
+</button>
 
-	<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
-		<?php esc_html_e( 'Menu', 'jarvis' ); ?>
-	</button>
+
+<nav class="menu menu-primary" aria-label="<?php esc_attr_e( 'Primary Menu', 'jarvis' ); ?>">
 
 <?php
 

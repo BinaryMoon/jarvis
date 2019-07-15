@@ -24,8 +24,15 @@
 	.site-header-content {
 
 		display: flex;
-		align-items: center;
+		flex-direction: column;
 		padding: ( $grid-line-height ) 0;
+
+		@include for-tablet {
+
+			align-items: center;
+			flex-direction: row;
+
+		}
 
 	}
 
@@ -45,7 +52,7 @@
 
 	.branding {
 
-		padding: 0 ( $grid-gutter );
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 
 		.site-title a,
 		.site-title {
@@ -83,6 +90,7 @@
 	.menu {
 
 		padding: 0 ( $grid-gutter );
+		width: 100%;
 
 	}
 
