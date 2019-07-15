@@ -2893,7 +2893,12 @@ p.demo_store a {
 /* comments layout */
 .content-comments {
 	padding: 3rem 0;
-	clear: both;
+}
+
+@media (min-width: 1200px) {
+	.content-comments {
+		padding: 7.5rem 0;
+	}
 }
 
 .content-comments .comment-reply-title {
