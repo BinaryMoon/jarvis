@@ -16,4 +16,7 @@ I want Jarvis to be a lightweight theme. To do this I have:
 
 If you wish to work on Jarvis you will need to have node and npm set up. You can then run `npm install` to get the required packages. Once setup you just have to run `npm run dev` in order to set up the watcher. Npm will then take care of everything for you.
 
-Since I am currently working on the CSS, npm only compiles the scss files. In the future it will generste rtl.css, combine javascript files, extra pot files, and probably more.
+## npm Scripts
+
+* `npm run dev` Watch for css and script changes, and compile them when required.
+* `npm run build` Compile css, scripts, and then generate a zip file containing the theme ready for installation.
