@@ -9,7 +9,10 @@ import styles from './gulp/sass';
 import scripts from './gulp/scripts';
 import compress from './gulp/zip';
 
-export const build = parallel( styles, scripts );
+export const build = series(
+	parallel( styles, scripts ),
+	compress
+);
 export const buildScripts = scripts;
 export const buildStyles = styles;
 export const buildZip = compress;
