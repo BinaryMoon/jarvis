@@ -11,6 +11,12 @@
 	clear: both;
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
+	@include for-tablet {
+
+		@include modular-scale(delta);
+
+	}
+
 	a {
 
 		text-decoration: none;
@@ -29,28 +35,30 @@
 		text-decoration: underline;
 		display: block;
 
+		&:hover {
+
+			text-decoration: none;
+
+		}
+
 	}
 
 	.nav-links {
 
-		div:first-child {
+		display: grid;
+		grid-gap: $grid-gutter;
+		grid-row-gap: $grid-line-height;
 
-			margin-bottom: $grid-line-height;
+		.nav-parent {
+
+			grid-column: 1/-1;
+			font-weight: bold;
 
 		}
 
 		@include for-tablet {
 
-			display: flex;
-			justify-content: space-between;
-
-			div {
-
-				margin: 0;
-				width: 50%;
-				flex-grow: 1;
-
-			}
+			grid-template-columns: 1fr 1fr;
 
 			.nav-next {
 
