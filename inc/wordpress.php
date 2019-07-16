@@ -551,30 +551,6 @@ add_action( 'wp_head', 'jarvis_pingback_header' );
 
 
 /**
- * Make last space in a sentence a non breaking space to prevent typographic widows.
- *
- * @param string $str String to apply fix to.
- * @return string
- */
-function jarvis_widont( $str = '' ) {
-
-	// Strip spaces.
-	$str = trim( $str );
-	// Find the last space.
-	$space = strrpos( $str, ' ' );
-
-	// If there's a space then replace the last on with a non breaking space.
-	if ( false !== $space ) {
-		$str = substr( $str, 0, $space ) . '&nbsp;' . substr( $str, $space + 1 );
-	}
-
-	// Return the string.
-	return $str;
-
-}
-
-
-/**
  * Modifies tag cloud widget arguments to display all tags in the same font size
  * and use list format for better accessibility.
  *
