@@ -1,0 +1,15 @@
+
+/*!
+ * ## - Custom Properties
+ */
+
+:root {
+	--foreground-color: #000;
+	--foreground-contrast-color: #fff;
+	--background-color: $canvas-background;
+
+	&.dark-mode {
+		--foreground-color: #fff;
+		--foreground-contrast-color: #000;
+	}
+}

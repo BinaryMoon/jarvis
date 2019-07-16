@@ -9,8 +9,8 @@ $font-family-header: $font-family-sans;
 $font-uppercase-spacing: 0.1em;
 
 // colours
-$black: #000;
-$white: #fff;
+$black: var(--foreground-color);
+$white: var(--foreground-contrast-color);
 
 // main colour, used through the theme
 $canvas-background: #ff9;
