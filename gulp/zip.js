@@ -14,6 +14,10 @@ const compress = function() {
 		'!node_modules/**',
 		'!gulp/',
 		'!gulp/**',
+		'!assets/scripts/src/',
+		'!assets/scripts/src/**',
+		'!assets/scripts-customizer/src/',
+		'!assets/scripts-customizer/src/**',
 		'!**/*.scss',
 	];
 
