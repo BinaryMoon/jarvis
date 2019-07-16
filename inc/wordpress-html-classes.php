@@ -37,6 +37,8 @@ function jarvis_body_class( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	$classes[] = jarvis_colour_brightness( get_background_color() ) ? 'light-mode' : 'dark-mode';
+
 	return $classes;
 
 }

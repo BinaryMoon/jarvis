@@ -57,3 +57,28 @@ function jarvis_colour_styles() {
 }
 
 add_action( 'wp_head', 'jarvis_colour_styles' );
+
+
+/**
+ * Calculate the colour brightness.
+ *
+ * @param string $color string The colour to calculate.
+ * @param int    $lighter_than The brightness to check against.
+ * @return boolean true if lighter than, false otherwise.
+ */
+function jarvis_colour_brightness( $color = false, $lighter_than = 130 ) {
+
+	if ( ! $color ) {
+		return 0;
+	}
+
+	$color = str_replace( '#', '', $color );
+
+	// Calculate straight from RGB.
+	$r = hexdec( $color[0] . $color[1] );
+	$g = hexdec( $color[2] . $color[3] );
+	$b = hexdec( $color[4] . $color[5] );
+
+	return ( ( $r * 299 + $g * 587 + $b * 114 ) / 1000 > $lighter_than );
+
+}
