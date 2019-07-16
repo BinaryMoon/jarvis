@@ -8,6 +8,7 @@ a {
 	color: $link-color;
 	text-underline-offset: 0.1em;
 	text-decoration-thickness: 0.1em;
+	text-decoration: underline;
 	@include transition( all 0.1s ease-in-out );
 
 	&:focus,
