@@ -162,7 +162,7 @@ function jarvis_customize_preview_js() {
 
 	wp_enqueue_script(
 		'jarvis-customize-preview',
-		get_theme_file_uri( '/assets/scripts/customizer-preview.js' ),
+		get_theme_file_uri( '/assets/scripts-customizer/preview.js' ),
 		array( 'customize-preview' ),
 		'1.0',
 		true
