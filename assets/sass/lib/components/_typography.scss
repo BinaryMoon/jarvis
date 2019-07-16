@@ -22,13 +22,11 @@ h4,
 h5,
 h6 {
 
-	color: $body-header-color;
 	font-family: $font-family-header;
 	font-weight: $font-weight;
 
 	a {
 
-		color: $body-header-color;
 		text-decoration: none;
 
 		&:focus,

@@ -157,15 +157,9 @@
 		.entry {
 
 			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
-			background: rgba( $canvas-grey-50, 0.1 );
+			background: $white;
 			margin-bottom: $grid-line-height;
 			position: relative;
-
-			&:after {
-
-				@include arrow-down( rgba( $canvas-grey-50, 0.1 ) );
-
-			}
 
 			p {
 

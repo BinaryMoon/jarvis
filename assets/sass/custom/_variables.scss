@@ -13,7 +13,7 @@ $black: var(--foreground-color);
 $white: var(--foreground-contrast-color);
 
 // main colour, used through the theme
-$canvas-background: #ff9;
+$canvas-background: var(--background-color);
 
 $comments-margin: 4%;
 

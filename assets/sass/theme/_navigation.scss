@@ -38,8 +38,8 @@
 	ul {
 
 		display: block;
-		background: black;
-		color: white;
+		background: $black;
+		color: $white;
 
 		li {
 
@@ -108,7 +108,7 @@
 
 				text-align: left;
 				margin: 0;
-				color: white;
+				color: $white;
 
 			}
 
@@ -124,7 +124,7 @@
 		> .menu-wrap {
 
 			background: transparent;
-			color: black;
+			color: $black;
 
 			> li {
 

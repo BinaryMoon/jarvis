@@ -103,7 +103,7 @@ table {
 
 	th {
 
-		color: $body-header-color;
+		color: $black;
 		border-bottom: $border-width solid $black;
 
 	}
@@ -150,8 +150,8 @@ table {
 
 pre {
 
-	background: $canvas-pre-background;
-	color: $canvas-pre-color;
+	background: $black;
+	color: $white;
 	padding: $grid-line-height $style-element-spacing;
 	overflow: auto;
 	display: block;
