@@ -67,11 +67,11 @@
 
 		width: auto;
 
-		@include button( $canvas-grey-10 );
+		@include button();
 
 		&.alt {
 
-			@include button( $canvas-color, epsilon );
+			@include button( epsilon );
 			width: 100%;
 
 		}

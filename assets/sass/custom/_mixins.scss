@@ -33,10 +33,10 @@
 }
 
 // Reusable button style.
-@mixin button( $color: $canvas-color, $font-size: zeta ) {
+@mixin button( $font-size: zeta ) {
 
-	background: $color;
-	color: contrast( $color );
+	background: $black;
+	color: $white;
 	display: inline-block;
 	text-decoration: none;
 	border: none;
@@ -50,9 +50,7 @@
 	&:focus,
 	&:hover {
 
-		background: darken( $color, 15% );
-		color: contrast( darken( $color, 15% ) );
-		text-decoration: none;
+		text-decoration: underline;
 
 	}
 
