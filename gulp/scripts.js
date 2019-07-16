@@ -6,17 +6,17 @@ const concat = require( 'gulp-concat' );
 const uglify = require( 'gulp-uglify' );
 const rename = require( 'gulp-rename' );
 
-export default function scripts() {
+export function scripts( path = 'scripts', file = 'global' ) {
 
-	const destPath = './assets/scripts/';
+	const destPath = './assets/' + path + '/';
 	const scriptsSrc = [
-		'./assets/scripts/site/!(ready)*.js',
-		'./assets/scripts/site/ready.js'
+		'./assets/' + path + '/src/!(ready)*.js',
+		'./assets/' + path + '/src/ready.js'
 	];
 
 	return src( scriptsSrc )
 		.pipe(
-			concat( 'global.js' )
+			concat( file + '.js' )
 		)
 		.pipe(
 			dest( destPath )
@@ -25,10 +25,16 @@ export default function scripts() {
 			uglify()
 		)
 		.pipe(
-			rename( 'global.min.js' )
+			rename( file + '.min.js' )
 		)
 		.pipe(
 			dest( destPath )
 		);
+
+}
+
+export function customizerScripts() {
+
+	return scripts( 'scripts-customizer', 'preview' );
 
 }
