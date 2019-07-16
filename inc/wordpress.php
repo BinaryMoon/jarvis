@@ -241,8 +241,7 @@ function jarvis_after_setup_theme() {
 	 */
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Header Top', 'jarvis' ),
-			'menu-2' => esc_html__( 'Header Bottom', 'jarvis' ),
+			'menu-1' => esc_html__( 'Menu', 'jarvis' ),
 		)
 	);
 
@@ -424,6 +423,7 @@ function jarvis_wrap_the_archive_title( $title ) {
 
 	// Glue it back together again.
 	if ( ! empty( $title_parts[1] ) ) {
+
 		$title = wp_kses(
 			$title_parts[1],
 			array(
@@ -432,7 +432,9 @@ function jarvis_wrap_the_archive_title( $title ) {
 				),
 			)
 		);
+
 		$title = '<small>' . esc_html( $title_parts[0] ) . ': </small>' . $title;
+
 	}
 
 	return $title;
