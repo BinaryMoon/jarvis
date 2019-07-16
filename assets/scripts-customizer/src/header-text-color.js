@@ -1,3 +1,6 @@
+/**
+ * Live updates for the header text colour.
+ */
 ; ( function( $ ) {
 
 	wp.customize.bind(

@@ -1,3 +1,9 @@
+/**
+ * Live updates for the background colour.
+ *
+ * Technically background colour is already updated in real time. This adds a
+ * corresponding class to the html element so that we can have readable text.
+ */
 ; ( function( $ ) {
 
 	wp.customize.bind(
@@ -10,6 +16,9 @@
 	);
 
 } )( jQuery );
+/**
+ * Live updates for the header text colour.
+ */
 ; ( function( $ ) {
 
 	wp.customize.bind(
@@ -59,6 +68,9 @@
 	);
 
 } )( jQuery );
+/**
+ * Live updates for the site description.
+ */
 ; ( function( $ ) {
 
 	wp.customize.bind(
@@ -81,6 +93,9 @@
 	);
 
 } )( jQuery );
+/**
+ * Live updates for the site name.
+ */
 ; ( function( $ ) {
 
 	wp.customize.bind(

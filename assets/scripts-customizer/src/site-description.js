@@ -1,3 +1,6 @@
+/**
+ * Live updates for the site description.
+ */
 ; ( function( $ ) {
 
 	wp.customize.bind(

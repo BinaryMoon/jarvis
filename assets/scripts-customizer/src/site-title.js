@@ -1,3 +1,6 @@
+/**
+ * Live updates for the site name.
+ */
 ; ( function( $ ) {
 
 	wp.customize.bind(
