@@ -40,24 +40,6 @@ function jarvis_enqueue() {
 		true
 	);
 
-	// Localized Javascript strings and provide access to common properties.
-	wp_localize_script(
-		'jarvis-script-global',
-		'jarvis_site_settings',
-		array(
-			// Translation strings.
-			'i18n' => array(
-				'menu' => esc_html__( 'Menu', 'jarvis' ),
-			),
-			// Properties that are usable through javascript.
-			'is' => array(
-				'home' => is_front_page(),
-				'single' => is_single(),
-				'archive' => is_archive(),
-			),
-		)
-	);
-
 	// Comments Javascript.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
