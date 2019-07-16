@@ -10,13 +10,6 @@ p.wp-block-subhead {
 
 }
 
-// Remove auto margin from browser figures.
-.wp-block-image {
-
-	margin: 0;
-
-}
-
 .wp-block-pullquote blockquote,
 .wp-block-quote,
 .wp-block-quote.is-large {
@@ -100,6 +93,7 @@ p.wp-block-subhead {
 .wp-block-image {
 
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	max-width: 100vw;
 
 	img {
 

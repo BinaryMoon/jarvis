@@ -9,7 +9,13 @@
 
 	.entry-header {
 
-		margin-bottom: ( $grid-line-height * 3 );
+		margin-bottom: ( $grid-line-height * 2 );
+
+		@include for-desktop {
+
+			margin-bottom: ( $grid-line-height * 4 );
+
+		}
 
 	}
 
@@ -66,6 +72,23 @@
 
 		}
 
+	}
+
+	.entry-meta {
+
+		margin-bottom: ( $grid-line-height / 2 );
+
+		span {
+
+			margin-right: ( $grid-gutter / 2 );
+
+		}
+
+	}
+
+	.alignleft {
+
+		transform: translateX( -$grid-gutter );
 	}
 
 }
