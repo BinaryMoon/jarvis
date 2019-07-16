@@ -73,49 +73,6 @@ add_action( 'enqueue_block_assets', 'jarvis_editor_blocks_styles' );
 
 
 /**
- * Modify post type arguments to add default post type templates.
- *
- * @param  array  $args      The default post type arguments.
- * @param  string $post_type The post type for the current request.
- * @return array             Modified arguments including the new template properties.
- */
-function jarvis_post_type_arguments( $args, $post_type ) {
-
-	// Only apply changes to the specified post type.
-	if ( 'post' === $post_type ) {
-
-		/**
-		 * Adds a template property to the specified post type arguments.
-		 *
-		 * You can get a list of available blocks by entering the following js
-		 * command in the console window in your brownser.
-		 * wp.blocks.getBlockTypes()
-		 *
-		 * The output of this command also shows the available attributes for setting defaults.
-		 *
-		 * @var array
-		 */
-		$args['template'] = array(
-			array( 'core/image' ),
-			array(
-				'core/paragraph',
-				array(
-					'placeholder' => esc_attr__( 'Start writing', 'jarvis' ),
-				),
-			),
-			array( 'core/quote' ),
-		);
-
-	}
-
-	return $args;
-
-}
-
-add_filter( 'register_post_type_args', 'jarvis_post_type_arguments', 20, 2 );
-
-
-/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * The theme is responsive so the width is likely to be narrower than the value
