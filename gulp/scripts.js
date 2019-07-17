@@ -6,17 +6,17 @@ const concat = require( 'gulp-concat' );
 const uglify = require( 'gulp-uglify' );
 const rename = require( 'gulp-rename' );
 
-export function scripts( path = 'scripts', file = 'global' ) {
+export function scripts( slug = 'global' ) {
 
-	const destPath = './assets/' + path + '/';
+	const destPath = './assets/scripts/';
 	const scriptsSrc = [
-		'./assets/' + path + '/src/!(ready)*.js',
-		'./assets/' + path + '/src/ready.js'
+		'./assets/scripts/src-' + slug + '/!(ready)*.js',
+		'./assets/scripts/src-' + slug + '/ready.js'
 	];
 
 	return src( scriptsSrc )
 		.pipe(
-			concat( file + '.js' )
+			concat( slug + '.js' )
 		)
 		.pipe(
 			dest( destPath )
@@ -25,7 +25,7 @@ export function scripts( path = 'scripts', file = 'global' ) {
 			uglify()
 		)
 		.pipe(
-			rename( file + '.min.js' )
+			rename( slug + '.min.js' )
 		)
 		.pipe(
 			dest( destPath )
@@ -33,8 +33,14 @@ export function scripts( path = 'scripts', file = 'global' ) {
 
 }
 
-export function customizerScripts() {
+export function customizerPreview() {
 
-	return scripts( 'scripts-customizer', 'preview' );
+	return scripts( 'customizer-preview' );
+
+}
+
+export function customizerControls() {
+
+	return scripts( 'customizer-controls' );
 
 }
