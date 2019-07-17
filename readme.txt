@@ -25,6 +25,15 @@ Jarvis comes bundled with a number of page templates. These can be used as follo
 * __Child Page Grid__ - Lists all of the pages that are children of the current page. Handy if you have a complex site hierachy.
 * __Portfolio__ - Displays your most recent portfolio posts. Requires the Jetpack plugin. Allows you to add portfolio posts to your website homepage.
 
+== Footer Credits ==
+
+Jarvis allows you to edit or hide the footer credits. If you want to add your own then Jarvis includes some handy shortcuts to make it easier to manage.
+
+* *(c)* - add a copyright symbol __@copy;__
+* *(year)* - add the current year. This will update when the year changes, so no more forgetting to change things in the new year!
+* *(|)* - add a gap between bits of footer content.
+* *(privacy)* - add a link to your privacy policy as setup in the privacy section of your WordPress admin.
+
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =

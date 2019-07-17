@@ -136,10 +136,15 @@ function jarvis_credits_content( $wrapper = true ) {
  */
 function jarvis_credits_get_content() {
 
+	$separator = '<span role="separator" aria-hidden="true" class="sep"></span>';
+
 	$contents = get_theme_mod( 'jarvis_credits_content', '' );
 
 	$contents = str_ireplace( '(YEAR)', date( 'Y' ), $contents );
 	$contents = str_ireplace( '(C)', '&copy;', $contents );
+	$contents = str_ireplace( '(|)', $separator, $contents );
+	$contents = str_ireplace( '(SEP)', $separator, $contents );
+	$contents = str_ireplace( '(PRIVACY)', get_the_privacy_policy_link(), $contents );
 
 	return wp_kses_post( $contents );
 
