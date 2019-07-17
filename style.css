@@ -151,7 +151,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-html .customizer-preview {
+html.customizer-preview {
 	scroll-behavior: auto;
 }
 
