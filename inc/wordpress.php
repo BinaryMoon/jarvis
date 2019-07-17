@@ -31,6 +31,10 @@ function jarvis_enqueue() {
 		jarvis_get_theme_version( '/style.css' )
 	);
 
+	// Uutput of custom settings as inline styles.
+	wp_add_inline_style( 'jarvis-style', jarvis_get_site_styles() );
+
+
 	// Scripts.
 	wp_enqueue_script(
 		'jarvis-script-global',
@@ -58,6 +62,9 @@ function jarvis_editor_blocks_styles() {
 	// Load the theme styles within Gutenberg.
 	wp_enqueue_style( 'jarvis-editor-blocks', get_theme_file_uri( '/assets/css/editor-blocks.css' ), null, '1.2' );
 
+	// Add custom properties for the block editor.
+	wp_add_inline_style( 'jarvis-editor-blocks', jarvis_get_block_styles() );
+
 	/**
 	 * Overwrite Core theme styles with empty styles.
 	 *
@@ -69,7 +76,50 @@ function jarvis_editor_blocks_styles() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'jarvis_editor_blocks_styles' );
-add_action( 'enqueue_block_assets', 'jarvis_editor_blocks_styles' );
+
+
+/**
+ * Get the custom properties for the site so that we can override them.
+ */
+function jarvis_get_custom_properties() {
+
+	$properties = array(
+		'background-color' => get_background_color()
+	);
+
+	return $properties;
+
+}
+
+
+/**
+ * Generate styles for the block editor.
+ */
+function jarvis_get_block_styles() {
+
+	$properties = jarvis_get_custom_properties();
+
+	$styles = array();
+
+	$styles[] = '.editor-styles-wrapper, .editor-styles-wrapper > .editor-writing-flow, .editor-styles-wrapper > .editor-writing-flow > div { background-color: #' . esc_attr( $properties['background-color'] ) . '; }';
+
+	return implode( $styles, ' ' );
+
+}
+
+
+/**
+ * Generate styles for the website front-end.
+ */
+function jarvis_get_site_styles() {
+
+	$properties = jarvis_get_custom_properties();
+
+	$styles = array();
+
+	return implode( $styles, ' ' );
+
+}
 
 
 /**
