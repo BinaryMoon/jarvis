@@ -160,16 +160,16 @@ add_action( 'customize_register', 'jarvis_register_customize_refresh' );
  */
 function jarvis_customize_preview_js() {
 
-	$script_path = get_theme_file_uri( '/assets/scripts-customizer/preview.min.js' );
+	$script_path = get_theme_file_uri( '/assets/scripts/customizer-preview.min.js' );
 
 	if ( WP_DEBUG ) {
-		$script_path = get_theme_file_uri( '/assets/scripts-customizer/preview.js' );
+		$script_path = get_theme_file_uri( '/assets/scripts/customizer-preview.js' );
 	}
 
 	wp_enqueue_script(
 		'jarvis-customize-preview',
 		$script_path,
-		array( 'customize-preview' ),
+		array( 'customize-preview', 'jquery' ),
 		'1.0',
 		true
 	);
@@ -177,3 +177,28 @@ function jarvis_customize_preview_js() {
 }
 
 add_action( 'customize_preview_init', 'jarvis_customize_preview_js' );
+
+
+/**
+ * Binds JS handlers to load the Customizer controls js.
+ */
+function jarvis_customize_controls_js() {
+
+	$script_path = get_theme_file_uri( '/assets/scripts/customizer-controls.min.js' );
+
+	if ( WP_DEBUG ) {
+		$script_path = get_theme_file_uri( '/assets/scripts/customizer-controls.js' );
+	}
+
+	wp_enqueue_script(
+		'jarvis-customize-controls',
+		$script_path,
+		array( 'jquery' ),
+		'1.0',
+		true
+	);
+
+}
+
+add_action( 'customize_controls_enqueue_scripts', 'jarvis_customize_controls_js' );
+
