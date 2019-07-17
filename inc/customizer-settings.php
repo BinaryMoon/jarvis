@@ -160,9 +160,15 @@ add_action( 'customize_register', 'jarvis_register_customize_refresh' );
  */
 function jarvis_customize_preview_js() {
 
+	$script_path = get_theme_file_uri( '/assets/scripts-customizer/preview.min.js' );
+
+	if ( WP_DEBUG ) {
+		$script_path = get_theme_file_uri( '/assets/scripts-customizer/preview.js' );
+	}
+
 	wp_enqueue_script(
 		'jarvis-customize-preview',
-		get_theme_file_uri( '/assets/scripts-customizer/preview.js' ),
+		$script_path,
 		array( 'customize-preview' ),
 		'1.0',
 		true
