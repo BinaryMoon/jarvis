@@ -12,8 +12,16 @@ html {
 	-ms-overflow-style: scrollbar;
 	scroll-behavior: smooth;
 
-	@include for-reduced-motion {
+	.customizer-preview {
+
 		scroll-behavior: auto;
+
+	}
+
+	@include for-reduced-motion {
+
+		scroll-behavior: auto;
+
 	}
 
 }
