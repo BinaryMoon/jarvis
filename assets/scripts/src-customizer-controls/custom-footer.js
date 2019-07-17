@@ -45,5 +45,3 @@
 	);
 
 } )();
-
-// Silence is golden!

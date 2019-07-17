@@ -74,6 +74,9 @@ require get_parent_theme_file_path( 'inc/wordpress-html-classes.php' );
 // Custom header.
 require get_parent_theme_file_path( 'inc/custom-header.php' );
 
+// Custom footer. To allow for custom credits/ copyright info.
+require get_parent_theme_file_path( 'inc/custom-footer.php' );
+
 // Reusable Template Functions.
 require get_parent_theme_file_path( 'inc/template-tags.php' );
 
