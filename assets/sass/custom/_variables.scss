@@ -28,14 +28,14 @@ $support-accessible-tagcloud: true;
 // calculate the sizes with: required-size / 16
 $font-sizes: (
 	// giga: ( size: 6.25rem, height: 1 ),
-	mega: ( size: 6rem, height: 1 ),				// 96px
-	alpha: ( size: 4rem, height: 1.25 ),			// 64px
+	mega: ( size: 6rem, height: 1 ),				// 96px x 96px
+	alpha: ( size: 4rem, height: 1.25 ),			// 64px x 80px
 	// beta: ( size: 3.25rem, height: 1.25 ),
-	gamma: ( size: 2rem, height: 1.25 ),			// 32px
-	delta: ( size: 1.625rem, height: 1.5 ),			// 26px
-	epsilon: ( size: 1.25rem, height: 1.5 ),		// 20px
-	zeta: ( size: 0.875rem, height: 1.75 ),			// 14px
-	eta: ( size: 0.75rem, height: 1.75 ),			// 12px
+	gamma: ( size: 2rem, height: 1.25 ),			// 32px x 40px
+	delta: ( size: 1.625rem, height: 1.5 ),			// 26px x 39px
+	epsilon: ( size: 1.25rem, height: 1.5 ),		// 20px x 30px
+	zeta: ( size: 0.875rem, height: 1.5 ),			// 14px x 21px
+	eta: ( size: 0.75rem, height: 1.75 ),			// 12px x 21px
 	// micro: ( size: 0.5rem, height: 1.75 ),
 );
 

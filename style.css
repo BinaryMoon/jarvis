@@ -517,7 +517,7 @@ h5,
 h6 {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 }
 
@@ -816,7 +816,7 @@ button {
 	text-align: center;
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 }
 
 .device-click input[type=submit], .device-click
@@ -920,7 +920,7 @@ blockquote small,
 blockquote cite {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: normal;
 	letter-spacing: 0.05em;
 	font-style: normal;
@@ -956,7 +956,7 @@ table th,
 table caption {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1273,7 +1273,7 @@ p.wp-block-subhead {
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: normal;
 	letter-spacing: 0.05em;
 	font-style: normal;
@@ -1619,7 +1619,7 @@ p.wp-block-subhead {
 .widget.widget_rss li .rss-date {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1844,7 +1844,7 @@ p.wp-block-subhead {
 .content-comments ol.comment-list li.comment #respond #cancel-comment-reply-link {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1872,7 +1872,7 @@ p.wp-block-subhead {
 .content-comments ol.comment-list li.comment footer .comment-metadata {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1964,7 +1964,7 @@ p.wp-block-subhead {
 .content-comments ol.comment-list .edit-link {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2024,7 +2024,7 @@ p.wp-block-subhead {
 #respond p.logged-in-as {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2157,7 +2157,7 @@ p > object:only-child {
 .akismet_comment_form_privacy_notice {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2202,7 +2202,7 @@ main div#jp-relatedposts h3.sd-title, main div.sharedaddy h3.jp-relatedposts-hea
 main div.sharedaddy h3.sd-title {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2247,7 +2247,7 @@ main div#jp-relatedposts {
 #jp-relatedposts .jp-relatedposts-post-title {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	margin: 0;
 }
 
@@ -2259,7 +2259,7 @@ main div#jp-relatedposts {
 #jp-relatedposts .jp-relatedposts-post-date {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2425,7 +2425,7 @@ body .jetpack-social-navigation ul {
 .woocommerce h2 {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2448,7 +2448,7 @@ body .jetpack-social-navigation ul {
 .woocommerce .product_meta {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2477,7 +2477,7 @@ body .jetpack-social-navigation ul {
 	text-align: center;
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 }
 
 .device-click .woocommerce #respond input#submit, .device-click
@@ -2778,7 +2778,7 @@ p.demo_store {
 .content-posts article.entry .read-more {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2904,7 +2904,7 @@ p.demo_store {
 .content-comments ol.comment-list li.comment .reply a {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2936,7 +2936,7 @@ p.demo_store {
 .taxonomies .taxonomy {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2960,7 +2960,7 @@ p.demo_store {
 .contributor h2 small {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2983,7 +2983,7 @@ a.thumbnail img {
 .entry-breadcrumbs {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3026,7 +3026,7 @@ a.thumbnail img {
 	margin-bottom: 3rem;
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3043,7 +3043,7 @@ a.thumbnail img {
 .post-meta-data {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3185,7 +3185,7 @@ blockquote p:last-child {
 .site-header .branding .site-description {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3412,7 +3412,7 @@ a.header-image img {
 .post-navigation .meta-nav {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3637,7 +3637,7 @@ a.header-image img {
 .content-testimonials .testimonial .entry-meta h3 {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
