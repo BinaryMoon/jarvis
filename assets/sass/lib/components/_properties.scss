@@ -9,6 +9,9 @@ body {
 	--foreground-contrast-color: #fff;
 	--background-color: #ff9;
 
+	--font-body: Cambria, Georgia, serif;
+	--font-header: Cambria, Georgia, serif;
+
 	&.dark-mode {
 		--foreground-color: #fff;
 		--foreground-contrast-color: #000;

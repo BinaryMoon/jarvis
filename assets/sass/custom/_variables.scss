@@ -1,11 +1,9 @@
 // @package Jarvis
 
 // font overrides
-$font-family-sans: Cambria, Georgia, serif;
-$font-family-serif: Cambria, Georgia, serif;
 $font-base: 16;
-$font-family-body: $font-family-serif;
-$font-family-header: $font-family-sans;
+$font-family-body: var(--font-body);
+$font-family-header: var(--font-header);
 $font-uppercase-spacing: 0.1em;
 
 // colours

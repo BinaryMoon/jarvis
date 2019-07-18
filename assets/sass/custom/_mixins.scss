@@ -24,7 +24,7 @@
 @mixin jetpack-heading {
 
 	@include post-meta-data();
-	font-family: $font-family-sans;
+	font-family: $font-family-header;
 	margin: 0 0 ( $grid-line-height / 2 ) 0;
 	display: block;
 	font-weight: bold;
@@ -135,7 +135,7 @@
 	.drop-cap {
 
 		float: left;
-		font-family: $font-family-serif;
+		font-family: $font-family-body;
 		font-weight: bold;
 		margin: 0 0.05em 0 -0.2em;
 		@include modular-scale( giga, 0.8 );

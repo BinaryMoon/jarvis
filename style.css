@@ -275,10 +275,6 @@ img {
 	max-width: 100%;
 	height: auto;
 	border: 0;
-	font-family: Cambria, Georgia, serif;
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1.75;
 }
 
 fieldset {
@@ -417,6 +413,8 @@ body {
 	--foreground-color: #000;
 	--foreground-contrast-color: #fff;
 	--background-color: #ff9;
+	--font-body: Cambria, Georgia, serif;
+	--font-header: Cambria, Georgia, serif;
 }
 
 body.dark-mode {
@@ -432,7 +430,7 @@ html {
 	font-size: 1rem;
 	line-height: 1.75;
 	font-weight: normal;
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-body);
 	direction: ltr;
 	-webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
 	font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
@@ -454,7 +452,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-header);
 	font-weight: normal;
 }
 
@@ -910,7 +908,7 @@ blockquote {
 	padding: 0 1.5rem;
 	margin: 3rem 0;
 	overflow: hidden;
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-body);
 	font-style: italic;
 }
 
@@ -2208,7 +2206,7 @@ main div.sharedaddy h3.sd-title {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-header);
 	margin: 0 0 0.75rem 0;
 	display: block;
 	font-weight: bold;
@@ -3167,7 +3165,7 @@ blockquote p:last-child {
 
 .site-header .branding .site-title a,
 .site-header .branding .site-title {
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-header);
 	font-size: 26px;
 	font-size: 1.625rem;
 	line-height: 1.2;
