@@ -9,7 +9,7 @@
 	padding: 2px;
 	border-radius: 4px;
 	margin: 1px;
-	max-height: 180px;
+	max-height: 16rem;
 	overflow: auto;
 	list-style-type: none;
 }
@@ -29,9 +29,4 @@
 
 .jarvis-font-picker ul li:hover {
 	background: #f7f7f7;
-}
-
-.jarvis-font-picker .customize-control-title {
-	height: 0;
-	text-indent: -999em;
 }
