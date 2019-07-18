@@ -4,7 +4,8 @@
 	"description": "Jarvis WordPress Theme",
 	"main": "index.php",
 	"scripts": {
-		"dev": "gulp"
+		"dev": "gulp",
+		"build": "gulp build"
 	},
 	"repository": {
 		"type": "git",
@@ -23,11 +24,17 @@
 	},
 	"homepage": "https://github.com/BinaryMoon/jarvis#readme",
 	"devDependencies": {
-		"@babel/core": "^7.4.5",
-		"@babel/register": "^7.4.4",
+		"@babel/core": "^7.4.3",
+		"@babel/preset-env": "^7.4.3",
+		"@babel/register": "^7.4.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^6.1.0",
-		"gulp-sass": "^4.0.2"
+		"gulp-babel": "^8.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-uglify": "^3.0.2",
+		"gulp-zip": "^5.0.0"
 	},
 	"dependencies": {}
 }

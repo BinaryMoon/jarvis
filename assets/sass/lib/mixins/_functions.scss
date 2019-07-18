@@ -5,11 +5,11 @@
 
 	@if ( brightness( $color ) < 65 ) {
 
-		@return $canvas-white;
+		@return $white;
 
 	} @else {
 
-		@return $canvas-grey-100;
+		@return $black;
 
 	}
 

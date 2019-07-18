@@ -152,15 +152,26 @@ function jarvis_breadcrumbs() {
  */
 function jarvis_remove_jetpack_stylesheets() {
 
-	// Remove contact form styles.
-	wp_dequeue_style( 'grunion.css' );
-
 	// Remove related posts styles.
 	wp_dequeue_style( 'jetpack_related-posts' );
 
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_remove_jetpack_stylesheets', 100 );
+
+
+/**
+ * Remove Grunion styles.
+ *
+ * @link https://github.com/Automattic/jetpack/blob/89a9af96b669e2e5a2ed47d3f3e07c804d6e0dd0/modules/contact-form/grunion-contact-form.php#L235-L244
+ */
+function jarvis_remove_grunion_style() {
+
+	wp_deregister_style( 'grunion.css' );
+
+}
+
+add_action( 'wp_print_styles', 'jarvis_remove_grunion_style' );
 
 
 /**
@@ -219,44 +230,19 @@ add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jarvis_related_posts_
 
 
 /**
- * Custom function to check for a post thumbnail;
- * If Jetpack is not available, fall back to has_post_thumbnail()
+ * Display social links using a custom menu.
  *
- * @param object|int $post Post object or Post id for post you want to check.
+ * This is a wrapper for 'jetpack_social_menu' and stops PHP errors if Jetpack
+ * is not enabled.
  */
-function jarvis_has_post_thumbnail( $post = null ) {
+function jarvis_social_links() {
 
-	if ( function_exists( 'jetpack_has_featured_image' ) ) {
+	// Check Jetpack Social Menu is available before trying to display it.
+	if ( function_exists( 'jetpack_social_menu' ) ) {
 
-		return jetpack_has_featured_image( $post );
-
-	} else {
-
-		return has_post_thumbnail( $post );
+		jetpack_social_menu();
 
 	}
 
 }
 
-
-/**
- * Custom function to get the URL of a post thumbnail;
- * If Jetpack is not available, fall back to wp_get_attachment_image_src()
- *
- * @param  int    $post_id           Post ID.
- * @param  string $size              Post Thumbnail image size.
- * @return string
- */
-function jarvis_get_attachment_image_src( $post_id, $size ) {
-
-	if ( function_exists( 'jetpack_featured_images_fallback_get_image_src' ) ) {
-
-		return jetpack_featured_images_fallback_get_image_src( $post_id, get_post_thumbnail_id( $post_id ), $size );
-
-	} else {
-
-		return jarvis_featured_image_src( $post_id, $size )[0];
-
-	}
-
-}

@@ -6,7 +6,7 @@
 
 .content-posts {
 
-	article {
+	article.entry {
 
 		width: 100%;
 		margin-bottom: $grid-line-height * 3;
@@ -15,7 +15,6 @@
 
 			display: grid;
 			grid-template-columns: 15% calc( 35% - #{$grid-gutter * 2} ) 50%;
-			// grid-template-columns: 1.5fr 3.5fr 5fr;
 			grid-column-gap: $grid-gutter;
 
 			.post-meta-data {
@@ -40,6 +39,7 @@
 
 				text-decoration: none;
 
+				&:focus,
 				&:hover {
 
 					text-decoration: underline;
@@ -54,6 +54,12 @@
 
 			@include modular-scale( gamma );
 			font-weight: bold;
+
+			@include for-tablet {
+
+				margin-bottom: 0;
+
+			}
 
 		}
 
@@ -136,6 +142,16 @@
 
 	}
 
+	.entry-archive {
+
+		p:last-of-type {
+
+			margin-bottom: 0;
+
+		}
+
+	}
+
 	.entry-archive-header {
 
 		margin-bottom: $grid-line-height * 5;
@@ -155,7 +171,7 @@
 		letter-spacing: -0.025em;
 		font-weight: bold;
 
-		span {
+		small {
 
 			display: block;
 			@include modular-scale( epsilon );

@@ -1,4 +1,57 @@
 /**
+ * Live updates for the background colour.
+ *
+ * Technically background colour is already updated in real time. This adds a
+ * corresponding class to the html element so that we can have readable text.
+ */
+; ( function( $ ) {
+
+	wp.customize.bind(
+		'preview-ready',
+		function() {
+
+			wp.customize(
+				'background_color',
+				function( value ) {
+					value.bind(
+						function( to ) {
+
+							var newClass = brightness( to ) ? 'light-mode' : 'dark-mode';
+							$( 'body' ).removeClass( 'dark-mode light-mode' ).addClass( newClass );
+
+						}
+					);
+				}
+			);
+
+		}
+	);
+
+	/**
+	 * Calculate the brightness of the colour, and then decide if the
+	 * contrasting colour should be light or dark.
+	 */
+	function brightness( color ) {
+
+		if ( !color ) {
+			return 0;
+		}
+
+		var lighter_than = 130;
+
+		color = color.replace( '#', '' );
+
+		// Calculate straight from RGB.
+		var r = parseInt( '' + color[ 0 ] + color[ 1 ], 16 );
+		var g = parseInt( '' + color[ 2 ] + color[ 3 ], 16 );
+		var b = parseInt( '' + color[ 4 ] + color[ 5 ], 16 );
+
+		return ( ( r * 299 + g * 587 + b * 114 ) / 1000 > lighter_than );
+
+	}
+
+} )( jQuery );
+/**
  * Live-update changed settings in real time in the Customizer preview.
  *
  * Filename: customizer-preview.js v1
@@ -8,10 +61,8 @@
  *
  * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#javascript-driven-widget-support
  *
- * @package Jarvis
+ * @package jarvis
  */
-
-/* global jQuery, wp */
 
 ; ( function( $ ) {
 
@@ -21,23 +72,11 @@
 
 			// Site title.
 			wp.customize(
-				'blogname',
+				'jarvis_credits_content',
 				function( value ) {
 					value.bind(
 						function( to ) {
-							$( '.site-title' ).text( to );
-						}
-					);
-				}
-			);
-
-			// Site description.
-			wp.customize(
-				'blogdescription',
-				function( value ) {
-					value.bind(
-						function( to ) {
-							$( '.site-description' ).text( to );
+							$( '.site-info' ).html( to );
 						}
 					);
 				}
@@ -45,12 +84,91 @@
 
 			// Header text color.
 			wp.customize(
+				'jarvis_display_credits',
+				function( value ) {
+
+					value.bind(
+						function( to ) {
+
+							if ( to ) {
+								$( '.site-info' ).show();
+							} else {
+								$( '.site-info' ).hide();
+							}
+
+						}
+					);
+
+				}
+			);
+
+			// Fired by jarvis_credits expansion.
+			wp.customize.preview.bind(
+				'jarvis_credits_expand',
+				function( data ) {
+
+					// When the section is expanded, show and scroll to the content placeholders, exposing the edit links.
+					if ( true === data.expanded ) {
+						scroll_to( '.site-info' );
+					}
+
+				}
+			);
+
+		}
+	);
+
+
+	/**
+	 * Scroll the page to the specified element.
+	 *
+	 * @param  {string} e CSS element identifier.
+	 * @return {boolean}
+	 */
+	var scroll_to = function( e ) {
+
+		var $target = $( e );
+
+		if ( $target.length ) {
+			var targetOffset = $target.offset().top - parseInt( $( 'html' ).css( 'margin-top' ) );
+			$( 'html,body' ).animate( { scrollTop: targetOffset }, 750 );
+		}
+
+		return false;
+
+	};
+
+} )( jQuery );
+
+/**
+ * Add a customizer-preview class to the html element.
+ *
+ * This is used to prevent the smooth scrolling from working so that we don't
+ * get lots of jumping around when elements are updated.
+ */
+; ( function( $ ) {
+
+	$( 'html' ).addClass( 'customizer-preview' );
+
+} )( jQuery );
+/**
+ * Live updates for the header text colour.
+ */
+; ( function( $ ) {
+
+	wp.customize.bind(
+		'preview-ready',
+		function() {
+
+			// Change header text color.
+			wp.customize(
 				'header_textcolor',
 				function( value ) {
 
 					value.bind(
 						function( to ) {
 
+							// Hide title and description.
 							if ( 'blank' === to ) {
 
 								$( '.masthead .site-title, .masthead .site-description' ).css(
@@ -85,3 +203,54 @@
 	);
 
 } )( jQuery );
+/**
+ * Live updates for the site description.
+ */
+; ( function( $ ) {
+
+	wp.customize.bind(
+		'preview-ready',
+		function() {
+
+			// Edit site description.
+			wp.customize(
+				'blogdescription',
+				function( value ) {
+					value.bind(
+						function( to ) {
+							$( '.site-description' ).text( to );
+						}
+					);
+				}
+			);
+
+		}
+	);
+
+} )( jQuery );
+/**
+ * Live updates for the site name.
+ */
+; ( function( $ ) {
+
+	wp.customize.bind(
+		'preview-ready',
+		function() {
+
+			// Edit site title.
+			wp.customize(
+				'blogname',
+				function( value ) {
+					value.bind(
+						function( to ) {
+							$( '.site-title' ).text( to );
+						}
+					);
+				}
+			);
+
+		}
+	);
+
+} )( jQuery );
+// Keep this for the gulp task!

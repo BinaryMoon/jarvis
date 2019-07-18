@@ -11,6 +11,12 @@
 	clear: both;
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
+	@include for-tablet {
+
+		@include modular-scale(delta);
+
+	}
+
 	a {
 
 		text-decoration: none;
@@ -29,27 +35,30 @@
 		text-decoration: underline;
 		display: block;
 
+		&:hover {
+
+			text-decoration: none;
+
+		}
+
 	}
 
 	.nav-links {
 
-		div:first-child {
+		display: grid;
+		grid-gap: $grid-gutter;
+		grid-row-gap: $grid-line-height;
 
-			margin-bottom: $grid-line-height;
+		.nav-parent {
+
+			grid-column: 1/-1;
+			font-weight: bold;
 
 		}
 
 		@include for-tablet {
 
-			display: flex;
-
-			div {
-
-				margin: 0;
-				width: 50%;
-				flex-grow: 1;
-
-			}
+			grid-template-columns: 1fr 1fr;
 
 			.nav-next {
 
@@ -63,45 +72,3 @@
 
 }
 
-/* pagination */
-// used on archives/ homepage/ blog post with pages
-.pagination {
-
-	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
-	clear: both;
-
-	@include for-tablet {
-		margin: ( $grid-line-height * 4 ) 0;
-	}
-
-	@include for-desktop {
-
-		margin: ( $grid-line-height * 5 ) 0;
-		@include modular-scale( delta );
-
-	}
-
-	.nav-links {
-
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-
-	}
-
-	span, a {
-
-		color: $white;
-		background: $black;
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
-		display: inline-block;
-
-	}
-
-	.current {
-
-		font-weight: bold;
-
-	}
-
-}

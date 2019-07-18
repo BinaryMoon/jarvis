@@ -8,7 +8,12 @@
 .content-comments {
 
 	padding: ( $grid-line-height * $grid-line-height-multiplier ) 0;
-	clear: both;
+
+	@include for-desktop {
+
+		padding: ( $grid-line-height * 5 ) 0;
+
+	}
 
 	.comment-reply-title {
 
@@ -51,11 +56,9 @@
 
 			.reply {
 
-				display: inline;
-
 				a {
 
-					color: $canvas-grey-90;
+					@include post-meta-data;
 
 					.icon {
 
@@ -74,7 +77,7 @@
 
 				> article {
 
-					// background: $canvas-white;
+					// background: $white;
 
 					.fn {
 
@@ -96,9 +99,9 @@
 
 	.no-comments {
 
-		background: $canvas-color;
-		color: contrast( $canvas-color );
-		padding: $grid-line-height ( $grid-gutter / 2 );
+		background: $black;
+		color: $white;
+		padding: $grid-line-height ( $grid-gutter );
 
 	}
 

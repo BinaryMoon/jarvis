@@ -36,9 +36,9 @@ input.settings-input {
 	line-height: $grid-line-height;
 	min-height: $grid-line-height;
 	width: 100%;
-	border-radius: $border-radius;
-	background: $form-input-background;
-	border: $border-width solid $form-input-border-color;
+	background: transparent;
+	border: $border-width solid currentColor;
+	color: inherit;
 
 	@if ( $form-input-border-width != null ) {
 		border-width: $form-input-border-width;
@@ -48,16 +48,16 @@ input.settings-input {
 
 	&:hover {
 
-		border-color: $form-input-border-focus;
+		border-color: $black;
 
 	}
 
 	&:focus {
 
 		outline: none;
-		border-color: $form-input-border-focus;
-		background: $canvas-white;
-		color: $canvas-grey-90;
+		border-color: $black;
+		background: $white;
+		color: $black;
 
 	}
 
@@ -142,7 +142,6 @@ label {
 
 	}
 
-	&:focus,
 	&:hover {
 
 		cursor:pointer;
@@ -163,7 +162,9 @@ legend {
 
 fieldset {
 
-	border: 1px solid $form-input-border-color;
+	border: 1px solid $black;
+	padding: $grid-line-height ( $grid-gutter );
+	margin: ( $grid-line-height * 2 ) 0;
 
 	ul.radio {
 

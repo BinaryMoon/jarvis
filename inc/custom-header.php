@@ -11,35 +11,6 @@
  */
 
 /**
- * Add theme support for Custom Header image.
- *
- * Sets the default properties and the custom header callback {@see jarvis_colour_styles}.
- */
-function jarvis_custom_header_support() {
-
-	add_theme_support(
-		'custom-header',
-		apply_filters(
-			'jarvis_custom_header',
-			array(
-				'default-text-color' => '000000',
-				'random-default' => false,
-				'width' => 1500,
-				'height' => 500,
-				'flex-height' => true,
-				'header-text' => true,
-				'uploads' => true,
-				'wp-head-callback' => 'jarvis_colour_styles',
-			)
-		)
-	);
-
-}
-
-add_action( 'after_setup_theme', 'jarvis_custom_header_support' );
-
-
-/**
  * Print custom header styles.
  *
  * May also change other CSS properties related to the header colours.
@@ -82,5 +53,32 @@ function jarvis_colour_styles() {
 </style>
 <?php
 	}
+
+}
+
+add_action( 'wp_head', 'jarvis_colour_styles' );
+
+
+/**
+ * Calculate the colour brightness.
+ *
+ * @param string $color string The colour to calculate.
+ * @param int    $lighter_than The brightness to check against.
+ * @return boolean true if lighter than, false otherwise.
+ */
+function jarvis_colour_brightness( $color = false, $lighter_than = 130 ) {
+
+	if ( ! $color ) {
+		return 0;
+	}
+
+	$color = str_replace( '#', '', $color );
+
+	// Calculate straight from RGB.
+	$r = hexdec( $color[0] . $color[1] );
+	$g = hexdec( $color[2] . $color[3] );
+	$b = hexdec( $color[4] . $color[5] );
+
+	return ( ( $r * 299 + $g * 587 + $b * 114 ) / 1000 > $lighter_than );
 
 }

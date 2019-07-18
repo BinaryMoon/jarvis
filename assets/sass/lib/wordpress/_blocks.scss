@@ -10,13 +10,6 @@ p.wp-block-subhead {
 
 }
 
-// Remove auto margin from browser figures.
-.wp-block-image {
-
-	margin: 0;
-
-}
-
 .wp-block-pullquote blockquote,
 .wp-block-quote,
 .wp-block-quote.is-large {
@@ -61,7 +54,7 @@ p.wp-block-subhead {
 	margin-right: auto;
 	max-width: 100%;
 	border-bottom-width: $border-width;
-	border-color: $border-color;
+	border-color: $black;
 
 	&.is-style-wide {
 
@@ -79,7 +72,7 @@ p.wp-block-subhead {
 			padding-left: 1em;
 			padding-right: 0;
 			line-height: 0;
-			color: $border-color;
+			color: $black;
 
 		}
 
@@ -100,6 +93,7 @@ p.wp-block-subhead {
 .wp-block-image {
 
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	max-width: 100vw;
 
 	img {
 
@@ -118,8 +112,6 @@ p.wp-block-subhead {
 	}
 
 	&.alignfull {
-
-		width: 100%;
 
 		img {
 

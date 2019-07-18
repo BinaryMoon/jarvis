@@ -6,7 +6,7 @@
  *
  * Template Name: Child Page Grid
  *
- * @package Granule
+ * @package Jarvis
  * @subpackage PageTemplate
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
@@ -17,7 +17,7 @@
 	get_template_part( 'parts/featured-content' );
 ?>
 
-	<main id="main">
+	<main id="main" class="content-single">
 
 <?php
 	if ( have_posts() ) {

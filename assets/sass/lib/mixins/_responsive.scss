@@ -44,3 +44,11 @@
 	}
 
 }
+
+@mixin for-reduced-motion {
+
+	@media (prefers-reduced-motion: reduce) {
+		@content;
+	}
+
+}

@@ -67,11 +67,11 @@
 
 		width: auto;
 
-		@include button( $canvas-grey-10 );
+		@include button();
 
 		&.alt {
 
-			@include button( $canvas-color, epsilon );
+			@include button( epsilon );
 			width: 100%;
 
 		}
@@ -259,6 +259,7 @@ li.woocommerce-cart-button {
 
 		}
 
+		&:focus,
 		&:hover {
 
 			text-decoration: none;
@@ -320,7 +321,7 @@ li.woocommerce-cart-button {
 
 		.total {
 
-			border-top: $border-width solid rgba( $canvas-white, 0.5 );
+			border-top: $border-width solid $white;
 			padding: ( $grid-line-height / 2 ) 0 0 0;
 			text-align: center;
 
@@ -330,6 +331,7 @@ li.woocommerce-cart-button {
 
 			line-height: 1em;
 
+			&:focus,
 			&:hover {
 
 				text-decoration: none !important;
@@ -345,13 +347,7 @@ li.woocommerce-cart-button {
 .woocommerce-store-notice,
 p.demo_store {
 
-	background: $canvas-color;
-	color: contrast( $canvas-color );
-
-	a {
-
-		color: contrast( $canvas-color );
-
-	}
+	background: $black;
+	color: $white;
 
 }

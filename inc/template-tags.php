@@ -12,47 +12,6 @@
  */
 
 /**
- * Display header image and link to homepage.
- *
- * On singular pages display featured image if it is large enough to fill the
- * space. Uses get_queried_object_id in case the header image is called outside
- * the_loop (before the_post has been called) so that we can be sure featured
- * images are found.
- */
-function jarvis_header() {
-
-	$header_image = get_header_image();
-	$header_image_width = get_theme_support( 'custom-header', 'width' );
-	$header_image_actual_width = get_custom_header()->width;
-	$header_image_actual_height = get_custom_header()->height;
-
-	// Use custom headers on singular pages, but only if the image is large
-	// enough.
-	if ( apply_filters( 'jarvis_featured_image_header', is_singular() ) ) {
-
-		// Use get_queried_object_id so that the content id will always be found
-		// in cases where $post has not been set.
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_queried_object_id() ), 'jarvis-header' );
-
-		if ( ! empty( $image ) && $image[1] >= $header_image_width ) {
-			$header_image = $image[0];
-			$header_image_actual_width = $image[1];
-			$header_image_actual_height = $image[2];
-		}
-	}
-
-	if ( ! empty( $header_image ) ) {
-?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="header-image">
-			<img src="<?php echo esc_url( $header_image ); ?>" width="<?php echo (int) $header_image_actual_width; ?>" height="<?php echo (int) $header_image_actual_height; ?>" alt="" />
-		</a>
-<?php
-	}
-
-}
-
-
-/**
  * Display the post time in a human readable format.
  *
  * The time will display in the format '5 minutes ago' with the duration and
@@ -89,107 +48,6 @@ function jarvis_human_time_diff() {
 	return sprintf( '<span class="post-human-time updated date published">%s</span>', $human_time );
 
 }
-
-
-/**
- * Get post thumbnail source url.
- *
- * If a thumbnail doesn't exist then use the first attachment. This reduces user
- * confusion since they don't always understand or set a featured image.
- *
- * @param integer $post_id ID for the post that you want to get the thumbnail
- *                         url for.
- * @param string  $thumbnail_size Size of the thumbnail image. Defaults to
- *                                'jarvis-archive'.
- * @param array   $attr Attributes to pass to `wp_get_attachment_image_src` -
- *                      this will probably be css classes.
- * @return boolean
- */
-function jarvis_featured_image_src( $post_id = null, $thumbnail_size = 'jarvis-archive', $attr = array() ) {
-
-	// Ensure the post id is set.
-	if ( ! $post_id ) {
-
-		$post_id = get_the_ID();
-
-	}
-
-	// Grab the featured image for the specified post.
-	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $thumbnail_size, false, $attr );
-
-	// If there's no featured image then grab an attachment image and use that instead.
-	if ( ! $image[0] ) {
-
-		$images = get_attached_media( 'image', $post_id );
-
-		if ( $images ) {
-			foreach ( $images as $child_id => $attachment ) {
-
-				$image = wp_get_attachment_image_src( $child_id, $thumbnail_size, false, $attr );
-				break;
-
-			}
-		}
-	}
-
-	if ( is_array( $image ) ) {
-
-		$image = $image[0];
-
-	}
-
-	if ( $image ) {
-
-		return $image;
-
-	} else {
-
-		return false;
-
-	}
-
-}
-
-
-/**
- * Fill empty post thumbnails with images from the first attachment added to a
- * post.
- *
- * @param string  $html Current html for thumbnail image.
- * @param integer $post_id ID for specified post.
- * @param integer $thumbnail_id ID for thumbnail image.
- * @param string  $size expected Thumbnail size.
- * @param array   $attr Image attributes.
- * @return string
- */
-function jarvis_post_thumbnail_html( $html, $post_id, $thumbnail_id, $size = '', $attr = array() ) {
-
-	if ( function_exists( 'jetpack_featured_images_fallback_get_image' ) ) {
-
-		return $html;
-
-	}
-
-	// If there's no html for the thumbnail then let's check for post attachments.
-	if ( empty( $html ) ) {
-
-		$images = get_attached_media( 'image', $post_id );
-
-		if ( $images ) {
-			foreach ( $images as $child_id => $attachment ) {
-
-				$html = wp_get_attachment_image( $child_id, $size, false, $attr );
-				break;
-
-			}
-		}
-	}
-
-	return $html;
-
-}
-
-add_filter( 'post_thumbnail_html', 'jarvis_post_thumbnail_html', 10, 5 );
 
 
 /**
@@ -243,10 +101,6 @@ function jarvis_comments_link() {
 	if ( ! post_password_required() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) {
 
 		$class = '';
-
-		if ( is_singular() ) {
-			$class = 'scroll-to';
-		}
 
 		echo '<span class="comment-count meta">';
 
@@ -434,23 +288,5 @@ function jarvis_project_terms() {
 ?>
 	</p>
 <?php
-
-}
-
-
-/**
- * Display social links using a custom menu.
- *
- * This is a wrapper for 'jetpack_social_menu' and stops PHP errors if Jetpack
- * is not enabled.
- */
-function jarvis_social_links() {
-
-	// Check Jetpack Social Menu is available before trying to display it.
-	if ( function_exists( 'jetpack_social_menu' ) ) {
-
-		jetpack_social_menu();
-
-	}
 
 }

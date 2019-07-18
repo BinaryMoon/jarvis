@@ -13,9 +13,26 @@ Tags: Black, Blue, Brown, Gray, Green, Orange, Pink, Purple, Red, Silver, Tan, W
 
 == Installation ==
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+1. Upload the theme
+2. Activate the theme
+
+== Page Templates ==
+
+Jarvis comes bundled with a number of page templates. These can be used as follows:
+
+* __Content Only__ - A template that removes the site header and footer and displays just the page content. This is a nice way to create totally custom layouts using the new editor. Ideal for landing pages, or store pages where the focus should be the page content.
+* __Contributors__ - A list of all the people (users) who have contributed content (published at least one post) to your website, their most recent posts, and a link to their user archive.
+* __Child Page Grid__ - Lists all of the pages that are children of the current page. Handy if you have a complex site hierachy.
+* __Portfolio__ - Displays your most recent portfolio posts. Requires the Jetpack plugin. Allows you to add portfolio posts to your website homepage.
+
+== Footer Credits ==
+
+Jarvis allows you to edit or hide the footer credits. If you want to add your own then Jarvis includes some handy shortcuts to make it easier to manage.
+
+* *(c)* - add a copyright symbol __@copy;__
+* *(year)* - add the current year. This will update when the year changes, so no more forgetting to change things in the new year!
+* *(|)* - add a gap between bits of footer content.
+* *(privacy)* - add a link to your privacy policy as setup in the privacy section of your WordPress admin.
 
 == Frequently Asked Questions ==
 

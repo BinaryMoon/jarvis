@@ -41,8 +41,8 @@
 
 	wp_link_pages(
 		array(
-			'before' => '<div class="pagination">',
-			'after' => '</div>',
+			'before' => '<div class="pagination"><div class="nav-links">',
+			'after' => '</div></div>',
 			'pagelink' => '<span class="screen-reader-text">' . esc_html__( 'Page', 'jarvis' ) . ' </span>%',
 		)
 	);

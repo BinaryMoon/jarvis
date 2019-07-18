@@ -37,14 +37,8 @@
 
 			#cancel-comment-reply-link {
 
+				@include post-meta-data;
 				float: right;
-
-				.icon {
-
-					height: $grid-line-height;
-					width: $grid-line-height;
-
-				}
 
 			}
 

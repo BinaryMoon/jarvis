@@ -9,21 +9,20 @@ $font-family-header: $font-family-sans;
 $font-uppercase-spacing: 0.1em;
 
 // colours
-$black: #000;
-$white: #fff;
+$black: var(--foreground-color);
+$white: var(--foreground-contrast-color);
 
 // main colour, used through the theme
-$canvas-background: #ff9;
+$canvas-background: var(--background-color);
 
 $comments-margin: 4%;
 
 // grid sizes
-//$grid-line-height: $line-height * 1rem;
 $grid-total-width: 69rem;
 $grid-small-width: 44rem;
+$grid-line-height: 1.5rem;
 //$grid-line-height-multiplier: 1.5;
-$grid-gutter: 1rem;
-//$grid-column-gutter: 1 / 2;
+$grid-gutter: 1.5rem;
 
 $support-accessible-tagcloud: true;
 

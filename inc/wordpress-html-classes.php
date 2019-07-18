@@ -29,21 +29,15 @@ function jarvis_body_class( $classes ) {
 		$classes[] = 'themes-sidebar1-active';
 	}
 
-	if ( is_active_sidebar( 'sidebar-2' ) ) {
-		$classes[] = 'themes-sidebar2-active';
-	}
-
 	if ( display_header_text() ) {
 		$classes[] = 'has-site-title';
-	}
-
-	if ( get_header_image() ) {
-		$classes[] = 'has-custom-header';
 	}
 
 	if ( ! is_singular() && ! is_404() ) {
 		$classes[] = 'hfeed';
 	}
+
+	$classes[] = jarvis_colour_brightness( get_background_color() ) ? 'light-mode' : 'dark-mode';
 
 	return $classes;
 
@@ -68,7 +62,6 @@ function jarvis_post_class( $classes, $class, $post_id ) {
 	}
 
 	$post = get_post( $post_id );
-	$image = get_the_post_thumbnail( $post_id );
 
 	// Entry class.
 	$classes[] = 'entry';
@@ -82,25 +75,6 @@ function jarvis_post_class( $classes, $class, $post_id ) {
 		'entry--author-%s',
 		sanitize_html_class( get_the_author_meta( 'user_nicename' ), get_the_author_meta( 'ID' ) )
 	);
-
-	// Image thumbnail classes.
-	if ( $image ) {
-		$classes[] = 'entry--thumbnail-true';
-	} else {
-		$classes[] = 'entry--thumbnail-false';
-	}
-
-	/**
-	 * Remove this if you need to add text contrast based upon featured images.
-	if ( isset( $image[0] ) ) {
-
-		$tone = jarvis_image_tone( $image[0] );
-
-		if ( $tone ) {
-			$classes[] = 'entry--tone-' . $tone;
-		}
-	}
-	 */
 
 	return $classes;
 

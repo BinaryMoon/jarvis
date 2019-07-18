@@ -24,26 +24,24 @@
 function jarvis_enqueue() {
 
 	// Styles.
-	wp_enqueue_style( 'jarvis-style', get_stylesheet_uri(), null, '1.0' );
+	wp_enqueue_style(
+		'jarvis-style',
+		get_stylesheet_uri(),
+		null,
+		jarvis_get_theme_version( '/style.css' )
+	);
 
-	wp_enqueue_script( 'jarvis-script-global', get_theme_file_uri( '/assets/scripts/global.js' ), array( 'jquery' ), '1.0', false );
+	// Uutput of custom settings as inline styles.
+	wp_add_inline_style( 'jarvis-style', jarvis_get_site_styles() );
 
-	// Localized Javascript strings and provide access to common properties.
-	wp_localize_script(
+
+	// Scripts.
+	wp_enqueue_script(
 		'jarvis-script-global',
-		'jarvis_site_settings',
-		array(
-			// Translation strings.
-			'i18n' => array(
-				'menu' => esc_html__( 'Menu', 'jarvis' ),
-			),
-			// Properties that are usable through javascript.
-			'is' => array(
-				'home' => is_front_page(),
-				'single' => is_single(),
-				'archive' => is_archive(),
-			),
-		)
+		jarvis_get_script_file(),
+		null,
+		jarvis_get_theme_version( '/assets/scripts/global.js' ),
+		true
 	);
 
 	// Comments Javascript.
@@ -64,6 +62,9 @@ function jarvis_editor_blocks_styles() {
 	// Load the theme styles within Gutenberg.
 	wp_enqueue_style( 'jarvis-editor-blocks', get_theme_file_uri( '/assets/css/editor-blocks.css' ), null, '1.2' );
 
+	// Add custom properties for the block editor.
+	wp_add_inline_style( 'jarvis-editor-blocks', jarvis_get_block_styles() );
+
 	/**
 	 * Overwrite Core theme styles with empty styles.
 	 *
@@ -75,50 +76,50 @@ function jarvis_editor_blocks_styles() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'jarvis_editor_blocks_styles' );
-add_action( 'enqueue_block_assets', 'jarvis_editor_blocks_styles' );
 
 
 /**
- * Modify post type arguments to add default post type templates.
- *
- * @param  array  $args      The default post type arguments.
- * @param  string $post_type The post type for the current request.
- * @return array             Modified arguments including the new template properties.
+ * Get the custom properties for the site so that we can override them.
  */
-function jarvis_post_type_arguments( $args, $post_type ) {
+function jarvis_get_custom_properties() {
 
-	// Only apply changes to the specified post type.
-	if ( 'post' === $post_type ) {
+	$properties = array(
+		'background-color' => get_background_color()
+	);
 
-		/**
-		 * Adds a template property to the specified post type arguments.
-		 *
-		 * You can get a list of available blocks by entering the following js
-		 * command in the console window in your brownser.
-		 * wp.blocks.getBlockTypes()
-		 *
-		 * The output of this command also shows the available attributes for setting defaults.
-		 *
-		 * @var array
-		 */
-		$args['template'] = array(
-			array( 'core/image' ),
-			array(
-				'core/paragraph',
-				array(
-					'placeholder' => esc_attr__( 'Start writing', 'jarvis' ),
-				),
-			),
-			array( 'core/quote' ),
-		);
-
-	}
-
-	return $args;
+	return $properties;
 
 }
 
-add_filter( 'register_post_type_args', 'jarvis_post_type_arguments', 20, 2 );
+
+/**
+ * Generate styles for the block editor.
+ */
+function jarvis_get_block_styles() {
+
+	$properties = jarvis_get_custom_properties();
+
+	$styles = array();
+
+	$styles[] = '.editor-styles-wrapper, .editor-styles-wrapper > .editor-writing-flow, .editor-styles-wrapper > .editor-writing-flow > div { background-color: #' . esc_attr( $properties['background-color'] ) . '; }';
+
+	return implode( $styles, ' ' );
+
+}
+
+
+/**
+ * Generate styles for the website front-end.
+ */
+function jarvis_get_site_styles() {
+
+	$properties = jarvis_get_custom_properties();
+
+	$styles = array();
+
+	return implode( $styles, ' ' );
+
+}
 
 
 /**
@@ -168,19 +169,6 @@ function jarvis_after_setup_theme() {
 
 	// Feed me.
 	add_theme_support( 'automatic-feed-links' );
-
-	/**
-	 * Add support for post thumbnails.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
-	add_theme_support( 'post-thumbnails' );
-
-	// Ideal header image size.
-	add_image_size( 'jarvis-header', 1500, 500, true );
-
-	// Archive & homepage thumbnails.
-	add_image_size( 'jarvis-archive', 500, 500, true );
 
 	// Add selective refresh to widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -237,7 +225,7 @@ function jarvis_after_setup_theme() {
 		apply_filters(
 			'jarvis_custom_background',
 			array(
-				'default-color' => 'ffffff',
+				'default-color' => 'ffff99',
 				'default-image' => '',
 			)
 		)
@@ -303,8 +291,7 @@ function jarvis_after_setup_theme() {
 	 */
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Header Top', 'jarvis' ),
-			'menu-2' => esc_html__( 'Header Bottom', 'jarvis' ),
+			'menu-1' => esc_html__( 'Menu', 'jarvis' ),
 		)
 	);
 
@@ -486,6 +473,7 @@ function jarvis_wrap_the_archive_title( $title ) {
 
 	// Glue it back together again.
 	if ( ! empty( $title_parts[1] ) ) {
+
 		$title = wp_kses(
 			$title_parts[1],
 			array(
@@ -494,7 +482,9 @@ function jarvis_wrap_the_archive_title( $title ) {
 				),
 			)
 		);
-		$title = '<span>' . esc_html( $title_parts[0] ) . ': </span>' . $title;
+
+		$title = '<small>' . esc_html( $title_parts[0] ) . ': </small>' . $title;
+
 	}
 
 	return $title;
@@ -611,30 +601,6 @@ add_action( 'wp_head', 'jarvis_pingback_header' );
 
 
 /**
- * Make last space in a sentence a non breaking space to prevent typographic widows.
- *
- * @param string $str String to apply fix to.
- * @return string
- */
-function jarvis_widont( $str = '' ) {
-
-	// Strip spaces.
-	$str = trim( $str );
-	// Find the last space.
-	$space = strrpos( $str, ' ' );
-
-	// If there's a space then replace the last on with a non breaking space.
-	if ( false !== $space ) {
-		$str = substr( $str, 0, $space ) . '&nbsp;' . substr( $str, $space + 1 );
-	}
-
-	// Return the string.
-	return $str;
-
-}
-
-
-/**
  * Modifies tag cloud widget arguments to display all tags in the same font size
  * and use list format for better accessibility.
  *
@@ -664,3 +630,41 @@ add_filter( 'get_the_author_description', 'wptexturize' );
 add_filter( 'get_the_author_description', 'convert_chars' );
 add_filter( 'get_the_author_description', 'wpautop' );
 add_filter( 'get_the_author_description', 'shortcode_unautop' );
+
+
+/**
+ * Get the version value for the specified file.
+ * Helps to decache media.
+ *
+ * @param string filepath The file to check.
+ */
+function jarvis_get_theme_version( $filepath = '' ) {
+
+	if ( WP_DEBUG && $filepath ) {
+		return (string) filemtime( get_theme_file_path( $filepath ) );
+	}
+
+	$theme_version = null;
+
+	if ( null === $theme_version ) {
+		$theme_version = wp_get_theme( get_template() )->get( 'Version' );
+	}
+
+	return $theme_version;
+
+}
+
+
+/**
+ * Get the path for the global javascript file.
+ * Get the minified version for production and the full version for dev.
+ */
+function jarvis_get_script_file() {
+
+	if ( WP_DEBUG ) {
+		return get_theme_file_uri( '/assets/scripts/global.js' );
+	}
+
+	return get_theme_file_uri( '/assets/scripts/global.min.js' );
+
+}

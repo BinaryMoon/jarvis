@@ -1,48 +1,29 @@
 /* jshint esnext: true */
 'use strict';
 
-const { src, dest, parallel, watch, series } = require( 'gulp' );
-const sass = require( 'gulp-sass' );
-const autoprefixer = require( 'gulp-autoprefixer' );
+// External dependencies.
+import { parallel, watch, series } from 'gulp';
 
-/**
- * Build SASS files.
- */
-const styles = function() {
+// Internal dependencies.
+import styles from './gulp/sass';
+import { scripts, customizerPreview, customizerControls } from './gulp/scripts';
+import compress from './gulp/zip';
 
-	/**
-	 * Uses node-sass options:
-	 * https://github.com/sass/node-sass#options
-	 */
-	return src( '*.scss' )
-		.pipe(
-			sass(
-				{
-					indentType: 'tab',
-					indentWidth: 1,
-					outputStyle: 'expanded',
-					precision: 3,
+export const build = series(
+	parallel( styles, scripts, customizerPreview, customizerControls ),
+	compress
+);
+export const buildScripts = scripts;
+export const buildCustomizerPreview = customizerPreview;
+export const buildStyles = styles;
+export const buildZip = compress;
 
-				}
-			)
-				.on( 'error', sass.logError )
-		)
-		.pipe(
-			autoprefixer(
-				{
-					cascade: false
-				}
-			)
-		)
-		.pipe( dest( './' ) );
-
-};
-
-
-exports.build = parallel( styles );
-
-exports.default = () => {
-
+export const watchFiles = () => {
 	watch( [ '*.scss', './assets/sass/**/*.scss' ], series( styles ) );
-
+	watch( './assets/scripts/src-global/*.js', series( scripts ) );
+	watch( './assets/scripts/src-customizer-preview/*.js', series( customizerPreview ) );
+	watch( './assets/scripts/src-customizer-controls/*.js', series( customizerControls ) );
 };
+
+export default watchFiles;
+

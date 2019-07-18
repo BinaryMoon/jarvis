@@ -1,0 +1,17 @@
+
+/*!
+ * ## - Custom Properties
+ */
+
+body {
+
+	--foreground-color: #000;
+	--foreground-contrast-color: #fff;
+	--background-color: #ff9;
+
+	&.dark-mode {
+		--foreground-color: #fff;
+		--foreground-contrast-color: #000;
+	}
+
+}
