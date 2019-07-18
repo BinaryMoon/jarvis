@@ -5,17 +5,24 @@
 import { parallel, watch, series } from 'gulp';
 
 // Internal dependencies.
-import styles from './gulp/sass';
+import styles, { editor_styles, customizer_styles } from './gulp/sass';
 import { scripts, customizerPreview, customizerControls } from './gulp/scripts';
 import compress from './gulp/zip';
 
 export const build = series(
-	parallel( styles, scripts, customizerPreview, customizerControls ),
+	parallel(
+		styles,
+		editor_styles,
+		customizer_styles,
+		scripts,
+		customizerPreview,
+		customizerControls
+	),
 	compress
 );
 export const buildScripts = scripts;
 export const buildCustomizerPreview = customizerPreview;
-export const buildStyles = styles;
+export const buildStyles = parallel( styles, editor_styles, customizer_styles );
 export const buildZip = compress;
 
 export const watchFiles = () => {
