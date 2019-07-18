@@ -1,41 +1,37 @@
-.jarvis-sortable {
-	margin-bottom: 15px;
+.jarvis-font-picker select {
+	display: none;
+	width: 100%;
 }
 
-.jarvis-sortable li {
+.jarvis-font-picker ul {
 	border: 1px solid #dddddd;
-	padding: 5px 10px;
 	background: #ffffff;
-	margin-bottom: 0;
-	border-bottom: none;
-	cursor: ns-resize;
-	position: relative;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-	color: #333333;
+	padding: 2px;
+	border-radius: 4px;
+	margin: 1px;
+	max-height: 180px;
+	overflow: auto;
+	list-style-type: none;
 }
 
-.jarvis-sortable li:hover {
-	background: #f3f3f5;
-	color: #0073aa;
+.jarvis-font-picker ul li {
+	padding: 2px 8px;
+	margin: 0;
+	border-radius: 2px;
+	font-size: 2em;
+	line-height: 1.2em;
 }
 
-.jarvis-sortable li.ui-sortable-helper {
-	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+.jarvis-font-picker ul li.selected {
+	background: #dddddd;
+	color: #000000;
 }
 
-.jarvis-sortable li:last-child {
-	border-bottom: 1px solid #dddddd;
+.jarvis-font-picker ul li:hover {
+	background: #f7f7f7;
 }
 
-.jarvis-sortable li.jarvis-highlight {
-	height: 18px;
-	background: #f3f3f5;
-}
-
-.jarvis-close {
-	padding: 0 10px;
-	color: #990000;
-	position: absolute;
-	right: 0;
-	font-weight: bold;
+.jarvis-font-picker .customize-control-title {
+	height: 0;
+	text-indent: -999em;
 }

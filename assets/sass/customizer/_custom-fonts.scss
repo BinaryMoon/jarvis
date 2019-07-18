@@ -1,0 +1,48 @@
+.jarvis-font-picker {
+
+	select {
+
+		display: none;
+		width: 100%;
+
+	}
+
+	ul {
+
+		border: 1px solid #dddddd;
+		background: #ffffff;
+		padding: 2px;
+		border-radius: 4px;
+		margin: 1px;
+		max-height: 180px;
+		overflow: auto;
+		list-style-type: none;
+
+		li {
+			padding: 2px 8px;
+			margin: 0;
+			border-radius: 2px;
+			font-size: 2em;
+			line-height: 1.2em;
+
+			&.selected {
+				background: #dddddd;
+				color: #000000;
+			}
+
+			&:hover {
+				background: #f7f7f7;
+			}
+
+		}
+
+	}
+
+	.customize-control-title {
+
+		height: 0;
+		text-indent: -999em;
+
+	}
+
+}

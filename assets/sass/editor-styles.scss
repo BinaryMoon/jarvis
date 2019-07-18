@@ -2,14 +2,13 @@
 
 body#tinymce.wp-editor {
 
+	@import "custom/_variables";
+	@import "custom/_mixins";
 	@import "lib/_variables";
 	@import "lib/_mixins";
 
-	@import "../../../__sass/lib/_variables";
-	@import "../../../__sass/lib/_mixins";
-
 	@include body();
-	@import "../../../__sass/lib/components/_typography";
+	@import "lib/components/_typography";
 	@include the-content();
 
 }
