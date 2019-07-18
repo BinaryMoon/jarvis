@@ -20,6 +20,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 }
 
 require 'customizer-sanitization.php';
+require 'class.jarvis_dropdown_fonts.php';
 
 
 /**
@@ -196,6 +197,13 @@ function jarvis_customize_controls_js() {
 		array( 'jquery' ),
 		'1.0',
 		true
+	);
+
+	wp_enqueue_style(
+		'jarvis-customizer-styles',
+		get_theme_file_uri( '/assets/css/customizer.css' ),
+		null,
+		jarvis_get_theme_version( '/assets/css/customizer.css' )
 	);
 
 }
