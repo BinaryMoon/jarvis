@@ -120,3 +120,20 @@ function jarvis_customizer_fonts( WP_Customize_Manager $wp_customize ) {
 }
 
 add_action( 'customize_register', 'jarvis_customizer_fonts' );
+
+
+/**
+ * Generate the css required to display the custom fonts.
+ */
+function jarvis_get_font_css() {
+
+	$fonts = jarvis_get_fonts();
+
+	$styles = array();
+
+	$styles[] = 'body { --font-body:' . $fonts[ get_theme_mod( 'jarvis_body_font', 'cambria' ) ][1] . '; }';
+	$styles[] = 'body { --font-header:' . $fonts[ get_theme_mod( 'jarvis_header_font', 'cambria' ) ][1] . '; }';
+
+	return implode( $styles, ' ' );
+
+}

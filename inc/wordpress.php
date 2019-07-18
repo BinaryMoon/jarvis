@@ -31,9 +31,8 @@ function jarvis_enqueue() {
 		jarvis_get_theme_version( '/style.css' )
 	);
 
-	// Uutput of custom settings as inline styles.
+	// Output of custom settings as inline styles.
 	wp_add_inline_style( 'jarvis-style', jarvis_get_site_styles() );
-
 
 	// Scripts.
 	wp_enqueue_script(
@@ -114,8 +113,11 @@ function jarvis_get_block_styles() {
 function jarvis_get_site_styles() {
 
 	$properties = jarvis_get_custom_properties();
+	$fonts = jarvis_get_fonts();
 
 	$styles = array();
+
+	$styles[] = jarvis_get_font_css();
 
 	return implode( $styles, ' ' );
 
