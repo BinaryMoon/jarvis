@@ -73,7 +73,7 @@ function jarvis_customizer_fonts( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'jarvis_header_font',
 		array(
-			'default' => true,
+			'default' => 'cambria',
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'jarvis_sanitize_fonts',
 			'transport' => 'postMessage',
@@ -98,7 +98,7 @@ function jarvis_customizer_fonts( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'jarvis_body_font',
 		array(
-			'default' => true,
+			'default' => 'cambria',
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'jarvis_sanitize_fonts',
 			'transport' => 'postMessage',
