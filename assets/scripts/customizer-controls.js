@@ -51,7 +51,6 @@
 										value = '';
 									}
 
-									console.log( value );
 									var parent = $( this ).parent().closest( 'li' ).find( 'select' );
 									api.instance( parent.prop( 'id' ) ).set( value );
 
