@@ -2,30 +2,40 @@
 	display: none;
 }
 
-.jarvis-font-picker ul {
+.jarvis-font-picker .jarvis-font-selector {
 	border: 1px solid #dddddd;
 	background: #ffffff;
-	padding: 2px;
+	padding: 8px;
 	border-radius: 4px;
 	margin: 1px;
-	max-height: 16rem;
-	overflow: auto;
+	max-height: 20rem;
+	overflow-y: scroll;
 	list-style-type: none;
 }
 
-.jarvis-font-picker ul li {
+.jarvis-font-picker .jarvis-font-selector button {
 	padding: 2px 8px;
 	margin: 0;
 	border-radius: 2px;
 	font-size: 2em;
 	line-height: 1.2em;
+	background: transparent;
+	display: block;
+	width: 100%;
+	text-align: center;
 }
 
-.jarvis-font-picker ul li.selected {
+.jarvis-font-picker .jarvis-font-selector button + button {
+	margin-top: 4px;
+}
+
+.jarvis-font-picker .jarvis-font-selector button.selected {
 	background: #dddddd;
+	border-color: #999;
 	color: #000000;
 }
 
-.jarvis-font-picker ul li:hover {
-	background: #f7f7f7;
+.jarvis-font-picker .jarvis-font-selector button:hover {
+	border-color: #999;
+	cursor: pointer;
 }

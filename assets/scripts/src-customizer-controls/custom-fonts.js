@@ -14,20 +14,19 @@
 					var $this = $( this );
 					var $select = $this.find( 'select' );
 					var $options = $select.find( 'option' );
-					var new_selector = $( '<ul class="jarvis-font-selector"></ul>' );
-					var current_index = 0;
+					var new_selector = $( '<div class="jarvis-font-selector"></div>' );
 
 					$options.each(
 						function() {
 
-							current_index++;
+							// current_index++;
 
 							var $this = $( this );
 							var family = $this.data( 'font-family' );
 							var value = $this.attr( 'value' );
-							var li = $( '<li>' + $this.html() + '</li>' )
+							var li = $( '<button>' + $this.html() + '</button>' )
+								.attr( 'type', 'button' )
 								.css( 'font-family', family )
-								.data( 'index', current_index )
 								.data( 'value', value );
 
 							if ( $this.is( ':selected' ) ) {
@@ -38,11 +37,13 @@
 
 							li.on(
 								'click',
-								function() {
+								function( e ) {
+
+									e.preventDefault();
 
 									var $this = $( this );
 
-									$this.parent().find( 'li' ).removeClass( 'selected' );
+									$this.parent().find( 'button' ).removeClass( 'selected' );
 									$this.addClass( 'selected' );
 
 									var value = $this.data( 'value' );
@@ -51,7 +52,7 @@
 										value = '';
 									}
 
-									var parent = $( this ).parent().closest( 'li' ).find( 'select' );
+									var parent = $( this ).parent().closest( 'button' ).find( 'select' );
 									api.instance( parent.prop( 'id' ) ).set( value );
 
 								}

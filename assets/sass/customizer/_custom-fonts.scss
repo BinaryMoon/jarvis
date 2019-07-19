@@ -6,31 +6,48 @@
 
 	}
 
-	ul {
+	.jarvis-font-selector {
 
 		border: 1px solid #dddddd;
 		background: #ffffff;
-		padding: 2px;
+		padding: 8px;
 		border-radius: 4px;
 		margin: 1px;
-		max-height: 16rem;
-		overflow: auto;
+		max-height: 20rem;
+		overflow-y: scroll;
 		list-style-type: none;
 
-		li {
+		button {
+
 			padding: 2px 8px;
 			margin: 0;
 			border-radius: 2px;
 			font-size: 2em;
 			line-height: 1.2em;
+			background: transparent;
+			display: block;
+			width: 100%;
+			text-align: center;
+
+			+ button {
+
+				margin-top: 4px;
+
+			}
 
 			&.selected {
+
 				background: #dddddd;
+				border-color: #999;
 				color: #000000;
+
 			}
 
 			&:hover {
-				background: #f7f7f7;
+
+				border-color: #999;
+				cursor: pointer;
+
 			}
 
 		}
