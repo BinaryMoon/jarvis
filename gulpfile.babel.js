@@ -26,10 +26,11 @@ export const buildStyles = parallel( styles, editor_styles, customizer_styles );
 export const buildZip = compress;
 
 export const watchFiles = () => {
-	watch( [ '*.scss', './assets/sass/**/*.scss' ], series( styles ) );
-	watch( './assets/scripts/src-global/*.js', series( scripts ) );
-	watch( './assets/scripts/src-customizer-preview/*.js', series( customizerPreview ) );
-	watch( './assets/scripts/src-customizer-controls/*.js', series( customizerControls ) );
+	watch( [ '*.scss', './assets/sass/**/*.scss' ], parallel( styles, editor_styles ) );
+	watch( './assets/sass/customizer/*.scss', customizer_styles )
+	watch( './assets/scripts/src-global/*.js', scripts );
+	watch( './assets/scripts/src-customizer-preview/*.js', customizerPreview );
+	watch( './assets/scripts/src-customizer-controls/*.js', customizerControls );
 };
 
 export default watchFiles;
