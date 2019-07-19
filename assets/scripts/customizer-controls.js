@@ -2,7 +2,6 @@
 ; ( function( $ ) {
 
 	var api = wp.customize;
-	var default_text = 'Default';
 
 	// font picker
 	$( document ).ready(
@@ -14,7 +13,8 @@
 					var $this = $( this );
 					var $select = $this.find( 'select' );
 					var $options = $select.find( 'option' );
-					var $container = $( '<div class="jarvis-font-selector"></div>' );
+					var $container = $( '<div class="jarvis-font-selector"></div>' )
+						.data( 'parentID', $select.prop( 'id' ) );
 
 					$options.each(
 						function() {
@@ -85,7 +85,6 @@
 		}
 	);
 
-
 	/**
 	 * Select a new font and update the setting.
 	 */
@@ -99,13 +98,9 @@
 		$this.addClass( 'selected' );
 
 		var value = $this.data( 'value' );
+		var parentID = $( this ).parent().data( 'parentID' );
 
-		if ( default_text === value ) {
-			value = '';
-		}
-
-		var parent = $( this ).parent().closest( 'button' ).find( 'select' );
-		api.instance( parent.prop( 'id' ) ).set( value );
+		api.instance( parentID ).set( value );
 
 	};
 
