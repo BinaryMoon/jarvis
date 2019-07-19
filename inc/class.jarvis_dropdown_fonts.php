@@ -59,7 +59,7 @@ class Jarvis_Font_Selector extends WP_Customize_Control {
 	}
 ?>
 		</select>
-		<span class="description"><?php printf( wp_kses( __( 'The default font is <strong>%s</strong>', 'jarvis' ), array( 'strong' => array() ) ), esc_attr( $this->default ) ); ?></span>
+		<span class="description customize-control-description"><?php printf( wp_kses( __( 'The default font is <strong>%s</strong>', 'jarvis' ), array( 'strong' => array() ) ), esc_attr( $this->default ) ); ?></span>
 	</label>
 <?php
 	}
