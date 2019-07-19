@@ -7,7 +7,19 @@
 		'preview-ready',
 		function() {
 
-			// Edit Hesder font.
+			// Edit Title font.
+			wp.customize(
+				'jarvis_title_font',
+				function( value ) {
+					value.bind(
+						function( to ) {
+							document.body.style.setProperty( '--font-title', jarvis_fonts[ to ][ 1 ] );
+						}
+					);
+				}
+			);
+
+			// Edit Header font.
 			wp.customize(
 				'jarvis_header_font',
 				function( value ) {

@@ -5,16 +5,17 @@
 
 body {
 
-	--foreground-color: #000;
-	--foreground-contrast-color: #fff;
-	--background-color: #ff9;
+	--foreground-color: #000000;
+	--foreground-contrast-color: #ffffff;
+	--background-color: #ffff99;
 
 	--font-body: Cambria, Georgia, serif;
 	--font-header: Cambria, Georgia, serif;
+	--font-title: Cambria, Georgia, serif;
 
 	&.dark-mode {
-		--foreground-color: #fff;
-		--foreground-contrast-color: #000;
+		--foreground-color: #ffffff;
+		--foreground-contrast-color: #000000;
 	}
 
 }

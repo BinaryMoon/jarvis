@@ -410,16 +410,17 @@ svg path {
  * ## - Custom Properties
  */
 body {
-	--foreground-color: #000;
-	--foreground-contrast-color: #fff;
-	--background-color: #ff9;
+	--foreground-color: #000000;
+	--foreground-contrast-color: #ffffff;
+	--background-color: #ffff99;
 	--font-body: Cambria, Georgia, serif;
 	--font-header: Cambria, Georgia, serif;
+	--font-title: Cambria, Georgia, serif;
 }
 
 body.dark-mode {
-	--foreground-color: #fff;
-	--foreground-contrast-color: #000;
+	--foreground-color: #ffffff;
+	--foreground-contrast-color: #000000;
 }
 
 /*!
@@ -3166,7 +3167,7 @@ blockquote p:last-child {
 
 .site-header .branding .site-title a,
 .site-header .branding .site-title {
-	font-family: var(--font-header);
+	font-family: var(--font-title);
 	font-size: 26px;
 	font-size: 1.625rem;
 	line-height: 1.2;

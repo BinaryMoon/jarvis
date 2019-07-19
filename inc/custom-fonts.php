@@ -69,6 +69,32 @@ function jarvis_customizer_fonts( WP_Customize_Manager $wp_customize ) {
 	);
 
 	/**
+	 * Setting to change the title font.
+	 */
+	$wp_customize->add_setting(
+		'jarvis_title_font',
+		array(
+			'default' => 'cambria',
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'jarvis_sanitize_fonts',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Jarvis_Font_Selector(
+			$wp_customize,
+			'jarvis_title_font',
+			array(
+				'choices' => jarvis_get_fonts(),
+				'label' => esc_html__( 'Heading Font', 'jarvis' ),
+				'section' => 'jarvis_fonts',
+				'default-font' => 'Cambria',
+			)
+		)
+	);
+
+	/**
 	 * Setting to change the heading font.
 	 */
 	$wp_customize->add_setting(
@@ -135,6 +161,7 @@ function jarvis_get_font_css() {
 	$styles = array();
 
 	$styles[] = 'body { --font-body:' . $fonts[ get_theme_mod( 'jarvis_body_font', 'cambria' ) ][1] . '; }';
+	$styles[] = 'body { --font-title:' . $fonts[ get_theme_mod( 'jarvis_title_font', 'cambria' ) ][1] . '; }';
 	$styles[] = 'body { --font-header:' . $fonts[ get_theme_mod( 'jarvis_header_font', 'cambria' ) ][1] . '; }';
 
 	return implode( $styles, ' ' );

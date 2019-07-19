@@ -57,7 +57,7 @@
 		.site-title a,
 		.site-title {
 
-			font-family: $font-family-header;
+			font-family: var(--font-title);
 			@include modular-scale( delta, 1.2 );
 			font-weight: bold;
 			margin: 0;
