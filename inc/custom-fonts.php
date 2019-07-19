@@ -93,7 +93,7 @@ function jarvis_customizer_fonts( WP_Customize_Manager $wp_customize ) {
 			'jarvis_title_font',
 			array(
 				'choices' => jarvis_get_fonts(),
-				'label' => esc_html__( 'Heading Font', 'jarvis' ),
+				'label' => esc_html__( 'Title Font', 'jarvis' ),
 				'section' => 'jarvis_fonts',
 				'default-font' => 'Cambria',
 			)
