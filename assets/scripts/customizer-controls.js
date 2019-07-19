@@ -41,7 +41,7 @@
 						}
 					);
 
-					$this.append( new_selector );
+					$this.append( $container );
 
 				}
 			);
