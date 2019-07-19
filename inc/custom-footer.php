@@ -137,6 +137,7 @@ function jarvis_credits_content( $wrapper = true ) {
 function jarvis_credits_get_content() {
 
 	$separator = '<span role="separator" aria-hidden="true" class="sep"></span>';
+	$top_link = '<a href="#header">' . esc_html__( 'Top', 'jarvis' ) . '</a>';
 
 	$contents = get_theme_mod( 'jarvis_credits_content', '' );
 
@@ -144,6 +145,7 @@ function jarvis_credits_get_content() {
 	$contents = str_ireplace( '(C)', '&copy;', $contents );
 	$contents = str_ireplace( '(|)', $separator, $contents );
 	$contents = str_ireplace( '(SEP)', $separator, $contents );
+	$contents = str_ireplace( '(TOP)', $top_link, $contents );
 	$contents = str_ireplace( '(PRIVACY)', get_the_privacy_policy_link(), $contents );
 
 	return wp_kses_post( $contents );
