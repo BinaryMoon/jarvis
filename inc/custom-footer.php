@@ -17,13 +17,12 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 	$default_footer = '(privacy)(|)Pro Theme Design(|)(top)';
 
 	$description = array(
-		'<p>' . __( 'The footer content area supports the same HTML you can use in blog posts. It also supports the following tags:', 'jarvis' ) . '</p>',
+		'<p>' . __( 'The footer credits area supports <strong>HTML</strong>. It also supports the following tags:', 'jarvis' ) . '</p>',
 		'<ul>',
 		'<li>' . __( '<strong>(c)</strong>: the copyright symbol &copy;', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(year)</strong>: the current year. Updates automatically', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(|)</strong>: add a gap between items', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(privacy)</strong>: a privacy policy link', 'jarvis' ) . '</li>',
-		'<li>' . __( '<strong>(c)</strong>: the copyright symbol &copy;', 'jarvis' ) . '</<strong>',
 		'<li>' . __( '<strong>(top)</strong>: a "back to top" link', 'jarvis' ) . '</li>',
 		'</ul>',
 		'<p>' . sprintf( __( 'The default theme footer can be reproduced with:<br /><strong>%s</strong>', 'jarvis' ), $default_footer ) . '</p>',
@@ -169,6 +168,8 @@ function jarvis_credits_get_content() {
 	$contents = str_ireplace( '(SEP)', $separator, $contents );
 	$contents = str_ireplace( '(TOP)', $top_link, $contents );
 	$contents = str_ireplace( '(PRIVACY)', get_the_privacy_policy_link(), $contents );
+
+	$contents = apply_filters( 'jarvis_footer_content', $contents );
 
 	return wp_kses_post( $contents );
 
