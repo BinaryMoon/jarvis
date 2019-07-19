@@ -6,7 +6,7 @@ import { parallel, watch, series } from 'gulp';
 
 // Internal dependencies.
 import styles, { editor_styles, customizer_styles } from './gulp/sass';
-import { scripts, customizerPreview, customizerControls } from './gulp/scripts';
+import scriptsGlobal, { customizerPreview, customizerControls } from './gulp/scripts';
 import compress from './gulp/zip';
 
 export const build = series(
@@ -14,21 +14,21 @@ export const build = series(
 		styles,
 		editor_styles,
 		customizer_styles,
-		scripts,
+		scriptsGlobal,
 		customizerPreview,
 		customizerControls
 	),
 	compress
 );
-export const buildScripts = scripts;
+export const buildScripts = scriptsGlobal;
 export const buildCustomizerPreview = customizerPreview;
 export const buildStyles = parallel( styles, editor_styles, customizer_styles );
 export const buildZip = compress;
 
 export const watchFiles = () => {
 	watch( [ '*.scss', './assets/sass/**/*.scss' ], parallel( styles, editor_styles ) );
-	watch( './assets/sass/customizer/*.scss', customizer_styles )
-	watch( './assets/scripts/src-global/*.js', scripts );
+	watch( './assets/sass/customizer/*.scss', customizer_styles );
+	watch( './assets/scripts/src-global/*.js', scriptsGlobal );
 	watch( './assets/scripts/src-customizer-preview/*.js', customizerPreview );
 	watch( './assets/scripts/src-customizer-controls/*.js', customizerControls );
 };
