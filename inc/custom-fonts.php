@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Allow users to edit the fonts on their website.
+ *
+ * @package Jarvis
+ * @author Ben Gillbanks <ben@prothemedesign.com>
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ */
 
 /**
  * Return a list of websafe fonts.
