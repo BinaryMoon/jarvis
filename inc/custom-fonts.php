@@ -89,6 +89,7 @@ function jarvis_customizer_fonts( WP_Customize_Manager $wp_customize ) {
 				'choices' => jarvis_get_fonts(),
 				'label' => esc_html__( 'Heading Font', 'jarvis' ),
 				'section' => 'jarvis_fonts',
+				'default-font' => 'Cambria',
 			)
 		)
 	);
@@ -114,6 +115,7 @@ function jarvis_customizer_fonts( WP_Customize_Manager $wp_customize ) {
 				'choices' => jarvis_get_fonts(),
 				'label' => esc_html__( 'Body Font', 'jarvis' ),
 				'section' => 'jarvis_fonts',
+				'default-font' => 'Cambria',
 			)
 		)
 	);

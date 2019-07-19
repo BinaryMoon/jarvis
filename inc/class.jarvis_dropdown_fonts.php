@@ -19,7 +19,9 @@ class Jarvis_Font_Selector extends WP_Customize_Control {
 	 *
 	 * @var array
 	 */
-	public $params = array();
+	public $choices = array();
+
+	public $default = '';
 
 
 	/**
@@ -31,7 +33,8 @@ class Jarvis_Font_Selector extends WP_Customize_Control {
 	 */
 	public function __construct( $manager, $id, $args = array() ) {
 
-		$this->params = $args['choices'];
+		$this->choices = $args['choices'];
+		$this->default = $args['default-font'];
 		parent::__construct( $manager, $id, $args );
 
 	}
@@ -44,19 +47,19 @@ class Jarvis_Font_Selector extends WP_Customize_Control {
 	public function render_content() {
 
 		$value = $this->value();
-
 ?>
 	<label class="jarvis-font-picker">
 		<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 		<select <?php $this->link(); ?> id="<?php echo esc_attr( $this->id ); ?>">
 <?php
-	foreach ( $this->params as $k => $v ) {
+	foreach ( $this->choices as $k => $v ) {
 ?>
 			<option data-font-family="<?php echo esc_attr( $v[1] ); ?>" value="<?php echo esc_attr( $k ); ?>" <?php echo selected( $value, $k, false ); ?>><?php echo esc_html( $v[0] ); ?></option>
 <?php
 	}
 ?>
 		</select>
+		<span class="description"><?php printf( wp_kses( __( 'The default font is <strong>%s</strong>', 'jarvis' ), array( 'strong' => array() ) ), esc_attr( $this->default ) ); ?></span>
 	</label>
 <?php
 	}
