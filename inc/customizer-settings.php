@@ -175,6 +175,8 @@ function jarvis_customize_preview_js() {
 		true
 	);
 
+	wp_add_inline_script( 'jarvis-customize-preview', jarvis_get_font_json() );
+
 }
 
 add_action( 'customize_preview_init', 'jarvis_customize_preview_js' );

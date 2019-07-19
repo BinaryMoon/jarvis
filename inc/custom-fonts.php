@@ -137,3 +137,15 @@ function jarvis_get_font_css() {
 	return implode( $styles, ' ' );
 
 }
+
+
+/**
+ * Get a json encoded variable containing a list of all the available fonts.
+ */
+function jarvis_get_font_json() {
+
+	$fonts = jarvis_get_fonts();
+
+	return 'jarvis_fonts = ' . wp_json_encode( $fonts ) . ';';
+
+}
