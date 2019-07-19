@@ -14,51 +14,29 @@
 					var $this = $( this );
 					var $select = $this.find( 'select' );
 					var $options = $select.find( 'option' );
-					var new_selector = $( '<div class="jarvis-font-selector"></div>' );
+					var $container = $( '<div class="jarvis-font-selector"></div>' );
 
 					$options.each(
 						function() {
 
-							// current_index++;
-
 							var $this = $( this );
 							var family = $this.data( 'font-family' );
 							var value = $this.attr( 'value' );
-							var li = $( '<button>' + $this.html() + '</button>' )
+							var button = $( '<button>' + $this.html() + '</button>' )
 								.attr( 'type', 'button' )
 								.css( 'font-family', family )
 								.data( 'value', value );
 
 							if ( $this.is( ':selected' ) ) {
-
-								li.addClass( 'selected' );
-
+								button.addClass( 'selected' );
 							}
 
-							li.on(
+							button.on(
 								'click',
-								function( e ) {
-
-									e.preventDefault();
-
-									var $this = $( this );
-
-									$this.parent().find( 'button' ).removeClass( 'selected' );
-									$this.addClass( 'selected' );
-
-									var value = $this.data( 'value' );
-
-									if ( default_text === value ) {
-										value = '';
-									}
-
-									var parent = $( this ).parent().closest( 'button' ).find( 'select' );
-									api.instance( parent.prop( 'id' ) ).set( value );
-
-								}
+								selectFont
 							);
 
-							new_selector.append( li );
+							$container.append( button );
 
 						}
 					);
@@ -102,6 +80,30 @@
 			);
 		}
 	);
+
+
+	/**
+	 * Select a new font and update the setting.
+	 */
+	var selectFont = function( e ) {
+
+		e.preventDefault();
+
+		var $this = $( this );
+
+		$this.parent().find( 'button' ).removeClass( 'selected' );
+		$this.addClass( 'selected' );
+
+		var value = $this.data( 'value' );
+
+		if ( default_text === value ) {
+			value = '';
+		}
+
+		var parent = $( this ).parent().closest( 'button' ).find( 'select' );
+		api.instance( parent.prop( 'id' ) ).set( value );
+
+	}
 
 
 } )( jQuery );
