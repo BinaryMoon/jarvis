@@ -110,7 +110,7 @@ function jarvis_register_customize_refresh_credits( WP_Customize_Manager $wp_cus
 	$wp_customize->selective_refresh->add_partial(
 		'jarvis_credits_content',
 		array(
-			'selector' => 'section.footer-wrap',
+			'selector' => '.site-info',
 			'render_callback' => function() {
 				jarvis_credits_content( false );
 			},
