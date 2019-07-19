@@ -64,6 +64,7 @@ function jarvis_customizer_fonts( WP_Customize_Manager $wp_customize ) {
 		'jarvis_fonts',
 		array(
 			'title' => esc_html__( 'Fonts', 'jarvis' ),
+			'priority' => 50,
 		)
 	);
 
