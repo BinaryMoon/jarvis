@@ -48,7 +48,7 @@ class Jarvis_Font_Selector extends WP_Customize_Control {
 ?>
 	<label class="jarvis-font-picker">
 		<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-		<select <?php $this->link(); ?> id="<?php echo $this->id; ?>">
+		<select <?php $this->link(); ?> id="<?php echo esc_attr( $this->id ); ?>">
 <?php
 	foreach ( $this->params as $k => $v ) {
 ?>
