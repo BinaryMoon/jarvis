@@ -20,12 +20,10 @@
 						function() {
 
 							var $this = $( this );
-							var family = $this.data( 'font-family' );
-							var value = $this.attr( 'value' );
 							var button = $( '<button>' + $this.html() + '</button>' )
 								.attr( 'type', 'button' )
-								.css( 'font-family', family )
-								.data( 'value', value );
+								.css( 'font-family', $this.data( 'font-family' ) )
+								.data( 'value', $this.attr( 'value' ) );
 
 							if ( $this.is( ':selected' ) ) {
 								button.addClass( 'selected' );
@@ -53,9 +51,12 @@
 		'ready',
 		function() {
 
-			// Detect when the color section is expanded (or closed) so we can adjust the font heights accordingly.
+			/**
+			 * Detect when the fonts section is expanded (or closed) so we can
+			 * adjust the font heights accordingly.
+			 */
 			wp.customize.section(
-				'colors',
+				'jarvis_fonts',
 				function( section ) {
 					section.expanded.bind(
 						function( isExpanding ) {
@@ -65,12 +66,15 @@
 								return;
 							}
 
-							$( '.styleguide-font-selector' ).each(
+							// Calculate for all font selectors.
+							$( '.jarvis-font-selector' ).each(
 								function() {
+
 									var $this = $( this );
-									var index = parseInt( $this.find( '.selected' ).data( 'index' ) ) - 1;
-									var item_height = $this.find( 'li:first' ).outerHeight();
+									var index = parseInt( $this.find( '.selected' ).index() );
+									var item_height = $this.find( 'button:first' ).outerHeight( true );
 									$this.scrollTop( index * item_height );
+
 								}
 							);
 
@@ -103,8 +107,7 @@
 		var parent = $( this ).parent().closest( 'button' ).find( 'select' );
 		api.instance( parent.prop( 'id' ) ).set( value );
 
-	}
-
+	};
 
 } )( jQuery );
 
