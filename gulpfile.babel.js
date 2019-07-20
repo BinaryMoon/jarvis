@@ -8,6 +8,7 @@ import { parallel, watch, series } from 'gulp';
 import styles, { editor_styles, customizer_styles } from './gulp/sass';
 import scriptsGlobal, { customizerPreview, customizerControls } from './gulp/scripts';
 import compress from './gulp/zip';
+import rtl from './gulp/rtl';
 
 export const build = series(
 	parallel(
@@ -24,6 +25,7 @@ export const buildScripts = scriptsGlobal;
 export const buildCustomizerPreview = customizerPreview;
 export const buildStyles = parallel( styles, editor_styles, customizer_styles );
 export const buildZip = compress;
+export const buildRTL = rtl;
 
 export const watchFiles = () => {
 	watch( [ '*.scss', './assets/sass/**/*.scss' ], parallel( styles, editor_styles ) );
@@ -34,4 +36,3 @@ export const watchFiles = () => {
 };
 
 export default watchFiles;
-
