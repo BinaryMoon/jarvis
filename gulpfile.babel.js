@@ -19,6 +19,7 @@ export const build = series(
 		customizerPreview,
 		customizerControls
 	),
+	rtl,
 	compress
 );
 export const buildScripts = scriptsGlobal;
@@ -28,7 +29,7 @@ export const buildZip = compress;
 export const buildRTL = rtl;
 
 export const watchFiles = () => {
-	watch( [ '*.scss', './assets/sass/**/*.scss' ], parallel( styles, editor_styles ) );
+	watch( [ '*.scss', './assets/sass/**/*.scss' ], series( parallel( styles, editor_styles ), rtl ) );
 	watch( './assets/sass/customizer/*.scss', customizer_styles );
 	watch( './assets/scripts/src-global/*.js', scriptsGlobal );
 	watch( './assets/scripts/src-customizer-preview/*.js', customizerPreview );
