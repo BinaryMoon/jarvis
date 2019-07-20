@@ -32,3 +32,5 @@ Jarvis uses Gulp to process files. You probably won't need to use it, but just i
 * `gulp buildCustomizerControls` Combine and minify the theme Customizer controls javascript.
 * `gulp buildStyles` Process the .scss files and generate the theme styles.
 * `gulp buildZip` Generate a release ready zip file containing the theme files only.
+* `gulp buildRTL` Generate the RTL.css file.
+* `gulp buildTOC` Generate Table of Contents for style.css file.

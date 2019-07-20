@@ -134,10 +134,51 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * WordPress Themes: https://prothemedesign.com/themes/
  */
 /*!
- * # - CSS Library
+ * 1.0 - CSS Library
+ *    1.1 - CSS Reset
+ *    1.2 - Custom Properties
+ *    1.3 - Typography
+ *    1.4 - Vertical Rhythm
+ *    1.5 - Forms
+ *    1.6 - HTML Elements
+ *    1.7 - Animations
+ * 2.0 - WordPress
+ *    2.1 - Required Elements
+ *    2.2 - Accessibility
+ *    2.3 - Blocks
+ *    2.4 - WordPress.com Specific Styles
+ *    2.5 - Widgets
+ *    2.6 - Gallery
+ *    2.7 - Calendar
+ *    2.8 - Password Required Form
+ *    2.9 - Comments
+ *    2.10 - Search Form
+ *    2.11 - Embeds
+ *    2.12 - Sticky Posts
+ * 3.0 - Plugins
+ *    3.1 - Akismet
+ *    3.2 - Jetpack
+ *    3.3 - WooCommerce
+ *    3.4 - WP Post Series
+ * 4.0 - Theme Layout
+ *    4.1 - Archives and Excerpts.
+ *    4.2 - Blocks
+ *    4.3 - Comments
+ *    4.4 - Elements
+ *    4.5 - Footer
+ *    4.6 - General Properties
+ *    4.7 - Header
+ *    4.8 - Main content.
+ *    4.9 - Navigation
+ *    4.10 - Numbered Pagination
+ *    4.11 - Pagination
+ *    4.12 - Body
  */
 /*!
- * ## - CSS Reset
+ * 1.0 - CSS Library
+ */
+/*!
+ * 1.1 - CSS Reset
  * Set HTML styles to sensible defaults
  * loosely based on normalize.css, with a number of customisations
  */
@@ -407,7 +448,7 @@ svg path {
 }
 
 /*!
- * ## - Custom Properties
+ * 1.2 - Custom Properties
  */
 body {
 	--foreground-color: #000000;
@@ -424,7 +465,7 @@ body.dark-mode {
 }
 
 /*!
- * ## - Typography
+ * 1.3 - Typography
  */
 html {
 	font-size: 16px;
@@ -529,7 +570,7 @@ hr {
 }
 
 /*!
- * ## - Vertical Rhythm
+ * 1.4 - Vertical Rhythm
  */
 h1,
 h2,
@@ -550,7 +591,7 @@ pre {
 }
 
 /*!
- * ## - Forms
+ * 1.5 - Forms
  */
 input.radio {
 	margin-right: 0.5em;
@@ -870,7 +911,7 @@ fieldset ul.radio {
 }
 
 /*!
- * ## - HTML Elements
+ * 1.6 - HTML Elements
  */
 /* lists */
 ol,
@@ -999,7 +1040,7 @@ pre.compress {
 }
 
 /*!
- * ## - Animations
+ * 1.7 - Animations
  * Use with: @include animation( animationName duration );
  * eg: @include animation( fade-in 0.3s );
  */
@@ -1088,10 +1129,10 @@ pre.compress {
 }
 
 /*!
- * # - WordPress
+ * 2.0 - WordPress
  */
 /*!
- * ## - Required Elements
+ * 2.1 - Required Elements
  * Uses the defaults listed on the Codex (https://codex.wordpress.org/CSS)
  */
 .wp-caption {
@@ -1175,7 +1216,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /*!
- * ## - Accessibility
+ * 2.2 - Accessibility
  */
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -1234,7 +1275,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /*!
- * ## - Blocks
+ * 2.3 - Blocks
  */
 p.wp-block-subhead {
 	font-size: 20px;
@@ -1358,7 +1399,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - WordPress.com Specific Styles
+ * 2.4 - WordPress.com Specific Styles
  */
 .PDS_Poll {
 	max-width: 100%;
@@ -1401,7 +1442,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Widgets
+ * 2.5 - Widgets
  */
 .widget {
 	overflow: hidden;
@@ -1659,7 +1700,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Gallery
+ * 2.6 - Gallery
  * Default styles for the [gallery] shortcode
  */
 .gallery {
@@ -1765,7 +1806,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Calendar
+ * 2.7 - Calendar
  */
 #wp-calendar {
 	margin: 0;
@@ -1789,7 +1830,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Password Required Form
+ * 2.8 - Password Required Form
  */
 .post-password-required form {
 	margin-bottom: 3rem;
@@ -1810,7 +1851,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Comments
+ * 2.9 - Comments
  */
 .content-comments ol.comment-list {
 	list-style-type: none;
@@ -2073,7 +2114,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Search Form
+ * 2.10 - Search Form
  */
 form.search-form {
 	position: relative;
@@ -2110,7 +2151,7 @@ form.search-form button.search-submit:focus, form.search-form button.search-subm
 }
 
 /*!
- * ## - Embeds
+ * 2.11 - Embeds
  */
 iframe[src*="8tracks.com"], iframe[src*="bandcamp.com"], iframe[src*="dailymotion.com"], iframe[src*="itchi.io"], iframe[src*="slideshare.net"], iframe[src*="soundcloud.com"], iframe[src*="viddler.com"], iframe[src*="videopress.com"], iframe.twitter-tweet, iframe.twitter-follow-button {
 	display: block;
@@ -2144,17 +2185,17 @@ p > object:only-child {
 }
 
 /*!
- * ## - Sticky Posts
+ * 2.12 - Sticky Posts
  */
 .sticky .post-meta-data .posted-on {
 	display: none;
 }
 
 /*!
- * # - Plugins
+ * 3.0 - Plugins
  */
 /*!
- * ## - Akismet
+ * 3.1 - Akismet
  */
 .akismet_comment_form_privacy_notice {
 	font-size: 14px;
@@ -2166,7 +2207,7 @@ p > object:only-child {
 }
 
 /*!
- * ## - Jetpack
+ * 3.2 - Jetpack
  */
 img#wpstats {
 	position: absolute;
@@ -2417,7 +2458,7 @@ body .jetpack-social-navigation ul {
 }
 
 /*!
- * ## - WooCommerce
+ * 3.3 - WooCommerce
  */
 .woocommerce h1 {
 	font-weight: bold;
@@ -2699,7 +2740,7 @@ p.demo_store {
 }
 
 /*!
- * ## - WP Post Series
+ * 3.4 - WP Post Series
  */
 .wp-post-series-box {
 	border: 0.2rem solid rgba(0, 0, 0, 0.3);
@@ -2725,10 +2766,10 @@ p.demo_store {
 }
 
 /*!
- * # - Theme Layout
+ * 4.0 - Theme Layout
  */
 /*!
- * ## - Archives and Excerpts.
+ * 4.1 - Archives and Excerpts.
  * Site content, blog posts etc
  */
 .content-posts article.entry {
@@ -2870,7 +2911,7 @@ p.demo_store {
 }
 
 /*!
- * ## - Blocks
+ * 4.2 - Blocks
  * Block overrides.
  */
 .wp-block-cover, .wp-block-cover-image {
@@ -2879,7 +2920,7 @@ p.demo_store {
 }
 
 /*!
- * ## - Comments
+ * 4.3 - Comments
  * Site content, blog posts etc
  */
 /* comments layout */
@@ -2926,7 +2967,7 @@ p.demo_store {
 }
 
 /*!
- * ## - Elements
+ * 4.4 - Elements
  * Search form, author meta box, and other generic, reusable, elements.
  */
 /* taxonomies - categories and tags on single posts */
@@ -3052,7 +3093,7 @@ a.thumbnail img {
 }
 
 /*!
- * ## - Footer
+ * 4.5 - Footer
  */
 .site-footer {
 	padding: 1.5rem 1.5rem 3rem 1.5rem;
@@ -3064,7 +3105,7 @@ a.thumbnail img {
 }
 
 /*!
- * ## - General Properties
+ * 4.6 - General Properties
  */
 a {
 	color: currentColor;
@@ -3112,7 +3153,7 @@ blockquote p:last-child {
 }
 
 /*!
- * ## - Header
+ * 4.7 - Header
  */
 .site-header {
 	margin-bottom: 3rem;
@@ -3209,7 +3250,7 @@ a.header-image img {
 }
 
 /*!
- * ## - Main content.
+ * 4.8 - Main content.
  * This is where the post or page content will be displayed.
  */
 #main {
@@ -3217,7 +3258,7 @@ a.header-image img {
 }
 
 /*!
- * ## - Navigation
+ * 4.9 - Navigation
  * Main website navigation.
  */
 .menu-toggle {
@@ -3332,7 +3373,7 @@ a.header-image img {
 }
 
 /*!
- * ## - Numbered Pagination
+ * 4.10 - Numbered Pagination
  */
 .pagination {
 	margin: 3rem 0;
@@ -3384,7 +3425,7 @@ a.header-image img {
 }
 
 /*!
- * ## - Pagination
+ * 4.11 - Pagination
  */
 .image-navigation,
 .comment-navigation,
@@ -3493,7 +3534,7 @@ a.header-image img {
 }
 
 /*!
- * ## - Body
+ * 4.12 - Body
  * Site content, blog posts etc
  */
 /* single post and page */
