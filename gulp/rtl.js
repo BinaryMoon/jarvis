@@ -31,15 +31,6 @@ export default function rtl() {
 		)
 		.pipe( dest( './' ) );
 
-	// return gulp.src( style_file )
-	// .pipe( flipper() )
-	// .pipe( change( cssRTL ) )
-	// .pipe( cssnano( css_nano_config ) )
-	// .pipe( csscomb() )
-	// .pipe( change( cssTidy ) )
-	// .pipe( rename( 'rtl.css' ) )
-	// .pipe( gulp.dest( './' + theme + '/' ) );
-
 }
 
 /**
