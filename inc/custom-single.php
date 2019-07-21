@@ -65,6 +65,27 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	);
 
 	/**
+	 * Setting to show/ hide the post date.
+	 */
+	$wp_customize->add_setting(
+		'jarvis_single_show_date',
+		array(
+			'default' => true,
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'jarvis_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jarvis_single_show_date',
+		array(
+			'label' => esc_html__( 'Display Post Date', 'jarvis' ),
+			'section' => 'jarvis_single',
+			'type' => 'checkbox',
+		)
+	);
+
+	/**
 	 * Setting to show/ hide the post author.
 	 */
 	$wp_customize->add_setting(
@@ -86,10 +107,10 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	);
 
 	/**
-	 * Setting to show/ hide the post date.
+	 * Setting to show/ hide the post author details.
 	 */
 	$wp_customize->add_setting(
-		'jarvis_single_show_date',
+		'jarvis_single_show_author_details',
 		array(
 			'default' => true,
 			'capability' => 'edit_theme_options',
@@ -98,9 +119,9 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'jarvis_single_show_date',
+		'jarvis_single_show_author_details',
 		array(
-			'label' => esc_html__( 'Display Post Date', 'jarvis' ),
+			'label' => esc_html__( 'Display Post Author Details', 'jarvis' ),
 			'section' => 'jarvis_single',
 			'type' => 'checkbox',
 		)
@@ -134,6 +155,9 @@ function jarvis_register_customize_refresh_single( WP_Customize_Manager $wp_cust
 	// Show/ Hide post date.
 	$wp_customize->get_setting( 'jarvis_single_show_date' )->transport = 'postMessage';
 
+	// Show/ Hide post author details.
+	$wp_customize->get_setting( 'jarvis_single_show_author_details' )->transport = 'postMessage';
+
 }
 
 add_action( 'customize_register', 'jarvis_register_customize_refresh_single' );
@@ -141,17 +165,23 @@ add_action( 'customize_register', 'jarvis_register_customize_refresh_single' );
 
 /**
  * Generate the css required to display single posts properly.
+ *
+ * @return string CSS styles for single post layout.
  */
 function jarvis_get_single_css() {
+
+	if ( is_customize_preview() ) {
+		return '';
+	}
 
 	$styles = array();
 
 	if ( ! get_theme_mod( 'jarvis_single_show_author', true ) ) {
-		$styles[] = '.byline { display: none !important; }';
+		$styles[] = 'html .byline { display: none; }';
 	}
 
 	if ( ! get_theme_mod( 'jarvis_single_show_date', true ) ) {
-		$styles[] = '.posted-on { display: none !important; }';
+		$styles[] = 'html .posted-on { display: none; }';
 	}
 
 	return implode( $styles, ' ' );

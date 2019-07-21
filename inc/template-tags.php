@@ -189,6 +189,10 @@ function jarvis_child_pages() {
  */
 function jarvis_contributor( $user_id = null, $post_count = null ) {
 
+	if ( ! get_theme_mod( 'jarvis_single_show_author_details', true ) && ! is_customize_preview() ) {
+		return false;
+	}
+
 	// If no user id set then get th user for the current post.
 	if ( ! $user_id ) {
 		$user_id = get_the_author_meta( 'ID' );
