@@ -38,11 +38,12 @@
 
 	.custom-logo-link {
 
-		background: black;
+		flex-grow: 1;
+		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+		max-width: calc( 15% + #{$grid-gutter * 2});
 
 		img {
 
-			max-height: 3rem;
 			width: auto;
 			display: block;
 
@@ -53,6 +54,7 @@
 	.branding {
 
 		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+		flex-grow: 1;
 
 		.site-title a,
 		.site-title {
@@ -90,7 +92,7 @@
 	.menu {
 
 		padding: 0 ( $grid-gutter );
-		width: 100%;
+		flex-grow: 2;
 
 	}
 
