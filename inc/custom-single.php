@@ -125,13 +125,13 @@ function jarvis_register_customize_refresh_single( WP_Customize_Manager $wp_cust
 
 	}
 
-	// Update single class.
+	// Update single post layout class.
 	$wp_customize->get_setting( 'jarvis_single_layout' )->transport = 'postMessage';
 
-	// Update single class.
+	// Show/ Hide post author.
 	$wp_customize->get_setting( 'jarvis_single_show_author' )->transport = 'postMessage';
 
-	// Update single class.
+	// Show/ Hide post date.
 	$wp_customize->get_setting( 'jarvis_single_show_date' )->transport = 'postMessage';
 
 }
