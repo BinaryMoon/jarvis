@@ -565,6 +565,9 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .site-header .site-header-content {
   padding: 1.5rem 0
 }
+.site-header .custom-logo-link {
+  padding: .75rem 1.5rem
+}
 .site-header .branding {
   padding: .75rem 1.5rem
 }
@@ -596,7 +599,7 @@ a.header-image img {
 .menu-primary ul a {
   padding: .5rem 1.5rem
 }
-@media (min-width:782px) {
+@media (min-width:44rem) {
   .menu-primary .menu-wrap {
     text-align: left
   }
@@ -618,7 +621,7 @@ a.header-image img {
 .pagination {
   margin: 3rem 0
 }
-@media (min-width:782px) {
+@media (min-width:44rem) {
   .pagination {
     margin: 6rem 0
   }
@@ -637,7 +640,7 @@ a.header-image img {
 .post-navigation {
   margin: 3rem 0
 }
-@media (min-width:782px) {
+@media (min-width:44rem) {
   .comment-navigation .nav-links .nav-next,
   .image-navigation .nav-links .nav-next,
   .post-navigation .nav-links .nav-next {
@@ -673,4 +676,13 @@ a.header-image img {
 }
 .content-testimonials .testimonial .entry-meta .avatar {
   margin: 0 auto .75rem auto
+}
+.single-layout-1 .content-single .entry-single {
+  margin-right: auto;
+  margin-left: auto
+}
+@media (min-width:44rem) {
+  .single-layout-1 .content-single .entry-single .alignfull {
+    margin-right: calc((100vw - 44rem)/ -2)
+  }
 }
