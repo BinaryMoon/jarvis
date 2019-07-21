@@ -7,7 +7,7 @@
 
 @mixin for-tablet {
 
-	@media ( min-width: $wp-responsive-width-2 ) {
+	@media ( min-width: #{$grid-small-width} ) {
 		@content;
 	}
 
