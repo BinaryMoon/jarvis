@@ -54,7 +54,9 @@
 			width: calc( 100vw - #{$grid-gutter * 2} );
 
 			@include for-big-tablet {
+
 				width: ( $grid-total-width - ( $grid-gutter * 2 ) );
+
 			}
 
 		}
