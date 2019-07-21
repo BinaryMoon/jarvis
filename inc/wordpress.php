@@ -118,6 +118,7 @@ function jarvis_get_site_styles() {
 	$styles = array();
 
 	$styles[] = jarvis_get_font_css();
+	$styles[] = jarvis_get_single_css();
 
 	return implode( $styles, ' ' );
 
