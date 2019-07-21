@@ -1,0 +1,41 @@
+.single-layout-1 {
+
+
+	.content-single {
+
+		.entry-header {
+
+			text-align: center;
+
+		}
+
+		.entry-single {
+
+			margin-left: auto;
+			margin-right: auto;
+
+			.alignwide {
+
+				@include for-tablet {
+
+					width: ( $grid-small-width - ( $grid-gutter * 2 ) );
+
+				}
+
+			}
+
+			.alignfull {
+
+				@include for-tablet {
+
+					margin-left: calc( ( 100vw - #{$grid-small-width} ) / -2 );
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

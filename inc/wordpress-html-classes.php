@@ -25,10 +25,6 @@ function jarvis_body_class( $classes ) {
 		$classes[] = 'multi-author-false';
 	}
 
-	if ( is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'themes-sidebar1-active';
-	}
-
 	if ( display_header_text() ) {
 		$classes[] = 'has-site-title';
 	}
@@ -37,6 +33,10 @@ function jarvis_body_class( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	// Single post layout.
+	$classes[] = 'single-layout-' . get_theme_mod( 'jarvis_single_layout', 0 );
+
+	// Foreground colour scheme.
 	$classes[] = jarvis_colour_brightness( get_background_color() ) ? 'light-mode' : 'dark-mode';
 
 	return $classes;
