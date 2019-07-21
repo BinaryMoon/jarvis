@@ -215,6 +215,32 @@
 				}
 			);
 
+			wp.customize(
+				'jarvis_single_show_author',
+				function( value ) {
+					value.bind(
+						function( to ) {
+
+							$( '.byline' ).css( 'display', to ? 'inline' : 'none' );
+
+						}
+					);
+				}
+			);
+
+			wp.customize(
+				'jarvis_single_show_date',
+				function( value ) {
+					value.bind(
+						function( to ) {
+
+							$( '.posted-on' ).css( 'display', to ? 'inline' : 'none' );
+
+						}
+					);
+				}
+			);
+
 		}
 	);
 
