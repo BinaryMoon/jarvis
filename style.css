@@ -2673,7 +2673,7 @@ p.demo_store {
 	.content-posts article.entry .post-meta-data {
 		margin-top: 0.3rem;
 	}
-	.content-posts article.entry .post-meta-data span {
+	.content-posts article.entry .post-meta-data .edit-link {
 		display: block;
 	}
 }
