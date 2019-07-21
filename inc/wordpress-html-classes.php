@@ -19,12 +19,6 @@
  */
 function jarvis_body_class( $classes ) {
 
-	if ( is_multi_author() ) {
-		$classes[] = 'multi-author-true';
-	} else {
-		$classes[] = 'multi-author-false';
-	}
-
 	if ( display_header_text() ) {
 		$classes[] = 'has-site-title';
 	}
