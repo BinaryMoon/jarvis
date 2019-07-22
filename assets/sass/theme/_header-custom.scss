@@ -37,6 +37,8 @@
 
 	@include for-tablet {
 
+		--wp-alignfull-size: 90vw;
+
 		padding-left: 10%;
 
 		.branding {
