@@ -189,7 +189,7 @@ function jarvis_customize_preview_js() {
 		'jarvis-customize-preview',
 		$script_path,
 		array( 'customize-preview', 'jquery' ),
-		'1.0',
+		jarvis_get_theme_version( '/assets/scripts/customizer-preview.js' ),
 		true
 	);
 
@@ -215,7 +215,7 @@ function jarvis_customize_controls_js() {
 		'jarvis-customize-controls',
 		$script_path,
 		array( 'jquery' ),
-		'1.0',
+		jarvis_get_theme_version( '/assets/scripts/customizer-controls.js' ),
 		true
 	);
 
