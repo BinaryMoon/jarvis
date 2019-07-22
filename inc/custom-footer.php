@@ -40,6 +40,7 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 			'title' => esc_html__( 'Footer Credits', 'jarvis' ),
 			'description' => implode( $description, '' ),
 			'description_hidden' => true,
+			'panel' => 'jarvis_site_layout',
 		)
 	);
 
@@ -89,9 +90,6 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 
 }
 
-add_action( 'customize_register', 'jarvis_customizer_credits' );
-
-
 
 /**
  * Update Credits without doing a full page refresh.
@@ -119,8 +117,6 @@ function jarvis_register_customize_refresh_credits( WP_Customize_Manager $wp_cus
 	);
 
 }
-
-add_action( 'customize_register', 'jarvis_register_customize_refresh_credits' );
 
 
 /**

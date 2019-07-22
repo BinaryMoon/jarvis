@@ -31,6 +31,24 @@ require 'class.jarvis_dropdown_fonts.php';
 function jarvis_customizer_settings( WP_Customize_Manager $wp_customize ) {
 
 	/**
+	 * Jarvis site layout.
+	 */
+	$wp_customize->add_panel(
+		'jarvis_site_layout',
+		array(
+			'title' => esc_html__( 'Site Layout', 'jarvis' ),
+		)
+	);
+
+	jarvis_customizer_header( $wp_customize );
+
+	jarvis_customizer_single( $wp_customize );
+
+	jarvis_customizer_credits( $wp_customize );
+	jarvis_register_customize_refresh_credits( $wp_customize );
+
+
+	/**
 	 * Jarvis theme options section.
 	 */
 	$wp_customize->add_section(

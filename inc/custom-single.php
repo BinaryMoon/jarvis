@@ -25,6 +25,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 		'jarvis_single',
 		array(
 			'title' => esc_html__( 'Single Post & Page', 'jarvis' ),
+			'panel' => 'jarvis_site_layout',
 		)
 	);
 
@@ -37,6 +38,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 			'default' => 0,
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'jarvis_sanitize_int',
+			'transport' => 'postMessage',
 		)
 	);
 
@@ -73,6 +75,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 			'default' => true,
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'jarvis_sanitize_checkbox',
+			'transport' => 'postMessage',
 		)
 	);
 
@@ -94,6 +97,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 			'default' => true,
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'jarvis_sanitize_checkbox',
+			'transport' => 'postMessage',
 		)
 	);
 
@@ -115,6 +119,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 			'default' => true,
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'jarvis_sanitize_checkbox',
+			'transport' => 'postMessage',
 		)
 	);
 
@@ -128,39 +133,6 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	);
 
 }
-
-add_action( 'customize_register', 'jarvis_customizer_single' );
-
-
-/**
- * Update Theme Elements without refreshing content.
- *
- * @param WP_Customize_Manager $wp_customize Customizer object.
- */
-function jarvis_register_customize_refresh_single( WP_Customize_Manager $wp_customize ) {
-
-	// Ensure selective refresh is enabled.
-	if ( ! isset( $wp_customize->selective_refresh ) ) {
-
-		return false;
-
-	}
-
-	// Update single post layout class.
-	$wp_customize->get_setting( 'jarvis_single_layout' )->transport = 'postMessage';
-
-	// Show/ Hide post author.
-	$wp_customize->get_setting( 'jarvis_single_show_author' )->transport = 'postMessage';
-
-	// Show/ Hide post date.
-	$wp_customize->get_setting( 'jarvis_single_show_date' )->transport = 'postMessage';
-
-	// Show/ Hide post author details.
-	$wp_customize->get_setting( 'jarvis_single_show_author_details' )->transport = 'postMessage';
-
-}
-
-add_action( 'customize_register', 'jarvis_register_customize_refresh_single' );
 
 
 /**
