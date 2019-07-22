@@ -37,7 +37,6 @@
 				function( value ) {
 					value.bind(
 						function( to ) {
-							console.log( 'body font' );
 							document.body.style.setProperty( '--font-body', jarvis_fonts[ to ][ 1 ] );
 						}
 					);
