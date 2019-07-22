@@ -575,6 +575,21 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 a.header-image img {
   margin: 0 auto
 }
+@media (min-width:44rem) {
+  .header-layout-2 {
+    padding-right: 10%
+  }
+  .header-layout-2 .branding {
+    right: 0;
+    padding: 3rem .75rem;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    text-align: left
+  }
+  .header-layout-2 .menu-primary .menu-wrap {
+    text-align: right
+  }
+}
 #main {
   padding: 0 1.5rem
 }

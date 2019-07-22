@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-4
+Version: 1.0.alpha-5
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -3164,6 +3164,42 @@ a.header-image img {
 	padding: 0;
 }
 
+@media (min-width: 44rem) {
+	.header-layout-2 {
+		padding-left: 10%;
+	}
+	.header-layout-2 .branding {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 10%;
+		padding: 3rem 0.75rem;
+		margin: 0;
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+		text-align: right;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-pack: center;
+		justify-content: center;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		flex-direction: row-reverse;
+	}
+	.header-layout-2 .branding > * {
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+	}
+	.header-layout-2.admin-bar .branding {
+		top: 32px;
+	}
+	.header-layout-2 .menu-primary .menu-wrap {
+		text-align: left;
+	}
+}
+
 /*!
  * 4.8 - Main content.
  * This is where the post or page content will be displayed.
@@ -3195,6 +3231,12 @@ a.header-image img {
 	list-style-type: none;
 	margin: 0;
 	padding: 0.75rem 1.5rem;
+}
+
+@media (min-width: 44rem) {
+	.menu-primary > ul {
+		padding: 0;
+	}
 }
 
 .menu-primary ul {
