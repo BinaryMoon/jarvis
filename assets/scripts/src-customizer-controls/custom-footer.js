@@ -15,8 +15,6 @@
 
 ; ( function() {
 
-	var api = wp.customize;
-
 	wp.customize.bind(
 		'ready',
 		function() {
