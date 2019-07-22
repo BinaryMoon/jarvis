@@ -1,54 +1,50 @@
 .jarvis-font-picker {
 
-	select {
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 1px;
+	max-height: 20rem;
+	overflow-y: scroll;
+	list-style-type: none;
+
+	input[type=radio] {
 
 		display: none;
 
 	}
 
-	.jarvis-font-selector {
+	label {
 
-		border: 1px solid #dddddd;
-		background: #ffffff;
-		padding: 8px;
-		border-radius: 4px;
-		margin: 1px;
-		max-height: 20rem;
-		overflow-y: scroll;
-		list-style-type: none;
+		padding: 4px 8px;
+		margin: 0;
+		border-radius: 2px;
+		border: 1px solid transparent;
+		font-size: 2em;
+		line-height: 1.2em;
+		display: block;
+		text-align: center;
+		box-sizing: border-box;
 
-		button {
+		+ label {
 
-			padding: 2px 8px;
-			margin: 0;
-			border-radius: 2px;
-			font-size: 2em;
-			line-height: 1.2em;
-			background: transparent;
-			display: block;
-			width: 100%;
-			text-align: center;
+			margin-top: 4px;
 
-			+ button {
+		}
 
-				margin-top: 4px;
+		&.selected {
 
-			}
+			background: #dddddd;
+			border-color: #999;
+			color: #000000;
 
-			&.selected {
+		}
 
-				background: #dddddd;
-				border-color: #999;
-				color: #000000;
+		&:hover {
 
-			}
-
-			&:hover {
-
-				border-color: #999;
-				cursor: pointer;
-
-			}
+			border-color: #999;
+			cursor: pointer;
 
 		}
 

@@ -7,41 +7,9 @@
 	$( document ).ready(
 		function() {
 
-			$( '.jarvis-font-picker' ).each(
-				function() {
-
-					var $this = $( this );
-					var $select = $this.find( 'select' );
-					var $options = $select.find( 'option' );
-					var $container = $( '<div class="jarvis-font-selector"></div>' )
-						.data( 'parentID', $select.prop( 'id' ) );
-
-					$options.each(
-						function() {
-
-							var $this = $( this );
-							var button = $( '<button>' + $this.html() + '</button>' )
-								.attr( 'type', 'button' )
-								.css( 'font-family', $this.data( 'font-family' ) )
-								.data( 'value', $this.attr( 'value' ) );
-
-							if ( $this.is( ':selected' ) ) {
-								button.addClass( 'selected' );
-							}
-
-							button.on(
-								'click',
-								selectFont
-							);
-
-							$container.append( button );
-
-						}
-					);
-
-					$this.append( $container );
-
-				}
+			$( '.jarvis-font-picker label' ).on(
+				'click',
+				selectFont
 			);
 
 		}
@@ -67,13 +35,14 @@
 							}
 
 							// Calculate for all font selectors.
-							$( '.jarvis-font-selector' ).each(
+							$( '.jarvis-font-picker' ).each(
 								function() {
 
 									var $this = $( this );
-									var index = parseInt( $this.find( '.selected' ).index() );
-									var item_height = $this.find( 'button:first' ).outerHeight( true );
-									$this.scrollTop( index * item_height );
+									var index = parseInt( $this.find( '.selected' ).index() ) - 1;
+									var item_height = $this.find( 'label:first' ).outerHeight( true );
+									// We divide the index by 2 since we are counting inputs AND labels.
+									$this.scrollTop( index * ( item_height / 2 ) );
 
 								}
 							);
@@ -90,15 +59,16 @@
 	 */
 	var selectFont = function( e ) {
 
-		e.preventDefault();
-
 		var $this = $( this );
 
-		$this.parent().find( 'button' ).removeClass( 'selected' );
+		// Deselect all labels.
+		$this.parent().find( 'label' ).removeClass( 'selected' );
+		// Select current label.
 		$this.addClass( 'selected' );
 
-		var value = $this.data( 'value' );
-		var parentID = $( this ).parent().data( 'parentID' );
+		var $input = $( '#' + $this.attr( 'for' ) );
+		var value = $input.attr( 'value' );
+		var parentID = $input.attr( 'name' );
 
 		api.instance( parentID ).set( value );
 
