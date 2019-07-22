@@ -1,0 +1,38 @@
+.header-layout-1 {
+
+	.site-header {
+
+		.site-header-content {
+
+			flex-direction: column;
+			align-items: center;
+
+		}
+
+
+		.branding {
+
+			text-align: center;
+
+		}
+
+		.menu-toggle,
+		.menu {
+
+			width: 100%;
+
+		}
+
+		.menu-primary {
+
+			.menu-wrap {
+
+				text-align: center;
+
+			}
+
+		}
+
+	}
+
+}
