@@ -23,16 +23,20 @@
 	// depending upon if there is a static front page set.
 	.entry-title {
 
+		letter-spacing: -0.01em;
+		font-weight: bold;
+
 		@include for-tablet {
+
 			@include modular-scale( alpha );
+
 		}
 
 		@include for-desktop {
-			@include modular-scale( mega );
-		}
-		letter-spacing: -0.01em;
 
-		font-weight: bold;
+			@include modular-scale( mega );
+
+		}
 
 	}
 
@@ -91,6 +95,7 @@
 	.alignleft {
 
 		transform: translateX( -$grid-gutter );
+
 	}
 
 }
