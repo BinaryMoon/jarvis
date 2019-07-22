@@ -352,10 +352,6 @@ body.dark-mode {
 	--foreground-contrast-color: #000000;
 }
 
-body.header-layout-2 {
-	--wp-alignfull-size: 90vw;
-}
-
 /*!
  * 1.3 - Typography
  */
@@ -1072,7 +1068,7 @@ blockquote.alignleft, blockquote.alignright {
 
 @media (min-width: 44rem) {
 	blockquote.alignleft, blockquote.alignright {
-		max-width: 40%;
+		max-width: 45%;
 	}
 }
 
@@ -3171,6 +3167,7 @@ a.header-image img {
 
 @media (min-width: 44rem) {
 	.header-layout-2 {
+		--wp-alignfull-size: 90vw;
 		padding-left: 10%;
 	}
 	.header-layout-2 .branding {
@@ -3676,14 +3673,30 @@ a.header-image img {
 	margin-right: auto;
 }
 
-@media (min-width: 44rem) {
+.single-layout-1 .content-single .entry-single .alignwide {
+	margin-left: 50%;
+	-webkit-transform: translateX(calc( ( var( --wp-alignfull-size ) - 3rem ) / -2));
+	transform: translateX(calc( ( var( --wp-alignfull-size ) - 3rem ) / -2));
+}
+
+@media (min-width: 69rem) {
 	.single-layout-1 .content-single .entry-single .alignwide {
-		width: 41rem;
+		width: calc( var( --wp-alignfull-size ) - 3rem);
+		-webkit-transform: translateX(calc( ( var( --wp-alignfull-size ) - 3rem ) / -2));
+		transform: translateX(calc( ( var( --wp-alignfull-size ) - 3rem ) / -2));
 	}
 }
 
-@media (min-width: 44rem) {
-	.single-layout-1 .content-single .entry-single .alignfull {
-		margin-left: calc( ( var( --wp-alignfull-size ) - 44rem ) / -2);
+@media (min-width: 76.667rem) {
+	.single-layout-1 .content-single .entry-single .alignwide {
+		width: 66rem;
+		-webkit-transform: translateX(calc( 66rem / -2));
+		transform: translateX(calc( 66rem / -2));
 	}
+}
+
+.single-layout-1 .content-single .entry-single .alignfull {
+	margin-left: 50%;
+	-webkit-transform: translateX(calc( var( --wp-alignfull-size ) / -2));
+	transform: translateX(calc( var( --wp-alignfull-size ) / -2));
 }

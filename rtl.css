@@ -694,8 +694,25 @@ a.header-image img {
   margin-right: auto;
   margin-left: auto
 }
-@media (min-width:44rem) {
-  .single-layout-1 .content-single .entry-single .alignfull {
-    margin-right: calc((var(--wp-alignfull-size) - 44rem)/ -2)
+.single-layout-1 .content-single .entry-single .alignwide {
+  margin-right: 50%;
+  -webkit-transform: translateX(calc(-1*((var(--wp-alignfull-size) - 3rem)/ -2)));
+  transform: translateX(calc(-1*((var(--wp-alignfull-size) - 3rem)/ -2)))
+}
+@media (min-width:69rem) {
+  .single-layout-1 .content-single .entry-single .alignwide {
+    -webkit-transform: translateX(calc(-1*((var(--wp-alignfull-size) - 3rem)/ -2)));
+    transform: translateX(calc(-1*((var(--wp-alignfull-size) - 3rem)/ -2)))
   }
+}
+@media (min-width:76.667rem) {
+  .single-layout-1 .content-single .entry-single .alignwide {
+    -webkit-transform: translateX(calc(-1*(66rem / -2)));
+    transform: translateX(calc(-1*(66rem / -2)))
+  }
+}
+.single-layout-1 .content-single .entry-single .alignfull {
+  margin-right: 50%;
+  -webkit-transform: translateX(calc(-1*(var(--wp-alignfull-size)/ -2)));
+  transform: translateX(calc(-1*(var(--wp-alignfull-size)/ -2)))
 }
