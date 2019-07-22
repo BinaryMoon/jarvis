@@ -652,13 +652,7 @@ function jarvis_get_theme_version( $filepath = '' ) {
 		return (string) filemtime( get_theme_file_path( $filepath ) );
 	}
 
-	$theme_version = null;
-
-	if ( null === $theme_version ) {
-		$theme_version = wp_get_theme( get_template() )->get( 'Version' );
-	}
-
-	return $theme_version;
+	return wp_get_theme( get_template() )->get( 'Version' );
 
 }
 
