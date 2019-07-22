@@ -3141,6 +3141,27 @@ a.header-image img {
 	margin: 0 auto;
 }
 
+.header-layout-1 .site-header .site-header-content {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.header-layout-1 .site-header .branding {
+	text-align: center;
+}
+
+.header-layout-1 .site-header .menu-toggle,
+.header-layout-1 .site-header .menu {
+	width: 100%;
+}
+
+.header-layout-1 .site-header .menu-primary .menu-wrap {
+	text-align: center;
+}
+
 /*!
  * 4.8 - Main content.
  * This is where the post or page content will be displayed.
