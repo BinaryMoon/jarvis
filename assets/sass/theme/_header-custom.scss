@@ -17,19 +17,15 @@
 		}
 
 		.menu-toggle,
-		.menu {
+		.menu-primary {
 
-			width: 100%;
+			width: calc(100% - #{$grid-gutter * 2});
 
 		}
 
 		.menu-primary {
 
-			.menu-wrap {
-
-				text-align: center;
-
-			}
+			padding: 0;
 
 		}
 

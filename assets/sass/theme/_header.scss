@@ -25,7 +25,8 @@
 
 		display: flex;
 		flex-direction: column;
-		padding: ( $grid-line-height ) 0;
+		margin-top: $grid-line-height;
+		margin-bottom: $grid-line-height;
 
 		@include for-tablet {
 
@@ -39,7 +40,8 @@
 	.custom-logo-link {
 
 		flex-grow: 1;
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+		margin-left: $grid-gutter;
+		margin-right: $grid-gutter;
 		max-width: calc( 15% + #{$grid-gutter * 2});
 
 		img {
@@ -53,7 +55,7 @@
 
 	.branding {
 
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+		margin: ( $grid-line-height ) ( $grid-gutter );
 		flex-grow: 1;
 
 		.site-title a,

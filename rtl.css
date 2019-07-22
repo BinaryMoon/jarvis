@@ -562,14 +562,12 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .container {
   margin: 0 auto
 }
-.site-header .site-header-content {
-  padding: 1.5rem 0
-}
 .site-header .custom-logo-link {
-  padding: .75rem 1.5rem
+  margin-right: 1.5rem;
+  margin-left: 1.5rem
 }
 .site-header .branding {
-  padding: .75rem 1.5rem
+  margin: 1.5rem 1.5rem
 }
 .site-header .menu {
   padding: 0 1.5rem
