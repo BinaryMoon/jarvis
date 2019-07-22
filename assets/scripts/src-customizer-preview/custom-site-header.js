@@ -14,7 +14,7 @@
 					value.bind(
 						function( to ) {
 
-							var count = 1;
+							var count = 2;
 							var selectors = '';
 
 							for ( i = 0; i <= count; i++ ) {

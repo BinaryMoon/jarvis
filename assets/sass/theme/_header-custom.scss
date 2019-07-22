@@ -32,3 +32,56 @@
 	}
 
 }
+
+.header-layout-2 {
+
+	@include for-tablet {
+
+		padding-left: 10%;
+
+		.branding {
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 10%;
+			padding: ( $grid-line-height * 2 ) ( $grid-gutter / 2 );
+			margin: 0;
+			transform: rotate(180deg);
+			text-align: right;
+			display: flex;
+			justify-content: center;
+			flex-direction: row-reverse;
+
+			> * {
+
+				writing-mode: vertical-rl;
+
+			}
+
+		}
+
+		&.admin-bar {
+
+			.branding {
+
+				top: $wp-admin-bar-height;
+
+			}
+
+		}
+
+		.menu-primary {
+
+			.menu-wrap {
+
+				text-align: left;
+
+			}
+
+		}
+
+	}
+
+}

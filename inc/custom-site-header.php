@@ -51,6 +51,7 @@ function jarvis_customizer_header( WP_Customize_Manager $wp_customize ) {
 			'choices' => array(
 				0 => esc_html__( 'Default', 'jarvis' ),
 				1 => esc_html__( 'Center', 'jarvis' ),
+				2 => esc_html__( 'Side Fixed', 'jarvis' ),
 			),
 		)
 	);
