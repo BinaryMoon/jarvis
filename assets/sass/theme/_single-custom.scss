@@ -1,6 +1,5 @@
 .single-layout-1 {
 
-
 	.content-single {
 
 		.entry-header {
@@ -16,9 +15,20 @@
 
 			.alignwide {
 
-				@include for-tablet {
+				margin-left: 50%;
+				transform: translateX( calc( ( var( --wp-alignfull-size ) - #{$grid-gutter * 2} ) / -2 ) );
 
-					width: ( $grid-small-width - ( $grid-gutter * 2 ) );
+				@include for-big-tablet {
+
+					width: calc( var( --wp-alignfull-size ) - #{$grid-gutter * 2} );
+					transform: translateX( calc( ( var( --wp-alignfull-size ) - #{$grid-gutter * 2} ) / -2 ) );
+
+				}
+
+				@include for-width( $grid-total-width * 1.11111 ) {
+
+					width: ( $grid-total-width - ( $grid-gutter * 2 ) );
+					transform: translateX( calc( #{$grid-total-width - ( $grid-gutter * 2 )} / -2 ) );
 
 				}
 
@@ -26,11 +36,8 @@
 
 			.alignfull {
 
-				@include for-tablet {
-
-					margin-left: calc( ( var( --wp-alignfull-size ) - #{$grid-small-width} ) / -2 );
-
-				}
+				margin-left: 50%;
+				transform: translateX( calc( var( --wp-alignfull-size ) / -2 ) );
 
 			}
 
