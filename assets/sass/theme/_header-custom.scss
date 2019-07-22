@@ -1,3 +1,6 @@
+/**
+ * Center Header.
+ */
 .header-layout-1 {
 
 	.site-header {
@@ -8,7 +11,6 @@
 			align-items: center;
 
 		}
-
 
 		.branding {
 
@@ -27,12 +29,21 @@
 
 			padding: 0;
 
+			.menu-wrap {
+
+				text-align: center;
+
+			}
+
 		}
 
 	}
 
 }
 
+/**
+ * Fixed Sidebar Header.
+ */
 .header-layout-2 {
 
 	@include for-tablet {

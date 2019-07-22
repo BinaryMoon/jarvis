@@ -3144,6 +3144,9 @@ a.header-image img {
 	margin: 0 auto;
 }
 
+/**
+ * Center Header.
+ */
 .header-layout-1 .site-header .site-header-content {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
@@ -3165,6 +3168,13 @@ a.header-image img {
 	padding: 0;
 }
 
+.header-layout-1 .site-header .menu-primary .menu-wrap {
+	text-align: center;
+}
+
+/**
+ * Fixed Sidebar Header.
+ */
 @media (min-width: 44rem) {
 	.header-layout-2 {
 		--wp-alignfull-size: 90vw;
