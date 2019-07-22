@@ -344,11 +344,16 @@ body {
 	--font-body: Cambria, Georgia, serif;
 	--font-header: Cambria, Georgia, serif;
 	--font-title: Cambria, Georgia, serif;
+	--wp-alignfull-size: 100vw;
 }
 
 body.dark-mode {
 	--foreground-color: #ffffff;
 	--foreground-contrast-color: #000000;
+}
+
+body.header-layout-2 {
+	--wp-alignfull-size: 90vw;
 }
 
 /*!
@@ -1250,7 +1255,7 @@ p.wp-block-subhead {
 
 .wp-block-image {
 	margin-bottom: 3rem;
-	max-width: 100vw;
+	max-width: var(--wp-alignfull-size);
 }
 
 .wp-block-image img {
@@ -3199,13 +3204,6 @@ a.header-image img {
 	.header-layout-2 .menu-primary .menu-wrap {
 		text-align: left;
 	}
-	.header-layout-2 .content-single .entry-single .alignfull {
-		width: 90vw;
-		margin-left: calc( ( 90vw - 66rem ) / -2);
-	}
-	.header-layout-2.single-layout-1 .content-single .entry-single .alignfull {
-		margin-left: calc( ( 90vw - 44rem ) / -2);
-	}
 }
 
 /*!
@@ -3546,7 +3544,7 @@ a.header-image img {
 }
 
 .content-single .entry-single .alignwide {
-	width: calc( 100vw - 3rem);
+	width: calc( var( --wp-alignfull-size ) - 3rem);
 }
 
 @media (min-width: 69rem) {
@@ -3557,12 +3555,12 @@ a.header-image img {
 
 .content-single .entry-single .alignfull {
 	margin-left: -1.5rem;
-	width: 100vw;
+	width: var(--wp-alignfull-size);
 }
 
 @media (min-width: 69rem) {
 	.content-single .entry-single .alignfull {
-		margin-left: calc( ( 100vw - 66rem ) / -2);
+		margin-left: calc( ( var( --wp-alignfull-size ) - 66rem ) / -2);
 	}
 }
 
@@ -3686,6 +3684,6 @@ a.header-image img {
 
 @media (min-width: 44rem) {
 	.single-layout-1 .content-single .entry-single .alignfull {
-		margin-left: calc( ( 100vw - 44rem ) / -2);
+		margin-left: calc( ( var( --wp-alignfull-size ) - 44rem ) / -2);
 	}
 }

@@ -51,7 +51,7 @@
 
 		.alignwide {
 
-			width: calc( 100vw - #{$grid-gutter * 2} );
+			width: calc( var( --wp-alignfull-size ) - #{$grid-gutter * 2} );
 
 			@include for-big-tablet {
 
@@ -64,11 +64,11 @@
 		.alignfull {
 
 			margin-left: -$grid-gutter;
-			width: 100vw;
+			width: var( --wp-alignfull-size );
 
 			@include for-big-tablet {
 
-				margin-left: calc( ( 100vw - #{$grid-total-width - $grid-gutter - $grid-gutter} ) / -2 );
+				margin-left: calc( ( var( --wp-alignfull-size ) - #{$grid-total-width - $grid-gutter - $grid-gutter} ) / -2 );
 
 			}
 

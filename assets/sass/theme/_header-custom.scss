@@ -83,39 +83,6 @@
 
 		}
 
-		.content-single {
-
-			.entry-single {
-
-				.alignfull {
-
-					width: 90vw;
-					margin-left: calc( ( 90vw - #{$grid-total-width - $grid-gutter - $grid-gutter} ) / -2 );
-
-				}
-
-			}
-
-		}
-
-		&.single-layout-1 {
-
-			.content-single {
-
-				.entry-single {
-
-					.alignfull {
-
-						margin-left: calc( ( 90vw - #{$grid-small-width} ) / -2 );
-
-					}
-
-				}
-
-			}
-
-		}
-
 	}
 
 }

@@ -13,9 +13,17 @@ body {
 	--font-header: Cambria, Georgia, serif;
 	--font-title: Cambria, Georgia, serif;
 
+	--wp-alignfull-size: 100vw;
+
 	&.dark-mode {
 		--foreground-color: #ffffff;
 		--foreground-contrast-color: #000000;
+	}
+
+	&.header-layout-2 {
+
+		--wp-alignfull-size: 90vw;
+
 	}
 
 }

@@ -28,7 +28,7 @@
 
 				@include for-tablet {
 
-					margin-left: calc( ( 100vw - #{$grid-small-width} ) / -2 );
+					margin-left: calc( ( var( --wp-alignfull-size ) - #{$grid-small-width} ) / -2 );
 
 				}
 

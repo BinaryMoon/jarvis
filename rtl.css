@@ -589,12 +589,6 @@ a.header-image img {
   .header-layout-2 .menu-primary .menu-wrap {
     text-align: right
   }
-  .header-layout-2 .content-single .entry-single .alignfull {
-    margin-right: calc((90vw - 66rem)/ -2)
-  }
-  .header-layout-2.single-layout-1 .content-single .entry-single .alignfull {
-    margin-right: calc((90vw - 44rem)/ -2)
-  }
 }
 #main {
   padding: 0 1.5rem
@@ -674,7 +668,7 @@ a.header-image img {
 }
 @media (min-width:69rem) {
   .content-single .entry-single .alignfull {
-    margin-right: calc((100vw - 66rem)/ -2)
+    margin-right: calc((var(--wp-alignfull-size) - 66rem)/ -2)
   }
 }
 .content-single .entry-meta span {
@@ -702,6 +696,6 @@ a.header-image img {
 }
 @media (min-width:44rem) {
   .single-layout-1 .content-single .entry-single .alignfull {
-    margin-right: calc((100vw - 44rem)/ -2)
+    margin-right: calc((var(--wp-alignfull-size) - 44rem)/ -2)
   }
 }
