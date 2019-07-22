@@ -59,7 +59,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 			'type' => 'radio',
 			'choices' => array(
 				0 => $layout_label,
-				1 => esc_html( 'Center', 'jarvis' ),
+				1 => esc_html__( 'Center', 'jarvis' ),
 			),
 		)
 	);
