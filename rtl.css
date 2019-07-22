@@ -589,6 +589,12 @@ a.header-image img {
   .header-layout-2 .menu-primary .menu-wrap {
     text-align: right
   }
+  .header-layout-2 .content-single .entry-single .alignfull {
+    margin-right: calc((90vw - 66rem)/ -2)
+  }
+  .header-layout-2.single-layout-1 .content-single .entry-single .alignfull {
+    margin-right: calc((90vw - 44rem)/ -2)
+  }
 }
 #main {
   padding: 0 1.5rem

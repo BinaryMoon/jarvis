@@ -3186,6 +3186,7 @@ a.header-image img {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: reverse;
 		flex-direction: row-reverse;
+		z-index: 75;
 	}
 	.header-layout-2 .branding > * {
 		-webkit-writing-mode: vertical-rl;
@@ -3197,6 +3198,13 @@ a.header-image img {
 	}
 	.header-layout-2 .menu-primary .menu-wrap {
 		text-align: left;
+	}
+	.header-layout-2 .content-single .entry-single .alignfull {
+		width: 90vw;
+		margin-left: calc( ( 90vw - 66rem ) / -2);
+	}
+	.header-layout-2.single-layout-1 .content-single .entry-single .alignfull {
+		margin-left: calc( ( 90vw - 44rem ) / -2);
 	}
 }
 
