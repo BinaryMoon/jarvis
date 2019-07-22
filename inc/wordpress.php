@@ -59,7 +59,12 @@ add_action( 'wp_enqueue_scripts', 'jarvis_enqueue' );
 function jarvis_editor_blocks_styles() {
 
 	// Load the theme styles within Gutenberg.
-	wp_enqueue_style( 'jarvis-editor-blocks', get_theme_file_uri( '/assets/css/editor-blocks.css' ), null, '1.2' );
+	wp_enqueue_style(
+		'jarvis-editor-blocks',
+		get_theme_file_uri( '/assets/css/editor-blocks.css' ),
+		null,
+		jarvis_get_theme_version( '/assets/css/editor-blocks.css' )
+	);
 
 	// Add custom properties for the block editor.
 	wp_add_inline_style( 'jarvis-editor-blocks', jarvis_get_block_styles() );
