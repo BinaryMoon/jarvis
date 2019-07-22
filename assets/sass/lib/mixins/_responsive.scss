@@ -37,6 +37,14 @@
 
 }
 
+@mixin for-width( $min_width ) {
+
+	@media ( min-width: #{$min_width} ) {
+		@content;
+	}
+
+}
+
 @mixin for-print {
 
 	@media print {
