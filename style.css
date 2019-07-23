@@ -28,7 +28,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *    1.4 - Vertical Rhythm
  *    1.5 - Forms
  *    1.6 - HTML Elements
- *    1.7 - Animations
  * 2.0 - WordPress
  *    2.1 - Required Elements
  *    2.2 - Accessibility
@@ -925,95 +924,6 @@ pre {
 
 pre.compress {
 	max-height: 22.5rem;
-}
-
-/*!
- * 1.7 - Animations
- * Use with: @include animation( animationName duration );
- * eg: @include animation( fade-in 0.3s );
- */
-@-webkit-keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes slide-from-right {
-	0% {
-		-webkit-transform: translateX(2rem);
-		transform: translateX(2rem);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
-@keyframes slide-from-right {
-	0% {
-		-webkit-transform: translateX(2rem);
-		transform: translateX(2rem);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
-@-webkit-keyframes slide-from-left {
-	0% {
-		-webkit-transform: translateX(-2rem);
-		transform: translateX(-2rem);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
-@keyframes slide-from-left {
-	0% {
-		-webkit-transform: translateX(-2rem);
-		transform: translateX(-2rem);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
-@-webkit-keyframes slide-from-top {
-	0% {
-		-webkit-transform: translateY(-100%);
-		transform: translateY(-100%);
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-	}
-}
-
-@keyframes slide-from-top {
-	0% {
-		-webkit-transform: translateY(-100%);
-		transform: translateY(-100%);
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-	}
 }
 
 /*!
@@ -2484,16 +2394,6 @@ body .jetpack-social-navigation ul {
 	line-height: 1;
 }
 
-.woocommerce .the-content {
-	padding: 0;
-	width: 100%;
-	float: none;
-}
-
-.woocommerce .the-content p {
-	margin: 0;
-}
-
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
 	border-radius: 0.2rem 0.2rem 0 0;
 }
@@ -2742,11 +2642,6 @@ p.demo_store {
 	margin-bottom: 0.75rem;
 }
 
-.content-posts article.entry.post-loaded {
-	-webkit-animation: fade-in 0.5s;
-	animation: fade-in 0.5s;
-}
-
 .content-posts .entry-archive p:last-of-type {
 	margin-bottom: 0;
 }
@@ -2796,6 +2691,18 @@ p.demo_store {
 
 .content-posts .category-description p:last-child {
 	margin-bottom: 0;
+}
+
+/**
+ * Center header.
+ */
+.archive-layout-1 .entry-archive-header {
+	text-align: center;
+}
+
+.archive-layout-1 .category-description {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*!

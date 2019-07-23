@@ -136,66 +136,6 @@ table td {
 pre {
   padding: 1.5rem 1.5rem
 }
-@-webkit-keyframes slide-from-right {
-  0% {
-    -webkit-transform: translateX(-2rem);
-    transform: translateX(-2rem)
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0)
-  }
-}
-@keyframes slide-from-right {
-  0% {
-    -webkit-transform: translateX(-2rem);
-    transform: translateX(-2rem)
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0)
-  }
-}
-@-webkit-keyframes slide-from-left {
-  0% {
-    -webkit-transform: translateX(2rem);
-    transform: translateX(2rem)
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0)
-  }
-}
-@keyframes slide-from-left {
-  0% {
-    -webkit-transform: translateX(2rem);
-    transform: translateX(2rem)
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0)
-  }
-}
-@-webkit-keyframes slide-from-top {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%)
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0)
-  }
-}
-@keyframes slide-from-top {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%)
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0)
-  }
-}
 .wp-caption {
   margin: 0 0 3rem 0
 }
@@ -525,6 +465,10 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 }
 .content-posts article.entry .read-more {
   padding: .75rem 0
+}
+.archive-layout-1 .category-description {
+  margin-right: auto;
+  margin-left: auto
 }
 .content-comments {
   padding: 3rem 0
