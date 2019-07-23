@@ -397,7 +397,7 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
   margin-right: 0
 }
 .entry-breadcrumbs a:after {
-  margin: 0 1.5rem
+  margin: 0 .75rem
 }
 form.contact-form div label span {
   padding: 0 .75rem
@@ -514,7 +514,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
   margin: 1.5rem 1.5rem
 }
 .site-header .menu {
-  padding: 0 1.5rem
+  margin: 0 1.5rem
 }
 a.header-image img {
   margin: 0 auto
@@ -566,8 +566,8 @@ a.header-image img {
   .menu-primary .menu-wrap .sub-menu {
     padding-right: 1.5rem
   }
-  .menu-primary > .menu-wrap > li.menu-item-has-children > a {
-    margin-left: -.5em
+  .menu-primary > .menu-wrap > li.menu-item-has-children:after {
+    left: .75em
   }
   .menu-primary > .menu-wrap > li.menu-item-has-children.focus > .sub-menu,
   .menu-primary > .menu-wrap > li.menu-item-has-children:focus > .sub-menu,

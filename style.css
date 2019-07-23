@@ -2192,7 +2192,7 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1
 .entry-breadcrumbs a:after {
 	content: '\25B6';
 	font-family: var(--font-monospace);
-	margin: 0 1.5rem;
+	margin: 0 0.75rem;
 	font-size: 10px;
 }
 
@@ -3040,7 +3040,7 @@ blockquote p:last-child {
 }
 
 .site-header .menu {
-	padding: 0 1.5rem;
+	margin: 0 1.5rem;
 	-webkit-box-flex: 2;
 	flex-grow: 2;
 }
@@ -3233,9 +3233,9 @@ a.header-image img {
 		font-family: var(--font-monospace);
 		content: "\25BC";
 		font-size: 12px;
-	}
-	.menu-primary > .menu-wrap > li.menu-item-has-children > a {
-		margin-right: -0.5em;
+		position: absolute;
+		right: 0.75em;
+		top: 30%;
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children > .sub-menu {
 		display: none;
