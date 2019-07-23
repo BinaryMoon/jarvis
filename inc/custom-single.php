@@ -56,7 +56,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		'jarvis_single_layout',
 		array(
-			'label' => esc_html__( 'Page Layout', 'jarvis' ),
+			'label' => esc_html__( 'Alignment', 'jarvis' ),
 			'section' => 'jarvis_single',
 			'type' => 'radio',
 			'choices' => array(
