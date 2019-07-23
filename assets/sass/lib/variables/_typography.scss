@@ -5,13 +5,6 @@ $font-size: ( ( $font-base / 16 ) * 100 ) !default;
 $font-weight: normal !default;
 $font-uppercase-spacing: 0.1em !default;
 
-// different font families
-$font-family-sans: "Merriweather Sans", sans-serif !default;
-$font-family-serif: "Merriweather", serif !default;
-$font-family-monospace: "andale mono", "monotype.com", "lucida console", monospace !default;
-$font-family-body: $font-family-serif !default;
-$font-family-header: $font-family-sans !default;
-
 // default line height
 $line-height: 1.75 !default;
 
