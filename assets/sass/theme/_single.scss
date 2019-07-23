@@ -55,8 +55,12 @@
 
 		.alignwide {
 
+			// If the page is narrower than the container then use 100vw (the
+			// available space) - the gutter.
 			width: calc( var( --wp-alignfull-size ) - #{$grid-gutter * 2} );
 
+			// If the page is wider than the container then use the width of the
+			// container minus the gutter.
 			@include for-big-tablet {
 
 				width: ( $grid-total-width - ( $grid-gutter * 2 ) );
