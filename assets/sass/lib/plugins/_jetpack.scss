@@ -269,7 +269,9 @@ div.jetpack-testimonial-shortcode {
 		&:after {
 
 			content: '\25B6';
+			font-family: var( --font-monospace );
 			margin: 0 $grid-gutter;
+			font-size: 10px;
 
 		}
 

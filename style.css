@@ -164,7 +164,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: "andale mono", "monotype.com", "lucida console", monospace;
+	font-family: var(--font-monospace);
 	font-size: 0.9em;
 }
 
@@ -343,6 +343,7 @@ body {
 	--font-body: Cambria, Georgia, serif;
 	--font-header: Cambria, Georgia, serif;
 	--font-title: Cambria, Georgia, serif;
+	--font-monospace: "andale mono", "monotype.com", "lucida console", monospace;
 	--wp-alignfull-size: 100vw;
 }
 
@@ -2190,7 +2191,9 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1
 
 .entry-breadcrumbs a:after {
 	content: '\25B6';
+	font-family: var(--font-monospace);
 	margin: 0 1.5rem;
+	font-size: 10px;
 }
 
 form.contact-form div label.grunion-radio-label, form.contact-form div label.grunion-checkbox-multiple-label {
@@ -3227,8 +3230,9 @@ a.header-image img {
 		display: inline;
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children:after {
+		font-family: var(--font-monospace);
 		content: "\25BC";
-		font-size: 10px;
+		font-size: 12px;
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children > a {
 		margin-right: -0.5em;

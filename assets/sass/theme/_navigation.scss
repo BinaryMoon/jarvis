@@ -148,8 +148,9 @@
 
 					&:after {
 
+						font-family: var( --font-monospace );
 						content: "\25BC";
-						font-size: 10px;
+						font-size: 12px;
 
 					}
 
