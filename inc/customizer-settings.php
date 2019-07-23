@@ -40,7 +40,12 @@ function jarvis_customizer_settings( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Add panels in the order they should appear.
+	 */
 	jarvis_customizer_header( $wp_customize );
+
+	jarvis_customizer_archive( $wp_customize );
 
 	jarvis_customizer_single( $wp_customize );
 

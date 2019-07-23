@@ -83,6 +83,9 @@ require get_parent_theme_file_path( 'inc/custom-site-header.php' );
 // Custom single post layout.
 require get_parent_theme_file_path( 'inc/custom-single.php' );
 
+// Custom single post layout.
+require get_parent_theme_file_path( 'inc/custom-archive.php' );
+
 // Custom fonts.
 require get_parent_theme_file_path( 'inc/custom-fonts.php' );
 

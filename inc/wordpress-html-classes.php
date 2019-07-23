@@ -30,6 +30,9 @@ function jarvis_body_class( $classes ) {
 	// Single post layout.
 	$classes[] = 'single-layout-' . get_theme_mod( 'jarvis_single_layout', 0 );
 
+	// Archive layout.
+	$classes[] = 'archive-layout-' . get_theme_mod( 'jarvis_archive_layout', 0 );
+
 	// Header layout.
 	$classes[] = 'header-layout-' . get_theme_mod( 'jarvis_header_layout', 0 );
 
