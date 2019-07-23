@@ -37,6 +37,7 @@ function jarvis_customizer_settings( WP_Customize_Manager $wp_customize ) {
 		'jarvis_site_layout',
 		array(
 			'title' => esc_html__( 'Site Layout', 'jarvis' ),
+			'priority' => 55,
 		)
 	);
 
@@ -51,80 +52,6 @@ function jarvis_customizer_settings( WP_Customize_Manager $wp_customize ) {
 
 	jarvis_customizer_credits( $wp_customize );
 	jarvis_register_customize_refresh_credits( $wp_customize );
-
-
-	/**
-	 * Jarvis theme options section.
-	 */
-	$wp_customize->add_section(
-		'jarvis_options',
-		array(
-			'title' => esc_html__( 'Theme Options', 'jarvis' ),
-		)
-	);
-
-	/**
-	 * Setting to allow the categories under the header to be hidden.
-	 */
-	$wp_customize->add_setting(
-		'jarvis_display_category_summaries',
-		array(
-			'default' => true,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_checkbox',
-		)
-	);
-
-	$wp_customize->add_control(
-		'jarvis_display_category_summaries',
-		array(
-			'label' => esc_html__( 'Display Category Summaries', 'jarvis' ),
-			'section' => 'jarvis_options',
-			'type' => 'checkbox',
-		)
-	);
-
-	/**
-	 * Setting to allow the categories under the header to be hidden
-	 */
-	$wp_customize->add_setting(
-		'jarvis_display_date_social',
-		array(
-			'default' => true,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_checkbox',
-		)
-	);
-
-	$wp_customize->add_control(
-		'jarvis_display_date_social',
-		array(
-			'label' => esc_html__( 'Display Date and Social Links in Header', 'jarvis' ),
-			'section' => 'jarvis_options',
-			'type' => 'checkbox',
-		)
-	);
-
-	/**
-	 * Setting to control whether the slider autoplays or not.
-	 */
-	$wp_customize->add_setting(
-		'jarvis_autoplay_slider',
-		array(
-			'default' => false,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_checkbox',
-		)
-	);
-
-	$wp_customize->add_control(
-		'jarvis_autoplay_slider',
-		array(
-			'label' => esc_html__( 'Autoplay the Featured Content Slider', 'jarvis' ),
-			'section' => 'jarvis_options',
-			'type' => 'checkbox',
-		)
-	);
 
 }
 
