@@ -24,6 +24,7 @@ Jarvis comes bundled with a number of page templates. These can be used as follo
 * __Contributors__ - A list of all the people (users) who have contributed content (published at least one post) to your website, their most recent posts, and a link to their user archive.
 * __Child Page Grid__ - Lists all of the pages that are children of the current page. Handy if you have a complex site hierachy.
 * __Portfolio__ - Displays your most recent portfolio posts. Requires the Jetpack plugin. Allows you to add portfolio posts to your website homepage.
+* __Full-Width__ - Stretch the content across the entire available space. This is best for pages using a page builder or more advanced Gutenberg blocks.
 
 == Footer Credits ==
 
