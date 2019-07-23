@@ -151,12 +151,9 @@
 						font-family: var( --font-monospace );
 						content: "\25BC";
 						font-size: 12px;
-
-					}
-
-					> a {
-
-						margin-right: -0.5em;
+						position: absolute;
+						right: 0.75em;
+						top: 30%;
 
 					}
 
