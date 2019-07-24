@@ -25,7 +25,8 @@
 
 		display: flex;
 		flex-direction: column;
-		padding: ( $grid-line-height ) 0;
+		margin-top: $grid-line-height;
+		margin-bottom: $grid-line-height;
 
 		@include for-tablet {
 
@@ -38,11 +39,13 @@
 
 	.custom-logo-link {
 
-		background: black;
+		flex-grow: 1;
+		margin-left: $grid-gutter;
+		margin-right: $grid-gutter;
+		max-width: calc( 15% + #{$grid-gutter * 2});
 
 		img {
 
-			max-height: 3rem;
 			width: auto;
 			display: block;
 
@@ -52,12 +55,13 @@
 
 	.branding {
 
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+		margin: ( $grid-line-height ) ( $grid-gutter );
+		flex-grow: 1;
 
 		.site-title a,
 		.site-title {
 
-			font-family: $font-family-header;
+			font-family: var(--font-title);
 			@include modular-scale( delta, 1.2 );
 			font-weight: bold;
 			margin: 0;
@@ -89,8 +93,8 @@
 
 	.menu {
 
-		padding: 0 ( $grid-gutter );
-		width: 100%;
+		margin: 0 ( $grid-gutter );
+		flex-grow: 2;
 
 	}
 

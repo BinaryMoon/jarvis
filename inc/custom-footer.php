@@ -2,7 +2,9 @@
 /**
  * Allow users to edit footer credits.
  *
- * @package jarvis
+ * @package Jarvis
+ * @author Ben Gillbanks <ben@prothemedesign.com>
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
 /**
@@ -12,6 +14,23 @@
  */
 function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 
+	$default_footer = '(privacy)(|)Pro Theme Design(|)(top)';
+
+	$description = array(
+		'<p>' . __( 'The footer credits area supports <strong>HTML</strong>. It also supports the following tags:', 'jarvis' ) . '</p>',
+		'<ul>',
+		'<li>' . __( '<strong>(c)</strong>: the copyright symbol &copy;', 'jarvis' ) . '</li>',
+		'<li>' . __( '<strong>(year)</strong>: the current year. Updates automatically', 'jarvis' ) . '</li>',
+		'<li>' . __( '<strong>(|)</strong>: add a gap between items', 'jarvis' ) . '</li>',
+		'<li>' . __( '<strong>(privacy)</strong>: a privacy policy link', 'jarvis' ) . '</li>',
+		'<li>' . __( '<strong>(top)</strong>: a "back to top" link', 'jarvis' ) . '</li>',
+		'</ul>',
+		'<p>' . sprintf( __( 'The default theme footer can be reproduced with:<br /><strong>%s</strong>', 'jarvis' ), $default_footer ) . '</p>',
+		'<p class="section-description-buttons">',
+		'<button type="button" class="button-link section-description-close">' . __( 'Close', 'jarvis' ) . '</button>',
+		'</p>',
+	);
+
 	/**
 	 * Jarvis theme options section.
 	 */
@@ -19,6 +38,9 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 		'jarvis_credits',
 		array(
 			'title' => esc_html__( 'Footer Credits', 'jarvis' ),
+			'description' => implode( $description, '' ),
+			'description_hidden' => true,
+			'panel' => 'jarvis_site_layout',
 		)
 	);
 
@@ -68,9 +90,6 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 
 }
 
-add_action( 'customize_register', 'jarvis_customizer_credits' );
-
-
 
 /**
  * Update Credits without doing a full page refresh.
@@ -90,7 +109,7 @@ function jarvis_register_customize_refresh_credits( WP_Customize_Manager $wp_cus
 	$wp_customize->selective_refresh->add_partial(
 		'jarvis_credits_content',
 		array(
-			'selector' => 'section.footer-wrap',
+			'selector' => '.site-info',
 			'render_callback' => function() {
 				jarvis_credits_content( false );
 			},
@@ -98,8 +117,6 @@ function jarvis_register_customize_refresh_credits( WP_Customize_Manager $wp_cus
 	);
 
 }
-
-add_action( 'customize_register', 'jarvis_register_customize_refresh_credits' );
 
 
 /**
@@ -137,6 +154,7 @@ function jarvis_credits_content( $wrapper = true ) {
 function jarvis_credits_get_content() {
 
 	$separator = '<span role="separator" aria-hidden="true" class="sep"></span>';
+	$top_link = '<a href="#header">' . esc_html__( 'Top', 'jarvis' ) . '</a>';
 
 	$contents = get_theme_mod( 'jarvis_credits_content', '' );
 
@@ -144,7 +162,10 @@ function jarvis_credits_get_content() {
 	$contents = str_ireplace( '(C)', '&copy;', $contents );
 	$contents = str_ireplace( '(|)', $separator, $contents );
 	$contents = str_ireplace( '(SEP)', $separator, $contents );
+	$contents = str_ireplace( '(TOP)', $top_link, $contents );
 	$contents = str_ireplace( '(PRIVACY)', get_the_privacy_policy_link(), $contents );
+
+	$contents = apply_filters( 'jarvis_footer_content', $contents );
 
 	return wp_kses_post( $contents );
 

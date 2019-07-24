@@ -77,6 +77,18 @@ require get_parent_theme_file_path( 'inc/custom-header.php' );
 // Custom footer. To allow for custom credits/ copyright info.
 require get_parent_theme_file_path( 'inc/custom-footer.php' );
 
+// Custom header layout.
+require get_parent_theme_file_path( 'inc/custom-site-header.php' );
+
+// Custom single post layout.
+require get_parent_theme_file_path( 'inc/custom-single.php' );
+
+// Custom single post layout.
+require get_parent_theme_file_path( 'inc/custom-archive.php' );
+
+// Custom fonts.
+require get_parent_theme_file_path( 'inc/custom-fonts.php' );
+
 // Reusable Template Functions.
 require get_parent_theme_file_path( 'inc/template-tags.php' );
 

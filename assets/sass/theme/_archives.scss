@@ -21,7 +21,7 @@
 
 				margin-top: ( $grid-line-height / 5 );
 
-				span {
+				.edit-link {
 
 					display: block;
 
@@ -131,12 +131,6 @@
 				margin-bottom: $grid-line-height / 2;
 
 			}
-
-		}
-
-		&.post-loaded {
-
-			@include animation( fade-in 0.5s );
 
 		}
 

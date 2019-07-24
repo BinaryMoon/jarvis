@@ -12,6 +12,7 @@ html {
 body {
 
 	@include modular-scale( epsilon );
+	font-family: $font-family-body;
 
 }
 

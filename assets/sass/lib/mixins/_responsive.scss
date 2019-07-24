@@ -7,7 +7,7 @@
 
 @mixin for-tablet {
 
-	@media ( min-width: $wp-responsive-width-2 ) {
+	@media ( min-width: #{$grid-small-width} ) {
 		@content;
 	}
 
@@ -32,6 +32,14 @@
 @mixin for-big-desktop {
 
 	@media ( min-width: 1800px ) {
+		@content;
+	}
+
+}
+
+@mixin for-width( $min_width ) {
+
+	@media ( min-width: #{$min_width} ) {
 		@content;
 	}
 

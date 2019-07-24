@@ -23,16 +23,20 @@
 	// depending upon if there is a static front page set.
 	.entry-title {
 
+		letter-spacing: -0.01em;
+		font-weight: bold;
+
 		@include for-tablet {
+
 			@include modular-scale( alpha );
+
 		}
 
 		@include for-desktop {
-			@include modular-scale( mega );
-		}
-		letter-spacing: -0.01em;
 
-		font-weight: bold;
+			@include modular-scale( mega );
+
+		}
 
 	}
 
@@ -51,10 +55,12 @@
 
 		.alignwide {
 
-			width: calc( 100vw - #{$grid-gutter * 2} );
+			width: calc( var( --wp-alignfull-size ) - #{$grid-gutter * 2} );
 
 			@include for-big-tablet {
+
 				width: ( $grid-total-width - ( $grid-gutter * 2 ) );
+
 			}
 
 		}
@@ -62,11 +68,11 @@
 		.alignfull {
 
 			margin-left: -$grid-gutter;
-			width: 100vw;
+			width: var( --wp-alignfull-size );
 
 			@include for-big-tablet {
 
-				margin-left: calc( ( 100vw - #{$grid-total-width - $grid-gutter - $grid-gutter} ) / -2 );
+				margin-left: calc( ( var( --wp-alignfull-size ) - #{$grid-total-width - $grid-gutter - $grid-gutter} ) / -2 );
 
 			}
 
@@ -89,6 +95,7 @@
 	.alignleft {
 
 		transform: translateX( -$grid-gutter );
+
 	}
 
 }

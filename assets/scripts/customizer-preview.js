@@ -52,6 +52,84 @@
 
 } )( jQuery );
 /**
+ * Live updates for the archive customizations.
+ */
+; ( function( $ ) {
+
+	wp.customize.bind(
+		'preview-ready',
+		function() {
+
+			// Edit Archive Layout.
+			wp.customize(
+				'jarvis_archive_layout',
+				function( value ) {
+					value.bind(
+						function( to ) {
+
+							$( 'body' )
+								.removeClass( 'archive-layout-0 archive-layout-1' )
+								.addClass( 'archive-layout-' + to );
+
+						}
+					);
+				}
+			);
+
+		}
+	);
+
+} )( jQuery );
+/**
+ * Live updates for the site description.
+ */
+; ( function( $ ) {
+
+	wp.customize.bind(
+		'preview-ready',
+		function() {
+
+			// Edit Title font.
+			wp.customize(
+				'jarvis_title_font',
+				function( value ) {
+					value.bind(
+						function( to ) {
+							document.body.style.setProperty( '--font-title', jarvis_fonts[ to ][ 1 ] );
+						}
+					);
+				}
+			);
+
+			// Edit Header font.
+			wp.customize(
+				'jarvis_header_font',
+				function( value ) {
+					value.bind(
+						function( to ) {
+							document.body.style.setProperty( '--font-header', jarvis_fonts[ to ][ 1 ] );
+						}
+					);
+				}
+			);
+
+			// Edit Body font.
+			wp.customize(
+				'jarvis_body_font',
+				function( value ) {
+					value.bind(
+						function( to ) {
+							document.body.style.setProperty( '--font-body', jarvis_fonts[ to ][ 1 ] );
+						}
+					);
+				}
+			);
+
+		}
+	);
+
+} )( jQuery );
+/**
  * Live-update changed settings in real time in the Customizer preview.
  *
  * Filename: customizer-preview.js v1
@@ -140,6 +218,123 @@
 
 } )( jQuery );
 
+/**
+ * Live updates for the single post customizations.
+ */
+; ( function( $ ) {
+
+	wp.customize.bind(
+		'preview-ready',
+		function() {
+
+			/**
+			 * Set default values.
+			 */
+			$( '.byline' ).css( 'display', wp.customize( 'jarvis_single_show_author' )() ? 'inline' : 'none' );
+			$( '.posted-on' ).css( 'display', wp.customize( 'jarvis_single_show_date' )() ? 'inline' : 'none' );
+			$( '.content-single .contributor' ).css( 'display', wp.customize( 'jarvis_single_show_author_details' )() ? 'grid' : 'none' );
+
+			// Edit Single Post Layout.
+			wp.customize(
+				'jarvis_single_layout',
+				function( value ) {
+					value.bind(
+						function( to ) {
+
+							$( 'body' )
+								.removeClass( 'single-layout-0 single-layout-1' )
+								.addClass( 'single-layout-' + to );
+
+						}
+					);
+				}
+			);
+
+			wp.customize(
+				'jarvis_single_show_author',
+				function( value ) {
+
+					value.bind(
+						function( to ) {
+
+							$( '.byline' ).css( 'display', to ? 'inline' : 'none' );
+
+						}
+					);
+				}
+			);
+
+			wp.customize(
+				'jarvis_single_show_date',
+				function( value ) {
+
+					value.bind(
+						function( to ) {
+
+							$( '.posted-on' ).css( 'display', to ? 'inline' : 'none' );
+
+						}
+					);
+				}
+			);
+
+			wp.customize(
+				'jarvis_single_show_author_details',
+				function( value ) {
+
+					// $( '.content-single .contributor' ).css( 'display', to ? 'grid' : 'none' );
+
+					value.bind(
+						function( to ) {
+
+							$( '.content-single .contributor' ).css( 'display', to ? 'grid' : 'none' );
+
+						}
+					);
+				}
+			);
+
+		}
+	);
+
+} )( jQuery );
+/**
+ * Live updates for the site description.
+ */
+; ( function( $ ) {
+
+	wp.customize.bind(
+		'preview-ready',
+		function() {
+
+			// Edit Header Layout.
+			wp.customize(
+				'jarvis_header_layout',
+				function( value ) {
+					value.bind(
+						function( to ) {
+
+							var count = 2;
+							var selectors = '';
+
+							for ( i = 0; i <= count; i++ ) {
+								selectors += ' header-layout-' + i;
+							}
+
+							$( 'body' )
+								.removeClass( selectors )
+								.addClass( 'header-layout-' + to );
+
+						}
+					);
+				}
+			);
+
+
+		}
+	);
+
+} )( jQuery );
 /**
  * Add a customizer-preview class to the html element.
  *

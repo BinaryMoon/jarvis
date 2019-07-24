@@ -2,125 +2,12 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-2
+Version: 1.0.alpha-5
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
 Domain Path: /languages/
-Tags:
-
-black, white, yellow, one-column, three-columns, responsive-layout
-
-, accessibility-ready
-, author-bio
-, blog-excerpts
-, breadcrumb-navigation
-, classic-menu
-, custom-background
-, custom-colors
-, custom-header
-, custom-menu
-, editor-style
-, featured-content-with-pages
-, featured-images
-, featured-image-header
-, flexible-header
-, front-page-post-form
-, full-width-template
-, microformats
-, multiple-menus
-, post-formats
-, post-slider
-, rtl-language-support
-, site-logo
-, social-menu
-, sticky-post
-, testimonials
-, theme-options
-, threaded-comments
-, translation-ready
-
-### Subjects
-
-, announcement
-, art
-, artwork
-, blog
-, business
-, cartoon
-, collaboration
-, craft
-, design
-, education
-, fashion
-, food
-, gaming
-, holiday
-, hotel
-, journal
-, lifestream
-, magazine
-, music
-, nature
-, news
-, outdoors
-, photoblogging
-, photography
-, portfolio
-, productivity
-, real-estate
-, school
-, scrapbooking
-, seasonal
-, sports
-, travel
-, tumblelog
-, video
-, wedding
-
-### Styles
-
-, abstract
-, artistic
-, bright
-, clean
-, colorful
-, conservative
-, contemporary
-, curved
-, dark
-, earthy
-, elegant
-, faded
-, flamboyant
-, flowery
-, formal
-, funny
-, futuristic
-, geometric
-, glamorous
-, grungy
-, hand-drawn
-, handcrafted
-, humorous
-, industrial
-, light
-, metallic
-, minimal
-, modern
-, natural
-, paper-made
-, playful
-, professional
-, retro
-, simple
-, sophisticated
-, tech
-, textured
-, traditional
-, urban
-, vibrant
-, whimsical
+Tags: blog, news, entertainment, grid-layout, one-column, accessibility-ready, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
 
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -133,6 +20,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * |_| |_| \___/|_| |_||_\___|_|_|_\___|___/\___/__/_\__, |_||_|
  *                                                   |___/
  * WordPress Themes: https://prothemedesign.com/themes/
+ */
+
+/*!
+ * [TOC]
  */
 
 @import "assets/sass/style.scss";

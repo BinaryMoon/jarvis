@@ -33,6 +33,7 @@ Jarvis allows you to edit or hide the footer credits. If you want to add your ow
 * *(year)* - add the current year. This will update when the year changes, so no more forgetting to change things in the new year!
 * *(|)* - add a gap between bits of footer content.
 * *(privacy)* - add a link to your privacy policy as setup in the privacy section of your WordPress admin.
+* *(top)* - add a link that scrolls the user to the top of the page.
 
 == Frequently Asked Questions ==
 

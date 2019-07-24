@@ -1,0 +1,53 @@
+.jarvis-font-picker {
+
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 1px;
+	max-height: 20rem;
+	overflow-y: scroll;
+	list-style-type: none;
+
+	input[type=radio] {
+
+		display: none;
+
+	}
+
+	label {
+
+		padding: 4px 8px;
+		margin: 0;
+		border-radius: 2px;
+		border: 1px solid transparent;
+		font-size: 2em;
+		line-height: 1.2em;
+		display: block;
+		text-align: center;
+		box-sizing: border-box;
+
+		+ label {
+
+			margin-top: 4px;
+
+		}
+
+		&.selected {
+
+			background: #dddddd;
+			border-color: #999;
+			color: #000000;
+
+		}
+
+		&:hover {
+
+			border-color: #999;
+			cursor: pointer;
+
+		}
+
+	}
+
+}

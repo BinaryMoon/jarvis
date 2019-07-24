@@ -557,7 +557,7 @@ jarvis.ready(
 		menuNoLinks.forEach(
 			function( item ) {
 				item.classList.add( 'menu-no-href' );
-				item.setAttribute( 'hreg', '#' );
+				item.setAttribute( 'href', '#' );
 			}
 		);
 

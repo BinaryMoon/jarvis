@@ -32,6 +32,12 @@
 		margin: 0;
 		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 
+		@include for-tablet {
+
+			padding: 0;
+
+		}
+
 	}
 
 	// All menus.
@@ -142,14 +148,12 @@
 
 					&:after {
 
+						font-family: var( --font-monospace );
 						content: "\25BC";
-						font-size: 10px;
-
-					}
-
-					> a {
-
-						margin-right: -0.5em;
+						font-size: 12px;
+						position: absolute;
+						right: 0.75em;
+						top: 30%;
 
 					}
 

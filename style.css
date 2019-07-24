@@ -2,125 +2,12 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-2
+Version: 1.0.alpha-5
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
 Domain Path: /languages/
-Tags:
-
-black, white, yellow, one-column, three-columns, responsive-layout
-
-, accessibility-ready
-, author-bio
-, blog-excerpts
-, breadcrumb-navigation
-, classic-menu
-, custom-background
-, custom-colors
-, custom-header
-, custom-menu
-, editor-style
-, featured-content-with-pages
-, featured-images
-, featured-image-header
-, flexible-header
-, front-page-post-form
-, full-width-template
-, microformats
-, multiple-menus
-, post-formats
-, post-slider
-, rtl-language-support
-, site-logo
-, social-menu
-, sticky-post
-, testimonials
-, theme-options
-, threaded-comments
-, translation-ready
-
-### Subjects
-
-, announcement
-, art
-, artwork
-, blog
-, business
-, cartoon
-, collaboration
-, craft
-, design
-, education
-, fashion
-, food
-, gaming
-, holiday
-, hotel
-, journal
-, lifestream
-, magazine
-, music
-, nature
-, news
-, outdoors
-, photoblogging
-, photography
-, portfolio
-, productivity
-, real-estate
-, school
-, scrapbooking
-, seasonal
-, sports
-, travel
-, tumblelog
-, video
-, wedding
-
-### Styles
-
-, abstract
-, artistic
-, bright
-, clean
-, colorful
-, conservative
-, contemporary
-, curved
-, dark
-, earthy
-, elegant
-, faded
-, flamboyant
-, flowery
-, formal
-, funny
-, futuristic
-, geometric
-, glamorous
-, grungy
-, hand-drawn
-, handcrafted
-, humorous
-, industrial
-, light
-, metallic
-, minimal
-, modern
-, natural
-, paper-made
-, playful
-, professional
-, retro
-, simple
-, sophisticated
-, tech
-, textured
-, traditional
-, urban
-, vibrant
-, whimsical
+Tags: blog, news, entertainment, grid-layout, one-column, accessibility-ready, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
 
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -134,10 +21,50 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * WordPress Themes: https://prothemedesign.com/themes/
  */
 /*!
- * # - CSS Library
+ * 1.0 - CSS Library
+ *    1.1 - CSS Reset
+ *    1.2 - Custom Properties
+ *    1.3 - Typography
+ *    1.4 - Vertical Rhythm
+ *    1.5 - Forms
+ *    1.6 - HTML Elements
+ * 2.0 - WordPress
+ *    2.1 - Required Elements
+ *    2.2 - Accessibility
+ *    2.3 - Blocks
+ *    2.4 - WordPress.com Specific Styles
+ *    2.5 - Widgets
+ *    2.6 - Gallery
+ *    2.7 - Calendar
+ *    2.8 - Password Required Form
+ *    2.9 - Comments
+ *    2.10 - Search Form
+ *    2.11 - Embeds
+ *    2.12 - Sticky Posts
+ * 3.0 - Plugins
+ *    3.1 - Akismet
+ *    3.2 - Jetpack
+ *    3.3 - WooCommerce
+ *    3.4 - WP Post Series
+ * 4.0 - Theme Layout
+ *    4.1 - Archives and Excerpts.
+ *    4.2 - Blocks
+ *    4.3 - Comments
+ *    4.4 - Elements
+ *    4.5 - Footer
+ *    4.6 - General Properties
+ *    4.7 - Header
+ *    4.8 - Main content.
+ *    4.9 - Navigation
+ *    4.10 - Numbered Pagination
+ *    4.11 - Pagination
+ *    4.12 - Body
  */
 /*!
- * ## - CSS Reset
+ * 1.0 - CSS Library
+ */
+/*!
+ * 1.1 - CSS Reset
  * Set HTML styles to sensible defaults
  * loosely based on normalize.css, with a number of customisations
  */
@@ -237,7 +164,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family: "andale mono", "monotype.com", "lucida console", monospace;
+	font-family: var(--font-monospace);
 	font-size: 0.9em;
 }
 
@@ -275,10 +202,6 @@ img {
 	max-width: 100%;
 	height: auto;
 	border: 0;
-	font-family: Cambria, Georgia, serif;
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1.75;
 }
 
 fieldset {
@@ -411,28 +334,33 @@ svg path {
 }
 
 /*!
- * ## - Custom Properties
+ * 1.2 - Custom Properties
  */
 body {
-	--foreground-color: #000;
-	--foreground-contrast-color: #fff;
-	--background-color: #ff9;
+	--foreground-color: #000000;
+	--foreground-contrast-color: #ffffff;
+	--background-color: #ffff99;
+	--font-body: Cambria, Georgia, serif;
+	--font-header: Cambria, Georgia, serif;
+	--font-title: Cambria, Georgia, serif;
+	--font-monospace: "andale mono", "monotype.com", "lucida console", monospace;
+	--wp-alignfull-size: 100vw;
 }
 
 body.dark-mode {
-	--foreground-color: #fff;
-	--foreground-contrast-color: #000;
+	--foreground-color: #ffffff;
+	--foreground-contrast-color: #000000;
 }
 
 /*!
- * ## - Typography
+ * 1.3 - Typography
  */
 html {
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
 	font-weight: normal;
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-body);
 	direction: ltr;
 	-webkit-font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
 	font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
@@ -446,6 +374,7 @@ body {
 	font-size: 20px;
 	font-size: 1.25rem;
 	line-height: 1.5;
+	font-family: var(--font-body);
 }
 
 h1,
@@ -454,7 +383,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-header);
 	font-weight: normal;
 }
 
@@ -519,7 +448,7 @@ h5,
 h6 {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 }
 
@@ -529,7 +458,7 @@ hr {
 }
 
 /*!
- * ## - Vertical Rhythm
+ * 1.4 - Vertical Rhythm
  */
 h1,
 h2,
@@ -550,7 +479,7 @@ pre {
 }
 
 /*!
- * ## - Forms
+ * 1.5 - Forms
  */
 input.radio {
 	margin-right: 0.5em;
@@ -818,7 +747,7 @@ button {
 	text-align: center;
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 }
 
 .device-click input[type=submit], .device-click
@@ -870,7 +799,7 @@ fieldset ul.radio {
 }
 
 /*!
- * ## - HTML Elements
+ * 1.6 - HTML Elements
  */
 /* lists */
 ol,
@@ -910,7 +839,7 @@ blockquote {
 	padding: 0 1.5rem;
 	margin: 3rem 0;
 	overflow: hidden;
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-body);
 	font-style: italic;
 }
 
@@ -922,7 +851,7 @@ blockquote small,
 blockquote cite {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: normal;
 	letter-spacing: 0.05em;
 	font-style: normal;
@@ -958,7 +887,7 @@ table th,
 table caption {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -999,99 +928,10 @@ pre.compress {
 }
 
 /*!
- * ## - Animations
- * Use with: @include animation( animationName duration );
- * eg: @include animation( fade-in 0.3s );
- */
-@-webkit-keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes slide-from-right {
-	0% {
-		-webkit-transform: translateX(2rem);
-		transform: translateX(2rem);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
-@keyframes slide-from-right {
-	0% {
-		-webkit-transform: translateX(2rem);
-		transform: translateX(2rem);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
-@-webkit-keyframes slide-from-left {
-	0% {
-		-webkit-transform: translateX(-2rem);
-		transform: translateX(-2rem);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
-@keyframes slide-from-left {
-	0% {
-		-webkit-transform: translateX(-2rem);
-		transform: translateX(-2rem);
-	}
-	100% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
-}
-
-@-webkit-keyframes slide-from-top {
-	0% {
-		-webkit-transform: translateY(-100%);
-		transform: translateY(-100%);
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-	}
-}
-
-@keyframes slide-from-top {
-	0% {
-		-webkit-transform: translateY(-100%);
-		transform: translateY(-100%);
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-	}
-}
-
-/*!
- * # - WordPress
+ * 2.0 - WordPress
  */
 /*!
- * ## - Required Elements
+ * 2.1 - Required Elements
  * Uses the defaults listed on the Codex (https://codex.wordpress.org/CSS)
  */
 .wp-caption {
@@ -1137,9 +977,9 @@ blockquote.alignleft, blockquote.alignright {
 	margin-right: 0;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	blockquote.alignleft, blockquote.alignright {
-		max-width: 40%;
+		max-width: 45%;
 	}
 }
 
@@ -1175,7 +1015,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /*!
- * ## - Accessibility
+ * 2.2 - Accessibility
  */
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -1234,7 +1074,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /*!
- * ## - Blocks
+ * 2.3 - Blocks
  */
 p.wp-block-subhead {
 	font-size: 20px;
@@ -1275,7 +1115,7 @@ p.wp-block-subhead {
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: normal;
 	letter-spacing: 0.05em;
 	font-style: normal;
@@ -1322,7 +1162,7 @@ p.wp-block-subhead {
 
 .wp-block-image {
 	margin-bottom: 3rem;
-	max-width: 100vw;
+	max-width: var(--wp-alignfull-size);
 }
 
 .wp-block-image img {
@@ -1358,7 +1198,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - WordPress.com Specific Styles
+ * 2.4 - WordPress.com Specific Styles
  */
 .PDS_Poll {
 	max-width: 100%;
@@ -1401,7 +1241,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Widgets
+ * 2.5 - Widgets
  */
 .widget {
 	overflow: hidden;
@@ -1621,7 +1461,7 @@ p.wp-block-subhead {
 .widget.widget_rss li .rss-date {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1659,7 +1499,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Gallery
+ * 2.6 - Gallery
  * Default styles for the [gallery] shortcode
  */
 .gallery {
@@ -1765,7 +1605,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Calendar
+ * 2.7 - Calendar
  */
 #wp-calendar {
 	margin: 0;
@@ -1789,7 +1629,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Password Required Form
+ * 2.8 - Password Required Form
  */
 .post-password-required form {
 	margin-bottom: 3rem;
@@ -1810,7 +1650,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Comments
+ * 2.9 - Comments
  */
 .content-comments ol.comment-list {
 	list-style-type: none;
@@ -1846,7 +1686,7 @@ p.wp-block-subhead {
 .content-comments ol.comment-list li.comment #respond #cancel-comment-reply-link {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1874,7 +1714,7 @@ p.wp-block-subhead {
 .content-comments ol.comment-list li.comment footer .comment-metadata {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1966,7 +1806,7 @@ p.wp-block-subhead {
 .content-comments ol.comment-list .edit-link {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2026,7 +1866,7 @@ p.wp-block-subhead {
 #respond p.logged-in-as {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2073,7 +1913,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * ## - Search Form
+ * 2.10 - Search Form
  */
 form.search-form {
 	position: relative;
@@ -2110,7 +1950,7 @@ form.search-form button.search-submit:focus, form.search-form button.search-subm
 }
 
 /*!
- * ## - Embeds
+ * 2.11 - Embeds
  */
 iframe[src*="8tracks.com"], iframe[src*="bandcamp.com"], iframe[src*="dailymotion.com"], iframe[src*="itchi.io"], iframe[src*="slideshare.net"], iframe[src*="soundcloud.com"], iframe[src*="viddler.com"], iframe[src*="videopress.com"], iframe.twitter-tweet, iframe.twitter-follow-button {
 	display: block;
@@ -2144,29 +1984,29 @@ p > object:only-child {
 }
 
 /*!
- * ## - Sticky Posts
+ * 2.12 - Sticky Posts
  */
 .sticky .post-meta-data .posted-on {
 	display: none;
 }
 
 /*!
- * # - Plugins
+ * 3.0 - Plugins
  */
 /*!
- * ## - Akismet
+ * 3.1 - Akismet
  */
 .akismet_comment_form_privacy_notice {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
 
 /*!
- * ## - Jetpack
+ * 3.2 - Jetpack
  */
 img#wpstats {
 	position: absolute;
@@ -2204,11 +2044,11 @@ main div#jp-relatedposts h3.sd-title, main div.sharedaddy h3.jp-relatedposts-hea
 main div.sharedaddy h3.sd-title {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-header);
 	margin: 0 0 0.75rem 0;
 	display: block;
 	font-weight: bold;
@@ -2249,7 +2089,7 @@ main div#jp-relatedposts {
 #jp-relatedposts .jp-relatedposts-post-title {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	margin: 0;
 }
 
@@ -2261,7 +2101,7 @@ main div#jp-relatedposts {
 #jp-relatedposts .jp-relatedposts-post-date {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2351,7 +2191,9 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1
 
 .entry-breadcrumbs a:after {
 	content: '\25B6';
-	margin: 0 1.5rem;
+	font-family: var(--font-monospace);
+	margin: 0 0.75rem;
+	font-size: 10px;
 }
 
 form.contact-form div label.grunion-radio-label, form.contact-form div label.grunion-checkbox-multiple-label {
@@ -2417,7 +2259,7 @@ body .jetpack-social-navigation ul {
 }
 
 /*!
- * ## - WooCommerce
+ * 3.3 - WooCommerce
  */
 .woocommerce h1 {
 	font-weight: bold;
@@ -2427,7 +2269,7 @@ body .jetpack-social-navigation ul {
 .woocommerce h2 {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2450,7 +2292,7 @@ body .jetpack-social-navigation ul {
 .woocommerce .product_meta {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2479,7 +2321,7 @@ body .jetpack-social-navigation ul {
 	text-align: center;
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 }
 
 .device-click .woocommerce #respond input#submit, .device-click
@@ -2553,16 +2395,6 @@ body .jetpack-social-navigation ul {
 .woocommerce #coupon_code {
 	max-width: 12em;
 	line-height: 1;
-}
-
-.woocommerce .the-content {
-	padding: 0;
-	width: 100%;
-	float: none;
-}
-
-.woocommerce .the-content p {
-	margin: 0;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
@@ -2699,7 +2531,7 @@ p.demo_store {
 }
 
 /*!
- * ## - WP Post Series
+ * 3.4 - WP Post Series
  */
 .wp-post-series-box {
 	border: 0.2rem solid rgba(0, 0, 0, 0.3);
@@ -2725,10 +2557,10 @@ p.demo_store {
 }
 
 /*!
- * # - Theme Layout
+ * 4.0 - Theme Layout
  */
 /*!
- * ## - Archives and Excerpts.
+ * 4.1 - Archives and Excerpts.
  * Site content, blog posts etc
  */
 .content-posts article.entry {
@@ -2736,7 +2568,7 @@ p.demo_store {
 	margin-bottom: 4.5rem;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.content-posts article.entry {
 		display: grid;
 		grid-template-columns: 15% calc( 35% - 3rem) 50%;
@@ -2745,7 +2577,7 @@ p.demo_store {
 	.content-posts article.entry .post-meta-data {
 		margin-top: 0.3rem;
 	}
-	.content-posts article.entry .post-meta-data span {
+	.content-posts article.entry .post-meta-data .edit-link {
 		display: block;
 	}
 }
@@ -2771,7 +2603,7 @@ p.demo_store {
 	font-weight: bold;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.content-posts article.entry h2.entry-title {
 		margin-bottom: 0;
 	}
@@ -2780,7 +2612,7 @@ p.demo_store {
 .content-posts article.entry .read-more {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2813,11 +2645,6 @@ p.demo_store {
 	margin-bottom: 0.75rem;
 }
 
-.content-posts article.entry.post-loaded {
-	-webkit-animation: fade-in 0.5s;
-	animation: fade-in 0.5s;
-}
-
 .content-posts .entry-archive p:last-of-type {
 	margin-bottom: 0;
 }
@@ -2831,7 +2658,7 @@ p.demo_store {
 	font-weight: bold;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.content-posts .entry-archive-title {
 		font-size: 64px;
 		font-size: 4rem;
@@ -2869,8 +2696,20 @@ p.demo_store {
 	margin-bottom: 0;
 }
 
+/**
+ * Center header.
+ */
+.archive-layout-1 .entry-archive-header {
+	text-align: center;
+}
+
+.archive-layout-1 .category-description {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /*!
- * ## - Blocks
+ * 4.2 - Blocks
  * Block overrides.
  */
 .wp-block-cover, .wp-block-cover-image {
@@ -2879,7 +2718,7 @@ p.demo_store {
 }
 
 /*!
- * ## - Comments
+ * 4.3 - Comments
  * Site content, blog posts etc
  */
 /* comments layout */
@@ -2906,7 +2745,7 @@ p.demo_store {
 .content-comments ol.comment-list li.comment .reply a {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2926,7 +2765,7 @@ p.demo_store {
 }
 
 /*!
- * ## - Elements
+ * 4.4 - Elements
  * Search form, author meta box, and other generic, reusable, elements.
  */
 /* taxonomies - categories and tags on single posts */
@@ -2938,7 +2777,7 @@ p.demo_store {
 .taxonomies .taxonomy {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2962,7 +2801,7 @@ p.demo_store {
 .contributor h2 small {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2985,7 +2824,7 @@ a.thumbnail img {
 .entry-breadcrumbs {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3028,7 +2867,7 @@ a.thumbnail img {
 	margin-bottom: 3rem;
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3045,14 +2884,14 @@ a.thumbnail img {
 .post-meta-data {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
 
 /*!
- * ## - Footer
+ * 4.5 - Footer
  */
 .site-footer {
 	padding: 1.5rem 1.5rem 3rem 1.5rem;
@@ -3064,7 +2903,7 @@ a.thumbnail img {
 }
 
 /*!
- * ## - General Properties
+ * 4.6 - General Properties
  */
 a {
 	color: currentColor;
@@ -3112,13 +2951,13 @@ blockquote p:last-child {
 }
 
 /*!
- * ## - Header
+ * 4.7 - Header
  */
 .site-header {
 	margin-bottom: 3rem;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.site-header {
 		margin-top: 1.5rem;
 		margin-bottom: 6.75rem;
@@ -3138,10 +2977,11 @@ blockquote p:last-child {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	flex-direction: column;
-	padding: 1.5rem 0;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.site-header .site-header-content {
 		-webkit-box-align: center;
 		align-items: center;
@@ -3152,22 +2992,27 @@ blockquote p:last-child {
 }
 
 .site-header .custom-logo-link {
-	background: black;
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+	max-width: calc( 15% + 3rem);
 }
 
 .site-header .custom-logo-link img {
-	max-height: 3rem;
 	width: auto;
 	display: block;
 }
 
 .site-header .branding {
-	padding: 0.75rem 1.5rem;
+	margin: 1.5rem 1.5rem;
+	-webkit-box-flex: 1;
+	flex-grow: 1;
 }
 
 .site-header .branding .site-title a,
 .site-header .branding .site-title {
-	font-family: Cambria, Georgia, serif;
+	font-family: var(--font-title);
 	font-size: 26px;
 	font-size: 1.625rem;
 	line-height: 1.2;
@@ -3187,7 +3032,7 @@ blockquote p:last-child {
 .site-header .branding .site-description {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3195,8 +3040,9 @@ blockquote p:last-child {
 }
 
 .site-header .menu {
-	padding: 0 1.5rem;
-	width: 100%;
+	margin: 0 1.5rem;
+	-webkit-box-flex: 2;
+	flex-grow: 2;
 }
 
 a.header-image {
@@ -3208,8 +3054,77 @@ a.header-image img {
 	margin: 0 auto;
 }
 
+/**
+ * Center Header.
+ */
+.header-layout-1 .site-header .site-header-content {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.header-layout-1 .site-header .branding {
+	text-align: center;
+}
+
+.header-layout-1 .site-header .menu-toggle,
+.header-layout-1 .site-header .menu-primary {
+	width: calc(100% - 3rem);
+}
+
+.header-layout-1 .site-header .menu-primary {
+	padding: 0;
+}
+
+.header-layout-1 .site-header .menu-primary .menu-wrap {
+	text-align: center;
+}
+
+/**
+ * Fixed Sidebar Header.
+ */
+@media (min-width: 44rem) {
+	.header-layout-2 {
+		--wp-alignfull-size: 90vw;
+		padding-left: 10%;
+	}
+	.header-layout-2 .branding {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 10%;
+		padding: 3rem 0.75rem;
+		margin: 0;
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+		text-align: right;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-pack: center;
+		justify-content: center;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		flex-direction: row-reverse;
+		z-index: 75;
+	}
+	.header-layout-2 .branding > * {
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: tb-rl;
+		writing-mode: vertical-rl;
+	}
+	.header-layout-2.admin-bar .branding {
+		top: 32px;
+	}
+	.header-layout-2 .menu-primary .menu-wrap {
+		text-align: left;
+	}
+}
+
 /*!
- * ## - Main content.
+ * 4.8 - Main content.
  * This is where the post or page content will be displayed.
  */
 #main {
@@ -3217,7 +3132,7 @@ a.header-image img {
 }
 
 /*!
- * ## - Navigation
+ * 4.9 - Navigation
  * Main website navigation.
  */
 .menu-toggle {
@@ -3225,7 +3140,7 @@ a.header-image img {
 	text-align: left;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.menu-toggle {
 		display: none;
 	}
@@ -3239,6 +3154,12 @@ a.header-image img {
 	list-style-type: none;
 	margin: 0;
 	padding: 0.75rem 1.5rem;
+}
+
+@media (min-width: 44rem) {
+	.menu-primary > ul {
+		padding: 0;
+	}
 }
 
 .menu-primary ul {
@@ -3281,7 +3202,7 @@ a.header-image img {
 	display: block;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.menu-primary {
 		display: block;
 	}
@@ -3317,13 +3238,21 @@ a.header-image img {
 >>>>>>> master
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children:after {
+		font-family: var(--font-monospace);
 		content: "\25BC";
+<<<<<<< HEAD
 		font-size: 10px;
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children > a {
 		margin-right: -0.5em;
 =======
 >>>>>>> Stashed changes
+=======
+		font-size: 12px;
+		position: absolute;
+		right: 0.75em;
+		top: 30%;
+>>>>>>> master
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children > .sub-menu {
 		display: none;
@@ -3342,14 +3271,14 @@ a.header-image img {
 }
 
 /*!
- * ## - Numbered Pagination
+ * 4.10 - Numbered Pagination
  */
 .pagination {
 	margin: 3rem 0;
 	clear: both;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.pagination {
 		margin: 6rem 0;
 	}
@@ -3394,7 +3323,7 @@ a.header-image img {
 }
 
 /*!
- * ## - Pagination
+ * 4.11 - Pagination
  */
 .image-navigation,
 .comment-navigation,
@@ -3403,7 +3332,7 @@ a.header-image img {
 	margin: 3rem 0;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.image-navigation,
 	.comment-navigation,
 	.post-navigation {
@@ -3424,7 +3353,7 @@ a.header-image img {
 .post-navigation .meta-nav {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3459,7 +3388,7 @@ a.header-image img {
 	font-weight: bold;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.image-navigation .nav-links,
 	.comment-navigation .nav-links,
 	.post-navigation .nav-links {
@@ -3503,7 +3432,7 @@ a.header-image img {
 }
 
 /*!
- * ## - Body
+ * 4.12 - Body
  * Site content, blog posts etc
  */
 /* single post and page */
@@ -3522,7 +3451,7 @@ a.header-image img {
 	font-weight: bold;
 }
 
-@media (min-width: 782px) {
+@media (min-width: 44rem) {
 	.content-single .entry-title {
 		font-size: 64px;
 		font-size: 4rem;
@@ -3563,7 +3492,7 @@ a.header-image img {
 }
 
 .content-single .entry-single .alignwide {
-	width: calc( 100vw - 3rem);
+	width: calc( var( --wp-alignfull-size ) - 3rem);
 }
 
 @media (min-width: 69rem) {
@@ -3574,12 +3503,12 @@ a.header-image img {
 
 .content-single .entry-single .alignfull {
 	margin-left: -1.5rem;
-	width: 100vw;
+	width: var(--wp-alignfull-size);
 }
 
 @media (min-width: 69rem) {
 	.content-single .entry-single .alignfull {
-		margin-left: calc( ( 100vw - 66rem ) / -2);
+		margin-left: calc( ( var( --wp-alignfull-size ) - 66rem ) / -2);
 	}
 =======
 .content-single article p {
@@ -3666,7 +3595,7 @@ a.header-image img {
 .content-testimonials .testimonial .entry-meta h3 {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3688,4 +3617,41 @@ a.header-image img {
 
 .entry-children {
 	margin-top: 4.5rem;
+}
+
+.single-layout-1 .content-single .entry-header {
+	text-align: center;
+}
+
+.single-layout-1 .content-single .entry-single {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.single-layout-1 .content-single .entry-single .alignwide {
+	margin-left: 50%;
+	-webkit-transform: translateX(calc( ( var( --wp-alignfull-size ) - 3rem ) / -2));
+	transform: translateX(calc( ( var( --wp-alignfull-size ) - 3rem ) / -2));
+}
+
+@media (min-width: 69rem) {
+	.single-layout-1 .content-single .entry-single .alignwide {
+		width: calc( var( --wp-alignfull-size ) - 3rem);
+		-webkit-transform: translateX(calc( ( var( --wp-alignfull-size ) - 3rem ) / -2));
+		transform: translateX(calc( ( var( --wp-alignfull-size ) - 3rem ) / -2));
+	}
+}
+
+@media (min-width: 76.667rem) {
+	.single-layout-1 .content-single .entry-single .alignwide {
+		width: 66rem;
+		-webkit-transform: translateX(calc( 66rem / -2));
+		transform: translateX(calc( 66rem / -2));
+	}
+}
+
+.single-layout-1 .content-single .entry-single .alignfull {
+	margin-left: 50%;
+	-webkit-transform: translateX(calc( var( --wp-alignfull-size ) / -2));
+	transform: translateX(calc( var( --wp-alignfull-size ) / -2));
 }

@@ -1,41 +1,41 @@
-.jarvis-sortable {
-	margin-bottom: 15px;
-}
-
-.jarvis-sortable li {
+.jarvis-font-picker {
 	border: 1px solid #dddddd;
-	padding: 5px 10px;
 	background: #ffffff;
-	margin-bottom: 0;
-	border-bottom: none;
-	cursor: ns-resize;
-	position: relative;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-	color: #333333;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 1px;
+	max-height: 20rem;
+	overflow-y: scroll;
+	list-style-type: none;
 }
 
-.jarvis-sortable li:hover {
-	background: #f3f3f5;
-	color: #0073aa;
+.jarvis-font-picker input[type=radio] {
+	display: none;
 }
 
-.jarvis-sortable li.ui-sortable-helper {
-	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+.jarvis-font-picker label {
+	padding: 4px 8px;
+	margin: 0;
+	border-radius: 2px;
+	border: 1px solid transparent;
+	font-size: 2em;
+	line-height: 1.2em;
+	display: block;
+	text-align: center;
+	box-sizing: border-box;
 }
 
-.jarvis-sortable li:last-child {
-	border-bottom: 1px solid #dddddd;
+.jarvis-font-picker label + label {
+	margin-top: 4px;
 }
 
-.jarvis-sortable li.jarvis-highlight {
-	height: 18px;
-	background: #f3f3f5;
+.jarvis-font-picker label.selected {
+	background: #dddddd;
+	border-color: #999;
+	color: #000000;
 }
 
-.jarvis-close {
-	padding: 0 10px;
-	color: #990000;
-	position: absolute;
-	right: 0;
-	font-weight: bold;
+.jarvis-font-picker label:hover {
+	border-color: #999;
+	cursor: pointer;
 }

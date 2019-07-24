@@ -93,3 +93,22 @@ function jarvis_sanitize_hex_color( $color ) {
 	return '';
 
 }
+
+
+/**
+ * Make sure the value returned is in the fonts array.
+ *
+ * @param string $id The font key to check.
+ * @return string
+ */
+function jarvis_sanitize_fonts( $id ) {
+
+	$fonts = jarvis_get_fonts();
+
+	if ( isset( $fonts[ $id ] ) ) {
+		return $id;
+	}
+
+	return '';
+
+}

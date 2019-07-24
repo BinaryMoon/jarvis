@@ -31,9 +31,8 @@ function jarvis_enqueue() {
 		jarvis_get_theme_version( '/style.css' )
 	);
 
-	// Uutput of custom settings as inline styles.
+	// Output of custom settings as inline styles.
 	wp_add_inline_style( 'jarvis-style', jarvis_get_site_styles() );
-
 
 	// Scripts.
 	wp_enqueue_script(
@@ -60,7 +59,12 @@ add_action( 'wp_enqueue_scripts', 'jarvis_enqueue' );
 function jarvis_editor_blocks_styles() {
 
 	// Load the theme styles within Gutenberg.
-	wp_enqueue_style( 'jarvis-editor-blocks', get_theme_file_uri( '/assets/css/editor-blocks.css' ), null, '1.2' );
+	wp_enqueue_style(
+		'jarvis-editor-blocks',
+		get_theme_file_uri( '/assets/css/editor-blocks.css' ),
+		null,
+		jarvis_get_theme_version( '/assets/css/editor-blocks.css' )
+	);
 
 	// Add custom properties for the block editor.
 	wp_add_inline_style( 'jarvis-editor-blocks', jarvis_get_block_styles() );
@@ -114,8 +118,12 @@ function jarvis_get_block_styles() {
 function jarvis_get_site_styles() {
 
 	$properties = jarvis_get_custom_properties();
+	$fonts = jarvis_get_fonts();
 
 	$styles = array();
+
+	$styles[] = jarvis_get_font_css();
+	$styles[] = jarvis_get_single_css();
 
 	return implode( $styles, ' ' );
 
@@ -644,13 +652,7 @@ function jarvis_get_theme_version( $filepath = '' ) {
 		return (string) filemtime( get_theme_file_path( $filepath ) );
 	}
 
-	$theme_version = null;
-
-	if ( null === $theme_version ) {
-		$theme_version = wp_get_theme( get_template() )->get( 'Version' );
-	}
-
-	return $theme_version;
+	return wp_get_theme( get_template() )->get( 'Version' );
 
 }
 

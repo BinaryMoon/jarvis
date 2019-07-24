@@ -20,6 +20,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 }
 
 require 'customizer-sanitization.php';
+require 'class.jarvis_dropdown_fonts.php';
 
 
 /**
@@ -30,77 +31,27 @@ require 'customizer-sanitization.php';
 function jarvis_customizer_settings( WP_Customize_Manager $wp_customize ) {
 
 	/**
-	 * Jarvis theme options section.
+	 * Jarvis site layout.
 	 */
-	$wp_customize->add_section(
-		'jarvis_options',
+	$wp_customize->add_panel(
+		'jarvis_site_layout',
 		array(
-			'title' => esc_html__( 'Theme Options', 'jarvis' ),
+			'title' => esc_html__( 'Site Layout', 'jarvis' ),
+			'priority' => 55,
 		)
 	);
 
 	/**
-	 * Setting to allow the categories under the header to be hidden.
+	 * Add panels in the order they should appear.
 	 */
-	$wp_customize->add_setting(
-		'jarvis_display_category_summaries',
-		array(
-			'default' => true,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_checkbox',
-		)
-	);
+	jarvis_customizer_header( $wp_customize );
 
-	$wp_customize->add_control(
-		'jarvis_display_category_summaries',
-		array(
-			'label' => esc_html__( 'Display Category Summaries', 'jarvis' ),
-			'section' => 'jarvis_options',
-			'type' => 'checkbox',
-		)
-	);
+	jarvis_customizer_archive( $wp_customize );
 
-	/**
-	 * Setting to allow the categories under the header to be hidden
-	 */
-	$wp_customize->add_setting(
-		'jarvis_display_date_social',
-		array(
-			'default' => true,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_checkbox',
-		)
-	);
+	jarvis_customizer_single( $wp_customize );
 
-	$wp_customize->add_control(
-		'jarvis_display_date_social',
-		array(
-			'label' => esc_html__( 'Display Date and Social Links in Header', 'jarvis' ),
-			'section' => 'jarvis_options',
-			'type' => 'checkbox',
-		)
-	);
-
-	/**
-	 * Setting to control whether the slider autoplays or not.
-	 */
-	$wp_customize->add_setting(
-		'jarvis_autoplay_slider',
-		array(
-			'default' => false,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_checkbox',
-		)
-	);
-
-	$wp_customize->add_control(
-		'jarvis_autoplay_slider',
-		array(
-			'label' => esc_html__( 'Autoplay the Featured Content Slider', 'jarvis' ),
-			'section' => 'jarvis_options',
-			'type' => 'checkbox',
-		)
-	);
+	jarvis_customizer_credits( $wp_customize );
+	jarvis_register_customize_refresh_credits( $wp_customize );
 
 }
 
@@ -170,9 +121,11 @@ function jarvis_customize_preview_js() {
 		'jarvis-customize-preview',
 		$script_path,
 		array( 'customize-preview', 'jquery' ),
-		'1.0',
+		jarvis_get_theme_version( '/assets/scripts/customizer-preview.js' ),
 		true
 	);
+
+	wp_add_inline_script( 'jarvis-customize-preview', jarvis_get_font_json() );
 
 }
 
@@ -194,8 +147,15 @@ function jarvis_customize_controls_js() {
 		'jarvis-customize-controls',
 		$script_path,
 		array( 'jquery' ),
-		'1.0',
+		jarvis_get_theme_version( '/assets/scripts/customizer-controls.js' ),
 		true
+	);
+
+	wp_enqueue_style(
+		'jarvis-customizer-styles',
+		get_theme_file_uri( '/assets/css/customizer.css' ),
+		null,
+		jarvis_get_theme_version( '/assets/css/customizer.css' )
 	);
 
 }

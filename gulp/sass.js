@@ -8,13 +8,13 @@ const autoprefixer = require( 'gulp-autoprefixer' );
 /**
  * Build SASS files.
  */
-export default function styles() {
+export function process_styles( source = 'style.scss', destination = './' ) {
 
 	/**
 	 * Uses node-sass options:
 	 * https://github.com/sass/node-sass#options
 	 */
-	return src( '*.scss' )
+	return src( source )
 		.pipe(
 			sass(
 				{
@@ -34,6 +34,24 @@ export default function styles() {
 				}
 			)
 		)
-		.pipe( dest( './' ) );
+		.pipe( dest( destination ) );
+
+}
+
+export default function styles() {
+
+	return process_styles();
+
+}
+
+export function editor_styles() {
+
+	return process_styles( './assets/sass/editor-styles.scss', './assets/css/' );
+
+}
+
+export function customizer_styles() {
+
+	return process_styles( './assets/sass/customizer.scss', './assets/css/' );
 
 }
