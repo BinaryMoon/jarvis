@@ -28,7 +28,8 @@ function jarvis_enqueue() {
 		'jarvis-style',
 		get_stylesheet_uri(),
 		null,
-		jarvis_get_theme_version( '/style.css' )
+		jarvis_get_theme_version( '/style.css' ),
+		'print'
 	);
 
 	// Output of custom settings as inline styles.
@@ -45,12 +46,37 @@ function jarvis_enqueue() {
 
 	// Comments Javascript.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+
 		wp_enqueue_script( 'comment-reply' );
+
 	}
 
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_enqueue' );
+
+
+/**
+ * Set the media property for the default theme styles to all.s
+ *
+ * By default loading the styles blocks rendering. By setting the media type to
+ * print, and then changing the media type when loading completes, we ensure the
+ * site loads quickly.
+ * @see https://www.filamentgroup.com/lab/load-css-simpler/
+ */
+function jarvis_on_style_load( $html, $handle ) {
+
+	if ( 'jarvis-style' === $handle ) {
+
+		$html = str_replace( "media='print'", "media='print' onload='this.media=\"all\"'", $html );
+
+	}
+
+	return $html;
+
+}
+
+add_filter( 'style_loader_tag', 'jarvis_on_style_load', 10, 2 );
 
 
 /**
