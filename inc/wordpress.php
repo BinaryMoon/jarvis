@@ -106,6 +106,18 @@ function jarvis_editor_blocks_styles() {
 	wp_deregister_style( 'wp-block-library-theme' );
 	wp_register_style( 'wp-block-library-theme', '', null, '1.0' );
 
+	/**
+	 * If a dark colour then enable the dark editor styles.
+	 *
+	 * @see https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds
+	 */
+	if ( ! jarvis_colour_brightness( get_background_color() ) ) {
+
+		add_theme_support( 'editor-styles' );
+		add_theme_support( 'dark-editor-style' );
+
+	}
+
 }
 
 add_action( 'enqueue_block_editor_assets', 'jarvis_editor_blocks_styles' );
