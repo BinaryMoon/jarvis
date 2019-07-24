@@ -28,8 +28,7 @@ function jarvis_enqueue() {
 		'jarvis-style',
 		get_stylesheet_uri(),
 		null,
-		jarvis_get_theme_version( '/style.css' ),
-		'print'
+		jarvis_get_theme_version( '/style.css' )
 	);
 
 	// Output of custom settings as inline styles.
@@ -68,7 +67,11 @@ function jarvis_on_style_load( $html, $handle ) {
 
 	if ( 'jarvis-style' === $handle ) {
 
-		$html = str_replace( "media='print'", "media='print' onload='this.media=\"all\"'", $html );
+		// Replace the media all with media print, and add an onload handler.
+		$print_html = str_replace( "media='all'", "media='print' onload='this.media=\"all\"'", $html );
+
+		// Wrap the original link in a noscript tag for users who don't have js enabled.
+		$html = $print_html . '<noscript>' . $html . '</noscript>';
 
 	}
 
