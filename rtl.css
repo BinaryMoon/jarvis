@@ -519,7 +519,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 a.header-image img {
   margin: 0 auto
 }
-@media (min-width:44rem) {
+@media (min-width:47rem) {
   .header-layout-2 {
     padding-right: 10%
   }
@@ -556,7 +556,7 @@ a.header-image img {
 .menu-primary ul a {
   padding: .5rem 1.5rem
 }
-@media (min-width:44rem) {
+@media (min-width:47rem) {
   .menu-primary .menu-wrap {
     text-align: left
   }
@@ -569,8 +569,8 @@ a.header-image img {
   .menu-primary > .menu-wrap > li.menu-item-has-children:after {
     left: .75em
   }
-  .menu-primary > .menu-wrap > li.menu-item-has-children.focus > .sub-menu,
   .menu-primary > .menu-wrap > li.menu-item-has-children:focus > .sub-menu,
+  .menu-primary > .menu-wrap > li.menu-item-has-children:focus-within > .sub-menu,
   .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
     left: 0
   }
@@ -578,7 +578,7 @@ a.header-image img {
 .pagination {
   margin: 3rem 0
 }
-@media (min-width:44rem) {
+@media (min-width:47rem) {
   .pagination {
     margin: 6rem 0
   }
@@ -597,7 +597,7 @@ a.header-image img {
 .post-navigation {
   margin: 3rem 0
 }
-@media (min-width:44rem) {
+@media (min-width:47rem) {
   .comment-navigation .nav-links .nav-next,
   .image-navigation .nav-links .nav-next,
   .post-navigation .nav-links .nav-next {
@@ -638,25 +638,18 @@ a.header-image img {
   margin-right: auto;
   margin-left: auto
 }
-.single-layout-1 .content-single .entry-single .alignwide {
-  margin-right: 50%;
-  -webkit-transform: translateX(calc(-1*((var(--wp-alignfull-size) - 3rem)/ -2)));
-  transform: translateX(calc(-1*((var(--wp-alignfull-size) - 3rem)/ -2)))
+@media (min-width:47rem) {
+  .single-layout-1 .content-single .entry-single .alignwide {
+    margin-right: calc((var(--wp-alignfull-size) - 47rem)/ -2)
+  }
 }
 @media (min-width:69rem) {
   .single-layout-1 .content-single .entry-single .alignwide {
-    -webkit-transform: translateX(calc(-1*((var(--wp-alignfull-size) - 3rem)/ -2)));
-    transform: translateX(calc(-1*((var(--wp-alignfull-size) - 3rem)/ -2)))
+    margin-right: calc(22rem / -2)
   }
 }
-@media (min-width:76.667rem) {
-  .single-layout-1 .content-single .entry-single .alignwide {
-    -webkit-transform: translateX(calc(-1*(66rem / -2)));
-    transform: translateX(calc(-1*(66rem / -2)))
+@media (min-width:47rem) {
+  .single-layout-1 .content-single .entry-single .alignfull {
+    margin-right: calc((var(--wp-alignfull-size) - 44rem)/ -2)
   }
-}
-.single-layout-1 .content-single .entry-single .alignfull {
-  margin-right: 50%;
-  -webkit-transform: translateX(calc(-1*(var(--wp-alignfull-size)/ -2)));
-  transform: translateX(calc(-1*(var(--wp-alignfull-size)/ -2)))
 }
