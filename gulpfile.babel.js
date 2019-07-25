@@ -5,7 +5,7 @@
 import { parallel, watch, series } from 'gulp';
 
 // Internal dependencies.
-import styles, { editor_styles, customizer_styles } from './gulp/sass';
+import styles, { editor_styles, customizer_styles, minifyStyles } from './gulp/sass';
 import scriptsGlobal, { customizerPreview, customizerControls } from './gulp/scripts';
 import compress from './gulp/zip';
 import rtl from './gulp/rtl';
@@ -22,6 +22,7 @@ export const build = series(
 		customizerControls
 	),
 	parallel(
+		minifyStyles,
 		rtl,
 		toc,
 		criticalCSS
