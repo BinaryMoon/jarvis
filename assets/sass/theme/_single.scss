@@ -44,6 +44,12 @@
 
 		max-width: $grid-small-width;
 
+		.page-template-full-width & {
+
+			max-width: inherit;
+
+		}
+
 		> h1,
 		> h2,
 		> h3 {
