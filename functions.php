@@ -112,12 +112,12 @@ add_action( 'jarvis_header', 'jarvis_include_header' );
  * Include the default site header for the site.
  */
 function jarvis_include_header() {
-	include 'inc/header.php';
+	get_template_part( 'parts/header' );
 }
 add_action( 'jarvis_footer', 'jarvis_include_footer' );
 /**
  * Include the default site footer for the site.
  */
 function jarvis_include_footer() {
-	include 'inc/footer.php';
+	get_template_part( 'parts/footer' );
 }

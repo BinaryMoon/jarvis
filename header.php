@@ -24,11 +24,6 @@
 <body <?php body_class(); ?>>
 
 <?php
-if ( function_exists( 'wp_body_open' ) ) {
-	wp_body_open();
-} else {
-	do_action( 'wp_body_open' );
-}
 do_action( 'jarvis_before_header' );
 do_action( 'jarvis_header' );
 do_action( 'jarvis_after_header' );
