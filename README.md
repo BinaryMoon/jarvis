@@ -42,3 +42,4 @@ Jarvis uses Gulp to process files. You probably won't need to use it, but just i
 * `gulp buildZip` Generate a release ready zip file containing the theme files only.
 * `gulp buildRTL` Generate the RTL.css file.
 * `gulp buildTOC` Generate Table of Contents for style.css file.
+* `gulp buildCritical` Create [critical path CSS](https://www.smashingmagazine.com/2015/08/understanding-critical-css/#what-is-critical-css) styles.

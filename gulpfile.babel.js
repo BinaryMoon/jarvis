@@ -10,6 +10,7 @@ import scriptsGlobal, { customizerPreview, customizerControls } from './gulp/scr
 import compress from './gulp/zip';
 import rtl from './gulp/rtl';
 import toc from './gulp/toc';
+import criticalCSS from './gulp/critical';
 
 export const build = series(
 	parallel(
@@ -20,8 +21,11 @@ export const build = series(
 		customizerPreview,
 		customizerControls
 	),
-	rtl,
-	toc,
+	parallel(
+		rtl,
+		toc,
+		criticalCSS
+	),
 	compress
 );
 export const buildScripts = scriptsGlobal;
@@ -30,6 +34,7 @@ export const buildStyles = series( parallel( styles, editor_styles, customizer_s
 export const buildZip = compress;
 export const buildRTL = rtl;
 export const buildTOC = toc;
+export const buildCritical = criticalCSS;
 
 export const watchFiles = () => {
 	watch( [ '*.scss', './assets/sass/**/*.scss' ], series( parallel( styles, editor_styles ), rtl, toc ) );
