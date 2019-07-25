@@ -43,14 +43,46 @@ function jarvis_enqueue() {
 		true
 	);
 
+	wp_script_add_data( 'jarvis-script-global', 'script_execution', 'async' );
+
 	// Comments Javascript.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+
 		wp_enqueue_script( 'comment-reply' );
+		wp_script_add_data( 'comment-reply', 'script_execution', 'async' );
+
 	}
 
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_enqueue' );
+
+
+/**
+ * Set the media property for the default theme styles to all.s
+ *
+ * By default loading the styles blocks rendering. By setting the media type to
+ * print, and then changing the media type when loading completes, we ensure the
+ * site loads quickly.
+ * @see https://www.filamentgroup.com/lab/load-css-simpler/
+ */
+function jarvis_on_style_load( $html, $handle ) {
+
+	if ( 'jarvis-style' === $handle ) {
+
+		// Replace the media all with media print, and add an onload handler.
+		$print_html = str_replace( "media='all'", "media='print' onload='this.media=\"all\"'", $html );
+
+		// Wrap the original link in a noscript tag for users who don't have js enabled.
+		$html = $print_html . '<noscript>' . $html . '</noscript>';
+
+	}
+
+	return $html;
+
+}
+
+add_filter( 'style_loader_tag', 'jarvis_on_style_load', 10, 2 );
 
 
 /**
@@ -76,6 +108,18 @@ function jarvis_editor_blocks_styles() {
 	 */
 	wp_deregister_style( 'wp-block-library-theme' );
 	wp_register_style( 'wp-block-library-theme', '', null, '1.0' );
+
+	/**
+	 * If a dark colour then enable the dark editor styles.
+	 *
+	 * @see https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds
+	 */
+	if ( ! jarvis_colour_brightness( get_background_color() ) ) {
+
+		add_theme_support( 'editor-styles' );
+		add_theme_support( 'dark-editor-style' );
+
+	}
 
 }
 
@@ -122,6 +166,10 @@ function jarvis_get_site_styles() {
 
 	$styles = array();
 
+	/**
+	 * Add critical path css inline to help speed up the website.
+	 */
+	$styles[] = file_get_contents( get_parent_theme_file_path( 'style.critical.css' ) );
 	$styles[] = jarvis_get_font_css();
 	$styles[] = jarvis_get_single_css();
 
@@ -670,3 +718,42 @@ function jarvis_get_script_file() {
 	return get_theme_file_uri( '/assets/scripts/global.min.js' );
 
 }
+
+
+/**
+ * Add async/defer attributes to enqueued scripts that have the specified script_execution flag.
+ *
+ * @link https://core.trac.wordpress.org/ticket/12009
+ * @param string $tag    The script tag.
+ * @param string $handle The script handle.
+ * @return string
+ */
+function jarvis_filter_script_loader_tag( $tag, $handle ) {
+
+	$script_execution = wp_scripts()->get_data( $handle, 'script_execution' );
+
+	if ( ! $script_execution ) {
+		return $tag;
+	}
+
+	if ( 'async' !== $script_execution && 'defer' !== $script_execution ) {
+		return $tag; // _doing_it_wrong()?
+	}
+
+	// Abort adding async/defer for scripts that have this script as a dependency. _doing_it_wrong()?
+	foreach ( wp_scripts()->registered as $script ) {
+		if ( in_array( $handle, $script->deps, true ) ) {
+			return $tag;
+		}
+	}
+
+	// Add the attribute if it hasn't already been added.
+	if ( ! preg_match( ":\s$script_execution(=|>|\s):", $tag ) ) {
+		$tag = preg_replace( ':(?=></script>):', " $script_execution", $tag, 1 );
+	}
+
+	return $tag;
+
+}
+
+add_filter( 'script_loader_tag', 'jarvis_filter_script_loader_tag', 10, 2 );

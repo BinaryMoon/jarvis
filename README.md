@@ -16,6 +16,14 @@ I want Jarvis to be a lightweight theme. To do this I have:
 
 If you wish to work on Jarvis you will need to have node and npm set up. You can then run `npm install` to get the required packages. Once setup you just have to run `npm run dev` in order to set up the watcher. Npm will then take care of everything for you.
 
+## Directory Structure
+
+* __assets__ - Files that could be included on the site. Mostly Javascript and CSS. Includes a SASS directory which gets built from but does not get included in a built zip.
+* __gulp__ - Contains the code for the different gulp tasks used to generate the site.
+* __inc__ - Holds all of the PHP files that add functionality to the site. This includes functions and filters that can be called from the theme.
+* __parts__ - Template parts that can be included from theme files.
+* __templates__ - Individual page templates that can be selected from the post/ page editor.
+
 ## npm Scripts
 
 * `npm run dev` Watch for css and script changes, and compile them when required.
@@ -34,3 +42,4 @@ Jarvis uses Gulp to process files. You probably won't need to use it, but just i
 * `gulp buildZip` Generate a release ready zip file containing the theme files only.
 * `gulp buildRTL` Generate the RTL.css file.
 * `gulp buildTOC` Generate Table of Contents for style.css file.
+* `gulp buildCritical` Create [critical path CSS](https://www.smashingmagazine.com/2015/08/understanding-critical-css/#what-is-critical-css) styles.

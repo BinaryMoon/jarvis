@@ -3,7 +3,10 @@
 
 const { src, dest } = require( 'gulp' );
 const sass = require( 'gulp-sass' );
+const rename = require( 'gulp-rename' );
 const autoprefixer = require( 'gulp-autoprefixer' );
+const cleancss = require( 'gulp-clean-css' );
+const change = require( 'gulp-change' );
 
 /**
  * Build SASS files.
@@ -24,8 +27,7 @@ export function process_styles( source = 'style.scss', destination = './' ) {
 					precision: 3,
 
 				}
-			)
-				.on( 'error', sass.logError )
+			).on( 'error', sass.logError )
 		)
 		.pipe(
 			autoprefixer(
@@ -35,6 +37,25 @@ export function process_styles( source = 'style.scss', destination = './' ) {
 			)
 		)
 		.pipe( dest( destination ) );
+
+}
+
+export function minifyStyles() {
+
+	return src( './style.css' )
+		.pipe( rename( 'style.min.css' ) )
+		.pipe(
+			change( removeComments )
+		)
+		.pipe(
+			cleancss(
+				{
+					level: 2
+				}
+			)
+		)
+		.pipe( dest( './' ) );
+
 
 }
 
@@ -53,5 +74,17 @@ export function editor_styles() {
 export function customizer_styles() {
 
 	return process_styles( './assets/sass/customizer.scss', './assets/css/' );
+
+}
+
+/**
+ * Remove comments from the source so that they can be minified away.
+ */
+const removeComments = function( content ) {
+
+	content = content.replace( /\/\*\*!/g, '/**' );
+	content = content.replace( /\/\*!/g, '/*' );
+
+	return content;
 
 }

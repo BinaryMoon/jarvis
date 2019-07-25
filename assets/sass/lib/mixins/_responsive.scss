@@ -7,7 +7,8 @@
 
 @mixin for-tablet {
 
-	@media ( min-width: #{$grid-small-width} ) {
+	// Includes the grid gutter on each side.
+	@media ( min-width: #{$grid-small-width + $grid-gutter + $grid-gutter} ) {
 		@content;
 	}
 

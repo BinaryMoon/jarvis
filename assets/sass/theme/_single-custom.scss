@@ -15,20 +15,18 @@
 
 			.alignwide {
 
-				margin-left: 50%;
-				transform: translateX( calc( ( var( --wp-alignfull-size ) - #{$grid-gutter * 2} ) / -2 ) );
+				// Mobile works fine.
 
-				@include for-big-tablet {
+				@include for-tablet {
 
-					width: calc( var( --wp-alignfull-size ) - #{$grid-gutter * 2} );
-					transform: translateX( calc( ( var( --wp-alignfull-size ) - #{$grid-gutter * 2} ) / -2 ) );
+					margin-left: calc( ( var( --wp-alignfull-size ) - #{$grid-small-width + $grid-gutter + $grid-gutter} ) / -2 );
 
 				}
 
-				@include for-width( $grid-total-width * 1.11111 ) {
+				// @include for-width( $grid-total-width * 1.11111 ) {
+				@include for-big-tablet {
 
-					width: ( $grid-total-width - ( $grid-gutter * 2 ) );
-					transform: translateX( calc( #{$grid-total-width - ( $grid-gutter * 2 )} / -2 ) );
+					margin-left: calc( #{$grid-total-width - $grid-small-width - $grid-gutter - $grid-gutter} / -2 );
 
 				}
 
@@ -36,8 +34,13 @@
 
 			.alignfull {
 
-				margin-left: 50%;
-				transform: translateX( calc( var( --wp-alignfull-size ) / -2 ) );
+				// Mobile is fine.
+
+				@include for-tablet {
+
+					margin-left: calc( ( var( --wp-alignfull-size ) - #{$grid-small-width} ) / -2 );
+
+				}
 
 			}
 
