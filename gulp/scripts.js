@@ -8,15 +8,13 @@ const rename = require( 'gulp-rename' );
 
 export function scripts( slug = 'global' ) {
 
-	console.log( 'build scripts', slug );
+	console.log( 'Build scripts:', slug );
 
 	const destPath = './assets/scripts/';
 	const scriptsSrc = [
 		'./assets/scripts/src-' + slug + '/!(ready)*.js',
 		'./assets/scripts/src-' + slug + '/ready.js'
 	];
-
-	console.log( scriptsSrc );
 
 	return src( scriptsSrc )
 		.pipe(
