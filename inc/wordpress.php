@@ -43,10 +43,13 @@ function jarvis_enqueue() {
 		true
 	);
 
+	wp_script_add_data( 'jarvis-script-global', 'script_execution', 'async' );
+
 	// Comments Javascript.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 
 		wp_enqueue_script( 'comment-reply' );
+		wp_script_add_data( 'comment-reply', 'script_execution', 'async' );
 
 	}
 
@@ -715,3 +718,42 @@ function jarvis_get_script_file() {
 	return get_theme_file_uri( '/assets/scripts/global.min.js' );
 
 }
+
+
+/**
+ * Add async/defer attributes to enqueued scripts that have the specified script_execution flag.
+ *
+ * @link https://core.trac.wordpress.org/ticket/12009
+ * @param string $tag    The script tag.
+ * @param string $handle The script handle.
+ * @return string
+ */
+function jarvis_filter_script_loader_tag( $tag, $handle ) {
+
+	$script_execution = wp_scripts()->get_data( $handle, 'script_execution' );
+
+	if ( ! $script_execution ) {
+		return $tag;
+	}
+
+	if ( 'async' !== $script_execution && 'defer' !== $script_execution ) {
+		return $tag; // _doing_it_wrong()?
+	}
+
+	// Abort adding async/defer for scripts that have this script as a dependency. _doing_it_wrong()?
+	foreach ( wp_scripts()->registered as $script ) {
+		if ( in_array( $handle, $script->deps, true ) ) {
+			return $tag;
+		}
+	}
+
+	// Add the attribute if it hasn't already been added.
+	if ( ! preg_match( ":\s$script_execution(=|>|\s):", $tag ) ) {
+		$tag = preg_replace( ':(?=></script>):', " $script_execution", $tag, 1 );
+	}
+
+	return $tag;
+
+}
+
+add_filter( 'script_loader_tag', 'jarvis_filter_script_loader_tag', 10, 2 );
