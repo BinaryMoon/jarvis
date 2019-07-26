@@ -463,6 +463,22 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .wp-post-series-box .wp-post-series-description p {
   margin: 0 0 1.5rem 0
 }
+.block-alert,
+.block-announcement,
+.block-error,
+.block-help,
+.block-info,
+.block-success {
+  padding: 1.5rem 4.5rem 1.5rem 1.5rem
+}
+.block-alert:before,
+.block-announcement:before,
+.block-error:before,
+.block-help:before,
+.block-info:before,
+.block-success:before {
+  right: 1.5rem
+}
 .content-posts article.entry .read-more {
   padding: .75rem 0
 }
@@ -569,7 +585,6 @@ a.header-image img {
   .menu-primary > .menu-wrap > li.menu-item-has-children:after {
     left: .75em
   }
-  .menu-primary > .menu-wrap > li.menu-item-has-children:focus > .sub-menu,
   .menu-primary > .menu-wrap > li.menu-item-has-children:focus-within > .sub-menu,
   .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
     left: 0

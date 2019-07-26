@@ -2559,6 +2559,59 @@ p.demo_store {
 /*!
  * 4.0 - Theme Layout
  */
+.block-info,
+.block-help,
+.block-alert,
+.block-success,
+.block-error,
+.block-announcement {
+	background: var(--foreground-color);
+	color: var(--foreground-contrast-color);
+	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+	position: relative;
+}
+
+.block-info:before,
+.block-help:before,
+.block-alert:before,
+.block-success:before,
+.block-error:before,
+.block-announcement:before {
+	font-family: var(--font-monospace);
+	content: '\2139\FE0F';
+	position: absolute;
+	top: 1.5rem;
+	left: 1.5rem;
+	font-size: 1.5rem;
+	line-height: inherit;
+}
+
+.block-alert:before {
+	content: '\26A0\FE0F';
+}
+
+.block-success:before {
+	content: '\2705';
+}
+
+.block-help:before {
+	content: '\2753';
+}
+
+.block-error:before {
+	content: '\26D4';
+}
+
+.block-announcement:before {
+	content: '\1F4E3';
+}
+
+.block-intro {
+	font-size: 26px;
+	font-size: 1.625rem;
+	line-height: 1.5;
+}
+
 /*!
  * 4.1 - Archives and Excerpts.
  * Site content, blog posts etc
@@ -3240,7 +3293,7 @@ a.header-image img {
 	.menu-primary > .menu-wrap > li.menu-item-has-children > .sub-menu {
 		display: none;
 	}
-	.menu-primary > .menu-wrap > li.menu-item-has-children:focus-within > .sub-menu, .menu-primary > .menu-wrap > li.menu-item-has-children:focus > .sub-menu, .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
+	.menu-primary > .menu-wrap > li.menu-item-has-children:focus-within > .sub-menu, .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
 		display: block;
 		position: absolute;
 		padding-top: 0.375rem;
