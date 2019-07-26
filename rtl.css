@@ -479,6 +479,12 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .block-success:before {
   right: 1.5rem
 }
+.block-border {
+  padding: 1.5rem 1.5rem
+}
+.block-border-dashed {
+  padding: 1.5rem 1.5rem
+}
 .content-posts article.entry .read-more {
   padding: .75rem 0
 }

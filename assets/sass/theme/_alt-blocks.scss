@@ -80,3 +80,17 @@
 	@include modular-scale( delta );
 
 }
+
+.block-border {
+
+	padding: $grid-line-height $grid-gutter;
+	border: $border-width solid currentColor;
+
+}
+
+.block-border-dashed {
+
+	padding: $grid-line-height $grid-gutter;
+	border: $border-width dashed currentColor;
+
+}

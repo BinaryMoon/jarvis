@@ -2612,6 +2612,16 @@ p.demo_store {
 	line-height: 1.5;
 }
 
+.block-border {
+	padding: 1.5rem 1.5rem;
+	border: 0.2rem solid currentColor;
+}
+
+.block-border-dashed {
+	padding: 1.5rem 1.5rem;
+	border: 0.2rem dashed currentColor;
+}
+
 /*!
  * 4.1 - Archives and Excerpts.
  * Site content, blog posts etc
