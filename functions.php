@@ -107,3 +107,17 @@ require get_parent_theme_file_path( 'inc/compat.php' );
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_parent_theme_file_path( 'inc/woocommerce.php' );
 }
+add_action( 'jarvis_header', 'jarvis_include_header' );
+/**
+ * Include the default site header for the site.
+ */
+function jarvis_include_header() {
+	get_template_part( 'parts/header' );
+}
+add_action( 'jarvis_footer', 'jarvis_include_footer' );
+/**
+ * Include the default site footer for the site.
+ */
+function jarvis_include_footer() {
+	get_template_part( 'parts/footer' );
+}
