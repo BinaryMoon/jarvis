@@ -221,7 +221,7 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 			<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>">
 <?php
 		/* Translators: %d: Number of articles written by a particular author. */
-		printf( esc_html( _n( '%d Article', '%d Articles', (int) $post_count, 'johannes' ) ), (int) $post_count );
+		printf( esc_html( _n( '%d Article', '%d Articles', (int) $post_count, 'jarvis' ) ), (int) $post_count );
 ?>
 			</a>
 		</p>
