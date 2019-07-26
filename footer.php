@@ -13,11 +13,21 @@
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
-do_action( 'jarvis_after_content' );
-do_action( 'jarvis_before_footer' );
-do_action( 'jarvis_footer' );
-do_action( 'jarvis_after_footer' );
-wp_footer();
+
+	do_action( 'jarvis_after_content' );
+
+	/**
+	 * Add support for page builders.
+	 *
+	 * The default footer code is included in parts/footer.php
+	 * The footer is included in inc/wordpress.php > jarvis_include_footer function.
+	 */
+	do_action( 'jarvis_before_footer' );
+	do_action( 'jarvis_footer' );
+	do_action( 'jarvis_after_footer' );
+
+	wp_footer();
+
 ?>
 
 </body>
