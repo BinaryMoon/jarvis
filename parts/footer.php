@@ -1,4 +1,22 @@
 <?php
+/**
+ * Footer Template
+ *
+ * Includes the site footer.
+ *
+ * Traditionally this file is included in theme-root/footer.php however in
+ * Jarvis it has been split out into a partial so that page builders can
+ * customize the footer more easily.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Jarvis
+ * @subpackage TemplatePart
+ * @author Ben Gillbanks <ben@prothemedesign.com>
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ */
+
+
 	get_sidebar();
 ?>
 

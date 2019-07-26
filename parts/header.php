@@ -1,3 +1,23 @@
+<?php
+/**
+ * Header Template
+ *
+ * Includes the site header.
+ *
+ * Traditionally this file is included in theme-root/header.php however in
+ * Jarvis it has been split out into a partial so that page builders can
+ * customize the header more easily.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Jarvis
+ * @subpackage TemplatePart
+ * @author Ben Gillbanks <ben@prothemedesign.com>
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ */
+
+?>
+
 <div class="webpage">
 
 	<a href="#site-content" class="screen-reader-shortcut"><?php esc_html_e( 'Skip to content', 'jarvis' ); ?></a>
