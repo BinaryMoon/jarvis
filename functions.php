@@ -92,8 +92,6 @@ require get_parent_theme_file_path( 'inc/custom-fonts.php' );
 // Reusable Template Functions.
 require get_parent_theme_file_path( 'inc/template-tags.php' );
 
-// Jetpack specific functionality (if Jetpack is enabled).
-require get_parent_theme_file_path( 'inc/jetpack.php' );
 
 // Customizer controls for setting theme properties.
 require get_parent_theme_file_path( 'inc/customizer-settings.php' );
@@ -102,8 +100,15 @@ require get_parent_theme_file_path( 'inc/customizer-settings.php' );
 require get_parent_theme_file_path( 'inc/compat.php' );
 
 /**
+ * Plugins.
+ */
+
+// Jetpack specific functionality.
+require get_parent_theme_file_path( 'inc/plugins/jetpack.php' );
+
+/**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
-	require get_parent_theme_file_path( 'inc/woocommerce.php' );
+	require get_parent_theme_file_path( 'inc/plugins/woocommerce.php' );
 }
