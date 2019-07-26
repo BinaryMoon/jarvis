@@ -359,6 +359,30 @@ add_action( 'after_setup_theme', 'jarvis_after_setup_theme' );
 
 
 /**
+ * Include the default site header for the site.
+ */
+function jarvis_include_header() {
+
+	get_template_part( 'parts/header' );
+
+}
+
+add_action( 'jarvis_header', 'jarvis_include_header' );
+
+
+/**
+ * Include the default site footer for the site.
+ */
+function jarvis_include_footer() {
+
+	get_template_part( 'parts/footer' );
+
+}
+
+add_action( 'jarvis_footer', 'jarvis_include_footer' );
+
+
+/**
  * Intitiate sidebars
  *
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
