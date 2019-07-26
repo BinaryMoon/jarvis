@@ -24,6 +24,8 @@
 /**
  * TODO BEFORE SUBMISSION
  * ---
+ * ensure margins and paddings are consistent
+ * test in incognito mode. Maybe consider defining columns for the different content?
  * test theme with and without jetpack
  * test theme with and without infinite scroll
  * delete unused scripts
@@ -31,10 +33,8 @@
  * theme tags
  * theme description
  * screenshot.png (880 x 660)
- * check custom header size
  * check sticky styles
  * Add some subtle animations for added delight.
- * test custom header, with and without
  * responsive styles
  * set content_width (in jarvis_content_width and jarvis_after_setup_theme)
  * theme_colors
