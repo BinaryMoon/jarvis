@@ -13,20 +13,26 @@
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
-get_header();
+
+	get_header();
+
 ?>
+
 <main id="content" class="main-content content-none">
+
 <?php
-if ( have_posts() ) {
 
-	while ( have_posts() ) {
+	if ( have_posts() ) {
 
-		the_post();
+		while ( have_posts() ) {
 
-		the_content();
+			the_post();
+
+			the_content();
+
+		}
 
 	}
-}
 ?>
 </main>
 <?php
