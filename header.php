@@ -24,6 +24,14 @@
 <body <?php body_class(); ?>>
 
 <?php
-do_action( 'jarvis_before_header' );
-do_action( 'jarvis_header' );
-do_action( 'jarvis_after_header' );
+	wp_body_open();
+
+	/**
+	 * Add support for page builders.
+	 *
+	 * The default header code is included in parts/header.php
+	 * The header is included in inc/wordpress.php > jarvis_include_header function.
+	 */
+	do_action( 'jarvis_before_header' );
+	do_action( 'jarvis_header' );
+	do_action( 'jarvis_after_header' );
