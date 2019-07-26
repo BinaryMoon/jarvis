@@ -1,0 +1,82 @@
+.block-info,
+.block-help,
+.block-alert,
+.block-success,
+.block-error,
+.block-announcement {
+
+	background: $black;
+	color: $white;
+	padding: $grid-line-height $grid-gutter $grid-line-height ( $grid-gutter * 3 );
+	position: relative;
+
+	&:before {
+
+		font-family: var( --font-monospace );
+		// Defaults to info icon.
+		content: '\2139\FE0F';
+		position: absolute;
+		top: $grid-line-height;
+		left: $grid-gutter;
+		font-size: 1.5rem;
+		line-height: inherit;
+
+	}
+
+}
+
+.block-alert {
+
+	&:before {
+
+		content: '\26A0\FE0F';
+
+	}
+
+}
+
+.block-success {
+
+	&:before {
+
+		content: '\2705';
+
+	}
+
+}
+
+.block-help {
+
+	&:before {
+
+		content: '\2753';
+
+	}
+
+}
+
+.block-error {
+
+	&:before {
+
+		content: '\26D4';
+
+	}
+
+}
+
+.block-announcement {
+
+	&:before {
+
+		content: '\1F4E3';
+
+	}
+
+}
+
+.block-intro {
+
+	@include modular-scale( delta );
+
+}

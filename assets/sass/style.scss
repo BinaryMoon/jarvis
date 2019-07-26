@@ -11,6 +11,7 @@
  * # - Theme Layout
  */
 
+@import "theme/_alt-blocks";
 @import "theme/_archives";
 @import "theme/_archives-custom";
 @import "theme/_blocks";
@@ -27,3 +28,16 @@
 @import "theme/_sidebar";
 @import "theme/_single";
 @import "theme/_single-custom";
+
+
+// body {
+// 	@include for-tablet {
+// 		background:yellow !important;
+// 	}
+// 	@include for-big-tablet {
+// 		background:green !important;
+// 	}
+// 	@include for-desktop {
+// 		background:skyblue !important;
+// 	}
+// }
