@@ -57,5 +57,3 @@ function jarvis_customizer_header( WP_Customize_Manager $wp_customize ) {
 	);
 
 }
-
-
