@@ -5,9 +5,9 @@
 @import "lib/_variables";
 @import "lib/_mixins";
 
-@import "lib/components/_properties";
-
 body {
+
+	color: var( --foreground-color );
 
 	@include body();
 

@@ -1,23 +1,5 @@
-/*!
- * ## - Custom Properties
- */
 body {
-	--foreground-color: #000000;
-	--foreground-contrast-color: #ffffff;
-	--background-color: #ffff99;
-	--font-body: Cambria, Georgia, serif;
-	--font-header: Cambria, Georgia, serif;
-	--font-title: Cambria, Georgia, serif;
-	--font-monospace: "andale mono", "monotype.com", "lucida console", monospace;
-	--wp-alignfull-size: 100vw;
-}
-
-body.dark-mode {
-	--foreground-color: #ffffff;
-	--foreground-contrast-color: #000000;
-}
-
-body {
+	color: var(--foreground-color);
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
