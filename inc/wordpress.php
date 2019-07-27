@@ -233,9 +233,6 @@ function jarvis_after_setup_theme() {
 	// Add selective refresh to widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	// Attachment page size.
-	add_image_size( 'jarvis-attachment', 1200, 9999 );
-
 	// Make Gutenberg embeds responsive.
 	add_theme_support( 'responsive-embeds' );
 

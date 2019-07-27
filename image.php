@@ -41,7 +41,7 @@
 			<section class="entry">
 
 				<div class="attachment-image">
-					<?php echo wp_get_attachment_link( get_the_ID(), 'jarvis-attachment' ); ?>
+					<?php echo wp_get_attachment_link( get_the_ID(), 'large' ); ?>
 				</div>
 
 				<div class="attachment-description entry-single">
