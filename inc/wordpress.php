@@ -116,7 +116,6 @@ function jarvis_editor_blocks_styles() {
 	 */
 	if ( ! jarvis_colour_brightness( get_background_color() ) ) {
 
-		add_theme_support( 'editor-styles' );
 		add_theme_support( 'dark-editor-style' );
 
 	}
@@ -351,6 +350,7 @@ function jarvis_after_setup_theme() {
 		)
 	);
 
+	add_theme_support( 'editor-styles' );
 	add_editor_style( 'assets/css/editor-styles.css' );
 
 }
