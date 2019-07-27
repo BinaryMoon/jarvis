@@ -71,6 +71,12 @@ export function editor_styles() {
 
 }
 
+export function editor_blocks() {
+
+	return process_styles( './assets/sass/editor-blocks.scss', './assets/css/' );
+
+}
+
 export function customizer_styles() {
 
 	return process_styles( './assets/sass/customizer.scss', './assets/css/' );

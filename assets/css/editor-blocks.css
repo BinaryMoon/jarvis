@@ -1,207 +1,30 @@
+/*!
+ * ## - Custom Properties
+ */
+body {
+	--foreground-color: #000000;
+	--foreground-contrast-color: #ffffff;
+	--background-color: #ffff99;
+	--font-body: Cambria, Georgia, serif;
+	--font-header: Cambria, Georgia, serif;
+	--font-title: Cambria, Georgia, serif;
+	--font-monospace: "andale mono", "monotype.com", "lucida console", monospace;
+	--wp-alignfull-size: 100vw;
+}
+
+body.is-dark-theme {
+	--foreground-color: #ffffff;
+	--foreground-contrast-color: #000000;
+}
+
 .editor-rich-text__tinymce.mce-content-body {
 	line-height: inherit;
 }
 
-.editor-post-title .editor-post-title__input {
-	font-family: "Merriweather Sans",sans-serif;
-}
-
-.edit-post-visual-editor {
-	/*!
- * ## - Typography
+/**
+ * Override colours set in the Gutenberg stylesheets.
  */
-}
-
-.edit-post-visual-editor,
-.edit-post-visual-editor body,
-.edit-post-visual-editor html,
-.edit-post-visual-editor p {
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.75;
-	font-weight: normal;
-	font-family: "Merriweather",serif;
-	color: #333333;
-	direction: ltr;
-	-webkit-font-feature-settings: "kern" 1,"liga" 1,"clig" 1;
-	        font-feature-settings: "kern" 1,"liga" 1,"clig" 1;
-	-webkit-font-variant-ligatures: no-discretionary-ligatures;
-	        font-variant-ligatures: no-discretionary-ligatures;
-	unicode-bidi: normal;
-}
-
-.edit-post-visual-editor h1,
-.edit-post-visual-editor h2,
-.edit-post-visual-editor h3,
-.edit-post-visual-editor h4,
-.edit-post-visual-editor h5,
-.edit-post-visual-editor h6 {
-	color: #000000;
-	font-family: "Merriweather Sans",sans-serif;
-	font-weight: normal;
-}
-
-.edit-post-visual-editor h1 a,
-.edit-post-visual-editor h2 a,
-.edit-post-visual-editor h3 a,
-.edit-post-visual-editor h4 a,
-.edit-post-visual-editor h5 a,
-.edit-post-visual-editor h6 a {
-	color: #000000;
-}
-
-.edit-post-visual-editor h1 a:focus,
-.edit-post-visual-editor h1 a:hover,
-.edit-post-visual-editor h2 a:focus,
-.edit-post-visual-editor h2 a:hover,
-.edit-post-visual-editor h3 a:focus,
-.edit-post-visual-editor h3 a:hover,
-.edit-post-visual-editor h4 a:focus,
-.edit-post-visual-editor h4 a:hover,
-.edit-post-visual-editor h5 a:focus,
-.edit-post-visual-editor h5 a:hover,
-.edit-post-visual-editor h6 a:focus,
-.edit-post-visual-editor h6 a:hover {
-	text-decoration: underline;
-}
-
-.edit-post-visual-editor h1,
-.edit-post-visual-editor h2,
-.edit-post-visual-editor h3 {
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	-webkit-font-feature-settings: "kern" 1,"liga" 1,"clig" 1,"swsh" 1;
-	        font-feature-settings: "kern" 1,"liga" 1,"clig" 1,"swsh" 1;
-}
-
-.edit-post-visual-editor h1 {
-	font-size: 52px;
-	font-size: 3.25rem;
-	line-height: 1.25;
-}
-
-.edit-post-visual-editor h2 {
-	font-size: 40px;
-	font-size: 2.5rem;
-	line-height: 1.25;
-}
-
-.edit-post-visual-editor h3 {
-	font-size: 28px;
-	font-size: 1.75rem;
-	line-height: 1.5;
-}
-
-.edit-post-visual-editor h4 {
-	font-size: 20px;
-	font-size: 1.25rem;
-	line-height: 1.5;
-	font-weight: bold;
-}
-
-.edit-post-visual-editor h5,
-.edit-post-visual-editor h6 {
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.75;
-	font-weight: bold;
-}
-
-.edit-post-visual-editor hr {
-	border: none;
-	border-bottom: 0.2rem solid rgba(0,0,0,0.3);
-}
-
-.edit-post-visual-editor pre {
-	background: #1a1a1a;
-	color: #2ecc71;
-	padding: 1.5rem 1.5rem;
-	overflow: auto;
-	display: block;
-	word-wrap: normal;
-	white-space: pre;
-	-moz-tab-size: 4;
-	  -o-tab-size: 4;
-	     tab-size: 4;
-}
-
-.edit-post-visual-editor pre.compress {
-	max-height: 22.5rem;
-}
-
-.edit-post-visual-editor blockquote {
-	padding: 3rem 3rem;
-	position: relative;
-	background: rgba(0,0,0,0.05);
-}
-
-.edit-post-visual-editor blockquote p:last-child {
-	margin-bottom: 0;
-}
-
-.edit-post-visual-editor h1,
-.edit-post-visual-editor h2,
-.edit-post-visual-editor h3 {
-	margin-top: 3rem;
-	clear: both;
-}
-
-.edit-post-visual-editor dl,
-.edit-post-visual-editor ol,
-.edit-post-visual-editor ul {
-	clear: both;
-}
-
-.edit-post-visual-editor .intro {
-	font-size: 20px;
-	font-size: 1.25rem;
-	line-height: 1.5;
-	margin-bottom: 2.4rem;
-}
-
-.edit-post-visual-editor .drop-cap {
-	float: left;
-	font-family: "Merriweather",serif;
-	font-weight: bold;
-	margin: 0 0.05em 0 -0.2em;
-	font-size: 100px;
-	font-size: 6.25rem;
-	line-height: 0.8;
-}
-
-.edit-post-visual-editor .highlight {
-	background: rgba(241,196,15,0.25);
-	padding: 3px 6px;
-	border-radius: 0.2rem;
-}
-
-.edit-post-visual-editor .button {
-	background: #b8960b;
-	color: #ffffff;
-	display: inline-block;
-	text-decoration: none;
-	border-radius: 0.2rem;
-	border: none;
-	padding: 0.75rem 1.5rem;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	text-align: center;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.75;
-}
-
-.device-click .edit-post-visual-editor .button {
-	transition: all 0.15s ease-in-out;
-}
-
-.edit-post-visual-editor .button:focus,
-.edit-post-visual-editor .button:hover {
-	background: #705b07;
-	color: #ffffff;
-	text-decoration: none;
-}
-
-.edit-post-visual-editor .small-caps {
-	font-variant: small-caps;
+.editor-post-title .editor-post-title__input,
+.block-editor textarea:focus {
+	color: currentColor;
 }
