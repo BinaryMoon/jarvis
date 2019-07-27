@@ -31,6 +31,7 @@ export const build = series(
 );
 export const buildScripts = scriptsGlobal;
 export const buildCustomizerPreview = customizerPreview;
+export const buildCustomizerControls = customizerControls;
 export const buildStyles = series( parallel( styles, editor_styles, customizer_styles ), rtl, toc );
 export const buildZip = compress;
 export const buildRTL = rtl;
