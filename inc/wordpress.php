@@ -91,6 +91,11 @@ add_filter( 'style_loader_tag', 'jarvis_on_style_load', 10, 2 );
 function jarvis_editor_blocks_styles() {
 
 	// Load the theme styles within Gutenberg.
+	/**
+	 * Load the theme styles within Gutenberg.
+	 * We put these styles here rather than in the editor-styles since those
+	 * styles get prefixed with editor-styles-wrapper and so don't work globally.
+	 */
 	wp_enqueue_style(
 		'jarvis-editor-blocks',
 		get_theme_file_uri( '/assets/css/editor-blocks.css' ),
