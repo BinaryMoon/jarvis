@@ -16,9 +16,12 @@ body {
 
 	--wp-alignfull-size: 100vw;
 
-	&.dark-mode {
+	&.is-dark-theme {
+
 		--foreground-color: #ffffff;
 		--foreground-contrast-color: #000000;
+
 	}
 
 }
+

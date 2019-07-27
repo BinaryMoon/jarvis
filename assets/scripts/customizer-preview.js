@@ -16,8 +16,8 @@
 					value.bind(
 						function( to ) {
 
-							var newClass = brightness( to ) ? 'light-mode' : 'dark-mode';
-							$( 'body' ).removeClass( 'dark-mode light-mode' ).addClass( newClass );
+							var newClass = brightness( to ) ? 'is-light-theme' : 'is-dark-theme';
+							$( 'body' ).removeClass( 'is-dark-theme is-light-theme' ).addClass( newClass );
 
 						}
 					);
