@@ -285,7 +285,7 @@ function jarvis_after_setup_theme() {
 		apply_filters(
 			'jarvis_custom_background',
 			array(
-				'default-color' => 'ffff99',
+				'default-color' => 'eedd33',
 				'default-image' => '',
 			)
 		)
