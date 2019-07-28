@@ -54,11 +54,16 @@
 
 			@include modular-scale( gamma );
 			font-weight: bold;
-			padding: 0.5em 0;
 
 			@include for-tablet {
 
 				margin-bottom: 0;
+
+			}
+
+			a {
+
+				padding: 0.5em 0;
 
 			}
 
