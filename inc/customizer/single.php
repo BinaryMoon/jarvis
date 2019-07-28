@@ -67,7 +67,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	);
 
 	/**
-	 * Setting to change the layout of the homepage.
+	 * Setting to change the single header height.
 	 */
 	$wp_customize->add_setting(
 		'jarvis_archive_header_height',
