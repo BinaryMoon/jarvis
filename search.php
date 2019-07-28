@@ -23,16 +23,20 @@
 
 			<h1 class="entry-title entry-archive-title">
 <?php
-		printf(
-			wp_kses(
-				/* Translators: %s: Search query */
-				__( '<span>Search results for:</span> %s', 'jarvis' ),
-				array(
-					'span' => array(),
-				)
-			),
-			esc_html( get_search_query() )
-		);
+
+		/**
+		 * If there is a search query then show 'Search results for:'. If
+		 * there's no query then just use 'Search:`
+		 *
+		 * This allows the search results page to also be used as a search page
+		 * that can be linked to from anywhere.
+		 */
+		if ( '' === get_search_query() ) {
+			echo esc_html__( 'Search:', 'jarvis' );
+		} else {
+			echo esc_html__( 'Search results for:', 'jarvis' );
+		}
+
 ?>
 			</h1>
 
