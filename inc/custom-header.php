@@ -61,8 +61,8 @@ function jarvis_colour_styles() {
 	if ( ! display_header_text() ) {
 ?>
 <style>
-	.masthead .site-title,
-	.masthead .site-description {
+	.branding .site-title,
+	.branding .site-description {
 		clip: rect( 1px, 1px, 1px, 1px );
 		position: absolute;
 	}
@@ -71,10 +71,10 @@ function jarvis_colour_styles() {
 	} else {
 ?>
 <style>
-	.masthead .site-title,
-	.masthead .site-title a,
-	.masthead .site-title a:hover,
-	.masthead p.site-description {
+	.site-header .branding .site-title,
+	.site-header .branding .site-title a,
+	.branding .site-title a:hover,
+	.branding p.site-description {
 		color: #<?php echo esc_attr( $header_text_color ); ?>;
 	}
 </style>
