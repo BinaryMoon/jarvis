@@ -7,7 +7,7 @@ Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
 Domain Path: /languages/
-Tags: blog, news, entertainment, grid-layout, one-column, accessibility-ready, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
+Tags: blog, news, entertainment, grid-layout, one-column, accessibility-ready, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
 
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -3017,20 +3017,22 @@ blockquote p:last-child {
  * 4.7 - Header
  */
 .site-header {
-	margin-bottom: 3rem;
+	padding-bottom: 3rem;
+	background-size: cover;
+	background-position: center;
 }
 
 @media (min-width: 47rem) {
 	.site-header {
-		margin-top: 1.5rem;
-		margin-bottom: 6.75rem;
+		padding-top: 1.5rem;
+		padding-bottom: 6.75rem;
 	}
 }
 
 @media (min-width: 1200px) {
 	.site-header {
-		margin-top: 3rem;
-		margin-bottom: 10.5rem;
+		padding-top: 3rem;
+		padding-bottom: 10.5rem;
 	}
 }
 
@@ -3106,15 +3108,6 @@ blockquote p:last-child {
 	margin: 0 1.5rem;
 	-webkit-box-flex: 2;
 	flex-grow: 2;
-}
-
-a.header-image {
-	display: block;
-}
-
-a.header-image img {
-	display: block;
-	margin: 0 auto;
 }
 
 /**

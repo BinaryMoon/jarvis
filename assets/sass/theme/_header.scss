@@ -5,19 +5,21 @@
 
 .site-header {
 
-	margin-bottom: $grid-line-height * 2;
+	padding-bottom: $grid-line-height * 2;
+	background-size: cover;
+	background-position: center;
 
 	@include for-tablet {
 
-		margin-top: $grid-line-height;
-		margin-bottom: $grid-line-height * 4.5;
+		padding-top: $grid-line-height;
+		padding-bottom: $grid-line-height * 4.5;
 
 	}
 
 	@include for-desktop {
 
-		margin-top: $grid-line-height * 2;
-		margin-bottom: $grid-line-height * 7;
+		padding-top: $grid-line-height * 2;
+		padding-bottom: $grid-line-height * 7;
 
 	}
 
@@ -100,15 +102,3 @@
 
 }
 
-a.header-image {
-
-	display: block;
-
-	img {
-
-		display: block;
-		margin: 0 auto;
-
-	}
-
-}

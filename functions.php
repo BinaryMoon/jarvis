@@ -74,6 +74,9 @@ require get_parent_theme_file_path( 'inc/wordpress-html-classes.php' );
 // Custom header.
 require get_parent_theme_file_path( 'inc/custom-header.php' );
 
+// Featured Images.
+require get_parent_theme_file_path( 'inc/featured-images.php' );
+
 // Reusable Template Functions.
 require get_parent_theme_file_path( 'inc/template-tags.php' );
 

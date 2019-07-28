@@ -11,6 +11,33 @@
  */
 
 /**
+ * Add theme support for Custom Header image.
+ *
+ * Sets the default properties and the custom header callback {@see granule_colour_styles}.
+ */
+function jarvis_custom_header_support() {
+
+	add_theme_support(
+		'custom-header',
+		apply_filters(
+			'jarvis_custom_header',
+			array(
+				'default-text-color' => '000000',
+				'random-default' => false,
+				'width' => 1600,
+				'height' => 900,
+				'header-text' => true,
+				'uploads' => true,
+				'wp-head-callback' => 'jarvis_colour_styles',
+			)
+		)
+	);
+
+}
+
+add_action( 'after_setup_theme', 'jarvis_custom_header_support' );
+
+/**
  * Print custom header styles.
  *
  * May also change other CSS properties related to the header colours.
@@ -80,5 +107,65 @@ function jarvis_colour_brightness( $color = false, $lighter_than = 130 ) {
 	$b = hexdec( $color[4] . $color[5] );
 
 	return ( ( $r * 299 + $g * 587 + $b * 114 ) / 1000 > $lighter_than );
+
+}
+
+
+/**
+ * Display header image and link to homepage.
+ *
+ * On singular pages display featured image if it is large enough to fill the
+ * space. Uses get_queried_object_id in case the header image is called outside
+ * the_loop (before the_post has been called) so that we can be sure featured
+ * images are found.
+ */
+function jarvis_header() {
+
+	$header_image = get_header_image();
+
+	// Use custom headers on singular pages, but only if the image is large
+	// enough.
+	if ( is_singular() && get_theme_mod( 'jarvis_single_header', false ) ) {
+
+		// Use get_queried_object_id so that the content id will always be found
+		// in cases where $post has not been set.
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_queried_object_id() ), 'jarvis-header' );
+
+		if ( ! empty( $image ) ) {
+
+			$header_image = $image[0];
+
+		}
+	}
+
+	// Output header image as background image on page header.
+	if ( $header_image ) {
+
+		return '.site-header { background-image: url( ' . esc_attr( $header_image ) . ' ); }';
+
+	}
+
+	return false;
+
+}
+
+
+function jarvis_has_header_image() {
+
+	if ( get_header_image() ) {
+		return true;
+	}
+
+	if ( is_singular() && get_theme_mod( 'jarvis_single_headser', false ) ) {
+
+		if ( has_post_thumbnail() ) {
+
+			return true;
+
+		}
+
+	}
+
+	return false;
 
 }

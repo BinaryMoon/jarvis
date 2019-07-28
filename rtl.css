@@ -528,6 +528,9 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .container {
   margin: 0 auto
 }
+.site-header {
+  background-position: center
+}
 .site-header .custom-logo-link {
   margin-right: 1.5rem;
   margin-left: 1.5rem
@@ -537,9 +540,6 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 }
 .site-header .menu {
   margin: 0 1.5rem
-}
-a.header-image img {
-  margin: 0 auto
 }
 @media (min-width:47rem) {
   .header-layout-2 {
