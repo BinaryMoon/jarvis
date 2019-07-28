@@ -23,6 +23,12 @@
 
 	}
 
+	.has-header-image & {
+
+		margin-bottom: $grid-line-height * 3;
+
+	}
+
 	.site-header-content {
 
 		display: flex;
