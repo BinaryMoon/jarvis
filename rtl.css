@@ -485,6 +485,9 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .block-border-dashed {
   padding: 1.5rem 1.5rem
 }
+.content-posts article.entry h2.entry-title {
+  padding: .5em 0
+}
 .content-posts article.entry .read-more {
   padding: .75rem 0
 }
@@ -627,6 +630,9 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 }
 .sidebar .widget {
   padding: .75rem 1.5rem
+}
+.content-single .entry-single a {
+  padding: .5em 0
 }
 .content-single .entry-single .alignfull {
   margin-right: -1.5rem
