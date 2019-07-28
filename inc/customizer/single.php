@@ -67,6 +67,33 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	);
 
 	/**
+	 * Setting to change the layout of the homepage.
+	 */
+	$wp_customize->add_setting(
+		'jarvis_archive_header_height',
+		array(
+			'default' => 1,
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'jarvis_sanitize_int',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jarvis_archive_header_height',
+		array(
+			'label' => esc_html__( 'Header Height', 'jarvis' ),
+			'section' => 'jarvis_single',
+			'type' => 'radio',
+			'choices' => array(
+				0 => esc_html__( 'Small', 'jarvis' ),
+				1 => esc_html__( 'Medium (Default)', 'jarvis' ),
+				2 => esc_html__( 'Full Height', 'jarvis' ),
+			),
+		)
+	);
+
+	/**
 	 * Setting to show/ hide the post date.
 	 */
 	$wp_customize->add_setting(

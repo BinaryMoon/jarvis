@@ -178,3 +178,28 @@ function jarvis_has_header_image() {
 	return false;
 
 }
+
+
+/**
+ * Get the class for the header height.
+ *
+ * This can vary between single posts, and all other pages (such as archives).
+ * This function takes care of the different template types.
+ */
+function jarvis_header_height() {
+
+	$header_height = 0;
+
+	if ( is_singular() ) {
+
+		$header_height = get_theme_mod( 'jarvis_single_header_height', 1 );
+
+	} else {
+
+		$header_height = get_theme_mod( 'jarvis_archive_header_height', 1 );
+
+	}
+
+	return 'header-height-' . (int) $header_height;
+
+}
