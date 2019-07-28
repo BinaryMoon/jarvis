@@ -2664,13 +2664,16 @@ p.demo_store {
 	font-size: 2rem;
 	line-height: 1.25;
 	font-weight: bold;
-	padding: 0.5em 0;
 }
 
 @media (min-width: 47rem) {
 	.content-posts article.entry h2.entry-title {
 		margin-bottom: 0;
 	}
+}
+
+.content-posts article.entry h2.entry-title a {
+	padding: 0.5em 0;
 }
 
 .content-posts article.entry .read-more {
@@ -3037,6 +3040,10 @@ blockquote p:last-child {
 	}
 }
 
+.has-header-image .site-header {
+	margin-bottom: 4.5rem;
+}
+
 .site-header .site-header-content {
 	display: -webkit-box;
 	display: flex;
@@ -3109,6 +3116,22 @@ blockquote p:last-child {
 	margin: 0 1.5rem;
 	-webkit-box-flex: 2;
 	flex-grow: 2;
+}
+
+/**
+ * Short header.
+ */
+.header-height-0 .site-header {
+	padding-bottom: 3rem;
+}
+
+/**
+ * Full height header.
+ */
+.header-height-2 .site-header {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	min-height: 100vh;
 }
 
 /**

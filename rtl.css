@@ -485,7 +485,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .block-border-dashed {
   padding: 1.5rem 1.5rem
 }
-.content-posts article.entry h2.entry-title {
+.content-posts article.entry h2.entry-title a {
   padding: .5em 0
 }
 .content-posts article.entry .read-more {
