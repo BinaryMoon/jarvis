@@ -30,6 +30,29 @@
 				}
 			);
 
+			// Edit Header Height.
+			wp.customize(
+				'jarvis_header_height',
+				function( value ) {
+					value.bind(
+						function( to ) {
+
+							var count = 2;
+							var selectors = '';
+
+							for ( i = 0; i <= count; i++ ) {
+								selectors += ' header-height-' + i;
+							}
+
+							$( 'body' )
+								.removeClass( selectors )
+								.addClass( 'header-height-' + to );
+
+						}
+					);
+				}
+			);
+
 
 		}
 	);

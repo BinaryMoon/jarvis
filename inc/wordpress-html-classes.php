@@ -36,6 +36,9 @@ function jarvis_body_class( $classes ) {
 	// Header layout.
 	$classes[] = 'header-layout-' . get_theme_mod( 'jarvis_header_layout', 0 );
 
+	// Header layout.
+	$classes[] = 'header-height-' . get_theme_mod( 'jarvis_header_height', 1 );
+
 	// Foreground colour scheme.
 	$classes[] = jarvis_colour_brightness( get_background_color() ) ? 'is-light-theme' : 'is-dark-theme';
 
