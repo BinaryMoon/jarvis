@@ -15,10 +15,6 @@
 
 	<main id="main" class="main-content content-posts">
 
-<?php
-	if ( have_posts() ) {
-?>
-
 		<header class="entry-archive-header">
 
 			<h1 class="entry-title entry-archive-title">
@@ -46,8 +42,10 @@
 
 		</header>
 
-
 <?php
+
+	if ( have_posts() && '' !== get_search_query() ) {
+
 		while ( have_posts() ) {
 
 			the_post();
@@ -57,11 +55,8 @@
 
 		get_template_part( 'parts/archive-pagination' );
 
-	} else {
-
-		get_template_part( 'parts/content-empty' );
-
 	}
+
 ?>
 
 	</main>
