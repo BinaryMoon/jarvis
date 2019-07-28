@@ -150,6 +150,15 @@ function jarvis_header() {
 }
 
 
+/**
+ * If the site has a header image defined.
+ *
+ * This checks for the normal header image, but also for the custom featured
+ * image which will show in the same location and override the header image if
+ * appropriate.
+ *
+ * The featured header image can be disabled in the customizer.
+ */
 function jarvis_has_header_image() {
 
 	if ( get_header_image() ) {
