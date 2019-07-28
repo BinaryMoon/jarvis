@@ -30,25 +30,22 @@
 				}
 			);
 
-			// Edit Header Height.
+			// Edit Archive Header Height.
 			wp.customize(
-				'jarvis_header_height',
+				'jarvis_archive_header_height',
 				function( value ) {
 					value.bind(
-						function( to ) {
+						header_height
+					);
+				}
+			);
 
-							var count = 2;
-							var selectors = '';
-
-							for ( i = 0; i <= count; i++ ) {
-								selectors += ' header-height-' + i;
-							}
-
-							$( 'body' )
-								.removeClass( selectors )
-								.addClass( 'header-height-' + to );
-
-						}
+			// Edit Single Header Height.
+			wp.customize(
+				'jarvis_single_header_height',
+				function( value ) {
+					value.bind(
+						header_height
 					);
 				}
 			);
@@ -56,5 +53,20 @@
 
 		}
 	);
+
+	var header_height = function( to ) {
+
+		var count = 2;
+		var selectors = '';
+
+		for ( i = 0; i <= count; i++ ) {
+			selectors += ' header-height-' + i;
+		}
+
+		$( 'body' )
+			.removeClass( selectors )
+			.addClass( 'header-height-' + to );
+
+	};
 
 } )( jQuery );
