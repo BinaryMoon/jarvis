@@ -22,6 +22,10 @@
 		return;
 	}
 
+	if ( is_search() && '' === get_search_query() ) {
+		return;
+	}
+
 ?>
 
 <!-- Sidebar Footer (2) -->
