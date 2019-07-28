@@ -330,9 +330,44 @@
 				}
 			);
 
+			// Edit Archive Header Height.
+			wp.customize(
+				'jarvis_archive_header_height',
+				function( value ) {
+					value.bind(
+						header_height
+					);
+				}
+			);
+
+			// Edit Single Header Height.
+			wp.customize(
+				'jarvis_single_header_height',
+				function( value ) {
+					value.bind(
+						header_height
+					);
+				}
+			);
+
 
 		}
 	);
+
+	var header_height = function( to ) {
+
+		var count = 2;
+		var selectors = '';
+
+		for ( i = 0; i <= count; i++ ) {
+			selectors += ' header-height-' + i;
+		}
+
+		$( 'body' )
+			.removeClass( selectors )
+			.addClass( 'header-height-' + to );
+
+	};
 
 } )( jQuery );
 /**
@@ -366,7 +401,7 @@
 							// Hide title and description.
 							if ( 'blank' === to ) {
 
-								$( '.masthead .site-title, .masthead .site-description' ).css(
+								$( '.branding .site-title, .branding .site-description' ).css(
 									{
 										'clip': 'rect(1px, 1px, 1px, 1px)',
 										'position': 'absolute'
@@ -375,14 +410,14 @@
 
 							} else {
 
-								$( '.masthead .site-title, .masthead .site-description' ).css(
+								$( '.branding .site-title, .branding .site-description' ).css(
 									{
 										'clip': 'auto',
 										'position': 'relative'
 									}
 								);
 
-								$( '.masthead .site-title, .masthead .site-title a, .masthead .site-title a:hover, .masthead p.site-description' ).css(
+								$( '.branding .site-title, .branding .site-title a, .branding .site-title a:hover, .branding p.site-description' ).css(
 									{
 										'color': to
 									}
