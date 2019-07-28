@@ -275,7 +275,7 @@ function jarvis_after_setup_theme() {
 	/**
 	 * Custom background.
 	 *
-	 * @link https://developer.wordpress.org/themes/functionality/custom-headers/
+	 * @link https://developer.wordpress.org/themes/functionality/custom-background/
 	 */
 	add_theme_support(
 		'custom-background',
@@ -352,6 +352,9 @@ function jarvis_after_setup_theme() {
 		)
 	);
 
+	/**
+	 * Editor styles.
+	 */
 	add_theme_support( 'editor-styles' );
 	add_editor_style( 'assets/css/editor-styles.css' );
 
