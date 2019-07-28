@@ -176,6 +176,7 @@ function jarvis_get_site_styles() {
 	$styles[] = file_get_contents( get_parent_theme_file_path( 'style.critical.css' ) );
 	$styles[] = jarvis_get_font_css();
 	$styles[] = jarvis_get_single_css();
+	$styles[] = jarvis_header();
 
 	return implode( $styles, ' ' );
 
