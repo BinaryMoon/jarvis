@@ -7,6 +7,11 @@
 		'preview-ready',
 		function() {
 
+			/**
+			 * Note: archive_header_height is updated in custom-site-header to
+			 * keep header related properties together.
+			 */
+
 			// Edit Archive Layout.
 			wp.customize(
 				'jarvis_archive_layout',

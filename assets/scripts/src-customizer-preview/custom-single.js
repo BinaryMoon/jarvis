@@ -8,6 +8,11 @@
 		function() {
 
 			/**
+			 * Note: single_header_height is updated in custom-site-header to
+			 * keep header related properties together.
+			 */
+
+			/**
 			 * Set default values.
 			 */
 			$( '.byline' ).css( 'display', wp.customize( 'jarvis_single_show_author' )() ? 'inline' : 'none' );
