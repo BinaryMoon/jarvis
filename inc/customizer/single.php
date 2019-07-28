@@ -70,7 +70,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	 * Setting to change the single header height.
 	 */
 	$wp_customize->add_setting(
-		'jarvis_archive_header_height',
+		'jarvis_single_header_height',
 		array(
 			'default' => 1,
 			'capability' => 'edit_theme_options',
@@ -80,7 +80,7 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'jarvis_archive_header_height',
+		'jarvis_single_header_height',
 		array(
 			'label' => esc_html__( 'Header Height', 'jarvis' ),
 			'section' => 'jarvis_single',

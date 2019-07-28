@@ -30,7 +30,7 @@ function jarvis_customizer_archive( WP_Customize_Manager $wp_customize ) {
 	);
 
 	/**
-	 * Setting to change the layout of the homepage.
+	 * Setting to change the layout of the homepage & archives.
 	 */
 	$wp_customize->add_setting(
 		'jarvis_archive_layout',
