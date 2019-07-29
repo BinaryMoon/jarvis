@@ -10,6 +10,7 @@ import scriptsGlobal, { customizerPreview, customizerControls } from './gulp/scr
 import compress from './gulp/zip';
 import rtl from './gulp/rtl';
 import toc from './gulp/toc';
+import optimizeSVG from './gulp/svg';
 import criticalCSS from './gulp/critical';
 
 export const build = series(
@@ -20,7 +21,8 @@ export const build = series(
 		customizer_styles,
 		scriptsGlobal,
 		customizerPreview,
-		customizerControls
+		customizerControls,
+		optimizeSVG
 	),
 	parallel(
 		minifyStyles,
@@ -38,6 +40,7 @@ export const buildZip = compress;
 export const buildRTL = rtl;
 export const buildTOC = toc;
 export const buildCritical = criticalCSS;
+export const buildSVG = optimizeSVG;
 
 export const watchFiles = cb => {
 	watch( [ '*.scss', './assets/sass/**/*.scss' ], series( parallel( styles, editor_styles, editor_blocks ), rtl, toc ) );
@@ -45,6 +48,7 @@ export const watchFiles = cb => {
 	watch( './assets/scripts/src-global/*.js', scriptsGlobal );
 	watch( './assets/scripts/src-customizer-preview/*.js', customizerPreview );
 	watch( './assets/scripts/src-customizer-controls/*.js', customizerControls );
+	watch( './assets/svg/src/*.svg', optimizeSVG );
 };
 
 export default watchFiles;
