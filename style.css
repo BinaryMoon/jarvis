@@ -3128,6 +3128,16 @@ blockquote p:last-child {
 	margin: 0;
 }
 
+.site-header .search-link {
+	height: 1.5rem;
+	margin: 0 1.5rem;
+}
+
+.site-header .search-link .icon {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
 .site-header .menu {
 	margin: 0 1.5rem;
 	-webkit-box-flex: 2;

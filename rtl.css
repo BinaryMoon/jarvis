@@ -545,6 +545,9 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .site-header .branding {
   margin: 1.5rem 1.5rem
 }
+.site-header .search-link {
+  margin: 0 1.5rem
+}
 .site-header .menu {
   margin: 0 1.5rem
 }
