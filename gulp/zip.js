@@ -22,6 +22,8 @@ const compress = function() {
 		'!assets/scripts/src-customizer-preview/**',
 		'!assets/scripts/src-customizer-controls/',
 		'!assets/scripts/src-customizer-controls/**',
+		'!assets/svg/src/',
+		'!assets/svg/src/**',
 		'!**/*.scss',
 	];
 
