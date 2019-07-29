@@ -8,6 +8,11 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
+	// Only edit posts on single posts.
+	if ( ! is_singular() ) {
+		return;
+	}
+
 	edit_post_link(
 		sprintf(
 			wp_kses(
