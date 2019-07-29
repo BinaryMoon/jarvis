@@ -110,6 +110,9 @@ require get_parent_theme_file_path( 'inc/customizer/fonts.php' );
 // Jetpack specific functionality.
 require get_parent_theme_file_path( 'inc/plugins/jetpack.php' );
 
+// EditorsKit specific functionality.
+require get_parent_theme_file_path( 'inc/plugins/editorskit.php' );
+
 /**
  * Load WooCommerce compatibility file.
  */
