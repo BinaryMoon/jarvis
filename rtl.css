@@ -534,6 +534,10 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .site-header {
   background-position: center
 }
+.has-header-image .site-header:before {
+  left: 0;
+  right: 0
+}
 .site-header .custom-logo-link {
   margin-right: 1.5rem;
   margin-left: 1.5rem

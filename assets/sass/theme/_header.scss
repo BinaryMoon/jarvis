@@ -5,6 +5,7 @@
 
 .site-header {
 
+	position: relative;
 	padding-bottom: $grid-line-height * 2;
 	background-size: cover;
 	background-position: center;
@@ -25,7 +26,21 @@
 
 	.has-header-image & {
 
+		--foreground-color: #fff;
+		--foreground-contrast-color: #000;
 		margin-bottom: $grid-line-height * 3;
+
+		&:before {
+
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: rgba( black, 0.3 );
+		}
 
 	}
 
@@ -35,6 +50,8 @@
 		flex-direction: column;
 		margin-top: $grid-line-height;
 		margin-bottom: $grid-line-height;
+		z-index: layer( header_content );
+		position: relative;
 
 		@include for-tablet {
 
