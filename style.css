@@ -307,17 +307,19 @@ abbr {
 	cursor: help;
 }
 
-.svg-defs {
-	display: none;
+svg {
+	width: auto;
+}
+
+svg * {
+	color: inherit;
 }
 
 svg.icon {
-	color: currentColor;
-	fill: currentColor;
-}
-
-svg path {
-	color: inherit;
+	color: var(--foreground-color);
+	stroke: currentColor;
+	stroke-width: 2px;
+	fill: none;
 }
 
 @-ms-viewport {
