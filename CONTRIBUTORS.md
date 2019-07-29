@@ -5,3 +5,4 @@
 | @binarymoon | @binarymoon |
 | @paaljoachim | @paaljoachim |
 | @ronalfy | @mediaronllc |
+| @phpbits | @phpbits |
