@@ -3,22 +3,33 @@
 
 const { src, dest } = require( 'gulp' );
 const change = require( 'gulp-change' );
-const svgo = require( 'gulp-svgo' );
+const svgmin = require( 'gulp-svgmin' );
 
 export default function optimizeSVG() {
 
 	return src( './assets/svg/src/*.svg' )
+		.pipe(
+			svgmin(
+				{
+					plugins: [
+						{
+							removeViewBox: false
+						}
+					]
+				}
+			)
+		)
 		.pipe( change( svgAddProperties ) )
-		.pipe( svgo() )
 		.pipe( dest( './assets/svg/' ) );
 
 }
 
-function svgAddProperties( content ) {
+const svgAddProperties = function( content ) {
 
-	var new_content = 'aria-hidden="true" role="img" class="icon"';
+	const new_content = 'aria-hidden="true" role="img" class="icon"';
 	content = content.replace( '<svg', '<svg ' + new_content );
-	content = content.replace( 'stroke="#111111"', '' );
+	content = content.replace( /stroke=\"\#111\"/g, '' );
+	content = content.replace( /fill=\"none\"/g, '' );
 
 	return content;
 
