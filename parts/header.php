@@ -61,6 +61,11 @@
 
 			<?php get_template_part( 'parts/navigation' ); ?>
 
+			<a href="<?php echo esc_url( site_url( '/?s' ) ); ?>" class="search-link">
+				<?php jarvis_svg( 'search' ); ?>
+				<span class="screen-reader-text"><?php esc_html__( 'Search', 'jarvis' ); ?></span>
+			</a>
+
 		</div>
 
 	</header>

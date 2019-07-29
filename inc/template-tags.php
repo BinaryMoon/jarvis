@@ -255,3 +255,16 @@ function jarvis_project_terms() {
 <?php
 
 }
+
+
+/**
+ * Embed an svg directly into the webpage.
+ *
+ * @param string $key The key for the svg file. This is the filename without the .svg.
+ * @return null
+ */
+function jarvis_svg( $key ) {
+
+	require get_parent_theme_file_path( 'assets/svg/' . $key . '.svg' );
+
+}
