@@ -165,7 +165,7 @@ function jarvis_has_header_image() {
 		return true;
 	}
 
-	if ( is_singular() && get_theme_mod( 'jarvis_single_headser', false ) ) {
+	if ( is_singular() && get_theme_mod( 'jarvis_single_header', false ) ) {
 
 		if ( has_post_thumbnail() ) {
 
