@@ -295,26 +295,28 @@ abbr {
 
 }
 
-// hide svgs embedded in the page
-.svg-defs {
-
-	display: none;
-
-}
-
 // make svgs inherit the color from the parent
-svg.icon {
+svg {
 
-	color: currentColor;
-	fill: currentColor;
+	width: auto;
+
+	* {
+
+		color: inherit;
+
+	}
+
+	&.icon {
+
+		color: $black;
+		stroke: currentColor;
+		stroke-width: 2px;
+		fill: none;
+
+	}
 
 }
 
-svg path {
-
-	color: inherit;
-
-}
 
 // IE support for viewport
 @-ms-viewport {
