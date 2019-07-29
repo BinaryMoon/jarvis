@@ -25,6 +25,7 @@ const compress = function() {
 		'!assets/svg/src/',
 		'!assets/svg/src/**',
 		'!**/*.scss',
+		'!**/*.md',
 	];
 
 	console.log( [ ...exclude, './**' ] );
