@@ -3038,7 +3038,6 @@ blockquote p:last-child {
 
 @media (min-width: 1200px) {
 	.site-header {
-		padding-top: 3rem;
 		padding-bottom: 10.5rem;
 	}
 }
@@ -3155,7 +3154,6 @@ blockquote p:last-child {
  * Full height header.
  */
 .header-height-2 .site-header {
-	padding-top: 3rem;
 	padding-bottom: 3rem;
 	min-height: 100vh;
 }
