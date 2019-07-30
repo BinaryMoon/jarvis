@@ -25,6 +25,7 @@
 
 		letter-spacing: -0.01em;
 		font-weight: bold;
+		@include modular-scale( gamma );
 
 		@include for-tablet {
 
