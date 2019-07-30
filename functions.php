@@ -110,15 +110,37 @@ require get_parent_theme_file_path( 'inc/customizer/fonts.php' );
  * Plugins.
  */
 
-// Jetpack specific functionality.
+/**
+ * Jetpack specific functionality.
+ *
+ * @link https://jetpack.com/
+ */
 require get_parent_theme_file_path( 'inc/plugins/jetpack.php' );
 
-// EditorsKit specific functionality.
-require get_parent_theme_file_path( 'inc/plugins/editorskit.php' );
+/**
+ * EditorsKit specific functionality.
+ *
+ * @link https://editorskit.com/
+ */
+if ( class_exists( 'EditorsKit' ) ) {
+	require get_parent_theme_file_path( 'inc/plugins/editorskit.php' );
+}
+
 
 /**
  * Load WooCommerce compatibility file.
+ *
+ * @link https://woocommerce.com/
  */
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_parent_theme_file_path( 'inc/plugins/woocommerce.php' );
+}
+
+/**
+ * Add support for WP-Post-Series plugin
+ *
+ * @link https://wordpress.org/plugins/wp-post-series/
+ */
+if ( class_exists( 'WP_Post_Series' ) ) {
+	require get_parent_theme_file_path( 'inc/plugins/wp-post-series.php' );
 }
