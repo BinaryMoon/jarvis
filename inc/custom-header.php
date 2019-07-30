@@ -41,7 +41,7 @@ add_action( 'after_setup_theme', 'jarvis_custom_header_support' );
 /**
  * Print custom header styles.
  *
- * May also change other CSS properties related to the header colours.
+ * This includes showing and hiding elements, and changing the heading colours.
  */
 function jarvis_title_styles() {
 
@@ -63,6 +63,8 @@ function jarvis_title_styles() {
 	if ( 2 === $header_visibility ) {
 		$styles[] = '.branding .site-title, .branding .site-description ' . $hide;
 	}
+
+	$styles[] = 'body { --title-color: ' . get_theme_mod( 'jarvis_title_color', '#000000' ) . '}';
 
 	return implode( $styles, ' ' );
 

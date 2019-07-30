@@ -83,4 +83,28 @@ function jarvis_customizer_header( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Setting to change the color of the site title.
+	 */
+	$wp_customize->add_setting(
+		'jarvis_title_color',
+		array(
+			'default' => '#000000',
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'jarvis_title_color',
+			array(
+				'label' => esc_html__( 'Title Color', 'jarvis' ),
+				'section' => 'colors',
+			)
+		)
+	);
+
 }
