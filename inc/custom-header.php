@@ -26,9 +26,9 @@ function jarvis_custom_header_support() {
 				'random-default' => false,
 				'width' => 1600,
 				'height' => 900,
-				'header-text' => true,
+				'header-text' => false,
 				'uploads' => true,
-				'wp-head-callback' => 'jarvis_colour_styles',
+				'wp-head-callback' => '__return_false',
 			)
 		)
 	);
@@ -37,53 +37,36 @@ function jarvis_custom_header_support() {
 
 add_action( 'after_setup_theme', 'jarvis_custom_header_support' );
 
+
 /**
  * Print custom header styles.
  *
  * May also change other CSS properties related to the header colours.
  */
-function jarvis_colour_styles() {
+function jarvis_title_styles() {
+
+	$header_visibility = (int) get_theme_mod( 'jarvis_site_title', 0 );
+	$styles = array();
+
+	$hide = '{ clip: rect( 1px, 1px, 1px, 1px ); position: absolute; }';
 
 	/**
-	 * Take care of header text color and visibility.
+	 * We don't need to set display/ visible properties since the items will display by default.
 	 */
-	$header_text_color = get_header_textcolor();
 
-	/**
-	 * If no custom options for text are set, let's bail.
-	 * get_header_textcolor() options: Any hex value, 'blank' to hide text.
-	 * Default: add_theme_support( 'custom-header' ).
-	 */
-	if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
-		return;
+	// Hide the description.
+	if ( 1 === $header_visibility ) {
+		$styles[] = '.branding .site-description ' . $hide;
 	}
 
-	if ( ! display_header_text() ) {
-?>
-<style>
-	.branding .site-title,
-	.branding .site-description {
-		clip: rect( 1px, 1px, 1px, 1px );
-		position: absolute;
+	// Hide everything.
+	if ( 2 === $header_visibility ) {
+		$styles[] = '.branding .site-title, .branding .site-description ' . $hide;
 	}
-</style>
-<?php
-	} else {
-?>
-<style>
-	.site-header .branding .site-title,
-	.site-header .branding .site-title a,
-	.branding .site-title a:hover,
-	.branding p.site-description {
-		color: #<?php echo esc_attr( $header_text_color ); ?>;
-	}
-</style>
-<?php
-	}
+
+	return implode( $styles, ' ' );
 
 }
-
-add_action( 'wp_head', 'jarvis_colour_styles' );
 
 
 /**

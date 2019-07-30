@@ -56,4 +56,31 @@ function jarvis_customizer_header( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Setting to change the layout of the homepage.
+	 */
+	$wp_customize->add_setting(
+		'jarvis_site_title',
+		array(
+			'default' => 0,
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'jarvis_sanitize_int',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jarvis_site_title',
+		array(
+			'label' => esc_html__( 'Title Display', 'jarvis' ),
+			'section' => 'title_tagline',
+			'type' => 'radio',
+			'choices' => array(
+				0 => esc_html__( 'Display Title and Description', 'jarvis' ),
+				1 => esc_html__( 'Display Title only', 'jarvis' ),
+				2 => esc_html__( 'Hide Title and Description', 'jarvis' ),
+			),
+		)
+	);
+
 }
