@@ -24,6 +24,12 @@
 
 			margin: 0 0 $grid-line-height 0;
 
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
 		}
 
 	}
