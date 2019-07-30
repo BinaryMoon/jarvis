@@ -5,8 +5,8 @@
 
 .wp-post-series-box {
 
-	border: $border-width solid $border-color;
-	padding: $grid-line-height ( $grid-gutter / 2 ) 0 ( $grid-gutter / 2 );
+	border: $border-width dashed currentColor;
+	padding: $grid-line-height $grid-gutter;
 	margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
 	.wp-post-series-name {
