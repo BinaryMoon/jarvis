@@ -370,7 +370,7 @@ main #jp-post-flair,
 main div#jp-relatedposts,
 main div.pd-rating,
 main div.sharedaddy {
-  margin: 0 0 3rem 0
+  margin: 3rem 0
 }
 main div#jp-relatedposts h3.jp-relatedposts-headline em,
 main div#jp-relatedposts h3.sd-title,
@@ -457,7 +457,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
   padding: .75rem 0 0 0
 }
 .wp-post-series-box {
-  padding: 1.5rem .75rem 0 .75rem;
+  padding: 1.5rem 1.5rem;
   margin: 0 0 3rem 0
 }
 .wp-post-series-box .wp-post-series-description p {
@@ -638,7 +638,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .sidebar .widget {
   padding: .75rem 1.5rem
 }
-.content-single .entry-single a {
+.content-single .entry-single > a {
   padding: .5em 0
 }
 .content-single .entry-single .alignfull {
