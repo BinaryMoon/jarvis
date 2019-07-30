@@ -2976,6 +2976,10 @@ a.thumbnail img {
 	opacity: 0.3;
 }
 
+body .jetpack-social-navigation li {
+	margin-right: 0.5em;
+}
+
 /*!
  * 4.6 - General Properties
  */

@@ -528,6 +528,9 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .site-footer .sep {
   margin: 0 .5em
 }
+body .jetpack-social-navigation li {
+  margin-left: .5em
+}
 .container {
   margin: 0 auto
 }
