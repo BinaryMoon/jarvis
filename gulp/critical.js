@@ -11,11 +11,13 @@ const autoprefixer = require( 'gulp-autoprefixer' );
  */
 export default function criticalCSS() {
 
+	const root = './assets/css/';
+
 	critical.generate(
 		{
 			base: './',
 			src: 'http://localhost/wordpress-themes/',
-			dest: 'style.critical.css',
+			dest: root + 'critical.css',
 			css: [ './style.css' ],
 			dimensions: [
 				{
@@ -34,7 +36,7 @@ export default function criticalCSS() {
 		}
 	);
 
-	return src( './style.critical.css' )
+	return src( root + 'critical.css' )
 		.pipe(
 			autoprefixer(
 				{
@@ -49,6 +51,6 @@ export default function criticalCSS() {
 				}
 			)
 		)
-		.pipe( dest( './' ) );
+		.pipe( dest( root ) );
 
 };
