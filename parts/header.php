@@ -59,13 +59,7 @@
 
 			</div>
 
-<?php
-
-	get_template_part( 'parts/search-button' );
-
-	get_template_part( 'parts/navigation' );
-
-?>
+			<?php get_template_part( 'parts/navigation' ); ?>
 
 		</div>
 

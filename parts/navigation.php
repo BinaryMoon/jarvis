@@ -25,6 +25,8 @@ if ( ! has_nav_menu( 'menu-1' ) ) {
 
 <?php
 
+	get_template_part( 'parts/search-button' );
+
 	wp_nav_menu(
 		array(
 			'theme_location' => 'menu-1',
