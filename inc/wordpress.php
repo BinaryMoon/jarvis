@@ -177,7 +177,7 @@ function jarvis_get_site_styles() {
 	 * changes being made to the primary stylesheets.
 	 */
 	if ( ! WP_DEBUG ) {
-		$styles[] = file_get_contents( get_parent_theme_file_path( 'style.critical.css' ) );
+		$styles[] = file_get_contents( get_parent_theme_file_path( 'assets/css/critical.css' ) );
 	}
 	$styles[] = jarvis_title_styles();
 	$styles[] = jarvis_get_font_css();
