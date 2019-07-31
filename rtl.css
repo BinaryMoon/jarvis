@@ -541,18 +541,26 @@ body .jetpack-social-navigation li {
   left: 0;
   right: 0
 }
-.site-header .custom-logo-link {
-  margin-right: 1.5rem;
-  margin-left: 1.5rem
-}
-.site-header .branding {
-  margin: 1.5rem 1.5rem
+.site-header .site-header-content {
+  padding: 1.5rem 1.5rem
 }
 .site-header .search-link {
-  margin: 0 1.5rem
+  padding: .75rem 1.5rem
 }
-.site-header .menu {
-  margin: 0 1.5rem
+.site-header .search-link .icon {
+  margin-left: .75rem
+}
+@media (min-width:47rem) {
+  .site-header .search-link {
+    left: 1.5rem;
+    right: auto
+  }
+}
+.site-header .menu-toggle {
+  text-align: right
+}
+.header-layout-1 .site-header .custom-logo-link img {
+  margin: 0 auto
 }
 @media (min-width:47rem) {
   .header-layout-2 {
@@ -565,16 +573,9 @@ body .jetpack-social-navigation li {
     transform: rotate(-180deg);
     text-align: left
   }
-  .header-layout-2 .menu-primary .menu-wrap {
-    text-align: right
-  }
 }
 #main {
   padding: 0 1.5rem
-}
-.menu-toggle {
-  margin: 0 1.5rem;
-  text-align: right
 }
 .menu-primary > ul {
   padding: .75rem 1.5rem
@@ -593,7 +594,8 @@ body .jetpack-social-navigation li {
 }
 @media (min-width:47rem) {
   .menu-primary .menu-wrap {
-    text-align: left
+    margin-right: -1.5rem;
+    margin-left: -1.5rem
   }
   .menu-primary .menu-wrap ul {
     text-align: right

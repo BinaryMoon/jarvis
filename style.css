@@ -316,9 +316,8 @@ svg * {
 }
 
 svg.icon {
-	color: var(--foreground-color);
 	stroke: currentColor;
-	stroke-width: 2px;
+	stroke-width: 0.1em;
 	fill: none;
 }
 
@@ -2728,8 +2727,11 @@ p.demo_store {
 }
 
 .content-posts .entry-archive-title {
-	letter-spacing: -0.025em;
+	letter-spacing: -0.01em;
 	font-weight: bold;
+	font-size: 32px;
+	font-size: 2rem;
+	line-height: 1.25;
 }
 
 @media (min-width: 47rem) {
@@ -3006,12 +3008,6 @@ a:focus, a:hover {
 	margin: 0 auto;
 }
 
-.container:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
 blockquote {
 	position: relative;
 	font-size: 32px;
@@ -3033,21 +3029,20 @@ blockquote p:last-child {
  */
 .site-header {
 	position: relative;
-	padding-bottom: 3rem;
+	padding-bottom: 4.5rem;
 	background-size: cover;
 	background-position: center;
 }
 
 @media (min-width: 47rem) {
 	.site-header {
-		padding-top: 1.5rem;
-		padding-bottom: 6.75rem;
+		padding-bottom: 6rem;
 	}
 }
 
 @media (min-width: 1200px) {
 	.site-header {
-		padding-bottom: 10.5rem;
+		padding-bottom: 12rem;
 	}
 }
 
@@ -3069,42 +3064,18 @@ blockquote p:last-child {
 }
 
 .site-header .site-header-content {
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	flex-direction: column;
 	z-index: 50;
 	position: relative;
+	padding: 1.5rem 1.5rem;
 }
 
-@media (min-width: 47rem) {
-	.site-header .site-header-content {
-		-webkit-box-align: center;
-		align-items: center;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		flex-direction: row;
-	}
-}
-
-.site-header .custom-logo-link {
-	-webkit-box-flex: 1;
-	flex-grow: 1;
-	margin-left: 1.5rem;
-	margin-right: 1.5rem;
-	max-width: calc( 15% + 3rem);
+.site-header .site-header-content > * + * {
+	margin-top: 0.75rem;
 }
 
 .site-header .custom-logo-link img {
 	width: auto;
 	display: block;
-}
-
-.site-header .branding {
-	margin: 1.5rem 1.5rem;
-	-webkit-box-flex: 1;
-	flex-grow: 1;
 }
 
 .site-header .branding .site-title a,
@@ -3138,26 +3109,61 @@ blockquote p:last-child {
 }
 
 .site-header .search-link {
-	height: 1.5rem;
-	margin: 0 1.5rem;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 0.75rem 1.5rem;
+	background: var(--foreground-color);
+	color: var(--foreground-contrast-color);
 }
 
 .site-header .search-link .icon {
 	height: 1.5rem;
 	width: 1.5rem;
+	margin-right: 0.75rem;
 }
 
-.site-header .menu {
-	margin: 0 1.5rem;
-	-webkit-box-flex: 2;
-	flex-grow: 2;
+@media (min-width: 47rem) {
+	.site-header .search-link {
+		-webkit-box-pack: center;
+		justify-content: center;
+		color: var(--foreground-color);
+		width: 3rem;
+		height: 3rem;
+		margin: 0;
+		position: absolute;
+		top: 1.5rem;
+		right: 1.5rem;
+		left: auto;
+		background: transparent;
+		padding: 0;
+	}
+	.site-header .search-link span {
+		display: none;
+	}
+	.site-header .search-link .icon {
+		margin: 0;
+	}
+}
+
+.site-header .menu-toggle {
+	text-align: left;
+	display: block;
+	width: 100%;
+}
+
+@media (min-width: 47rem) {
+	.site-header .menu-toggle {
+		display: none;
+	}
 }
 
 /**
  * Short header.
  */
 .header-height-0 .site-header {
-	padding-bottom: 3rem;
+	padding-bottom: 0;
 }
 
 /**
@@ -3179,13 +3185,13 @@ blockquote p:last-child {
 	align-items: center;
 }
 
-.header-layout-1 .site-header .branding {
-	text-align: center;
+.header-layout-1 .site-header .custom-logo-link img {
+	margin: 0 auto;
 }
 
-.header-layout-1 .site-header .menu-toggle,
-.header-layout-1 .site-header .menu-primary {
-	width: calc(100% - 3rem);
+.header-layout-1 .site-header .branding {
+	grid-column: 1/-1;
+	text-align: center;
 }
 
 .header-layout-1 .site-header .menu-primary {
@@ -3232,8 +3238,12 @@ blockquote p:last-child {
 	.header-layout-2.admin-bar .branding {
 		top: 32px;
 	}
-	.header-layout-2 .menu-primary .menu-wrap {
-		text-align: left;
+	.header-layout-2 .search-link {
+		-webkit-box-ordinal-group: 1000;
+		order: 999;
+	}
+	.header-layout-2 .menu {
+		grid-column: 1/2;
 	}
 }
 
@@ -3249,17 +3259,6 @@ blockquote p:last-child {
  * 4.9 - Navigation
  * Main website navigation.
  */
-.menu-toggle {
-	margin: 0 1.5rem;
-	text-align: left;
-}
-
-@media (min-width: 47rem) {
-	.menu-toggle {
-		display: none;
-	}
-}
-
 .menu-primary {
 	display: none;
 }
@@ -3321,7 +3320,8 @@ blockquote p:last-child {
 		display: block;
 	}
 	.menu-primary .menu-wrap {
-		text-align: right;
+		margin-left: -1.5rem;
+		margin-right: -1.5rem;
 	}
 	.menu-primary .menu-wrap ul {
 		text-align: left;
