@@ -25,16 +25,16 @@ if ( ! has_nav_menu( 'menu-1' ) ) {
 
 <?php
 
-wp_nav_menu(
-	array(
-		'theme_location' => 'menu-1',
-		'menu_id' => 'nav',
-		'menu_class' => 'menu-wrap',
-		'container' => false,
-		'item_spacing' => 'discard',
-		'fallback_cb' => false,
-	)
-);
+	wp_nav_menu(
+		array(
+			'theme_location' => 'menu-1',
+			'menu_id' => 'nav',
+			'menu_class' => 'menu-wrap',
+			'container' => false,
+			'item_spacing' => 'discard',
+			'fallback_cb' => false,
+		)
+	);
 
 ?>
 
