@@ -114,67 +114,6 @@
 
 	};
 
-	/**
-	 * Remove an event
-	 * @param  {String}   types    The event type or types (comma separated)
-	 * @param  {String}   selector The selector to remove the event from
-	 * @param  {Function} callback The function to remove
-	 */
-	publicAPIs.off = function( types, selector, callback ) {
-
-		// Loop through each event type
-		types.split( ',' ).forEach( ( function( type ) {
-
-			// Remove whitespace
-			type = type.trim();
-
-			// if event type doesn't exist, bail
-			if ( !activeEvents[ type ] ) return;
-
-			// If it's the last event of it's type, remove entirely
-			if ( activeEvents[ type ].length < 2 || !selector ) {
-				delete activeEvents[ type ];
-				window.removeEventListener( type, eventHandler, true );
-				return;
-			}
-
-			// Otherwise, remove event
-			var index = getIndex( activeEvents[ type ], selector, callback );
-			if ( index < 0 ) return;
-			activeEvents[ type ].splice( index, 1 );
-
-		} ) );
-
-	};
-
-	/**
-	 * Add an event, and automatically remove it after it's first run
-	 * @param  {String}   types    The event type or types (comma separated)
-	 * @param  {String}   selector The selector to run the event on
-	 * @param  {Function} callback The function to run when the event fires
-	 */
-	publicAPIs.once = function( types, selector, callback ) {
-		publicAPIs.on( types, selector, ( function temp( event ) {
-			callback( event );
-			publicAPIs.off( types, selector, temp );
-		} ) );
-	};
-
-	/**
-	 * Get an immutable copy of all active event listeners
-	 * @return {Object} Active event listeners
-	 */
-	publicAPIs.get = function() {
-		var obj = {};
-		for ( var type in activeEvents ) {
-			if ( activeEvents.hasOwnProperty( type ) ) {
-				obj[ type ] = activeEvents[ type ];
-			}
-		}
-		return obj;
-	};
-
-
 	//
 	// Return public APIs
 	//
