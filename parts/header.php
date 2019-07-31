@@ -59,16 +59,18 @@
 
 			</div>
 
-			<?php get_template_part( 'parts/navigation' ); ?>
+<?php
 
-			<a href="<?php echo esc_url( site_url( '/?s' ) ); ?>" class="search-link">
-				<?php jarvis_svg( 'search' ); ?>
-				<span class="screen-reader-text"><?php esc_html__( 'Search', 'jarvis' ); ?></span>
-			</a>
+	get_template_part( 'parts/search-button' );
+
+	get_template_part( 'parts/navigation' );
+
+?>
 
 		</div>
 
 	</header>
 
 	<div class="container" id="site-content">
+
 	<?php do_action( 'jarvis_before_content' ); ?>
