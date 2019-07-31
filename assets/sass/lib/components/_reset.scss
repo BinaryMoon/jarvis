@@ -308,9 +308,8 @@ svg {
 
 	&.icon {
 
-		color: $black;
 		stroke: currentColor;
-		stroke-width: 2px;
+		stroke-width: 0.1em;
 		fill: none;
 
 	}
