@@ -6,20 +6,19 @@
 .site-header {
 
 	position: relative;
-	padding-bottom: $grid-line-height * 2;
+	padding-bottom: $grid-line-height * 3;
 	background-size: cover;
 	background-position: center;
 
 	@include for-tablet {
 
-		padding-top: $grid-line-height;
-		padding-bottom: $grid-line-height * 4.5;
+		padding-bottom: $grid-line-height * 4;
 
 	}
 
 	@include for-desktop {
 
-		padding-bottom: $grid-line-height * 7;
+		padding-bottom: $grid-line-height * 8;
 
 	}
 
@@ -27,6 +26,7 @@
 
 		--foreground-color: #fff;
 		--foreground-contrast-color: #000;
+
 		margin-bottom: $grid-line-height * 3;
 
 		&:before {
@@ -45,26 +45,19 @@
 
 	.site-header-content {
 
-		display: flex;
-		flex-direction: column;
 		z-index: layer( header_content );
 		position: relative;
+		padding: $grid-line-height $grid-gutter;
 
-		@include for-tablet {
+		> * + * {
 
-			align-items: center;
-			flex-direction: row;
+			margin-top: ( $grid-line-height / 2 );
 
 		}
 
 	}
 
 	.custom-logo-link {
-
-		flex-grow: 1;
-		margin-left: $grid-gutter;
-		margin-right: $grid-gutter;
-		max-width: calc( 15% + #{$grid-gutter * 2});
 
 		img {
 
@@ -76,9 +69,6 @@
 	}
 
 	.branding {
-
-		margin: ( $grid-line-height ) ( $grid-gutter );
-		flex-grow: 1;
 
 		.site-title a,
 		.site-title {
@@ -116,14 +106,64 @@
 
 	.search-link {
 
-		height: 1.5rem;
-		margin: 0 $grid-gutter;
-
+		display: flex;
+		align-items: center;
+		padding: ( $grid-line-height / 2 ) $grid-gutter;
+		background: $black;
+		color: $white;
 
 		.icon {
 
 			height: 1.5rem;
 			width: 1.5rem;
+			margin-right: ( $grid-gutter / 2 );
+
+		}
+
+		@include for-tablet {
+
+			justify-content: center;
+			color: $black;
+
+			width: $grid-gutter * 2;
+			height: $grid-line-height * 2;
+			margin: 0;
+
+			position: absolute;
+			top: $grid-line-height;
+			right: $grid-gutter;
+			left: auto;
+
+			background: transparent;
+			padding: 0;
+
+			span {
+
+				display: none;
+
+			}
+
+			.icon {
+
+				margin: 0;
+
+			}
+
+		}
+
+	}
+
+
+
+	.menu-toggle {
+
+		text-align: left;
+		display: block;
+		width: 100%;
+
+		@include for-tablet {
+
+			display: none;
 
 		}
 
@@ -131,10 +171,9 @@
 
 	.menu {
 
-		margin: 0 ( $grid-gutter );
-		flex-grow: 2;
-
 	}
+
+
 
 }
 

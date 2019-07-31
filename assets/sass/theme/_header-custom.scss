@@ -5,7 +5,7 @@
 
 	.site-header {
 
-		padding-bottom: $grid-line-height * 2;
+		padding-bottom: 0;
 
 	}
 
@@ -39,16 +39,20 @@
 
 		}
 
-		.branding {
+		.custom-logo-link {
 
-			text-align: center;
+			img {
+
+				margin: 0 auto;
+
+			}
 
 		}
 
-		.menu-toggle,
-		.menu-primary {
+		.branding {
 
-			width: calc(100% - #{$grid-gutter * 2});
+			grid-column: 1/-1;
+			text-align: center;
 
 		}
 
@@ -113,13 +117,15 @@
 
 		}
 
-		.menu-primary {
+		.search-link {
 
-			.menu-wrap {
+			order: 999;
 
-				text-align: left;
+		}
 
-			}
+		.menu {
+
+			grid-column: 1/2;
 
 		}
 
