@@ -172,8 +172,13 @@ function jarvis_get_site_styles() {
 
 	/**
 	 * Add critical path css inline to help speed up the website.
+	 *
+	 * Only use these on production sites so that the styles don't override
+	 * changes being made to the primary stylesheets.
 	 */
-	$styles[] = file_get_contents( get_parent_theme_file_path( 'style.critical.css' ) );
+	if ( ! WP_DEBUG ) {
+		$styles[] = file_get_contents( get_parent_theme_file_path( 'style.critical.css' ) );
+	}
 	$styles[] = jarvis_title_styles();
 	$styles[] = jarvis_get_font_css();
 	$styles[] = jarvis_get_single_css();
