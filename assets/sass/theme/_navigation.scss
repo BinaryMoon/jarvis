@@ -4,23 +4,6 @@
  */
 // @package Jarvis
 
-.menu-toggle {
-
-	margin: 0 $grid-gutter;
-	text-align: left;
-
-}
-
-@include for-tablet {
-
-	.menu-toggle {
-
-		display: none;
-
-	}
-
-}
-
 .menu-primary {
 
 	display: none;
@@ -107,7 +90,8 @@
 		// Top layer links.
 		.menu-wrap {
 
-			text-align: right;
+			margin-left: -$grid-gutter;
+			margin-right: -$grid-gutter;
 
 			// First level of dropdown menus.
 			ul {
