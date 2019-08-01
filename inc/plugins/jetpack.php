@@ -27,9 +27,6 @@ function jarvis_jetpack_init() {
 	// Add support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 
-	// Add support for Social Menu.
-	add_theme_support( 'jetpack-social-menu' );
-
 }
 
 add_action( 'after_setup_theme', 'jarvis_jetpack_init' );
