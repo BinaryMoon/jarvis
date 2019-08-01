@@ -9,10 +9,10 @@
  */
 
 
-// There's no menu so quit.
-if ( ! has_nav_menu( 'menu-1' ) ) {
-	return;
-}
+	// There's no menu so quit.
+	if ( ! has_nav_menu( 'menu-1' ) ) {
+		return;
+	}
 
 ?>
 
