@@ -27,7 +27,7 @@
 <?php
 	get_sidebar();
 
-	jarvis_social_links();
+	get_template_part( 'parts/navigation-social' );
 
 	/**
 	 * Check to see if a custom credits option is set.
