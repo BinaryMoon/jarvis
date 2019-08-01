@@ -356,6 +356,7 @@ function jarvis_after_setup_theme() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Menu', 'jarvis' ),
+			'social' => esc_html__( 'Social Menu', 'jarvis' ),
 		)
 	);
 
