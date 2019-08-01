@@ -183,6 +183,29 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+
+	/**
+	 * Setting to show/ hide post tags and categories.
+	 */
+	$wp_customize->add_setting(
+		'jarvis_single_show_categories',
+		array(
+			'default' => true,
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'jarvis_sanitize_checkbox',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jarvis_single_show_categories',
+		array(
+			'label' => esc_html__( 'Display Categories and Tags', 'jarvis' ),
+			'section' => 'jarvis_single',
+			'type' => 'checkbox',
+		)
+	);
+
 }
 
 
@@ -205,6 +228,10 @@ function jarvis_get_single_css() {
 
 	if ( ! get_theme_mod( 'jarvis_single_show_date', true ) ) {
 		$styles[] = 'html .posted-on { display: none; }';
+	}
+
+	if ( ! get_theme_mod( 'jarvis_single_show_categories', true ) ) {
+		$styles[] = 'html .entry-terms { display: none; }';
 	}
 
 	return implode( $styles, ' ' );

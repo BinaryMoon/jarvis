@@ -17,6 +17,7 @@
 			 */
 			$( '.byline' ).css( 'display', wp.customize( 'jarvis_single_show_author' )() ? 'inline' : 'none' );
 			$( '.posted-on' ).css( 'display', wp.customize( 'jarvis_single_show_date' )() ? 'inline' : 'none' );
+			$( '.entry-terms' ).css( 'display', wp.customize( 'jarvis_single_show_categories' )() ? 'block' : 'none' );
 			$( '.content-single .contributor' ).css( 'display', wp.customize( 'jarvis_single_show_author_details' )() ? 'grid' : 'none' );
 
 			// Edit Single Post Layout.
@@ -64,10 +65,22 @@
 			);
 
 			wp.customize(
-				'jarvis_single_show_author_details',
+				'jarvis_single_show_categories',
 				function( value ) {
 
-					// $( '.content-single .contributor' ).css( 'display', to ? 'grid' : 'none' );
+					value.bind(
+						function( to ) {
+
+							$( '.entry-terms' ).css( 'display', to ? 'block' : 'none' );
+
+						}
+					);
+				}
+			);
+
+			wp.customize(
+				'jarvis_single_show_author_details',
+				function( value ) {
 
 					value.bind(
 						function( to ) {
