@@ -59,6 +59,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *    4.10 - Numbered Pagination
  *    4.11 - Pagination
  *    4.12 - Body
+ *    4.13 - Social Menu
  */
 /*!
  * 1.0 - CSS Library
@@ -1491,15 +1492,6 @@ p.wp-block-subhead {
 	margin: 0;
 }
 
-.widget.widget_wpcom_social_media_icons_widget li {
-	margin-right: 0.75rem;
-	margin-left: auto;
-}
-
-.widget.widget_wpcom_social_media_icons_widget li a {
-	font-size: 32px;
-}
-
 /*!
  * 2.6 - Gallery
  * Default styles for the [gallery] shortcode
@@ -2256,10 +2248,6 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 	max-width: 100%;
 }
 
-body .jetpack-social-navigation ul {
-	margin-bottom: 1.5rem;
-}
-
 /*!
  * 3.3 - WooCommerce
  */
@@ -2950,7 +2938,7 @@ a.thumbnail img {
 }
 
 .projects-terms a {
-	margin: 0 1.5rem;
+	margin: 0 0.75rem;
 }
 
 .projects-terms a.current-page {
@@ -2976,10 +2964,6 @@ a.thumbnail img {
 .site-footer .sep {
 	margin: 0 0.5em;
 	opacity: 0.3;
-}
-
-body .jetpack-social-navigation li {
-	margin-right: 0.5em;
 }
 
 /*!
@@ -3735,4 +3719,24 @@ blockquote p:last-child {
 	.single-layout-1 .content-single .entry-single .alignfull {
 		margin-left: calc( ( var( --wp-alignfull-size ) - 44rem ) / -2);
 	}
+}
+
+/*!
+ * 4.13 - Social Menu
+ */
+.menu-social ul {
+	margin: 0 0 1.5rem 0;
+	padding: 0;
+}
+
+.menu-social li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 0.75rem;
+}
+
+.menu-social .icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	stroke: none;
 }
