@@ -405,6 +405,9 @@ body #eu-cookie-law.negative input,
 body #eu-cookie-law.positive input {
   padding: .75rem 3rem
 }
+.widgets-list-layout .bump-view {
+  margin-left: .75rem
+}
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,

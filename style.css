@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-14
+Version: 1.0.alpha-19
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -1319,10 +1319,6 @@ p.wp-block-subhead {
 	margin-bottom: 0;
 }
 
-.widget.jetpack_subscription_widget #subscribe-email input {
-	width: 100%;
-}
-
 .widget.tagcloud ul {
 	list-style-type: none;
 }
@@ -2244,8 +2240,71 @@ body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hov
 	text-decoration: underline;
 }
 
+/*
+ * Top Posts Widget styles for Jetpack
+ */
+/* 2-Column Grid Layout */
+.widgets-grid-layout {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.widgets-grid-layout .widget-grid-view-image {
+	width: 50%;
+}
+
+.widgets-grid-layout .widget-grid-view-image img {
+	display: block;
+}
+
+/* List Layout */
+.widgets-list-layout {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.widgets-list-layout li {
+	margin-bottom: 1.5rem;
+	display: -webkit-box;
+	display: flex;
+}
+
+.widgets-list-layout .bump-view {
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	margin-right: 0.75rem;
+	width: 4.5rem;
+}
+
+.widgets-list-layout .widgets-list-layout-blavatar {
+	width: 100%;
+	display: block;
+	height: auto;
+}
+
+.widgets-list-layout .widgets-list-layout-links {
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+}
+
+.widgets-list-layout span {
+	opacity: 0.5;
+}
+
+.widgets-list-layout span:hover {
+	opacity: 0.8;
+}
+
 body .widgets-list-layout img.widgets-list-layout-blavatar {
 	max-width: 100%;
+}
+
+.jetpack_subscription_widget #subscribe-email input {
+	width: 100%;
+	margin: 0;
 }
 
 /*!
