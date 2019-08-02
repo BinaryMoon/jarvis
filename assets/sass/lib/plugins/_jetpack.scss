@@ -346,6 +346,87 @@ body #eu-cookie-law {
 
 }
 
+
+
+/*
+ * Top Posts Widget styles for Jetpack
+ */
+
+/* 2-Column Grid Layout */
+
+.widgets-grid-layout {
+
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+
+	.widget-grid-view-image {
+
+		width: 50%;
+
+		img {
+
+			display: block;
+
+		}
+
+	}
+
+}
+
+/* List Layout */
+
+.widgets-list-layout {
+
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+
+	li {
+
+		margin-bottom: $grid-line-height;
+		display: flex;
+
+	}
+
+	// Thumbnail. Who knows what the class name means?
+	.bump-view {
+
+		flex-grow: 1;
+		margin-right: ( $grid-gutter / 2 );
+		width: ( $grid-gutter * 3 );
+
+	}
+
+	.widgets-list-layout-blavatar {
+
+		width: 100%;
+		display: block;
+		height: auto;
+
+	}
+
+	.widgets-list-layout-links {
+
+		flex-grow: 1;
+
+	}
+
+
+	span {
+
+		opacity: 0.5;
+
+		&:hover {
+
+			opacity: 0.8;
+
+		}
+
+	}
+
+}
+
 body {
 
 	// Popular posts thumbnails.
@@ -357,3 +438,15 @@ body {
 
 }
 
+
+// Jetpack subscription widget.
+.jetpack_subscription_widget {
+
+	#subscribe-email input {
+
+		width: 100%;
+		margin: 0;
+
+	}
+
+}

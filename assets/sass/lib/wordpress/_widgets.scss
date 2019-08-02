@@ -120,17 +120,6 @@
 
 	}
 
-	// Jetpack subscription widget.
-	&.jetpack_subscription_widget {
-
-		#subscribe-email input {
-
-			width: 100%;
-
-		}
-
-	}
-
 @if $support_accessible_tagcloud {
 
 	// Tagcloud.

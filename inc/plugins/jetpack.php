@@ -152,6 +152,12 @@ function jarvis_remove_jetpack_stylesheets() {
 	// Remove related posts styles.
 	wp_dequeue_style( 'jetpack_related-posts' );
 
+	// Remove top posts styles.
+	wp_dequeue_style( 'jetpack-top-posts-widget' );
+
+	// Remove subscription.
+	wp_dequeue_style( 'jetpack-subscriptions' );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_remove_jetpack_stylesheets', 100 );
