@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-19
+Version: 1.0.alpha-20
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -2273,8 +2273,6 @@ body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hov
 }
 
 .widgets-list-layout .bump-view {
-	-webkit-box-flex: 1;
-	flex-grow: 1;
 	margin-right: 0.75rem;
 	width: 4.5rem;
 }
@@ -2288,6 +2286,7 @@ body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hov
 .widgets-list-layout .widgets-list-layout-links {
 	-webkit-box-flex: 1;
 	flex-grow: 1;
+	width: 50%;
 }
 
 .widgets-list-layout span {

@@ -392,7 +392,6 @@ body #eu-cookie-law {
 	// Thumbnail. Who knows what the class name means?
 	.bump-view {
 
-		flex-grow: 1;
 		margin-right: ( $grid-gutter / 2 );
 		width: ( $grid-gutter * 3 );
 
@@ -409,6 +408,7 @@ body #eu-cookie-law {
 	.widgets-list-layout-links {
 
 		flex-grow: 1;
+		width: 50%;
 
 	}
 
