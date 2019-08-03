@@ -18,7 +18,7 @@
 
 ?>
 
-<main id="content" class="main-content content-none">
+	<main id="main" class="main-content content-single">
 
 <?php
 
@@ -27,7 +27,6 @@
 		while ( have_posts() ) {
 
 			the_post();
-
 			the_content();
 
 		}
@@ -36,7 +35,7 @@
 
 ?>
 
-</main>
+	</main>
 
 <?php
 
