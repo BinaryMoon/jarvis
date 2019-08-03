@@ -29,7 +29,7 @@ function jarvis_featured_images() {
 	add_image_size( 'jarvis-header', 1600, 900, true );
 
 	// Archive & homepage thumbnails.
-	add_image_size( 'jarvis-archive', 400, 225, true );
+	add_image_size( 'jarvis-archive', 720, 405, true );
 
 }
 
