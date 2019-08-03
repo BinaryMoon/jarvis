@@ -240,6 +240,7 @@ ol {
 
 .button:focus, .button:hover {
 	text-decoration: underline;
+	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .small-caps {
