@@ -95,12 +95,21 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
-  border-color: var(--foreground-color)
+  border-color: var(--foreground-color);
+  box-shadow: -.2rem .2rem 0 currentColor
 }
 a.button,
 button,
 input[type=submit] {
   padding: .75rem 3rem
+}
+a.button:focus,
+a.button:hover,
+button:focus,
+button:hover,
+input[type=submit]:focus,
+input[type=submit]:hover {
+  box-shadow: -.2rem .2rem 0 var(--foreground-color)
 }
 legend {
   padding: 0 .75rem
@@ -405,6 +414,12 @@ body #eu-cookie-law.negative input,
 body #eu-cookie-law.positive input {
   padding: .75rem 3rem
 }
+body #eu-cookie-law.negative input:focus,
+body #eu-cookie-law.negative input:hover,
+body #eu-cookie-law.positive input:focus,
+body #eu-cookie-law.positive input:hover {
+  box-shadow: -.2rem .2rem 0 var(--foreground-color)
+}
 .widgets-list-layout .bump-view {
   margin-left: .75rem
 }
@@ -415,11 +430,31 @@ body #eu-cookie-law.positive input {
   padding: .75rem .75rem;
   padding: .75rem 3rem
 }
+.woocommerce #respond input#submit:focus,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:focus,
+.woocommerce a.button:hover,
+.woocommerce button.button:focus,
+.woocommerce button.button:hover,
+.woocommerce input.button:focus,
+.woocommerce input.button:hover {
+  box-shadow: -.2rem .2rem 0 var(--foreground-color)
+}
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
   padding: .75rem 3rem
+}
+.woocommerce #respond input#submit.alt:focus,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:focus,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:focus,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:focus,
+.woocommerce input.button.alt:hover {
+  box-shadow: -.2rem .2rem 0 var(--foreground-color)
 }
 .woocommerce #respond input#submit.disabled,
 .woocommerce #respond input#submit:disabled,
@@ -490,7 +525,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .content-posts article.entry .read-more {
   padding: .75rem 0
 }
-.archive-layout-1 .category-description {
+.archive-layout-1 .content-posts .category-description {
   margin-right: auto;
   margin-left: auto
 }
@@ -639,7 +674,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .sidebar .widget {
   padding: .75rem 1.5rem
 }
-.content-single .entry-single > a {
+.content-single .entry-single > a:not(.button) {
   padding: .5em 0
 }
 .content-single .entry-single .alignfull {

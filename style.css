@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-20
+Version: 1.0.alpha-21
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -591,6 +591,7 @@ input.settings-input:focus {
 	border-color: var(--foreground-color);
 	background: var(--foreground-contrast-color);
 	color: var(--foreground-color);
+	box-shadow: 0.2rem 0.2rem 0 currentColor;
 }
 
 input[type=text]::-webkit-input-placeholder,
@@ -766,6 +767,7 @@ a.button:hover,
 button:focus,
 button:hover {
 	text-decoration: underline;
+	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 label {
@@ -1072,7 +1074,7 @@ blockquote.alignleft, blockquote.alignright {
 }
 
 /* Do not show the outline on the skip link target. */
-#content[tabindex="-1"]:focus {
+[tabindex="-1"]:focus {
 	outline: 0;
 }
 
@@ -2238,6 +2240,7 @@ body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
 
 body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hover, body #eu-cookie-law.negative input:focus, body #eu-cookie-law.negative input:hover {
 	text-decoration: underline;
+	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 /*
@@ -2388,6 +2391,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 .woocommerce input.button:focus,
 .woocommerce input.button:hover {
 	text-decoration: underline;
+	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.alt,
@@ -2425,6 +2429,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 .woocommerce input.button.alt:focus,
 .woocommerce input.button.alt:hover {
 	text-decoration: underline;
+	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled],
@@ -2679,22 +2684,7 @@ p.demo_store {
  * Site content, blog posts etc
  */
 .content-posts article.entry {
-	width: 100%;
 	margin-bottom: 4.5rem;
-}
-
-@media (min-width: 47rem) {
-	.content-posts article.entry {
-		display: grid;
-		grid-template-columns: 15% calc( 35% - 3rem) 50%;
-		grid-column-gap: 1.5rem;
-	}
-	.content-posts article.entry .post-meta-data {
-		margin-top: 0.3rem;
-	}
-	.content-posts article.entry .post-meta-data > span {
-		display: block;
-	}
 }
 
 .content-posts article.entry .post-meta-data {
@@ -2716,12 +2706,6 @@ p.demo_store {
 	font-size: 2rem;
 	line-height: 1.25;
 	font-weight: bold;
-}
-
-@media (min-width: 47rem) {
-	.content-posts article.entry h2.entry-title {
-		margin-bottom: 0;
-	}
 }
 
 .content-posts article.entry h2.entry-title a {
@@ -2804,6 +2788,15 @@ p.demo_store {
 	letter-spacing: initial;
 }
 
+.content-posts .entry-thumbnail {
+	margin-bottom: 1.5rem;
+	display: block;
+}
+
+.content-posts .entry-thumbnail img {
+	display: block;
+}
+
 .content-posts .category-description {
 	font-size: 26px;
 	font-size: 1.625rem;
@@ -2821,13 +2814,56 @@ p.demo_store {
 /**
  * Center header.
  */
-.archive-layout-1 .entry-archive-header {
+.archive-layout-1 .content-posts .entry-archive-header {
 	text-align: center;
 }
 
-.archive-layout-1 .category-description {
+.archive-layout-1 .content-posts .category-description {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media (min-width: 47rem) {
+	.archive-articles-0 .content-posts article.entry {
+		display: grid;
+		grid-template-columns: 15% calc( 35% - 3rem) 50%;
+		grid-column-gap: 1.5rem;
+		width: 100%;
+	}
+	.archive-articles-0 .content-posts .post-meta-data {
+		margin-top: 0.3rem;
+	}
+	.archive-articles-0 .content-posts .post-meta-data > span {
+		display: block;
+	}
+	.archive-articles-0 .content-posts h2.entry-title {
+		margin: 0;
+	}
+	.archive-articles-0 .content-posts .entry-thumbnail {
+		display: none;
+	}
+	.archive-articles-1 .content-posts,
+	.archive-articles-2 .content-posts {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 1.5rem;
+		grid-row-gap: 4.5rem;
+	}
+	.archive-articles-1 .content-posts article.entry,
+	.archive-articles-2 .content-posts article.entry {
+		display: block;
+		margin: 0;
+	}
+	.archive-articles-1 .navigation,
+	.archive-articles-2 .navigation {
+		grid-column: 1/-1;
+	}
+}
+
+@media (min-width: 69rem) {
+	.archive-articles-2 .content-posts {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 /*!
@@ -3624,7 +3660,7 @@ blockquote p:last-child {
 	clear: both;
 }
 
-.content-single .entry-single > a {
+.content-single .entry-single > a:not(.button) {
 	padding: 0.5em 0;
 }
 
