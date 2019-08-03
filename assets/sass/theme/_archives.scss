@@ -8,28 +8,7 @@
 
 	article.entry {
 
-		width: 100%;
 		margin-bottom: $grid-line-height * 3;
-
-		@include for-tablet {
-
-			display: grid;
-			grid-template-columns: 15% calc( 35% - #{$grid-gutter * 2} ) 50%;
-			grid-column-gap: $grid-gutter;
-
-			.post-meta-data {
-
-				margin-top: ( $grid-line-height / 5 );
-
-				> span {
-
-					display: block;
-
-				}
-
-			}
-
-		}
 
 		.post-meta-data {
 
@@ -54,12 +33,6 @@
 
 			@include modular-scale( gamma );
 			font-weight: bold;
-
-			@include for-tablet {
-
-				margin-bottom: 0;
-
-			}
 
 			a {
 
@@ -181,6 +154,19 @@
 			display: block;
 			@include modular-scale( epsilon );
 			letter-spacing: initial;
+
+		}
+
+	}
+
+	.entry-thumbnail {
+
+		margin-bottom: $grid-line-height;
+		display: block;
+
+		img {
+
+			display: block;
 
 		}
 
