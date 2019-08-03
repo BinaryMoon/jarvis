@@ -255,3 +255,27 @@ function jarvis_project_terms() {
 <?php
 
 }
+
+
+/**
+ * Display featured images.
+ *
+ * But only if the archive article layout supports it, or it's a customizer
+ * preview.
+ */
+function jarvis_archive_image() {
+
+	$archive_articles = (int) get_theme_mod( 'jarvis_archive_articles', 0 );
+
+	/**
+	 * Featured images do not display on $archive_articles = 0 however we still
+	 * display them if it's the customizer preview so that we can easily toggle
+	 * between layouts.
+	 */
+	if ( 0 === $archive_articles && ! is_customize_preview() ) {
+		return false;
+	}
+
+	return get_the_post_thumbnail( get_the_ID(), 'jarvis-archive' );
+
+}
