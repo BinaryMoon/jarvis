@@ -17,9 +17,7 @@
 
 ?>
 
-	<main id="main">
-
-		<div class="main-content content-single">
+	<main id="main" class="main-content content-single">
 
 <?php
 	if ( have_posts() ) {
@@ -27,14 +25,13 @@
 		while ( have_posts() ) {
 
 			the_post();
-
 			get_template_part( 'parts/content-single', get_post_type() );
 
 		}
 	}
 ?>
 
-		</div>
+	</main>
 
 <?php
 
@@ -52,39 +49,23 @@
 	if ( $query->have_posts() ) {
 ?>
 
-		<div id="main-content" class="main-content content-posts">
+	<section class="main-content content-posts">
 
 <?php
 		while ( $query->have_posts() ) {
 
 			$query->the_post();
-
 			get_template_part( 'parts/content', 'format-' . get_post_format() );
 
 		}
 ?>
 
-		</div>
+	</section>
 
 <?php
-	} else {
-?>
 
-		<div class="main-content">
-
-<?php
-		get_template_part( 'content-empty' );
-?>
-
-		</div>
-
-<?php
 	}
 
 	wp_reset_postdata();
-?>
 
-	</main>
-
-<?php
 	get_footer();

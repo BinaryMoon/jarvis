@@ -14,9 +14,7 @@
 
 ?>
 
-	<main id="main">
-
-		<div class="main-content content-single">
+	<main id="main" class="main-content content-single">
 
 <?php
 	if ( have_posts() ) {
@@ -24,14 +22,10 @@
 		while ( have_posts() ) {
 
 			the_post();
-
 			get_template_part( 'parts/content-single', get_post_type() );
 
 		}
 	}
 ?>
-
-		</div>
-
 
 	</main>

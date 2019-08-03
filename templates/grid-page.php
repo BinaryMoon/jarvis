@@ -15,9 +15,10 @@
 	get_header();
 
 	get_template_part( 'parts/featured-content' );
+
 ?>
 
-	<main id="main" class="content-single">
+	<main id="main" class="main-content content-single">
 
 <?php
 	if ( have_posts() ) {
@@ -25,12 +26,16 @@
 		while ( have_posts() ) {
 
 			the_post();
-
 			get_template_part( 'parts/content-single', get_post_type() );
 
 		}
 	}
 
+?>
+
+	</main>
+
+<?php
 	// Get a list of the children for the current page.
 	$child_pages = jarvis_child_pages();
 
@@ -38,27 +43,25 @@
 	if ( $child_pages->have_posts() ) {
 ?>
 
-		<div class="entry-children content-posts">
+	<section class="main-content entry-children content-posts">
 
 <?php
+
 		while ( $child_pages->have_posts() ) {
 
 			$child_pages->the_post();
-
 			get_template_part( 'parts/content' );
 
 		}
+
 ?>
 
-		</div>
+	</section>
 
 <?php
+
 	}
 
 	wp_reset_postdata();
-?>
 
-	</main>
-
-<?php
 	get_footer();
