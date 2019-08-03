@@ -58,8 +58,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *    4.9 - Navigation
  *    4.10 - Numbered Pagination
  *    4.11 - Pagination
- *    4.12 - Body
- *    4.13 - Social Menu
+ *    4.12 - Page Templates
+ *    4.13 - Body
+ *    4.14 - Social Menu
  */
 /*!
  * 1.0 - CSS Library
@@ -3329,7 +3330,7 @@ blockquote p:last-child {
  * 4.8 - Main content.
  * This is where the post or page content will be displayed.
  */
-#main {
+.main-content {
 	padding: 0 1.5rem;
 }
 
@@ -3576,6 +3577,13 @@ blockquote p:last-child {
 	}
 }
 
+/*!
+ * 4.12 - Page Templates
+ */
+.page-template-blog .main-content {
+	margin-bottom: 4.5rem;
+}
+
 .sidebar {
 	display: -webkit-box;
 	display: flex;
@@ -3607,7 +3615,7 @@ blockquote p:last-child {
 }
 
 /*!
- * 4.12 - Body
+ * 4.13 - Body
  * Site content, blog posts etc
  */
 /* single post and page */
@@ -3816,7 +3824,7 @@ blockquote p:last-child {
 }
 
 /*!
- * 4.13 - Social Menu
+ * 4.14 - Social Menu
  */
 .menu-social ul {
 	margin: 0 0 1.5rem 0;

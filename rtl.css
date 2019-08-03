@@ -605,7 +605,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
     text-align: left
   }
 }
-#main {
+.main-content {
   padding: 0 1.5rem
 }
 .menu-primary > ul {
