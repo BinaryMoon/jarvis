@@ -81,6 +81,22 @@
 				}
 			);
 
+			// Edit Archive Article Layout.
+			wp.customize(
+				'jarvis_archive_articles',
+				function( value ) {
+					value.bind(
+						function( to ) {
+
+							$( 'body' )
+								.removeClass( 'archive-articles-0 archive-articles-1 archive-articles-2' )
+								.addClass( 'archive-articles-' + to );
+
+						}
+					);
+				}
+			);
+
 		}
 	);
 

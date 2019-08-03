@@ -93,6 +93,33 @@ function jarvis_customizer_archive( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Setting to change the archive article layout.
+	 */
+	$wp_customize->add_setting(
+		'jarvis_archive_articles',
+		array(
+			'default' => 0,
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'jarvis_sanitize_int',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jarvis_archive_articles',
+		array(
+			'label' => esc_html__( 'Header Height', 'jarvis' ),
+			'section' => 'jarvis_archive',
+			'type' => 'radio',
+			'choices' => array(
+				0 => esc_html__( 'Rows, no images (Default)', 'jarvis' ),
+				1 => esc_html__( '2 Columns, Featured Image', 'jarvis' ),
+				2 => esc_html__( '3 Columns, Featured Image (large screens only)', 'jarvis' ),
+			),
+		)
+	);
+
 }
 
 
