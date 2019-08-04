@@ -39,11 +39,6 @@ input.settings-input {
 	background: transparent;
 	border: $border-width solid currentColor;
 	color: inherit;
-
-	@if ( $form-input-border-width != null ) {
-		border-width: $form-input-border-width;
-	}
-
 	@include transition;
 
 	&:hover {
