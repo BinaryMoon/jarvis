@@ -40,13 +40,11 @@ function jarvis_post_author() {
 		return;
 	}
 
-	$byline = sprintf(
-		/* Translators: %s: Author of post */
-		esc_html__( 'by %s', 'jarvis' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	return sprintf(
+		'<span class="byline meta author vcard"><a class="url fn n" href="%s">%s</a></span>',
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_html( get_the_author() )
 	);
-
-	echo '<span class="byline meta"> ' . $byline . '</span>'; /* WPCS: xss ok. */
 
 }
 
@@ -167,11 +165,7 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 
 		<div class="entry">
 
-			<h2>
-				<a href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>" class="author vcard">
-					<?php the_author_meta( 'display_name', $user_id ); ?>
-				</a>
-			</h2>
+			<h2><?php echo jarvis_post_author(); // phpcs: ignore.  ?></h2>
 
 <?php
 	the_author_meta( 'description', $user_id );
