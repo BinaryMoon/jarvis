@@ -55,10 +55,9 @@ input.settings-input {
 	&:focus {
 
 		outline: none;
-		border-color: $black;
 		background: $white;
 		color: $black;
-		box-shadow: $border-width $border-width 0 currentColor;
+		box-shadow: 0 0 0 1px var( --background-color ), $border-width $border-width 0 $black;
 
 	}
 
