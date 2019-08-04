@@ -27,7 +27,7 @@
 
 		jarvis_breadcrumbs();
 
-		the_title( '<h1 class="entry-title pn-name">', '</h1>' );
+		the_title( '<h1 class="entry-title p-name">', '</h1>' );
 
 	}
 
