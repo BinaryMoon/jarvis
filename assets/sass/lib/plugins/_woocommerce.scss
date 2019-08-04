@@ -63,7 +63,7 @@
 		margin-bottom: $grid-line-height;
 		line-height: $grid-line-height;
 
-		@extend input.text;
+		@extend input[type=text];
 
 		width: auto;
 
@@ -95,7 +95,7 @@
 
 	#coupon_code {
 
-		@extend input.text;
+		@extend input[type=text];
 
 		max-width: 12em;
 		line-height: 1;
