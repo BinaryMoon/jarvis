@@ -14,8 +14,6 @@
 
 	get_header();
 
-	get_template_part( 'parts/featured-content' );
-
 ?>
 
 	<main id="main" class="main-content content-single">
