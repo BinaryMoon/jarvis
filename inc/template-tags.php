@@ -41,7 +41,7 @@ function jarvis_post_author() {
 	}
 
 	return sprintf(
-		'<span class="byline meta author vcard"><a class="url fn n" href="%s">%s</a></span>',
+		'<span class="byline meta author vcard"><a class="url fn n p-name u-url" href="%s">%s</a></span>',
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 		esc_html( get_the_author() )
 	);
