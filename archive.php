@@ -26,12 +26,14 @@
 		<header class="entry-archive-header">
 
 <?php
+
 		the_archive_title( '<h1 class="entry-title entry-archive-title">', '</h1>' );
 		the_archive_description( '<div class="category-description">', '</div>' );
 
 		if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) ) {
 			jarvis_project_terms();
 		}
+
 ?>
 
 		</header>
