@@ -516,6 +516,9 @@ function jarvis_post_terms( $content = '' ) {
 	$categories_list = get_the_category_list( esc_html__( ', ', 'jarvis' ) );
 	if ( $categories_list ) {
 
+		// Add microformat category class to links.
+		$categories_list = str_replace( '<a href=', '<a class="p-category" href=', $categories_list );
+
 		/* translators: %1$s will be replaced with a list of categories */
 		$terms .= sprintf( '<p class="taxonomy tax-categories">' . esc_html__( 'Posted in: %1$s', 'jarvis' ) . '</p>', $categories_list ); // WPCS: XSS OK.
 

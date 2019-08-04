@@ -25,7 +25,39 @@
 	<footer id="colophon" class="site-footer container" role="contentinfo">
 
 <?php
+
 	get_sidebar();
+
+?>
+
+	<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+
+		<meta itemprop="name" content="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+		<meta itemprop="url" content="<?php echo esc_attr( home_url( '/' ) ); ?>" />
+
+<?php
+
+	if ( has_custom_logo() ) {
+
+		$image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) );
+
+?>
+
+		<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+			<meta itemprop="url" content="<?php echo esc_attr( current( $image ) ); ?>" />
+			<meta itemprop="width" content="<?php echo esc_attr( next( $image ) ); ?>" />
+			<meta itemprop="height" content="<?php echo esc_attr( next( $image ) ); ?>" />
+		</div>
+
+<?php
+
+	}
+
+?>
+
+	</div>
+
+<?php
 
 	get_template_part( 'parts/navigation-social' );
 

@@ -20,11 +20,11 @@ function jarvis_post_time() {
 
 	$time_string = sprintf(
 		'<time class="entry-date published updated dt-published" datetime="%1$s">%2$s</time>',
-		esc_attr( get_the_date( 'DATE_W3C' ) ),
+		esc_attr( get_the_date( 'c' ) ),
 		esc_attr( get_the_date() )
 	);
 
-	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
+	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" class="u-url" rel="bookmark">' . $time_string . '</a>';
 
 	echo '<span class="posted-on meta">' . $posted_on . '</span>'; /* WPCS: xss ok. */
 

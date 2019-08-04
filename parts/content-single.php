@@ -28,7 +28,7 @@
 
 	</header>
 
-	<section class="entry entry-single e-content">
+	<section class="entry entry-single e-content" itemprop="description text">
 
 <?php
 	the_content(

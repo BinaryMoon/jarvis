@@ -34,7 +34,7 @@
 
 ?>
 
-	<section class="entry entry-archive">
+	<section class="entry entry-archive entry-summary p-summary">
 
 		<?php the_excerpt(); ?>
 
