@@ -698,12 +698,6 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .child-page:nth-child(2n+1) {
   padding-right: 0
 }
-.content-testimonials .testimonial .entry {
-  padding: .75rem .75rem
-}
-.content-testimonials .testimonial .entry-meta .avatar {
-  margin: 0 auto .75rem auto
-}
 .single-layout-1 .content-single .entry-single {
   margin-right: auto;
   margin-left: auto

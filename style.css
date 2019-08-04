@@ -3739,55 +3739,6 @@ blockquote p:last-child {
 	padding-left: 0;
 }
 
-/* testimonials */
-.content-testimonials {
-	display: block;
-}
-
-.content-testimonials:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.content-testimonials .testimonial {
-	margin-bottom: 1.5rem;
-}
-
-.content-testimonials .testimonial .entry {
-	padding: 0.75rem 0.75rem;
-	background: var(--foreground-contrast-color);
-	margin-bottom: 1.5rem;
-	position: relative;
-}
-
-.content-testimonials .testimonial .entry p {
-	margin-bottom: 0.75rem;
-}
-
-.content-testimonials .testimonial .entry p:last-child {
-	margin: 0;
-}
-
-.content-testimonials .testimonial .entry-meta h3 {
-	font-size: 14px;
-	font-size: 0.875rem;
-	line-height: 1.5;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	display: block;
-	text-align: center;
-}
-
-.content-testimonials .testimonial .entry-meta .avatar {
-	border: none;
-	display: block;
-	max-height: 4.5rem;
-	width: auto;
-	margin: 0 auto 0.75rem auto;
-}
-
 .page-404 {
 	max-width: 44rem;
 }
