@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-22
+Version: 1.0.alpha-23
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -485,32 +485,29 @@ pre {
 /*!
  * 1.5 - Forms
  */
-input.radio {
+input[type=checkbox], input[type=radio] {
+	cursor: pointer;
 	margin-right: 0.5em;
 	margin-left: auto;
 }
 
-input[type=text],
+input[type=text], .woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button, .woocommerce #coupon_code,
 input[type=password],
 input[type=email],
 input[type=url],
 input[type=search],
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="week"],
-input[type="month"],
-input[type="tel"],
-input[type="number"],
-input.text,
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button,
-.woocommerce #coupon_code,
+input[type=date],
+input[type=time],
+input[type=datetime-local],
+input[type=week],
+input[type=month],
+input[type=tel],
+input[type=number],
 select,
-textarea,
-input.settings-input {
+textarea {
 	padding: 0.75rem 0.75rem;
 	margin-bottom: 1.5rem;
 	line-height: 1.5rem;
@@ -521,197 +518,167 @@ input.settings-input {
 	color: inherit;
 }
 
-.device-click input[type=text], .device-click
+.device-click input[type=text], .device-click .woocommerce #respond input#submit, .woocommerce #respond .device-click input#submit,
+.device-click .woocommerce a.button, .woocommerce .device-click a.button,
+.device-click .woocommerce button.button, .woocommerce .device-click button.button,
+.device-click .woocommerce input.button, .woocommerce .device-click input.button, .device-click .woocommerce #coupon_code, .woocommerce .device-click #coupon_code, .device-click
 input[type=password], .device-click
 input[type=email], .device-click
 input[type=url], .device-click
 input[type=search], .device-click
-input[type="date"], .device-click
-input[type="time"], .device-click
-input[type="datetime-local"], .device-click
-input[type="week"], .device-click
-input[type="month"], .device-click
-input[type="tel"], .device-click
-input[type="number"], .device-click input.text, .device-click .woocommerce #respond input#submit, .woocommerce #respond .device-click input#submit,
-.device-click .woocommerce a.button, .woocommerce .device-click a.button,
-.device-click .woocommerce button.button, .woocommerce .device-click button.button,
-.device-click .woocommerce input.button, .woocommerce .device-click input.button, .device-click .woocommerce #coupon_code, .woocommerce .device-click #coupon_code, .device-click
+input[type=date], .device-click
+input[type=time], .device-click
+input[type=datetime-local], .device-click
+input[type=week], .device-click
+input[type=month], .device-click
+input[type=tel], .device-click
+input[type=number], .device-click
 select, .device-click
-textarea, .device-click
-input.settings-input {
+textarea {
 	-webkit-transition: all 0.15s ease-in-out;
 	transition: all 0.15s ease-in-out;
 }
 
-input[type=text]:hover,
+input[type=text]:hover, .woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover, .woocommerce #coupon_code:hover,
 input[type=password]:hover,
 input[type=email]:hover,
 input[type=url]:hover,
 input[type=search]:hover,
-input[type="date"]:hover,
-input[type="time"]:hover,
-input[type="datetime-local"]:hover,
-input[type="week"]:hover,
-input[type="month"]:hover,
-input[type="tel"]:hover,
-input[type="number"]:hover,
-input.text:hover,
-.woocommerce #respond input#submit:hover,
-.woocommerce a.button:hover,
-.woocommerce button.button:hover,
-.woocommerce input.button:hover,
-.woocommerce #coupon_code:hover,
+input[type=date]:hover,
+input[type=time]:hover,
+input[type=datetime-local]:hover,
+input[type=week]:hover,
+input[type=month]:hover,
+input[type=tel]:hover,
+input[type=number]:hover,
 select:hover,
-textarea:hover,
-input.settings-input:hover {
+textarea:hover {
 	border-color: var(--foreground-color);
 }
 
-input[type=text]:focus,
+input[type=text]:focus, .woocommerce #respond input#submit:focus,
+.woocommerce a.button:focus,
+.woocommerce button.button:focus,
+.woocommerce input.button:focus, .woocommerce #coupon_code:focus,
 input[type=password]:focus,
 input[type=email]:focus,
 input[type=url]:focus,
 input[type=search]:focus,
-input[type="date"]:focus,
-input[type="time"]:focus,
-input[type="datetime-local"]:focus,
-input[type="week"]:focus,
-input[type="month"]:focus,
-input[type="tel"]:focus,
-input[type="number"]:focus,
-input.text:focus,
-.woocommerce #respond input#submit:focus,
-.woocommerce a.button:focus,
-.woocommerce button.button:focus,
-.woocommerce input.button:focus,
-.woocommerce #coupon_code:focus,
+input[type=date]:focus,
+input[type=time]:focus,
+input[type=datetime-local]:focus,
+input[type=week]:focus,
+input[type=month]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
 select:focus,
-textarea:focus,
-input.settings-input:focus {
+textarea:focus {
 	outline: none;
-	border-color: var(--foreground-color);
 	background: var(--foreground-contrast-color);
 	color: var(--foreground-color);
-	box-shadow: 0.2rem 0.2rem 0 currentColor;
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
-input[type=text]::-webkit-input-placeholder,
+input[type=text]::-webkit-input-placeholder, .woocommerce #respond input#submit::-webkit-input-placeholder,
+.woocommerce a.button::-webkit-input-placeholder,
+.woocommerce button.button::-webkit-input-placeholder,
+.woocommerce input.button::-webkit-input-placeholder, .woocommerce #coupon_code::-webkit-input-placeholder,
 input[type=password]::-webkit-input-placeholder,
 input[type=email]::-webkit-input-placeholder,
 input[type=url]::-webkit-input-placeholder,
 input[type=search]::-webkit-input-placeholder,
-input[type="date"]::-webkit-input-placeholder,
-input[type="time"]::-webkit-input-placeholder,
-input[type="datetime-local"]::-webkit-input-placeholder,
-input[type="week"]::-webkit-input-placeholder,
-input[type="month"]::-webkit-input-placeholder,
-input[type="tel"]::-webkit-input-placeholder,
-input[type="number"]::-webkit-input-placeholder,
-input.text::-webkit-input-placeholder,
-.woocommerce #respond input#submit::-webkit-input-placeholder,
-.woocommerce a.button::-webkit-input-placeholder,
-.woocommerce button.button::-webkit-input-placeholder,
-.woocommerce input.button::-webkit-input-placeholder,
-.woocommerce #coupon_code::-webkit-input-placeholder,
+input[type=date]::-webkit-input-placeholder,
+input[type=time]::-webkit-input-placeholder,
+input[type=datetime-local]::-webkit-input-placeholder,
+input[type=week]::-webkit-input-placeholder,
+input[type=month]::-webkit-input-placeholder,
+input[type=tel]::-webkit-input-placeholder,
+input[type=number]::-webkit-input-placeholder,
 select::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder,
-input.settings-input::-webkit-input-placeholder {
+textarea::-webkit-input-placeholder {
 	color: rgba(51, 51, 51, 0.5);
 }
 
-input[type=text]::-moz-placeholder,
+input[type=text]::-moz-placeholder, .woocommerce #respond input#submit::-moz-placeholder,
+.woocommerce a.button::-moz-placeholder,
+.woocommerce button.button::-moz-placeholder,
+.woocommerce input.button::-moz-placeholder, .woocommerce #coupon_code::-moz-placeholder,
 input[type=password]::-moz-placeholder,
 input[type=email]::-moz-placeholder,
 input[type=url]::-moz-placeholder,
 input[type=search]::-moz-placeholder,
-input[type="date"]::-moz-placeholder,
-input[type="time"]::-moz-placeholder,
-input[type="datetime-local"]::-moz-placeholder,
-input[type="week"]::-moz-placeholder,
-input[type="month"]::-moz-placeholder,
-input[type="tel"]::-moz-placeholder,
-input[type="number"]::-moz-placeholder,
-input.text::-moz-placeholder,
-.woocommerce #respond input#submit::-moz-placeholder,
-.woocommerce a.button::-moz-placeholder,
-.woocommerce button.button::-moz-placeholder,
-.woocommerce input.button::-moz-placeholder,
-.woocommerce #coupon_code::-moz-placeholder,
+input[type=date]::-moz-placeholder,
+input[type=time]::-moz-placeholder,
+input[type=datetime-local]::-moz-placeholder,
+input[type=week]::-moz-placeholder,
+input[type=month]::-moz-placeholder,
+input[type=tel]::-moz-placeholder,
+input[type=number]::-moz-placeholder,
 select::-moz-placeholder,
-textarea::-moz-placeholder,
-input.settings-input::-moz-placeholder {
+textarea::-moz-placeholder {
 	color: rgba(51, 51, 51, 0.5);
 }
 
-input[type=text]:-ms-input-placeholder,
+input[type=text]:-ms-input-placeholder, .woocommerce #respond input#submit:-ms-input-placeholder,
+.woocommerce a.button:-ms-input-placeholder,
+.woocommerce button.button:-ms-input-placeholder,
+.woocommerce input.button:-ms-input-placeholder, .woocommerce #coupon_code:-ms-input-placeholder,
 input[type=password]:-ms-input-placeholder,
 input[type=email]:-ms-input-placeholder,
 input[type=url]:-ms-input-placeholder,
 input[type=search]:-ms-input-placeholder,
-input[type="date"]:-ms-input-placeholder,
-input[type="time"]:-ms-input-placeholder,
-input[type="datetime-local"]:-ms-input-placeholder,
-input[type="week"]:-ms-input-placeholder,
-input[type="month"]:-ms-input-placeholder,
-input[type="tel"]:-ms-input-placeholder,
-input[type="number"]:-ms-input-placeholder,
-input.text:-ms-input-placeholder,
-.woocommerce #respond input#submit:-ms-input-placeholder,
-.woocommerce a.button:-ms-input-placeholder,
-.woocommerce button.button:-ms-input-placeholder,
-.woocommerce input.button:-ms-input-placeholder,
-.woocommerce #coupon_code:-ms-input-placeholder,
+input[type=date]:-ms-input-placeholder,
+input[type=time]:-ms-input-placeholder,
+input[type=datetime-local]:-ms-input-placeholder,
+input[type=week]:-ms-input-placeholder,
+input[type=month]:-ms-input-placeholder,
+input[type=tel]:-ms-input-placeholder,
+input[type=number]:-ms-input-placeholder,
 select:-ms-input-placeholder,
-textarea:-ms-input-placeholder,
-input.settings-input:-ms-input-placeholder {
+textarea:-ms-input-placeholder {
 	color: rgba(51, 51, 51, 0.5);
 }
 
-input[type=text]:-moz-placeholder,
+input[type=text]:-moz-placeholder, .woocommerce #respond input#submit:-moz-placeholder,
+.woocommerce a.button:-moz-placeholder,
+.woocommerce button.button:-moz-placeholder,
+.woocommerce input.button:-moz-placeholder, .woocommerce #coupon_code:-moz-placeholder,
 input[type=password]:-moz-placeholder,
 input[type=email]:-moz-placeholder,
 input[type=url]:-moz-placeholder,
 input[type=search]:-moz-placeholder,
-input[type="date"]:-moz-placeholder,
-input[type="time"]:-moz-placeholder,
-input[type="datetime-local"]:-moz-placeholder,
-input[type="week"]:-moz-placeholder,
-input[type="month"]:-moz-placeholder,
-input[type="tel"]:-moz-placeholder,
-input[type="number"]:-moz-placeholder,
-input.text:-moz-placeholder,
-.woocommerce #respond input#submit:-moz-placeholder,
-.woocommerce a.button:-moz-placeholder,
-.woocommerce button.button:-moz-placeholder,
-.woocommerce input.button:-moz-placeholder,
-.woocommerce #coupon_code:-moz-placeholder,
+input[type=date]:-moz-placeholder,
+input[type=time]:-moz-placeholder,
+input[type=datetime-local]:-moz-placeholder,
+input[type=week]:-moz-placeholder,
+input[type=month]:-moz-placeholder,
+input[type=tel]:-moz-placeholder,
+input[type=number]:-moz-placeholder,
 select:-moz-placeholder,
-textarea:-moz-placeholder,
-input.settings-input:-moz-placeholder {
+textarea:-moz-placeholder {
 	color: rgba(51, 51, 51, 0.5);
 }
 
-input[type=text]:placeholder,
+input[type=text]:placeholder, .woocommerce #respond input#submit:placeholder,
+.woocommerce a.button:placeholder,
+.woocommerce button.button:placeholder,
+.woocommerce input.button:placeholder, .woocommerce #coupon_code:placeholder,
 input[type=password]:placeholder,
 input[type=email]:placeholder,
 input[type=url]:placeholder,
 input[type=search]:placeholder,
-input[type="date"]:placeholder,
-input[type="time"]:placeholder,
-input[type="datetime-local"]:placeholder,
-input[type="week"]:placeholder,
-input[type="month"]:placeholder,
-input[type="tel"]:placeholder,
-input[type="number"]:placeholder,
-input.text:placeholder,
-.woocommerce #respond input#submit:placeholder,
-.woocommerce a.button:placeholder,
-.woocommerce button.button:placeholder,
-.woocommerce input.button:placeholder,
-.woocommerce #coupon_code:placeholder,
+input[type=date]:placeholder,
+input[type=time]:placeholder,
+input[type=datetime-local]:placeholder,
+input[type=week]:placeholder,
+input[type=month]:placeholder,
+input[type=tel]:placeholder,
+input[type=number]:placeholder,
 select:placeholder,
-textarea:placeholder,
-input.settings-input:placeholder {
+textarea:placeholder {
 	color: rgba(51, 51, 51, 0.5);
 }
 
@@ -737,6 +704,7 @@ textarea {
 
 input[type=submit],
 a.button,
+.wp-block-button__link,
 button {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -746,6 +714,7 @@ button {
 	display: inline-block;
 	text-decoration: none;
 	border: none;
+	border-radius: 0;
 	padding: 0.75rem 3rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -757,6 +726,7 @@ button {
 
 .device-click input[type=submit], .device-click
 a.button, .device-click
+.wp-block-button__link, .device-click
 button {
 	-webkit-transition: all 0.15s ease-in-out;
 	transition: all 0.15s ease-in-out;
@@ -765,10 +735,12 @@ button {
 input[type=submit]:focus, input[type=submit]:hover,
 a.button:focus,
 a.button:hover,
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
 button:focus,
 button:hover {
 	text-decoration: underline;
-	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 label {
@@ -1480,12 +1452,18 @@ p.wp-block-subhead {
 	margin-bottom: 0;
 }
 
-.widget.widget_blog_subscription input[type=text] {
+.widget.widget_blog_subscription input[type=text], .widget.widget_blog_subscription .woocommerce #respond input#submit, .woocommerce #respond .widget.widget_blog_subscription input#submit,
+.widget.widget_blog_subscription .woocommerce a.button, .woocommerce .widget.widget_blog_subscription a.button,
+.widget.widget_blog_subscription .woocommerce button.button, .woocommerce .widget.widget_blog_subscription button.button,
+.widget.widget_blog_subscription .woocommerce input.button, .woocommerce .widget.widget_blog_subscription input.button, .widget.widget_blog_subscription .woocommerce #coupon_code, .woocommerce .widget.widget_blog_subscription #coupon_code {
 	width: 100% !important;
 	padding: 0.75rem 0.75rem !important;
 }
 
-.widget.widget_blog_subscription input[type=text],
+.widget.widget_blog_subscription input[type=text], .widget.widget_blog_subscription .woocommerce #respond input#submit, .woocommerce #respond .widget.widget_blog_subscription input#submit,
+.widget.widget_blog_subscription .woocommerce a.button, .woocommerce .widget.widget_blog_subscription a.button,
+.widget.widget_blog_subscription .woocommerce button.button, .woocommerce .widget.widget_blog_subscription button.button,
+.widget.widget_blog_subscription .woocommerce input.button, .woocommerce .widget.widget_blog_subscription input.button, .widget.widget_blog_subscription .woocommerce #coupon_code, .woocommerce .widget.widget_blog_subscription #coupon_code,
 .widget.widget_blog_subscription input[type=submit],
 .widget.widget_blog_subscription p:last-child {
 	margin: 0;
@@ -2225,6 +2203,7 @@ body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
 	display: inline-block;
 	text-decoration: none;
 	border: none;
+	border-radius: 0;
 	padding: 0.75rem 3rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2241,7 +2220,7 @@ body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
 
 body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hover, body #eu-cookie-law.negative input:focus, body #eu-cookie-law.negative input:hover {
 	text-decoration: underline;
-	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 /*
@@ -2367,6 +2346,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 	display: inline-block;
 	text-decoration: none;
 	border: none;
+	border-radius: 0;
 	padding: 0.75rem 3rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2392,7 +2372,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 .woocommerce input.button:focus,
 .woocommerce input.button:hover {
 	text-decoration: underline;
-	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.alt,
@@ -2404,6 +2384,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 	display: inline-block;
 	text-decoration: none;
 	border: none;
+	border-radius: 0;
 	padding: 0.75rem 3rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2430,7 +2411,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 .woocommerce input.button.alt:focus,
 .woocommerce input.button.alt:hover {
 	text-decoration: underline;
-	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled],

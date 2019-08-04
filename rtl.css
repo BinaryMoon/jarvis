@@ -24,7 +24,8 @@ hr {
 pre {
   margin: 3rem 0
 }
-input.radio {
+input[type=checkbox],
+input[type=radio] {
   margin-left: .5em;
   margin-right: auto
 }
@@ -33,8 +34,6 @@ input.radio {
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button,
-input.settings-input,
-input.text,
 input[type=date],
 input[type=datetime-local],
 input[type=email],
@@ -56,8 +55,6 @@ textarea {
 .woocommerce a.button:hover,
 .woocommerce button.button:hover,
 .woocommerce input.button:hover,
-input.settings-input:hover,
-input.text:hover,
 input[type=date]:hover,
 input[type=datetime-local]:hover,
 input[type=email]:hover,
@@ -79,8 +76,6 @@ textarea:hover {
 .woocommerce a.button:focus,
 .woocommerce button.button:focus,
 .woocommerce input.button:focus,
-input.settings-input:focus,
-input.text:focus,
 input[type=date]:focus,
 input[type=datetime-local]:focus,
 input[type=email]:focus,
@@ -95,21 +90,24 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
-  border-color: var(--foreground-color);
-  box-shadow: -.2rem .2rem 0 currentColor
+  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
 }
+.wp-block-button__link,
 a.button,
 button,
 input[type=submit] {
+  border-radius: 0;
   padding: .75rem 3rem
 }
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
 a.button:focus,
 a.button:hover,
 button:focus,
 button:hover,
 input[type=submit]:focus,
 input[type=submit]:hover {
-  box-shadow: -.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
 }
 legend {
   padding: 0 .75rem
@@ -254,7 +252,17 @@ blockquote.alignright {
   margin: 0 0 1.5rem 0;
   padding: 0 1.5rem 0 0
 }
-.widget.widget_blog_subscription input[type=text] {
+.widget.widget_blog_subscription .woocommerce #coupon_code,
+.widget.widget_blog_subscription .woocommerce #respond input#submit,
+.widget.widget_blog_subscription .woocommerce a.button,
+.widget.widget_blog_subscription .woocommerce button.button,
+.widget.widget_blog_subscription .woocommerce input.button,
+.widget.widget_blog_subscription input[type=text],
+.woocommerce #respond .widget.widget_blog_subscription input#submit,
+.woocommerce .widget.widget_blog_subscription #coupon_code,
+.woocommerce .widget.widget_blog_subscription a.button,
+.woocommerce .widget.widget_blog_subscription button.button,
+.woocommerce .widget.widget_blog_subscription input.button {
   padding: .75rem .75rem!important
 }
 .gallery .gallery-item {
@@ -412,13 +420,14 @@ body #eu-cookie-law {
 }
 body #eu-cookie-law.negative input,
 body #eu-cookie-law.positive input {
+  border-radius: 0;
   padding: .75rem 3rem
 }
 body #eu-cookie-law.negative input:focus,
 body #eu-cookie-law.negative input:hover,
 body #eu-cookie-law.positive input:focus,
 body #eu-cookie-law.positive input:hover {
-  box-shadow: -.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
 }
 .widgets-list-layout .bump-view {
   margin-left: .75rem
@@ -428,6 +437,7 @@ body #eu-cookie-law.positive input:hover {
 .woocommerce button.button,
 .woocommerce input.button {
   padding: .75rem .75rem;
+  border-radius: 0;
   padding: .75rem 3rem
 }
 .woocommerce #respond input#submit:focus,
@@ -438,12 +448,13 @@ body #eu-cookie-law.positive input:hover {
 .woocommerce button.button:hover,
 .woocommerce input.button:focus,
 .woocommerce input.button:hover {
-  box-shadow: -.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
 }
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
+  border-radius: 0;
   padding: .75rem 3rem
 }
 .woocommerce #respond input#submit.alt:focus,
@@ -454,7 +465,7 @@ body #eu-cookie-law.positive input:hover {
 .woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:focus,
 .woocommerce input.button.alt:hover {
-  box-shadow: -.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
 }
 .woocommerce #respond input#submit.disabled,
 .woocommerce #respond input#submit:disabled,

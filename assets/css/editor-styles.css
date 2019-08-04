@@ -224,6 +224,7 @@ ol {
 	display: inline-block;
 	text-decoration: none;
 	border: none;
+	border-radius: 0;
 	padding: 0.75rem 3rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -240,7 +241,7 @@ ol {
 
 .button:focus, .button:hover {
 	text-decoration: underline;
-	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .small-caps {
