@@ -12,13 +12,13 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	// Ignore comments if a password is required.
-	if ( post_password_required() ) {
+ 	// Ensure the current post type supports comments.
+	if ( ! post_type_supports( get_post_type(), 'comments' ) ) {
 		return;
 	}
 
-	// Ensure the current post type supports comments.
-	if ( ! post_type_supports( get_post_type(), 'comments' ) ) {
+	// Ignore comments if a password is required.
+	if ( post_password_required() ) {
 		return;
 	}
 
