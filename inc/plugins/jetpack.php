@@ -18,9 +18,6 @@
  */
 function jarvis_jetpack_init() {
 
-	// Add support for Testimonials.
-	add_theme_support( 'jetpack-testimonial' );
-
 	// Add support for Portfolio and Projects.
 	add_theme_support( 'jetpack-portfolio' );
 
@@ -32,80 +29,10 @@ function jarvis_jetpack_init() {
 add_action( 'after_setup_theme', 'jarvis_jetpack_init' );
 
 
-
-
-/**
- * Get Jetpack Testimonials Title.
- */
-function jarvis_testimonials_title() {
-
-	$jetpack_options = get_theme_mod( 'jetpack_testimonials' );
-
-	if ( ! empty( $jetpack_options['page-title'] ) ) {
-		echo esc_html( $jetpack_options['page-title'] );
-	} else {
-		esc_html_e( 'Testimonials', 'jarvis' );
-	}
-
-}
-
-
-/**
- * Retrieve and format Jetpack Testimonials description as set in theme Customiser.
- *
- * @param string $before html to display before testimonials description.
- * @param string $after html to display after testimonials description.
- * @return boolean|string Testimonials description, or false if no description exists.
- */
-function jarvis_testimonials_description( $before = '', $after = '' ) {
-
-	$jetpack_options = get_theme_mod( 'jetpack_testimonials' );
-	$content = '';
-
-	if ( ! empty( $jetpack_options['page-content'] ) ) {
-		$content = $jetpack_options['page-content'];
-		$content = addslashes( $content );
-		$content = wp_kses_post( $content );
-		$content = stripslashes( $content );
-		$content = wptexturize( $content );
-		$content = convert_smilies( $content );
-		$content = convert_chars( $content );
-	}
-
-	if ( $content ) {
-		echo $before . $content . $after; // WPCS: XSS OK.
-	}
-
-	return false;
-
-}
-
-
-/**
- * Get Jetpack Testimonials Image.
- *
- * @return string Testimonials image or empty string if no image set.
- */
-function jarvis_testimonials_image() {
-
-	$jetpack_options = get_theme_mod( 'jetpack_testimonials' );
-	$image = '';
-
-	if ( isset( $jetpack_options['featured-image'] ) && '' !== $jetpack_options['featured-image'] ) {
-
-		$image = wp_get_attachment_image( (int) $jetpack_options['featured-image'], 'jarvis-header' );
-
-	}
-
-	return $image;
-
-}
-
-
 /**
  * Flush rewrite rules for custom post types on theme setup and switch.
  *
- * This is so that Projects, Testimonials, and other Custom Post Types work as
+ * This is so that Projects, and other Custom Post Types work as
  * expected. Is hooked into `after_switch_theme`.
  */
 function jarvis_flush_rewrite_rules() {

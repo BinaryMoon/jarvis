@@ -168,63 +168,6 @@
 
 }
 
-/* testimonials */
-.content-testimonials {
-
-	@include clear();
-	display: block;
-
-	.testimonial {
-
-		margin-bottom: $grid-line-height;
-
-		.entry {
-
-			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
-			background: $white;
-			margin-bottom: $grid-line-height;
-			position: relative;
-
-			p {
-
-				margin-bottom: $grid-line-height / 2;
-
-				&:last-child {
-
-					margin: 0;
-
-				}
-
-			}
-
-		}
-
-		.entry-meta {
-
-			h3 {
-
-				@include post-meta-data;
-				display:block;
-				text-align:center;
-
-			}
-
-			.avatar {
-
-				border: none;
-				display: block;
-				max-height: ( $grid-line-height * 3 );
-				width: auto;
-				margin: 0 auto ( $grid-line-height / 2 ) auto;
-
-			}
-
-		}
-
-	}
-
-}
-
 .page-404 {
 
 	max-width: $grid-small-width;
