@@ -64,7 +64,7 @@ function jarvis_title_styles() {
 		$styles[] = '.branding .site-title, .branding .site-description ' . $hide;
 	}
 
-	$styles[] = 'body { --title-color: ' . get_theme_mod( 'jarvis_title_color', '#000000' ) . '}';
+	$styles[] = 'body { --title-color: ' . esc_attr( get_theme_mod( 'jarvis_title_color', '#000000' ) ) . '}';
 
 	return implode( $styles, ' ' );
 
@@ -177,14 +177,14 @@ function jarvis_header_height() {
 
 	if ( is_singular() ) {
 
-		$header_height = get_theme_mod( 'jarvis_single_header_height', 1 );
+		$header_height = (int) get_theme_mod( 'jarvis_single_header_height', 1 );
 
 	} else {
 
-		$header_height = get_theme_mod( 'jarvis_archive_header_height', 1 );
+		$header_height = (int) get_theme_mod( 'jarvis_archive_header_height', 1 );
 
 	}
 
-	return 'header-height-' . (int) $header_height;
+	return 'header-height-' . $header_height;
 
 }

@@ -150,12 +150,17 @@ function jarvis_credits_content( $wrapper = true ) {
 
 /**
  * Display credits content.
+ *
+ * @return string The html to display for the credits.
  */
 function jarvis_credits_get_content() {
 
 	$separator = '<span role="separator" aria-hidden="true" class="sep"></span>';
 	$top_link = '<a href="#header">' . esc_html__( 'Top', 'jarvis' ) . '</a>';
 
+	/**
+	 * The theme mod is escaped when the function returns its value.
+	 */
 	$contents = get_theme_mod( 'jarvis_credits_content', '' );
 
 	$contents = str_ireplace( '(YEAR)', date( 'Y' ), $contents );
@@ -186,7 +191,9 @@ function jarvis_credits_footer() {
 	 * Return true so that the credits get hidden.
 	 */
 	if ( ! is_customize_preview() && ! get_theme_mod( 'jarvis_display_credits', true ) ) {
+
 		return true;
+
 	}
 
 	return jarvis_credits_content();
