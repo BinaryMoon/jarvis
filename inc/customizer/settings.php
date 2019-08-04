@@ -21,6 +21,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 
 require 'customizer-sanitization.php';
 require 'class.jarvis_dropdown_fonts.php';
+require 'class.jarvis_doc_link.php';
 
 
 /**
@@ -38,6 +39,28 @@ function jarvis_customizer_settings( WP_Customize_Manager $wp_customize ) {
 		array(
 			'title' => esc_html__( 'Site Layout', 'jarvis' ),
 			'priority' => 55,
+		)
+	);
+
+	/**
+	 * Add a link to the theme documentation on Github.
+	 */
+	$wp_customize->add_section(
+		'jarvis_docs',
+		array(
+			'title' => esc_html__( 'Jarvis Theme Documentation', 'jarvis' ),
+			'priority' => 1,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Jarvis_Doc_Link(
+			$wp_customize,
+			'jarvis_documentation',
+			array(
+				'section' => 'jarvis_docs',
+				'settings' => array(),
+			)
 		)
 	);
 
