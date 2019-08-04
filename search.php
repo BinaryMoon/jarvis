@@ -11,6 +11,7 @@
  */
 
 	get_header();
+
 ?>
 
 	<main id="main" class="main-content content-posts">
