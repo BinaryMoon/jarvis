@@ -40,6 +40,7 @@
 	display: inline-block;
 	text-decoration: none;
 	border: none;
+	border-radius: 0; // We need this to override the WordPress block button styles.
 	padding: ( $grid-line-height / 2 ) ( $grid-gutter * 2 );
 	text-transform: uppercase;
 	letter-spacing: $font-uppercase-spacing;
