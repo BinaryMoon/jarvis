@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-21
+Version: 1.0.alpha-22
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -2755,6 +2755,7 @@ p.demo_store {
 
 .content-posts .entry-archive-header {
 	margin-bottom: 7.5rem;
+	grid-column: 1/-1;
 }
 
 .content-posts .entry-archive-title {
