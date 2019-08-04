@@ -21,13 +21,13 @@
 	// If page is set as static homepage.
 	if ( is_front_page() ) {
 
-		the_title( '<h2 class="entry-title">', '</h2>' );
+		the_title( '<h2 class="entry-title p-name">', '</h2>' );
 
 	} else {
 
 		jarvis_breadcrumbs();
 
-		the_title( '<h1 class="entry-title">', '</h1>' );
+		the_title( '<h1 class="entry-title pn-name">', '</h1>' );
 
 	}
 
@@ -35,7 +35,7 @@
 
 	</header>
 
-	<section class="entry entry-single">
+	<section class="entry entry-single e-content">
 
 <?php
 	the_content(

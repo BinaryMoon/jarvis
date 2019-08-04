@@ -76,14 +76,14 @@ function jarvis_post_class( $classes, $class, $post_id ) {
 
 	// Entry class.
 	$classes[] = 'entry';
+	$classes[] = 'h-entry';
 
 	// Post field classes.
-	$classes[] = sprintf( 'entry--%s', $post_id );
-	$classes[] = sprintf( 'entry--type-%s', get_post_type() );
+	$classes[] = sprintf( 'entry-type-%s', get_post_type() );
 
 	// Author class.
 	$classes[] = sprintf(
-		'entry--author-%s',
+		'entry-author-%s',
 		sanitize_html_class( get_the_author_meta( 'user_nicename' ), get_the_author_meta( 'ID' ) )
 	);
 

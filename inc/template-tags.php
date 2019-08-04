@@ -19,7 +19,7 @@
 function jarvis_post_time() {
 
 	$time_string = sprintf(
-		'<time class="entry-date published updated" datetime="%1$s">%2$s</time>',
+		'<time class="entry-date published updated dt-published" datetime="%1$s">%2$s</time>',
 		esc_attr( get_the_date( 'DATE_W3C' ) ),
 		esc_attr( get_the_date() )
 	);
@@ -159,19 +159,22 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 
 ?>
 
-	<section class="entry-author contributor">
+	<section class="entry-author contributor h-card">
 
-		<?php echo get_avatar( $user_id, 250 ); ?>
+		<?php echo get_avatar( $user_id, 250, '', '', array( 'class' => 'u-photo' ) ); ?>
 
 		<div class="entry">
 
 			<h2><?php echo jarvis_post_author(); // phpcs: ignore.  ?></h2>
 
 <?php
+
 	the_author_meta( 'description', $user_id );
 
 	if ( $post_count ) {
+
 ?>
+
 		<p>
 			<a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>">
 <?php
@@ -180,8 +183,11 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 ?>
 			</a>
 		</p>
+
 <?php
+
 	}
+
 ?>
 
 		</div>

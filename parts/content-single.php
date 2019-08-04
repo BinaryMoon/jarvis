@@ -22,13 +22,13 @@
 
 	get_template_part( 'parts/entry-meta' );
 
-	the_title( '<h1 class="entry-title">', '</h1>' );
+	the_title( '<h1 class="entry-title p-name">', '</h1>' );
 
 ?>
 
 	</header>
 
-	<section class="entry entry-single">
+	<section class="entry entry-single e-content">
 
 <?php
 	the_content(
