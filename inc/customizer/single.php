@@ -207,35 +207,3 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 	);
 
 }
-
-
-/**
- * Generate the css required to display single posts properly.
- *
- * @return string CSS styles for single post layout.
- */
-function jarvis_get_single_css() {
-
-	if ( is_customize_preview() ) {
-		return '';
-	}
-
-	$styles = array();
-
-	if ( ! get_theme_mod( 'jarvis_single_show_author', true ) ) {
-		$styles[] = 'html .byline { display: none; }';
-	}
-
-	if ( ! get_theme_mod( 'jarvis_single_show_date', true ) ) {
-		$styles[] = 'html .posted-on { display: none; }';
-	}
-
-	if ( ! get_theme_mod( 'jarvis_single_show_categories', true ) ) {
-		$styles[] = 'html .entry-terms { display: none; }';
-	}
-
-	return implode( $styles, ' ' );
-
-}
-
-

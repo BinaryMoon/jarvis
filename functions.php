@@ -71,6 +71,9 @@ require get_parent_theme_file_path( 'inc/wordpress.php' );
 // Filters that modify/ add to WordPress html classes to make them more useful.
 require get_parent_theme_file_path( 'inc/wordpress-html-classes.php' );
 
+// Generate styles based upon theme mods.
+require get_parent_theme_file_path( 'inc/styles.php' );
+
 // Custom header.
 require get_parent_theme_file_path( 'inc/custom-header.php' );
 
@@ -90,23 +93,8 @@ require get_parent_theme_file_path( 'inc/compat.php' );
  * Customizer Properties.
  */
 
-// Customizer controls for setting theme properties.
-require get_parent_theme_file_path( 'inc/customizer/settings.php' );
-
-// Custom header layout.
-require get_parent_theme_file_path( 'inc/customizer/site-header.php' );
-
-// Custom single post layout.
-require get_parent_theme_file_path( 'inc/customizer/single.php' );
-
-// Custom footer. To allow for custom credits/ copyright info.
-require get_parent_theme_file_path( 'inc/customizer/footer.php' );
-
-// Custom single post layout.
-require get_parent_theme_file_path( 'inc/customizer/archive.php' );
-
-// Custom fonts.
-require get_parent_theme_file_path( 'inc/customizer/fonts.php' );
+// Load all of the customizer properties.
+require get_parent_theme_file_path( 'inc/customizer/loader.php' );
 
 /**
  * Plugins.

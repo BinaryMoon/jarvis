@@ -1,28 +1,12 @@
 <?php
 /**
- * Theme Customizer
- *
- * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/
+ * Default settings.
  *
  * @package Jarvis
  * @subpackage ThemeCustomizerSettings
  * @author Ben Gillbanks <ben@prothemedesign.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
-
-/**
- * Exit if we're not in the Customizer.
- */
-if ( ! class_exists( 'WP_Customize_Control' ) ) {
-
-	return null;
-
-}
-
-require 'customizer-sanitization.php';
-require 'class.jarvis_dropdown_fonts.php';
-require 'class.jarvis_doc_link.php';
-
 
 /**
  * Theme Customizer properties

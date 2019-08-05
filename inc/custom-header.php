@@ -39,39 +39,6 @@ add_action( 'after_setup_theme', 'jarvis_custom_header_support' );
 
 
 /**
- * Print custom header styles.
- *
- * This includes showing and hiding elements, and changing the heading colours.
- */
-function jarvis_title_styles() {
-
-	$header_visibility = (int) get_theme_mod( 'jarvis_site_title', 0 );
-	$styles = array();
-
-	$hide = '{ clip: rect( 1px, 1px, 1px, 1px ); position: absolute; }';
-
-	/**
-	 * We don't need to set display/ visible properties since the items will display by default.
-	 */
-
-	// Hide the description.
-	if ( 1 === $header_visibility ) {
-		$styles[] = '.branding .site-description ' . $hide;
-	}
-
-	// Hide everything.
-	if ( 2 === $header_visibility ) {
-		$styles[] = '.branding .site-title, .branding .site-description ' . $hide;
-	}
-
-	$styles[] = 'body { --title-color: ' . esc_attr( get_theme_mod( 'jarvis_title_color', '#000000' ) ) . '}';
-
-	return implode( $styles, ' ' );
-
-}
-
-
-/**
  * Calculate the colour brightness.
  *
  * @param string $color string The colour to calculate.
