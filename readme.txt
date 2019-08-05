@@ -9,12 +9,14 @@ Tags: Black, Blue, Brown, Gray, Green, Orange, Pink, Purple, Red, Silver, Tan, W
 
 == Description ==
 
-[Theme documentation](https://prothemedesign.com/documentation/theme/jarvis/)
+[Complete documentation is available on Github](https://github.com/BinaryMoon/jarvis/wiki).
 
 == Installation ==
 
 1. Upload the theme
 2. Activate the theme
+
+[More info on Getting Started with Jarvis](https://github.com/BinaryMoon/jarvis/wiki/Getting-Started).
 
 == Page Templates ==
 
