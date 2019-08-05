@@ -341,13 +341,6 @@ blockquote.alignright {
 #respond p.post-subscription-form input {
   margin-left: .5em
 }
-form.search-form input.search-field {
-  border-left: 0
-}
-form.search-form button.search-submit {
-  padding: 0 1.5rem;
-  box-shadow: none
-}
 iframe.twitter-follow-button,
 iframe.twitter-tweet,
 iframe[src*="8tracks.com"],

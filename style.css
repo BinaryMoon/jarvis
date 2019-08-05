@@ -1903,23 +1903,6 @@ form.search-form label {
 
 form.search-form input.search-field {
 	margin: 0;
-	border-right: 0;
-}
-
-form.search-form button.search-submit {
-	border: none;
-	padding: 0 1.5rem;
-	opacity: 1;
-	box-shadow: none;
-}
-
-.device-click form.search-form button.search-submit {
-	-webkit-transition: all 0.15s ease-in-out;
-	transition: all 0.15s ease-in-out;
-}
-
-form.search-form button.search-submit:focus, form.search-form button.search-submit:hover {
-	text-decoration: underline;
 }
 
 /*!
