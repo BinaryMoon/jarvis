@@ -58,6 +58,12 @@
 
 	}
 
+	if ( ! have_posts() && '' !== get_search_query() ) {
+
+		get_template_part( 'parts/content', 'empty' );
+
+	}
+
 ?>
 
 	</main>
