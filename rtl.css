@@ -90,7 +90,7 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2em .2em 0 var(--foreground-color)
 }
 .wp-block-button__link,
 a.button,
@@ -107,7 +107,7 @@ button:focus,
 button:hover,
 input[type=submit]:focus,
 input[type=submit]:hover {
-  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2em .2em 0 var(--foreground-color)
 }
 legend {
   padding: 0 .75rem
@@ -420,7 +420,7 @@ body #eu-cookie-law.negative input:focus,
 body #eu-cookie-law.negative input:hover,
 body #eu-cookie-law.positive input:focus,
 body #eu-cookie-law.positive input:hover {
-  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2em .2em 0 var(--foreground-color)
 }
 .widgets-list-layout .bump-view {
   margin-left: .75rem
@@ -441,7 +441,7 @@ body #eu-cookie-law.positive input:hover {
 .woocommerce button.button:hover,
 .woocommerce input.button:focus,
 .woocommerce input.button:hover {
-  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2em .2em 0 var(--foreground-color)
 }
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
@@ -458,7 +458,7 @@ body #eu-cookie-law.positive input:hover {
 .woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:focus,
 .woocommerce input.button.alt:hover {
-  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2em .2em 0 var(--foreground-color)
 }
 .woocommerce #respond input#submit.disabled,
 .woocommerce #respond input#submit:disabled,
@@ -507,7 +507,8 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .block-help,
 .block-info,
 .block-success {
-  padding: 1.5rem 4.5rem 1.5rem 1.5rem
+  padding: 1.5rem 4.5rem 1.5rem 1.5rem;
+  box-shadow: 0 0 0 1px var(--background-color),-.2em .2em 0 var(--foreground-color)
 }
 .block-alert:before,
 .block-announcement:before,
@@ -518,7 +519,8 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
   right: 1.5rem
 }
 .block-border {
-  padding: 1.5rem 1.5rem
+  padding: 1.5rem 1.5rem;
+  box-shadow: 0 0 0 1px var(--background-color),-.2em .2em 0 var(--foreground-color)
 }
 .block-border-dashed {
   padding: 1.5rem 1.5rem

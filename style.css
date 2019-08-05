@@ -460,7 +460,7 @@ h6 {
 
 hr {
 	border: none;
-	border-bottom: 0.2rem solid var(--foreground-color);
+	border-bottom: 0.2em solid var(--foreground-color);
 }
 
 /*!
@@ -516,7 +516,7 @@ textarea {
 	min-height: 1.5rem;
 	width: 100%;
 	background: transparent;
-	border: 0.2rem solid currentColor;
+	border: 0.2em solid currentColor;
 	color: inherit;
 }
 
@@ -581,7 +581,9 @@ textarea:focus {
 	outline: none;
 	background: var(--foreground-contrast-color);
 	color: var(--foreground-color);
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	z-index: 1;
+	position: relative;
 }
 
 input[type=text]::-webkit-input-placeholder, .woocommerce #respond input#submit::-webkit-input-placeholder,
@@ -691,7 +693,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 select {
-	height: calc( 3rem + 0.4rem);
+	height: calc( 3rem + 0.4em);
 }
 
 select:hover {
@@ -742,7 +744,7 @@ a.button:hover,
 button:focus,
 button:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
 }
 
 label {
@@ -860,7 +862,7 @@ table {
 
 table th {
 	color: var(--foreground-color);
-	border-bottom: 0.2rem solid var(--foreground-color);
+	border-bottom: 0.2em solid var(--foreground-color);
 }
 
 table th,
@@ -924,9 +926,9 @@ pre.compress {
 }
 
 .wp-caption .wp-caption-text {
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1.75;
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.5;
 	text-align: center;
 	padding: 0;
 	margin: 0;
@@ -1118,13 +1120,13 @@ p.wp-block-subhead {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100%;
-	border-bottom-width: 0.2rem;
+	border-bottom-width: 0.2em;
 	border-color: var(--foreground-color);
 }
 
 .wp-block-separator.is-style-wide {
 	width: 20rem;
-	border-bottom-width: 0.2rem;
+	border-bottom-width: 0.2em;
 }
 
 .wp-block-separator.is-style-dots:before {
@@ -1610,14 +1612,6 @@ p.wp-block-subhead {
 	background: var(--foreground-contrast-color);
 }
 
-.post-password-required form input[type=password] {
-	width: 100%;
-}
-
-.post-password-required form input[type=submit] {
-	min-width: 30%;
-}
-
 .post-password-required form p:last-of-type {
 	margin-bottom: 0;
 }
@@ -1829,6 +1823,12 @@ p.wp-block-subhead {
 #respond p.comment-form-url input,
 #respond p.comment-form-url textarea {
 	width: 100%;
+}
+
+#respond p.comment-form-author,
+#respond p.comment-form-email,
+#respond p.comment-form-url {
+	max-width: 44rem;
 }
 
 #respond p.form-submit {
@@ -2205,7 +2205,7 @@ body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
 
 body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hover, body #eu-cookie-law.negative input:focus, body #eu-cookie-law.negative input:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
 }
 
 /*
@@ -2357,7 +2357,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 .woocommerce input.button:focus,
 .woocommerce input.button:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.alt,
@@ -2396,7 +2396,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 .woocommerce input.button.alt:focus,
 .woocommerce input.button.alt:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled],
@@ -2531,7 +2531,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart p.buttons a {
 }
 
 li.woocommerce-cart-button li div.widget_shopping_cart .total {
-	border-top: 0.2rem solid var(--foreground-contrast-color);
+	border-top: 0.2em solid var(--foreground-contrast-color);
 	padding: 0.75rem 0 0 0;
 	text-align: center;
 }
@@ -2554,7 +2554,7 @@ p.demo_store {
  * 3.4 - WP Post Series
  */
 .wp-post-series-box {
-	border: 0.2rem dashed currentColor;
+	border: 0.2em dashed currentColor;
 	padding: 1.5rem 1.5rem;
 	margin: 0 0 3rem 0;
 }
@@ -2593,6 +2593,7 @@ p.demo_store {
 	color: var(--foreground-contrast-color);
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
 }
 
 .block-info:before,
@@ -2638,12 +2639,13 @@ p.demo_store {
 
 .block-border {
 	padding: 1.5rem 1.5rem;
-	border: 0.2rem solid currentColor;
+	border: 0.2em solid currentColor;
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
 }
 
 .block-border-dashed {
 	padding: 1.5rem 1.5rem;
-	border: 0.2rem dashed currentColor;
+	border: 0.2em dashed currentColor;
 }
 
 /*!
@@ -2721,6 +2723,10 @@ p.demo_store {
 
 .content-posts .entry-archive-header {
 	margin-bottom: 7.5rem;
+	grid-column: 1/-1;
+}
+
+.content-posts .not-found {
 	grid-column: 1/-1;
 }
 
@@ -2813,7 +2819,7 @@ p.demo_store {
 	.archive-articles-1 .content-posts,
 	.archive-articles-2 .content-posts {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, calc( 50% - 0.75rem));
 		grid-column-gap: 1.5rem;
 		grid-row-gap: 4.5rem;
 	}
@@ -2830,7 +2836,7 @@ p.demo_store {
 
 @media (min-width: 69rem) {
 	.archive-articles-2 .content-posts {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3, calc( 33.333% - 1rem));
 	}
 }
 
@@ -2895,12 +2901,13 @@ p.demo_store {
  * Search form, author meta box, and other generic, reusable, elements.
  */
 /* taxonomies - categories and tags on single posts */
-.taxonomies {
+.entry-terms {
 	clear: both;
+	margin-top: 1.5rem;
 	margin-bottom: 3rem;
 }
 
-.taxonomies .taxonomy {
+.entry-terms .taxonomy {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
@@ -2908,6 +2915,10 @@ p.demo_store {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	margin: 0;
+}
+
+.entry-terms .taxonomy + .taxonomy {
+	margin-top: 0.375rem;
 }
 
 /* blog post contributor/ author */
