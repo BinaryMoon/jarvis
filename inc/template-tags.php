@@ -165,7 +165,7 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 
 		<div class="entry">
 
-			<h2 class="byline meta author v-card">
+			<h2 class="author v-card">
 				<a class="url fn n p-name u-url" href="<?php echo esc_url( get_author_posts_url( $user_id ) ); ?>">
 					<?php the_author_meta( 'display_name', $user_id ); ?>
 				</a>
