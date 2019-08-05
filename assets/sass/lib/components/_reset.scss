@@ -31,6 +31,9 @@ body {
 	background-color: $canvas-background;
 	color: $black;
 	margin: 0;
+	// Improve OSX font rendering.
+	-webkit-font-smoothing: antialias;
+	-moz-osx-font-smoothing: grayscale;
 
 }
 

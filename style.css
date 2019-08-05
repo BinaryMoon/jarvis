@@ -94,6 +94,8 @@ body {
 	background-color: var(--background-color);
 	color: var(--foreground-color);
 	margin: 0;
+	-webkit-font-smoothing: antialias;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 *,
