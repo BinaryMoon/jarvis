@@ -19,24 +19,6 @@ form.search-form {
 	input.search-field {
 
 		margin: 0;
-		border-right: 0;
-
-	}
-
-	button.search-submit {
-
-		border: none;
-		padding: 0 $grid-gutter;
-		opacity: 1;
-		box-shadow: none;
-		@include transition;
-
-		&:focus,
-		&:hover {
-
-			text-decoration: underline;
-
-		}
 
 	}
 
