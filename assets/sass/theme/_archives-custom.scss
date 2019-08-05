@@ -72,7 +72,7 @@
 		.content-posts {
 
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: repeat( 2, calc( 50% - #{ $grid-gutter * 1 / 2 } ) );
 			grid-column-gap: $grid-gutter;
 			grid-row-gap: $grid-line-height * 3;
 
@@ -101,7 +101,7 @@
 
 		.content-posts {
 
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: repeat( 3, calc( 33.333% - #{$grid-gutter * 2/3} ) );
 
 		}
 
