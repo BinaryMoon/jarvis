@@ -16,7 +16,7 @@
 
 ?>
 
-<article class="page-404 main-content post-singular no-results not-found">
+<article class="page-404 post-singular no-results not-found">
 
 	<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'jarvis' ); ?></h1>
 
