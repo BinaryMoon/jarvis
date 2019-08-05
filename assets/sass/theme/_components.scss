@@ -5,15 +5,22 @@
 // @package Jarvis
 
 /* taxonomies - categories and tags on single posts */
-.taxonomies {
+.entry-terms {
 
 	clear: both;
+	margin-top: $grid-line-height;
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 
 	.taxonomy {
 
 		@include post-meta-data;
 		margin: 0;
+
+		+ .taxonomy {
+
+			margin-top: ( $grid-line-height / 4 );
+
+		}
 
 	}
 
