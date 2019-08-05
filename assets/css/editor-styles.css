@@ -24,6 +24,7 @@ body .block-announcement {
 	color: var(--foreground-contrast-color);
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
 }
 
 body .block-info:before,
@@ -69,12 +70,13 @@ body .block-intro {
 
 body .block-border {
 	padding: 1.5rem 1.5rem;
-	border: 0.2rem solid currentColor;
+	border: 0.2em solid currentColor;
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
 }
 
 body .block-border-dashed {
 	padding: 1.5rem 1.5rem;
-	border: 0.2rem dashed currentColor;
+	border: 0.2em dashed currentColor;
 }
 
 /*!
@@ -179,7 +181,7 @@ h6 {
 
 hr {
 	border: none;
-	border-bottom: 0.2rem solid var(--foreground-color);
+	border-bottom: 0.2em solid var(--foreground-color);
 }
 
 h1,
@@ -241,7 +243,7 @@ ol {
 
 .button:focus, .button:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
 }
 
 .small-caps {

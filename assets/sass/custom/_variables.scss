@@ -10,8 +10,6 @@ $font-uppercase-spacing: 0.1em;
 $black: var(--foreground-color);
 $white: var(--foreground-contrast-color);
 
-$border-shadow: 0 0 0 1px var( --background-color ), $border-width $border-width 0 $black;
-
 // main colour, used through the theme
 $canvas-background: var(--background-color);
 
@@ -25,6 +23,11 @@ $grid-line-height: 1.5rem;
 $grid-gutter: 1.5rem;
 
 $support-accessible-tagcloud: true;
+
+$border-width: 0.2em;
+
+$border-shadow: 0 0 0 1px var( --background-color ), $border-width $border-width 0 $black;
+
 
 // default font sizes.
 // calculate the sizes with: required-size / 16

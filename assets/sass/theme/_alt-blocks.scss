@@ -9,6 +9,7 @@
 	color: $white;
 	padding: $grid-line-height $grid-gutter $grid-line-height ( $grid-gutter * 3 );
 	position: relative;
+	box-shadow: $border-shadow;
 
 	&:before {
 
@@ -85,6 +86,7 @@
 
 	padding: $grid-line-height $grid-gutter;
 	border: $border-width solid currentColor;
+	box-shadow: $border-shadow;
 
 }
 
