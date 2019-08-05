@@ -27,10 +27,6 @@
  * ensure margins and paddings are consistent
  * test in incognito mode. Maybe consider defining columns for the different content?
  * test theme with and without jetpack
- * test theme with and without infinite scroll
- * delete unused scripts
- * delete unused customizer controls
- * theme tags
  * theme description
  * screenshot.png (880 x 660)
  * check sticky styles
