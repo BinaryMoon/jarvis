@@ -8,6 +8,9 @@
  * @link https://developer.wordpress.org/themes/customize-api/customizer-objects/#custom-controls-sections-and-panels.
  */
 
+/**
+ * Add a link to the theme docs.
+ */
 class Jarvis_Doc_Link extends WP_Customize_Control {
 
 	public $type = 'jarvis_documentation_link';
@@ -19,8 +22,13 @@ class Jarvis_Doc_Link extends WP_Customize_Control {
 
 ?>
 
+	<p><?php esc_html_e( 'Jarvis is designed to be simple and flexible. Most of the settings can be changed in the Customizer. For more details check out the following links:', 'jarvis' ); ?></p>
+	<ul style="margin-bottom: 15px;">
+	<li><a href="https://github.com/BinaryMoon/jarvis/wiki/Getting-Started"><?php esc_html_e( 'Getting Started', 'jarvis' ); ?></a></li>
+	<li><a href="https://github.com/BinaryMoon/jarvis/wiki/Recommended-Plugins"><?php esc_html_e( 'Recommended Plugins', 'jarvis' ); ?></a></li>
+	</ul>
 	<a href="https://github.com/BinaryMoon/jarvis/wiki" class="button button-primary" id="jarvis-doc-link" target="_blank">
-		<?php esc_html_e( 'Documentation', 'jarvis' ); ?>
+		<?php esc_html_e( 'Theme Documentation', 'jarvis' ); ?>
 	</a>
 
 <?php
