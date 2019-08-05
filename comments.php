@@ -45,7 +45,7 @@
 				printf(
 					/* Translators: %1$s: Post title */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'jarvis' ),
-					'<span>' . get_the_title() . '</span>'
+					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
 
 			} else {
@@ -62,7 +62,7 @@
 						)
 					),
 					number_format_i18n( $comment_count ),
-					'<span>' . get_the_title() . '</span>'
+					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
 
 			}

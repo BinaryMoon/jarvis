@@ -40,7 +40,7 @@
 				<span class="screen-reader-text">
 <?php
 	/* Translators: %s: Post title */
-	printf( esc_html__( 'Permanent link to %s', 'jarvis' ), get_the_title() );
+	printf( esc_html__( 'Permanent link to %s', 'jarvis' ), esc_html( get_the_title() ) );
 ?>
 				</span>
 			</a>

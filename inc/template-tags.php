@@ -74,7 +74,7 @@ function jarvis_comments_link() {
 						),
 					)
 				),
-				get_the_title()
+				esc_html( get_the_title() )
 			),
 			false,
 			false,
