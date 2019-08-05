@@ -39,6 +39,7 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-svgmin": "^2.2.0",
 		"gulp-uglify": "^3.0.2",
+		"gulp-wp-pot": "^2.3.5",
 		"gulp-zip": "^5.0.0"
 	},
 	"dependencies": {}
