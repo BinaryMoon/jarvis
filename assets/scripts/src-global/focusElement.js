@@ -10,17 +10,24 @@
 			return;
 		}
 
-		// Try to grab the target element.
-		var element = document.querySelector( e.target.hash );
+		focusSelector( e.target.hash );
 
-		// If there is an element to use - then let's focus it.
-		if ( element ) {
+	};
 
-			if ( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
-				element.tabIndex = -1;
+	/**
+	 * Focus the first element with the specified selector.
+	 */
+	var focusSelector = function( selector ) {
+
+		var e = document.querySelector( selector );
+
+		if ( e ) {
+
+			if ( !( /^(?:a|select|input|button|textarea)$/i.test( e.tagName ) ) ) {
+				e.tabIndex = -1;
 			}
 
-			element.focus();
+			e.focus();
 
 		}
 
@@ -29,5 +36,6 @@
 	window.jarvis = window.jarvis || {};
 
 	window.jarvis.focusElement = focusElement;
+	window.jarvis.focusSelector = focusSelector;
 
 } )();
