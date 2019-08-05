@@ -10,6 +10,7 @@ import scriptsGlobal, { customizerPreview, customizerControls } from './gulp/scr
 import compress from './gulp/zip';
 import rtl from './gulp/rtl';
 import toc from './gulp/toc';
+import pot from './gulp/pot';
 import optimizeSVG from './gulp/svg';
 import criticalCSS from './gulp/critical';
 
@@ -28,6 +29,7 @@ export const build = series(
 		minifyStyles,
 		rtl,
 		toc,
+		pot,
 		criticalCSS
 	),
 	compress
@@ -41,6 +43,7 @@ export const buildRTL = rtl;
 export const buildTOC = toc;
 export const buildCritical = criticalCSS;
 export const buildSVG = optimizeSVG;
+export const buildPot = pot;
 
 export const watchFiles = function() {
 	watch( [ '*.scss', './assets/sass/**/*.scss' ], series( parallel( styles, editor_styles, editor_blocks ), rtl, toc ) );

@@ -44,3 +44,4 @@ Jarvis uses Gulp to process files. You probably won't need to use it, but just i
 * `gulp buildTOC` Generate Table of Contents for style.css file.
 * `gulp buildCritical` Create [critical path CSS](https://www.smashingmagazine.com/2015/08/understanding-critical-css/#what-is-critical-css) styles.
 * `gulp buildSVG` Clean up exported svg files.
+* `gulp buildPot` Build the latest version of the __.pot__ language file.
