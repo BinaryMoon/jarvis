@@ -10,6 +10,8 @@ $font-uppercase-spacing: 0.1em;
 $black: var(--foreground-color);
 $white: var(--foreground-contrast-color);
 
+$border-shadow: 0 0 0 1px var( --background-color ), $border-width $border-width 0 $black;
+
 // main colour, used through the theme
 $canvas-background: var(--background-color);
 
