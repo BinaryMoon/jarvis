@@ -195,6 +195,14 @@
 
 	}
 
+	p.comment-form-author,
+	p.comment-form-email,
+	p.comment-form-url {
+
+		max-width: $grid-small-width;
+
+	}
+
 	p.form-submit {
 
 		margin-top: ( $grid-line-height / 2 );
