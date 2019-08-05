@@ -23,6 +23,7 @@
 	<section class="entry">
 
 <?php
+
 	if ( is_home() && current_user_can( 'publish_posts' ) ) {
 
 		printf(
@@ -38,27 +39,30 @@
 			esc_url( admin_url( 'post-new.php' ) )
 		);
 
-	} if ( is_search() ) {
+	}
+
+	if ( is_search() ) {
+
 ?>
 
 		<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'jarvis' ); ?></p>
 
-		<div class="search-wrapper">
-			<?php get_search_form(); ?>
-		</div>
-
 <?php
+
 	} else {
+
 ?>
 
-		<p><?php esc_html_e( 'It seems we can\'t find what you\'re looking for. Perhaps searching can help.', 'jarvis' ); ?></p>
+		<p><?php esc_html_e( "It seems we can't find what you're looking for. Perhaps searching can help.", 'jarvis' ); ?></p>
 
 		<div class="search-wrapper">
 			<?php get_search_form(); ?>
 		</div>
 
 <?php
+
 	}
+
 ?>
 
 	</section>
