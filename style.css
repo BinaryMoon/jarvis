@@ -15,8 +15,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*!
  *  ___        _____ _                  ___         _
  * | _ \_ _ __|_   _| |_  ___ _ __  ___|   \ ___ __(_)__ _ _ _
- * |  _/ '_/ _ \| | | ' \/ -_) '  \/ -_) |) / -_|_-< / _` | ' |
- * |_| |_| \___/|_| |_||_\___|_|_|_\___|___/\___/__/_\__, |_||_|
+ * |  _/ '_/ _ \| | | ' \/ -_) '  \/ -_) |) / -_|_-< / _` | ' \
+ * |_| |_| \___/|_| |_||_\___|_|_|_\___|___/\___/__/_\__, |_||_\
  *                                                   |___/
  * WordPress Themes: https://prothemedesign.com/themes/
  */
@@ -1608,8 +1608,6 @@ p.wp-block-subhead {
  */
 .post-password-required form {
 	margin-bottom: 3rem;
-	padding: 1.5rem 1.5rem;
-	background: var(--foreground-contrast-color);
 }
 
 .post-password-required form p:last-of-type {
@@ -2786,7 +2784,7 @@ p.demo_store {
 }
 
 /**
- * Center header.
+ * Center header and archive description.
  */
 .archive-layout-1 .content-posts .entry-archive-header {
 	text-align: center;
@@ -2821,7 +2819,7 @@ p.demo_store {
 		display: grid;
 		grid-template-columns: repeat(2, calc( 50% - 0.75rem));
 		grid-column-gap: 1.5rem;
-		grid-row-gap: 4.5rem;
+		grid-row-gap: 3rem;
 	}
 	.archive-articles-1 .content-posts article.entry,
 	.archive-articles-2 .content-posts article.entry {
@@ -3479,6 +3477,10 @@ blockquote p:last-child {
 /*!
  * 4.11 - Pagination
  */
+.post-navigation a {
+	text-decoration: none;
+}
+
 .image-navigation,
 .comment-navigation,
 .post-navigation {
@@ -3494,12 +3496,6 @@ blockquote p:last-child {
 		font-size: 1.625rem;
 		line-height: 1.5;
 	}
-}
-
-.image-navigation a,
-.comment-navigation a,
-.post-navigation a {
-	text-decoration: none;
 }
 
 .image-navigation .meta-nav,
