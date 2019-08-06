@@ -1,5 +1,5 @@
 /**
- * Center header.
+ * Center header and archive description.
  */
 .archive-layout-1 {
 
@@ -74,7 +74,7 @@
 			display: grid;
 			grid-template-columns: repeat( 2, calc( 50% - #{ $grid-gutter * 1 / 2 } ) );
 			grid-column-gap: $grid-gutter;
-			grid-row-gap: $grid-line-height * 3;
+			grid-row-gap: $grid-line-height * 2;
 
 			article.entry {
 
