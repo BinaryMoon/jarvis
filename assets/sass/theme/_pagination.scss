@@ -3,7 +3,16 @@
  */
 // @package Jarvis
 
-// pagination
+.post-navigation {
+
+	a {
+
+		text-decoration: none;
+
+	}
+
+}
+
 .image-navigation,
 .comment-navigation,
 .post-navigation {
@@ -14,12 +23,6 @@
 	@include for-tablet {
 
 		@include modular-scale(delta);
-
-	}
-
-	a {
-
-		text-decoration: none;
 
 	}
 
