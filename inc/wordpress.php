@@ -173,6 +173,10 @@ function jarvis_get_site_styles() {
 	/**
 	 * Add critical path css inline to help speed up the website.
 	 *
+	 * This uses file_get_contents since it's the quickest way to get the css
+	 * and output it directly. The css needs to be inline as we don't want it to
+	 * be render blocking.
+	 *
 	 * Only use these on production sites so that the styles don't override
 	 * changes being made to the primary stylesheets.
 	 */
