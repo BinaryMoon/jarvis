@@ -16,7 +16,7 @@
 
 <?php
 
-	if ( $image ) {
+	if ( $jarvis_image ) {
 
 ?>
 
