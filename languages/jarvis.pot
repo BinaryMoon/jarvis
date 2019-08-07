@@ -62,6 +62,380 @@ msgstr ""
 msgid "Search results for:"
 msgstr ""
 
-#: searchform.php:20, searchform.php:24
+#: searchform.php:20, searchform.php:24, parts/search-button.php:17, parts/search-button.php:19
 msgid "Search"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:70
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: post title
+#. translators: %s: Post title
+#. translators: %s: Post title
+#: inc/template-tags.php:111, parts/content-single-page.php:44, parts/content-single.php:37
+msgid "Read more %s"
+msgstr ""
+
+#. translators: %d: Number of articles written by a particular author.
+#: inc/template-tags.php:186
+msgid "%d Article"
+msgid_plural "%d Articles"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:241
+msgid "Categories:"
+msgstr ""
+
+#: inc/template-tags.php:244
+msgid "All"
+msgstr ""
+
+#: inc/template-tags.php:322
+msgid "Top"
+msgstr ""
+
+#. translators: %1$s = theme name, %2$s = theme author website
+#: inc/template-tags.php:324
+msgid "Theme: %1$s by %2$s"
+msgstr ""
+
+#: inc/wordpress.php:263
+msgid "White"
+msgstr ""
+
+#: inc/wordpress.php:268
+msgid "Light Gray"
+msgstr ""
+
+#: inc/wordpress.php:273
+msgid "Black"
+msgstr ""
+
+#: inc/wordpress.php:362, parts/navigation.php:20
+msgid "Menu"
+msgstr ""
+
+#: inc/wordpress.php:363, parts/navigation-social.php:18
+msgid "Social Menu"
+msgstr ""
+
+#: inc/wordpress.php:412
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/wordpress.php:414
+msgid "Widgets that display at the bottom of your website. They are arranged in rows."
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/wordpress.php:520
+msgid ", "
+msgstr ""
+
+#. translators: %1$s will be replaced with a list of categories
+#: inc/wordpress.php:527
+msgid "Posted in: %1$s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/wordpress.php:532
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: %1$s will be replaced with a list of tags
+#: inc/wordpress.php:537
+msgid "Tagged as: %1$s"
+msgstr ""
+
+#: parts/archive-pagination.php:14
+msgid "Newer"
+msgstr ""
+
+#: parts/archive-pagination.php:15
+msgid "Older"
+msgstr ""
+
+#: parts/archive-pagination.php:16
+msgid "page"
+msgstr ""
+
+#: parts/content-empty.php:21
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: %1$s: admin url
+#: parts/content-empty.php:32
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: parts/content-empty.php:48
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: parts/content-empty.php:56
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+
+#: parts/content-format-quote.php:39
+msgctxt "A symbol used to link to a blog post"
+msgid "#"
+msgstr ""
+
+#. translators: %s: Post title
+#: parts/content-format-quote.php:43
+msgid "Permanent link to %s"
+msgstr ""
+
+#: parts/content-single-page.php:53, parts/content-single.php:46
+msgid "Page"
+msgstr ""
+
+#: parts/content-single.php:64
+msgid "Next"
+msgstr ""
+
+#: parts/content-single.php:66
+msgid "Previously"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screenreaders.
+#: parts/edit-post.php:20
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: parts/header.php:23
+msgid "Skip to content"
+msgstr ""
+
+#: parts/navigation.php:24
+msgid "Primary Menu"
+msgstr ""
+
+#: templates/blog.php:5
+msgid "Blog Posts"
+msgstr ""
+
+#: templates/content-only.php:7
+msgid "Content Only"
+msgstr ""
+
+#: templates/contributors-page.php:8
+msgid "Contributors"
+msgstr ""
+
+#: templates/full-width-content-only.php:9
+msgid "Full-width Content Only"
+msgstr ""
+
+#: templates/full-width.php:9
+msgid "Full-width"
+msgstr ""
+
+#: templates/grid-page.php:7
+msgid "Child Page Grid"
+msgstr ""
+
+#: templates/portfolio-page.php:8
+msgid "Portfolio"
+msgstr ""
+
+#: inc/customizer/archive.php:27
+msgid "Homepage & Archive"
+msgstr ""
+
+#: inc/customizer/archive.php:51, inc/customizer/single.php:51
+msgid "Left (default)"
+msgstr ""
+
+#: inc/customizer/archive.php:53, inc/customizer/single.php:53
+msgid "Right (default)"
+msgstr ""
+
+#: inc/customizer/archive.php:59, inc/customizer/single.php:59
+msgid "Alignment"
+msgstr ""
+
+#: inc/customizer/archive.php:64, inc/customizer/single.php:64, inc/customizer/site-header.php:53
+msgid "Center"
+msgstr ""
+
+#: inc/customizer/archive.php:85, inc/customizer/archive.php:112, inc/customizer/single.php:85
+msgid "Header Height"
+msgstr ""
+
+#: inc/customizer/archive.php:89, inc/customizer/single.php:89
+msgid "Small"
+msgstr ""
+
+#: inc/customizer/archive.php:90, inc/customizer/single.php:90
+msgid "Medium (Default)"
+msgstr ""
+
+#: inc/customizer/archive.php:91, inc/customizer/single.php:91
+msgid "Full Height"
+msgstr ""
+
+#: inc/customizer/archive.php:116
+msgid "Rows, no images (Default)"
+msgstr ""
+
+#: inc/customizer/archive.php:117
+msgid "2 Columns, Featured Image"
+msgstr ""
+
+#: inc/customizer/archive.php:118
+msgid "3 Columns, Featured Image (large screens only)"
+msgstr ""
+
+#: inc/customizer/class.jarvis_doc_link.php:25
+msgid "Jarvis is designed to be simple and flexible. Most of the settings can be changed in the Customizer. For more details check out the following links:"
+msgstr ""
+
+#: inc/customizer/class.jarvis_doc_link.php:27
+msgid "Getting Started"
+msgstr ""
+
+#: inc/customizer/class.jarvis_doc_link.php:28
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/customizer/class.jarvis_doc_link.php:31
+msgid "Theme Documentation"
+msgstr ""
+
+#. translators: %s = the name of the default font
+#: inc/customizer/class.jarvis_dropdown_fonts.php:61
+msgid "The default font is <strong>%s</strong>"
+msgstr ""
+
+#: inc/customizer/fonts.php:24
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer/fonts.php:48
+msgid "Title Font"
+msgstr ""
+
+#: inc/customizer/fonts.php:74
+msgid "Heading Font"
+msgstr ""
+
+#: inc/customizer/fonts.php:100
+msgid "Body Font"
+msgstr ""
+
+#: inc/customizer/footer.php:20
+msgid "The footer credits area supports <strong>HTML</strong>. It also supports the following tags:"
+msgstr ""
+
+#: inc/customizer/footer.php:22
+msgid "<strong>(c)</strong>: the copyright symbol &copy;"
+msgstr ""
+
+#: inc/customizer/footer.php:23
+msgid "<strong>(year)</strong>: the current year. Updates automatically"
+msgstr ""
+
+#: inc/customizer/footer.php:24
+msgid "<strong>(|)</strong>: add a gap between items"
+msgstr ""
+
+#: inc/customizer/footer.php:25
+msgid "<strong>(privacy)</strong>: a privacy policy link"
+msgstr ""
+
+#: inc/customizer/footer.php:26
+msgid "<strong>(top)</strong>: a \"back to top\" link"
+msgstr ""
+
+#: inc/customizer/footer.php:27
+msgid "<strong>(ptd)</strong>: the Pro Theme Design credit"
+msgstr ""
+
+#: inc/customizer/footer.php:29
+msgid "The default theme footer can be reproduced with:<br /><strong>%s</strong>"
+msgstr ""
+
+#: inc/customizer/footer.php:31
+msgid "Close"
+msgstr ""
+
+#: inc/customizer/footer.php:41
+msgid "Footer Credits"
+msgstr ""
+
+#: inc/customizer/footer.php:64
+msgid "Credits Content"
+msgstr ""
+
+#: inc/customizer/settings.php:24
+msgid "Site Layout"
+msgstr ""
+
+#: inc/customizer/settings.php:35
+msgid "Jarvis Theme Documentation"
+msgstr ""
+
+#: inc/customizer/single.php:27
+msgid "Single Post & Page"
+msgstr ""
+
+#: inc/customizer/single.php:114
+msgid "Use Featured Image as header image."
+msgstr ""
+
+#: inc/customizer/single.php:136
+msgid "Display Post Date"
+msgstr ""
+
+#: inc/customizer/single.php:158
+msgid "Display Post Author"
+msgstr ""
+
+#: inc/customizer/single.php:180
+msgid "Display Post Author Details"
+msgstr ""
+
+#: inc/customizer/single.php:203
+msgid "Display Categories and Tags"
+msgstr ""
+
+#: inc/customizer/site-header.php:27
+msgid "Header"
+msgstr ""
+
+#: inc/customizer/site-header.php:48
+msgid "Header Layout"
+msgstr ""
+
+#: inc/customizer/site-header.php:52
+msgid "Default"
+msgstr ""
+
+#: inc/customizer/site-header.php:54
+msgid "Side Fixed"
+msgstr ""
+
+#: inc/customizer/site-header.php:75
+msgid "Title Display"
+msgstr ""
+
+#: inc/customizer/site-header.php:79
+msgid "Display Title and Description"
+msgstr ""
+
+#: inc/customizer/site-header.php:80
+msgid "Display Title only"
+msgstr ""
+
+#: inc/customizer/site-header.php:81
+msgid "Hide Title and Description"
+msgstr ""
+
+#: inc/customizer/site-header.php:104
+msgid "Title Color"
 msgstr ""
