@@ -109,7 +109,7 @@ function jarvis_read_more_text() {
 	printf(
 		/* translators: %s: post title */
 		esc_html__( 'Read more %s', 'jarvis' ),
-		the_title( '<span class="screen-reader-text">', '</span>', false )
+		'<span class="screen-reader-text">' . esc_html( the_title( '', '', false ) ) . '</span>'
 	);
 
 }
