@@ -15,7 +15,7 @@
  * @param array $classes default classnames
  * @return array Add theme utility classes
  */
-function editorskit_jarvis_classnames( $classes ){
+function jarvis_editorskit_classnames( $classes ) {
 
 	$theme_classes = array(
 		'block-info',
@@ -34,4 +34,4 @@ function editorskit_jarvis_classnames( $classes ){
 	return $classes;
 }
 
-add_filter( 'editorskit_block_editor_classnames', 'editorskit_jarvis_classnames', 10, 3 );
+add_filter( 'jarvis_editorskit_classnames', 'editorskit_jarvis_classnames', 10, 3 );
