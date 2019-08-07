@@ -14,7 +14,6 @@
 
 ?>
 
-	<a href="<?php echo esc_url( site_url( '/?s' ) ); ?>" class="search-link" title="<?php esc_attr__( 'Search', 'jarvis' ); ?>">
+	<a href="<?php echo esc_url( site_url( '/?s' ) ); ?>" class="search-link" title="<?php esc_attr_e( 'Search', 'jarvis' ); ?>">
 		<?php jarvis_svg( 'search' ); ?>
-		<span aria-hidden="true"><?php esc_html_e( 'Search', 'jarvis' ); ?></span>
 	</a>
