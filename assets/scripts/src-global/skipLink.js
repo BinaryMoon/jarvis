@@ -7,34 +7,28 @@
  */
 ; ( function() {
 
-	var isIe = /(trident|msie)/i.test( navigator.userAgent );
+	window.addEventListener(
+		'hashchange',
+		function() {
 
-	if ( isIe && document.getElementById && window.addEventListener ) {
+			var id = location.hash.substring( 1 );
 
-		window.addEventListener(
-			'hashchange',
-			function() {
+			if ( !( /^[A-z0-9_-]+$/.test( id ) ) ) {
+				return;
+			}
 
-				var id = location.hash.substring( 1 );
-				var element;
+			var element = document.getElementById( id );
 
-				if ( !( /^[A-z0-9_-]+$/.test( id ) ) ) {
-					return;
+			if ( element ) {
+				if ( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+					element.tabIndex = -1;
 				}
 
-				element = document.getElementById( id );
+				element.focus();
+			}
 
-				if ( element ) {
-					if ( !( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
-						element.tabIndex = -1;
-					}
-
-					element.focus();
-				}
-
-			},
-			false
-		);
-	}
+		},
+		false
+	);
 
 } )();
