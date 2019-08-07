@@ -29,26 +29,6 @@
 				}
 			);
 
-			// Header text color.
-			wp.customize(
-				'jarvis_display_credits',
-				function( value ) {
-
-					value.bind(
-						function( to ) {
-
-							if ( to ) {
-								$( '.site-info' ).show();
-							} else {
-								$( '.site-info' ).hide();
-							}
-
-						}
-					);
-
-				}
-			);
-
 			// Fired by jarvis_credits expansion.
 			wp.customize.preview.bind(
 				'jarvis_credits_expand',

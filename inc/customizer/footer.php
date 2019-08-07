@@ -48,28 +48,6 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 	 * Setting to allow the credits to be hidden.
 	 */
 	$wp_customize->add_setting(
-		'jarvis_display_credits',
-		array(
-			'default' => true,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_checkbox',
-			'transport' => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		'jarvis_display_credits',
-		array(
-			'label' => esc_html__( 'Display Footer Credits', 'jarvis' ),
-			'section' => 'jarvis_credits',
-			'type' => 'checkbox',
-		)
-	);
-
-	/**
-	 * Setting to allow the credits to be hidden.
-	 */
-	$wp_customize->add_setting(
 		'jarvis_credits_content',
 		array(
 			'default' => '',
