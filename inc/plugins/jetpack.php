@@ -30,21 +30,6 @@ add_action( 'after_setup_theme', 'jarvis_jetpack_init' );
 
 
 /**
- * Flush rewrite rules for custom post types on theme setup and switch.
- *
- * This is so that Projects, and other Custom Post Types work as
- * expected. Is hooked into `after_switch_theme`.
- */
-function jarvis_flush_rewrite_rules() {
-
-	flush_rewrite_rules();
-
-}
-
-add_action( 'after_switch_theme', 'jarvis_flush_rewrite_rules' );
-
-
-/**
  * Add breadcrumbs to a page.
  *
  * Breadcrumbs will not display on blog posts, but may display on other custom
