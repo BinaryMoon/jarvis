@@ -14,7 +14,7 @@
  */
 function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 
-	$default_footer = '(privacy)(|)Pro Theme Design(|)(top)';
+	$default_footer = '(privacy)(|)(ptd)(|)(top)';
 
 	$description = array(
 		'<p>' . __( 'The footer credits area supports <strong>HTML</strong>. It also supports the following tags:', 'jarvis' ) . '</p>',
@@ -24,6 +24,7 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 		'<li>' . __( '<strong>(|)</strong>: add a gap between items', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(privacy)</strong>: a privacy policy link', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(top)</strong>: a "back to top" link', 'jarvis' ) . '</li>',
+		'<li>' . __( '<strong>(ptd)</strong>: the Pro Theme Design credit', 'jarvis' ) . '</li>',
 		'</ul>',
 		'<p>' . sprintf( __( 'The default theme footer can be reproduced with:<br /><strong>%s</strong>', 'jarvis' ), $default_footer ) . '</p>',
 		'<p class="section-description-buttons">',
@@ -50,7 +51,7 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_setting(
 		'jarvis_credits_content',
 		array(
-			'default' => '',
+			'default' => $default_footer,
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'wp_kses_post',
 			'transport' => 'postMessage',
@@ -96,86 +97,3 @@ function jarvis_register_customize_refresh_credits( WP_Customize_Manager $wp_cus
 
 }
 
-
-/**
- * Display credits content.
- *
- * @param  boolean $wrapper True to display wrapper, false for just contents.
- * @return boolean
- */
-function jarvis_credits_content( $wrapper = true ) {
-
-	$contents = jarvis_credits_get_content();
-
-	if ( $contents && $wrapper ) {
-
-		echo '<div class="site-info">' . $contents . '</div>'; // WPCS: XSS ok.
-
-	}
-
-	if ( $contents && ! $wrapper ) {
-
-		echo $contents; // WPCS: XSS ok.
-
-	}
-
-	// False to display defaults credits.
-	// True to display credits as above.
-	return ! empty( $contents );
-
-}
-
-
-/**
- * Display credits content.
- *
- * @return string The html to display for the credits.
- */
-function jarvis_credits_get_content() {
-
-	$separator = '<span role="separator" aria-hidden="true" class="sep"></span>';
-	$top_link = '<a href="#header">' . esc_html__( 'Top', 'jarvis' ) . '</a>';
-
-	/**
-	 * The theme mod is escaped when the function returns its value.
-	 */
-	$contents = get_theme_mod( 'jarvis_credits_content', '' );
-
-	$contents = str_ireplace( '(YEAR)', date( 'Y' ), $contents );
-	$contents = str_ireplace( '(C)', '&copy;', $contents );
-	$contents = str_ireplace( '(|)', $separator, $contents );
-	$contents = str_ireplace( '(SEP)', $separator, $contents );
-	$contents = str_ireplace( '(TOP)', $top_link, $contents );
-	$contents = str_ireplace( '(PRIVACY)', get_the_privacy_policy_link(), $contents );
-
-	$contents = apply_filters( 'jarvis_footer_content', $contents );
-
-	return wp_kses_post( $contents );
-
-}
-
-
-/**
- * Display footer credits.
- *
- * @return boolean
- */
-function jarvis_credits_footer() {
-
-	/**
-	 * If we're not in the customizer preview and credits have been disabled
-	 * then lets quit.
-	 *
-	 * Return true so that the credits get hidden.
-	 */
-	if ( ! is_customize_preview() && ! get_theme_mod( 'jarvis_display_credits', true ) ) {
-
-		return true;
-
-	}
-
-	return jarvis_credits_content();
-
-}
-
-add_filter( 'jarvis_credits', 'jarvis_credits_footer' );

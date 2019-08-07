@@ -283,3 +283,73 @@ function jarvis_archive_image() {
 	return get_the_post_thumbnail( get_the_ID(), 'jarvis-archive' );
 
 }
+
+
+/**
+ * Display footer credits.
+ *
+ * @return boolean
+ */
+function jarvis_credits_footer() {
+
+	jarvis_credits_content();
+
+}
+
+
+/**
+ * Display credits content.
+ *
+ * @param  boolean $wrapper True to display wrapper, false for just contents.
+ * @return boolean
+ */
+function jarvis_credits_content( $wrapper = true ) {
+
+	$contents = jarvis_credits_get_content();
+
+	if ( $contents && $wrapper ) {
+
+		echo '<div class="site-info">' . $contents . '</div>'; // WPCS: XSS ok.
+
+	}
+
+	if ( $contents && ! $wrapper ) {
+
+		echo $contents; // WPCS: XSS ok.
+
+	}
+
+}
+
+
+/**
+ * Display credits content.
+ *
+ * @return string The html to display for the credits.
+ */
+function jarvis_credits_get_content() {
+
+	$default = '(privacy)(|)(ptd)(|)(top)';
+	$separator = '<span role="separator" aria-hidden="true" class="sep"></span>';
+	$top_link = '<a href="#header">' . esc_html__( 'Top', 'jarvis' ) . '</a>';
+	/* Translators: %1$s = theme name, %2$s = theme author website */
+	$pro_theme_link = sprintf( esc_html__( 'Theme: %1$s by %2$s', 'jarvis' ), 'Jarvis', '<a href="https://prothemedesign.com/" rel="nofollow">Pro Theme Design</a>' );
+
+	/**
+	 * The theme mod is escaped when the function returns its value.
+	 */
+	$contents = get_theme_mod( 'jarvis_credits_content', '' );
+
+	$contents = str_ireplace( '(YEAR)', date( 'Y' ), $contents );
+	$contents = str_ireplace( '(C)', '&copy;', $contents );
+	$contents = str_ireplace( '(|)', $separator, $contents );
+	$contents = str_ireplace( '(SEP)', $separator, $contents );
+	$contents = str_ireplace( '(TOP)', $top_link, $contents );
+	$contents = str_ireplace( '(PRIVACY)', get_the_privacy_policy_link(), $contents );
+	$contents = str_ireplace( '(PTD)', $pro_theme_link, $contents );
+
+	$contents = apply_filters( 'jarvis_footer_content', $contents );
+
+	return wp_kses_post( $contents );
+
+}
