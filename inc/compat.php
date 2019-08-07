@@ -24,9 +24,9 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 	/**
 	 * Add a wp_body_open filter.
 	 */
-	function wp_body_open() {
+	function wp_body_open() { // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedFunctionFound
 
-			do_action( 'wp_body_open' );
+			do_action( 'wp_body_open' ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 
 	}
 
