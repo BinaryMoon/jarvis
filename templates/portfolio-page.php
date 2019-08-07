@@ -40,7 +40,7 @@
 	$query = new WP_Query(
 		array(
 			'post_type' => 'jetpack-portfolio',
-			'posts_per_page' => 999,
+			'posts_per_page' => 99,
 			'ignore_sticky_posts' => true,
 			'no_found_rows' => true,
 		)

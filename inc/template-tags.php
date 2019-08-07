@@ -128,7 +128,7 @@ function jarvis_child_pages() {
 			'orderby' => 'menu_order',
 			'order' => 'ASC',
 			'post_parent' => get_the_ID(),
-			'posts_per_page' => 999,
+			'posts_per_page' => 99,
 			'no_found_rows' => true,
 		)
 	);
