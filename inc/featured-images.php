@@ -130,6 +130,14 @@ function jarvis_post_thumbnail_html( $html, $post_id, $thumbnail_id, $size = 'ja
 		}
 	}
 
+	/**
+	 * Add native lazy loading.
+	 *
+	 * Currently supported in Chrome 76
+	 * @link https://web.dev/native-lazy-loading
+	 */
+	$html = str_replace( 'src=', 'loading="lazy" src=', $html );
+
 	return $html;
 
 }
