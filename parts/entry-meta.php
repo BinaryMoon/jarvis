@@ -16,9 +16,9 @@
 
 	jarvis_post_time();
 
-	$author = jarvis_post_author();
-	if ( $author ) {
-		echo '<span class="byline meta">' . $author . '</span>';
+	$jarvis_author = jarvis_post_author();
+	if ( $jarvis_author ) {
+		echo '<span class="byline meta">' . esc_html( $jarvis_author ) . '</span>';
 	}
 
 	jarvis_comments_link();

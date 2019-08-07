@@ -8,7 +8,7 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	$image = jarvis_archive_image();
+	$jarvis_image = jarvis_archive_image();
 
 ?>
 
@@ -21,7 +21,7 @@
 ?>
 
 	<a href="<?php the_permalink(); ?>" class="entry-thumbnail" aria-hidden="true" tabindex="-1">
-		<?php echo $image; // WPCS: XSS OK. ?>
+		<?php echo $jarvis_image; // WPCS: XSS OK. ?>
 	</a>
 
 <?php
