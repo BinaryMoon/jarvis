@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-24
+Version: 1.0.alpha-25
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -3486,6 +3486,7 @@ blockquote p:last-child {
 .post-navigation {
 	clear: both;
 	margin: 3rem 0;
+	font-weight: bold;
 }
 
 @media (min-width: 47rem) {
@@ -3508,6 +3509,7 @@ blockquote p:last-child {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	display: block;
+	font-weight: normal;
 }
 
 .image-navigation .post-title,
@@ -3642,8 +3644,9 @@ blockquote p:last-child {
 	clear: both;
 }
 
-.content-single .entry-single > a:not(.button) {
+.content-single .entry-single a:not(.button) {
 	padding: 0.5em 0;
+	font-weight: bold;
 }
 
 .content-single .entry-single .alignwide {
