@@ -19,6 +19,7 @@
 
 	clear: both;
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+	font-weight: bold;
 
 	@include for-tablet {
 
@@ -30,6 +31,7 @@
 
 		@include post-meta-data;
 		display: block;
+		font-weight: normal;
 
 	}
 
