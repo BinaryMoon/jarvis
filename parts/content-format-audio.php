@@ -12,7 +12,12 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-	$content = apply_filters( 'the_content', get_the_content() );
+ 	/**
+	 * Apply the_content filter so that we can ensure the content we are parsing
+	 * is using raw code and not random shortcodes that we do not know the name
+	 * of.
+	 */
+	$content = apply_filters( 'the_content', get_the_content() ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound
 	$audio = get_media_embedded_in_content( $content, array( 'audio' ) );
 
 	if ( ! $audio ) {
