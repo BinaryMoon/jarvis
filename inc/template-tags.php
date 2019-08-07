@@ -326,7 +326,7 @@ function jarvis_credits_get_content() {
 	/**
 	 * The theme mod is escaped when the function returns its value.
 	 */
-	$contents = get_theme_mod( 'jarvis_credits_content', '' );
+	$contents = get_theme_mod( 'jarvis_credits_content', $default );
 
 	$contents = str_ireplace( '(YEAR)', date( 'Y' ), $contents );
 	$contents = str_ireplace( '(C)', '&copy;', $contents );
