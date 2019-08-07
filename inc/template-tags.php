@@ -286,18 +286,6 @@ function jarvis_archive_image() {
 
 
 /**
- * Display footer credits.
- *
- * @return boolean
- */
-function jarvis_credits_footer() {
-
-	jarvis_credits_content();
-
-}
-
-
-/**
  * Display credits content.
  *
  * @param  boolean $wrapper True to display wrapper, false for just contents.
