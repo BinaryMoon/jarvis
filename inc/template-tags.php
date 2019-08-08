@@ -26,7 +26,11 @@ function jarvis_post_time() {
 
 	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" class="u-url" rel="bookmark">' . $time_string . '</a>';
 
-	echo '<span class="posted-on meta">' . $posted_on . '</span>'; /* WPCS: xss ok. */
+	/**
+	 * $posted_on is not escaped because all of the html that makes up the
+	 * string is escaped. The code is directly above this comment.
+	 */
+	echo '<span class="posted-on meta">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 }
 
@@ -289,21 +293,24 @@ function jarvis_archive_image() {
  * Display credits content.
  *
  * @param  boolean $wrapper True to display wrapper, false for just contents.
- * @return boolean
  */
 function jarvis_credits_content( $wrapper = true ) {
 
+	/**
+	 * Contents is not escaped here. It is already escaped in the
+	 * jarvis_credits_get_content function.
+	 */
 	$contents = jarvis_credits_get_content();
 
 	if ( $contents && $wrapper ) {
 
-		echo '<div class="site-info">' . $contents . '</div>'; // WPCS: XSS ok.
+		echo '<div class="site-info">' . $contents . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 
 	if ( $contents && ! $wrapper ) {
 
-		echo $contents; // WPCS: XSS ok.
+		echo $contents; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 
