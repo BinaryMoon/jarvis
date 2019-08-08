@@ -66,7 +66,11 @@ function jarvis_svg( $key, $echo = true ) {
 
 	}
 
-	echo $file;
+	/**
+	 * $file is loaded above from a static svg file so is safe to output
+	 * directly.
+	 */
+	echo $file; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 }
 
