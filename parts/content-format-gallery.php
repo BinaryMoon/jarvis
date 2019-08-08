@@ -34,7 +34,7 @@
 ?>
 
 	<div class="post-gallery">
-		<?php echo $gallery; // WPCS: XSS OK. ?>
+		<?php echo $gallery; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

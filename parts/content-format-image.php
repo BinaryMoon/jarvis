@@ -37,7 +37,7 @@
 ?>
 
 	<a href="<?php the_permalink(); ?>" class="thumbnail" aria-hidden="true" tabindex="-1">
-		<?php echo $image; // WPCS: XSS OK. ?>
+		<?php echo $image; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</a>
 
 </article><!-- #post-<?php the_ID(); ?> -->

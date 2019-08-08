@@ -21,7 +21,7 @@
 ?>
 
 	<a href="<?php the_permalink(); ?>" class="entry-thumbnail" aria-hidden="true" tabindex="-1">
-		<?php echo $jarvis_image; // WPCS: XSS OK. ?>
+		<?php echo $jarvis_image; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</a>
 
 <?php

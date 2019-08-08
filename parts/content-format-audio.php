@@ -40,7 +40,7 @@
 ?>
 
 	<div class="entry-audio">
-		<?php echo $audio[0]; /* WPCS: xss ok. */ ?>
+		<?php echo $audio[0]; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
