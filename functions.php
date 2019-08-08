@@ -30,6 +30,7 @@
  * theme description
  * screenshot.png (880 x 660)
  * check sticky styles
+ * style quotes properly, in particular the # permalink glyph
  * Add some subtle animations for added delight.
  * responsive styles
  * set content_width (in jarvis_content_width and jarvis_after_setup_theme)
