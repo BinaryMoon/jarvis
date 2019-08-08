@@ -53,16 +53,20 @@ add_filter( 'walker_nav_menu_start_el', 'jarvis_nav_social_icons', 10, 4 );
  */
 function jarvis_svg( $key, $echo = true ) {
 
-	$file = get_parent_theme_file_path( 'assets/svg/' . $key . '.svg' );
+	$file_path = get_parent_theme_file_path( 'assets/svg/' . $key . '.svg' );
 
-	if ( $echo ) {
+	/**
+	 * Grab the local file and store it to output or return.
+	 */
+	$file = file_get_contents( $file_path );
 
-		require $file;
-		return;
+	if ( ! $echo ) {
+
+		return $file;
 
 	}
 
-	return file_get_contents( $file );
+	echo $file;
 
 }
 
