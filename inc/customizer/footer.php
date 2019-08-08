@@ -26,6 +26,7 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 		'<li>' . __( '<strong>(top)</strong>: a "back to top" link', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(ptd)</strong>: the Pro Theme Design credit', 'jarvis' ) . '</li>',
 		'</ul>',
+		// translators: %s = the default footer content.
 		'<p>' . sprintf( __( 'The default theme footer can be reproduced with:<br /><strong>%s</strong>', 'jarvis' ), $default_footer ) . '</p>',
 		'<p class="section-description-buttons">',
 		'<button type="button" class="button-link section-description-close">' . __( 'Close', 'jarvis' ) . '</button>',
