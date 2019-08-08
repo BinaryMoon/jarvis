@@ -20,28 +20,28 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 }
 
 // Customizer Sanitization functions.
-require get_parent_theme_file_path( 'inc/customizer/customizer-sanitization.php' );
+require get_parent_theme_file_path( 'inc/customizer/customizer-sanitization.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // A custom control that allows users to select fonts.
-require get_parent_theme_file_path( 'inc/customizer/class.jarvis_dropdown_fonts.php' );
+require get_parent_theme_file_path( 'inc/customizer/class.jarvis_dropdown_fonts.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // A custom control that adds a link to the docs in the customizer.
-require get_parent_theme_file_path( 'inc/customizer/class.jarvis_doc_link.php' );
+require get_parent_theme_file_path( 'inc/customizer/class.jarvis_doc_link.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // Customizer controls for setting theme properties.
-require get_parent_theme_file_path( 'inc/customizer/settings.php' );
+require get_parent_theme_file_path( 'inc/customizer/settings.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // Custom header layout.
-require get_parent_theme_file_path( 'inc/customizer/site-header.php' );
+require get_parent_theme_file_path( 'inc/customizer/site-header.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // Custom single post layout.
-require get_parent_theme_file_path( 'inc/customizer/single.php' );
+require get_parent_theme_file_path( 'inc/customizer/single.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // Custom footer. To allow for custom credits/ copyright info.
-require get_parent_theme_file_path( 'inc/customizer/footer.php' );
+require get_parent_theme_file_path( 'inc/customizer/footer.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // Custom single post layout.
-require get_parent_theme_file_path( 'inc/customizer/archive.php' );
+require get_parent_theme_file_path( 'inc/customizer/archive.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // Custom fonts.
-require get_parent_theme_file_path( 'inc/customizer/fonts.php' );
+require get_parent_theme_file_path( 'inc/customizer/fonts.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
