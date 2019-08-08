@@ -14,4 +14,4 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-require get_theme_file_path( 'singular.php' );
+get_template_part( 'singular' );
