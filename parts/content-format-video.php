@@ -38,7 +38,7 @@
 
 	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
-	echo jarvis_video_wrapper( $video[0] ); // WPCS: XSS OK.
+	echo jarvis_video_wrapper( $video[0] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 ?>
 

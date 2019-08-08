@@ -471,7 +471,7 @@ function jarvis_nav_menu( $params ) {
 	apply_filters( 'wp_nav_menu', $html, $params );
 
 	if ( $echo ) {
-		echo $html; // WPCS: XSS OK.
+		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	return $html;
