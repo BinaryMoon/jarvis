@@ -50,7 +50,7 @@
 
 			} else {
 
-				printf( // WPCS: XSS OK.
+				printf(
 					esc_html(
 						/* Translators: %1$s: Comment count, %2$s: Post title */
 						_nx(
@@ -61,7 +61,7 @@
 							'jarvis'
 						)
 					),
-					number_format_i18n( $comment_count ),
+					esc_html( number_format_i18n( $comment_count ) ),
 					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
 
@@ -79,6 +79,7 @@
 		<ol class="comment-list" id="singlecomments">
 
 <?php
+
 			wp_list_comments(
 				array(
 					'style' => 'ol',
@@ -86,6 +87,7 @@
 					'short_ping' => true,
 				)
 			);
+
 ?>
 
 		</ol>
@@ -114,15 +116,19 @@
 		// display a message letting visitors know why they can't post new
 		// comments.
 		if ( ! comments_open() && $comment_count > 0 ) {
+
 ?>
 
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'jarvis' ); ?></p>
 
 <?php
+
 		}
+
 ?>
 
 	</section>
 
 <?php
+
 	}
