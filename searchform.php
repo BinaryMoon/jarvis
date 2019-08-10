@@ -18,7 +18,7 @@
 
 	<label>
 		<span class="screen-reader-text"><?php esc_html_e( 'Search', 'jarvis' ); ?></span>
-		<input type="search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" class="search-field text" />
+		<input type="search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" class="search-field text" autocomplete="off" />
 	</label>
 
 	<button class="search-submit"><?php echo esc_html__( 'Search', 'jarvis' ); ?></button>
