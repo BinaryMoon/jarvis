@@ -34,11 +34,11 @@ msgstr ""
 msgid "&rsaquo;"
 msgstr ""
 
-#: comments.php:107
+#: comments.php:109
 msgid "Cancel Reply"
 msgstr ""
 
-#: comments.php:119
+#: comments.php:122
 msgid "Comments are closed."
 msgstr ""
 
@@ -62,43 +62,43 @@ msgstr ""
 msgid "Search results for:"
 msgstr ""
 
-#: searchform.php:20, searchform.php:24, parts/search-button.php:17, parts/search-button.php:19
+#: searchform.php:20, searchform.php:24, parts/search-button.php:17
 msgid "Search"
 msgstr ""
 
 #. translators: %s: post title
-#: inc/template-tags.php:70
+#: inc/template-tags.php:74
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: post title
 #. translators: %s: Post title
 #. translators: %s: Post title
-#: inc/template-tags.php:111, parts/content-single-page.php:44, parts/content-single.php:37
+#: inc/template-tags.php:115, parts/content-single-page.php:44, parts/content-single.php:37
 msgid "Read more %s"
 msgstr ""
 
 #. translators: %d: Number of articles written by a particular author.
-#: inc/template-tags.php:186
+#: inc/template-tags.php:190
 msgid "%d Article"
 msgid_plural "%d Articles"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/template-tags.php:241
+#: inc/template-tags.php:245
 msgid "Categories:"
 msgstr ""
 
-#: inc/template-tags.php:244
+#: inc/template-tags.php:248
 msgid "All"
 msgstr ""
 
-#: inc/template-tags.php:322
+#: inc/template-tags.php:329
 msgid "Top"
 msgstr ""
 
 #. translators: %1$s = theme name, %2$s = theme author website
-#: inc/template-tags.php:324
+#: inc/template-tags.php:331
 msgid "Theme: %1$s by %2$s"
 msgstr ""
 
@@ -356,19 +356,20 @@ msgstr ""
 msgid "<strong>(ptd)</strong>: the Pro Theme Design credit"
 msgstr ""
 
-#: inc/customizer/footer.php:29
+#. translators: %s = the default footer content.
+#: inc/customizer/footer.php:30
 msgid "The default theme footer can be reproduced with:<br /><strong>%s</strong>"
 msgstr ""
 
-#: inc/customizer/footer.php:31
+#: inc/customizer/footer.php:32
 msgid "Close"
 msgstr ""
 
-#: inc/customizer/footer.php:41
+#: inc/customizer/footer.php:42
 msgid "Footer Credits"
 msgstr ""
 
-#: inc/customizer/footer.php:64
+#: inc/customizer/footer.php:65
 msgid "Credits Content"
 msgstr ""
 
