@@ -13,12 +13,18 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
+	$search_class = '';
+
+	if ( empty( get_search_query() ) ) {
+		$search_class = 'no-query';
+	}
 ?>
+
 <form method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 
 	<label>
 		<span class="screen-reader-text"><?php esc_html_e( 'Search', 'jarvis' ); ?></span>
-		<input type="search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" class="search-field text" autocomplete="off" />
+		<input type="search" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" class="search-field text <?php echo esc_attr( $search_class ); ?>" autocomplete="off" />
 	</label>
 
 	<button class="search-submit"><?php echo esc_html__( 'Search', 'jarvis' ); ?></button>

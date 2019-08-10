@@ -52,8 +52,7 @@ jarvis.ready(
 		);
 
 		// Set the focus on the password input box on a password protected post.
-		// Set the focus on the password input box on a password protected post.
-		jarvis.focusSelector( 'body.search .search-field' );
+		jarvis.focusSelector( 'body.search .search-field.no-query' );
 
 	}
 );
