@@ -503,10 +503,7 @@ jarvis.ready(
 		);
 
 		// Set the focus on the password input box on a password protected post.
-		jarvis.focusSelector( '.post-password-form input[type=password]' );
-
-		// Set the focus on the password input box on a password protected post.
-		jarvis.focusSelector( 'body.search .search-field' );
+		jarvis.focusSelector( 'body.search .search-field.no-query' );
 
 	}
 );
