@@ -83,6 +83,10 @@
 			wp_list_comments(
 				array(
 					'style' => 'ol',
+					/**
+					 * The filter jarvis_comments_avatar_size allows you to
+					 * change the size of the avatars in the comments.
+					 */
 					'avatar_size' => apply_filters( 'jarvis_comments_avatar_size', 80 ),
 					'short_ping' => true,
 				)

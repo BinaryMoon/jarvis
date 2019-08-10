@@ -294,13 +294,19 @@ function jarvis_after_setup_theme() {
 			'jarvis_custom_background',
 			array(
 				'default-color' => 'eedd33',
-				'default-image' => '',
 			)
 		)
 	);
 
 	/**
 	 * HTML5 FTW.
+	 *
+	 * This does not include support for the search-form since Jarvis has its
+	 * own form layout.
+	 * @see searchform.php
+	 *
+	 * @link https://codex.wordpress.org/Theme_Markup
+	 * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
 	 */
 	add_theme_support(
 		'html5',
