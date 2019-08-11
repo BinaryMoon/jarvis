@@ -349,6 +349,7 @@ body {
 	--font-body: Cambria, Georgia, serif;
 	--font-header: Cambria, Georgia, serif;
 	--font-title: Cambria, Georgia, serif;
+	--font-meta: Cambria, Georgia, serif;
 	--font-monospace: "andale mono", "monotype.com", "lucida console", monospace;
 	--wp-alignfull-size: 100vw;
 }
@@ -870,6 +871,7 @@ table caption {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1440,6 +1442,7 @@ p.wp-block-subhead {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1652,6 +1655,7 @@ p.wp-block-subhead {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1680,6 +1684,7 @@ p.wp-block-subhead {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1772,6 +1777,7 @@ p.wp-block-subhead {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1838,6 +1844,7 @@ p.wp-block-subhead {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1954,6 +1961,7 @@ p > object:only-child {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -1999,6 +2007,7 @@ main div.sharedaddy h3.sd-title {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2056,6 +2065,7 @@ main div#jp-relatedposts {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2284,6 +2294,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2307,6 +2318,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2683,6 +2695,7 @@ p.demo_store {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2876,6 +2889,7 @@ p.demo_store {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2909,6 +2923,7 @@ p.demo_store {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2937,6 +2952,7 @@ p.demo_store {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -2960,6 +2976,7 @@ a.thumbnail img {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3003,6 +3020,7 @@ a.thumbnail img {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3020,6 +3038,7 @@ a.thumbnail img {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3160,6 +3179,7 @@ blockquote p:last-child {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -3509,6 +3529,7 @@ blockquote p:last-child {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
+	font-family: var(--font-meta);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;

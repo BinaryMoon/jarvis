@@ -146,6 +146,18 @@
 				}
 			);
 
+			// Edit Meta font.
+			wp.customize(
+				'jarvis_meta_font',
+				function( value ) {
+					value.bind(
+						function( to ) {
+							document.body.style.setProperty( '--font-meta', jarvis_fonts[ to ][ 1 ] );
+						}
+					);
+				}
+			);
+
 		}
 	);
 
