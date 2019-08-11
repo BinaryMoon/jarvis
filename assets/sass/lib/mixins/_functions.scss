@@ -1,20 +1,4 @@
 
-
-// calculate a colour to use for contrast based on the brightness of the background
-@function contrast($color, $color-light: $canvas-white, $color-dark: $canvas-grey-100) {
-
-	@if ( brightness( $color ) < 65 ) {
-
-		@return $white;
-
-	} @else {
-
-		@return $black;
-
-	}
-
-}
-
 // Perceptual colour brightness
 // http://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx
 @function brightness($color) {

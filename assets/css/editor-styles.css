@@ -2,7 +2,7 @@ body {
 	color: var(--foreground-color);
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: normal;
 	font-family: var(--font-body);
 	direction: ltr;
@@ -24,7 +24,7 @@ body .block-announcement {
 	color: var(--foreground-contrast-color);
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 body .block-info:before,
@@ -70,13 +70,13 @@ body .block-intro {
 
 body .block-border {
 	padding: 1.5rem 1.5rem;
-	border: 0.2em solid currentColor;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	border: 0.2rem solid currentColor;
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 body .block-border-dashed {
 	padding: 1.5rem 1.5rem;
-	border: 0.2em dashed currentColor;
+	border: 0.2rem dashed currentColor;
 }
 
 /*!
@@ -85,7 +85,7 @@ body .block-border-dashed {
 html {
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: normal;
 	font-family: var(--font-body);
 	direction: ltr;
@@ -148,8 +148,8 @@ h3 {
 }
 
 h1 {
-	font-size: 52px;
-	font-size: 3.25rem;
+	font-size: 48px;
+	font-size: 3rem;
 	line-height: 1.25;
 }
 
@@ -181,7 +181,7 @@ h6 {
 
 hr {
 	border: none;
-	border-bottom: 0.2em solid var(--foreground-color);
+	border-bottom: 0.2rem solid var(--foreground-color);
 }
 
 h1,
@@ -195,29 +195,6 @@ ul,
 dl,
 ol {
 	clear: both;
-}
-
-.intro {
-	font-size: 20px;
-	font-size: 1.25rem;
-	line-height: 1.5;
-	margin-bottom: 2.4rem;
-}
-
-.drop-cap {
-	float: left;
-	font-family: var(--font-body);
-	font-weight: bold;
-	margin: 0 0.05em 0 -0.2em;
-	font-size: 100px;
-	font-size: 6.25rem;
-	line-height: 0.8;
-}
-
-.highlight {
-	background: rgba(241, 196, 15, 0.25);
-	padding: 3px 6px;
-	border-radius: 0.2rem;
 }
 
 .button {
@@ -243,7 +220,7 @@ ol {
 
 .button:focus, .button:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .small-caps {

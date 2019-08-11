@@ -365,7 +365,7 @@ body.is-dark-theme {
 html {
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.75;
+	line-height: 1.5;
 	font-weight: normal;
 	font-family: var(--font-body);
 	direction: ltr;
@@ -428,8 +428,8 @@ h3 {
 }
 
 h1 {
-	font-size: 52px;
-	font-size: 3.25rem;
+	font-size: 48px;
+	font-size: 3rem;
 	line-height: 1.25;
 }
 
@@ -461,7 +461,7 @@ h6 {
 
 hr {
 	border: none;
-	border-bottom: 0.2em solid var(--foreground-color);
+	border-bottom: 0.2rem solid var(--foreground-color);
 }
 
 /*!
@@ -517,7 +517,7 @@ textarea {
 	min-height: 1.5rem;
 	width: 100%;
 	background: transparent;
-	border: 0.2em solid currentColor;
+	border: 0.2rem solid currentColor;
 	color: inherit;
 }
 
@@ -582,109 +582,9 @@ textarea:focus {
 	outline: none;
 	background: var(--foreground-contrast-color);
 	color: var(--foreground-color);
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 	z-index: 1;
 	position: relative;
-}
-
-input[type=text]::-webkit-input-placeholder, .woocommerce #respond input#submit::-webkit-input-placeholder,
-.woocommerce a.button::-webkit-input-placeholder,
-.woocommerce button.button::-webkit-input-placeholder,
-.woocommerce input.button::-webkit-input-placeholder, .woocommerce #coupon_code::-webkit-input-placeholder,
-input[type=password]::-webkit-input-placeholder,
-input[type=email]::-webkit-input-placeholder,
-input[type=url]::-webkit-input-placeholder,
-input[type=search]::-webkit-input-placeholder,
-input[type=date]::-webkit-input-placeholder,
-input[type=time]::-webkit-input-placeholder,
-input[type=datetime-local]::-webkit-input-placeholder,
-input[type=week]::-webkit-input-placeholder,
-input[type=month]::-webkit-input-placeholder,
-input[type=tel]::-webkit-input-placeholder,
-input[type=number]::-webkit-input-placeholder,
-select::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-	color: rgba(51, 51, 51, 0.5);
-}
-
-input[type=text]::-moz-placeholder, .woocommerce #respond input#submit::-moz-placeholder,
-.woocommerce a.button::-moz-placeholder,
-.woocommerce button.button::-moz-placeholder,
-.woocommerce input.button::-moz-placeholder, .woocommerce #coupon_code::-moz-placeholder,
-input[type=password]::-moz-placeholder,
-input[type=email]::-moz-placeholder,
-input[type=url]::-moz-placeholder,
-input[type=search]::-moz-placeholder,
-input[type=date]::-moz-placeholder,
-input[type=time]::-moz-placeholder,
-input[type=datetime-local]::-moz-placeholder,
-input[type=week]::-moz-placeholder,
-input[type=month]::-moz-placeholder,
-input[type=tel]::-moz-placeholder,
-input[type=number]::-moz-placeholder,
-select::-moz-placeholder,
-textarea::-moz-placeholder {
-	color: rgba(51, 51, 51, 0.5);
-}
-
-input[type=text]:-ms-input-placeholder, .woocommerce #respond input#submit:-ms-input-placeholder,
-.woocommerce a.button:-ms-input-placeholder,
-.woocommerce button.button:-ms-input-placeholder,
-.woocommerce input.button:-ms-input-placeholder, .woocommerce #coupon_code:-ms-input-placeholder,
-input[type=password]:-ms-input-placeholder,
-input[type=email]:-ms-input-placeholder,
-input[type=url]:-ms-input-placeholder,
-input[type=search]:-ms-input-placeholder,
-input[type=date]:-ms-input-placeholder,
-input[type=time]:-ms-input-placeholder,
-input[type=datetime-local]:-ms-input-placeholder,
-input[type=week]:-ms-input-placeholder,
-input[type=month]:-ms-input-placeholder,
-input[type=tel]:-ms-input-placeholder,
-input[type=number]:-ms-input-placeholder,
-select:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-	color: rgba(51, 51, 51, 0.5);
-}
-
-input[type=text]:-moz-placeholder, .woocommerce #respond input#submit:-moz-placeholder,
-.woocommerce a.button:-moz-placeholder,
-.woocommerce button.button:-moz-placeholder,
-.woocommerce input.button:-moz-placeholder, .woocommerce #coupon_code:-moz-placeholder,
-input[type=password]:-moz-placeholder,
-input[type=email]:-moz-placeholder,
-input[type=url]:-moz-placeholder,
-input[type=search]:-moz-placeholder,
-input[type=date]:-moz-placeholder,
-input[type=time]:-moz-placeholder,
-input[type=datetime-local]:-moz-placeholder,
-input[type=week]:-moz-placeholder,
-input[type=month]:-moz-placeholder,
-input[type=tel]:-moz-placeholder,
-input[type=number]:-moz-placeholder,
-select:-moz-placeholder,
-textarea:-moz-placeholder {
-	color: rgba(51, 51, 51, 0.5);
-}
-
-input[type=text]:placeholder, .woocommerce #respond input#submit:placeholder,
-.woocommerce a.button:placeholder,
-.woocommerce button.button:placeholder,
-.woocommerce input.button:placeholder, .woocommerce #coupon_code:placeholder,
-input[type=password]:placeholder,
-input[type=email]:placeholder,
-input[type=url]:placeholder,
-input[type=search]:placeholder,
-input[type=date]:placeholder,
-input[type=time]:placeholder,
-input[type=datetime-local]:placeholder,
-input[type=week]:placeholder,
-input[type=month]:placeholder,
-input[type=tel]:placeholder,
-input[type=number]:placeholder,
-select:placeholder,
-textarea:placeholder {
-	color: rgba(51, 51, 51, 0.5);
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -694,7 +594,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 select {
-	height: calc( 3rem + 0.4em);
+	height: calc( 3rem + 0.4rem);
 }
 
 select:hover {
@@ -745,7 +645,7 @@ a.button:hover,
 button:focus,
 button:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 label {
@@ -754,7 +654,7 @@ label {
 }
 
 label em {
-	opacity: 0.6;
+	opacity: 0.8;
 }
 
 label:hover {
@@ -863,7 +763,7 @@ table {
 
 table th {
 	color: var(--foreground-color);
-	border-bottom: 0.2em solid var(--foreground-color);
+	border-bottom: 0.2rem solid var(--foreground-color);
 }
 
 table th,
@@ -1122,13 +1022,13 @@ p.wp-block-subhead {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100%;
-	border-bottom-width: 0.2em;
+	border-bottom-width: 0.2rem;
 	border-color: var(--foreground-color);
 }
 
 .wp-block-separator.is-style-wide {
 	width: 20rem;
-	border-bottom-width: 0.2em;
+	border-bottom-width: 0.2rem;
 }
 
 .wp-block-separator.is-style-dots:before {
@@ -1214,7 +1114,6 @@ p.wp-block-subhead {
 
 .content-comments #respond #comment-form-comment,
 .content-comments #comment-form-share-text-padder {
-	background: #f2f2f2;
 	box-shadow: none;
 }
 
@@ -2213,7 +2112,7 @@ body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
 
 body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hover, body #eu-cookie-law.negative input:focus, body #eu-cookie-law.negative input:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 /*
@@ -2367,7 +2266,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 .woocommerce input.button:focus,
 .woocommerce input.button:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.alt,
@@ -2406,7 +2305,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 .woocommerce input.button.alt:focus,
 .woocommerce input.button.alt:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled],
@@ -2541,7 +2440,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart p.buttons a {
 }
 
 li.woocommerce-cart-button li div.widget_shopping_cart .total {
-	border-top: 0.2em solid var(--foreground-contrast-color);
+	border-top: 0.2rem solid var(--foreground-contrast-color);
 	padding: 0.75rem 0 0 0;
 	text-align: center;
 }
@@ -2564,7 +2463,7 @@ p.demo_store {
  * 3.4 - WP Post Series
  */
 .wp-post-series-box {
-	border: 0.2em dashed currentColor;
+	border: 0.2rem dashed currentColor;
 	padding: 1.5rem 1.5rem;
 	margin: 0 0 3rem 0;
 }
@@ -2603,7 +2502,7 @@ p.demo_store {
 	color: var(--foreground-contrast-color);
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .block-info:before,
@@ -2649,13 +2548,13 @@ p.demo_store {
 
 .block-border {
 	padding: 1.5rem 1.5rem;
-	border: 0.2em solid currentColor;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2em 0.2em 0 var(--foreground-color);
+	border: 0.2rem solid currentColor;
+	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .block-border-dashed {
 	padding: 1.5rem 1.5rem;
-	border: 0.2em dashed currentColor;
+	border: 0.2rem dashed currentColor;
 }
 
 /*!

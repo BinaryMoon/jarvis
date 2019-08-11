@@ -34,11 +34,11 @@ msgstr ""
 msgid "&rsaquo;"
 msgstr ""
 
-#: comments.php:109
+#: comments.php:113
 msgid "Cancel Reply"
 msgstr ""
 
-#: comments.php:122
+#: comments.php:126
 msgid "Comments are closed."
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Search results for:"
 msgstr ""
 
-#: searchform.php:20, searchform.php:24, parts/search-button.php:17
+#: searchform.php:26, searchform.php:30, parts/search-button.php:17
 msgid "Search"
 msgstr ""
 
@@ -114,40 +114,40 @@ msgstr ""
 msgid "Black"
 msgstr ""
 
-#: inc/wordpress.php:362, parts/navigation.php:20
+#: inc/wordpress.php:368, parts/navigation.php:20
 msgid "Menu"
 msgstr ""
 
-#: inc/wordpress.php:363, parts/navigation-social.php:18
+#: inc/wordpress.php:369, parts/navigation-social.php:18
 msgid "Social Menu"
 msgstr ""
 
-#: inc/wordpress.php:412
+#: inc/wordpress.php:418
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/wordpress.php:414
+#: inc/wordpress.php:420
 msgid "Widgets that display at the bottom of your website. They are arranged in rows."
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:520
+#: inc/wordpress.php:526
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of categories
-#: inc/wordpress.php:527
+#: inc/wordpress.php:533
 msgid "Posted in: %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:532
+#: inc/wordpress.php:538
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of tags
-#: inc/wordpress.php:537
+#: inc/wordpress.php:543
 msgid "Tagged as: %1$s"
 msgstr ""
 
@@ -326,6 +326,10 @@ msgstr ""
 
 #: inc/customizer/fonts.php:100
 msgid "Body Font"
+msgstr ""
+
+#: inc/customizer/fonts.php:126
+msgid "Meta Font"
 msgstr ""
 
 #: inc/customizer/footer.php:20

@@ -1,0 +1,9 @@
+// z-index layer positions
+// Used with the layer function.
+$layer: (
+	base: 1,
+	header_content: 50,
+	sidebar_header: 75,
+	menu_dropdown: 100,
+	top: 100000
+);

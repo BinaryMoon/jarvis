@@ -28,17 +28,11 @@ $border-width: 0.2rem !default;
 // border color
 $border-color: rgba( 0, 0, 0, 0.3 ) !default;
 
+// Stylised box shadow that's used as a motif across the design.
+$border-shadow: 0 0 0 1px var( --background-color ), $border-width $border-width 0 $black;
+
 // menu padding
 $menu-link-padding: 1em !default;
-
-// breadcrumb arrow color
-$style-breadcrumb-arrow: $canvas-grey-60 !default;
-
-// default arrow size
-$style-arrow-default-size: 0.4em !default;
-
-// alternate colour for buttons
-$button-alt-colour: $canvas-grey-5 !default;
 
 // separator - used to separate links or post meta info
 $separator: '/' !default;

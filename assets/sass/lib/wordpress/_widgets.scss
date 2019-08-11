@@ -120,8 +120,6 @@
 
 	}
 
-@if $support_accessible_tagcloud {
-
 	// Tagcloud.
 	&.tagcloud {
 
@@ -138,8 +136,6 @@
 		}
 
 	}
-
-}
 
 	// recent comments
 	&.widget_recent_comments {
