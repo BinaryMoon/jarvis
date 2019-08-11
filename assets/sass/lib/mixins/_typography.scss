@@ -29,26 +29,6 @@
 
 }
 
-
-// set a default font size
-@function set-font-size($key, $size, $height) {
-
-	@if ( map-has-key( $font-sizes, $key ) ) {
-
-		$new: ( $key: ( size: $size, height: $height ) );
-		@debug $new;
-		$font-sizes: map-merge( $font-sizes, $new );
-
-	} @else {
-
-		@warn $key does not exist;
-
-	}
-
-	@return $font-sizes;
-
-}
-
 // set word wrap properties. Good for elements with large text or that are narrow and likely to have text that overflows
 @mixin wrap-text() {
 

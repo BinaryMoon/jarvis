@@ -9,7 +9,9 @@
 	clear: both;
 
 	@include for-tablet {
+
 		margin: ( $grid-line-height * 4 ) 0;
+
 	}
 
 	@include for-desktop {
@@ -50,8 +52,6 @@
 		}
 
 	}
-
-
 
 	.current {
 

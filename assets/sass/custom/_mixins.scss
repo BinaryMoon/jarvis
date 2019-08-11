@@ -59,15 +59,6 @@
 
 }
 
-// Element divider.
-@mixin separator {
-
-	content: $separator;
-	margin-right: $style-spacing;
-	opacity: $style-opacity-separator;
-
-}
-
 // Quote styles.
 @mixin blockquote {
 

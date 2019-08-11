@@ -111,7 +111,7 @@
 				li {
 
 					// make tabs border radius match other site elements
-					border-radius: $border-radius $border-radius 0 0;
+					border-radius: 0;
 
 					// hide little curvy bits on tabs - they're too fussy
 					&:after,

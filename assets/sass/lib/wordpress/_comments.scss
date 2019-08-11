@@ -45,7 +45,7 @@
 		}
 
 		// comment info
-		footer {
+		.comment-meta {
 
 			@include clear;
 			margin-bottom: ( $grid-line-height / 2 );
@@ -53,7 +53,7 @@
 			.avatar {
 
 				float: left;
-				margin-right: $style-element-spacing;
+				margin-right: $grid-gutter;
 				display: block;
 				height: $grid-line-height * 2.5;
 				width: auto;
@@ -65,6 +65,12 @@
 
 				@include post-meta-data;
 
+				> * {
+
+					margin-right: ( $grid-gutter / 2 );
+
+				}
+
 			}
 
 			// author link
@@ -72,7 +78,7 @@
 
 				display: inline-block;
 				font-weight: bold;
-				margin-top: ( $grid-line-height / 4 );
+				margin-top: ( $grid-line-height / 6 );
 
 			}
 
@@ -140,13 +146,6 @@
 	.edit-link {
 
 		@include post-meta-data;
-
-		&:before {
-
-			margin: 0 $style-spacing 0 0;
-			@include separator;
-
-		}
 
 	}
 

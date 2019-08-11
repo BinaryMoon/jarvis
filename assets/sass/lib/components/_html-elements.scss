@@ -8,7 +8,7 @@ ol,
 ul {
 
 	margin:0 0 $grid-line-height 0;
-	padding: 0 0 0 $style-element-spacing;
+	padding: 0 0 0 $grid-gutter;
 
 	ol,
 	ul,
@@ -43,7 +43,7 @@ dl {
 
 	dd {
 
-		margin: 0 $style-element-spacing $grid-line-height $style-element-spacing;
+		margin: 0 $grid-gutter $grid-line-height $grid-gutter;
 
 	}
 
@@ -52,7 +52,7 @@ dl {
 /* blockquotes */
 blockquote {
 
-	padding: 0 $style-element-spacing;
+	padding: 0 $grid-gutter;
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
 	overflow: hidden;
 	font-family: $font-family-body;
@@ -86,7 +86,7 @@ blockquote {
 	blockquote {
 
 		margin: $grid-line-height 0;
-		padding: $grid-line-height $style-element-spacing;
+		padding: $grid-line-height $grid-gutter;
 
 	}
 
@@ -112,7 +112,7 @@ table {
 	caption {
 
 		@include post-meta-data;
-		padding: ( $grid-line-height / 2 ) $style-element-spacing;
+		padding: ( $grid-line-height / 2 ) $grid-gutter;
 		text-align: left;
 		font-weight: bold;
 
@@ -120,7 +120,7 @@ table {
 
 	td {
 
-		padding: ( $grid-line-height / 2 ) $style-element-spacing;
+		padding: ( $grid-line-height / 2 ) $grid-gutter;
 		border-bottom: 1px solid $black;
 		vertical-align: top;
 
@@ -152,7 +152,7 @@ pre {
 
 	background: $black;
 	color: $white;
-	padding: $grid-line-height $style-element-spacing;
+	padding: $grid-line-height $grid-gutter;
 	overflow: auto;
 	display: block;
 	word-wrap: normal;

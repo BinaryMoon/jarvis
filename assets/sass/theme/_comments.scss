@@ -23,20 +23,13 @@
 
 	ol.comment-list {
 
-		#respond {
-
-			// padding: 0 ( $grid-gutter / 2 );
-
-		}
+		// #respond {}
 
 		li.comment,
 		li.trackback,
 		li.pingback {
 
 			.comment-body {
-
-				//padding: ( $grid-line-height ) ( $grid-gutter / 2 );
-				//margin-bottom: $border-width;
 
 				p {
 
@@ -66,26 +59,6 @@
 						margin-top: 0.3em;
 						width: 2em;
 						height: 1.2em;
-
-					}
-
-				}
-
-			}
-
-			&.bypostauthor {
-
-				> article {
-
-					// background: $white;
-
-					.fn {
-
-						.icon {
-
-							// color: #f00;
-
-						}
 
 					}
 
