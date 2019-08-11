@@ -3037,6 +3037,10 @@ a.thumbnail img {
 	opacity: 0.3;
 }
 
+.site-footer .site-info {
+	overflow: hidden;
+}
+
 /*!
  * 4.6 - General Properties
  */
