@@ -209,14 +209,6 @@ blockquote.alignright {
   padding-left: 0;
   padding-right: .375rem
 }
-.content-comments #comment-form-share-text-padder,
-.content-comments #respond #comment-form-comment {
-  box-shadow: none
-}
-.content-comments #comment-form-share-text-padder.active,
-.content-comments #respond #comment-form-comment.active {
-  box-shadow: none
-}
 .widget ul ul {
   margin-right: 1.5rem;
   margin-left: auto
@@ -240,7 +232,7 @@ blockquote.alignright {
   padding: .5em
 }
 .widget.widget_flickr #flickr_badge_wrapper {
-  border-color: rgba(0,0,0,.3)
+  border-color: var(--foreground-color)
 }
 .widget.widget_authors img {
   margin: 0 auto .75rem auto
@@ -285,9 +277,12 @@ blockquote.alignright {
 .content-comments ol.comment-list li.comment #respond #cancel-comment-reply-link {
   float: left
 }
-.content-comments ol.comment-list li.comment footer .avatar {
+.content-comments ol.comment-list li.comment .comment-meta .avatar {
   float: right;
   margin-left: 1.5rem
+}
+.content-comments ol.comment-list li.comment .comment-meta .comment-metadata > * {
+  margin-left: .75rem
 }
 .content-comments ol.comment-list li.comment.depth-1 article {
   padding-right: 0;
@@ -328,10 +323,6 @@ blockquote.alignright {
 .content-comments ol.comment-list li.comment.depth-10 article {
   padding-right: 36%;
   padding-left: auto
-}
-.content-comments ol.comment-list .edit-link:before {
-  margin: 0 0 0 .5em;
-  margin-left: .5em
 }
 #respond p.comment-form-cookies-consent input,
 #respond p.comment-subscription-form input,
@@ -472,7 +463,7 @@ body #eu-cookie-law.positive input:hover {
   padding: .75rem .75rem
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
-  border-radius: .2rem .2rem 0 0
+  border-radius: 0
 }
 .woocommerce #reviews #comments ol.commentlist li .comment-text {
   margin-right: 2.25rem;

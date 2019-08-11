@@ -32,15 +32,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *    2.1 - Required Elements
  *    2.2 - Accessibility
  *    2.3 - Blocks
- *    2.4 - WordPress.com Specific Styles
- *    2.5 - Widgets
- *    2.6 - Gallery
- *    2.7 - Calendar
- *    2.8 - Password Required Form
- *    2.9 - Comments
- *    2.10 - Search Form
- *    2.11 - Embeds
- *    2.12 - Sticky Posts
+ *    2.4 - Widgets
+ *    2.5 - Gallery
+ *    2.6 - Calendar
+ *    2.7 - Password Required Form
+ *    2.8 - Comments
+ *    2.9 - Search Form
+ *    2.10 - Embeds
+ *    2.11 - Sticky Posts
  * 3.0 - Plugins
  *    3.1 - Akismet
  *    3.2 - Jetpack
@@ -329,7 +328,7 @@ svg.icon {
 	width: device-width;
 }
 
-@incude for-reduced-motion {
+@media (prefers-reduced-motion: reduce) {
 	* {
 		-webkit-animation: none !important;
 		animation: none !important;
@@ -675,10 +674,6 @@ fieldset {
 	border: 1px solid var(--foreground-color);
 	padding: 1.5rem 1.5rem;
 	margin: 3rem 0;
-}
-
-fieldset ul.radio {
-	margin: 0;
 }
 
 /*!
@@ -1082,49 +1077,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * 2.4 - WordPress.com Specific Styles
- */
-.PDS_Poll {
-	max-width: 100%;
-}
-
-.PDS_Poll .pds-box {
-	max-width: 100%;
-}
-
-.PDS_Poll label {
-	text-transform: none;
-}
-
-.PDS_Poll .pds-input-label {
-	max-width: 100%;
-	width: auto;
-	float: none;
-	display: inline;
-}
-
-.PDS_Poll .pds-answer-input {
-	display: inline;
-	float: none;
-}
-
-.PDS_Poll input {
-	margin-bottom: 0;
-}
-
-.content-comments #respond #comment-form-comment,
-.content-comments #comment-form-share-text-padder {
-	box-shadow: none;
-}
-
-.content-comments #respond #comment-form-comment.active,
-.content-comments #comment-form-share-text-padder.active {
-	box-shadow: none;
-	background: var(--foreground-contrast-color);
-}
-
-/*!
- * 2.5 - Widgets
+ * 2.4 - Widgets
  */
 .widget {
 	overflow: hidden;
@@ -1149,7 +1102,7 @@ p.wp-block-subhead {
 }
 
 .widget ul ul {
-	list-style-type: disc;
+	list-style-type: square;
 	margin-left: 1.5rem;
 	margin-right: auto;
 }
@@ -1243,7 +1196,7 @@ p.wp-block-subhead {
 }
 
 .widget.widgt_text ul {
-	list-style-type: disc;
+	list-style-type: square;
 	margin-left: 1.5rem;
 	margin-right: auto;
 }
@@ -1261,7 +1214,7 @@ p.wp-block-subhead {
 
 .widget.widget_flickr #flickr_badge_uber_wrapper td a,
 .widget.widget_flickr #flickr_badge_wrapper td a {
-	color: #000000;
+	color: var(--foreground-color);
 }
 
 .widget.widget_flickr #flickr_badge_uber_wrapper td a:focus, .widget.widget_flickr #flickr_badge_uber_wrapper td a:hover,
@@ -1271,7 +1224,7 @@ p.wp-block-subhead {
 }
 
 .widget.widget_flickr #flickr_badge_wrapper {
-	border-color: rgba(0, 0, 0, 0.3);
+	border-color: var(--foreground-color);
 }
 
 .widget.widget_image img {
@@ -1317,7 +1270,7 @@ p.wp-block-subhead {
 }
 
 .widget.widget_authors ul ul {
-	list-style-type: disc;
+	list-style-type: square;
 	margin: 0 0 1.5rem 0;
 	padding: 0 0 0 1.5rem;
 	clear: both;
@@ -1376,7 +1329,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * 2.6 - Gallery
+ * 2.5 - Gallery
  * Default styles for the [gallery] shortcode
  */
 .gallery {
@@ -1477,12 +1430,13 @@ p.wp-block-subhead {
 .gallery.gallery-columns-6 .gallery-caption,
 .gallery.gallery-columns-7 .gallery-caption,
 .gallery.gallery-columns-8 .gallery-caption,
-.gallery.gallery-columns-9 .gallery-caption {
+.gallery.gallery-columns-9 .gallery-caption,
+.gallery.gallery-columns-10 .gallery-caption {
 	display: none;
 }
 
 /*!
- * 2.7 - Calendar
+ * 2.6 - Calendar
  */
 #wp-calendar {
 	margin: 0;
@@ -1506,7 +1460,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * 2.8 - Password Required Form
+ * 2.7 - Password Required Form
  */
 .post-password-required form {
 	margin-bottom: 3rem;
@@ -1517,7 +1471,7 @@ p.wp-block-subhead {
 }
 
 /*!
- * 2.9 - Comments
+ * 2.8 - Comments
  */
 .content-comments ol.comment-list {
 	list-style-type: none;
@@ -1561,17 +1515,17 @@ p.wp-block-subhead {
 	float: right;
 }
 
-.content-comments ol.comment-list li.comment footer {
+.content-comments ol.comment-list li.comment .comment-meta {
 	margin-bottom: 0.75rem;
 }
 
-.content-comments ol.comment-list li.comment footer:after {
+.content-comments ol.comment-list li.comment .comment-meta:after {
 	content: "";
 	display: block;
 	clear: both;
 }
 
-.content-comments ol.comment-list li.comment footer .avatar {
+.content-comments ol.comment-list li.comment .comment-meta .avatar {
 	float: left;
 	margin-right: 1.5rem;
 	display: block;
@@ -1579,7 +1533,7 @@ p.wp-block-subhead {
 	width: auto;
 }
 
-.content-comments ol.comment-list li.comment footer .comment-metadata {
+.content-comments ol.comment-list li.comment .comment-meta .comment-metadata {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
@@ -1589,13 +1543,17 @@ p.wp-block-subhead {
 	letter-spacing: 0.1em;
 }
 
-.content-comments ol.comment-list li.comment footer .fn {
-	display: inline-block;
-	font-weight: bold;
-	margin-top: 0.375rem;
+.content-comments ol.comment-list li.comment .comment-meta .comment-metadata > * {
+	margin-right: 0.75rem;
 }
 
-.content-comments ol.comment-list li.comment footer .says {
+.content-comments ol.comment-list li.comment .comment-meta .fn {
+	display: inline-block;
+	font-weight: bold;
+	margin-top: 0.25rem;
+}
+
+.content-comments ol.comment-list li.comment .comment-meta .says {
 	display: none;
 }
 
@@ -1680,13 +1638,6 @@ p.wp-block-subhead {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-}
-
-.content-comments ol.comment-list .edit-link:before {
-	margin: 0 0.5em 0 0;
-	content: "/";
-	margin-right: 0.5em;
-	opacity: 0.3;
 }
 
 .content-comments ol.comment-list .children {
@@ -1790,10 +1741,9 @@ p.wp-block-subhead {
 }
 
 /*!
- * 2.10 - Search Form
+ * 2.9 - Search Form
  */
 form.search-form {
-	position: relative;
 	width: 100%;
 	max-width: 44rem;
 	display: -webkit-box;
@@ -1810,7 +1760,7 @@ form.search-form input.search-field {
 }
 
 /*!
- * 2.11 - Embeds
+ * 2.10 - Embeds
  */
 iframe[src*="8tracks.com"], iframe[src*="bandcamp.com"], iframe[src*="dailymotion.com"], iframe[src*="itchi.io"], iframe[src*="slideshare.net"], iframe[src*="soundcloud.com"], iframe[src*="viddler.com"], iframe[src*="videopress.com"], iframe.twitter-tweet, iframe.twitter-follow-button {
 	display: block;
@@ -1844,7 +1794,7 @@ p > object:only-child {
 }
 
 /*!
- * 2.12 - Sticky Posts
+ * 2.11 - Sticky Posts
  */
 .sticky .post-meta-data .posted-on {
 	display: none;
@@ -2327,7 +2277,7 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
-	border-radius: 0.2rem 0.2rem 0 0;
+	border-radius: 0;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li:after, .woocommerce div.product .woocommerce-tabs ul.tabs li:before {
@@ -2754,7 +2704,8 @@ p.demo_store {
  * 4.2 - Blocks
  * Block overrides.
  */
-.wp-block-cover, .wp-block-cover-image {
+.wp-block-cover,
+.wp-block-cover-image {
 	min-height: 60vh;
 	margin-bottom: 3rem;
 }
@@ -2952,7 +2903,6 @@ a.thumbnail img {
 
 .site-footer .sep {
 	margin: 0 0.5em;
-	opacity: 0.3;
 }
 
 .site-footer .site-info {
