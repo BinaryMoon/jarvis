@@ -104,6 +104,32 @@ function jarvis_customizer_fonts( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 
+	/**
+	 * Setting to change the body font.
+	 */
+	$wp_customize->add_setting(
+		'jarvis_meta_font',
+		array(
+			'default' => 'cambria',
+			'capability' => 'edit_theme_options',
+			'sanitize_callback' => 'jarvis_sanitize_fonts',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Jarvis_Font_Selector(
+			$wp_customize,
+			'jarvis_meta_font',
+			array(
+				'choices' => jarvis_get_fonts(),
+				'label' => esc_html__( 'Meta Font', 'jarvis' ),
+				'section' => 'jarvis_fonts',
+				'default-font' => 'Cambria',
+			)
+		)
+	);
+
 }
 
 add_action( 'customize_register', 'jarvis_customizer_fonts' );
