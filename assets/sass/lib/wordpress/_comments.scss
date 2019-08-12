@@ -25,7 +25,6 @@
 
 	li.comment {
 
-		@include clear();
 		margin: 0;
 		position: relative;
 		list-style-type: none;
@@ -52,11 +51,17 @@
 
 			.avatar {
 
-				float: left;
-				margin-right: $grid-gutter;
-				display: block;
-				height: $grid-line-height * 2.5;
-				width: auto;
+				display: none;
+
+				@include for-tablet {
+
+					float: left;
+					margin-right: $grid-gutter;
+					display: block;
+					height: $grid-line-height * 2.5;
+					width: auto;
+
+				}
 
 			}
 
@@ -122,19 +127,16 @@
 
 		}
 
-		article {
-
-			@include clear;
-
-		}
-
 		// set indents for nested comments
 		@for $i from 1 through 10 {
 
-			&.depth-#{$i} article {
+			$comments-padding: $comments-margin * ( $i - 1 );
 
-				padding-left: $comments-margin * ( $i - 1 );
-				padding-right: auto;
+			&.depth-#{$i} .comment-body {
+
+				padding-left: $comments-padding;
+				padding-right: unset;
+				max-width: calc( #{$grid-small-width} + #{$comments-padding} );
 
 			}
 
