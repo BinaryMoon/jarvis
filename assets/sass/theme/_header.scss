@@ -108,14 +108,14 @@
 
 		display: flex;
 		align-items: center;
-		padding: ( $grid-line-height / 2 ) $grid-gutter;
+		padding: ( $grid-line-height ) ( $grid-gutter * 2 );
 		background: $black;
 		color: $white;
 
 		.icon {
 
-			height: 1.5rem;
-			width: 1.5rem;
+			height: $grid-line-height;
+			width: $grid-gutter;
 			margin-right: ( $grid-gutter / 2 );
 
 		}
