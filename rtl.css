@@ -277,52 +277,54 @@ blockquote.alignright {
 .content-comments ol.comment-list li.comment #respond #cancel-comment-reply-link {
   float: left
 }
-.content-comments ol.comment-list li.comment .comment-meta .avatar {
-  float: right;
-  margin-left: 1.5rem
+@media (min-width:47rem) {
+  .content-comments ol.comment-list li.comment .comment-meta .avatar {
+    float: right;
+    margin-left: 1.5rem
+  }
 }
 .content-comments ol.comment-list li.comment .comment-meta .comment-metadata > * {
   margin-left: .75rem
 }
-.content-comments ol.comment-list li.comment.depth-1 article {
+.content-comments ol.comment-list li.comment.depth-1 .comment-body {
   padding-right: 0;
-  padding-left: auto
+  padding-left: unset
 }
-.content-comments ol.comment-list li.comment.depth-2 article {
+.content-comments ol.comment-list li.comment.depth-2 .comment-body {
   padding-right: 4%;
-  padding-left: auto
+  padding-left: unset
 }
-.content-comments ol.comment-list li.comment.depth-3 article {
+.content-comments ol.comment-list li.comment.depth-3 .comment-body {
   padding-right: 8%;
-  padding-left: auto
+  padding-left: unset
 }
-.content-comments ol.comment-list li.comment.depth-4 article {
+.content-comments ol.comment-list li.comment.depth-4 .comment-body {
   padding-right: 12%;
-  padding-left: auto
+  padding-left: unset
 }
-.content-comments ol.comment-list li.comment.depth-5 article {
+.content-comments ol.comment-list li.comment.depth-5 .comment-body {
   padding-right: 16%;
-  padding-left: auto
+  padding-left: unset
 }
-.content-comments ol.comment-list li.comment.depth-6 article {
+.content-comments ol.comment-list li.comment.depth-6 .comment-body {
   padding-right: 20%;
-  padding-left: auto
+  padding-left: unset
 }
-.content-comments ol.comment-list li.comment.depth-7 article {
+.content-comments ol.comment-list li.comment.depth-7 .comment-body {
   padding-right: 24%;
-  padding-left: auto
+  padding-left: unset
 }
-.content-comments ol.comment-list li.comment.depth-8 article {
+.content-comments ol.comment-list li.comment.depth-8 .comment-body {
   padding-right: 28%;
-  padding-left: auto
+  padding-left: unset
 }
-.content-comments ol.comment-list li.comment.depth-9 article {
+.content-comments ol.comment-list li.comment.depth-9 .comment-body {
   padding-right: 32%;
-  padding-left: auto
+  padding-left: unset
 }
-.content-comments ol.comment-list li.comment.depth-10 article {
+.content-comments ol.comment-list li.comment.depth-10 .comment-body {
   padding-right: 36%;
-  padding-left: auto
+  padding-left: unset
 }
 #respond p.comment-form-cookies-consent input,
 #respond p.comment-subscription-form input,
@@ -570,7 +572,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
   padding: 1.5rem 1.5rem
 }
 .site-header .search-link {
-  padding: .75rem 1.5rem
+  padding: 1.5rem 3rem
 }
 .site-header .search-link .icon {
   margin-left: .75rem

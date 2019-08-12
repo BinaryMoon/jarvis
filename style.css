@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-27
+Version: 1.0.alpha-28
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -1493,12 +1493,6 @@ p.wp-block-subhead {
 	list-style-type: none;
 }
 
-.content-comments ol.comment-list li.comment:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
 .content-comments ol.comment-list li.comment #respond {
 	position: relative;
 	margin: 0 0 3rem 0;
@@ -1526,11 +1520,17 @@ p.wp-block-subhead {
 }
 
 .content-comments ol.comment-list li.comment .comment-meta .avatar {
-	float: left;
-	margin-right: 1.5rem;
-	display: block;
-	height: 3.75rem;
-	width: auto;
+	display: none;
+}
+
+@media (min-width: 47rem) {
+	.content-comments ol.comment-list li.comment .comment-meta .avatar {
+		float: left;
+		margin-right: 1.5rem;
+		display: block;
+		height: 3.75rem;
+		width: auto;
+	}
 }
 
 .content-comments ol.comment-list li.comment .comment-meta .comment-metadata {
@@ -1574,60 +1574,64 @@ p.wp-block-subhead {
 	margin-bottom: 1.5rem;
 }
 
-.content-comments ol.comment-list li.comment article:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.content-comments ol.comment-list li.comment.depth-1 article {
+.content-comments ol.comment-list li.comment.depth-1 .comment-body {
 	padding-left: 0%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 0%);
 }
 
-.content-comments ol.comment-list li.comment.depth-2 article {
+.content-comments ol.comment-list li.comment.depth-2 .comment-body {
 	padding-left: 4%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 4%);
 }
 
-.content-comments ol.comment-list li.comment.depth-3 article {
+.content-comments ol.comment-list li.comment.depth-3 .comment-body {
 	padding-left: 8%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 8%);
 }
 
-.content-comments ol.comment-list li.comment.depth-4 article {
+.content-comments ol.comment-list li.comment.depth-4 .comment-body {
 	padding-left: 12%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 12%);
 }
 
-.content-comments ol.comment-list li.comment.depth-5 article {
+.content-comments ol.comment-list li.comment.depth-5 .comment-body {
 	padding-left: 16%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 16%);
 }
 
-.content-comments ol.comment-list li.comment.depth-6 article {
+.content-comments ol.comment-list li.comment.depth-6 .comment-body {
 	padding-left: 20%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 20%);
 }
 
-.content-comments ol.comment-list li.comment.depth-7 article {
+.content-comments ol.comment-list li.comment.depth-7 .comment-body {
 	padding-left: 24%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 24%);
 }
 
-.content-comments ol.comment-list li.comment.depth-8 article {
+.content-comments ol.comment-list li.comment.depth-8 .comment-body {
 	padding-left: 28%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 28%);
 }
 
-.content-comments ol.comment-list li.comment.depth-9 article {
+.content-comments ol.comment-list li.comment.depth-9 .comment-body {
 	padding-left: 32%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 32%);
 }
 
-.content-comments ol.comment-list li.comment.depth-10 article {
+.content-comments ol.comment-list li.comment.depth-10 .comment-body {
 	padding-left: 36%;
-	padding-right: auto;
+	padding-right: unset;
+	max-width: calc( 44rem + 36%);
 }
 
 .content-comments ol.comment-list .edit-link {
@@ -3041,7 +3045,7 @@ blockquote p:last-child {
 	display: flex;
 	-webkit-box-align: center;
 	align-items: center;
-	padding: 0.75rem 1.5rem;
+	padding: 1.5rem 3rem;
 	background: var(--foreground-color);
 	color: var(--foreground-contrast-color);
 }
