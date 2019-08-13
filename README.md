@@ -3,6 +3,9 @@
 
 Jarvis is a highly optimised theme, designed with sustainable principles in mind, using modern web development techniques.
 
+* [Wiki](https://github.com/BinaryMoon/jarvis/wiki)
+* [Theme Styleguide](https://binarymoon.github.io/jarvis/)
+
 ## Philosophy
 
 I want Jarvis to be a lightweight theme. To do this I have:
@@ -11,6 +14,8 @@ I want Jarvis to be a lightweight theme. To do this I have:
 * Used system fonts
 * Minimised complex features like widgets, and nav
 * Removed jQuery, and kept Javascript to an absolute minimum
+
+
 
 # Development
 

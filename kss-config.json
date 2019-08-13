@@ -1,7 +1,7 @@
 {
 	"title": "Jarvis WordPress Theme Styleguide",
 	"source": "./assets/sass/",
-	"destination": "./styleguide/",
+	"destination": "./docs/",
 	"css": [
 		"../style.css"
 	]

@@ -27,8 +27,6 @@ const compress = function() {
 		'!gulp/**',
 		'!node_modules/',
 		'!node_modules/**',
-		'!styleguide/',
-		'!styleguide/**',
 		'!**/*.scss',
 		'!**/*.md',
 	];
