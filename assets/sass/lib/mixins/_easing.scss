@@ -1,9 +1,18 @@
-// view the different easings at : http://easings.net/
-
+// Transition
+//
+// Add a transition to something. This automatically hides the transition from mobile devices, and uses who have opted to disable motion.
+//
+// $transition - the transition to apply.
+//
+// Styleguide: Mixins.transition
 @mixin transition( $transition: all 0.15s ease-in-out ) {
 
-	.device-click & {
-		transition: $transition;
+	@include for-reduced-motion {
+
+		.device-click & {
+			transition: $transition;
+		}
+
 	}
 
 }

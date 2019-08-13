@@ -1,3 +1,19 @@
+
+// Info Block
+//
+// A block for sharing status information.
+//
+// .block-info - This is an information block.
+// .block-help - This is a help block.
+// .block-alert - This is an alert block.
+// .block-success - This is a success block. Well done!
+// .block-error - This is an error block.
+// .block-announcement - This is an announcement block.
+//
+// Markup:
+// <div class="{{modifier_class}}">Info relevant to the block goes in here!</div>
+//
+// Styleguide Blocks.status
 .block-info,
 .block-help,
 .block-alert,
@@ -76,12 +92,31 @@
 
 }
 
+// Intro Block
+//
+// A larger font size to give a bit more emphasis to an article introduction.
+//
+// Markup:
+// <div class="block-intro">This is the intro to a block and it stands out really nicely I think.</div>
+//
+// Styleguide Blocks.intro
 .block-intro {
 
 	@include modular-scale( delta );
 
 }
 
+// Border Blocks
+//
+// Add a bit of oompf to your blocks to make them stand out a bit more.
+//
+// .block-border - The common shadow border.
+// .block-border-dashed - A less common dashed border.
+//
+// Markup:
+// <div class="{{modifier_class}}"></div>
+//
+// Styleguide Blocks.border
 .block-border {
 
 	padding: $grid-line-height $grid-gutter;
