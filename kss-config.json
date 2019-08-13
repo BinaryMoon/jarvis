@@ -1,0 +1,8 @@
+{
+	"title": "Jarvis WordPress Theme Styleguide",
+	"source": "./assets/sass/",
+	"destination": "./styleguide/",
+	"css": [
+		"../style.css"
+	]
+}

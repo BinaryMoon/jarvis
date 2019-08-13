@@ -10,10 +10,7 @@ const compress = function() {
 		'!package.json',
 		'!package-lock.json',
 		'!gulpfile.babel.js',
-		'!node_modules/',
-		'!node_modules/**',
-		'!gulp/',
-		'!gulp/**',
+		'!kss-config.json',
 		'!assets/sass/',
 		'!assets/sass/**',
 		'!assets/scripts/src-global/',
@@ -24,11 +21,19 @@ const compress = function() {
 		'!assets/scripts/src-customizer-controls/**',
 		'!assets/svg/src/',
 		'!assets/svg/src/**',
+		'!docs/',
+		'!docs/**',
+		'!gulp/',
+		'!gulp/**',
+		'!node_modules/',
+		'!node_modules/**',
+		'!styleguide/',
+		'!styleguide/**',
 		'!**/*.scss',
 		'!**/*.md',
 	];
 
-	console.log( [ ...exclude, './**' ] );
+	// console.log( [ ...exclude, './**' ] );
 
 	return src( [ './**', ...exclude ] )
 		.pipe(

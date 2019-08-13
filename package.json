@@ -37,10 +37,12 @@
 		"gulp-rename": "^1.4.0",
 		"gulp-rtlcss": "^1.4.0",
 		"gulp-sass": "^4.0.2",
+		"gulp-shell": "^0.7.1",
 		"gulp-svgmin": "^2.2.0",
 		"gulp-uglify": "^3.0.2",
 		"gulp-wp-pot": "^2.3.5",
-		"gulp-zip": "^5.0.0"
+		"gulp-zip": "^5.0.0",
+		"kss": "^3.0.0-beta.25"
 	},
 	"dependencies": {}
 }
