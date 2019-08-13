@@ -5,6 +5,7 @@ Jarvis is a highly optimised theme, designed with sustainable principles in mind
 
 * [Wiki](https://github.com/BinaryMoon/jarvis/wiki)
 * [Theme Styleguide](https://binarymoon.github.io/jarvis/docs/)
+* [Github Repository](https://github.com/BinaryMoon/jarvis/)
 
 ## Philosophy
 
