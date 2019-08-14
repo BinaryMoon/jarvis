@@ -148,6 +148,9 @@ p {
 hr {
   margin: 3rem auto
 }
+.entry-meta span {
+  margin-left: .75rem
+}
 .wp-caption {
   margin: 0 0 3rem 0
 }
@@ -520,7 +523,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .block-border-dashed {
   padding: 1.5rem 1.5rem
 }
-.content-posts article.entry h2.entry-title a {
+.content-posts article.entry .entry-title a {
   padding: .5em 0
 }
 .content-posts article.entry .read-more {
@@ -685,9 +688,6 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
   .content-single .entry-single .alignfull {
     margin-right: calc((var(--wp-alignfull-size) - 66rem)/ -2)
   }
-}
-.content-single .entry-meta span {
-  margin-left: .75rem
 }
 .content-single .alignleft {
   -webkit-transform: translateX(1.5rem);

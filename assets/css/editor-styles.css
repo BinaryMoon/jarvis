@@ -210,6 +210,23 @@ h6 {
 	font-weight: bold;
 }
 
+a {
+	color: currentColor;
+	text-underline-offset: 0.1em;
+	text-decoration-thickness: 0.1em;
+	text-decoration: underline;
+}
+
+.device-click a {
+	-webkit-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+a:focus, a:hover {
+	text-decoration-thickness: 0.2em;
+	text-decoration: none;
+}
+
 hr {
 	border: none;
 	border-bottom: 0.2rem solid var(--foreground-color);
