@@ -10,7 +10,7 @@
 
 ?>
 
-	<div class="post-meta-data entry-meta">
+	<div class="entry-meta">
 
 <?php
 

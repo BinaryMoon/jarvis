@@ -530,7 +530,7 @@ function jarvis_post_terms( $content = '' ) {
 		$categories_list = str_replace( '<a href=', '<a class="p-category" href=', $categories_list );
 
 		/* translators: %1$s will be replaced with a list of categories */
-		$terms .= sprintf( '<p class="taxonomy tax-categories">' . esc_html__( 'Posted in: %1$s', 'jarvis' ) . '</p>', $categories_list ); // WPCS: XSS OK.
+		$terms .= sprintf( '<p class="taxonomy entry-meta tax-categories">' . esc_html__( 'Posted in: %1$s', 'jarvis' ) . '</p>', $categories_list ); // WPCS: XSS OK.
 
 	}
 
@@ -540,7 +540,7 @@ function jarvis_post_terms( $content = '' ) {
 	if ( $tags_list && ! is_wp_error( $tags_list ) ) {
 
 		/* translators: %1$s will be replaced with a list of tags */
-		$terms .= sprintf( '<p class="taxonomy tax-tags">' . esc_html__( 'Tagged as: %1$s', 'jarvis' ) . '</p>', $tags_list ); // WPCS: XSS OK.
+		$terms .= sprintf( '<p class="taxonomy entry-meta tax-tags">' . esc_html__( 'Tagged as: %1$s', 'jarvis' ) . '</p>', $tags_list ); // WPCS: XSS OK.
 
 	}
 
