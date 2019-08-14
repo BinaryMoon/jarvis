@@ -48,7 +48,7 @@ export const buildSVG = optimizeSVG;
 export const buildPot = pot;
 export const buildKSS = stylesDocs;
 
-export const watchFiles = function() {
+export const watchFiles = function( done ) {
 	watch(
 		[ '*.scss', './assets/sass/**/*.scss' ],
 		series(
@@ -61,7 +61,8 @@ export const watchFiles = function() {
 	watch( './assets/scripts/src-customizer-preview/*.js', customizerPreview );
 	watch( './assets/scripts/src-customizer-controls/*.js', customizerControls );
 	watch( './assets/svg/src/*.svg', optimizeSVG );
-	return;
+
+	done();
 };
 
 export default series(
