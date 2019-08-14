@@ -1,11 +1,39 @@
 @import "custom/_mixins";
 
+// Variables
 @import "lib/_variables";
+
+// Mixins
+//
+// Mixins allow reusable code. I often use them for repeatable styles.
+//
+// Styleguide: Mixins
 @import "lib/_mixins";
-@import "lib/_components";
+
+@import "lib/_reset";
+
+// Elements
+//
+// Elements are the building blocks of the theme. They are the things that the different blocks and widgets and other components are made from.
+//
+// Styleguide elements
+@import "lib/_elements";
+
 @import "lib/_wordpress";
+
 @import "lib/_plugins";
+
 @import "lib/_theme";
+
+// Blocks
+//
+// These classes can be used to modify blocks in the WordPress editor. You can add these classes to the _Additional Class_ section in the _advanced_ panel on the block editor.
+//
+// Most commonly I imagine they will be added to paragraph blocks but the styles will work on any block.
+//
+// Weight: -1
+//
+// Styleguide: Blocks
 
 
 // body {

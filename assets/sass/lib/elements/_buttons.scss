@@ -1,0 +1,24 @@
+// Buttons
+//
+// Interactive elements that you can click on.
+//
+// :hover - highlight the button when hovered.
+// :focus - highlight the button when focused.
+//
+// Markup:
+// <a href="#" class="button {{modifier_class}}">Link Button</a>
+// <button class="{{modifier_class}}">Button Element</button>
+// <input type="submit" class="{{modifier_class}}" value="Submit Input" />
+//
+// Styleguide: elements.buttons
+input[type=button],
+input[type=reset],
+input[type=submit],
+.button,
+.wp-block-button__link,
+button {
+
+	appearance: none;
+	@include button;
+
+}

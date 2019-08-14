@@ -1,0 +1,263 @@
+
+/*!
+ * ## - HTML Elements
+ */
+
+// HTML Elements
+//
+// Common HTML elements
+//
+// Styleguide elements.html
+
+// Ordered Lists
+//
+// Display lists of data where order is important
+//
+// Markup:
+// <ol class="{{modifier_class}}"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ol>
+//
+// Styleguide elements.html.ol
+
+// Unordered Lists
+//
+// Display lists of data ehere order is unimportant.
+//
+// Markup:
+// <ul class="{{modifier_class}}"><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>
+//
+// Styleguide elements.html.ul
+ol,
+ul {
+
+	margin:0 0 $grid-line-height 0;
+	padding: 0 0 0 $grid-gutter;
+
+	ol,
+	ul,
+	li + li {
+
+		margin-top: ( $grid-line-height / 4 );
+		margin-bottom: 0;
+
+	}
+
+}
+
+ul {
+
+	list-style: $style-list-style-type;
+
+}
+
+ol {
+
+	list-style: decimal;
+
+}
+
+// Data List
+//
+// Display data list.
+//
+// Markup:
+// <dl><dt>Title</dt><dd>Data</dd><dt>Title</dt><dd>Data</dd><dt>Title</dt><dd>Data</dd></dl>
+//
+// Styleguide elements.html.data-list
+dl {
+
+	dt {
+
+		font-weight: bold;
+
+	}
+
+	dd {
+
+		margin: 0 $grid-gutter $grid-line-height $grid-gutter;
+
+	}
+
+}
+
+// Blockquote
+//
+// Use this to display quotes from people or articles.
+//
+// Markup:
+// <blockquote>It does not do well to dwell on dreams and forget to live.</blockquote>
+//
+// Styleguide elements.html.blockquote
+
+// Blockquote with cite
+//
+// A complete blockquote with reference.
+//
+// Markup:
+// <blockquote>
+// It does not do well to dwell on dreams and forget to live.
+// <cite>Harry Potter and the Sorcerer’s Stone</cite>
+// </blockquote>
+//
+// Styleguide components.blockquote
+blockquote {
+
+	padding: 0 $grid-gutter;
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+	overflow: hidden;
+	font-family: $font-family-body;
+	font-style: italic;
+
+	p {
+
+		&:last-of-type {
+
+			margin-bottom: 0;
+
+		}
+
+	}
+
+	small,
+
+	blockquote {
+
+		margin: $grid-line-height 0;
+		padding: $grid-line-height $grid-gutter;
+
+	}
+
+}
+
+// Cite
+//
+// Used in Blockquotes to reference the thing being quoted.
+//
+// Markup:
+// <cite>Harry Potter and the Sorcerer’s Stone</cite>
+//
+// Styleguide elements.html.cite
+cite {
+
+	@include post-cite;
+	display: block;
+	margin-top: $grid-line-height / 4;
+
+	&:before {
+
+		content: "\2014\00a0";
+
+	}
+
+}
+
+// Table
+//
+// For tabular data, not for laying out content!
+//
+// Markup:
+// <table>
+// <tr><th>First Name</th><th>Last Name</th><th>Age</th></tr>
+// <tr><td>Harry</td><td>Potter</td><td>12</td></tr>
+// <tr><td>Hermione</td><td>Grainger</td><td>12</td></tr>
+// <tr><td>Ronald</td><td>Weasley</td><td>12</td></tr>
+// </table>
+//
+// Styleguide elements.html.table
+table {
+
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+	margin-top: $grid-line-height * $grid-line-height-multiplier;
+	width: 100%;
+
+	th {
+
+		color: $black;
+		border-bottom: $border-width solid $black;
+
+	}
+
+	th,
+	caption {
+
+		@include post-meta-data;
+		padding: ( $grid-line-height / 2 ) $grid-gutter;
+		text-align: left;
+		font-weight: bold;
+
+	}
+
+	td {
+
+		padding: ( $grid-line-height / 2 ) $grid-gutter;
+		border-bottom: 1px solid $black;
+		vertical-align: top;
+
+	}
+
+	tr {
+
+		&:last-child {
+
+			td {
+
+				border: none;
+
+			}
+
+		}
+
+		&:hover {
+
+			background: $white;
+
+		}
+
+	}
+
+}
+
+// Preformatted Text
+//
+// For preformatted text. Displayed in a fixed-width font, and preserves both
+// spaces and line breaks.
+//
+// .compress - Reduces the height of the pre element and forces a vertical scrollbar.
+//
+// Markup:
+// <pre class="{{modifier_class}}">
+// Hogwarts, Hogwarts, Hoggy Warty Hogwarts,
+// Teach us something please,
+// Whether we be old and bald
+// Or young with scabby knees,
+// Our heads could do with filling
+// With some interesting stuff,
+// For now they’re bare and full of air,
+// Dead flies and bits of fluff,
+// So teach us things worth knowing,
+// Bring back what we’ve forgot,
+// Just do your best, we’ll do the rest,
+// And learn until our brains all rot.
+// </pre>
+//
+// Styleguide elements.html.pre
+pre {
+
+	background: $black;
+	color: $white;
+	padding: $grid-line-height $grid-gutter;
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
+	overflow: auto;
+	display: block;
+	word-wrap: normal;
+	white-space: pre;
+	tab-size: 4;
+
+	&.compress {
+
+		max-height: $grid-line-height * 10;
+
+	}
+
+}

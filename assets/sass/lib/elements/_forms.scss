@@ -3,6 +3,21 @@
  * ## - Forms
  */
 
+// Forms
+//
+// Consistent controls for forms.
+//
+// Styleguide elements.forms
+
+// Radio and Checkbox inputs
+//
+// Form controls for Radio and Checkboxes.
+//
+// Markup:
+// <input type="radio" class="{{modifier_class}}" />
+// <input type="checkbox" class="{{modifier_class}}" />
+//
+// Styleguide elements.forms.radio-checkbox
 input {
 
 	&[type=checkbox],
@@ -16,6 +31,17 @@ input {
 
 }
 
+// Text input
+//
+// Various types of text input.
+//
+// :hover - Highlight text field on hover.
+// :focus - Highlight text field on focus.
+//
+// Markup:
+// <input class="{{modifier_class}}" type="text" />
+//
+// Styleguide elements.forms.text-input
 input[type=text],
 input[type=password],
 input[type=email],
@@ -67,6 +93,16 @@ input[type="search"]::-webkit-search-decoration {
 
 }
 
+// Select box
+//
+// Select box dropdowns.
+//
+// :focus - Highlight the selectbox on focus.
+//
+// Markup:
+// <select class="{{modifier_class}}"><option value="0">WordPress</option><option value="1">wordpress</option><option value="2">WP</option></select>
+//
+// Styleguide: elements.forms.select
 select {
 
 	height: calc( #{$grid-line-height * 2} + #{$border-width * 2} );
@@ -79,6 +115,17 @@ select {
 
 }
 
+// Textarea
+//
+// Text input for large amounts of text. By default it's used in comment forms,
+// but also used with plugins in contact forms and other.
+//
+// :focus - Highlight textareas on focus.
+//
+// Markup:
+// <textarea class="{{modifier_class}}"></textarea>
+//
+// Styleguide elements.forms.textarea
 textarea {
 
 	width: 100%;
@@ -87,17 +134,14 @@ textarea {
 
 }
 
-// buttons
-input[type=submit],
-a.button,
-.wp-block-button__link,
-button {
-
-	appearance: none;
-	@include button;
-
-}
-
+// Label
+//
+// Element to label form elements.
+//
+// Markup:
+// <label class="{{modifier_class}}">Example Label</label>
+//
+// Styleguide elements.forms.label
 label {
 
 	display: block;

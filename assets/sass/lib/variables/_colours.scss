@@ -1,20 +1,4 @@
-// Theme colours.
+// Colours used in the theme. Not many right?
 $black: var(--foreground-color);
 $white: var(--foreground-contrast-color);
 $canvas-background: var(--background-color);
-
-// handy colours
-$canvas-white: #ffffff !default;
-$canvas-color: #000000 !default;
-$canvas-green: #2ECC71 !default;
-$canvas-green-dark: darken( $canvas-green, 12% ) !default;
-$canvas-blue: #3498db !default;
-$canvas-blue-dark: darken( $canvas-blue, 12% ) !default;
-$canvas-red: #E74C3C !default;
-$canvas-red-dark: darken( $canvas-red, 12% ) !default;
-$canvas-purple: #9B59B6 !default;
-$canvas-purple-dark: darken( $canvas-purple, 12% ) !default;
-$canvas-yellow: #F1C40F !default;
-$canvas-yellow-dark: darken( $canvas-yellow, 12% ) !default;
-$canvas-orange: #E67E22 !default;
-$canvas-orange-dark: darken( $canvas-orange, 12% ) !default;

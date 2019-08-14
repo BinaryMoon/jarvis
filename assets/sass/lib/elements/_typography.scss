@@ -21,6 +21,18 @@ h2,
 h3,
 h4,
 h5,
+h6,
+p {
+
+	margin: 0 0 ( $grid-line-height * $line-height-margin-multiplier ) 0;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
 
 	font-family: $font-family-header;
@@ -87,5 +99,6 @@ hr {
 
 	border: none;
 	border-bottom: $border-width solid $black;
+	margin: ( $grid-line-height * $grid-line-height-multiplier ) auto;
 
 }
