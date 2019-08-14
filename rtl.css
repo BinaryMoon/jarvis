@@ -5,24 +5,57 @@ fieldset {
   margin: 0 0 1.5rem 0;
   padding: 1.5rem .75rem
 }
-html {
-  direction: rtl;
-  unicode-bidi: normal
+ol,
+ul {
+  margin: 0 0 1.5rem 0;
+  padding: 0 1.5rem 0 0
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0 0 1.2rem 0
+dl dd {
+  margin: 0 1.5rem 1.5rem 1.5rem
 }
-hr {
-  margin: 3rem auto
+blockquote {
+  padding: 0 1.5rem;
+  margin: 3rem 0
+}
+blockquote blockquote,
+blockquote small {
+  margin: 1.5rem 0;
+  padding: 1.5rem 1.5rem
+}
+table caption,
+table th {
+  padding: .75rem 1.5rem;
+  text-align: right
+}
+table td {
+  padding: .75rem 1.5rem
 }
 pre {
+  padding: 1.5rem 1.5rem;
   margin: 3rem 0
+}
+.button,
+.wp-block-button__link,
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  border-radius: 0;
+  padding: .75rem 3rem
+}
+.button:focus,
+.button:hover,
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
+button:focus,
+button:hover,
+input[type=button]:focus,
+input[type=button]:hover,
+input[type=reset]:focus,
+input[type=reset]:hover,
+input[type=submit]:focus,
+input[type=submit]:hover {
+  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
 }
 input[type=checkbox],
 input[type=radio] {
@@ -92,23 +125,6 @@ select:focus,
 textarea:focus {
   box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
 }
-.wp-block-button__link,
-a.button,
-button,
-input[type=submit] {
-  border-radius: 0;
-  padding: .75rem 3rem
-}
-.wp-block-button__link:focus,
-.wp-block-button__link:hover,
-a.button:focus,
-a.button:hover,
-button:focus,
-button:hover,
-input[type=submit]:focus,
-input[type=submit]:hover {
-  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
-}
 legend {
   padding: 0 .75rem
 }
@@ -116,32 +132,21 @@ fieldset {
   padding: 1.5rem 1.5rem;
   margin: 3rem 0
 }
-ol,
-ul {
-  margin: 0 0 1.5rem 0;
-  padding: 0 1.5rem 0 0
+html {
+  direction: rtl;
+  unicode-bidi: normal
 }
-dl dd {
-  margin: 0 1.5rem 1.5rem 1.5rem
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0 1.2rem 0
 }
-blockquote {
-  padding: 0 1.5rem;
-  margin: 3rem 0
-}
-blockquote blockquote {
-  margin: 1.5rem 0;
-  padding: 1.5rem 1.5rem
-}
-table caption,
-table th {
-  padding: .75rem 1.5rem;
-  text-align: right
-}
-table td {
-  padding: .75rem 1.5rem
-}
-pre {
-  padding: 1.5rem 1.5rem
+hr {
+  margin: 3rem auto
 }
 .wp-caption {
   margin: 0 0 3rem 0
