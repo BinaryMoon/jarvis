@@ -31,6 +31,7 @@ ul {
 
 	margin:0 0 $grid-line-height 0;
 	padding: 0 0 0 $grid-gutter;
+	clear: both;
 
 	ol,
 	ul,
@@ -64,6 +65,8 @@ ol {
 //
 // Styleguide elements.html.data-list
 dl {
+
+	clear: both;
 
 	dt {
 

@@ -28,6 +28,19 @@ p {
 
 }
 
+// Headings
+//
+// Content headings. Don't use for presentation! Headings are to signify changes in content.
+//
+// Markup:
+// <h1>Heading 1</h1>
+// <h2>Heading 1</h2>
+// <h3>Heading 1</h3>
+// <h4>Heading 1</h4>
+// <h5>Heading 1</h5>
+// <h6>Heading 1</h6>
+//
+// Styleguide elements.typography.headings
 h1,
 h2,
 h3,
@@ -95,6 +108,26 @@ h6 {
 
 }
 
+// Paragraph
+//
+// Arguably the most important element of a website. In particular websites based on the written word.
+//
+// Markup:
+// <p>Happiness can be found in the darkest of times if only one remembers to turn on the light.</p>
+//
+// Styleguide elements.typography.paragraph
+p {
+
+}
+
+// Horizontal rule
+//
+// Use as a separator between blocks of content.
+//
+// Markup:
+// <hr />
+//
+// Styleguide elements.typography.hr
 hr {
 
 	border: none;

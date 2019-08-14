@@ -108,27 +108,4 @@
 
 	}
 
-	// clear lists
-	ul,
-	dl,
-	ol {
-
-		clear: both;
-
-	}
-
-	// Button
-	.button {
-
-		@include button;
-
-	}
-
-	// Small caps
-	.small-caps {
-
-		font-variant: small-caps;
-
-	}
-
 }
