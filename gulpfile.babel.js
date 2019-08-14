@@ -49,7 +49,13 @@ export const buildPot = pot;
 export const buildKSS = stylesDocs;
 
 export const watchFiles = function() {
-	watch( [ '*.scss', './assets/sass/**/*.scss' ], series( parallel( styles, editor_styles, editor_blocks ), rtl, toc ) );
+	watch(
+		[ '*.scss', './assets/sass/**/*.scss' ],
+		series(
+			parallel( styles, editor_styles, editor_blocks ),
+			parallel( rtl, toc, stylesDocs )
+		)
+	);
 	watch( './assets/sass/customizer/*.scss', customizer_styles );
 	watch( './assets/scripts/src-global/*.js', scriptsGlobal );
 	watch( './assets/scripts/src-customizer-preview/*.js', customizerPreview );

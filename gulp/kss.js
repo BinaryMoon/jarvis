@@ -1,11 +1,11 @@
 /* jshint esnext: true */
 'use strict';
 
-const shell = require( 'gulp-shell' );
+const exec = require( 'child_process' ).exec;
 
 export default function sass_docs( done ) {
 
-	shell.task( [ './node_modules/.bin/kss --config ./kss-config.json' ] );
+	exec( './node_modules/.bin/kss --config ./kss-config.json' );
 
 	done();
 
