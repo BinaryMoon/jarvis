@@ -120,6 +120,35 @@ p {
 
 }
 
+// Link
+//
+// Link to stuff across the web.
+//
+// :hover - highlight the link on hover.
+// :focus - highlight the link on focus.
+//
+// Markup:
+// <a href="#" class="{{modifier_class}}">Harry Potter?</a>
+//
+// Styleguide elements.typography.link
+a {
+
+	color: currentColor;
+	text-underline-offset: 0.1em;
+	text-decoration-thickness: 0.1em;
+	text-decoration: underline;
+	@include transition( all 0.1s ease-in-out );
+
+	&:focus,
+	&:hover {
+
+		text-decoration-thickness: 0.2em;
+		text-decoration: none;
+
+	}
+
+}
+
 // Horizontal rule
 //
 // Use as a separator between blocks of content.

@@ -4,28 +4,6 @@
  */
 // @package Jarvis
 
-/* taxonomies - categories and tags on single posts */
-.entry-terms {
-
-	clear: both;
-	margin-top: $grid-line-height;
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
-
-	.taxonomy {
-
-		@include post-meta-data;
-		margin: 0;
-
-		+ .taxonomy {
-
-			margin-top: ( $grid-line-height / 4 );
-
-		}
-
-	}
-
-}
-
 
 /* blog post contributor/ author */
 // used on contributor custom template and blog post page when there are multiple blog authors
@@ -147,13 +125,5 @@ form.search-form {
 		}
 
 	}
-
-}
-
-
-//
-.post-meta-data {
-
-	@include post-meta-data;
 
 }

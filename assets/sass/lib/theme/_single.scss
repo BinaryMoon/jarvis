@@ -7,40 +7,6 @@
 /* single post and page */
 .content-single {
 
-	.entry-header {
-
-		margin-bottom: ( $grid-line-height * 2 );
-
-		@include for-desktop {
-
-			margin-bottom: ( $grid-line-height * 4 );
-
-		}
-
-	}
-
-	// Use a class reference for the titlesince we swap between h1 and h2
-	// depending upon if there is a static front page set.
-	.entry-title {
-
-		letter-spacing: -0.01em;
-		font-weight: bold;
-		@include modular-scale( gamma );
-
-		@include for-tablet {
-
-			@include modular-scale( alpha );
-
-		}
-
-		@include for-desktop {
-
-			@include modular-scale( mega );
-
-		}
-
-	}
-
 	.entry-single {
 
 		max-width: $grid-small-width;
@@ -93,18 +59,6 @@
 				margin-left: calc( ( var( --wp-alignfull-size ) - #{$grid-total-width - $grid-gutter - $grid-gutter} ) / -2 );
 
 			}
-
-		}
-
-	}
-
-	.entry-meta {
-
-		margin-bottom: ( $grid-line-height / 2 );
-
-		span {
-
-			margin-right: ( $grid-gutter / 2 );
 
 		}
 

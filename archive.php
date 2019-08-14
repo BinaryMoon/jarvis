@@ -23,7 +23,7 @@
 	if ( have_posts() ) {
 ?>
 
-		<header class="entry-archive-header">
+		<header class="entry-archive-header entry-header">
 
 <?php
 

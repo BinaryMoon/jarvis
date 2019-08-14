@@ -10,7 +10,7 @@
 
 		margin-bottom: $grid-line-height * 3;
 
-		.post-meta-data {
+		.entry-meta {
 
 			@include modular-scale( eta );
 
@@ -29,7 +29,7 @@
 
 		}
 
-		h2.entry-title {
+		.entry-title {
 
 			@include modular-scale( gamma );
 			font-weight: bold;
@@ -115,54 +115,9 @@
 
 	}
 
-	.entry-archive {
-
-		p:last-of-type {
-
-			margin-bottom: 0;
-
-		}
-
-	}
-
-	.entry-archive-header {
-
-		margin-bottom: $grid-line-height * 5;
-		grid-column: 1/-1;
-
-	}
-
 	.not-found {
 
 		grid-column: 1/-1;
-
-	}
-
-	.entry-archive-title {
-
-		letter-spacing: -0.01em;
-		font-weight: bold;
-		@include modular-scale( gamma );
-
-		@include for-tablet {
-
-			@include modular-scale( alpha );
-
-		}
-
-		@include for-desktop {
-
-			@include modular-scale( mega );
-
-		}
-
-		small {
-
-			display: block;
-			@include modular-scale( epsilon );
-			letter-spacing: initial;
-
-		}
 
 	}
 
