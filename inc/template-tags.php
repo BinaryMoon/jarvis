@@ -239,7 +239,7 @@ function jarvis_project_terms() {
 
 	// All clear - let's display the terms.
 ?>
-	<p class="projects-terms">
+	<p class="projects-terms entry-meta">
 
 		<span class="project-terms-intro">
 			<?php esc_html_e( 'Categories:', 'jarvis' ); ?>
