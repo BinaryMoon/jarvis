@@ -16,7 +16,7 @@
 
 	<main id="main" class="main-content content-posts">
 
-		<header class="entry-archive-header">
+		<header class="entry-archive-header entry-header">
 
 			<h1 class="entry-title entry-archive-title">
 <?php
@@ -37,9 +37,7 @@
 ?>
 			</h1>
 
-			<div class="search-wrapper">
-				<?php get_search_form(); ?>
-			</div>
+			<?php get_search_form(); ?>
 
 		</header>
 

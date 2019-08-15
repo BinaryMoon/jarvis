@@ -1,0 +1,36 @@
+
+/*!
+ * ## - Search Form
+ */
+
+// Search Form
+//
+// Display a search form.
+// Uses [searchform.php](@import "elements/_typography";)
+//
+// Markup:
+// <form class="search-form">
+// <label><input type="search" name="s" class="search-field text" autocomplete="off" /></label>
+// <button class="search-submit">Search</button>
+// </form>
+//
+// Styleguide components.search
+form.search-form {
+
+	width: 100%;
+	max-width: $grid-small-width;
+	display: flex;
+
+	label {
+
+		flex-grow: 1;
+
+	}
+
+	input.search-field {
+
+		margin: 0;
+
+	}
+
+}
