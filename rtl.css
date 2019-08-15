@@ -34,6 +34,15 @@ pre {
   padding: 1.5rem 1.5rem;
   margin: 3rem 0
 }
+.entry-meta > * {
+  margin-left: .75rem
+}
+.entry-meta a.current-page {
+  padding: .3em .6em
+}
+.entry-author {
+  margin: 4.5rem 0
+}
 .button,
 .wp-block-button__link,
 button,
@@ -147,9 +156,6 @@ p {
 }
 hr {
   margin: 3rem auto
-}
-.entry-meta span {
-  margin-left: .75rem
 }
 .wp-caption {
   margin: 0 0 3rem 0
@@ -523,13 +529,10 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .block-border-dashed {
   padding: 1.5rem 1.5rem
 }
-.content-posts article.entry .entry-title a {
-  padding: .5em 0
-}
 .content-posts article.entry .read-more {
   padding: .75rem 0
 }
-.archive-layout-1 .content-posts .category-description {
+.archive-layout-1 .content-posts .entry-intro {
   margin-right: auto;
   margin-left: auto
 }
@@ -544,22 +547,6 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .content-comments .no-comments {
   padding: 1.5rem 1.5rem
 }
-.contributor {
-  margin: 4.5rem 0
-}
-.post-gallery .item {
-  float: right;
-  padding: 1em
-}
-.post-gallery .item:nth-child(2n+1) {
-  padding-right: 0
-}
-.post-gallery .item:nth-child(2n+2) {
-  padding-left: 0
-}
-.projects-terms a {
-  margin: 0 .75rem
-}
 .site-footer {
   padding: 1.5rem 1.5rem 3rem 1.5rem
 }
@@ -568,6 +555,9 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 }
 .container {
   margin: 0 auto
+}
+.main-content {
+  padding: 0 1.5rem
 }
 .site-header {
   background-position: center
@@ -608,9 +598,6 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
     transform: rotate(-180deg);
     text-align: left
   }
-}
-.main-content {
-  padding: 0 1.5rem
 }
 .menu-primary > ul {
   padding: .75rem 1.5rem
