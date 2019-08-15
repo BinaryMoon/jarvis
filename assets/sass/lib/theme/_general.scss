@@ -5,6 +5,8 @@
 
 .container {
 
-	@include container;
+	width: 100%;
+	max-width: $grid-total-width;
+	margin: 0 auto;
 
 }

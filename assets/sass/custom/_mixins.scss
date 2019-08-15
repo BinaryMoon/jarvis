@@ -1,13 +1,5 @@
 // @package Jarvis
 
-// Set element to centered with standard width
-@mixin container() {
-
-	width: 100%;
-	max-width: $grid-total-width;
-	margin: 0 auto;
-
-}
 
 // reusable mixin for consistent font styling on meta elements
 @mixin post-meta-data( $font-size: zeta ) {
