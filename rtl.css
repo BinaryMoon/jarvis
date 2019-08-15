@@ -223,16 +223,6 @@ blockquote.alignright {
   padding-left: 0;
   padding-right: .375rem
 }
-.widget ul ul {
-  margin-right: 1.5rem;
-  margin-left: auto
-}
-.widget.milestone-widget .milestone-content {
-  margin: 0 auto
-}
-.widget.widget_author_grid ul li {
-  float: right
-}
 .widget.widget_recent_comments table.recentcommentsavatar td.recentcommentsavatarend,
 .widget.widget_recent_comments table.recentcommentsavatar td.recentcommentsavatartop {
   padding: auto
@@ -240,36 +230,6 @@ blockquote.alignright {
 .widget.widgt_text ul {
   margin-right: 1.5rem;
   margin-left: auto
-}
-.widget.widget_flickr #flickr_badge_uber_wrapper td,
-.widget.widget_flickr #flickr_badge_wrapper td {
-  padding: .5em
-}
-.widget.widget_flickr #flickr_badge_wrapper {
-  border-color: var(--foreground-color)
-}
-.widget.widget_authors img {
-  margin: 0 auto .75rem auto
-}
-.widget.widget_authors ul {
-  margin: 0 0 1.5rem 0
-}
-.widget.widget_authors ul ul {
-  margin: 0 0 1.5rem 0;
-  padding: 0 1.5rem 0 0
-}
-.widget.widget_blog_subscription .woocommerce #coupon_code,
-.widget.widget_blog_subscription .woocommerce #respond input#submit,
-.widget.widget_blog_subscription .woocommerce a.button,
-.widget.widget_blog_subscription .woocommerce button.button,
-.widget.widget_blog_subscription .woocommerce input.button,
-.widget.widget_blog_subscription input[type=text],
-.woocommerce #respond .widget.widget_blog_subscription input#submit,
-.woocommerce .widget.widget_blog_subscription #coupon_code,
-.woocommerce .widget.widget_blog_subscription a.button,
-.woocommerce .widget.widget_blog_subscription button.button,
-.woocommerce .widget.widget_blog_subscription input.button {
-  padding: .75rem .75rem!important
 }
 .gallery .gallery-item {
   margin: 0 0 1.5rem 0;
@@ -281,69 +241,6 @@ blockquote.alignright {
 }
 #wp-calendar caption {
   padding: .375rem 0
-}
-.content-comments ol.comment-list {
-  margin: 0 0 3rem 0
-}
-.content-comments ol.comment-list li.comment #respond {
-  margin: 0 0 3rem 0
-}
-.content-comments ol.comment-list li.comment #respond #cancel-comment-reply-link {
-  float: left
-}
-@media (min-width:47rem) {
-  .content-comments ol.comment-list li.comment .comment-meta .avatar {
-    float: right;
-    margin-left: 1.5rem
-  }
-}
-.content-comments ol.comment-list li.comment .comment-meta .comment-metadata > * {
-  margin-left: .75rem
-}
-.content-comments ol.comment-list li.comment.depth-1 .comment-body {
-  padding-right: 0;
-  padding-left: unset
-}
-.content-comments ol.comment-list li.comment.depth-2 .comment-body {
-  padding-right: 4%;
-  padding-left: unset
-}
-.content-comments ol.comment-list li.comment.depth-3 .comment-body {
-  padding-right: 8%;
-  padding-left: unset
-}
-.content-comments ol.comment-list li.comment.depth-4 .comment-body {
-  padding-right: 12%;
-  padding-left: unset
-}
-.content-comments ol.comment-list li.comment.depth-5 .comment-body {
-  padding-right: 16%;
-  padding-left: unset
-}
-.content-comments ol.comment-list li.comment.depth-6 .comment-body {
-  padding-right: 20%;
-  padding-left: unset
-}
-.content-comments ol.comment-list li.comment.depth-7 .comment-body {
-  padding-right: 24%;
-  padding-left: unset
-}
-.content-comments ol.comment-list li.comment.depth-8 .comment-body {
-  padding-right: 28%;
-  padding-left: unset
-}
-.content-comments ol.comment-list li.comment.depth-9 .comment-body {
-  padding-right: 32%;
-  padding-left: unset
-}
-.content-comments ol.comment-list li.comment.depth-10 .comment-body {
-  padding-right: 36%;
-  padding-left: unset
-}
-#respond p.comment-form-cookies-consent input,
-#respond p.comment-subscription-form input,
-#respond p.post-subscription-form input {
-  margin-left: .5em
 }
 iframe.twitter-follow-button,
 iframe.twitter-tweet,
@@ -536,6 +433,64 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
   margin-right: auto;
   margin-left: auto
 }
+.comment-list {
+  margin: 0 0 3rem 0
+}
+.comment-list li.comment #respond {
+  margin: 0 0 3rem 0
+}
+.comment-list li.comment #respond #cancel-comment-reply-link {
+  float: left
+}
+@media (min-width:47rem) {
+  .comment-list li.comment .comment-meta .avatar {
+    float: right;
+    margin-left: 1.5rem
+  }
+}
+.comment-list li.comment .comment-meta .comment-metadata > * {
+  margin-left: .75rem
+}
+.comment-list li.comment.depth-1 .comment-body {
+  padding-right: 0;
+  padding-left: unset
+}
+.comment-list li.comment.depth-2 .comment-body {
+  padding-right: 4%;
+  padding-left: unset
+}
+.comment-list li.comment.depth-3 .comment-body {
+  padding-right: 8%;
+  padding-left: unset
+}
+.comment-list li.comment.depth-4 .comment-body {
+  padding-right: 12%;
+  padding-left: unset
+}
+.comment-list li.comment.depth-5 .comment-body {
+  padding-right: 16%;
+  padding-left: unset
+}
+.comment-list li.comment.depth-6 .comment-body {
+  padding-right: 20%;
+  padding-left: unset
+}
+.comment-list li.comment.depth-7 .comment-body {
+  padding-right: 24%;
+  padding-left: unset
+}
+.comment-list li.comment.depth-8 .comment-body {
+  padding-right: 28%;
+  padding-left: unset
+}
+.comment-list li.comment.depth-9 .comment-body {
+  padding-right: 32%;
+  padding-left: unset
+}
+.comment-list li.comment.depth-10 .comment-body {
+  padding-right: 36%;
+  padding-left: unset
+}
 .content-comments {
   padding: 3rem 0
 }
@@ -662,8 +617,12 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
     text-align: left
   }
 }
-.sidebar .widget {
+.widget {
   padding: .75rem 1.5rem
+}
+.widget ul ul {
+  margin-right: 1.5rem;
+  margin-left: auto
 }
 .content-single .entry-single a:not(.button) {
   padding: .5em 0

@@ -131,23 +131,23 @@ msgid "Widgets that display at the bottom of your website. They are arranged in 
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:526
+#: inc/wordpress.php:531
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of categories
-#: inc/wordpress.php:533
+#: inc/wordpress.php:538
 msgid "Posted in: %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:538
+#: inc/wordpress.php:543
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of tags
-#: inc/wordpress.php:543
+#: inc/wordpress.php:548
 msgid "Tagged as: %1$s"
 msgstr ""
 
