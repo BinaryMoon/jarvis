@@ -5,24 +5,6 @@
 
 .widget {
 
-	overflow: hidden;
-	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
-	width: 100%;
-	@include wrap-text;
-	// word-break: break-all;
-
-	.form-select {
-
-		width: 100%;
-
-	}
-
-	h3.widget-title {
-
-		margin-bottom: ( $grid-line-height / 2 );
-
-	}
-
 	ul {
 
 		list-style-type: none;
@@ -65,44 +47,6 @@
 
 	}
 
-	// milestone (countdown) widget
-	&.milestone-widget {
-
-		.milestone-content {
-
-			margin: 0 auto;
-
-		}
-
-	}
-
-	// author grid
-	&.widget_author_grid {
-
-		ul {
-
-			@include clear;
-			margin: 0;
-			padding: 0;
-			list-style-type: none;
-
-			li {
-
-				float: left;
-				max-width: 50%;
-
-			}
-
-			img {
-
-				display: block;
-
-			}
-
-		}
-
-	}
-
 	// categories (and category dropdown)
 	&.widget_archive,
 	&.widget_categories {
@@ -110,28 +54,6 @@
 		.form-select {
 
 			margin-bottom: 0;
-
-		}
-
-	}
-
-	// menu widget
-	&.widget_nav_menu {
-
-	}
-
-	// Tagcloud.
-	&.tagcloud {
-
-		ul {
-
-			list-style-type: none;
-
-			li {
-
-				display: inline-block;
-
-			}
 
 		}
 
@@ -179,25 +101,6 @@
 
 	}
 
-	// blogs I follow listing
-	&.widget_jp_blogs_i_follow {
-
-		ol {
-
-			list-style-type: none;
-			padding: 0;
-
-		}
-
-	}
-
-	// tag cloud
-	&.widget_tag_cloud {
-
-		line-height: 1.5;
-
-	}
-
 	// text
 	&.widgt_text {
 
@@ -206,44 +109,6 @@
 			list-style-type: $style-list-style-type;
 			margin-left: $grid-gutter;
 			margin-right: auto;
-
-		}
-
-	}
-
-	// flickr widget
-	&.widget_flickr {
-
-		#flickr_badge_uber_wrapper,
-		#flickr_badge_wrapper {
-
-			width: 100%;
-			margin: 0;
-
-			td {
-
-				padding: 0.5em;
-
-				a {
-
-					color: $black;
-
-					&:focus,
-					&:hover {
-
-						text-decoration: underline;
-
-					}
-
-				}
-
-			}
-
-		}
-
-		#flickr_badge_wrapper {
-
-			border-color: $black;
 
 		}
 
@@ -266,63 +131,6 @@
 			.wp-caption-text {
 
 				font-size: 1em;
-
-			}
-
-		}
-
-	}
-
-	// blog authors list
-	&.widget_authors {
-
-		li {
-
-			clear: both;
-			margin-bottom: $grid-line-height * $grid-line-height-multiplier;
-
-			li {
-
-				margin-bottom:0;
-
-			}
-
-		}
-
-		img {
-
-			margin: 0 auto ( $grid-line-height / 2 ) auto;
-
-		}
-
-		ul {
-
-			list-style-type: none;
-			margin: 0 0 $grid-line-height 0;
-			padding: 0;
-
-			strong {
-
-				@include modular-scale( delta );
-				clear: both;
-				display: block;
-				text-align: center;
-				margin-bottom: ( $grid-line-height / 2 );
-
-			}
-
-			ul {
-
-				list-style-type: $style-list-style-type;
-				margin: 0 0 $grid-line-height 0;
-				padding: 0 0 0 1.5rem;
-				clear: both;
-
-			}
-
-			img {
-
-				display: block;
 
 			}
 
@@ -359,37 +167,6 @@
 				font-weight:bold;
 
 			}
-
-		}
-
-	}
-
-	// search widget
-	&.widget_search {
-
-		input {
-
-			margin-bottom: 0;
-
-		}
-
-	}
-
-	// blog subscription widget
-	&.widget_blog_subscription {
-
-		input[type=text] {
-
-			width: 100% !important;
-			padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 ) !important;
-
-		}
-
-		input[type=text],
-		input[type=submit],
-		p:last-child {
-
-			margin: 0;
 
 		}
 
