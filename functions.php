@@ -29,6 +29,7 @@
  * test theme with and without jetpack
  * theme description
  * screenshot.png (880 x 660)
+ * check gallery post format on posts that don't use the block editor
  * check sticky styles
  * style quotes properly, in particular the # permalink glyph
  * Add some subtle animations for added delight.
