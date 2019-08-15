@@ -97,6 +97,18 @@
 
 	}
 
+	a {
+
+		&.current-page {
+
+			background: $black;
+			color: $white;
+			padding: 0.3em 0.6em;
+
+		}
+
+	}
+
 }
 
 // Entry Intro
@@ -126,3 +138,41 @@
 	}
 
 }
+
+// Author Summary
+//
+// Used on contributor custom template and blog post page when enabled by the
+// user.
+//
+// Markup:
+// <section class="entry-author">
+// <img src="https://picsum.photos/250/250" class="avatar" height="250" width="250">
+// <div class="entry">
+// <h2 class="author">Harry Potter</h2>
+// <p>Harry defeated the dark lord, and is best friends with Ron and Hermione. He's married to Ginny and has some children. When he's not busy fighting evil he likes to snuggle up and watch Quidditch.</p>
+// <p><a class="contributor-posts-link" href="http://localhost/wordpress-themes/author/sixhours/">68 Articles</a></p>
+// </div>
+// </section>
+//
+// Styleguide components.entry-author
+.entry-author {
+
+	margin: ( $grid-line-height * 3 ) 0;
+	display: grid;
+	grid-template-columns: 15% auto;
+	column-gap: $grid-gutter;
+
+	h2 {
+
+		margin-bottom: ( $grid-line-height / 2 );
+
+	}
+
+	.avatar {
+
+		max-width: 100%;
+
+	}
+
+}
+
