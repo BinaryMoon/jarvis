@@ -331,14 +331,14 @@ form.contact-form {
 body #eu-cookie-law {
 
 	padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
-	@include modular-scale( eta );
+	@include modular-scale( zeta );
 
 	&.positive,
 	&.negative {
 
 		input {
 
-			@include button( eta );
+			@include button( zeta );
 
 		}
 

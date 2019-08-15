@@ -163,7 +163,7 @@ label {
 
 legend {
 
-	@include modular-scale( eta );
+	@include modular-scale( zeta );
 	padding: 0 ( $grid-gutter / 2 );
 	text-transform: uppercase;
 	font-weight: bold;

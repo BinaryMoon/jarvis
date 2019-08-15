@@ -146,14 +146,14 @@ q {
 
 small {
 
-	@include modular-scale( eta );
+	@include modular-scale( zeta );
 
 }
 
 sub,
 sup {
 
-	@include modular-scale( eta );
+	@include modular-scale( zeta );
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
