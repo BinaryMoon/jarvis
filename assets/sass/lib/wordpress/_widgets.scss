@@ -5,39 +5,6 @@
 
 .widget {
 
-	ul {
-
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-
-		ul {
-
-			list-style-type: $style-list-style-type;
-			margin-left: $grid-gutter;
-			margin-right: auto;
-
-		}
-
-		&:last-child {
-
-			margin-bottom: 0;
-
-		}
-
-	}
-
-	// These changes ensure iframes in widgets to not overflow the available
-	// space. This is particularly appropriate in social media widgets with
-	// fixed/ restricted widths.
-	iframe {
-
-		max-width: 100%;
-		min-width: 0 !important;
-		contain: strict;
-
-	}
-
 	// Remove any margins on media elements widgets to prevent large white spaces from appearing.
 	.wp-playlist,
 	.mejs-container,
