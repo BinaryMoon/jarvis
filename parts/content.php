@@ -30,7 +30,7 @@
 
 	get_template_part( 'parts/entry-meta' );
 
-	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+	the_title( '<h2 class="entry-title summary"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 ?>
 
@@ -38,7 +38,7 @@
 
 		<?php the_excerpt(); ?>
 
-		<p><a href="<?php the_permalink(); ?>" class="read-more" aria-hidden="true" tabindex="-1"><?php jarvis_read_more_text(); ?></a></p>
+		<p class="entry-meta"><a href="<?php the_permalink(); ?>" class="read-more" aria-hidden="true" tabindex="-1"><?php jarvis_read_more_text(); ?></a></p>
 
 	</section>
 
