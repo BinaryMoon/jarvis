@@ -4,7 +4,232 @@
  */
 // @package Jarvis
 
-/* comments layout */
+.comment-list {
+
+	list-style-type: none;
+	margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
+	padding: 0;
+
+	li.comment,
+	li.trackback,
+	li.pingback {
+
+		.comment-body {
+
+			width: 100%;
+			clear: both;
+			margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+			p:last-child {
+
+				margin-bottom: $grid-line-height / 2;
+
+			}
+
+		}
+
+	}
+
+	li.comment {
+
+		margin: 0;
+		position: relative;
+		list-style-type: none;
+
+		#respond {
+
+			position: relative;
+			margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
+
+			#cancel-comment-reply-link {
+
+				@include post-meta-data;
+				float: right;
+
+			}
+
+		}
+
+		// comment info
+		.comment-meta {
+
+			@include clear;
+			margin-bottom: ( $grid-line-height / 2 );
+
+			.avatar {
+
+				display: none;
+
+				@include for-tablet {
+
+					float: left;
+					margin-right: $grid-gutter;
+					display: block;
+					height: $grid-line-height * 2.5;
+					width: auto;
+
+				}
+
+			}
+
+			// comment date and edit link
+			.comment-metadata {
+
+				@include post-meta-data;
+
+				> * {
+
+					margin-right: ( $grid-gutter / 2 );
+
+				}
+
+			}
+
+			// author link
+			.fn {
+
+				display: inline-block;
+				font-weight: bold;
+				margin-top: ( $grid-line-height / 6 );
+
+			}
+
+			.says {
+
+				display: none;
+
+			}
+
+		}
+
+		// set indents for nested comments
+		@for $i from 1 through 10 {
+
+			$comments-padding: $comments-margin * ( $i - 1 );
+
+			&.depth-#{$i} .comment-body {
+
+				padding-left: $comments-padding;
+				padding-right: unset;
+				max-width: calc( #{$grid-small-width} + #{$comments-padding} );
+
+			}
+
+		}
+
+	}
+
+	// edit comment/ pingback/ trackback
+	.reply,
+	.edit-link {
+
+		@include post-meta-data;
+
+	}
+
+	.children {
+
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		clear: both;
+		position: relative;
+
+		li:last-child {
+
+			margin: 0;
+
+		}
+
+	}
+
+}
+
+#respond {
+
+	clear: both;
+	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
+
+	p {
+
+		margin: 0;
+		position: relative;
+
+	}
+
+	p.comment-form-author,
+	p.comment-form-email,
+	p.comment-form-comment,
+	p.comment-form-url {
+
+		input,
+		textarea {
+
+			width: 100%;
+
+		}
+
+	}
+
+	p.comment-form-author,
+	p.comment-form-email,
+	p.comment-form-url {
+
+		max-width: $grid-small-width;
+
+	}
+
+	p.form-submit {
+
+		margin-top: ( $grid-line-height / 2 );
+		margin-bottom: ( $grid-line-height / 2 );
+
+	}
+
+	p.logged-in-as {
+
+		@include post-meta-data;
+
+	}
+
+	p.comment-form-cookies-consent,
+	p.post-subscription-form,
+	p.comment-subscription-form {
+
+		label {
+
+			display: inline;
+
+		}
+
+	}
+
+	p.comment-notes,
+	p.logged-in-as {
+
+		margin-bottom: $grid-line-height;
+
+	}
+
+	// Displayed under the "Leave a Reply" title for logged out users.
+	p.comment-notes {
+
+		#email-notes {
+
+			display: block;
+
+		}
+
+		.required {
+
+			font-weight: bold;
+
+		}
+
+	}
+
+}
+
 .content-comments {
 
 	padding: ( $grid-line-height * $grid-line-height-multiplier ) 0;
@@ -18,53 +243,6 @@
 	.comment-reply-title {
 
 		margin-bottom: 0;
-
-	}
-
-	ol.comment-list {
-
-		li.comment,
-		li.trackback,
-		li.pingback {
-
-			.comment-body {
-
-				p {
-
-					&:last-child {
-
-						margin-bottom: $grid-line-height / 2;
-
-					}
-
-				}
-
-			}
-
-		}
-
-		li.comment {
-
-			.reply {
-
-				a {
-
-					@include post-meta-data;
-
-					.icon {
-
-						position: absolute;
-						margin-top: 0.3em;
-						width: 2em;
-						height: 1.2em;
-
-					}
-
-				}
-
-			}
-
-		}
 
 	}
 
