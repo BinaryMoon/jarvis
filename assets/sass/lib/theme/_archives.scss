@@ -12,8 +12,6 @@
 
 		.entry-meta {
 
-			@include modular-scale( eta );
-
 			a {
 
 				text-decoration: none;
@@ -29,23 +27,8 @@
 
 		}
 
-		.entry-title {
-
-			@include modular-scale( gamma );
-			font-weight: bold;
-
-			a {
-
-				padding: 0.5em 0;
-
-			}
-
-		}
-
 		.read-more {
 
-			@include post-meta-data;
-			font-weight: bold;
 			// Add some padding for a larger clickable area.
 			// Still an inline element so takes up the same amount of space.
 			padding: ( $grid-line-height / 2 ) 0;
@@ -129,26 +112,6 @@
 		img {
 
 			display: block;
-
-		}
-
-	}
-
-	.category-description {
-
-		@include modular-scale( delta );
-		max-width: $grid-small-width;
-		margin-bottom: 0;
-		margin-top: $grid-line-height;
-		font-weight: 100;
-
-		p {
-
-			&:last-child {
-
-				margin-bottom: 0;
-
-			}
 
 		}
 
