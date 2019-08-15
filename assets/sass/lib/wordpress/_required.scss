@@ -105,6 +105,14 @@ blockquote {
 
 .sticky {
 
-	box-sizing: border-box;
+	.entry-meta {
+
+		.posted-on {
+
+			display: none;
+
+		}
+
+	}
 
 }
