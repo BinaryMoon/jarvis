@@ -1,0 +1,128 @@
+
+// Entry Header
+//
+// A block that can be used throughout the theme. Often found on the single
+// posts/ pages and archives.
+//
+// Markup:
+// <div class="entry-header">
+// <div class="entry-meta"><span>Dudley</span> <span><a href="#">Dursley</a></span></div>
+// <h1 class="entry-title {{modifier_class}}">Philosophers Stone</h1>
+// <div class="entry-intro">It is impossible to live without failing at something, unless you live so cautiously that you might has well not have lived at all, in which case you have failed by default.</div>
+// </div>
+//
+// Styleguide components.entry-header
+.entry-header {
+
+	margin-bottom: ( $grid-line-height * 2 );
+	grid-column: 1/-1;
+
+	@include for-desktop {
+
+		margin-bottom: ( $grid-line-height * 4 );
+
+	}
+
+	p:last-of-type {
+
+		margin-bottom: 0;
+
+	}
+
+}
+
+// Entry Title
+//
+// Massive title text for use in .entry-headers
+//
+// .summary - A title for the archive post listings.
+//
+// Markup:
+// <h1 class="entry-title {{modifier_class}}"><small>Book 1</small> Philosophers Stone</h1>
+//
+// Styleguide elements.entry.title
+.entry-title {
+
+	letter-spacing: -0.01em;
+	font-weight: bold;
+	@include modular-scale( gamma );
+
+	@include for-tablet {
+
+		@include modular-scale( alpha );
+
+	}
+
+	@include for-desktop {
+
+		@include modular-scale( mega );
+
+	}
+
+	small {
+
+		display: block;
+		@include modular-scale( epsilon );
+		letter-spacing: initial;
+
+	}
+
+	&.summary {
+
+		@include modular-scale( gamma );
+
+	}
+
+}
+
+// Entry Meta
+//
+// Style for entry meta data. Individual parts of the meta data should be
+// wrapped in an element (a span or an anchor, or some other thing). The
+// elements will have margin applied to create consistent spacing so the
+// wrapping element is required.
+//
+// Markup:
+// <div class="entry-meta"><span>Dudley</span> <span><a href="#">Dursley</a></span></div>
+//
+// Styleguide elements.entry.meta
+.entry-meta {
+
+	@include post-meta-data;
+	margin-bottom: ( $grid-line-height / 2 );
+
+	> * {
+
+		margin-right: ( $grid-gutter / 2 );
+
+	}
+
+}
+
+// Entry Intro
+//
+// A block with large text that can be used for category descriptions, or displaying the excerpt on a post.
+//
+// Markup:
+// <div class="entry-intro">It is impossible to live without failing at something, unless you live so cautiously that you might has well not have lived at all, in which case you have failed by default.</div>
+//
+// Styleguide elements.entry.intro
+.entry-intro {
+
+	@include modular-scale( delta );
+	max-width: $grid-small-width;
+	margin-bottom: 0;
+	margin-top: $grid-line-height;
+	font-weight: 100;
+
+	p {
+
+		&:last-child {
+
+			margin-bottom: 0;
+
+		}
+
+	}
+
+}
