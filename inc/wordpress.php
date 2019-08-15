@@ -520,6 +520,11 @@ function jarvis_post_terms( $content = '' ) {
 		return $content;
 	}
 
+	// Don't display if password required.
+	if ( post_password_required() ) {
+		return $content;
+	}
+
 	$terms = '';
 
 	/* translators: used between list items, there is a space after the comma */
