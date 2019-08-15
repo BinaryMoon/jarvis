@@ -235,6 +235,7 @@ div.jetpack-testimonial-shortcode {
 .entry-breadcrumbs {
 
 	margin-bottom: ( $grid-line-height / 2 );
+	@include post-meta-data;
 
 	> a,
 	> span {
