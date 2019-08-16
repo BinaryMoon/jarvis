@@ -1,4 +1,3 @@
-@import "custom/mixins";
 
 // Variables
 @import "lib/variables/index";
@@ -14,11 +13,15 @@
 
 // Elements
 //
-// Elements are the building blocks of the theme. They are the things that the different blocks and widgets and other components are made from.
+// Elements are the building blocks of the theme. They are the things that the
+// different blocks and widgets and other components are made from.
 //
 // Styleguide elements
 @import "lib/elements/index";
 
+// Components
+//
+// Styleguide components
 @import "lib/components/index";
 
 @import "lib/wordpress/index";

@@ -241,19 +241,27 @@ label {
 
 }
 
+// Fieldset & Legend
+//
+// Fieldsets and Legends should be used to group form controls. They are not
+// used in WordPress by default, but I have styled them so they can be used by
+// form plugins.
+//
+// Markup:
+// <fieldset><legend>Gryffindor</legend></fieldset>
+//
+// Styleguide components.fieldset-legend
 legend {
 
-	@include modular-scale( zeta );
+	@include post-meta-data;
+	font-family: $font-family-header;
 	padding: 0 ( $grid-gutter / 2 );
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: $font-uppercase-spacing;
 
 }
 
 fieldset {
 
-	border: 1px solid $black;
+	border: $border-width solid $black;
 	padding: $grid-line-height ( $grid-gutter );
 	margin: ( $grid-line-height * 2 ) 0;
 
