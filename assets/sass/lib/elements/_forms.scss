@@ -27,6 +27,11 @@ input {
 		margin-right: $style-spacing;
 		margin-left: auto;
 		vertical-align: middle;
+
+	}
+
+}
+
 @supports(-webkit-appearance: none) {
 
 	// Checkbox.
@@ -206,7 +211,6 @@ select {
 textarea {
 
 	min-height: ( $grid-line-height * 10 );
-	margin-bottom: $grid-line-height;
 
 }
 
