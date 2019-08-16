@@ -23,6 +23,7 @@ function jarvis_get_fonts() {
 		'arial-black' => [ 'Arial Black', 'Arial Black, Arial Bold, Gadget, sans-serif' ],
 		'arial-narrow' => [ 'Arial Narrow', 'Arial Narrow, Arial, sans-serif' ],
 		'arial-rounded' => [ 'Arial Rounded', 'Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif' ],
+		'avenir' => [ 'Avenir', 'Avenir, Roboto, Gill Sans, Century Gothic, Calibri, sans-serif' ],
 		'baskerville' => [ 'Baskerville', 'Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif' ],
 		'bitstream-sans' => [ 'Bitstream Vera', 'Bitstream Vera, Trebuchet MS, Verdana, sans-serif' ],
 		'bitstream-serif' => [ 'Bitstream Vera Serif', 'Bitstream Vera Serif, Liberation Serif, Georgia, serif' ],
