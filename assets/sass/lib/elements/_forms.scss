@@ -26,6 +26,84 @@ input {
 		cursor: pointer;
 		margin-right: $style-spacing;
 		margin-left: auto;
+		vertical-align: middle;
+@supports(-webkit-appearance: none) {
+
+	// Checkbox.
+	input[type="checkbox"] {
+
+		-webkit-appearance: none !important;
+		width: $grid-gutter !important;
+		height: $grid-gutter !important;
+		border: $border-width solid $black;
+		background: none;
+
+		&:focus {
+
+			border: $border-width solid $black;
+
+		}
+
+		&:checked {
+
+			position: relative;
+			background: none;
+
+		}
+
+		&:checked::after {
+
+			position: absolute;
+			top: 3px;
+			left: 2px;
+
+			content: "";
+			width: 0.9rem;
+			height: 0.5rem;
+			border: 0.25rem solid $black;
+			border-right: none;
+			border-top: none;
+			transform: rotate(-45deg);
+
+		}
+
+	}
+
+	// Radio input.
+	input[type="radio"] {
+
+		-webkit-appearance: none;
+		width: $grid-gutter;
+		height: $grid-gutter;
+		border-radius: $grid-gutter;
+		border: $border-width solid $black;
+		padding: 0;
+
+		&:focus {
+
+			border: $border-width solid $black;
+
+		}
+
+		&:checked {
+
+			position: relative;
+			background: none;
+
+		}
+
+		&:checked::after {
+
+			position: absolute;
+			top: 0.15rem;
+			left: 0.15rem;
+			width: 0.75rem;
+			height: 0.75rem;
+			background: $black;
+			border-radius: $grid-gutter;
+			content: "";
+
+		}
 
 	}
 
@@ -58,7 +136,6 @@ select,
 textarea {
 
 	padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
-	margin-bottom: $grid-line-height;
 	line-height: $grid-line-height;
 	min-height: $grid-line-height;
 	width: 100%;
@@ -128,7 +205,6 @@ select {
 // Styleguide elements.forms.textarea
 textarea {
 
-	width: 100%;
 	min-height: ( $grid-line-height * 10 );
 	margin-bottom: $grid-line-height;
 
