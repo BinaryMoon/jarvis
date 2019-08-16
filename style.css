@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-28
+Version: 1.0.alpha-30
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -646,6 +646,62 @@ input[type=checkbox], input[type=radio] {
 	cursor: pointer;
 	margin-right: 0.5em;
 	margin-left: auto;
+	vertical-align: middle;
+}
+
+@supports (-webkit-appearance: none) {
+	input[type="checkbox"] {
+		-webkit-appearance: none !important;
+		width: 1.5rem !important;
+		height: 1.5rem !important;
+		border: 0.2rem solid var(--foreground-color);
+		background: none;
+	}
+	input[type="checkbox"]:focus {
+		border: 0.2rem solid var(--foreground-color);
+	}
+	input[type="checkbox"]:checked {
+		position: relative;
+		background: none;
+	}
+	input[type="checkbox"]:checked::after {
+		position: absolute;
+		top: 3px;
+		left: 2px;
+		content: "";
+		width: 0.9rem;
+		height: 0.5rem;
+		border: 0.25rem solid var(--foreground-color);
+		border-right: none;
+		border-top: none;
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	input[type="radio"] {
+		-webkit-appearance: none;
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 1.5rem;
+		border: 0.2rem solid var(--foreground-color);
+		padding: 0;
+	}
+	input[type="radio"]:focus {
+		border: 0.2rem solid var(--foreground-color);
+	}
+	input[type="radio"]:checked {
+		position: relative;
+		background: none;
+	}
+	input[type="radio"]:checked::after {
+		position: absolute;
+		top: 0.15rem;
+		left: 0.15rem;
+		width: 0.75rem;
+		height: 0.75rem;
+		background: var(--foreground-color);
+		border-radius: 1.5rem;
+		content: "";
+	}
 }
 
 input[type=text], .woocommerce #respond input#submit,
@@ -666,7 +722,6 @@ input[type=number],
 select,
 textarea {
 	padding: 0.75rem 0.75rem;
-	margin-bottom: 1.5rem;
 	line-height: 1.5rem;
 	min-height: 1.5rem;
 	width: 100%;
@@ -756,9 +811,7 @@ select:hover {
 }
 
 textarea {
-	width: 100%;
 	min-height: 15rem;
-	margin-bottom: 1.5rem;
 }
 
 label {
@@ -2493,7 +2546,6 @@ p.demo_store {
 }
 
 #respond p {
-	margin: 0;
 	position: relative;
 }
 

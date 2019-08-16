@@ -136,18 +136,18 @@ msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of categories
-#: inc/wordpress.php:538
+#: inc/wordpress.php:539
 msgid "Posted in: %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:543
+#: inc/wordpress.php:544
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of tags
-#: inc/wordpress.php:548
+#: inc/wordpress.php:549
 msgid "Tagged as: %1$s"
 msgstr ""
 

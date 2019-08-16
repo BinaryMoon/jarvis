@@ -71,6 +71,21 @@ input[type=radio] {
   margin-left: .5em;
   margin-right: auto
 }
+@supports (-webkit-appearance:none) {
+  input[type=checkbox]:checked::after {
+    right: 2px;
+    border-left: none;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+  input[type=radio] {
+    border-radius: 1.5rem
+  }
+  input[type=radio]:checked::after {
+    right: .15rem;
+    border-radius: 1.5rem
+  }
+}
 .woocommerce #coupon_code,
 .woocommerce #respond input#submit,
 .woocommerce a.button,
