@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-30
+Version: 1.0.alpha-31
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -417,7 +417,6 @@ cite {
 	line-height: 1.5;
 	font-weight: normal;
 	letter-spacing: 0.05em;
-	font-style: normal;
 	display: block;
 	margin-top: 0.375rem;
 }
@@ -831,14 +830,16 @@ legend {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
-	padding: 0 0.75rem;
-	text-transform: uppercase;
+	font-family: var(--font-meta);
 	font-weight: bold;
+	text-transform: uppercase;
 	letter-spacing: 0.1em;
+	font-family: var(--font-header);
+	padding: 0 0.75rem;
 }
 
 fieldset {
-	border: 1px solid var(--foreground-color);
+	border: 0.2rem solid var(--foreground-color);
 	padding: 1.5rem 1.5rem;
 	margin: 3rem 0;
 }
@@ -1155,38 +1156,6 @@ p.wp-block-subhead {
 .wp-block-quote,
 .wp-block-quote.is-large {
 	margin-bottom: 3rem;
-	position: relative;
-	font-size: 32px;
-	font-size: 2rem;
-	line-height: 1.25;
-}
-
-.wp-block-pullquote blockquote blockquote:before, .wp-block-pullquote blockquote blockquote:after,
-.wp-block-quote blockquote:before,
-.wp-block-quote blockquote:after,
-.wp-block-quote.is-large blockquote:before,
-.wp-block-quote.is-large blockquote:after {
-	content: '';
-	display: block;
-}
-
-.wp-block-pullquote blockquote p:last-child,
-.wp-block-quote p:last-child,
-.wp-block-quote.is-large p:last-child {
-	margin-bottom: 0;
-}
-
-.wp-block-pullquote blockquote cite,
-.wp-block-quote cite,
-.wp-block-quote.is-large cite {
-	margin-top: 0.75rem;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	line-height: 1.5;
-	font-weight: normal;
-	letter-spacing: 0.05em;
-	font-style: normal;
 }
 
 .wp-block-quote p {
@@ -1589,7 +1558,6 @@ main div.sharedaddy h3.sd-title {
 	font-family: var(--font-header);
 	margin: 0 0 0.75rem 0;
 	display: block;
-	font-weight: bold;
 	font-style: normal;
 }
 
@@ -2265,10 +2233,6 @@ p.demo_store {
 
 .content-posts article.entry.format-video .jetpack-video-wrapper {
 	margin-top: 0;
-	margin-bottom: 0.75rem;
-}
-
-.content-posts article.entry.format-image .thumbnail {
 	margin-bottom: 0.75rem;
 }
 
