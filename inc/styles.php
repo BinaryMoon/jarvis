@@ -82,6 +82,7 @@ function jarvis_get_font_css() {
 	$styles[] = 'body { --font-body:' . $fonts[ get_theme_mod( 'jarvis_body_font', 'cambria' ) ][1] . '; }';
 	$styles[] = 'body { --font-title:' . $fonts[ get_theme_mod( 'jarvis_title_font', 'cambria' ) ][1] . '; }';
 	$styles[] = 'body { --font-header:' . $fonts[ get_theme_mod( 'jarvis_header_font', 'cambria' ) ][1] . '; }';
+	$styles[] = 'body { --font-meta:' . $fonts[ get_theme_mod( 'jarvis_meta_font', 'cambria' ) ][1] . '; }';
 
 	return implode( $styles, ' ' );
 
