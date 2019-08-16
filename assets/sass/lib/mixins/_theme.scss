@@ -20,7 +20,6 @@
 	font-family: $font-family-header;
 	margin: 0 0 ( $grid-line-height / 2 ) 0;
 	display: block;
-	font-weight: bold;
 	font-style: normal;
 
 }
@@ -50,42 +49,6 @@
 	}
 
 }
-
-// Quote styles.
-@mixin blockquote {
-
-	position: relative;
-	@include modular-scale( gamma );
-
-	blockquote:before, blockquote:after {
-
-		content: '';
-		display: block;
-
-	}
-
-	p {
-
-		&:last-child {
-
-			margin-bottom: 0;
-
-		}
-
-	}
-
-}
-
-// Blockquote cite.
-@mixin post-cite {
-
-	@include modular-scale( zeta );
-	font-weight: normal;
-	letter-spacing: 0.05em;
-	font-style: normal;
-
-}
-
 
 // The post content layout.
 @mixin the-content {

@@ -15,15 +15,6 @@ p.wp-block-subhead {
 .wp-block-quote.is-large {
 
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
-	@include blockquote;
-
-	cite {
-
-		margin-top: ( $grid-line-height / 2 );
-		display: block;
-		@include post-cite;
-
-	}
 
 }
 

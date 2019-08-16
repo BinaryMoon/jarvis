@@ -141,7 +141,9 @@ blockquote {
 // Styleguide elements.html.cite
 cite {
 
-	@include post-cite;
+	@include modular-scale( zeta );
+	font-weight: normal;
+	letter-spacing: 0.05em;
 	display: block;
 	margin-top: $grid-line-height / 4;
 
