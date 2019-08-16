@@ -2248,14 +2248,6 @@ p.demo_store {
 	margin-bottom: 4.5rem;
 }
 
-.content-posts article.entry .entry-meta a {
-	text-decoration: none;
-}
-
-.content-posts article.entry .entry-meta a:focus, .content-posts article.entry .entry-meta a:hover {
-	text-decoration: underline;
-}
-
 .content-posts article.entry .read-more {
 	padding: 0.75rem 0;
 }

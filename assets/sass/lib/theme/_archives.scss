@@ -10,23 +10,6 @@
 
 		margin-bottom: $grid-line-height * 3;
 
-		.entry-meta {
-
-			a {
-
-				text-decoration: none;
-
-				&:focus,
-				&:hover {
-
-					text-decoration: underline;
-
-				}
-
-			}
-
-		}
-
 		.read-more {
 
 			// Add some padding for a larger clickable area.
