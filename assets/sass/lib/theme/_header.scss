@@ -39,6 +39,7 @@
 			left: 0;
 			bottom: 0;
 			background: rgba( black, 0.3 );
+
 		}
 
 	}
@@ -73,7 +74,7 @@
 		.site-title a,
 		.site-title {
 
-			font-family: var(--font-title);
+			font-family: var( --font-title );
 			@include modular-scale( delta, 1.2 );
 			font-weight: bold;
 			margin: 0;
@@ -153,8 +154,6 @@
 
 	}
 
-
-
 	.menu-toggle {
 
 		text-align: left;
@@ -168,12 +167,6 @@
 		}
 
 	}
-
-	.menu {
-
-	}
-
-
 
 }
 
