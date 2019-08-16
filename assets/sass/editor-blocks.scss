@@ -1,8 +1,8 @@
 
 @import "custom/_mixins";
 
-@import "lib/_variables";
-@import "lib/_mixins";
+@import "lib/variables/index";
+@import "lib/mixins/index";
 
 .editor-rich-text__tinymce.mce-content-body {
 

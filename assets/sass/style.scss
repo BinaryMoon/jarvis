@@ -1,31 +1,31 @@
-@import "custom/_mixins";
+@import "custom/mixins";
 
 // Variables
-@import "lib/_variables";
+@import "lib/variables/index";
 
 // Mixins
 //
 // Mixins allow reusable code. I often use them for repeatable styles.
 //
 // Styleguide: Mixins
-@import "lib/_mixins";
+@import "lib/mixins/index";
 
-@import "lib/_reset";
+@import "lib/reset";
 
 // Elements
 //
 // Elements are the building blocks of the theme. They are the things that the different blocks and widgets and other components are made from.
 //
 // Styleguide elements
-@import "lib/_elements";
+@import "lib/elements/index";
 
-@import "lib/_components";
+@import "lib/components/index";
 
-@import "lib/_wordpress";
+@import "lib/wordpress/index";
 
-@import "lib/_plugins";
+@import "lib/plugins/index";
 
-@import "lib/_theme";
+@import "lib/theme/index";
 
 // Blocks
 //
