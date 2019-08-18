@@ -340,6 +340,7 @@ function jarvis_credits_get_content() {
 	$contents = str_ireplace( '(|)', $separator, $contents );
 	$contents = str_ireplace( '(SEP)', $separator, $contents );
 	$contents = str_ireplace( '(TOP)', $top_link, $contents );
+	$contents = str_ireplace( '(FEED)', '<a href="' . get_feed_link() . '">' . esc_html__( 'RSS Feed', 'jarvis' ) . '</a>', $contents );
 	$contents = str_ireplace( '(PRIVACY)', get_the_privacy_policy_link(), $contents );
 	$contents = str_ireplace( '(PTD)', $pro_theme_link, $contents );
 

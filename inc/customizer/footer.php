@@ -23,6 +23,7 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 		'<li>' . __( '<strong>(year)</strong>: the current year. Updates automatically', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(|)</strong>: add a gap between items', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(privacy)</strong>: a privacy policy link', 'jarvis' ) . '</li>',
+		'<li>' . __( '<strong>(feed)</strong>: a link to the site RSS Feed', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(top)</strong>: a "back to top" link', 'jarvis' ) . '</li>',
 		'<li>' . __( '<strong>(ptd)</strong>: the Pro Theme Design credit', 'jarvis' ) . '</li>',
 		'</ul>',
