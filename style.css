@@ -589,6 +589,43 @@ pre.compress {
 	max-width: 100%;
 }
 
+.entry-breadcrumbs {
+	margin-bottom: 3rem;
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	font-family: var(--font-meta);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.entry-breadcrumbs > a,
+.entry-breadcrumbs > span {
+	display: inline-block;
+}
+
+.entry-breadcrumbs a {
+	font-weight: bold;
+	position: relative;
+	text-decoration: none;
+}
+
+.entry-breadcrumbs a span {
+	text-decoration: underline;
+}
+
+.entry-breadcrumbs a:focus span, .entry-breadcrumbs a:hover span {
+	text-decoration: none;
+}
+
+.entry-breadcrumbs a:after {
+	content: '\25B6';
+	font-family: var(--font-monospace);
+	margin: 0 0.75rem;
+	font-size: 10px;
+}
+
 input[type=button],
 input[type=reset],
 input[type=submit],
@@ -1671,43 +1708,6 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry {
 
 div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1) {
 	clear: both;
-}
-
-.entry-breadcrumbs {
-	margin-bottom: 0.75rem;
-	font-size: 14px;
-	font-size: 0.875rem;
-	line-height: 1.5;
-	font-family: var(--font-meta);
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-}
-
-.entry-breadcrumbs > a,
-.entry-breadcrumbs > span {
-	display: inline-block;
-}
-
-.entry-breadcrumbs a {
-	font-weight: bold;
-	position: relative;
-	text-decoration: none;
-}
-
-.entry-breadcrumbs a span {
-	text-decoration: underline;
-}
-
-.entry-breadcrumbs a:focus span, .entry-breadcrumbs a:hover span {
-	text-decoration: none;
-}
-
-.entry-breadcrumbs a:after {
-	content: '\25B6';
-	font-family: var(--font-monospace);
-	margin: 0 0.75rem;
-	font-size: 10px;
 }
 
 form.contact-form div label.grunion-radio-label, form.contact-form div label.grunion-checkbox-multiple-label {
@@ -3154,11 +3154,6 @@ p.demo_store {
 .content-single .entry-single > h3 {
 	margin-top: 3rem;
 	clear: both;
-}
-
-.content-single .entry-single a:not(.button) {
-	padding: 0.5em 0;
-	font-weight: bold;
 }
 
 .content-single .entry-single .alignwide {

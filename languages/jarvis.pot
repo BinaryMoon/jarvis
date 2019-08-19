@@ -102,6 +102,10 @@ msgstr ""
 msgid "Theme: %1$s by %2$s"
 msgstr ""
 
+#: inc/template-tags.php:343
+msgid "RSS Feed"
+msgstr ""
+
 #: inc/wordpress.php:263
 msgid "White"
 msgstr ""
@@ -353,27 +357,31 @@ msgid "<strong>(privacy)</strong>: a privacy policy link"
 msgstr ""
 
 #: inc/customizer/footer.php:26
-msgid "<strong>(top)</strong>: a \"back to top\" link"
+msgid "<strong>(feed)</strong>: a link to the site RSS Feed"
 msgstr ""
 
 #: inc/customizer/footer.php:27
+msgid "<strong>(top)</strong>: a \"back to top\" link"
+msgstr ""
+
+#: inc/customizer/footer.php:28
 msgid "<strong>(ptd)</strong>: the Pro Theme Design credit"
 msgstr ""
 
 #. translators: %s = the default footer content.
-#: inc/customizer/footer.php:30
+#: inc/customizer/footer.php:31
 msgid "The default theme footer can be reproduced with:<br /><strong>%s</strong>"
 msgstr ""
 
-#: inc/customizer/footer.php:32
+#: inc/customizer/footer.php:33
 msgid "Close"
 msgstr ""
 
-#: inc/customizer/footer.php:42
+#: inc/customizer/footer.php:43
 msgid "Footer Credits"
 msgstr ""
 
-#: inc/customizer/footer.php:65
+#: inc/customizer/footer.php:66
 msgid "Credits Content"
 msgstr ""
 
