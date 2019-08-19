@@ -349,3 +349,37 @@ function jarvis_credits_get_content() {
 	return wp_kses_post( $contents );
 
 }
+
+
+/**
+ * Add breadcrumbs to a page.
+ *
+ * Breadcrumbs will not display on blog posts, but may display on other custom
+ * post types such as pages and other custom post types.
+ */
+function jarvis_breadcrumbs() {
+
+	// Don't need breadcrumbs on the homepage so lets leave.
+	if ( is_home() || is_front_page() ) {
+
+		return;
+
+	}
+
+	// Check for Toolbelt breadcrumbs.
+	if ( function_exists( 'tb_breadcrumbs' ) ) {
+
+		tb_breadcrumbs();
+		return;
+
+	}
+
+	// Check Jetpack Breadcrumbs are available before outputting them.
+	if ( function_exists( 'jetpack_breadcrumbs' ) ) {
+
+		jetpack_breadcrumbs();
+		return;
+
+	}
+
+}

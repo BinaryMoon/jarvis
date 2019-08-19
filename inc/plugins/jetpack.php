@@ -30,31 +30,6 @@ add_action( 'after_setup_theme', 'jarvis_jetpack_init' );
 
 
 /**
- * Add breadcrumbs to a page.
- *
- * Breadcrumbs will not display on blog posts, but may display on other custom
- * post types such as pages and other custom post types.
- */
-function jarvis_breadcrumbs() {
-
-	// Don't need breadcrumbs on the homepage so lets leave.
-	if ( is_home() || is_front_page() ) {
-
-		return;
-
-	}
-
-	// Check Jetpack Breadcrumbs are available before outputting them.
-	if ( function_exists( 'jetpack_breadcrumbs' ) ) {
-
-		jetpack_breadcrumbs();
-
-	}
-
-}
-
-
-/**
  * Remove some of the default Jetpack styles.
  *
  * The styles are taken care of by the default theme styles, so custom styles are not required.
