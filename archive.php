@@ -27,6 +27,8 @@
 
 <?php
 
+		jarvis_breadcrumbs();
+
 		the_archive_title( '<h1 class="entry-title entry-archive-title">', '</h1>' );
 		the_archive_description( '<div class="entry-intro">', '</div>' );
 
