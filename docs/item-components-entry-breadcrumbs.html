@@ -57,23 +57,23 @@
 <main class="kss-main" aria-label="Content">
   <article>
 
-    <div id="kssref-components-entry-header" class="kss-section kss-section--depth-2 is-fullscreen">
+    <div id="kssref-components-entry-breadcrumbs" class="kss-section kss-section--depth-2 is-fullscreen">
 
       <div class="kss-style">
         <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-components-entry-header">
+          <a class="kss-title__permalink" href="#kssref-components-entry-breadcrumbs">
             <span class="kss-title__ref">
-              2.4
+              2.3
               <span class="kss-title__permalink-hash">
-                  #components.entry-header
+                  #components.entry-breadcrumbs
               </span>
             </span>
-            Entry Header
+            Breadcrumbs
           </a>
         </h2>
 
           <p class="kss-toolbar">
-            <a href="#kssref-components-entry-header" data-kss-guides="true">
+            <a href="#kssref-components-entry-breadcrumbs" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
@@ -94,7 +94,7 @@
                 <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
               </svg>
             </a>
-            <a href="#kssref-components-entry-header" data-kss-markup="true">
+            <a href="#kssref-components-entry-breadcrumbs" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
@@ -104,8 +104,11 @@
           </p>
 
           <div class="kss-description">
-            <p>A block that can be used throughout the theme. Often found on the single
-posts/ pages and archives.</p>
+            <p>Display breadcrumbs on posts and categories.</p>
+<p>Note that the span inside the links is required so that the links can be
+underlined without underlining the pseudo elements that make up the arrows.</p>
+<p>Note also that the Toolbelt and Jetpack plugins add all sorts of other html
+to the breadcrumbs so that microformats work properly.</p>
 
           </div>
 
@@ -119,11 +122,11 @@ posts/ pages and archives.</p>
 
 
           <div class="kss-modifier__example">
-            <div class="entry-header">
-<div class="entry-meta"><span>Dudley</span> <span><a href="#">Dursley</a></span></div>
-<h1 class="entry-title ">Philosophers Stone</h1>
-<div class="entry-intro">It is impossible to live without failing at something, unless you live so cautiously that you might has well not have lived at all, in which case you have failed by default.</div>
-</div>
+            <nav class="entry-breadcrumbs">
+<a href="#" class="home-link"><span>Home</span></a>
+<a href="#" itemprop="item"><span>Page</span></a>
+<span class="current-page">Child Page</span>
+</nav>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
@@ -133,15 +136,15 @@ posts/ pages and archives.</p>
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-header"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-meta"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Dudley<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Dursley<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-title "</span>&gt;</span>Philosophers Stone<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-intro"</span>&gt;</span>It is impossible to live without failing at something, unless you live so cautiously that you might has well not have lived at all, in which case you have failed by default.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-breadcrumbs"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"home-link"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Page<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"current-page"</span>&gt;</span>Child Page<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>lib/elements/_entry.scss</code>, line 5
+          Source: <code>lib/elements/_entry.scss</code>, line 183
         </div>
 
     </div>
