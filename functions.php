@@ -114,7 +114,6 @@ if ( class_exists( 'EditorsKit' ) ) {
 	require get_parent_theme_file_path( 'inc/plugins/editorskit.php' );
 }
 
-
 /**
  * Load WooCommerce compatibility file.
  *
@@ -122,6 +121,15 @@ if ( class_exists( 'EditorsKit' ) ) {
  */
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_parent_theme_file_path( 'inc/plugins/woocommerce.php' );
+}
+
+/**
+ * Load WP Toolbelt compatibility file.
+ *
+ * @link https://woocommerce.com/
+ */
+if ( defined( 'TOOLBELT_VERSION' ) ) {
+	require get_parent_theme_file_path( 'inc/plugins/wp-toolbelt.php' );
 }
 
 /**
