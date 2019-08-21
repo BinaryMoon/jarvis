@@ -258,6 +258,8 @@ pre {
 	word-wrap: normal;
 	white-space: pre;
 	tab-size: 4;
+	resize: both;
+	max-width: 100vw;
 
 	&.compress {
 
