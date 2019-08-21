@@ -45,6 +45,9 @@ function jarvis_remove_jetpack_stylesheets() {
 	// Remove subscription.
 	wp_dequeue_style( 'jetpack-subscriptions' );
 
+	// Remove devicepx script.
+	wp_dequeue_script( 'devicepx' );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_remove_jetpack_stylesheets', 100 );
