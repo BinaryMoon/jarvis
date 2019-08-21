@@ -36,6 +36,8 @@
 
 	}
 
+	jarvis_related_posts();
+
 ?>
 
 	</main>
