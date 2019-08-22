@@ -116,6 +116,8 @@ function jarvis_customizer_archive( WP_Customize_Manager $wp_customize ) {
 				0 => esc_html__( 'Rows, no images (Default)', 'jarvis' ),
 				1 => esc_html__( '2 Columns, Featured Image', 'jarvis' ),
 				2 => esc_html__( '3 Columns, Featured Image (large screens only)', 'jarvis' ),
+				3 => esc_html__( 'Rows, with Featured Image on left', 'jarvis' ),
+				4 => esc_html__( 'Rows, with Featured Image on right', 'jarvis' ),
 			),
 		)
 	);

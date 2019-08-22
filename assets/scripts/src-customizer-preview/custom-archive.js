@@ -36,7 +36,7 @@
 						function( to ) {
 
 							$( 'body' )
-								.removeClass( 'archive-articles-0 archive-articles-1 archive-articles-2' )
+								.removeClass( 'archive-articles-0 archive-articles-1 archive-articles-2 archive-articles-3 archive-articles-4' )
 								.addClass( 'archive-articles-' + to );
 
 						}
