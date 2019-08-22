@@ -118,40 +118,36 @@ msgstr ""
 msgid "Black"
 msgstr ""
 
-#: inc/wordpress.php:368, parts/navigation.php:20
+#: inc/wordpress.php:366, parts/navigation.php:20
 msgid "Menu"
 msgstr ""
 
-#: inc/wordpress.php:369, parts/navigation-social.php:18
-msgid "Social Menu"
-msgstr ""
-
-#: inc/wordpress.php:418
+#: inc/wordpress.php:413
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/wordpress.php:420
+#: inc/wordpress.php:415
 msgid "Widgets that display at the bottom of your website. They are arranged in rows."
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:531
+#: inc/wordpress.php:526
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of categories
-#: inc/wordpress.php:539
+#: inc/wordpress.php:534
 msgid "Posted in: %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:544
+#: inc/wordpress.php:539
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of tags
-#: inc/wordpress.php:549
+#: inc/wordpress.php:544
 msgid "Tagged as: %1$s"
 msgstr ""
 
@@ -259,15 +255,15 @@ msgstr ""
 msgid "Right (default)"
 msgstr ""
 
-#: inc/customizer/archive.php:59, inc/customizer/single.php:59
-msgid "Alignment"
+#: inc/customizer/archive.php:59
+msgid "Title Alignment"
 msgstr ""
 
 #: inc/customizer/archive.php:64, inc/customizer/single.php:64, inc/customizer/site-header.php:53
 msgid "Center"
 msgstr ""
 
-#: inc/customizer/archive.php:85, inc/customizer/archive.php:112, inc/customizer/single.php:85
+#: inc/customizer/archive.php:85, inc/customizer/single.php:85
 msgid "Header Height"
 msgstr ""
 
@@ -283,6 +279,10 @@ msgstr ""
 msgid "Full Height"
 msgstr ""
 
+#: inc/customizer/archive.php:112
+msgid "Archive Post Layout"
+msgstr ""
+
 #: inc/customizer/archive.php:116
 msgid "Rows, no images (Default)"
 msgstr ""
@@ -293,6 +293,14 @@ msgstr ""
 
 #: inc/customizer/archive.php:118
 msgid "3 Columns, Featured Image (large screens only)"
+msgstr ""
+
+#: inc/customizer/archive.php:119
+msgid "Rows, with Featured Image on left"
+msgstr ""
+
+#: inc/customizer/archive.php:120
+msgid "Rows, with Featured Image on right"
 msgstr ""
 
 #: inc/customizer/class.jarvis_doc_link.php:25
@@ -395,6 +403,10 @@ msgstr ""
 
 #: inc/customizer/single.php:27
 msgid "Single Post & Page"
+msgstr ""
+
+#: inc/customizer/single.php:59
+msgid "Alignment"
 msgstr ""
 
 #: inc/customizer/single.php:114
