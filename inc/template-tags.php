@@ -383,3 +383,29 @@ function jarvis_breadcrumbs() {
 	}
 
 }
+
+
+/**
+ * Display the Toolbelt social menu, but only if the plugin is enabled.
+ */
+function jarvis_social_menu() {
+
+	if ( function_exists( 'toolbelt_social_menu' ) ) {
+
+		toolbelt_social_menu();
+
+	}
+
+}
+
+
+/**
+ * Embed an svg directly into the webpage.
+ *
+ * @param string $key The key for the svg file. This is the filename without the .svg.
+ */
+function jarvis_svg( $key ) {
+
+	require get_parent_theme_file_path( 'assets/svg/' . $key . '.svg' );
+
+}

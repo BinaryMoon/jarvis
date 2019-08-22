@@ -81,9 +81,6 @@ require get_parent_theme_file_path( 'inc/featured-images.php' );
 // Reusable Template Functions.
 require get_parent_theme_file_path( 'inc/template-tags.php' );
 
-// Social Icons.
-require get_parent_theme_file_path( 'inc/svg-icons.php' );
-
 // Backwards Compatability functions to ensure there are no errors with older WordPress.
 require get_parent_theme_file_path( 'inc/compat.php' );
 

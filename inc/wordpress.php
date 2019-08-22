@@ -363,12 +363,7 @@ function jarvis_after_setup_theme() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/navigation-menus/
 	 */
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__( 'Menu', 'jarvis' ),
-			'social' => esc_html__( 'Social Menu', 'jarvis' ),
-		)
-	);
+	register_nav_menu( 'menu-1', esc_html__( 'Menu', 'jarvis' ) );
 
 	/**
 	 * Editor styles.

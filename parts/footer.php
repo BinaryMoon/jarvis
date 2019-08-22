@@ -59,7 +59,7 @@
 
 <?php
 
-	get_template_part( 'parts/navigation-social' );
+	jarvis_social_menu();
 
 	jarvis_credits_content();
 
