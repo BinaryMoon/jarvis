@@ -56,7 +56,7 @@ function jarvis_customizer_archive( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		'jarvis_archive_layout',
 		array(
-			'label' => esc_html__( 'Alignment', 'jarvis' ),
+			'label' => esc_html__( 'Title Alignment', 'jarvis' ),
 			'section' => 'jarvis_archive',
 			'type' => 'radio',
 			'choices' => array(
