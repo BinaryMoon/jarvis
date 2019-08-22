@@ -9,9 +9,10 @@ Text Domain: jarvis
 Domain Path: /languages/
 Tags: blog, news, entertainment, grid-layout, one-column, accessibility-ready, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
 
-License: GNU General Public License v2.0 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-*/
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
+
+
 /*!
  *  ___        _____ _                  ___         _
  * | _ \_ _ __|_   _| |_  ___ _ __  ___|   \ ___ __(_)__ _ _ _
@@ -40,8 +41,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * 3.0 - Plugins
  *    3.1 - Akismet
  *    3.2 - Jetpack
- *    3.3 - WooCommerce
- *    3.4 - WP Post Series
+ *    3.3 - Toolbelt
+ *    3.4 - WooCommerce
+ *    3.5 - WP Post Series
  * 4.0 - Theme Layout
  *    4.1 - Archives and Excerpts.
  *    4.2 - Blocks
@@ -54,7 +56,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *    4.9 - Pagination
  *    4.10 - Page Templates
  *    4.11 - Body
- *    4.12 - Social Menu
  */
 /*!
  * 0.1 - Custom Properties
@@ -478,6 +479,8 @@ pre {
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
+	resize: both;
+	max-width: 100vw;
 }
 
 pre.compress {
@@ -1833,7 +1836,23 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 }
 
 /*!
- * 3.3 - WooCommerce
+ * 3.3 - Toolbelt
+ */
+.toolbelt-menu-social {
+	margin-bottom: 1.5rem;
+}
+
+.toolbelt-menu-social li {
+	margin-right: 0.75rem;
+}
+
+.toolbelt-menu-social .icon {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+/*!
+ * 3.4 - WooCommerce
  */
 .woocommerce h1 {
 	font-weight: bold;
@@ -2111,7 +2130,7 @@ p.demo_store {
 }
 
 /*!
- * 3.4 - WP Post Series
+ * 3.5 - WP Post Series
  */
 .wp-post-series-box {
 	border: 0.2rem dashed currentColor;
@@ -2300,6 +2319,44 @@ p.demo_store {
 	.archive-articles-1 .navigation,
 	.archive-articles-2 .navigation {
 		grid-column: 1/-1;
+	}
+	.archive-articles-4 .content-posts article.entry,
+	.archive-articles-3 .content-posts article.entry {
+		display: grid;
+		grid-template-columns: 10% calc( 40% - 3rem) 50%;
+		grid-gap: 1.5rem 1.5rem;
+	}
+	.archive-articles-4 .content-posts .entry-meta,
+	.archive-articles-3 .content-posts .entry-meta {
+		grid-column: 1 / 2;
+		margin: 0;
+	}
+	.archive-articles-4 .content-posts .entry-thumbnail,
+	.archive-articles-3 .content-posts .entry-thumbnail {
+		grid-column: 2 / 3;
+		grid-row: 1 / 3;
+		margin: 0;
+	}
+	.archive-articles-4 .content-posts .entry-title,
+	.archive-articles-3 .content-posts .entry-title {
+		grid-column: 3 / 4;
+		grid-row: 1 / 2;
+		margin: 0;
+	}
+	.archive-articles-4 .content-posts .entry-archive,
+	.archive-articles-3 .content-posts .entry-archive {
+		grid-column: 3 / 4;
+		grid-row: 2 / 3;
+	}
+	.archive-articles-4 .content-posts article.entry {
+		grid-template-columns: 10% 50% calc( 40% - 3rem);
+	}
+	.archive-articles-4 .content-posts .entry-thumbnail {
+		grid-column: 3 / 4;
+	}
+	.archive-articles-4 .content-posts .entry-title,
+	.archive-articles-4 .content-posts .entry-archive {
+		grid-column: 2 / 3;
 	}
 }
 
@@ -2564,10 +2621,6 @@ p.demo_store {
 	.content-comments {
 		padding: 7.5rem 0;
 	}
-}
-
-.content-comments .comment-reply-title {
-	margin-bottom: 0;
 }
 
 .content-comments .no-comments {
@@ -3248,24 +3301,4 @@ p.demo_store {
 	.single-layout-1 .content-single .entry-single .alignfull {
 		margin-left: calc( ( var( --wp-alignfull-size ) - 44rem ) / -2);
 	}
-}
-
-/*!
- * 4.12 - Social Menu
- */
-.menu-social ul {
-	margin: 0 0 1.5rem 0;
-	padding: 0;
-}
-
-.menu-social li {
-	list-style-type: none;
-	display: inline-block;
-	margin-right: 0.75rem;
-}
-
-.menu-social .icon {
-	width: 1.5rem;
-	height: 1.5rem;
-	stroke: none;
 }

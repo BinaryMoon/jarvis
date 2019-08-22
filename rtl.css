@@ -341,6 +341,9 @@ body #eu-cookie-law.positive input:hover {
 .widgets-list-layout .bump-view {
   margin-left: .75rem
 }
+.toolbelt-menu-social li {
+  margin-left: .75rem
+}
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
@@ -675,10 +678,4 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
   .single-layout-1 .content-single .entry-single .alignfull {
     margin-right: calc((var(--wp-alignfull-size) - 44rem)/ -2)
   }
-}
-.menu-social ul {
-  margin: 0 0 1.5rem 0
-}
-.menu-social li {
-  margin-left: .75rem
 }
