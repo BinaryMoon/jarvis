@@ -25,7 +25,7 @@ Jarvis comes bundled with a number of page templates. These can be used as follo
 * __Content Only__ - A template that removes the site header and footer and displays just the page content. This is a nice way to create totally custom layouts using the new editor. Ideal for landing pages, or store pages where the focus should be the page content.
 * __Contributors__ - A list of all the people (users) who have contributed content (published at least one post) to your website, their most recent posts, and a link to their user archive.
 * __Child Page Grid__ - Lists all of the pages that are children of the current page. Handy if you have a complex site hierachy.
-* __Portfolio__ - Displays your most recent portfolio posts. Requires the Jetpack plugin. Allows you to add portfolio posts to your website homepage.
+* __Portfolio__ - Displays your most recent portfolio posts. Requires the [Toolbelt plugin](https://wordpress.org/plugins/wp-toolbelt/). Allows you to add portfolio posts to your website homepage.
 * __Full-Width__ - Stretch the content across the entire available space. This is best for pages using a page builder or more advanced Gutenberg blocks.
 
 == Footer Credits ==
@@ -43,8 +43,6 @@ Jarvis allows you to edit or hide the footer credits. If you want to add your ow
 = Does this theme support any plugins? =
 
 Jarvis includes support for [Styleguide](https://wordpress.org/plugins/styleguide/) - a plugin that allows you to change fonts, and colours in WordPress themes.
-
-Jarvis includes support for most features in [Jetpack](https://wordpress.org/plugins/jetpack/), including Infinite Scroll, Featured Content, and Site Logo.
 
 == Changelog ==
 
