@@ -58,36 +58,6 @@ main {
 // related posts
 // ratings
 
-main div {
-
-	&.pd-rating,
-	&#jp-relatedposts,
-	&.sharedaddy {
-
-		h3.jp-relatedposts-headline em,
-		h3.sd-title {
-
-			@include jetpack-heading();
-
-			// hide the little border that appears above the headings in the default styles
-			&:before {
-
-				display: none;
-
-			}
-
-		}
-
-	}
-
-	&#jp-relatedposts {
-
-		display: none;
-
-	}
-
-}
-
 // Related posts
 #jp-relatedposts {
 

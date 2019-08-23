@@ -12,18 +12,6 @@
 
 }
 
-// Jetpack content headings
-// includes related posts, sharedaddy and ratings
-@mixin jetpack-heading {
-
-	@include post-meta-data();
-	font-family: $font-family-header;
-	margin: 0 0 ( $grid-line-height / 2 ) 0;
-	display: block;
-	font-style: normal;
-
-}
-
 // Reusable button style.
 @mixin button( $font-size: zeta ) {
 
