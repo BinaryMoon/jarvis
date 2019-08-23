@@ -1584,34 +1584,6 @@ main #jp-post-flair {
 	padding: 0;
 }
 
-main div.pd-rating h3.jp-relatedposts-headline em,
-main div.pd-rating h3.sd-title, main div#jp-relatedposts h3.jp-relatedposts-headline em,
-main div#jp-relatedposts h3.sd-title, main div.sharedaddy h3.jp-relatedposts-headline em,
-main div.sharedaddy h3.sd-title {
-	font-size: 14px;
-	font-size: 0.875rem;
-	line-height: 1.5;
-	font-family: var(--font-meta);
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	font-family: var(--font-header);
-	margin: 0 0 0.75rem 0;
-	display: block;
-	font-style: normal;
-}
-
-main div.pd-rating h3.jp-relatedposts-headline em:before,
-main div.pd-rating h3.sd-title:before, main div#jp-relatedposts h3.jp-relatedposts-headline em:before,
-main div#jp-relatedposts h3.sd-title:before, main div.sharedaddy h3.jp-relatedposts-headline em:before,
-main div.sharedaddy h3.sd-title:before {
-	display: none;
-}
-
-main div#jp-relatedposts {
-	display: none;
-}
-
 #jp-relatedposts .jp-relatedposts-items {
 	display: -webkit-box;
 	display: flex;

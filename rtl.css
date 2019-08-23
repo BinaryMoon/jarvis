@@ -297,14 +297,6 @@ main div.pd-rating,
 main div.sharedaddy {
   margin: 3rem 0
 }
-main div#jp-relatedposts h3.jp-relatedposts-headline em,
-main div#jp-relatedposts h3.sd-title,
-main div.pd-rating h3.jp-relatedposts-headline em,
-main div.pd-rating h3.sd-title,
-main div.sharedaddy h3.jp-relatedposts-headline em,
-main div.sharedaddy h3.sd-title {
-  margin: 0 0 .75rem 0
-}
 #jp-relatedposts .jp-relatedposts-post-a img {
   margin: 0 auto .75rem auto
 }
