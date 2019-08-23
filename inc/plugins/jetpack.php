@@ -18,9 +18,6 @@
  */
 function jarvis_jetpack_init() {
 
-	// Add support for Portfolio and Projects.
-	add_theme_support( 'jetpack-portfolio' );
-
 	// Add support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 
