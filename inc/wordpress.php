@@ -498,7 +498,7 @@ add_filter( 'excerpt_more', 'jarvis_excerpt_more' );
  * Add post terms (categories and tags) to the_content.
  *
  * Using this through the_content filter places it before the related posts,
- * social sharing, and other Jetpack content, which gives it more context.
+ * social sharing, and other Toolbelt content, which gives it more context.
  *
  * @param string $content The original post content.
  * @return string The modified post content.

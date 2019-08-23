@@ -213,7 +213,7 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 function jarvis_project_terms() {
 
 	$terms = get_terms(
-		'jetpack-portfolio-type',
+		'toolbelt-portfolio-type',
 		array(
 			'number' => 20,
 			'orderby' => 'count',
@@ -367,9 +367,9 @@ function jarvis_breadcrumbs() {
 	}
 
 	// Check for Toolbelt breadcrumbs.
-	if ( function_exists( 'tb_breadcrumbs' ) ) {
+	if ( function_exists( 'toolbelt_breadcrumbs' ) ) {
 
-		tb_breadcrumbs();
+		toolbelt_breadcrumbs();
 		return;
 
 	}

@@ -32,7 +32,7 @@
 		the_archive_title( '<h1 class="entry-title entry-archive-title">', '</h1>' );
 		the_archive_description( '<div class="entry-intro">', '</div>' );
 
-		if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) ) {
+		if ( is_post_type_archive( 'toolbelt-portfolio' ) || is_tax( 'toolbelt-portfolio-type' ) ) {
 			jarvis_project_terms();
 		}
 

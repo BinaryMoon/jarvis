@@ -39,7 +39,7 @@
 
 	$query = new WP_Query(
 		array(
-			'post_type' => 'jetpack-portfolio',
+			'post_type' => 'toolbelt-portfolio',
 			'posts_per_page' => 99,
 			'ignore_sticky_posts' => true,
 			'no_found_rows' => true,
