@@ -502,6 +502,10 @@ pre.compress {
 	margin-bottom: 0;
 }
 
+.entry-header .entry-meta {
+	margin-top: 3rem;
+}
+
 .entry-title {
 	letter-spacing: -0.01em;
 	font-weight: bold;
@@ -2264,10 +2268,10 @@ p.demo_store {
 		grid-column-gap: 1.5rem;
 		width: 100%;
 	}
-	.archive-articles-0 .content-posts .entry-meta {
+	.archive-articles-0 .content-posts article.entry .entry-meta {
 		margin-top: 0.3rem;
 	}
-	.archive-articles-0 .content-posts .entry-meta > span {
+	.archive-articles-0 .content-posts article.entry .entry-meta > span {
 		display: block;
 	}
 	.archive-articles-0 .content-posts .entry-title {
@@ -2298,8 +2302,8 @@ p.demo_store {
 		grid-template-columns: 10% calc( 40% - 3rem) 50%;
 		grid-gap: 1.5rem 1.5rem;
 	}
-	.archive-articles-4 .content-posts .entry-meta,
-	.archive-articles-3 .content-posts .entry-meta {
+	.archive-articles-4 .content-posts article.entry .entry-meta,
+	.archive-articles-3 .content-posts article.entry .entry-meta {
 		grid-column: 1 / 2;
 		margin: 0;
 	}

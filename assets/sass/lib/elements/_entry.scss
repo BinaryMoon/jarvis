@@ -11,6 +11,7 @@
 // <div class="entry-header">
 // <div class="entry-meta"><span>Dudley</span> <span><a href="#">Dursley</a></span></div>
 // <h1 class="entry-title {{modifier_class}}">Philosophers Stone</h1>
+// <p class="entry-meta">Chapter 1</p>
 // <div class="entry-intro">It is impossible to live without failing at something, unless you live so cautiously that you might has well not have lived at all, in which case you have failed by default.</div>
 // </div>
 //
@@ -29,6 +30,12 @@
 	p:last-of-type {
 
 		margin-bottom: 0;
+
+	}
+
+	.entry-meta {
+
+		margin-top: $grid-line-height * 2;
 
 	}
 

@@ -36,15 +36,15 @@
 				grid-column-gap: $grid-gutter;
 				width: 100%;
 
-			}
+				.entry-meta {
 
-			.entry-meta {
+					margin-top: ( $grid-line-height / 5 );
 
-				margin-top: ( $grid-line-height / 5 );
+					> span {
 
-				> span {
+						display: block;
 
-					display: block;
+					}
 
 				}
 
@@ -104,14 +104,15 @@
 				grid-template-columns: 10% calc( 40% - #{$grid-gutter * 2} ) 50%;
 				grid-gap: $grid-gutter $grid-line-height;
 
+				.entry-meta {
+
+					grid-column: 1 / 2;
+					margin: 0;
+
+				}
+
 			}
 
-			.entry-meta {
-
-				grid-column: 1 / 2;
-				margin: 0;
-
-			}
 
 			.entry-thumbnail {
 
