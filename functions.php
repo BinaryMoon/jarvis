@@ -125,9 +125,7 @@ if ( class_exists( 'WooCommerce' ) ) {
  *
  * @link https://woocommerce.com/
  */
-if ( defined( 'TOOLBELT_VERSION' ) ) {
-	require get_parent_theme_file_path( 'inc/plugins/wp-toolbelt.php' );
-}
+require get_parent_theme_file_path( 'inc/plugins/wp-toolbelt.php' );
 
 /**
  * Add support for WP-Post-Series plugin
