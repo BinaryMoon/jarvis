@@ -132,3 +132,21 @@
 	}
 
 }
+
+.header-border-1 {
+
+	border-top: ( $grid-line-height / 4 ) solid $black;
+
+}
+
+.header-border-2 {
+
+	border-top: ( $grid-line-height / 2 ) solid $black;
+
+}
+
+.header-border-3 {
+
+	border-top: $grid-line-height solid $black;
+
+}
