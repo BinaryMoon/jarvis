@@ -280,8 +280,11 @@ function jarvis_archive_image() {
 	 * display them if it's the customizer preview so that we can easily toggle
 	 * between layouts.
 	 */
-	if ( 0 === $archive_articles && ! is_customize_preview() ) {
-		return false;
+	if ( ! is_customize_preview() ) {
+
+		if ( 0 === $archive_articles ) {
+			return false;
+		}
 	}
 
 	return get_the_post_thumbnail( get_the_ID(), 'jarvis-archive' );
