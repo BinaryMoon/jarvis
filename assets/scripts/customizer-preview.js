@@ -361,6 +361,29 @@
 				}
 			);
 
+			// Edit Header Layout.
+			wp.customize(
+				'jarvis_header_border',
+				function( value ) {
+					value.bind(
+						function( to ) {
+
+							var count = 3;
+							var selectors = '';
+
+							for ( i = 0; i <= count; i++ ) {
+								selectors += ' header-border-' + i;
+							}
+
+							$( 'body' )
+								.removeClass( selectors )
+								.addClass( 'header-border-' + to );
+
+						}
+					);
+				}
+			);
+
 			// Edit Archive Header Height.
 			wp.customize(
 				'jarvis_archive_header_height',
