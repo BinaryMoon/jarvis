@@ -361,7 +361,7 @@
 				}
 			);
 
-			// Edit Header Layout.
+			// Edit Header Border.
 			wp.customize(
 				'jarvis_header_border',
 				function( value ) {
