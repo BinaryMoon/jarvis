@@ -1,6 +1,11 @@
 <?php
 /**
- * WP Post Series
+ * WP Toolbelt
+ *
+ * @see https://wordpress.org/plugins/wp-toolbelt/
+ *
+ * Toolbelt styles are customized in:
+ * @see https://github.com/BinaryMoon/jarvis/blob/master/assets/sass/lib/plugins/_toolbelt.scss
  *
  * @package Jarvis
  */

@@ -2,6 +2,12 @@
  * ## - Toolbelt
  */
 
+body {
+
+	--toolbelt-spacing: #{$grid-line-height};
+
+}
+
 .toolbelt-menu-social {
 
 	margin-bottom: $grid-line-height;
