@@ -1814,6 +1814,10 @@ body .widgets-list-layout img.widgets-list-layout-blavatar {
 /*!
  * 3.3 - Toolbelt
  */
+body {
+	--toolbelt-spacing: 1.5rem;
+}
+
 .toolbelt-menu-social {
 	margin-bottom: 1.5rem;
 }

@@ -93,16 +93,16 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: inc/template-tags.php:329
+#: inc/template-tags.php:332
 msgid "Top"
 msgstr ""
 
 #. translators: %1$s = theme name, %2$s = theme author website
-#: inc/template-tags.php:331
+#: inc/template-tags.php:334
 msgid "Theme: %1$s by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:343
+#: inc/template-tags.php:346
 msgid "RSS Feed"
 msgstr ""
 
@@ -446,21 +446,41 @@ msgid "Side Fixed"
 msgstr ""
 
 #: inc/customizer/site-header.php:75
-msgid "Title Display"
+msgid "Header Border"
 msgstr ""
 
 #: inc/customizer/site-header.php:79
-msgid "Display Title and Description"
+msgid "No border (Default)"
 msgstr ""
 
 #: inc/customizer/site-header.php:80
-msgid "Display Title only"
+msgid "Small border"
 msgstr ""
 
 #: inc/customizer/site-header.php:81
+msgid "Medium border"
+msgstr ""
+
+#: inc/customizer/site-header.php:82
+msgid "Thick border"
+msgstr ""
+
+#: inc/customizer/site-header.php:103
+msgid "Title Display"
+msgstr ""
+
+#: inc/customizer/site-header.php:107
+msgid "Display Title and Description"
+msgstr ""
+
+#: inc/customizer/site-header.php:108
+msgid "Display Title only"
+msgstr ""
+
+#: inc/customizer/site-header.php:109
 msgid "Hide Title and Description"
 msgstr ""
 
-#: inc/customizer/site-header.php:104
+#: inc/customizer/site-header.php:132
 msgid "Title Color"
 msgstr ""
