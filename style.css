@@ -597,7 +597,6 @@ pre.compress {
 }
 
 .entry-breadcrumbs {
-	margin-bottom: 3rem;
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
@@ -605,32 +604,6 @@ pre.compress {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-}
-
-.entry-breadcrumbs > a,
-.entry-breadcrumbs > span {
-	display: inline-block;
-}
-
-.entry-breadcrumbs a {
-	font-weight: bold;
-	position: relative;
-	text-decoration: none;
-}
-
-.entry-breadcrumbs a span {
-	text-decoration: underline;
-}
-
-.entry-breadcrumbs a:focus span, .entry-breadcrumbs a:hover span {
-	text-decoration: none;
-}
-
-.entry-breadcrumbs a:after {
-	content: '\25B6';
-	font-family: var(--font-monospace);
-	margin: 0 0.75rem;
-	font-size: 10px;
 }
 
 input[type=button],

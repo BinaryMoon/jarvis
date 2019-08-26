@@ -43,9 +43,6 @@ pre {
 .entry-author {
   margin: 4.5rem 0
 }
-.entry-breadcrumbs a:after {
-  margin: 0 .75rem
-}
 .button,
 .wp-block-button__link,
 button,
