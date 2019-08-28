@@ -73,7 +73,7 @@ input[type=radio] {
 }
 @supports (-webkit-appearance:none) {
   input[type=checkbox]:checked::after {
-    right: 2px;
+    right: .1rem;
     border-left: none;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
@@ -82,7 +82,7 @@ input[type=radio] {
     border-radius: 1.5rem
   }
   input[type=radio]:checked::after {
-    right: .15rem;
+    right: .175rem;
     border-radius: 1.5rem
   }
 }
