@@ -59,8 +59,8 @@ input {
 		&:checked::after {
 
 			position: absolute;
-			top: 3px;
-			left: 2px;
+			top: 0.2rem;
+			left: 0.1rem;
 
 			content: "";
 			width: 0.9rem;
@@ -100,8 +100,8 @@ input {
 		&:checked::after {
 
 			position: absolute;
-			top: 0.15rem;
-			left: 0.15rem;
+			top: 0.175rem;
+			left: 0.175rem;
 			width: 0.75rem;
 			height: 0.75rem;
 			background: $black;
