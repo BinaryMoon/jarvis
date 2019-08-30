@@ -282,9 +282,6 @@ object {
 img#wpstats {
   right: -100px
 }
-.jetpack-video-wrapper {
-  margin: 3rem 0
-}
 .tiled-gallery {
   margin: 3rem 0
 }
@@ -332,6 +329,9 @@ body #eu-cookie-law.positive input:hover {
 }
 .toolbelt-menu-social li {
   margin-left: .75rem
+}
+.toolbelt-video-wrapper {
+  margin: 3rem 0
 }
 .woocommerce #respond input#submit,
 .woocommerce a.button,

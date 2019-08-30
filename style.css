@@ -1539,15 +1539,6 @@ img#wpstats {
 	height: 10px;
 }
 
-.jetpack-video-wrapper {
-	width: 100%;
-	margin: 3rem 0;
-}
-
-.jetpack-video-wrapper iframe {
-	max-width: 100%;
-}
-
 .tiled-gallery {
 	margin: 3rem 0;
 }
@@ -1802,6 +1793,10 @@ body {
 .toolbelt-menu-social .icon {
 	width: 1.5rem;
 	height: 1.5rem;
+}
+
+.toolbelt-video-wrapper {
+	margin: 3rem 0;
 }
 
 /*!
@@ -2203,7 +2198,7 @@ p.demo_store {
 	margin: 0;
 }
 
-.content-posts article.entry.format-video .jetpack-video-wrapper {
+.content-posts article.entry.format-video .toolbelt-video-wrapper {
 	margin-top: 0;
 	margin-bottom: 0.75rem;
 }
