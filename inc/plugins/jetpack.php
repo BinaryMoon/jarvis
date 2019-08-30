@@ -9,27 +9,12 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-/**
- * Add theme support for Jetpack plugin features.
- *
- * @link https://jetpack.com/support/custom-content-types/
- * @link https://jetpack.com/support/responsive-videos/
- * @link https://jetpack.com/support/social-menu/
- */
-function jarvis_jetpack_init() {
-
-	// Add support for Responsive Videos.
-	add_theme_support( 'jetpack-responsive-videos' );
-
-}
-
-add_action( 'after_setup_theme', 'jarvis_jetpack_init' );
-
 
 /**
  * Remove some of the default Jetpack styles.
  *
- * The styles are taken care of by the default theme styles, so custom styles are not required.
+ * The styles are taken care of by the theme styles, so custom styles are not
+ * required.
  */
 function jarvis_remove_jetpack_stylesheets() {
 
@@ -70,31 +55,6 @@ add_action( 'wp_print_styles', 'jarvis_remove_grunion_style' );
  * We dequeue a number of the Jetpack styles so this stops them from being loaded.
  */
 add_filter( 'jetpack_implode_frontend_css', '__return_false' );
-
-
-/**
- * Use the Jetpack Video Embed HTML to make sure the video post types are responsive.
- *
- * Has a simple fallback in case Jetpack is not being used.
- *
- * @param string $html Video html.
- * @return string html wrapper with the video wrapper.
- */
-function jarvis_video_wrapper( $html ) {
-
-	if ( function_exists( 'jetpack_responsive_videos_embed_html' ) ) {
-
-		// If Jetpack integrated function exists then uses that.
-		return jetpack_responsive_videos_embed_html( $html );
-
-	} else {
-
-		// If not use this. It does enough that I we can style the videos with css.
-		return '<div class="jetpack-video-wrapper">' . $html . '</div>';
-
-	}
-
-}
 
 
 /**

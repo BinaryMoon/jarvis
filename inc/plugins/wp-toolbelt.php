@@ -33,8 +33,28 @@ function jarvis_related_posts() {
 
 }
 
+
 /**
  * Disable the default related posts output.
  * Jarvis adds the posts after the comments.
  */
 add_filter( 'toolbelt_related_posts', '__return_false' );
+
+
+/**
+ * Use Toolbelt video wrapper if it exists.
+ *
+ * @param string $html The html to wrap.
+ * @return string
+ */
+function jarvis_video_wrapper( $html ) {
+
+	if ( function_exists( 'toolbelt_responsive_video_embed_html' ) ) {
+
+		return toolbelt_responsive_video_embed_html( $html );
+
+	}
+
+	return $html;
+
+}
