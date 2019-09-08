@@ -21,7 +21,6 @@ parameters:
         - %currentWorkingDirectory%/inc/customizer/customizer-sanitization.php
         - %currentWorkingDirectory%/inc/customizer/fonts.php
         - %currentWorkingDirectory%/inc/customizer/footer.php
-        - %currentWorkingDirectory%/inc/customizer/loader.php
         - %currentWorkingDirectory%/inc/customizer/settings.php
         - %currentWorkingDirectory%/inc/customizer/single.php
         - %currentWorkingDirectory%/inc/customizer/site-header.php
