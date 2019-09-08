@@ -77,7 +77,7 @@ function jarvis_is_woocommerce() {
  * Disable sidebar on WooCommerce pages
  *
  * @param  boolean $is_active_sidebar Current value of sidebar visibility.
- * @param  boolean $index             Sidebar to test.
+ * @param  string  $index             Sidebar to test.
  * @return boolean                    Whether to display the sidebar or not.
  */
 function jarvis_wc_is_sidebar_active( $is_active_sidebar, $index ) {
