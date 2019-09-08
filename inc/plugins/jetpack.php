@@ -9,7 +9,6 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-
 /**
  * Remove some of the default Jetpack styles.
  *

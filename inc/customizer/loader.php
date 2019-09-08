@@ -23,10 +23,10 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 require get_parent_theme_file_path( 'inc/customizer/customizer-sanitization.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // A custom control that allows users to select fonts.
-require get_parent_theme_file_path( 'inc/customizer/class.jarvis_dropdown_fonts.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+require get_parent_theme_file_path( 'inc/customizer/class-jarvis-dropdown-fonts.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // A custom control that adds a link to the docs in the customizer.
-require get_parent_theme_file_path( 'inc/customizer/class.jarvis_doc_link.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+require get_parent_theme_file_path( 'inc/customizer/class-jarvis-doc-link.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // Customizer controls for setting theme properties.
 require get_parent_theme_file_path( 'inc/customizer/settings.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound

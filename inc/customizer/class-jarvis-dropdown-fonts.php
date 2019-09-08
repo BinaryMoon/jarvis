@@ -21,15 +21,20 @@ class Jarvis_Font_Selector extends WP_Customize_Control {
 	 */
 	public $choices = array();
 
+	/**
+	 * The default value.
+	 *
+	 * @var string
+	 */
 	public $default = '';
 
 
 	/**
 	 * Construct the widget
 	 *
-	 * @param type $manager
-	 * @param type $id
-	 * @param type $args
+	 * @param object $manager WP_Customize_Control manager object.
+	 * @param string $id The control id.
+	 * @param array  $args The control parameters.
 	 */
 	public function __construct( $manager, $id, $args = array() ) {
 

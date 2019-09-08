@@ -124,7 +124,6 @@ function jarvis_has_header_image() {
 			return true;
 
 		}
-
 	}
 
 	return false;

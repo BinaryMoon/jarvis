@@ -10,10 +10,10 @@
  */
 
 /**
- * Add classname suggestions
+ * Add classname suggestions.
  *
- * @param array $classes default classnames
- * @return array Add theme utility classes
+ * @param array $classes Default classnames.
+ * @return array Add theme utility classes.
  */
 function jarvis_editorskit_classnames( $classes ) {
 
