@@ -26,6 +26,7 @@
 	padding: $grid-line-height $grid-gutter $grid-line-height ( $grid-gutter * 3 );
 	position: relative;
 	box-shadow: $border-shadow;
+	margin: 0 0 $grid-line-height 0;
 
 	&:before {
 
@@ -37,6 +38,12 @@
 		left: $grid-gutter;
 		font-size: 1.5rem;
 		line-height: inherit;
+
+	}
+
+	> *:last-child {
+
+		margin-bottom: 0;
 
 	}
 

@@ -1,0 +1,96 @@
+/*!
+ * ## - GiveWP
+ */
+
+.give-page {
+
+	.give_forms {
+
+		display: flex;
+		flex-direction: column;
+
+		@include for-tablet {
+
+			flex-direction: row;
+
+		}
+
+	}
+
+	.give-list-inline {
+
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+
+			display: inline;
+			margin: 0 $grid-gutter 0 0;
+
+		}
+
+	}
+
+	.give-sidebar {
+
+		padding: 0 $grid-gutter;
+
+		> * {
+
+			margin-bottom: $grid-line-height;
+
+		}
+
+		.widget {
+
+			padding: 0;
+
+		}
+
+		@include for-tablet {
+
+			max-width: 25rem;
+
+		}
+
+	}
+
+	.entry-summary {
+
+		padding: 0 $grid-gutter;
+
+	}
+
+	#give-gateway-radio-list {
+
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+
+			display: block;
+
+		}
+
+		label {
+
+			display: inline;
+
+		}
+
+	}
+
+	.give_warning {
+
+		@extend .block-error;
+
+	}
+
+}
+
+.container form[id*=give-form] #give-gateway-radio-list>li input[type=radio]{
+	// width: 1.5rem;
+	display: inline-block;
+}

@@ -192,7 +192,9 @@ div.jetpack-testimonial-shortcode {
 // grunion contact form
 form.contact-form {
 
-	div {
+	.grunion-field-wrap {
+
+		margin-bottom: ( $grid-line-height / 2 );
 
 		label {
 
