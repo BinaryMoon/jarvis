@@ -5,7 +5,7 @@ parameters:
     level: max
     paths:
         - %currentWorkingDirectory%/inc/
-	autoload_directories:
+    autoload_directories:
         - %currentWorkingDirectory%/inc/
         - %currentWorkingDirectory%/inc/customizer/
         - %currentWorkingDirectory%/inc/plugins/
