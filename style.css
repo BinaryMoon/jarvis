@@ -2,7 +2,7 @@
 Theme Name: Jarvis
 Theme URI: https://wordpress.com/theme/jarvis/
 Description:
-Version: 1.0.alpha-33
+Version: 1.0.alpha-34
 Author: Pro Theme Design
 Author URI: https://prothemedesign.com/
 Text Domain: jarvis
@@ -816,6 +816,30 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 	appearance: none;
+}
+
+::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: var(--foreground-color);
+	opacity: 0.4;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: var(--foreground-color);
+	opacity: 0.4;
+}
+
+:-ms-input-placeholder {
+	/* IE 10+ */
+	color: var(--foreground-color);
+	opacity: 0.4;
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: var(--foreground-color);
+	opacity: 0.4;
 }
 
 select {
@@ -1653,26 +1677,30 @@ div.jetpack-testimonial-shortcode.column-4 .testimonial-entry:nth-of-type(4n + 1
 	clear: both;
 }
 
-form.contact-form div label.grunion-radio-label, form.contact-form div label.grunion-checkbox-multiple-label {
+form.contact-form .grunion-field-wrap {
+	margin-bottom: 0.75rem;
+}
+
+form.contact-form .grunion-field-wrap label.grunion-radio-label, form.contact-form .grunion-field-wrap label.grunion-checkbox-multiple-label {
 	font-weight: normal;
 }
 
-form.contact-form div label.grunion-radio-label input, form.contact-form div label.grunion-checkbox-multiple-label input {
+form.contact-form .grunion-field-wrap label.grunion-radio-label input, form.contact-form .grunion-field-wrap label.grunion-checkbox-multiple-label input {
 	margin-bottom: 0;
 }
 
-form.contact-form div label.grunion-radio-label:last-of-type, form.contact-form div label.grunion-checkbox-multiple-label:last-of-type {
+form.contact-form .grunion-field-wrap label.grunion-radio-label:last-of-type, form.contact-form .grunion-field-wrap label.grunion-checkbox-multiple-label:last-of-type {
 	margin-bottom: 1.5rem;
 }
 
-form.contact-form div label span {
+form.contact-form .grunion-field-wrap label span {
 	color: var(--foreground-color);
 	font-style: italic;
 	padding: 0 0.75rem;
 	font-weight: normal;
 }
 
-form.contact-form div.clear-form {
+form.contact-form .grunion-field-wrap.clear-form {
 	display: none;
 }
 
@@ -2121,6 +2149,7 @@ p.demo_store {
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
 	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	margin: 0 0 1.5rem 0;
 }
 
 .block-info:before,
@@ -2136,6 +2165,15 @@ p.demo_store {
 	left: 1.5rem;
 	font-size: 1.5rem;
 	line-height: inherit;
+}
+
+.block-info > *:last-child,
+.block-help > *:last-child,
+.block-alert > *:last-child,
+.block-success > *:last-child,
+.block-error > *:last-child,
+.block-announcement > *:last-child {
+	margin-bottom: 0;
 }
 
 .block-alert:before {

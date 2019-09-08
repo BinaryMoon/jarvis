@@ -307,7 +307,7 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image img {
   margin-left: .5rem;
   margin-right: 0
 }
-form.contact-form div label span {
+form.contact-form .grunion-field-wrap label span {
   padding: 0 .75rem
 }
 body #eu-cookie-law {
@@ -416,7 +416,8 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .block-info,
 .block-success {
   padding: 1.5rem 4.5rem 1.5rem 1.5rem;
-  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color)
+  box-shadow: 0 0 0 1px var(--background-color),-.2rem .2rem 0 var(--foreground-color);
+  margin: 0 0 1.5rem 0
 }
 .block-alert:before,
 .block-announcement:before,
