@@ -4,17 +4,34 @@ includes:
 parameters:
     level: max
     paths:
-        - %currentWorkingDirectory%/
         - %currentWorkingDirectory%/inc/
-        - %currentWorkingDirectory%/parts/
-        - %currentWorkingDirectory%/templates/
-    autoload_directories:
-        - %currentWorkingDirectory%/inc/
-        - %currentWorkingDirectory%/inc/customizer/
-        - %currentWorkingDirectory%/inc/plugins/
-        - %currentWorkingDirectory%/parts/
-        - %currentWorkingDirectory%/templates/
     autoload_files:
+        # Inc
+        - %currentWorkingDirectory%/inc/compat.php
+        - %currentWorkingDirectory%/inc/custom-header.php
+        - %currentWorkingDirectory%/inc/featured-images.php
+        - %currentWorkingDirectory%/inc/styles.php
+        - %currentWorkingDirectory%/inc/template-tags.php
+        - %currentWorkingDirectory%/inc/wordpress-html-classes.php
+        - %currentWorkingDirectory%/inc/wordpress.php
+        # Customizer
+        - %currentWorkingDirectory%/inc/customizer/archive.php
+        - %currentWorkingDirectory%/inc/customizer/class.jarvis_doc_link.php
+        - %currentWorkingDirectory%/inc/customizer/class.jarvis_dropdown_fonts.php
+        - %currentWorkingDirectory%/inc/customizer/customizer-sanitization.php
+        - %currentWorkingDirectory%/inc/customizer/fonts.php
+        - %currentWorkingDirectory%/inc/customizer/footer.php
+        - %currentWorkingDirectory%/inc/customizer/loader.php
+        - %currentWorkingDirectory%/inc/customizer/settings.php
+        - %currentWorkingDirectory%/inc/customizer/single.php
+        - %currentWorkingDirectory%/inc/customizer/site-header.php
+        # Plugins
+        - %currentWorkingDirectory%/inc/plugins/editorskit.php
+        - %currentWorkingDirectory%/inc/plugins/give.php
+        - %currentWorkingDirectory%/inc/plugins/jetpack.php
+        - %currentWorkingDirectory%/inc/plugins/woocommerce.php
+        - %currentWorkingDirectory%/inc/plugins/wp-post-series.php
+        - %currentWorkingDirectory%/inc/plugins/wp-toolbelt.php
     ignoreErrors:
         # Uses func_get_args()
         - '#^Function add_query_arg invoked with [123] parameters?, 0 required\.$#'
