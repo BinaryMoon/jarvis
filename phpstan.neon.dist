@@ -17,7 +17,7 @@ parameters:
         # Customizer
         - %currentWorkingDirectory%/inc/customizer/archive.php
         - %currentWorkingDirectory%/inc/customizer/class-jarvis-doc-link.php
-        - %currentWorkingDirectory%/inc/customizer/class-jarvis-dropdown-fonts.php
+        - %currentWorkingDirectory%/inc/customizer/class-jarvis-font-selector.php
         - %currentWorkingDirectory%/inc/customizer/customizer-sanitization.php
         - %currentWorkingDirectory%/inc/customizer/fonts.php
         - %currentWorkingDirectory%/inc/customizer/footer.php

@@ -10,10 +10,9 @@
 
 /**
  * Return a list of websafe fonts.
+ * The font list was inspired by Pro Theme Design.
  *
- * The font list was retried from Pro Theme Design:
- * @see https://github.com/BinaryMoon/pro-theme-design/blob/master/views/_tools/_websafe-fonts/index.php
- *
+ * @link https://github.com/BinaryMoon/pro-theme-design/blob/master/views/_tools/_websafe-fonts/index.php
  * @uses inc/customizer/fonts.php
  */
 function jarvis_get_fonts() {
