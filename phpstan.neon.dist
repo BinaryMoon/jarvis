@@ -4,11 +4,16 @@ includes:
 parameters:
     level: max
     paths:
+        - %currentWorkingDirectory%/
         - %currentWorkingDirectory%/inc/
+        - %currentWorkingDirectory%/parts/
+        - %currentWorkingDirectory%/templates/
     autoload_directories:
         - %currentWorkingDirectory%/inc/
         - %currentWorkingDirectory%/inc/customizer/
         - %currentWorkingDirectory%/inc/plugins/
+        - %currentWorkingDirectory%/parts/
+        - %currentWorkingDirectory%/templates/
     autoload_files:
     ignoreErrors:
         # Uses func_get_args()
