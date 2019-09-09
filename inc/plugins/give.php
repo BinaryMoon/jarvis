@@ -1,6 +1,8 @@
 <?php
 /**
+ * Add support for the GiveWP plugin.
  *
+ * @package Jarvis
  */
 
 /**

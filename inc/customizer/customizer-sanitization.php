@@ -73,7 +73,7 @@ function jarvis_sanitize_int( $setting ) {
  * Would be so much nicer if sanitize_hex_color was available to themes! :)
  *
  * @param string $color Value to sanitize.
- * @return hex|string Returns clean colour, or empty string if not a valid colour.
+ * @return string Returns clean colour, or empty string if not a valid colour.
  */
 function jarvis_sanitize_hex_color( $color ) {
 

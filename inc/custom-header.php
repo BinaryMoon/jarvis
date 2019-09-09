@@ -45,10 +45,14 @@ add_action( 'after_setup_theme', 'jarvis_custom_header_support' );
  * @param int    $lighter_than The brightness to check against.
  * @return boolean true if lighter than, false otherwise.
  */
-function jarvis_colour_brightness( $color = false, $lighter_than = 130 ) {
+function jarvis_colour_brightness( $color = '', $lighter_than = 130 ) {
 
-	if ( ! $color ) {
-		return 0;
+	/**
+	 * IF no colour default to true, since this probably means we are using a
+	 * light background which requires a true value so we can use dark text.
+	 */
+	if ( empty( $color ) ) {
+		return true;
 	}
 
 	$color = str_replace( '#', '', $color );
@@ -58,7 +62,7 @@ function jarvis_colour_brightness( $color = false, $lighter_than = 130 ) {
 	$g = hexdec( $color[2] . $color[3] );
 	$b = hexdec( $color[4] . $color[5] );
 
-	return ( ( $r * 299 + $g * 587 + $b * 114 ) / 1000 > $lighter_than );
+	return (bool) ( ( $r * 299 + $g * 587 + $b * 114 ) / 1000 > $lighter_than );
 
 }
 
@@ -124,7 +128,6 @@ function jarvis_has_header_image() {
 			return true;
 
 		}
-
 	}
 
 	return false;
@@ -144,11 +147,11 @@ function jarvis_header_height() {
 
 	if ( is_singular() ) {
 
-		$header_height = (int) get_theme_mod( 'jarvis_single_header_height', 1 );
+		$header_height = get_theme_mod( 'jarvis_single_header_height', '1' );
 
 	} else {
 
-		$header_height = (int) get_theme_mod( 'jarvis_archive_header_height', 1 );
+		$header_height = get_theme_mod( 'jarvis_archive_header_height', '1' );
 
 	}
 

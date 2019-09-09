@@ -27,7 +27,7 @@ function jarvis_enqueue() {
 	wp_enqueue_style(
 		'jarvis-style',
 		get_template_directory_uri() . '/style.css',
-		null,
+		array(),
 		jarvis_get_theme_version( '/style.css' )
 	);
 
@@ -38,7 +38,7 @@ function jarvis_enqueue() {
 	wp_enqueue_script(
 		'jarvis-script-global',
 		jarvis_get_script_file(),
-		null,
+		array(),
 		jarvis_get_theme_version( '/assets/scripts/global.js' ),
 		true
 	);
@@ -64,7 +64,12 @@ add_action( 'wp_enqueue_scripts', 'jarvis_enqueue' );
  * By default loading the styles blocks rendering. By setting the media type to
  * print, and then changing the media type when loading completes, we ensure the
  * site loads quickly.
+ *
  * @see https://www.filamentgroup.com/lab/load-css-simpler/
+ *
+ * @param string $html The style element html.
+ * @param string $handle The name of the current style.
+ * @return string
  */
 function jarvis_on_style_load( $html, $handle ) {
 
@@ -136,7 +141,7 @@ add_action( 'enqueue_block_editor_assets', 'jarvis_editor_blocks_styles' );
 function jarvis_get_custom_properties() {
 
 	$properties = array(
-		'background-color' => get_background_color()
+		'background-color' => get_background_color(),
 	);
 
 	return $properties;
@@ -303,6 +308,7 @@ function jarvis_after_setup_theme() {
 	 *
 	 * This does not include support for the search-form since Jarvis has its
 	 * own form layout.
+	 *
 	 * @see searchform.php
 	 *
 	 * @link https://codex.wordpress.org/Theme_Markup
@@ -743,7 +749,8 @@ add_filter( 'get_the_author_description', 'shortcode_unautop' );
  * Get the version value for the specified file.
  * Helps to decache media.
  *
- * @param string filepath The file to check.
+ * @param string $filepath The file to check.
+ * @return string
  */
 function jarvis_get_theme_version( $filepath = '' ) {
 
@@ -759,6 +766,8 @@ function jarvis_get_theme_version( $filepath = '' ) {
 /**
  * Get the path for the global javascript file.
  * Get the minified version for production and the full version for dev.
+ *
+ * @return string
  */
 function jarvis_get_script_file() {
 

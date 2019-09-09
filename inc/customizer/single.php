@@ -10,7 +10,6 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-
 /**
  * Theme Customizer properties
  *
@@ -182,7 +181,6 @@ function jarvis_customizer_single( WP_Customize_Manager $wp_customize ) {
 			'type' => 'checkbox',
 		)
 	);
-
 
 	/**
 	 * Setting to show/ hide post tags and categories.

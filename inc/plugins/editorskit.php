@@ -10,10 +10,10 @@
  */
 
 /**
- * Add classname suggestions
+ * Add classname suggestions.
  *
- * @param array $classes default classnames
- * @return array Add theme utility classes
+ * @param array $classes Default classnames.
+ * @return array Add theme utility classes.
  */
 function jarvis_editorskit_classnames( $classes ) {
 
@@ -34,4 +34,4 @@ function jarvis_editorskit_classnames( $classes ) {
 	return $classes;
 }
 
-add_filter( 'jarvis_editorskit_classnames', 'editorskit_jarvis_classnames', 10, 3 );
+add_filter( 'jarvis_editorskit_classnames', 'jarvis_editorskit_classnames', 10, 3 );

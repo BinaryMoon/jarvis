@@ -10,10 +10,9 @@
 
 /**
  * Return a list of websafe fonts.
+ * The font list was inspired by Pro Theme Design.
  *
- * The font list was retried from Pro Theme Design:
- * @see https://github.com/BinaryMoon/pro-theme-design/blob/master/views/_tools/_websafe-fonts/index.php
- *
+ * @link https://github.com/BinaryMoon/pro-theme-design/blob/master/views/_tools/_websafe-fonts/index.php
  * @uses inc/customizer/fonts.php
  */
 function jarvis_get_fonts() {
@@ -149,7 +148,7 @@ function jarvis_get_single_css() {
  */
 function jarvis_title_styles() {
 
-	$header_visibility = (int) get_theme_mod( 'jarvis_site_title', 0 );
+	$header_visibility = (int) get_theme_mod( 'jarvis_site_title', '0' );
 	$styles = array();
 
 	$hide = '{ clip: rect( 1px, 1px, 1px, 1px ); position: absolute; }';

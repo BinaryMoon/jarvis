@@ -28,7 +28,13 @@ add_filter( 'toolbelt_related_posts_thumbnail_size', 'jarvis_toolbelt_related_po
 function jarvis_related_posts() {
 
 	if ( function_exists( 'toolbelt_related_posts_get' ) ) {
-		echo toolbelt_related_posts_get();
+		/**
+		 * Output Toolbelt related posts.
+		 *
+		 * This is fully escaped on the plugin so there's no need to escape it
+		 * again.
+		 */
+		echo toolbelt_related_posts_get(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 }
