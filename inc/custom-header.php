@@ -147,11 +147,11 @@ function jarvis_header_height() {
 
 	if ( is_singular() ) {
 
-		$header_height = (int) get_theme_mod( 'jarvis_single_header_height', 1 );
+		$header_height = get_theme_mod( 'jarvis_single_header_height', '1' );
 
 	} else {
 
-		$header_height = (int) get_theme_mod( 'jarvis_archive_header_height', 1 );
+		$header_height = get_theme_mod( 'jarvis_archive_header_height', '1' );
 
 	}
 

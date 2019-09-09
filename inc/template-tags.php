@@ -46,7 +46,7 @@ function jarvis_post_author() {
 
 	echo sprintf(
 		'<span class="byline meta author v-card"><a class="url fn n p-name u-url" href="%s">%s</a></span>',
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_url( get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
 		esc_html( get_the_author() )
 	);
 
@@ -273,7 +273,7 @@ function jarvis_project_terms() {
  */
 function jarvis_archive_image() {
 
-	$archive_articles = (int) get_theme_mod( 'jarvis_archive_articles', 0 );
+	$archive_articles = (int) get_theme_mod( 'jarvis_archive_articles', '0' );
 
 	/**
 	 * Featured images do not display on $archive_articles = 0 however we still

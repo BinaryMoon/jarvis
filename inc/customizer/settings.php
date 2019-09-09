@@ -161,7 +161,7 @@ function jarvis_customize_controls_js() {
 	wp_enqueue_style(
 		'jarvis-customizer-styles',
 		get_theme_file_uri( '/assets/css/customizer.css' ),
-		null,
+		array(),
 		jarvis_get_theme_version( '/assets/css/customizer.css' )
 	);
 

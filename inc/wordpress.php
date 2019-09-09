@@ -27,7 +27,7 @@ function jarvis_enqueue() {
 	wp_enqueue_style(
 		'jarvis-style',
 		get_template_directory_uri() . '/style.css',
-		null,
+		array(),
 		jarvis_get_theme_version( '/style.css' )
 	);
 
@@ -38,7 +38,7 @@ function jarvis_enqueue() {
 	wp_enqueue_script(
 		'jarvis-script-global',
 		jarvis_get_script_file(),
-		null,
+		array(),
 		jarvis_get_theme_version( '/assets/scripts/global.js' ),
 		true
 	);
