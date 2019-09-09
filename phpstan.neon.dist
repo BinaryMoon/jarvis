@@ -35,3 +35,4 @@ parameters:
         # Uses func_get_args()
         - '#^Function add_query_arg invoked with [123] parameters?, 0 required\.$#'
         - '#^Function [a-zA-Z_]+ invoked with [1-9] parameters?, [0-9] required\.$#'
+        - '#^Function [a-zA-Z_]+ not found\.$#'
