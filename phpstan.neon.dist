@@ -37,5 +37,5 @@ parameters:
 		# Function not found errors, mostly a problem when adding support for
 		# third party plugins like WooCommerce, Jetpack & Toolbelt
         - '#^Function [a-zA-Z_]+ not found\.$#'
-		# Hide WooCommerce error since function does not exist.
-		-'#^Parameter \#2 \$function_to_remove of function remove_action expects callable\(\): mixed, \'woocommerce_output…\' given\.$#'
+        # Hide WooCommerce error since function does not exist.
+        -'#^Parameter \#2 \$function_to_remove of function remove_action expects callable\(\): mixed, \'woocommerce_output…\' given\.$#'
