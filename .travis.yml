@@ -12,7 +12,7 @@ install:
 script:
   - vendor/bin/parallel-lint inc/ inc/customizer/ inc/plugins/
   - vendor/bin/phpcs -n -s inc/ inc/customizer/ inc/plugins/
-  - vendor/bin/phpstan analyze -l 5
+  - vendor/bin/phpstan analyze -l 4
 
 notifications:
   email:
