@@ -33,6 +33,7 @@ parameters:
         - %currentWorkingDirectory%/inc/plugins/wp-toolbelt.php
     ignoreErrors:
         # Uses func_get_args()
-        - '#^Function add_query_arg invoked with [123] parameters?, 0 required\.$#'
         - '#^Function [a-zA-Z_]+ invoked with [1-9] parameters?, [0-9\-]+ required\.$#'
+		# Function not found errors, mostly a problem when adding support for
+		# third party plugins like WooCommerce, Jetpack & Toolbelt
         - '#^Function [a-zA-Z_]+ not found\.$#'
