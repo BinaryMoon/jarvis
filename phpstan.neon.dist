@@ -34,3 +34,4 @@ parameters:
     ignoreErrors:
         # Uses func_get_args()
         - '#^Function add_query_arg invoked with [123] parameters?, 0 required\.$#'
+        - '#^Function [abc] invoked with [123] parameters?, [123] required\.$#'
