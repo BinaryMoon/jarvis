@@ -11,6 +11,42 @@
  */
 
 /**
+ * Add support for Toolbelt features.
+ */
+function jarvis_toolbelt_after_setup_theme() {
+
+	// Infinite scroll.
+	add_theme_support(
+		'infinite-scroll',
+		apply_filters(
+			'jarvis_infinite_scroll',
+			array(
+				'render' => 'jarvis_toolbelt_infinite_scroll_render',
+			)
+		)
+	);
+
+}
+
+add_filter( 'after_setup_theme', 'jarvis_toolbelt_after_setup_theme' );
+
+
+/**
+ * Render Toolbelt Infinite Scroll content.
+ */
+function jarvis_toolbelt_infinite_scroll_render() {
+
+	while ( have_posts() ) {
+
+		the_post();
+		get_template_part( 'parts/content', 'format-' . get_post_format() );
+
+	}
+
+}
+
+
+/**
  * Change the related posts thumbnail size.
  */
 function jarvis_toolbelt_related_posts_thumbnail_size() {
@@ -28,6 +64,7 @@ add_filter( 'toolbelt_related_posts_thumbnail_size', 'jarvis_toolbelt_related_po
 function jarvis_related_posts() {
 
 	if ( function_exists( 'toolbelt_related_posts_get' ) ) {
+
 		/**
 		 * Output Toolbelt related posts.
 		 *
@@ -35,6 +72,7 @@ function jarvis_related_posts() {
 		 * again.
 		 */
 		echo toolbelt_related_posts_get(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
 	}
 
 }
