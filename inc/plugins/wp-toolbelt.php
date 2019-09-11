@@ -102,3 +102,22 @@ function jarvis_video_wrapper( $html ) {
 	return $html;
 
 }
+
+
+/**
+ * Hide breadcrumbs on Toolbelt Projects archives.
+ *
+ * @return boolean
+ */
+function jarvis_diplay_breadcrumbs() {
+
+	if ( is_post_type_archive( 'toolbelt-portfolio' ) || is_tax( 'toolbelt-portfolio-type' ) ) {
+		return false;
+	}
+
+	return true;
+
+}
+
+add_filter( 'toolbelt_display_breadcrumbs', 'jarvis_diplay_breadcrumbs' );
+
