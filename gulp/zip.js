@@ -35,7 +35,7 @@ const compress = function() {
 
 	return src( [ './**', ...exclude ] )
 		.pipe(
-			zip( 'jarvis-theme.zip' )
+			zip( 'jarvis.zip' )
 		)
 		.pipe(
 			dest( '../.' )
