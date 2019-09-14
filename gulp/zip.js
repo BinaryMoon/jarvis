@@ -25,6 +25,8 @@ const compress = function() {
 		'!docs/**',
 		'!gulp/',
 		'!gulp/**',
+		'!tests/',
+		'!tests/**',
 		'!node_modules/',
 		'!node_modules/**',
 		'!**/*.scss',
