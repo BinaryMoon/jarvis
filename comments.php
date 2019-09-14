@@ -12,7 +12,7 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
- 	// Ensure the current post type supports comments.
+	// Ensure the current post type supports comments.
 	if ( ! post_type_supports( get_post_type(), 'comments' ) ) {
 		return;
 	}

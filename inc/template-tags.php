@@ -338,7 +338,7 @@ function jarvis_credits_get_content() {
 	 */
 	$contents = get_theme_mod( 'jarvis_credits_content', $default );
 
-	$contents = str_ireplace( '(YEAR)', date( 'Y' ), $contents );
+	$contents = str_ireplace( '(YEAR)', gmdate( 'Y' ), $contents );
 	$contents = str_ireplace( '(C)', '&copy;', $contents );
 	$contents = str_ireplace( '(|)', $separator, $contents );
 	$contents = str_ireplace( '(SEP)', $separator, $contents );

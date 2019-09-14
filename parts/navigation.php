@@ -8,7 +8,6 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
-
 	// There's no menu so quit.
 	if ( ! has_nav_menu( 'menu-1' ) ) {
 		return;

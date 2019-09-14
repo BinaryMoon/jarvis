@@ -29,7 +29,6 @@
 			get_template_part( 'parts/comments' );
 
 		}
-
 	} else {
 
 		get_template_part( 'parts/content-empty' );
