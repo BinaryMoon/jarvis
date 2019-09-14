@@ -14,43 +14,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. translators: %1$s: Post title
-#: comments.php:47
+#: comments.php:49
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
 #. translators: %1$s: Comment count, %2$s: Post title
-#: comments.php:56
+#: comments.php:58
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:73
+#: comments.php:75
 msgid "Leave a comment"
 msgstr ""
 
-#: comments.php:74
+#: comments.php:76
 msgid "&rsaquo;"
 msgstr ""
 
-#: comments.php:113
+#: comments.php:115
 msgid "Cancel Reply"
 msgstr ""
 
-#: comments.php:126
+#: comments.php:130
 msgid "Comments are closed."
 msgstr ""
 
-#: image.php:67
+#: image.php:71
 msgid "&lsaquo; Return to post"
 msgstr ""
 
-#: image.php:70
+#: image.php:74
 msgid "Previous Image"
 msgstr ""
 
-#: image.php:73
+#: image.php:77
 msgid "Next Image"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Black"
 msgstr ""
 
-#: inc/wordpress.php:372, parts/navigation.php:20
+#: inc/wordpress.php:372, parts/navigation.php:19
 msgid "Menu"
 msgstr ""
 
@@ -211,7 +211,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: parts/navigation.php:24
+#: parts/navigation.php:23
 msgid "Primary Menu"
 msgstr ""
 
