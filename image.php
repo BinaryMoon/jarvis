@@ -61,7 +61,7 @@
 
 			$parent = wp_get_post_parent_id();
 
-			if ( $parent  ) {
+			if ( $parent ) {
 
 ?>
 
