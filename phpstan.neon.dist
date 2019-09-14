@@ -31,9 +31,14 @@ parameters:
         - %currentWorkingDirectory%/inc/plugins/woocommerce.php
         - %currentWorkingDirectory%/inc/plugins/wp-post-series.php
         - %currentWorkingDirectory%/inc/plugins/wp-toolbelt.php
+		# Plugin stubs
+        - %currentWorkingDirectory%/tests/woocommerce-stubs.php
+        - %currentWorkingDirectory%/tests/wp-toolbelt-stubs.php
     ignoreErrors:
         # Uses func_get_args()
-        - '#^Function [a-zA-Z_]+ invoked with [1-9] parameters?, [0-9\-]+ required\.$#'
-		# Function not found errors, mostly a problem when adding support for
-		# third party plugins like WooCommerce, Jetpack & Toolbelt
-        - '#^Function [a-zA-Z_]+ not found\.$#'
+        - '#^Function apply_filters invoked with [34567] parameters, 2 required\.$#'
+        - '#^Function add_theme_support invoked with 2 parameters, 1 required\.$#'
+        #- '#^Function [a-zA-Z_]+ invoked with [1-9] parameters?, [0-9\-]+ required\.$#'
+        # Function not found errors, mostly a problem when adding support for
+        # third party plugins like WooCommerce, Jetpack & Toolbelt
+        #- '#^Function [a-zA-Z_]+ not found\.$#'
