@@ -58,13 +58,17 @@
 ?>
 				</div>
 <?php
-			if ( $post->post_parent ) {
+
+			$parent = wp_get_post_parent_id();
+
+			if ( $parent  ) {
+
 ?>
 
 				<nav id="image-navigation" class="navigation image-navigation">
 					<div class="nav-links">
 						<span class="nav-parent">
-							<a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" rev="attachment" class="attachment-parent"><?php esc_html_e( '&lsaquo; Return to post', 'jarvis' ); ?></a>
+							<a href="<?php echo esc_url( get_permalink( $parent ) ); ?>" rev="attachment" class="attachment-parent"><?php esc_html_e( '&lsaquo; Return to post', 'jarvis' ); ?></a>
 						</span>
 						<span class="nav-previous">
 							<?php previous_image_link( false, esc_html__( 'Previous Image', 'jarvis' ) ); ?>
