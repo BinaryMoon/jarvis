@@ -10,8 +10,8 @@ install:
     if [ "$(phpenv version-name)" == 7.3 ]; then sed -e 's#^function is_countable(#// &#' -i vendor/giacocorsiglia/wordpress-stubs/wordpress-stubs.php; fi
 
 script:
-  - vendor/bin/parallel-lint inc/ inc/customizer/ inc/plugins/
-  - vendor/bin/phpcs -n -s inc/ inc/customizer/ inc/plugins/
+  - vendor/bin/parallel-lint inc/
+  - vendor/bin/phpcs -n -s inc/
   - vendor/bin/phpstan analyze -l 4
 
 notifications:
