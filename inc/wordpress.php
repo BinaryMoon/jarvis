@@ -117,7 +117,7 @@ function jarvis_editor_blocks_styles() {
 	 * @see https://github.com/WordPress/gutenberg/issues/7776#issuecomment-406700703
 	 */
 	wp_deregister_style( 'wp-block-library-theme' );
-	wp_register_style( 'wp-block-library-theme', '', null, '1.0' );
+	wp_register_style( 'wp-block-library-theme', '', array(), '1.0' );
 
 	/**
 	 * If a dark colour then enable the dark editor styles.

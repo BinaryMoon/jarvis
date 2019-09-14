@@ -60,7 +60,7 @@ function jarvis_featured_image_src( $post_id = null, $thumbnail_size = 'jarvis-a
 	}
 
 	// Grab the featured image for the specified post.
-	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $thumbnail_size, false, $attr );
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $thumbnail_size );
 
 	// If there's no featured image then grab an attachment image and use that instead.
 	if ( ! $image[0] ) {
@@ -70,7 +70,7 @@ function jarvis_featured_image_src( $post_id = null, $thumbnail_size = 'jarvis-a
 		if ( $images ) {
 			foreach ( $images as $child_id => $attachment ) {
 
-				$image = wp_get_attachment_image_src( $child_id, $thumbnail_size, false, $attr );
+				$image = wp_get_attachment_image_src( $child_id, $thumbnail_size );
 				break;
 
 			}
