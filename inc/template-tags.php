@@ -269,7 +269,7 @@ function jarvis_project_terms() {
 		foreach ( (array) $terms as $t ) {
 			$class = '';
 
-			if ( $current_term && $current_term->term_id === (int) $t->term_id ) {
+			if ( $current_term && $current_term instanceof WP_Term && $current_term->term_id === $t->term_id ) {
 				$class = 'current-page';
 			}
 

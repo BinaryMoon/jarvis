@@ -81,7 +81,7 @@ function jarvis_register_customize_refresh( WP_Customize_Manager $wp_customize )
 
 	// Update site title.
 	$setting = $wp_customize->get_setting( 'blogname' );
-	if ( $setting ) {
+	if ( $setting instanceof WP_Customize_Setting ) {
 		$setting->transport = 'postMessage';
 	}
 
@@ -97,7 +97,7 @@ function jarvis_register_customize_refresh( WP_Customize_Manager $wp_customize )
 
 	// Update site description.
 	$setting = $wp_customize->get_setting( 'blogdescription' );
-	if ( $setting ) {
+	if ( $setting instanceof WP_Customize_Setting ) {
 		$setting->transport = 'postMessage';
 	}
 
@@ -113,7 +113,7 @@ function jarvis_register_customize_refresh( WP_Customize_Manager $wp_customize )
 
 	// Show and hide header text.
 	$setting = $wp_customize->get_setting( 'header_textcolor' );
-	if ( $setting ) {
+	if ( $setting instanceof WP_Customize_Setting ) {
 		$setting->transport = 'postMessage';
 	}
 

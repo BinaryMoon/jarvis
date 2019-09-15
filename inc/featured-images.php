@@ -75,7 +75,7 @@ function jarvis_featured_image_src( $post_id = null, $thumbnail_size = 'jarvis-a
 	}
 
 	// Grab the featured image for the specified post.
-	$image = wp_get_attachment_image_src( $thumbnail_id, $thumbnail_size );
+	$image = wp_get_attachment_image_src( (int) $thumbnail_id, $thumbnail_size );
 
 	// If there's no featured image then grab an attachment image and use that instead.
 	if ( ! $image[0] ) {
