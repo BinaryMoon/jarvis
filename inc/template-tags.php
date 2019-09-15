@@ -272,10 +272,17 @@ function jarvis_project_terms() {
 			if ( $current_term && $current_term->term_id === (int) $t->term_id ) {
 				$class = 'current-page';
 			}
+
+			$url = get_term_link( $t );
+
+			if ( ! is_wp_error( $url ) ) {
 ?>
-		<a class="<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( get_term_link( $t ) ); ?>"><?php echo esc_html( $t->name ); ?></a>
+		<a class="<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $t->name ); ?></a>
 <?php
+
+			}
 		}
+
 ?>
 	</p>
 <?php
