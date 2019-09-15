@@ -83,8 +83,10 @@ function jarvis_header() {
 	// enough.
 	if ( is_singular() && get_theme_mod( 'jarvis_single_header', false ) ) {
 
-		// Use get_queried_object_id so that the content id will always be found
-		// in cases where $post has not been set.
+		/**
+		 * Use get_queried_object_id so that the content id will always be found
+		 * in cases where $post has not been set.
+		 */
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_queried_object_id() ), 'jarvis-header' );
 
 		if ( ! empty( $image ) ) {

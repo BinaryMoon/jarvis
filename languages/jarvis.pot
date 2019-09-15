@@ -14,43 +14,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. translators: %1$s: Post title
-#: comments.php:47
+#: comments.php:49
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
 #. translators: %1$s: Comment count, %2$s: Post title
-#: comments.php:56
+#: comments.php:58
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:73
+#: comments.php:75
 msgid "Leave a comment"
 msgstr ""
 
-#: comments.php:74
+#: comments.php:76
 msgid "&rsaquo;"
 msgstr ""
 
-#: comments.php:113
+#: comments.php:115
 msgid "Cancel Reply"
 msgstr ""
 
-#: comments.php:126
+#: comments.php:130
 msgid "Comments are closed."
 msgstr ""
 
-#: image.php:67
+#: image.php:71
 msgid "&lsaquo; Return to post"
 msgstr ""
 
-#: image.php:70
+#: image.php:74
 msgid "Previous Image"
 msgstr ""
 
-#: image.php:73
+#: image.php:77
 msgid "Next Image"
 msgstr ""
 
@@ -106,48 +106,48 @@ msgstr ""
 msgid "RSS Feed"
 msgstr ""
 
-#: inc/wordpress.php:263
+#: inc/wordpress.php:268
 msgid "White"
 msgstr ""
 
-#: inc/wordpress.php:268
+#: inc/wordpress.php:273
 msgid "Light Gray"
 msgstr ""
 
-#: inc/wordpress.php:273
+#: inc/wordpress.php:278
 msgid "Black"
 msgstr ""
 
-#: inc/wordpress.php:366, parts/navigation.php:20
+#: inc/wordpress.php:372, parts/navigation.php:19
 msgid "Menu"
 msgstr ""
 
-#: inc/wordpress.php:413
+#: inc/wordpress.php:419
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/wordpress.php:415
+#: inc/wordpress.php:421
 msgid "Widgets that display at the bottom of your website. They are arranged in rows."
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:526
+#: inc/wordpress.php:532
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of categories
-#: inc/wordpress.php:534
+#: inc/wordpress.php:540
 msgid "Posted in: %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:539
+#: inc/wordpress.php:545
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of tags
-#: inc/wordpress.php:544
+#: inc/wordpress.php:550
 msgid "Tagged as: %1$s"
 msgstr ""
 
@@ -211,7 +211,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: parts/navigation.php:24
+#: parts/navigation.php:23
 msgid "Primary Menu"
 msgstr ""
 
@@ -243,104 +243,104 @@ msgstr ""
 msgid "Portfolio"
 msgstr ""
 
-#: inc/customizer/archive.php:27
+#: inc/customizer/archive.php:26
 msgid "Homepage & Archive"
 msgstr ""
 
-#: inc/customizer/archive.php:51, inc/customizer/single.php:51
+#: inc/customizer/archive.php:50, inc/customizer/single.php:50
 msgid "Left (default)"
 msgstr ""
 
-#: inc/customizer/archive.php:53, inc/customizer/single.php:53
+#: inc/customizer/archive.php:52, inc/customizer/single.php:52
 msgid "Right (default)"
 msgstr ""
 
-#: inc/customizer/archive.php:59
+#: inc/customizer/archive.php:58
 msgid "Title Alignment"
 msgstr ""
 
-#: inc/customizer/archive.php:64, inc/customizer/single.php:64, inc/customizer/site-header.php:53
+#: inc/customizer/archive.php:63, inc/customizer/single.php:63, inc/customizer/site-header.php:52
 msgid "Center"
 msgstr ""
 
-#: inc/customizer/archive.php:85, inc/customizer/single.php:85
+#: inc/customizer/archive.php:84, inc/customizer/single.php:84
 msgid "Header Height"
 msgstr ""
 
-#: inc/customizer/archive.php:89, inc/customizer/single.php:89
+#: inc/customizer/archive.php:88, inc/customizer/single.php:88
 msgid "Small"
 msgstr ""
 
-#: inc/customizer/archive.php:90, inc/customizer/single.php:90
+#: inc/customizer/archive.php:89, inc/customizer/single.php:89
 msgid "Medium (Default)"
 msgstr ""
 
-#: inc/customizer/archive.php:91, inc/customizer/single.php:91
+#: inc/customizer/archive.php:90, inc/customizer/single.php:90
 msgid "Full Height"
 msgstr ""
 
-#: inc/customizer/archive.php:112
+#: inc/customizer/archive.php:111
 msgid "Archive Post Layout"
 msgstr ""
 
-#: inc/customizer/archive.php:116
+#: inc/customizer/archive.php:115
 msgid "Rows, no images (Default)"
 msgstr ""
 
-#: inc/customizer/archive.php:117
+#: inc/customizer/archive.php:116
 msgid "2 Columns, Featured Image"
 msgstr ""
 
-#: inc/customizer/archive.php:118
+#: inc/customizer/archive.php:117
 msgid "3 Columns, Featured Image (large screens only)"
 msgstr ""
 
-#: inc/customizer/archive.php:119
+#: inc/customizer/archive.php:118
 msgid "Rows, with Featured Image on left"
 msgstr ""
 
-#: inc/customizer/archive.php:120
+#: inc/customizer/archive.php:119
 msgid "Rows, with Featured Image on right"
 msgstr ""
 
-#: inc/customizer/class.jarvis_doc_link.php:25
+#: inc/customizer/class-jarvis-doc-link.php:34
 msgid "Jarvis is designed to be simple and flexible. Most of the settings can be changed in the Customizer. For more details check out the following links:"
 msgstr ""
 
-#: inc/customizer/class.jarvis_doc_link.php:27
+#: inc/customizer/class-jarvis-doc-link.php:36
 msgid "Getting Started"
 msgstr ""
 
-#: inc/customizer/class.jarvis_doc_link.php:28
+#: inc/customizer/class-jarvis-doc-link.php:37
 msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/customizer/class.jarvis_doc_link.php:31
+#: inc/customizer/class-jarvis-doc-link.php:40
 msgid "Theme Documentation"
 msgstr ""
 
 #. translators: %s = the name of the default font
-#: inc/customizer/class.jarvis_dropdown_fonts.php:61
+#: inc/customizer/class-jarvis-font-selector.php:66
 msgid "The default font is <strong>%s</strong>"
 msgstr ""
 
-#: inc/customizer/fonts.php:24
+#: inc/customizer/fonts.php:23
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer/fonts.php:48
+#: inc/customizer/fonts.php:47
 msgid "Title Font"
 msgstr ""
 
-#: inc/customizer/fonts.php:74
+#: inc/customizer/fonts.php:73
 msgid "Heading Font"
 msgstr ""
 
-#: inc/customizer/fonts.php:100
+#: inc/customizer/fonts.php:99
 msgid "Body Font"
 msgstr ""
 
-#: inc/customizer/fonts.php:126
+#: inc/customizer/fonts.php:125
 msgid "Meta Font"
 msgstr ""
 
@@ -401,86 +401,86 @@ msgstr ""
 msgid "Jarvis Theme Documentation"
 msgstr ""
 
-#: inc/customizer/single.php:27
+#: inc/customizer/single.php:26
 msgid "Single Post & Page"
 msgstr ""
 
-#: inc/customizer/single.php:59
+#: inc/customizer/single.php:58
 msgid "Alignment"
 msgstr ""
 
-#: inc/customizer/single.php:114
+#: inc/customizer/single.php:113
 msgid "Use Featured Image as header image."
 msgstr ""
 
-#: inc/customizer/single.php:136
+#: inc/customizer/single.php:135
 msgid "Display Post Date"
 msgstr ""
 
-#: inc/customizer/single.php:158
+#: inc/customizer/single.php:157
 msgid "Display Post Author"
 msgstr ""
 
-#: inc/customizer/single.php:180
+#: inc/customizer/single.php:179
 msgid "Display Post Author Details"
 msgstr ""
 
-#: inc/customizer/single.php:203
+#: inc/customizer/single.php:201
 msgid "Display Categories and Tags"
 msgstr ""
 
-#: inc/customizer/site-header.php:27
+#: inc/customizer/site-header.php:26
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/site-header.php:48
+#: inc/customizer/site-header.php:47
 msgid "Header Layout"
 msgstr ""
 
-#: inc/customizer/site-header.php:52
+#: inc/customizer/site-header.php:51
 msgid "Default"
 msgstr ""
 
-#: inc/customizer/site-header.php:54
+#: inc/customizer/site-header.php:53
 msgid "Side Fixed"
 msgstr ""
 
-#: inc/customizer/site-header.php:75
+#: inc/customizer/site-header.php:74
 msgid "Header Border"
 msgstr ""
 
-#: inc/customizer/site-header.php:79
+#: inc/customizer/site-header.php:78
 msgid "No border (Default)"
 msgstr ""
 
-#: inc/customizer/site-header.php:80
+#: inc/customizer/site-header.php:79
 msgid "Small border"
 msgstr ""
 
-#: inc/customizer/site-header.php:81
+#: inc/customizer/site-header.php:80
 msgid "Medium border"
 msgstr ""
 
-#: inc/customizer/site-header.php:82
+#: inc/customizer/site-header.php:81
 msgid "Thick border"
 msgstr ""
 
-#: inc/customizer/site-header.php:103
+#: inc/customizer/site-header.php:102
 msgid "Title Display"
 msgstr ""
 
-#: inc/customizer/site-header.php:107
+#: inc/customizer/site-header.php:106
 msgid "Display Title and Description"
 msgstr ""
 
-#: inc/customizer/site-header.php:108
+#: inc/customizer/site-header.php:107
 msgid "Display Title only"
 msgstr ""
 
-#: inc/customizer/site-header.php:109
+#: inc/customizer/site-header.php:108
 msgid "Hide Title and Description"
 msgstr ""
 
-#: inc/customizer/site-header.php:132
+#: inc/customizer/site-header.php:131
 msgid "Title Color"
 msgstr ""

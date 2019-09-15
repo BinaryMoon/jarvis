@@ -12,7 +12,7 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU Public License
  */
 
- 	/**
+	/**
 	 * Apply the_content filter so that we can ensure the content we are parsing
 	 * is using raw code and not random shortcodes that we do not know the name
 	 * of.
