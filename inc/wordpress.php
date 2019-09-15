@@ -755,7 +755,7 @@ function jarvis_get_script_file() {
  * @param string $handle The script handle.
  * @return string
  */
-function jarvis_filter_script_loader_tag( $tag, $handle ) {
+function jarvis_filter_script_loader_tag( $tag = '', $handle ) {
 
 	$script_execution = wp_scripts()->get_data( $handle, 'script_execution' );
 
@@ -764,7 +764,7 @@ function jarvis_filter_script_loader_tag( $tag, $handle ) {
 	}
 
 	if ( 'async' !== $script_execution && 'defer' !== $script_execution ) {
-		return $tag; // _doing_it_wrong()?
+		return $tag;
 	}
 
 	// Abort adding async/defer for scripts that have this script as a dependency. _doing_it_wrong()?
@@ -776,7 +776,7 @@ function jarvis_filter_script_loader_tag( $tag, $handle ) {
 
 	// Add the attribute if it hasn't already been added.
 	if ( ! preg_match( ":\s$script_execution(=|>|\s):", $tag ) ) {
-		$tag = preg_replace( ':(?=></script>):', " $script_execution", $tag, 1 );
+		$tag = (string) preg_replace( ':(?=></script>):', " $script_execution", $tag, 1 );
 	}
 
 	return $tag;

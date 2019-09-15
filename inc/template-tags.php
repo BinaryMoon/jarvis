@@ -46,8 +46,8 @@ function jarvis_post_author() {
 
 	echo sprintf(
 		'<span class="byline meta author v-card"><a class="url fn n p-name u-url" href="%s">%s</a></span>',
-		esc_url( get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
-		esc_html( get_the_author() )
+		esc_url( (string) get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
+		esc_html( (string) get_the_author() )
 	);
 
 }
@@ -109,7 +109,13 @@ function jarvis_read_more_text() {
 
 	// Get post data.
 	$post = get_post();
-	$custom_readmore = get_extended( $post->post_content );
+	$custom_readmore = array(
+		'more_text' => esc_html__( 'Read more', 'jarvis' )
+	);
+
+	if ( $post instanceof WP_Post ) {
+		$custom_readmore = get_extended( $post->post_content );
+	}
 
 	if ( ! empty( $custom_readmore['more_text'] ) ) {
 
