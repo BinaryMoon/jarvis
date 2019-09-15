@@ -118,7 +118,7 @@ function jarvis_read_more_text() {
 
 	}
 
-	$post_title = the_title( '', '', false );
+	$post_title = get_the_title();
 
 	if ( ! $post_title ) {
 
@@ -176,7 +176,7 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 
 	// If no user id set then get th user for the current post.
 	if ( ! $user_id ) {
-		$user_id = get_the_author_meta( 'ID' );
+		$user_id = (int) get_the_author_meta( 'ID' );
 	}
 
 ?>
@@ -239,6 +239,11 @@ function jarvis_project_terms() {
 		)
 	);
 
+	// Make sure the term exists and has some results.
+	if ( is_wp_error( $terms ) || empty( $terms ) ) {
+		return;
+	}
+
 	// Highlight currently selected page.
 	$class = 'current-page';
 
@@ -248,11 +253,6 @@ function jarvis_project_terms() {
 	// We're on a project category page, and not the main portfolio page, so reset the class.
 	if ( $current_term ) {
 		$class = '';
-	}
-
-	// Make sure the term exists and has some results.
-	if ( is_wp_error( $terms ) || empty( $terms ) ) {
-		return false;
 	}
 
 	// All clear - let's display the terms.
@@ -266,7 +266,7 @@ function jarvis_project_terms() {
 		<a class="<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>"><?php esc_html_e( 'All', 'jarvis' ); ?></a>
 
 <?php
-		foreach ( $terms as $t ) {
+		foreach ( (array) $terms as $t ) {
 			$class = '';
 
 			if ( $current_term && $current_term->term_id === (int) $t->term_id ) {
@@ -305,7 +305,7 @@ function jarvis_archive_image() {
 		}
 	}
 
-	return get_the_post_thumbnail( get_the_ID(), 'jarvis-archive' );
+	return get_the_post_thumbnail( (int) get_the_ID(), 'jarvis-archive' );
 
 }
 

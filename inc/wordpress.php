@@ -720,7 +720,12 @@ function jarvis_get_theme_version( $filepath = '' ) {
 		return (string) filemtime( get_theme_file_path( $filepath ) );
 	}
 
-	return wp_get_theme( (string) get_template() )->get( 'Version' );
+	$version = wp_get_theme( get_template() )->get( 'Version' );
+	if ( ! $version ) {
+		$version = '1.0';
+	}
+
+	return $version;
 
 }
 
