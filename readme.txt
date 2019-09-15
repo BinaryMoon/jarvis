@@ -7,7 +7,11 @@ License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 Tags: Black, Blue, Brown, Gray, Green, Orange, Pink, Purple, Red, Silver, Tan, White, Yellow, Dark, Light, Fixed Layout, Fluid Layout, Responsive Layout, One Column, Two Columns, Three Columns, Four Columns, Left Sidebar, Right Sidebar, Accessibility Ready, Blavatar, BuddyPress, Custom Background, Custom Colors, Custom Header, Custom Menu, Editor Style, Featured Image Header, Featured Images, Flexible Header, Front Page Posting, Full Width Template, Microformats, Post Formats, RTL Language Support, Sticky Post, Theme Options, Threaded Comments, Translation Ready, Holiday, Photoblogging, Seasonal
 
+A super fast WordPress theme designed for Gutenberg.
+
 == Description ==
+
+Jarvis is designed with speed, accessibility, and privacy in mind. By keeping everything as simple as possible, and using a minimal design Jarvis is a speedy theme that uses modern web development practices.
 
 [Complete documentation is available on Github](https://github.com/BinaryMoon/jarvis/wiki).
 
@@ -42,7 +46,10 @@ Jarvis allows you to edit or hide the footer credits. If you want to add your ow
 
 = Does this theme support any plugins? =
 
-Jarvis includes support for [Styleguide](https://wordpress.org/plugins/styleguide/) - a plugin that allows you to change fonts, and colours in WordPress themes.
+Jarvis includes support for:
+
+* [Toolbelt](https://wordpress.org/plugins/wp-toolbelt/) - a privacy and speed focused website helper.
+* [Styleguide](https://wordpress.org/plugins/styleguide/) - a plugin that allows you to change fonts, and colours in WordPress themes.
 
 == Changelog ==
 
@@ -51,4 +58,4 @@ Jarvis includes support for [Styleguide](https://wordpress.org/plugins/styleguid
 
 == Credits ==
 
-* Based on Granule https://github.com/BinaryMoon/granule, (C) 2016-2017 Binary Moon, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Based on Granule https://github.com/BinaryMoon/granule, (C) 2016-2019 Binary Moon, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
