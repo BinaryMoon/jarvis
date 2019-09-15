@@ -67,42 +67,46 @@ msgid "Search"
 msgstr ""
 
 #. translators: %s: post title
-#: inc/template-tags.php:74
+#: inc/template-tags.php:85
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:125
+msgid "Read more"
 msgstr ""
 
 #. translators: %s: post title
 #. translators: %s: Post title
 #. translators: %s: Post title
-#: inc/template-tags.php:115, parts/content-single-page.php:44, parts/content-single.php:37
+#: inc/template-tags.php:133, parts/content-single-page.php:44, parts/content-single.php:37
 msgid "Read more %s"
 msgstr ""
 
 #. translators: %d: Number of articles written by a particular author.
-#: inc/template-tags.php:190
+#: inc/template-tags.php:208
 msgid "%d Article"
 msgid_plural "%d Articles"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/template-tags.php:245
+#: inc/template-tags.php:263
 msgid "Categories:"
 msgstr ""
 
-#: inc/template-tags.php:248
+#: inc/template-tags.php:266
 msgid "All"
 msgstr ""
 
-#: inc/template-tags.php:332
+#: inc/template-tags.php:357
 msgid "Top"
 msgstr ""
 
 #. translators: %1$s = theme name, %2$s = theme author website
-#: inc/template-tags.php:334
+#: inc/template-tags.php:359
 msgid "Theme: %1$s by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:346
+#: inc/template-tags.php:371
 msgid "RSS Feed"
 msgstr ""
 
@@ -131,23 +135,23 @@ msgid "Widgets that display at the bottom of your website. They are arranged in 
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:532
+#: inc/wordpress.php:494
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of categories
-#: inc/wordpress.php:540
+#: inc/wordpress.php:502
 msgid "Posted in: %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:545
+#: inc/wordpress.php:507
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of tags
-#: inc/wordpress.php:550
+#: inc/wordpress.php:512
 msgid "Tagged as: %1$s"
 msgstr ""
 

@@ -20,11 +20,11 @@ function jarvis_post_time() {
 
 	$time_string = sprintf(
 		'<time class="entry-date published updated dt-published" datetime="%1$s">%2$s</time>',
-		esc_attr( get_the_date( 'c' ) ),
-		esc_attr( get_the_date() )
+		esc_attr( (string) get_the_date( 'c' ) ),
+		esc_attr( (string) get_the_date() )
 	);
 
-	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" class="u-url" rel="bookmark">' . $time_string . '</a>';
+	$posted_on = '<a href="' . esc_url( (string) get_permalink() ) . '" class="u-url" rel="bookmark">' . $time_string . '</a>';
 
 	/**
 	 * $posted_on is not escaped because all of the html that makes up the
@@ -46,8 +46,8 @@ function jarvis_post_author() {
 
 	echo sprintf(
 		'<span class="byline meta author v-card"><a class="url fn n p-name u-url" href="%s">%s</a></span>',
-		esc_url( get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
-		esc_html( get_the_author() )
+		esc_url( (string) get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
+		esc_html( (string) get_the_author() )
 	);
 
 }
@@ -61,33 +61,42 @@ function jarvis_post_author() {
  */
 function jarvis_comments_link() {
 
-	if ( ! post_password_required() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) {
-
-		$class = '';
-
-		echo '<span class="comment-count meta">';
-
-		comments_popup_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: post title */
-					__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'jarvis' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				esc_html( get_the_title() )
-			),
-			false,
-			false,
-			$class
-		);
-
-		echo '</span>';
-
+	if ( post_password_required() ) {
+		return;
 	}
+
+	if ( ! post_type_supports( (string) get_post_type(), 'comments' ) ) {
+		return;
+	}
+
+	// Only display the comments link if there are comments to read.
+	if ( ! get_comments_number() ) {
+		return;
+	}
+
+	$class = '';
+
+	echo '<span class="comment-count meta">';
+
+	comments_popup_link(
+		sprintf(
+			wp_kses(
+				/* translators: %s: post title */
+				__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'jarvis' ),
+				array(
+					'span' => array(
+						'class' => array(),
+					),
+				)
+			),
+			esc_html( get_the_title() )
+		),
+		false,
+		false,
+		$class
+	);
+
+	echo '</span>';
 
 }
 
@@ -100,7 +109,13 @@ function jarvis_read_more_text() {
 
 	// Get post data.
 	$post = get_post();
-	$custom_readmore = get_extended( $post->post_content );
+	$custom_readmore = array(
+		'more_text' => esc_html__( 'Read more', 'jarvis' ),
+	);
+
+	if ( $post instanceof WP_Post ) {
+		$custom_readmore = get_extended( $post->post_content );
+	}
 
 	if ( ! empty( $custom_readmore['more_text'] ) ) {
 
@@ -109,11 +124,20 @@ function jarvis_read_more_text() {
 
 	}
 
+	$post_title = get_the_title();
+
+	if ( ! $post_title ) {
+
+		esc_html_e( 'Read more', 'jarvis' );
+		return;
+
+	}
+
 	// Default text value.
 	printf(
 		/* translators: %s: post title */
 		esc_html__( 'Read more %s', 'jarvis' ),
-		'<span class="screen-reader-text">' . esc_html( the_title( '', '', false ) ) . '</span>'
+		'<span class="screen-reader-text">' . esc_html( $post_title ) . '</span>'
 	);
 
 }
@@ -158,7 +182,7 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 
 	// If no user id set then get th user for the current post.
 	if ( ! $user_id ) {
-		$user_id = get_the_author_meta( 'ID' );
+		$user_id = (int) get_the_author_meta( 'ID' );
 	}
 
 ?>
@@ -221,6 +245,11 @@ function jarvis_project_terms() {
 		)
 	);
 
+	// Make sure the term exists and has some results.
+	if ( is_wp_error( $terms ) || empty( $terms ) ) {
+		return;
+	}
+
 	// Highlight currently selected page.
 	$class = 'current-page';
 
@@ -230,11 +259,6 @@ function jarvis_project_terms() {
 	// We're on a project category page, and not the main portfolio page, so reset the class.
 	if ( $current_term ) {
 		$class = '';
-	}
-
-	// Make sure the term exists and has some results.
-	if ( is_wp_error( $terms ) || empty( $terms ) ) {
-		return false;
 	}
 
 	// All clear - let's display the terms.
@@ -248,16 +272,23 @@ function jarvis_project_terms() {
 		<a class="<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>"><?php esc_html_e( 'All', 'jarvis' ); ?></a>
 
 <?php
-		foreach ( $terms as $t ) {
+		foreach ( (array) $terms as $t ) {
 			$class = '';
 
-			if ( $current_term && $current_term->term_id === (int) $t->term_id ) {
+			if ( $current_term && $current_term instanceof WP_Term && $current_term->term_id === $t->term_id ) {
 				$class = 'current-page';
 			}
+
+			$url = get_term_link( $t );
+
+			if ( ! is_wp_error( $url ) ) {
 ?>
-		<a class="<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( get_term_link( $t ) ); ?>"><?php echo esc_html( $t->name ); ?></a>
+		<a class="<?php echo esc_attr( $class ); ?>" href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $t->name ); ?></a>
 <?php
+
+			}
 		}
+
 ?>
 	</p>
 <?php
@@ -287,7 +318,7 @@ function jarvis_archive_image() {
 		}
 	}
 
-	return get_the_post_thumbnail( get_the_ID(), 'jarvis-archive' );
+	return get_the_post_thumbnail( (int) get_the_ID(), 'jarvis-archive' );
 
 }
 

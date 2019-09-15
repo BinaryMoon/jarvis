@@ -87,7 +87,7 @@ function jarvis_header() {
 		 * Use get_queried_object_id so that the content id will always be found
 		 * in cases where $post has not been set.
 		 */
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_queried_object_id() ), 'jarvis-header' );
+		$image = wp_get_attachment_image_src( (int) get_post_thumbnail_id( get_queried_object_id() ), 'jarvis-header' );
 
 		if ( ! empty( $image ) ) {
 
