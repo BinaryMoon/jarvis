@@ -4,7 +4,10 @@ includes:
 parameters:
     level: max
     paths:
-        - %currentWorkingDirectory%/inc/
+        - %currentWorkingDirectory%/
+    excludes_analyse:
+        - %currentWorkingDirectory%/tests/
+        - %currentWorkingDirectory%/vendor/
     autoload_files:
         # Plugin stubs
         - %currentWorkingDirectory%/tests/wp-cli-stubs.php
