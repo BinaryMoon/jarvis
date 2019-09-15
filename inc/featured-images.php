@@ -48,7 +48,7 @@ add_action( 'after_setup_theme', 'jarvis_featured_images' );
  *                                'jarvis-archive'.
  * @param array   $attr Attributes to pass to `wp_get_attachment_image_src` -
  *                      this will probably be css classes.
- * @return boolean
+ * @return string|boolean
  */
 function jarvis_featured_image_src( $post_id = null, $thumbnail_size = 'jarvis-archive', $attr = array() ) {
 
@@ -59,8 +59,23 @@ function jarvis_featured_image_src( $post_id = null, $thumbnail_size = 'jarvis-a
 
 	}
 
+	// If there's still no post id then quit.
+	if ( ! $post_id ) {
+
+		return false;
+
+	}
+
+	$thumbnail_id = get_post_thumbnail_id( (int) $post_id );
+
+	if ( ! $thumbnail_id ) {
+
+		return false;
+
+	}
+
 	// Grab the featured image for the specified post.
-	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $thumbnail_size );
+	$image = wp_get_attachment_image_src( $thumbnail_id, $thumbnail_size );
 
 	// If there's no featured image then grab an attachment image and use that instead.
 	if ( ! $image[0] ) {
@@ -70,7 +85,7 @@ function jarvis_featured_image_src( $post_id = null, $thumbnail_size = 'jarvis-a
 		if ( $images ) {
 			foreach ( $images as $child_id => $attachment ) {
 
-				$image = wp_get_attachment_image_src( $child_id, $thumbnail_size );
+				$image = wp_get_attachment_image_src( (int) $child_id, $thumbnail_size );
 				break;
 
 			}

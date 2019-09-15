@@ -20,11 +20,11 @@ function jarvis_post_time() {
 
 	$time_string = sprintf(
 		'<time class="entry-date published updated dt-published" datetime="%1$s">%2$s</time>',
-		esc_attr( get_the_date( 'c' ) ),
-		esc_attr( get_the_date() )
+		esc_attr( (string) get_the_date( 'c' ) ),
+		esc_attr( (string) get_the_date() )
 	);
 
-	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" class="u-url" rel="bookmark">' . $time_string . '</a>';
+	$posted_on = '<a href="' . esc_url( (string) get_permalink() ) . '" class="u-url" rel="bookmark">' . $time_string . '</a>';
 
 	/**
 	 * $posted_on is not escaped because all of the html that makes up the
@@ -61,33 +61,42 @@ function jarvis_post_author() {
  */
 function jarvis_comments_link() {
 
-	if ( ! post_password_required() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) {
-
-		$class = '';
-
-		echo '<span class="comment-count meta">';
-
-		comments_popup_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: post title */
-					__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'jarvis' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				esc_html( get_the_title() )
-			),
-			false,
-			false,
-			$class
-		);
-
-		echo '</span>';
-
+	if ( post_password_required() ) {
+		return;
 	}
+
+	if ( ! post_type_supports( (string) get_post_type(), 'comments' ) ) {
+		return;
+	}
+
+	// Only display the comments link if there are comments to read.
+	if ( ! get_comments_number() ) {
+		return;
+	}
+
+	$class = '';
+
+	echo '<span class="comment-count meta">';
+
+	comments_popup_link(
+		sprintf(
+			wp_kses(
+				/* translators: %s: post title */
+				__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'jarvis' ),
+				array(
+					'span' => array(
+						'class' => array(),
+					),
+				)
+			),
+			esc_html( get_the_title() )
+		),
+		false,
+		false,
+		$class
+	);
+
+	echo '</span>';
 
 }
 
@@ -109,11 +118,20 @@ function jarvis_read_more_text() {
 
 	}
 
+	$post_title = the_title( '', '', false );
+
+	if ( ! $post_title ) {
+
+		esc_html_e( 'Read more', 'jarvis' );
+		return;
+
+	}
+
 	// Default text value.
 	printf(
 		/* translators: %s: post title */
 		esc_html__( 'Read more %s', 'jarvis' ),
-		'<span class="screen-reader-text">' . esc_html( the_title( '', '', false ) ) . '</span>'
+		'<span class="screen-reader-text">' . esc_html( $post_title ) . '</span>'
 	);
 
 }

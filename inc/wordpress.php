@@ -104,7 +104,7 @@ function jarvis_editor_blocks_styles() {
 	wp_enqueue_style(
 		'jarvis-editor-blocks',
 		get_theme_file_uri( '/assets/css/editor-blocks.css' ),
-		null,
+		array(),
 		jarvis_get_theme_version( '/assets/css/editor-blocks.css' )
 	);
 
@@ -449,44 +449,6 @@ add_filter( 'excerpt_length', 'jarvis_excerpt_length', 999 );
 
 
 /**
- * Fallback for navigation menu
- *
- * @param array $params list of menu parameters.
- * @return string
- */
-function jarvis_nav_menu( $params ) {
-
-	$echo = $params['echo'];
-
-	$params['echo'] = false;
-	$html = wp_page_menu( $params );
-
-	if ( $params['container'] ) {
-
-		$container_start = '<' . esc_attr( $params['container'] ) . ' id="' . esc_attr( $params['container_id'] ) . '" class="' . esc_attr( $params['container_class'] ) . '">';
-		$container_end = '</' . esc_attr( $params['container'] ) . '>';
-
-		$html = str_replace( '<div class="' . esc_attr( $params['menu_class'] ) . '">', $container_start, $html );
-		$html = str_replace( '</div>', $container_end, $html );
-
-	}
-
-	/**
-	 * Apply standard WordPress filter so that html can still be modified by
-	 * plugins.
-	 */
-	apply_filters( 'wp_nav_menu', $html, $params );
-
-	if ( $echo ) {
-		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	}
-
-	return $html;
-
-}
-
-
-/**
  * Change the truncation text on excerpts to an ellipsis.
  *
  * @return string
@@ -517,7 +479,7 @@ function jarvis_post_terms( $content = '' ) {
 	}
 
 	// Make sure it only happens on blog posts.
-	if ( 'post' !== get_post_type( get_the_ID() ) ) {
+	if ( 'post' !== get_post_type( (int) get_the_ID() ) ) {
 		return $content;
 	}
 
@@ -758,7 +720,7 @@ function jarvis_get_theme_version( $filepath = '' ) {
 		return (string) filemtime( get_theme_file_path( $filepath ) );
 	}
 
-	return wp_get_theme( get_template() )->get( 'Version' );
+	return wp_get_theme( (string) get_template() )->get( 'Version' );
 
 }
 
