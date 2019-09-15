@@ -110,7 +110,7 @@ function jarvis_read_more_text() {
 	// Get post data.
 	$post = get_post();
 	$custom_readmore = array(
-		'more_text' => esc_html__( 'Read more', 'jarvis' )
+		'more_text' => esc_html__( 'Read more', 'jarvis' ),
 	);
 
 	if ( $post instanceof WP_Post ) {
