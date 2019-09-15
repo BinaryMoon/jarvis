@@ -59,7 +59,7 @@
 				</div>
 <?php
 
-			$parent = wp_get_post_parent_id();
+			$parent = wp_get_post_parent_id( 0 );
 
 			if ( $parent ) {
 
