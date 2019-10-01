@@ -263,13 +263,6 @@ html input[disabled] {
 	height: auto;
 }
 
-[type="search"],
-.searchfield {
-	-webkit-appearance: textfield;
-	-moz-appearance: textfield;
-	appearance: textfield;
-}
-
 [type="search"]:focus::-webkit-input-placeholder,
 .searchfield:focus::-webkit-input-placeholder {
 	opacity: 0;
@@ -279,13 +272,6 @@ html input[disabled] {
 .searchfield:focus::-webkit-input-placeholder {
 	-webkit-transition: opacity 0.5s 0.5s ease;
 	transition: opacity 0.5s 0.5s ease;
-}
-
-[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration,
-.searchfield::-webkit-search-cancel-button,
-.searchfield::-webkit-search-decoration {
-	-webkit-appearance: none;
-	appearance: none;
 }
 
 ::-webkit-file-upload-button {
@@ -741,7 +727,7 @@ textarea {
 	line-height: 1.5rem;
 	min-height: 1.5rem;
 	width: 100%;
-	background: transparent;
+	background-color: transparent;
 	border: 0.2rem solid currentColor;
 	color: inherit;
 }
@@ -805,17 +791,11 @@ input[type=number]:focus,
 select:focus,
 textarea:focus {
 	outline: none;
-	background: var(--foreground-contrast-color);
+	background-color: var(--foreground-contrast-color);
 	color: var(--foreground-color);
 	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
 	z-index: 1;
 	position: relative;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-	appearance: none;
 }
 
 ::-webkit-input-placeholder {
