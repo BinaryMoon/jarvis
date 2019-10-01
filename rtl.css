@@ -217,6 +217,11 @@ blockquote.alignright {
 .screen-reader-shortcut:focus {
   right: 6px
 }
+.widget a[aria-current] {
+  padding: .2rem;
+  margin-right: -.2rem;
+  margin-left: -.2rem
+}
 .wp-block-separator {
   margin-right: auto;
   margin-left: auto;

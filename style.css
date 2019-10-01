@@ -1163,6 +1163,15 @@ blockquote.alignleft, blockquote.alignright {
 	outline: 0;
 }
 
+.widget a[aria-current] {
+	background: var(--foreground-color);
+	color: var(--foreground-contrast-color);
+	padding: 0.2rem;
+	margin-left: -0.2rem;
+	margin-right: -0.2rem;
+	text-decoration: none;
+}
+
 /*!
  * 2.3 - Blocks
  */

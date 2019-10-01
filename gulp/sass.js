@@ -56,7 +56,6 @@ export function minifyStyles() {
 		)
 		.pipe( dest( './' ) );
 
-
 }
 
 export default function styles() {
@@ -93,4 +92,4 @@ const removeComments = function( content ) {
 
 	return content;
 
-}
+};
