@@ -144,7 +144,7 @@ textarea {
 	line-height: $grid-line-height;
 	min-height: $grid-line-height;
 	width: 100%;
-	background: transparent;
+	background-color: transparent;
 	border: $border-width solid currentColor;
 	color: inherit;
 	@include transition;
@@ -158,20 +158,13 @@ textarea {
 	&:focus {
 
 		outline: none;
-		background: $white;
+		background-color: $white;
 		color: $black;
 		box-shadow: $border-shadow;
 		z-index: 1;
 		position: relative;
 
 	}
-
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-
-	appearance: none;
 
 }
 

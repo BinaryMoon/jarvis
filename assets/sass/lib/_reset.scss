@@ -238,19 +238,10 @@ html input[disabled] {
 [type="search"],
 .searchfield {
 
-	appearance: textfield;
-
 	&:focus::-webkit-input-placeholder {
 
 		@include transition( opacity 0.5s 0.5s ease );
 		opacity: 0;
-
-	}
-
-	&::-webkit-search-cancel-button,
-	&::-webkit-search-decoration {
-
-		appearance: none;
 
 	}
 
