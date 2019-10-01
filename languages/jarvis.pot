@@ -71,42 +71,42 @@ msgstr ""
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:125
+#: inc/template-tags.php:113, inc/template-tags.php:131
 msgid "Read more"
 msgstr ""
 
 #. translators: %s: post title
 #. translators: %s: Post title
 #. translators: %s: Post title
-#: inc/template-tags.php:133, parts/content-single-page.php:44, parts/content-single.php:37
+#: inc/template-tags.php:139, parts/content-single-page.php:44, parts/content-single.php:37
 msgid "Read more %s"
 msgstr ""
 
 #. translators: %d: Number of articles written by a particular author.
-#: inc/template-tags.php:208
+#: inc/template-tags.php:214
 msgid "%d Article"
 msgid_plural "%d Articles"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/template-tags.php:263
+#: inc/template-tags.php:269
 msgid "Categories:"
 msgstr ""
 
-#: inc/template-tags.php:266
+#: inc/template-tags.php:272
 msgid "All"
 msgstr ""
 
-#: inc/template-tags.php:357
+#: inc/template-tags.php:363
 msgid "Top"
 msgstr ""
 
 #. translators: %1$s = theme name, %2$s = theme author website
-#: inc/template-tags.php:359
+#: inc/template-tags.php:365
 msgid "Theme: %1$s by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:371
+#: inc/template-tags.php:377
 msgid "RSS Feed"
 msgstr ""
 
