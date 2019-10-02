@@ -290,16 +290,6 @@ textarea {
 	vertical-align: top;
 }
 
-::-moz-selection {
-	background: var(--foreground-color);
-	color: var(--foreground-contrast-color);
-}
-
-::selection {
-	background: var(--foreground-color);
-	color: var(--foreground-contrast-color);
-}
-
 address {
 	margin-bottom: 1.5rem;
 }
