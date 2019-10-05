@@ -477,10 +477,6 @@ pre.compress {
 	margin-bottom: 0;
 }
 
-.entry-header .entry-meta {
-	margin-top: 3rem;
-}
-
 .entry-title {
 	letter-spacing: -0.01em;
 	font-weight: bold;
@@ -527,7 +523,7 @@ pre.compress {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	margin-bottom: 0.75rem;
+	margin-bottom: 3rem;
 }
 
 .entry-meta > * {
