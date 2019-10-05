@@ -33,12 +33,6 @@
 
 	}
 
-	.entry-meta {
-
-		margin-top: $grid-line-height * 2;
-
-	}
-
 }
 
 // Entry Title
@@ -99,7 +93,7 @@
 .entry-meta {
 
 	@include post-meta-data;
-	margin-bottom: ( $grid-line-height / 2 );
+	margin-bottom: ( $grid-line-height * 2 );
 
 	> * {
 
