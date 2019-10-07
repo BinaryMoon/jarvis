@@ -1,16 +1,3 @@
-/**
- * Live-update changed settings in real time in the Customizer preview.
- *
- * Filename: customizer-preview.js v1
- *
- * Created by Ben Gillbanks <https://prothemedesign.com/>
- * Available under GPL2 license
- *
- * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#javascript-driven-widget-support
- *
- * @package jarvis
- */
-
 /* global wp */
 
 ; ( function() {
@@ -20,8 +7,8 @@
 		function() {
 
 			/**
-			 * Detect when the front page sections section is expanded (or
-			 * closed) so we can adjust the preview accordingly.
+			 * Detect when the credits section is expanded (or closed) so we can
+			 * adjust the preview accordingly.
 			 */
 			wp.customize.section(
 				'jarvis_credits',
