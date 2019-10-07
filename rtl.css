@@ -442,10 +442,6 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 .content-posts article.entry .read-more {
   padding: .75rem 0
 }
-.archive-layout-1 .content-posts .entry-intro {
-  margin-right: auto;
-  margin-left: auto
-}
 .comment-list {
   margin: 0 0 3rem 0
 }
@@ -654,23 +650,4 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
 }
 .child-page:nth-child(2n+1) {
   padding-right: 0
-}
-.single-layout-1 .content-single .entry-single {
-  margin-right: auto;
-  margin-left: auto
-}
-@media (min-width:47rem) {
-  .single-layout-1 .content-single .entry-single .alignwide {
-    margin-right: calc((var(--wp-alignfull-size) - 47rem)/ -2)
-  }
-}
-@media (min-width:69rem) {
-  .single-layout-1 .content-single .entry-single .alignwide {
-    margin-right: calc(22rem / -2)
-  }
-}
-@media (min-width:47rem) {
-  .single-layout-1 .content-single .entry-single .alignfull {
-    margin-right: calc((var(--wp-alignfull-size) - 44rem)/ -2)
-  }
 }

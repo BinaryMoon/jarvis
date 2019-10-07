@@ -2233,18 +2233,6 @@ p.demo_store {
 	display: block;
 }
 
-/**
- * Center header and archive description.
- */
-.archive-layout-1 .content-posts .entry-archive-header {
-	text-align: center;
-}
-
-.archive-layout-1 .content-posts .entry-intro {
-	margin-left: auto;
-	margin-right: auto;
-}
-
 @media (min-width: 47rem) {
 	.archive-articles-0 .content-posts article.entry {
 		display: grid;
@@ -3246,31 +3234,4 @@ p.demo_store {
 
 .entry-children {
 	margin-top: 4.5rem;
-}
-
-.single-layout-1 .content-single .entry-header {
-	text-align: center;
-}
-
-.single-layout-1 .content-single .entry-single {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-@media (min-width: 47rem) {
-	.single-layout-1 .content-single .entry-single .alignwide {
-		margin-left: calc( ( var( --wp-alignfull-size ) - 47rem ) / -2);
-	}
-}
-
-@media (min-width: 69rem) {
-	.single-layout-1 .content-single .entry-single .alignwide {
-		margin-left: calc( 22rem / -2);
-	}
-}
-
-@media (min-width: 47rem) {
-	.single-layout-1 .content-single .entry-single .alignfull {
-		margin-left: calc( ( var( --wp-alignfull-size ) - 44rem ) / -2);
-	}
 }
