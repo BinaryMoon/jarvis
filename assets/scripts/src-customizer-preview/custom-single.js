@@ -20,22 +20,6 @@
 			$( '.entry-terms' ).css( 'display', wp.customize( 'jarvis_single_show_categories' )() ? 'block' : 'none' );
 			$( '.content-single .contributor' ).css( 'display', wp.customize( 'jarvis_single_show_author_details' )() ? 'grid' : 'none' );
 
-			// Edit Single Post Layout.
-			wp.customize(
-				'jarvis_single_layout',
-				function( value ) {
-					value.bind(
-						function( to ) {
-
-							$( 'body' )
-								.removeClass( 'single-layout-0 single-layout-1' )
-								.addClass( 'single-layout-' + to );
-
-						}
-					);
-				}
-			);
-
 			wp.customize(
 				'jarvis_single_show_author',
 				function( value ) {

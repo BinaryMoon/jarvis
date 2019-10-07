@@ -12,22 +12,6 @@
 			 * keep header related properties together.
 			 */
 
-			// Edit Archive Layout.
-			wp.customize(
-				'jarvis_archive_layout',
-				function( value ) {
-					value.bind(
-						function( to ) {
-
-							$( 'body' )
-								.removeClass( 'archive-layout-0 archive-layout-1' )
-								.addClass( 'archive-layout-' + to );
-
-						}
-					);
-				}
-			);
-
 			// Edit Archive Article Layout.
 			wp.customize(
 				'jarvis_archive_articles',
