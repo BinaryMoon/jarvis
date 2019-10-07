@@ -251,59 +251,43 @@ msgstr ""
 msgid "Homepage & Archive"
 msgstr ""
 
-#: inc/customizer/archive.php:50, inc/customizer/single.php:50
-msgid "Left (default)"
-msgstr ""
-
-#: inc/customizer/archive.php:52, inc/customizer/single.php:52
-msgid "Right (default)"
-msgstr ""
-
-#: inc/customizer/archive.php:58
-msgid "Title Alignment"
-msgstr ""
-
-#: inc/customizer/archive.php:63, inc/customizer/single.php:63, inc/customizer/site-header.php:52
-msgid "Center"
-msgstr ""
-
-#: inc/customizer/archive.php:84, inc/customizer/single.php:84
+#: inc/customizer/archive.php:47, inc/customizer/single.php:47
 msgid "Header Height"
 msgstr ""
 
-#: inc/customizer/archive.php:88, inc/customizer/single.php:88
+#: inc/customizer/archive.php:51, inc/customizer/single.php:51
 msgid "Small"
 msgstr ""
 
-#: inc/customizer/archive.php:89, inc/customizer/single.php:89
+#: inc/customizer/archive.php:52, inc/customizer/single.php:52
 msgid "Medium (Default)"
 msgstr ""
 
-#: inc/customizer/archive.php:90, inc/customizer/single.php:90
+#: inc/customizer/archive.php:53, inc/customizer/single.php:53
 msgid "Full Height"
 msgstr ""
 
-#: inc/customizer/archive.php:111
+#: inc/customizer/archive.php:74
 msgid "Archive Post Layout"
 msgstr ""
 
-#: inc/customizer/archive.php:115
+#: inc/customizer/archive.php:78
 msgid "Rows, no images (Default)"
 msgstr ""
 
-#: inc/customizer/archive.php:116
+#: inc/customizer/archive.php:79
 msgid "2 Columns, Featured Image"
 msgstr ""
 
-#: inc/customizer/archive.php:117
+#: inc/customizer/archive.php:80
 msgid "3 Columns, Featured Image (large screens only)"
 msgstr ""
 
-#: inc/customizer/archive.php:118
+#: inc/customizer/archive.php:81
 msgid "Rows, with Featured Image on left"
 msgstr ""
 
-#: inc/customizer/archive.php:119
+#: inc/customizer/archive.php:82
 msgid "Rows, with Featured Image on right"
 msgstr ""
 
@@ -409,27 +393,23 @@ msgstr ""
 msgid "Single Post & Page"
 msgstr ""
 
-#: inc/customizer/single.php:58
-msgid "Alignment"
-msgstr ""
-
-#: inc/customizer/single.php:113
+#: inc/customizer/single.php:76
 msgid "Use Featured Image as header image."
 msgstr ""
 
-#: inc/customizer/single.php:135
+#: inc/customizer/single.php:98
 msgid "Display Post Date"
 msgstr ""
 
-#: inc/customizer/single.php:157
+#: inc/customizer/single.php:120
 msgid "Display Post Author"
 msgstr ""
 
-#: inc/customizer/single.php:179
+#: inc/customizer/single.php:142
 msgid "Display Post Author Details"
 msgstr ""
 
-#: inc/customizer/single.php:201
+#: inc/customizer/single.php:164
 msgid "Display Categories and Tags"
 msgstr ""
 
@@ -443,6 +423,10 @@ msgstr ""
 
 #: inc/customizer/site-header.php:51
 msgid "Default"
+msgstr ""
+
+#: inc/customizer/site-header.php:52
+msgid "Center"
 msgstr ""
 
 #: inc/customizer/site-header.php:53
