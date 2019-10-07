@@ -29,43 +29,6 @@ function jarvis_customizer_archive( WP_Customize_Manager $wp_customize ) {
 	);
 
 	/**
-	 * Setting to change the layout of the homepage & archives.
-	 */
-	$wp_customize->add_setting(
-		'jarvis_archive_layout',
-		array(
-			'default' => 0,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_int',
-			'transport' => 'postMessage',
-		)
-	);
-
-	/**
-	 * The default layout label.
-	 *
-	 * The layout switches side based on the text direction so lets change the
-	 * label to fit.
-	 */
-	$layout_label = esc_html__( 'Left (default)', 'jarvis' );
-	if ( is_rtl() ) {
-		$layout_label = esc_html__( 'Right (default)', 'jarvis' );
-	}
-
-	$wp_customize->add_control(
-		'jarvis_archive_layout',
-		array(
-			'label' => esc_html__( 'Title Alignment', 'jarvis' ),
-			'section' => 'jarvis_archive',
-			'type' => 'radio',
-			'choices' => array(
-				0 => $layout_label,
-				1 => esc_html__( 'Center', 'jarvis' ),
-			),
-		)
-	);
-
-	/**
 	 * Setting to change the archive header height.
 	 */
 	$wp_customize->add_setting(

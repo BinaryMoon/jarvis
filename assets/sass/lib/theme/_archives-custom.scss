@@ -1,28 +1,3 @@
-/**
- * Center header and archive description.
- */
-.archive-layout-1 {
-
-	.content-posts {
-
-		.entry-archive-header {
-
-			text-align: center;
-
-		}
-
-		.entry-intro {
-
-			margin-left: auto;
-			margin-right: auto;
-
-		}
-
-	}
-
-}
-
-
 @include for-tablet {
 
 	.archive-articles-0 {
