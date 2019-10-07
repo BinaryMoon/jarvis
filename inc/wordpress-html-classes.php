@@ -27,20 +27,14 @@ function jarvis_body_class( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	// Single post layout.
-	$classes[] = 'single-layout-' . get_theme_mod( 'jarvis_single_layout', '0' );
-
-	// Archive layout.
-	$classes[] = 'archive-layout-' . get_theme_mod( 'jarvis_archive_layout', '0' );
-
 	// Archive article layout.
-	$classes[] = 'archive-articles-' . get_theme_mod( 'jarvis_archive_articles', '0' );
+	$classes[] = 'archive-articles-' . (int) get_theme_mod( 'jarvis_archive_articles', '0' );
 
 	// Header layout.
-	$classes[] = 'header-layout-' . get_theme_mod( 'jarvis_header_layout', '0' );
+	$classes[] = 'header-layout-' . (int) get_theme_mod( 'jarvis_header_layout', '0' );
 
 	// Header border.
-	$classes[] = 'header-border-' . get_theme_mod( 'jarvis_header_border', '0' );
+	$classes[] = 'header-border-' . (int) get_theme_mod( 'jarvis_header_border', '0' );
 
 	// Header layout.
 	$classes[] = jarvis_header_height();
