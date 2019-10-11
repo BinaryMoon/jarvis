@@ -138,7 +138,7 @@ if ( function_exists( 'Give' ) ) {
 /**
  * Load Akismet compatibility file.
  */
-if ( is_defined( 'AKISMET_VERSION' ) ) {
+if ( defined( 'AKISMET_VERSION' ) ) {
 	require get_parent_theme_file_path( 'inc/plugins/akismet.php' );
 }
 

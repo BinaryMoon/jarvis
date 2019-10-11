@@ -127,7 +127,7 @@ add_filter( 'toolbelt_display_breadcrumbs', 'jarvis_diplay_breadcrumbs' );
  */
 function jarvis_toolbelt_styles() {
 
-	if ( is_defined( 'TOOLBELT_VERSION' ) ) {
+	if ( defined( 'TOOLBELT_VERSION' ) ) {
 		jarvis_print_plugin_css( 'toolbelt' );
 	}
 

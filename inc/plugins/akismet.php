@@ -10,7 +10,7 @@
  */
 function jarvis_akismet_styles() {
 
-	if ( is_defined( 'JETPACK__VERSION' ) ) {
+	if ( defined( 'JETPACK__VERSION' ) ) {
 		jarvis_print_css( 'akismet' );
 	}
 
