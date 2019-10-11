@@ -7,7 +7,7 @@ parameters:
         - %currentWorkingDirectory%/inc/
     excludes_analyse:
         # Third Party Libraries
-        - %currentWorkingDirectory%/inc/lib/
+        - */inc/lib/*
     autoload_files:
         # Plugin stubs
         - %currentWorkingDirectory%/tests/wp-cli-stubs.php
