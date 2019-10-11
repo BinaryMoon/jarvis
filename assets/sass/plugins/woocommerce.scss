@@ -57,12 +57,8 @@
 	button.button,
 	input.button {
 
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
 		margin-bottom: $grid-line-height;
 		line-height: $grid-line-height;
-
-		// @extend input[type=text];
-
 		width: auto;
 
 		@include button();
