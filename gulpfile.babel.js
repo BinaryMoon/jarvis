@@ -13,7 +13,6 @@ import rtl from './gulp/rtl';
 import toc from './gulp/toc';
 import pot from './gulp/pot';
 import optimizeSVG from './gulp/svg';
-import criticalCSS from './gulp/critical';
 
 export const build = series(
 	parallel(
@@ -31,7 +30,6 @@ export const build = series(
 		rtl,
 		toc,
 		pot,
-		criticalCSS,
 		stylesDocs
 	),
 	compress

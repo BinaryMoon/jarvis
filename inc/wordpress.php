@@ -175,19 +175,6 @@ function jarvis_get_site_styles() {
 
 	$styles = array();
 
-	/**
-	 * Add critical path css inline to help speed up the website.
-	 *
-	 * This uses file_get_contents since it's the quickest way to get the css
-	 * and output it directly. The css needs to be inline as we don't want it to
-	 * be render blocking.
-	 *
-	 * Only use these on production sites so that the styles don't override
-	 * changes being made to the primary stylesheets.
-	 */
-	if ( ! WP_DEBUG ) {
-		$styles[] = file_get_contents( get_parent_theme_file_path( 'assets/css/critical.css' ) );
-	}
 	$styles[] = jarvis_title_styles();
 	$styles[] = jarvis_get_font_css();
 	$styles[] = jarvis_get_single_css();
