@@ -84,7 +84,9 @@ export function process_plugin_styles() {
 
 }
 
-export function minifyStyles( source = './style.css' ) {
+export function minifyStyles() {
+
+	let source = './style.css';
 
 	return src( source )
 		.pipe( rename( 'style.min.css' ) )
