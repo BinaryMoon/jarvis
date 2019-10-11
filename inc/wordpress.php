@@ -26,9 +26,9 @@ function jarvis_enqueue() {
 	// Styles.
 	wp_enqueue_style(
 		'jarvis-style',
-		get_template_directory_uri() . '/style.css',
+		'',
 		array(),
-		jarvis_get_theme_version( '/style.css' )
+		jarvis_get_theme_version()
 	);
 
 	// Output of custom settings as inline styles.
