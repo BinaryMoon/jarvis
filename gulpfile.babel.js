@@ -5,7 +5,7 @@
 import { parallel, watch, series } from 'gulp';
 
 // Internal dependencies.
-import styles, { editor_styles, editor_blocks, customizer_styles, minifyStyles } from './gulp/sass';
+import styles, { editor_styles, editor_blocks, customizer_styles, minifyStyles, process_plugin_styles } from './gulp/sass';
 import stylesDocs from './gulp/kss';
 import scriptsGlobal, { customizerPreview, customizerControls } from './gulp/scripts';
 import compress from './gulp/zip';
@@ -44,15 +44,18 @@ export const buildTOC = toc;
 export const buildSVG = optimizeSVG;
 export const buildPot = pot;
 export const buildKSS = stylesDocs;
+export const buildPluginStyles = process_plugin_styles;
 
-export const watchFiles = function( done ) {
+export const watchFiles = function() {
+
 	watch(
 		[ '*.scss', './assets/sass/**/*.scss' ],
 		series(
 			parallel(
 				styles,
 				editor_styles,
-				editor_blocks
+				editor_blocks,
+				process_plugin_styles
 			),
 			parallel(
 				minifyStyles,
@@ -72,8 +75,6 @@ export const watchFiles = function( done ) {
 	watch( './assets/scripts/src-customizer-controls/*.js', customizerControls );
 
 	watch( './assets/svg/src/*.svg', optimizeSVG );
-
-	done();
 
 };
 

@@ -40,9 +40,53 @@ export function process_styles( source = 'style.scss', destination = './' ) {
 
 }
 
-export function minifyStyles() {
+/**
+ * Build plugin SASS files.
+ */
+export function process_plugin_styles() {
 
-	return src( './style.css' )
+	let destination = './assets/css/';
+
+	/**
+	 * Uses node-sass options:
+	 * https://github.com/sass/node-sass#options
+	 */
+	return src( './assets/sass/plugins/*.scss' )
+		.pipe( rename( { prefix: 'plugin-' } ) )
+		.pipe(
+			sass(
+				{
+					indentType: 'tab',
+					indentWidth: 1,
+					outputStyle: 'expanded',
+					precision: 3,
+
+				}
+			).on( 'error', sass.logError )
+		)
+		.pipe(
+			autoprefixer(
+				{
+					cascade: false
+				}
+			)
+		)
+		.pipe( dest( destination ) )
+		.pipe( rename( { extname: '.min.css' } ) )
+		.pipe(
+			cleancss(
+				{
+					level: 2
+				}
+			)
+		)
+		.pipe( dest( destination ) );
+
+}
+
+export function minifyStyles( source = './style.css' ) {
+
+	return src( source )
 		.pipe( rename( 'style.min.css' ) )
 		.pipe(
 			change( removeComments )
