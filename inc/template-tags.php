@@ -449,12 +449,26 @@ function jarvis_svg( $key ) {
  * Print out CSS to the page.
  * Can be used as 'just in time' loading.
  *
- * @param string $stylesheet The path to the stylesheet.
+ * @param string $stylesheet The name & path to the stylesheet. Exclude the css extension.
  */
 function jarvis_print_css( $stylesheet ) {
 
-	echo '<!-- Stylesheet = ' . esc_html( $stylesheet ) . ' -->';
-	echo '<style>';
+	/**
+	 * Slugify the stylesheet so we can add it as a name for easier debugging.
+	 */
+	$slug = sanitize_title( $stylesheet );
+
+	/**
+	 * When WordPress is not in debug mode, use minified CSS. Otherwise use
+	 * standard CSS.
+	 */
+	if ( ! WP_DEBUG ) {
+		$stylesheet .= '.min';
+	}
+
+	$stylesheet .= '.css';
+
+	echo '<style id="jarvis-partial-' . esc_attr( $slug ) . '">';
 	/**
 	 * No need to escape this. It will only output generated CSS as found in the
 	 * $stylesheet file.
