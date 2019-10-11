@@ -1,24 +1,3 @@
-/*!
- * ## - Custom Properties
- */
-body {
-	--foreground-color: #000000;
-	--foreground-contrast-color: #ffffff;
-	--background-color: #eedd33;
-	--title-color: #000000;
-	--font-body: Cambria, Georgia, serif;
-	--font-header: Cambria, Georgia, serif;
-	--font-title: Cambria, Georgia, serif;
-	--font-meta: Cambria, Georgia, serif;
-	--font-monospace: "andale mono", "monotype.com", "lucida console", monospace;
-	--wp-alignfull-size: 100vw;
-}
-
-body.is-dark-theme {
-	--foreground-color: #ffffff;
-	--foreground-contrast-color: #000000;
-}
-
 .woocommerce h1 {
 	font-weight: bold;
 }
