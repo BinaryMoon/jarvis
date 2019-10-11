@@ -468,11 +468,8 @@ function jarvis_print_css( $stylesheet ) {
 
 	$stylesheet .= '.css';
 
+	// Output the styles.
 	echo '<style id="jarvis-partial-' . esc_attr( $slug ) . '">';
-	/**
-	 * No need to escape this. It will only output generated CSS as found in the
-	 * $stylesheet file.
-	 */
 	require get_template_directory() . '/' . $stylesheet;
 	echo '</style>';
 
