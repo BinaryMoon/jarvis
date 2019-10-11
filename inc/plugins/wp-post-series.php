@@ -26,7 +26,7 @@ add_action( 'wp_enqueue_scripts', 'jarvis_remove_wp_post_series_dequeue', 100 );
  */
 function jarvis_wp_post_series_styles() {
 
-	jarvis_print_css( 'wp-post-series' );
+	jarvis_print_plugin_css( 'wp-post-series' );
 
 }
 

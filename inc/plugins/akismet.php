@@ -11,7 +11,7 @@
 function jarvis_akismet_styles() {
 
 	if ( defined( 'JETPACK__VERSION' ) ) {
-		jarvis_print_css( 'akismet' );
+		jarvis_print_plugin_css( 'akismet' );
 	}
 
 }

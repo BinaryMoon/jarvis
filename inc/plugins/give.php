@@ -25,7 +25,7 @@ add_action( 'wp_enqueue_scripts', 'jarvis_remove_give_stylesheets', 100 );
  */
 function jarvis_give_styles() {
 
-	jarvis_print_css( 'give' );
+	jarvis_print_plugin_css( 'give' );
 
 }
 

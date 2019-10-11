@@ -481,7 +481,7 @@ function jarvis_print_css( $stylesheet ) {
  *
  * @param string $plugin The plugin name.
  */
-function jarvis_print_plugin_styles( $plugin ) {
+function jarvis_print_plugin_css( $plugin ) {
 
 	jarvis_print_css( 'assets/css/plugin-' . $plugin );
 

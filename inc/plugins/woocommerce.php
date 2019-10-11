@@ -116,7 +116,7 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
  */
 function jarvis_woocommerce_styles() {
 
-	jarvis_print_css( 'woocommerce' );
+	jarvis_print_plugin_css( 'woocommerce' );
 
 }
 
