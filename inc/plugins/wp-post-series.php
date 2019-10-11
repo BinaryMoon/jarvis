@@ -21,7 +21,6 @@ function jarvis_remove_wp_post_series_dequeue() {
 add_action( 'wp_enqueue_scripts', 'jarvis_remove_wp_post_series_dequeue', 100 );
 
 
-
 /**
  * Display Plugin Styles.
  */
