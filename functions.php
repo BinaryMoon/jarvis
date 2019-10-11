@@ -156,4 +156,4 @@ if ( class_exists( 'WP_Post_Series' ) ) {
  *
  * @link http://tgmpluginactivation.com
  */
-require_once get_template_directory() . '/path/to/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/lib/class-tgm-plugin-activation.php';
