@@ -23,7 +23,8 @@ export const build = series(
 		scriptsGlobal,
 		customizerPreview,
 		customizerControls,
-		optimizeSVG
+		optimizeSVG,
+		process_plugin_styles
 	),
 	parallel(
 		minifyStyles,
