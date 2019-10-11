@@ -779,3 +779,30 @@ function jarvis_filter_script_loader_tag( $tag = '', $handle ) {
 }
 
 add_filter( 'script_loader_tag', 'jarvis_filter_script_loader_tag', 10, 2 );
+
+
+/**
+ * Register the required plugins for this theme.
+ */
+function jarvis_register_required_plugins() {
+
+	$plugins = array(
+
+		/**
+		 * Recommend the Toolbelt plugin.
+		 *
+		 * @link https://wordpress.org/plugins/wp-toolbelt/
+		 */
+		array(
+			'name'      => 'Toolbelt',
+			'slug'      => 'wp-toolbelt',
+			'required'  => false,
+		),
+
+	);
+
+	tgmpa( $plugins );
+
+}
+
+add_action( 'tgmpa_register', 'jarvis_register_required_plugins' );
