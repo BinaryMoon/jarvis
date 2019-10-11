@@ -443,3 +443,23 @@ function jarvis_svg( $key ) {
 	require get_parent_theme_file_path( 'assets/svg/' . $key . '.svg' );
 
 }
+
+
+/**
+ * Print out CSS to the page.
+ * Can be used as 'just in time' loading.
+ *
+ * @param string $stylesheet The path to the stylesheet.
+ */
+function jarvis_print_css( $stylesheet ) {
+
+	echo '<!-- Stylesheet = ' . esc_html( $stylesheet ) . ' -->';
+	echo '<style>';
+	/**
+	 * No need to escape this. It will only output generated CSS as found in the
+	 * $stylesheet file.
+	 */
+	require get_template_directory() . '/' . $stylesheet;
+	echo '</style>';
+
+}

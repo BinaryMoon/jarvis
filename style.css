@@ -438,7 +438,7 @@ table tr:last-child td {
 	border: none;
 }
 
-table tr:hover {
+table tbody tr:hover {
 	background: var(--foreground-contrast-color);
 }
 
@@ -478,7 +478,6 @@ pre.compress {
 }
 
 .entry-title {
-	letter-spacing: -0.01em;
 	font-weight: bold;
 	font-size: 32px;
 	font-size: 2rem;
@@ -623,7 +622,7 @@ input[type=submit]:hover,
 button:focus,
 button:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 /*!
@@ -778,7 +777,7 @@ textarea:focus {
 	outline: none;
 	background-color: var(--foreground-contrast-color);
 	color: var(--foreground-color);
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 	z-index: 1;
 	position: relative;
 }
@@ -1708,7 +1707,7 @@ body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
 
 body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hover, body #eu-cookie-law.negative input:focus, body #eu-cookie-law.negative input:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 /*
@@ -1886,7 +1885,7 @@ body {
 .woocommerce input.button:focus,
 .woocommerce input.button:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.alt,
@@ -1925,7 +1924,7 @@ body {
 .woocommerce input.button.alt:focus,
 .woocommerce input.button.alt:hover {
 	text-decoration: underline;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 .woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled],
@@ -2122,7 +2121,7 @@ p.demo_store {
 	color: var(--foreground-contrast-color);
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 	margin: 0 0 1.5rem 0;
 }
 
@@ -2179,7 +2178,7 @@ p.demo_store {
 .block-border {
 	padding: 1.5rem 1.5rem;
 	border: 0.2rem solid currentColor;
-	box-shadow: 0 0 0 1px var(--background-color), 0.2rem 0.2rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 .block-border-dashed {
