@@ -50,17 +50,32 @@ export const watchFiles = function( done ) {
 	watch(
 		[ '*.scss', './assets/sass/**/*.scss' ],
 		series(
-			parallel( styles, editor_styles, editor_blocks ),
-			parallel( rtl, toc, stylesDocs )
+			parallel(
+				styles,
+				editor_styles,
+				editor_blocks
+			),
+			parallel(
+				minifyStyles,
+				rtl,
+				toc,
+				stylesDocs
+			)
 		)
 	);
+
 	watch( './assets/sass/customizer/*.scss', customizer_styles );
+
 	watch( './assets/scripts/src-global/*.js', scriptsGlobal );
+
 	watch( './assets/scripts/src-customizer-preview/*.js', customizerPreview );
+
 	watch( './assets/scripts/src-customizer-controls/*.js', customizerControls );
+
 	watch( './assets/svg/src/*.svg', optimizeSVG );
 
 	done();
+
 };
 
 export default series(
