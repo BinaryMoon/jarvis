@@ -29,6 +29,7 @@ parameters:
         - %currentWorkingDirectory%/inc/customizer/single.php
         - %currentWorkingDirectory%/inc/customizer/site-header.php
         # Plugins
+        - %currentWorkingDirectory%/inc/plugins/akismet.php
         - %currentWorkingDirectory%/inc/plugins/editorskit.php
         - %currentWorkingDirectory%/inc/plugins/give.php
         - %currentWorkingDirectory%/inc/plugins/jetpack.php
