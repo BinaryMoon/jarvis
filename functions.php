@@ -131,7 +131,16 @@ require get_parent_theme_file_path( 'inc/plugins/wp-toolbelt.php' );
 /**
  * Load Give compatibility file.
  */
-require get_parent_theme_file_path( 'inc/plugins/give.php' );
+if ( function_exists( 'Give' ) ) {
+	require get_parent_theme_file_path( 'inc/plugins/give.php' );
+}
+
+/**
+ * Load Akismet compatibility file.
+ */
+if ( is_defined( 'AKISMET_VERSION' ) ) {
+	require get_parent_theme_file_path( 'inc/plugins/akismet.php' );
+}
 
 /**
  * Add support for WP-Post-Series plugin

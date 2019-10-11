@@ -474,3 +474,15 @@ function jarvis_print_css( $stylesheet ) {
 	echo '</style>';
 
 }
+
+
+/**
+ * Display plugin css styles.
+ *
+ * @param string $plugin The plugin name.
+ */
+function jarvis_print_plugin_styles( $plugin ) {
+
+	jarvis_print_css( 'assets/css/plugin-' . $plugin );
+
+}

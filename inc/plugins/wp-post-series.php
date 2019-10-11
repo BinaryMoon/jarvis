@@ -19,3 +19,16 @@ function jarvis_remove_wp_post_series_dequeue() {
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_remove_wp_post_series_dequeue', 100 );
+
+
+
+/**
+ * Display Plugin Styles.
+ */
+function jarvis_wp_post_series_styles() {
+
+	jarvis_print_css( 'wp-post-series' );
+
+}
+
+add_action( 'wp_body_open', 'jarvis_wp_post_series_styles' );

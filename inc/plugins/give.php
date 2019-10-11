@@ -18,3 +18,16 @@ function jarvis_remove_give_stylesheets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_remove_give_stylesheets', 100 );
+
+
+/**
+ * Display Plugin Styles.
+ */
+function jarvis_give_styles() {
+
+	jarvis_print_css( 'give' );
+
+}
+
+add_action( 'wp_body_open', 'jarvis_give_styles' );
+

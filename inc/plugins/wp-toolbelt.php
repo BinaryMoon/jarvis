@@ -121,3 +121,16 @@ function jarvis_diplay_breadcrumbs() {
 
 add_filter( 'toolbelt_display_breadcrumbs', 'jarvis_diplay_breadcrumbs' );
 
+
+/**
+ * Display Plugin Styles.
+ */
+function jarvis_toolbelt_styles() {
+
+	if ( is_defined( 'TOOLBELT_VERSION' ) ) {
+		jarvis_print_plugin_css( 'toolbelt' );
+	}
+
+}
+
+add_action( 'wp_body_open', 'jarvis_toolbelt_styles' );

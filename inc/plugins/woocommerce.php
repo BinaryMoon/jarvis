@@ -110,3 +110,14 @@ add_filter( 'is_active_sidebar', 'jarvis_wc_is_sidebar_active', 10, 2 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
+
+/**
+ * Display Plugin Styles.
+ */
+function jarvis_woocommerce_styles() {
+
+	jarvis_print_css( 'woocommerce' );
+
+}
+
+add_action( 'wp_body_open', 'jarvis_woocommerce_styles' );

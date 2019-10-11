@@ -77,3 +77,17 @@ function jarvis_related_posts_thumbnail_size( $thumbnail_size ) {
 
 add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jarvis_related_posts_thumbnail_size' );
 
+
+/**
+ * Display Plugin Styles.
+ */
+function jarvis_jetpack_styles() {
+
+	if ( is_defined( 'JETPACK__VERSION' ) ) {
+		jarvis_print_css( 'jetpack' );
+	}
+
+}
+
+add_action( 'wp_body_open', 'jarvis_jetpack_styles' );
+

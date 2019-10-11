@@ -35,7 +35,7 @@ function jarvis_enqueue() {
 	 * Output the site styles.
 	 * They are displayed inline for extra speed.
 	 */
-	add_filter(
+	add_action(
 		'wp_body_open',
 		function() {
 			jarvis_print_css( 'style' );
