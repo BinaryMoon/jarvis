@@ -86,11 +86,6 @@ input[type=radio] {
     border-radius: 1.5rem
   }
 }
-.woocommerce #coupon_code,
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button,
 input[type=date],
 input[type=datetime-local],
 input[type=email],
@@ -107,11 +102,6 @@ select,
 textarea {
   padding: .75rem .75rem
 }
-.woocommerce #coupon_code:hover,
-.woocommerce #respond input#submit:hover,
-.woocommerce a.button:hover,
-.woocommerce button.button:hover,
-.woocommerce input.button:hover,
 input[type=date]:hover,
 input[type=datetime-local]:hover,
 input[type=email]:hover,
@@ -128,11 +118,6 @@ select:hover,
 textarea:hover {
   border-color: var(--foreground-color)
 }
-.woocommerce #coupon_code:focus,
-.woocommerce #respond input#submit:focus,
-.woocommerce a.button:focus,
-.woocommerce button.button:focus,
-.woocommerce input.button:focus,
 input[type=date]:focus,
 input[type=datetime-local]:focus,
 input[type=email]:focus,
@@ -283,136 +268,6 @@ object {
 .mejs-container,
 .wp-playlist {
   margin: 3rem 0
-}
-img#wpstats {
-  right: -100px
-}
-.tiled-gallery {
-  margin: 3rem 0
-}
-main #jp-post-flair,
-main div#jp-relatedposts,
-main div.pd-rating,
-main div.sharedaddy {
-  margin: 3rem 0
-}
-#jp-relatedposts .jp-relatedposts-post-a img {
-  margin: 0 auto .75rem auto
-}
-div.jetpack-testimonial-shortcode .testimonial-entry {
-  padding: 1.5rem .75rem
-}
-div.jetpack-testimonial-shortcode .testimonial-entry-content {
-  margin: 0 0 .75rem 0
-}
-div.jetpack-testimonial-shortcode .testimonial-featured-image {
-  float: right
-}
-div.jetpack-testimonial-shortcode .testimonial-featured-image img {
-  margin-left: .5rem;
-  margin-right: 0
-}
-form.contact-form .grunion-field-wrap label span {
-  padding: 0 .75rem
-}
-body #eu-cookie-law {
-  padding: .75rem .75rem
-}
-body #eu-cookie-law.negative input,
-body #eu-cookie-law.positive input {
-  border-radius: 0;
-  padding: .75rem 3rem
-}
-body #eu-cookie-law.negative input:focus,
-body #eu-cookie-law.negative input:hover,
-body #eu-cookie-law.positive input:focus,
-body #eu-cookie-law.positive input:hover {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.widgets-list-layout .bump-view {
-  margin-left: .75rem
-}
-.toolbelt-menu-social li {
-  margin-left: .75rem
-}
-.toolbelt-video-wrapper {
-  margin: 3rem 0
-}
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
-  padding: .75rem .75rem;
-  border-radius: 0;
-  padding: .75rem 3rem
-}
-.woocommerce #respond input#submit:focus,
-.woocommerce #respond input#submit:hover,
-.woocommerce a.button:focus,
-.woocommerce a.button:hover,
-.woocommerce button.button:focus,
-.woocommerce button.button:hover,
-.woocommerce input.button:focus,
-.woocommerce input.button:hover {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
-  border-radius: 0;
-  padding: .75rem 3rem
-}
-.woocommerce #respond input#submit.alt:focus,
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:focus,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:focus,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:focus,
-.woocommerce input.button.alt:hover {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.woocommerce #respond input#submit.disabled,
-.woocommerce #respond input#submit:disabled,
-.woocommerce #respond input#submit:disabled[disabled],
-.woocommerce a.button.disabled,
-.woocommerce a.button:disabled,
-.woocommerce a.button:disabled[disabled],
-.woocommerce button.button.disabled,
-.woocommerce button.button:disabled,
-.woocommerce button.button:disabled[disabled],
-.woocommerce input.button.disabled,
-.woocommerce input.button:disabled,
-.woocommerce input.button:disabled[disabled] {
-  padding: .75rem .75rem
-}
-.woocommerce div.product .woocommerce-tabs ul.tabs li {
-  border-radius: 0
-}
-.woocommerce #reviews #comments ol.commentlist li .comment-text {
-  margin-right: 2.25rem;
-  margin-left: 0
-}
-li.woocommerce-cart-button li div.widget_shopping_cart {
-  padding: .75rem .75rem
-}
-li.woocommerce-cart-button li div.widget_shopping_cart ul {
-  right: auto;
-  left: auto
-}
-li.woocommerce-cart-button li div.widget_shopping_cart p.buttons a {
-  margin: 0 0 .75rem 0
-}
-li.woocommerce-cart-button li div.widget_shopping_cart .total {
-  padding: .75rem 0 0 0
-}
-.wp-post-series-box {
-  padding: 1.5rem 1.5rem;
-  margin: 0 0 3rem 0
-}
-.wp-post-series-box .wp-post-series-description p {
-  margin: 0 0 1.5rem 0
 }
 .block-alert,
 .block-announcement,
