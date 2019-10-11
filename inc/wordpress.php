@@ -23,23 +23,6 @@
  */
 function jarvis_enqueue() {
 
-	/**
-	 * Output the site styles.
-	 * They are displayed inline for extra speed.
-	 */
-	add_action(
-		'wp_body_open',
-		function() {
-			jarvis_print_css( 'style' );
-			/**
-			 * No escaping needed.
-			 * The jarvis_get_site_styles function generates, and escapes
-			 * everything neccessary.
-			 */
-			echo '<style id="jarvis-custom-styles">' . jarvis_get_site_styles() . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		}
-	);
-
 	// Scripts.
 	wp_enqueue_script(
 		'jarvis-script-global',
@@ -62,6 +45,26 @@ function jarvis_enqueue() {
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_enqueue' );
+
+
+/**
+ * Output the site styles.
+ * They are displayed inline for extra speed.
+ */
+function jarvis_print_styles() {
+
+	jarvis_print_css( 'style' );
+
+	/**
+	 * No escaping needed.
+	 * The jarvis_get_site_styles function generates, and escapes
+	 * everything neccessary.
+	 */
+	echo '<style id="jarvis-custom-styles">' . jarvis_get_site_styles() . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+}
+
+add_action( 'wp_print_styles', 'jarvis_print_styles' );
 
 
 /**
