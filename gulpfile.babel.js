@@ -78,7 +78,6 @@ export const watchFiles = function( done ) {
 };
 
 export default series(
-	buildStyles,
-	buildScripts,
+	build,
 	watchFiles
 );
