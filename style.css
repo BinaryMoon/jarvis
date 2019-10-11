@@ -2829,18 +2829,6 @@ p.demo_store {
 	}
 }
 
-.header-border-1 {
-	border-top: 0.375rem solid var(--foreground-color);
-}
-
-.header-border-2 {
-	border-top: 0.75rem solid var(--foreground-color);
-}
-
-.header-border-3 {
-	border-top: 1.5rem solid var(--foreground-color);
-}
-
 /*!
  * 4.7 - Navigation
  * Main website navigation.

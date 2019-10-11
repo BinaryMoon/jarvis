@@ -33,9 +33,6 @@ function jarvis_body_class( $classes ) {
 	// Header layout.
 	$classes[] = 'header-layout-' . (int) get_theme_mod( 'jarvis_header_layout', '0' );
 
-	// Header border.
-	$classes[] = 'header-border-' . (int) get_theme_mod( 'jarvis_header_border', '0' );
-
 	// Header layout.
 	$classes[] = jarvis_header_height();
 
