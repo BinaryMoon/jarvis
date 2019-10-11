@@ -23,14 +23,6 @@
  */
 function jarvis_enqueue() {
 
-	// Styles.
-	wp_enqueue_style(
-		'jarvis-style',
-		'',
-		array(),
-		jarvis_get_theme_version()
-	);
-
 	/**
 	 * Output the site styles.
 	 * They are displayed inline for extra speed.
@@ -39,11 +31,14 @@ function jarvis_enqueue() {
 		'wp_body_open',
 		function() {
 			jarvis_print_css( 'style' );
+			/**
+			 * No escaping needed.
+			 * The jarvis_get_site_styles function generates, and escapes
+			 * everything neccessary.
+			 */
+			echo '<style id="jarvis-custom-styles">' . jarvis_get_site_styles() . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 	);
-
-	// Output of custom settings as inline styles.
-	wp_add_inline_style( 'jarvis-style', jarvis_get_site_styles() );
 
 	// Scripts.
 	wp_enqueue_script(
