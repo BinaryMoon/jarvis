@@ -31,9 +31,8 @@ body {
 	background-color: $canvas-background;
 	color: $black;
 	margin: 0;
-	// Improve OSX font rendering.
-	-webkit-font-smoothing: antialias;
-	-moz-osx-font-smoothing: grayscale;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
 
 }
 
@@ -108,6 +107,12 @@ a {
 
 	background-color: transparent;
 
+	&:not([class]) {
+
+		text-decoration-skip-ink: auto;
+
+	}
+
 }
 
 b,
@@ -176,6 +181,7 @@ img {
 
 	position: relative;
 	max-width: 100%;
+	display: block;
 	height: auto;
 	border: 0;
 

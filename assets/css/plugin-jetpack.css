@@ -35,7 +35,6 @@ main #jp-post-flair {
 }
 
 #jp-relatedposts .jp-relatedposts-post-a img {
-	display: block;
 	margin: 0 auto 0.75rem auto;
 }
 
@@ -193,10 +192,6 @@ body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hov
 
 .widgets-grid-layout .widget-grid-view-image {
 	width: 50%;
-}
-
-.widgets-grid-layout .widget-grid-view-image img {
-	display: block;
 }
 
 /* List Layout */

@@ -101,8 +101,8 @@ body {
 	background-color: var(--background-color);
 	color: var(--foreground-color);
 	margin: 0;
-	-webkit-font-smoothing: antialias;
-	-moz-osx-font-smoothing: grayscale;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
 }
 
 *,
@@ -158,6 +158,11 @@ a {
 	background-color: transparent;
 }
 
+a:not([class]) {
+	-webkit-text-decoration-skip: ink;
+	text-decoration-skip-ink: auto;
+}
+
 b,
 strong {
 	font-weight: bolder;
@@ -211,6 +216,7 @@ sub {
 img {
 	position: relative;
 	max-width: 100%;
+	display: block;
 	height: auto;
 	border: 0;
 }
@@ -1010,7 +1016,6 @@ form.search-form input.search-field {
 
 .wp-caption img {
 	float: none;
-	display: block;
 	margin: 0 auto 0.375rem auto;
 }
 
@@ -1198,14 +1203,6 @@ p.wp-block-subhead {
 	max-width: var(--wp-alignfull-size);
 }
 
-.wp-block-image img {
-	display: block;
-}
-
-.wp-block-image.is-resized img {
-	max-width: 100%;
-}
-
 .wp-block-image.alignfull img {
 	width: 100%;
 }
@@ -1357,7 +1354,6 @@ p.wp-block-subhead {
 }
 
 .gallery .gallery-item img {
-	max-width: 100%;
 	height: auto;
 	opacity: 0.8;
 	-webkit-transition: opacity 0.3s ease-in-out;
@@ -1608,10 +1604,6 @@ p > object:only-child {
 
 .content-posts .entry-thumbnail {
 	margin-bottom: 1.5rem;
-	display: block;
-}
-
-.content-posts .entry-thumbnail img {
 	display: block;
 }
 
@@ -2038,7 +2030,6 @@ p > object:only-child {
 
 .site-header .custom-logo-link img {
 	width: auto;
-	display: block;
 }
 
 .site-header .branding .site-title a,
