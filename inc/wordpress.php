@@ -170,9 +170,6 @@ function jarvis_get_block_styles() {
  */
 function jarvis_get_site_styles() {
 
-	$properties = jarvis_get_custom_properties();
-	$fonts = jarvis_get_fonts();
-
 	$styles = array();
 
 	$styles[] = jarvis_title_styles();
