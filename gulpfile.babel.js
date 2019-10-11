@@ -41,7 +41,6 @@ export const buildStyles = series( parallel( styles, editor_styles, editor_block
 export const buildZip = compress;
 export const buildRTL = rtl;
 export const buildTOC = toc;
-export const buildCritical = criticalCSS;
 export const buildSVG = optimizeSVG;
 export const buildPot = pot;
 export const buildKSS = stylesDocs;
