@@ -31,6 +31,17 @@ function jarvis_enqueue() {
 		jarvis_get_theme_version()
 	);
 
+	/**
+	 * Output the site styles.
+	 * They are displayed inline for extra speed.
+	 */
+	add_filter(
+		'wp_body_open',
+		function() {
+			jarvis_print_css( 'style' );
+		}
+	);
+
 	// Output of custom settings as inline styles.
 	wp_add_inline_style( 'jarvis-style', jarvis_get_site_styles() );
 
