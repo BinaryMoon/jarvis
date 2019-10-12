@@ -86,19 +86,7 @@ p.wp-block-subhead {
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 	max-width: var( --wp-alignfull-size );
 
-	img {
-
-		display: block;
-
-	}
-
 	&.is-resized {
-
-		img {
-
-			max-width: 100%;
-
-		}
 
 	}
 

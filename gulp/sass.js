@@ -7,7 +7,7 @@ const rename = require( 'gulp-rename' );
 const autoprefixer = require( 'gulp-autoprefixer' );
 const cleancss = require( 'gulp-clean-css' );
 const change = require( 'gulp-change' );
-
+const size = require( 'gulp-filesize' );
 /**
  * Build SASS files.
  */
@@ -40,9 +40,55 @@ export function process_styles( source = 'style.scss', destination = './' ) {
 
 }
 
+/**
+ * Build plugin SASS files.
+ */
+export function process_plugin_styles() {
+
+	let destination = './assets/css/';
+
+	/**
+	 * Uses node-sass options:
+	 * https://github.com/sass/node-sass#options
+	 */
+	return src( './assets/sass/plugins/*.scss' )
+		.pipe( rename( { prefix: 'plugin-' } ) )
+		.pipe(
+			sass(
+				{
+					indentType: 'tab',
+					indentWidth: 1,
+					outputStyle: 'expanded',
+					precision: 3,
+
+				}
+			).on( 'error', sass.logError )
+		)
+		.pipe(
+			autoprefixer(
+				{
+					cascade: false
+				}
+			)
+		)
+		.pipe( dest( destination ) )
+		.pipe( rename( { extname: '.min.css' } ) )
+		.pipe(
+			cleancss(
+				{
+					level: 2
+				}
+			)
+		)
+		.pipe( dest( destination ) );
+
+}
+
 export function minifyStyles() {
 
-	return src( './style.css' )
+	let source = './style.css';
+
+	return src( source )
 		.pipe( rename( 'style.min.css' ) )
 		.pipe(
 			change( removeComments )
@@ -54,8 +100,8 @@ export function minifyStyles() {
 				}
 			)
 		)
-		.pipe( dest( './' ) );
-
+		.pipe( dest( './' ) )
+		.pipe( size() );
 
 }
 
@@ -93,4 +139,4 @@ const removeComments = function( content ) {
 
 	return content;
 
-}
+};

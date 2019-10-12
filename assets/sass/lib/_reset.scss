@@ -31,9 +31,8 @@ body {
 	background-color: $canvas-background;
 	color: $black;
 	margin: 0;
-	// Improve OSX font rendering.
-	-webkit-font-smoothing: antialias;
-	-moz-osx-font-smoothing: grayscale;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
 
 }
 
@@ -108,6 +107,12 @@ a {
 
 	background-color: transparent;
 
+	&:not([class]) {
+
+		text-decoration-skip-ink: auto;
+
+	}
+
 }
 
 b,
@@ -176,6 +181,7 @@ img {
 
 	position: relative;
 	max-width: 100%;
+	display: block;
 	height: auto;
 	border: 0;
 
@@ -238,19 +244,10 @@ html input[disabled] {
 [type="search"],
 .searchfield {
 
-	appearance: textfield;
-
 	&:focus::-webkit-input-placeholder {
 
 		@include transition( opacity 0.5s 0.5s ease );
 		opacity: 0;
-
-	}
-
-	&::-webkit-search-cancel-button,
-	&::-webkit-search-decoration {
-
-		appearance: none;
 
 	}
 
@@ -277,20 +274,12 @@ textarea {
 
 }
 
-::selection {
-
-	background: $black;
-	color: $white;
-
-}
-
 address {
 
 	margin-bottom: $grid-line-height;
 
 }
 
-acronym,
 abbr {
 
 	border-bottom: $style-outline;

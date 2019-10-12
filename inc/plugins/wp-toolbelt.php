@@ -121,3 +121,80 @@ function jarvis_diplay_breadcrumbs() {
 
 add_filter( 'toolbelt_display_breadcrumbs', 'jarvis_diplay_breadcrumbs' );
 
+
+/**
+ * Display Plugin Styles.
+ */
+function jarvis_toolbelt_styles() {
+
+	if ( defined( 'TOOLBELT_VERSION' ) ) {
+		jarvis_print_plugin_css( 'toolbelt' );
+	}
+
+}
+
+add_action( 'wp_body_open', 'jarvis_toolbelt_styles' );
+
+
+/**
+ * Add random posts shorttag to credits content.
+ *
+ * @param string $contents The html credits.
+ * @return string
+ */
+function jarvis_toolbelt_random_post_tag( $contents ) {
+
+	$random_link = '';
+
+	/**
+	 * If the random redirect function exists then we will set the link.
+	 *
+	 * If it doesn't exist the link will remain empty, and so the short tag will
+	 * be removed.
+	 */
+	if ( function_exists( 'toolbelt_random_redirect' ) ) {
+		$random_link = '<a href="' . esc_url( site_url( '/?random' ) ) . '">%s</a>';
+	}
+
+	$contents = str_ireplace( '(?)', sprintf( $random_link, esc_html__( '?', 'jarvis' ) ), $contents );
+	$contents = str_ireplace( '(RANDOM)', sprintf( $random_link, esc_html__( 'Random', 'jarvis' ) ), $contents );
+
+	return $contents;
+
+}
+
+add_filter( 'jarvis_footer_content', 'jarvis_toolbelt_random_post_tag' );
+
+
+/**
+ * Add the random redirect shorttags to the customizer instructions.
+ *
+ * @param array $description List of shorttags for.
+ * @return array
+ */
+function jarvis_toolbelt_customizer_credits_description( $description ) {
+
+	$new_description = array();
+
+	/**
+	 * Add the extra tags if the random redirect function is enabled.
+	 */
+	if ( function_exists( 'toolbelt_random_redirect' ) ) {
+
+		$new_description[] = '<li>' . __( '<strong>(?)</strong>: Random Redirect with "?" link', 'jarvis' ) . '</li>';
+		$new_description[] = '<li>' . __( '<strong>(random)</strong>: Random Redirect with "random" link', 'jarvis' ) . '</li>';
+
+	}
+
+	if ( count( $new_description ) > 0 ) {
+
+		$position = array_search( '</ul>', $description, true );
+		array_splice( $description, $position, 0, $new_description );
+
+	}
+
+	return $description;
+
+}
+
+add_filter( 'jarvis_customizer_credits_description', 'jarvis_toolbelt_customizer_credits_description' );

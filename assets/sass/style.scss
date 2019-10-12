@@ -9,6 +9,7 @@
 // Styleguide: Mixins
 @import "lib/mixins/index";
 
+@import "lib/properties";
 @import "lib/reset";
 
 // Elements
@@ -25,8 +26,6 @@
 @import "lib/components/index";
 
 @import "lib/wordpress/index";
-
-@import "lib/plugins/index";
 
 @import "lib/theme/index";
 

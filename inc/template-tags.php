@@ -443,3 +443,46 @@ function jarvis_svg( $key ) {
 	require get_parent_theme_file_path( 'assets/svg/' . $key . '.svg' );
 
 }
+
+
+/**
+ * Print out CSS to the page.
+ * Can be used as 'just in time' loading.
+ *
+ * @param string $stylesheet The name & path to the stylesheet. Exclude the css extension.
+ */
+function jarvis_print_css( $stylesheet ) {
+
+	/**
+	 * Slugify the stylesheet so we can add it as a name for easier debugging.
+	 */
+	$slug = sanitize_title( $stylesheet );
+
+	/**
+	 * When WordPress is not in debug mode, use minified CSS. Otherwise use
+	 * standard CSS.
+	 */
+	if ( ! WP_DEBUG ) {
+		$stylesheet .= '.min';
+	}
+
+	$stylesheet .= '.css';
+
+	// Output the styles.
+	echo '<style id="jarvis-partial-' . esc_attr( $slug ) . '">';
+	require get_template_directory() . '/' . $stylesheet;
+	echo '</style>';
+
+}
+
+
+/**
+ * Display plugin css styles.
+ *
+ * @param string $plugin The plugin name.
+ */
+function jarvis_print_plugin_css( $plugin ) {
+
+	jarvis_print_css( 'assets/css/plugin-' . $plugin );
+
+}

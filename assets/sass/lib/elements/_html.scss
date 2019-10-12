@@ -213,9 +213,17 @@ table {
 
 		}
 
-		&:hover {
+	}
 
-			background: $white;
+	tbody {
+
+		tr {
+
+			&:hover {
+
+				background: $white;
+
+			}
 
 		}
 

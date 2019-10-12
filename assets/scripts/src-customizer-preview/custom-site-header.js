@@ -30,28 +30,19 @@
 				}
 			);
 
-			// Edit Header Border.
-			wp.customize(
-				'jarvis_header_border',
-				function( value ) {
-					value.bind(
-						function( to ) {
+			// Fired by jarvis_header expansion.
+			wp.customize.preview.bind(
+				'jarvis_header_expand',
+				function( data ) {
 
-							var count = 3;
-							var selectors = '';
+					// When the section is expanded, show and scroll to the content placeholders, exposing the edit links.
+					if ( true === data.expanded ) {
+						scroll_to( '.site-header' );
+					}
 
-							for ( i = 0; i <= count; i++ ) {
-								selectors += ' header-border-' + i;
-							}
-
-							$( 'body' )
-								.removeClass( selectors )
-								.addClass( 'header-border-' + to );
-
-						}
-					);
 				}
 			);
+
 
 			// Edit Archive Header Height.
 			wp.customize(
@@ -135,6 +126,11 @@
 		}
 	);
 
+	/**
+	 * Set the body class for the header height.
+	 *
+	 * @param {string} to The new value to set the property to.
+	 */
 	var header_height = function( to ) {
 
 		var count = 2;
@@ -147,6 +143,25 @@
 		$( 'body' )
 			.removeClass( selectors )
 			.addClass( 'header-height-' + to );
+
+	};
+
+	/**
+	 * Scroll the page to the specified element.
+	 *
+	 * @param  {string} e CSS element identifier.
+	 * @return {boolean}
+	 */
+	var scroll_to = function( e ) {
+
+		var $target = $( e );
+
+		if ( $target.length ) {
+			var targetOffset = $target.offset().top - parseInt( $( 'html' ).css( 'margin-top' ) );
+			$( 'html,body' ).animate( { scrollTop: targetOffset }, 750 );
+		}
+
+		return false;
 
 	};
 

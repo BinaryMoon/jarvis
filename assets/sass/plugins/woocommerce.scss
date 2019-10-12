@@ -1,7 +1,5 @@
-
-/*!
- * ## - WooCommerce
- */
+@import "../lib/variables/index";
+@import "../lib/mixins/index";
 
 .woocommerce {
 
@@ -59,12 +57,8 @@
 	button.button,
 	input.button {
 
-		padding: ( $grid-line-height / 2 ) ( $grid-gutter / 2 );
 		margin-bottom: $grid-line-height;
 		line-height: $grid-line-height;
-
-		@extend input[type=text];
-
 		width: auto;
 
 		@include button();
@@ -95,7 +89,7 @@
 
 	#coupon_code {
 
-		@extend input[type=text];
+		// @extend input[type=text];
 
 		max-width: 12em;
 		line-height: 1;

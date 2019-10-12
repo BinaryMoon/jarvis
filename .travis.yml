@@ -5,9 +5,9 @@ php:
   - "7.3"
 
 install:
-  - composer require --dev jakub-onderka/php-parallel-lint wp-coding-standards/wpcs dealerdirect/phpcodesniffer-composer-installer phpstan/phpstan-shim szepeviktor/phpstan-wordpress
   - |
-    if [ "$(phpenv version-name)" == 7.3 ]; then sed -e 's#^function is_countable(#// &#' -i vendor/giacocorsiglia/wordpress-stubs/wordpress-stubs.php; fi
+    composer require --dev jakub-onderka/php-parallel-lint wp-coding-standards/wpcs dealerdirect/phpcodesniffer-composer-installer phpstan/phpstan-shim szepeviktor/phpstan-wordpress
+    sed -e 's#^function is_countable(#// &#' -i vendor/giacocorsiglia/wordpress-stubs/wordpress-stubs.php
 
 script:
   - vendor/bin/parallel-lint *.php inc/

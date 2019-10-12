@@ -131,7 +131,16 @@ require get_parent_theme_file_path( 'inc/plugins/wp-toolbelt.php' );
 /**
  * Load Give compatibility file.
  */
-require get_parent_theme_file_path( 'inc/plugins/give.php' );
+if ( function_exists( 'Give' ) ) {
+	require get_parent_theme_file_path( 'inc/plugins/give.php' );
+}
+
+/**
+ * Load Akismet compatibility file.
+ */
+if ( defined( 'AKISMET_VERSION' ) ) {
+	require get_parent_theme_file_path( 'inc/plugins/akismet.php' );
+}
 
 /**
  * Add support for WP-Post-Series plugin
@@ -141,3 +150,10 @@ require get_parent_theme_file_path( 'inc/plugins/give.php' );
 if ( class_exists( 'WP_Post_Series' ) ) {
 	require get_parent_theme_file_path( 'inc/plugins/wp-post-series.php' );
 }
+
+/**
+ * Include TGM Plugin Activation class.
+ *
+ * @link http://tgmpluginactivation.com
+ */
+require_once get_template_directory() . '/inc/lib/class-tgm-plugin-activation.php';

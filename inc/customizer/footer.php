@@ -34,6 +34,8 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 		'</p>',
 	);
 
+	$description = apply_filters( 'jarvis_customizer_credits_description', $description );
+
 	/**
 	 * Jarvis theme options section.
 	 */

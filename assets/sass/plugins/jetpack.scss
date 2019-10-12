@@ -1,7 +1,5 @@
-
-/*!
- * ## - Jetpack
- */
+@import "../lib/variables/index";
+@import "../lib/mixins/index";
 
 // WordPress.com stats
 img#wpstats {
@@ -67,7 +65,6 @@ main {
 
 		img {
 
-			display: block;
 			margin: 0 auto ( $grid-line-height / 2 ) auto;
 
 		}
@@ -274,12 +271,6 @@ body #eu-cookie-law {
 	.widget-grid-view-image {
 
 		width: 50%;
-
-		img {
-
-			display: block;
-
-		}
 
 	}
 

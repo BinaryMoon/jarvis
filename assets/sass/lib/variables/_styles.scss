@@ -14,4 +14,4 @@ $style-list-style-type: square !default;
 $border-width: 0.2rem !default;
 
 // Stylised box shadow that's used as a motif across the design.
-$border-shadow: 0 0 0 1px var( --background-color ), $border-width $border-width 0 $black;
+$border-shadow: ( $border-width * 2 ) ( $border-width * 2 ) 0 $black;

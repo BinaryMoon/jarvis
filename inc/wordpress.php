@@ -23,17 +23,6 @@
  */
 function jarvis_enqueue() {
 
-	// Styles.
-	wp_enqueue_style(
-		'jarvis-style',
-		get_template_directory_uri() . '/style.css',
-		array(),
-		jarvis_get_theme_version( '/style.css' )
-	);
-
-	// Output of custom settings as inline styles.
-	wp_add_inline_style( 'jarvis-style', jarvis_get_site_styles() );
-
 	// Scripts.
 	wp_enqueue_script(
 		'jarvis-script-global',
@@ -56,6 +45,26 @@ function jarvis_enqueue() {
 }
 
 add_action( 'wp_enqueue_scripts', 'jarvis_enqueue' );
+
+
+/**
+ * Output the site styles.
+ * They are displayed inline for extra speed.
+ */
+function jarvis_print_styles() {
+
+	jarvis_print_css( 'style' );
+
+	/**
+	 * No escaping needed.
+	 * The jarvis_get_site_styles function generates, and escapes
+	 * everything neccessary.
+	 */
+	echo '<style id="jarvis-custom-styles">' . jarvis_get_site_styles() . '</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+}
+
+add_action( 'wp_print_styles', 'jarvis_print_styles' );
 
 
 /**
@@ -170,24 +179,8 @@ function jarvis_get_block_styles() {
  */
 function jarvis_get_site_styles() {
 
-	$properties = jarvis_get_custom_properties();
-	$fonts = jarvis_get_fonts();
-
 	$styles = array();
 
-	/**
-	 * Add critical path css inline to help speed up the website.
-	 *
-	 * This uses file_get_contents since it's the quickest way to get the css
-	 * and output it directly. The css needs to be inline as we don't want it to
-	 * be render blocking.
-	 *
-	 * Only use these on production sites so that the styles don't override
-	 * changes being made to the primary stylesheets.
-	 */
-	if ( ! WP_DEBUG ) {
-		$styles[] = file_get_contents( get_parent_theme_file_path( 'assets/css/critical.css' ) );
-	}
 	$styles[] = jarvis_title_styles();
 	$styles[] = jarvis_get_font_css();
 	$styles[] = jarvis_get_single_css();
@@ -784,3 +777,32 @@ function jarvis_filter_script_loader_tag( $tag = '', $handle ) {
 }
 
 add_filter( 'script_loader_tag', 'jarvis_filter_script_loader_tag', 10, 2 );
+
+
+/**
+ * Register the required plugins for this theme.
+ */
+function jarvis_register_required_plugins() {
+
+	$plugins = array(
+
+		/**
+		 * Recommend the Toolbelt plugin.
+		 *
+		 * @link https://wordpress.org/plugins/wp-toolbelt/
+		 */
+		array(
+			'name'      => 'Toolbelt',
+			'slug'      => 'wp-toolbelt',
+			'required'  => false,
+		),
+
+	);
+
+	if ( function_exists( 'tgmpa' ) ) {
+		tgmpa( $plugins );
+	}
+
+}
+
+add_action( 'tgmpa_register', 'jarvis_register_required_plugins' );

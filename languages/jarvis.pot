@@ -71,87 +71,87 @@ msgstr ""
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:125
+#: inc/template-tags.php:113, inc/template-tags.php:131
 msgid "Read more"
 msgstr ""
 
 #. translators: %s: post title
 #. translators: %s: Post title
 #. translators: %s: Post title
-#: inc/template-tags.php:133, parts/content-single-page.php:44, parts/content-single.php:37
+#: inc/template-tags.php:139, parts/content-single-page.php:44, parts/content-single.php:37
 msgid "Read more %s"
 msgstr ""
 
 #. translators: %d: Number of articles written by a particular author.
-#: inc/template-tags.php:208
+#: inc/template-tags.php:214
 msgid "%d Article"
 msgid_plural "%d Articles"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/template-tags.php:263
+#: inc/template-tags.php:269
 msgid "Categories:"
 msgstr ""
 
-#: inc/template-tags.php:266
+#: inc/template-tags.php:272
 msgid "All"
 msgstr ""
 
-#: inc/template-tags.php:357
+#: inc/template-tags.php:363
 msgid "Top"
 msgstr ""
 
 #. translators: %1$s = theme name, %2$s = theme author website
-#: inc/template-tags.php:359
+#: inc/template-tags.php:365
 msgid "Theme: %1$s by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:371
+#: inc/template-tags.php:377
 msgid "RSS Feed"
 msgstr ""
 
-#: inc/wordpress.php:268
+#: inc/wordpress.php:263
 msgid "White"
 msgstr ""
 
-#: inc/wordpress.php:273
+#: inc/wordpress.php:268
 msgid "Light Gray"
 msgstr ""
 
-#: inc/wordpress.php:278
+#: inc/wordpress.php:273
 msgid "Black"
 msgstr ""
 
-#: inc/wordpress.php:372, parts/navigation.php:19
+#: inc/wordpress.php:367, parts/navigation.php:19
 msgid "Menu"
 msgstr ""
 
-#: inc/wordpress.php:419
+#: inc/wordpress.php:414
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/wordpress.php:421
+#: inc/wordpress.php:416
 msgid "Widgets that display at the bottom of your website. They are arranged in rows."
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:494
+#: inc/wordpress.php:489
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of categories
-#: inc/wordpress.php:502
+#: inc/wordpress.php:497
 msgid "Posted in: %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:507
+#: inc/wordpress.php:502
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of tags
-#: inc/wordpress.php:512
+#: inc/wordpress.php:507
 msgid "Tagged as: %1$s"
 msgstr ""
 
@@ -251,59 +251,43 @@ msgstr ""
 msgid "Homepage & Archive"
 msgstr ""
 
-#: inc/customizer/archive.php:50, inc/customizer/single.php:50
-msgid "Left (default)"
-msgstr ""
-
-#: inc/customizer/archive.php:52, inc/customizer/single.php:52
-msgid "Right (default)"
-msgstr ""
-
-#: inc/customizer/archive.php:58
-msgid "Title Alignment"
-msgstr ""
-
-#: inc/customizer/archive.php:63, inc/customizer/single.php:63, inc/customizer/site-header.php:52
-msgid "Center"
-msgstr ""
-
-#: inc/customizer/archive.php:84, inc/customizer/single.php:84
+#: inc/customizer/archive.php:47, inc/customizer/single.php:47
 msgid "Header Height"
 msgstr ""
 
-#: inc/customizer/archive.php:88, inc/customizer/single.php:88
+#: inc/customizer/archive.php:51, inc/customizer/single.php:51
 msgid "Small"
 msgstr ""
 
-#: inc/customizer/archive.php:89, inc/customizer/single.php:89
+#: inc/customizer/archive.php:52, inc/customizer/single.php:52
 msgid "Medium (Default)"
 msgstr ""
 
-#: inc/customizer/archive.php:90, inc/customizer/single.php:90
+#: inc/customizer/archive.php:53, inc/customizer/single.php:53
 msgid "Full Height"
 msgstr ""
 
-#: inc/customizer/archive.php:111
+#: inc/customizer/archive.php:74
 msgid "Archive Post Layout"
 msgstr ""
 
-#: inc/customizer/archive.php:115
+#: inc/customizer/archive.php:78
 msgid "Rows, no images (Default)"
 msgstr ""
 
-#: inc/customizer/archive.php:116
+#: inc/customizer/archive.php:79
 msgid "2 Columns, Featured Image"
 msgstr ""
 
-#: inc/customizer/archive.php:117
+#: inc/customizer/archive.php:80
 msgid "3 Columns, Featured Image (large screens only)"
 msgstr ""
 
-#: inc/customizer/archive.php:118
+#: inc/customizer/archive.php:81
 msgid "Rows, with Featured Image on left"
 msgstr ""
 
-#: inc/customizer/archive.php:119
+#: inc/customizer/archive.php:82
 msgid "Rows, with Featured Image on right"
 msgstr ""
 
@@ -409,27 +393,23 @@ msgstr ""
 msgid "Single Post & Page"
 msgstr ""
 
-#: inc/customizer/single.php:58
-msgid "Alignment"
-msgstr ""
-
-#: inc/customizer/single.php:113
+#: inc/customizer/single.php:76
 msgid "Use Featured Image as header image."
 msgstr ""
 
-#: inc/customizer/single.php:135
+#: inc/customizer/single.php:98
 msgid "Display Post Date"
 msgstr ""
 
-#: inc/customizer/single.php:157
+#: inc/customizer/single.php:120
 msgid "Display Post Author"
 msgstr ""
 
-#: inc/customizer/single.php:179
+#: inc/customizer/single.php:142
 msgid "Display Post Author Details"
 msgstr ""
 
-#: inc/customizer/single.php:201
+#: inc/customizer/single.php:164
 msgid "Display Categories and Tags"
 msgstr ""
 
@@ -445,46 +425,30 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
+#: inc/customizer/site-header.php:52
+msgid "Center"
+msgstr ""
+
 #: inc/customizer/site-header.php:53
 msgid "Side Fixed"
 msgstr ""
 
 #: inc/customizer/site-header.php:74
-msgid "Header Border"
-msgstr ""
-
-#: inc/customizer/site-header.php:78
-msgid "No border (Default)"
-msgstr ""
-
-#: inc/customizer/site-header.php:79
-msgid "Small border"
-msgstr ""
-
-#: inc/customizer/site-header.php:80
-msgid "Medium border"
-msgstr ""
-
-#: inc/customizer/site-header.php:81
-msgid "Thick border"
-msgstr ""
-
-#: inc/customizer/site-header.php:102
 msgid "Title Display"
 msgstr ""
 
-#: inc/customizer/site-header.php:106
+#: inc/customizer/site-header.php:78
 msgid "Display Title and Description"
 msgstr ""
 
-#: inc/customizer/site-header.php:107
+#: inc/customizer/site-header.php:79
 msgid "Display Title only"
 msgstr ""
 
-#: inc/customizer/site-header.php:108
+#: inc/customizer/site-header.php:80
 msgid "Hide Title and Description"
 msgstr ""
 
-#: inc/customizer/site-header.php:131
+#: inc/customizer/site-header.php:103
 msgid "Title Color"
 msgstr ""

@@ -56,34 +56,6 @@ function jarvis_customizer_header( WP_Customize_Manager $wp_customize ) {
 	);
 
 	/**
-	 * Setting to change the layout of the homepage.
-	 */
-	$wp_customize->add_setting(
-		'jarvis_header_border',
-		array(
-			'default' => 0,
-			'capability' => 'edit_theme_options',
-			'sanitize_callback' => 'jarvis_sanitize_int',
-			'transport' => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		'jarvis_header_border',
-		array(
-			'label' => esc_html__( 'Header Border', 'jarvis' ),
-			'section' => 'jarvis_header',
-			'type' => 'radio',
-			'choices' => array(
-				0 => esc_html__( 'No border (Default)', 'jarvis' ),
-				1 => esc_html__( 'Small border', 'jarvis' ),
-				2 => esc_html__( 'Medium border', 'jarvis' ),
-				3 => esc_html__( 'Thick border', 'jarvis' ),
-			),
-		)
-	);
-
-	/**
 	 * Setting to change the site title and description display.
 	 */
 	$wp_customize->add_setting(

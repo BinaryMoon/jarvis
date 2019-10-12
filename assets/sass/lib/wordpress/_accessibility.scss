@@ -65,3 +65,20 @@
 	outline: 0;
 
 }
+
+.widget {
+
+	// Add aria-current style.
+	// @see https://make.wordpress.org/core/2019/09/23/core-widgets-new-aria-current-attribute-in-wordpress-5-3/
+	a[aria-current] {
+
+		background: $black;
+		color: $white;
+		padding: $border-width;
+		margin-left: -$border-width;
+		margin-right: -$border-width;
+		text-decoration: none;
+
+	}
+
+}

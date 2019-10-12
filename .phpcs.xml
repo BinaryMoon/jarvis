@@ -3,6 +3,7 @@
 
 	<arg name="extensions" value="php"/>
 	<exclude-pattern>*.css</exclude-pattern>
+	<exclude-pattern>/inc/lib/*</exclude-pattern>
 
 	<description>Automatically use WordPress rules</description>
 

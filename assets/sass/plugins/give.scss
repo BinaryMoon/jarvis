@@ -1,6 +1,5 @@
-/*!
- * ## - GiveWP
- */
+@import "../lib/variables/index";
+@import "../lib/mixins/index";
 
 .give-page {
 
@@ -84,13 +83,15 @@
 
 	.give_warning {
 
-		@extend .block-error;
+		// @extend .block-error;
 
 	}
 
 }
 
-.container form[id*=give-form] #give-gateway-radio-list>li input[type=radio]{
+.container form[id*=give-form] #give-gateway-radio-list>li input[type=radio] {
+
 	// width: 1.5rem;
 	display: inline-block;
+
 }
