@@ -174,15 +174,15 @@ add_filter( 'jarvis_footer_content', 'jarvis_toolbelt_random_post_tag' );
  */
 function jarvis_toolbelt_customizer_credits_description( $description ) {
 
+	$new_description = array();
+
 	/**
 	 * Add the extra tags if the random redirect function is enabled.
 	 */
 	if ( function_exists( 'toolbelt_random_redirect' ) ) {
 
-		$new_description = array(
-			'<li>' . __( '<strong>(?)</strong>: Random Redirect with "?" link', 'jarvis' ) . '</li>',
-			'<li>' . __( '<strong>(random)</strong>: Random Redirect with "random" link', 'jarvis' ) . '</li>',
-		);
+		$new_description[] = '<li>' . __( '<strong>(?)</strong>: Random Redirect with "?" link', 'jarvis' ) . '</li>';
+		$new_description[] = '<li>' . __( '<strong>(random)</strong>: Random Redirect with "random" link', 'jarvis' ) . '</li>';
 
 	}
 
