@@ -799,7 +799,9 @@ function jarvis_register_required_plugins() {
 
 	);
 
-	tgmpa( $plugins );
+	if ( function_exists( 'tgmpa' ) ) {
+		tgmpa( $plugins );
+	}
 
 }
 
