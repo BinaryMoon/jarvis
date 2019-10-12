@@ -5,11 +5,9 @@ parameters:
     level: max
     paths:
         - %currentWorkingDirectory%/inc/
-    excludes_analyse:
-        # Third Party Libraries
-        - %currentWorkingDirectory%/inc/lib/*
     autoload_files:
         # Plugin stubs
+        - %currentWorkingDirectory%/tests/tgmpa-stubs.php
         - %currentWorkingDirectory%/tests/wp-cli-stubs.php
         - %currentWorkingDirectory%/tests/wp-toolbelt-stubs.php
         - %currentWorkingDirectory%/tests/woocommerce-stubs-3.7.0.php
@@ -39,6 +37,9 @@ parameters:
         - %currentWorkingDirectory%/inc/plugins/woocommerce.php
         - %currentWorkingDirectory%/inc/plugins/wp-post-series.php
         - %currentWorkingDirectory%/inc/plugins/wp-toolbelt.php
+    excludes_analyse:
+        # Third Party Libraries
+        - %currentWorkingDirectory%/inc/lib/class-tgm-plugin-activation.php
     ignoreErrors:
         # Uses func_get_args()
         #- '#^Function apply_filters invoked with [34567] parameters, 2 required\.$#'
