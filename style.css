@@ -648,7 +648,7 @@ input[type=checkbox], input[type=radio] {
 	}
 	input[type="checkbox"]:checked {
 		position: relative;
-		background: none;
+		background: var(--foreground-color);
 	}
 	input[type="checkbox"]:checked::after {
 		position: absolute;
@@ -657,7 +657,7 @@ input[type=checkbox], input[type=radio] {
 		content: "";
 		width: 0.9rem;
 		height: 0.5rem;
-		border: 0.25rem solid var(--foreground-color);
+		border: 0.25rem solid var(--foreground-contrast-color);
 		border-right: none;
 		border-top: none;
 		-webkit-transform: rotate(-45deg);
@@ -676,7 +676,7 @@ input[type=checkbox], input[type=radio] {
 	}
 	input[type="radio"]:checked {
 		position: relative;
-		background: none;
+		background: var(--foreground-color);
 	}
 	input[type="radio"]:checked::after {
 		position: absolute;
@@ -684,7 +684,7 @@ input[type=checkbox], input[type=radio] {
 		left: 0.175rem;
 		width: 0.75rem;
 		height: 0.75rem;
-		background: var(--foreground-color);
+		background: var(--foreground-contrast-color);
 		border-radius: 1.5rem;
 		content: "";
 	}
