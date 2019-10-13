@@ -4,11 +4,9 @@
 const { src, dest } = require( 'gulp' );
 const rtlcss = require( 'gulp-rtlcss' );
 const concat = require( 'gulp-concat' );
-const rename = require( 'gulp-rename' );
 const change = require( 'gulp-change' );
 const cleancss = require( 'gulp-clean-css' );
 const autoprefixer = require( 'gulp-autoprefixer' );
-const line_ending = require( 'gulp-line-ending-corrector' );
 
 
 export default function rtl() {
@@ -26,7 +24,6 @@ export default function rtl() {
 
 	return src( source )
 		.pipe( concat( 'rtl.css' ) )
-		.pipe( line_ending( { verbose: true, eolc: 'LF', encoding: 'utf8' } ) )
 		.pipe( rtlcss() )
 		.pipe( change( cssRTL ) )
 		.pipe(
