@@ -15,11 +15,12 @@ export default function rtl() {
 
 	let source = [
 		'./style.css',
-		// './assets/css/plugin*.min.css',
+		'./assets/css/plugin-*.css',
+		'!./assets/css/plugin-*.min.css',
 	];
 
 	let clean_css_options = {
-		level: 1,
+		level: 2,
 		format: 'beautify'
 	};
 
@@ -75,7 +76,7 @@ const cssRTL = function( content ) {
 		'border-radius: 0;',
 		'clear: both',
 		'text-align: center',
-		'margin: 0 auto;',
+		'margin: 0 auto',
 	];
 
 	// split content into array of lines so we can loop through them
