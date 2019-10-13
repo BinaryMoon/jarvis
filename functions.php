@@ -15,13 +15,6 @@
  */
 
 /**
- * DESIGN CHECKLIST
- * ---
- * test for possible text widows (titles, descriptions etc)
- * check letter-spacing - especially on large and small text
- */
-
-/**
  * TODO BEFORE SUBMISSION
  * ---
  * ensure margins and paddings are consistent
