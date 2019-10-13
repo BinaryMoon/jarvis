@@ -45,8 +45,6 @@ export default function rtl() {
  */
 const cssRTL = function( content ) {
 
-	// console.log( content );
-
 	// list of lines from rtl css.
 	let content_old = [];
 
@@ -70,7 +68,7 @@ const cssRTL = function( content ) {
 		'transition-property', 'unicode-bidi', '-webkit-transform', '-webkit-transform-origin'
 	];
 
-	// special properties that should not be ignored.
+	// special properties that should be removed from rtl.css.
 	const ignore_properties = [
 		'padding: 0;',
 		'margin: 0;',
@@ -79,9 +77,6 @@ const cssRTL = function( content ) {
 		'text-align: center',
 		'margin: 0 auto;',
 	];
-
-	// merge the two arrays.
-	// Array.prototype.push.apply( properties, special_properties );
 
 	// split content into array of lines so we can loop through them
 	content_old = content.split( /\n|\r\n|\r|\n\r/ );
