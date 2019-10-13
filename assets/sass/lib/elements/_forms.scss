@@ -52,7 +52,7 @@ input {
 		&:checked {
 
 			position: relative;
-			background: none;
+			background: $black;
 
 		}
 
@@ -65,7 +65,7 @@ input {
 			content: "";
 			width: 0.9rem;
 			height: 0.5rem;
-			border: 0.25rem solid $black;
+			border: 0.25rem solid $white;
 			border-right: none;
 			border-top: none;
 			transform: rotate(-45deg);
@@ -93,7 +93,7 @@ input {
 		&:checked {
 
 			position: relative;
-			background: none;
+			background: $black;
 
 		}
 
@@ -104,7 +104,7 @@ input {
 			left: 0.175rem;
 			width: 0.75rem;
 			height: 0.75rem;
-			background: $black;
+			background: $white;
 			border-radius: $grid-gutter;
 			content: "";
 
