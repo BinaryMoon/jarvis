@@ -49,7 +49,6 @@ button,
 input[type=button],
 input[type=reset],
 input[type=submit] {
-  border-radius: 0;
   padding: .75rem 3rem
 }
 .button:focus,
@@ -71,12 +70,10 @@ input[type=radio] {
   margin-left: .5em;
   margin-right: auto
 }
-@supports (-webkit-appearance:none) {
+@supports ((-webkit-appearance:none) or (-moz-appearance:none) or (appearance:none)) {
   input[type=checkbox]:checked::after {
     right: .1rem;
-    border-left: none;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg)
+    border-left: none
   }
   input[type=radio] {
     border-radius: 1.5rem
@@ -372,9 +369,6 @@ object {
 .site-footer .sep {
   margin: 0 .5em
 }
-.container {
-  margin: 0 auto
-}
 .main-content {
   padding: 0 1.5rem
 }
@@ -403,9 +397,6 @@ object {
 .site-header .menu-toggle {
   text-align: right
 }
-.header-layout-1 .site-header .custom-logo-link img {
-  margin: 0 auto
-}
 @media (min-width:47rem) {
   .header-layout-2 {
     padding-right: 10%
@@ -413,8 +404,6 @@ object {
   .header-layout-2 .branding {
     right: 0;
     padding: 3rem .75rem;
-    -webkit-transform: rotate(-180deg);
-    transform: rotate(-180deg);
     text-align: left
   }
 }
@@ -495,10 +484,6 @@ object {
   .content-single .entry-single .alignfull {
     margin-right: calc((var(--wp-alignfull-size) - 66rem)/ -2)
   }
-}
-.content-single .alignleft {
-  -webkit-transform: translateX(1.5rem);
-  transform: translateX(1.5rem)
 }
 .child-page:nth-child(2n+2) {
   padding-left: 0
