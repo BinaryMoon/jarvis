@@ -122,36 +122,36 @@ msgstr ""
 msgid "Black"
 msgstr ""
 
-#: inc/wordpress.php:365, parts/navigation.php:19
+#: inc/wordpress.php:367, parts/navigation.php:19
 msgid "Menu"
 msgstr ""
 
-#: inc/wordpress.php:412
+#: inc/wordpress.php:414
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/wordpress.php:414
+#: inc/wordpress.php:416
 msgid "Widgets that display at the bottom of your website. They are arranged in rows."
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:487
+#: inc/wordpress.php:489
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of categories
-#: inc/wordpress.php:495
+#: inc/wordpress.php:497
 msgid "Posted in: %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:500
+#: inc/wordpress.php:502
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of tags
-#: inc/wordpress.php:505
+#: inc/wordpress.php:507
 msgid "Tagged as: %1$s"
 msgstr ""
 
