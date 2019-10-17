@@ -47,11 +47,12 @@
 		)
 	);
 
-	if ( is_singular( array( 'post' ) ) ) {
+	if ( is_singular( array( 'post' ) ) && ! post_password_required() ) {
 
 		jarvis_contributor();
 
 	}
+
 ?>
 
 	</section>
