@@ -198,11 +198,11 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: parts/content-single.php:64
+#: parts/content-single.php:65
 msgid "Next"
 msgstr ""
 
-#: parts/content-single.php:66
+#: parts/content-single.php:67
 msgid "Previously"
 msgstr ""
 

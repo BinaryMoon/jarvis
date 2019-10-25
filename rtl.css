@@ -34,7 +34,8 @@ pre {
   margin-left: .75rem
 }
 .entry-meta a.current-page {
-  padding: .3em .6em
+  padding: .3em .6em;
+  box-shadow: -.4rem .4rem 0 var(--foreground-color)
 }
 .entry-author {
   margin: 4.5rem 0
@@ -385,6 +386,9 @@ object {
 .menu-primary > ul {
   padding: .75rem 1.5rem
 }
+.menu-primary > ul > .current-menu-item {
+  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+}
 .menu-primary ul ul {
   padding-right: 2.5rem
 }
@@ -419,8 +423,11 @@ object {
   .menu-primary .menu-wrap .sub-menu {
     padding-right: 1.5rem
   }
+  .menu-primary > .menu-wrap > li.menu-item-has-children > a {
+    padding-left: 2.25rem
+  }
   .menu-primary > .menu-wrap > li.menu-item-has-children:after {
-    left: .75em
+    left: 1rem
   }
   .menu-primary > .menu-wrap > li.menu-item-has-children:focus-within > .sub-menu,
   .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {

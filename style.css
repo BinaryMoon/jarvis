@@ -532,6 +532,7 @@ pre.compress {
 	background: var(--foreground-color);
 	color: var(--foreground-contrast-color);
 	padding: 0.3em 0.6em;
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 .entry-intro {
@@ -1610,6 +1611,10 @@ p > object:only-child {
 	display: block;
 }
 
+.content-posts .entry-title + .entry-meta {
+	margin-top: 1.5rem;
+}
+
 @media (min-width: 47rem) {
 	.archive-articles-0 .content-posts article.entry {
 		display: grid;
@@ -2219,6 +2224,12 @@ p > object:only-child {
 	padding: 0.75rem 1.5rem;
 }
 
+.menu-primary > ul > .current-menu-item {
+	background: var(--foreground-color);
+	color: var(--foreground-contrast-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
+}
+
 @media (min-width: 47rem) {
 	.menu-primary > ul {
 		padding: 0;
@@ -2293,12 +2304,15 @@ p > object:only-child {
 		line-height: 2.5;
 		display: inline;
 	}
+	.menu-primary > .menu-wrap > li.menu-item-has-children > a {
+		padding-right: 2.25rem;
+	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children:after {
 		font-family: var(--font-monospace);
 		content: "\25BC";
 		font-size: 12px;
 		position: absolute;
-		right: 0.75em;
+		right: 1rem;
 		top: 30%;
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children > .sub-menu {
