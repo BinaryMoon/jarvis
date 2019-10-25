@@ -15,6 +15,14 @@
 		margin: 0;
 		padding: ( $grid-line-height / 2 ) ( $grid-gutter );
 
+		> .current-menu-item {
+
+			background: $black;
+			color: $white;
+			box-shadow: $border-shadow;
+
+		}
+
 		@include for-tablet {
 
 			padding: 0;
@@ -130,13 +138,19 @@
 
 				&.menu-item-has-children {
 
+					> a {
+
+						padding-right: $grid-gutter * 1.5;
+
+					}
+
 					&:after {
 
 						font-family: var( --font-monospace );
 						content: "\25BC";
 						font-size: 12px;
 						position: absolute;
-						right: 0.75em;
+						right: $grid-gutter * (2/3);
 						top: 30%;
 
 					}
