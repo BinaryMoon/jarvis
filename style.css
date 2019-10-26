@@ -503,7 +503,7 @@ pre.compress {
 	display: block;
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	letter-spacing: initial;
 }
 
@@ -532,7 +532,7 @@ pre.compress {
 	background: var(--foreground-color);
 	color: var(--foreground-contrast-color);
 	padding: 0.3em 0.6em;
-	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
+	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .entry-intro {
@@ -564,6 +564,7 @@ pre.compress {
 
 .entry-author .avatar {
 	max-width: 100%;
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 .entry-breadcrumbs {
@@ -635,26 +636,35 @@ input[type=checkbox], input[type=radio] {
 	vertical-align: middle;
 }
 
+input[type=checkbox]:hover, input[type=checkbox]:focus, input[type=radio]:hover, input[type=radio]:focus {
+	background: var(--foreground-contrast-color);
+	color: var(--foreground-color);
+}
+
 @supports (-webkit-appearance: none) {
-	input[type="checkbox"] {
+	input[type=checkbox], input[type=radio] {
 		-webkit-appearance: none !important;
 		width: 1.5rem !important;
 		height: 1.5rem !important;
 		border: 0.2rem solid var(--foreground-color);
-		background: none;
 	}
-	input[type="checkbox"]:focus {
+	input[type=checkbox]:hover, input[type=checkbox]:focus, input[type=radio]:hover, input[type=radio]:focus {
 		border: 0.2rem solid var(--foreground-color);
 	}
-	input[type="checkbox"]:checked {
+	input[type=checkbox]:checked, input[type=radio]:checked {
 		position: relative;
 		background: var(--foreground-color);
 	}
-	input[type="checkbox"]:checked::after {
+	input[type=checkbox]:checked::after, input[type=radio]:checked::after {
 		position: absolute;
+		content: "";
+	}
+	input[type="checkbox"] {
+		background: none;
+	}
+	input[type="checkbox"]:checked::after {
 		top: 0.2rem;
 		left: 0.1rem;
-		content: "";
 		width: 0.9rem;
 		height: 0.5rem;
 		border: 0.25rem solid var(--foreground-contrast-color);
@@ -664,29 +674,16 @@ input[type=checkbox], input[type=radio] {
 		transform: rotate(-45deg);
 	}
 	input[type="radio"] {
-		-webkit-appearance: none;
-		width: 1.5rem;
-		height: 1.5rem;
 		border-radius: 1.5rem;
-		border: 0.2rem solid var(--foreground-color);
 		padding: 0;
 	}
-	input[type="radio"]:focus {
-		border: 0.2rem solid var(--foreground-color);
-	}
-	input[type="radio"]:checked {
-		position: relative;
-		background: var(--foreground-color);
-	}
 	input[type="radio"]:checked::after {
-		position: absolute;
 		top: 0.175rem;
 		left: 0.175rem;
 		width: 0.75rem;
 		height: 0.75rem;
 		background: var(--foreground-contrast-color);
 		border-radius: 1.5rem;
-		content: "";
 	}
 }
 
@@ -843,7 +840,7 @@ fieldset {
 html {
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.75;
 	font-weight: normal;
 	font-family: var(--font-body);
 	direction: ltr;
@@ -858,7 +855,7 @@ html {
 body {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	font-family: var(--font-body);
 }
 
@@ -936,7 +933,7 @@ h3 {
 h4 {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 }
 
 h5,
@@ -1096,7 +1093,7 @@ blockquote.alignleft, blockquote.alignright {
 .screen-reader-text:focus {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	padding: 15px 23px 14px;
 	background: #f1f1f1;
 	color: #222;
@@ -1149,7 +1146,7 @@ blockquote.alignleft, blockquote.alignright {
 p.wp-block-subhead {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	opacity: 1;
 }
 
@@ -1162,7 +1159,7 @@ p.wp-block-subhead {
 .wp-block-quote p {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 }
 
 .wp-block-quote.is-large p {
@@ -1611,7 +1608,7 @@ p > object:only-child {
 	display: block;
 }
 
-.content-posts .entry-title + .entry-meta {
+.content-posts .entry-archive-header > * + * {
 	margin-top: 1.5rem;
 }
 
@@ -1858,6 +1855,10 @@ p > object:only-child {
 	padding-left: 36%;
 	padding-right: unset;
 	max-width: calc( 44rem + 36%);
+}
+
+.comment-list .bypostauthor .avatar {
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 .comment-list .reply,
@@ -2595,7 +2596,7 @@ p > object:only-child {
 .child-page h2 {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 }
 
 .child-page:nth-child(2n + 2) {

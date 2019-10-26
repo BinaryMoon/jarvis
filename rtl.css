@@ -35,10 +35,13 @@ pre {
 }
 .entry-meta a.current-page {
   padding: .3em .6em;
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.2rem .2rem 0 var(--foreground-color)
 }
 .entry-author {
   margin: 4.5rem 0
+}
+.entry-author .avatar {
+  box-shadow: -.4rem .4rem 0 var(--foreground-color)
 }
 .button,
 .wp-block-button__link,
@@ -343,6 +346,9 @@ object {
 .comment-list li.comment.depth-10 .comment-body {
   padding-right: 36%;
   padding-left: unset
+}
+.comment-list .bypostauthor .avatar {
+  box-shadow: -.4rem .4rem 0 var(--foreground-color)
 }
 .content-comments {
   padding: 3rem 0
