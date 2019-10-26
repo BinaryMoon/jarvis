@@ -24,8 +24,7 @@ input {
 	&[type=radio] {
 
 		cursor: pointer;
-		margin-right: $style-spacing;
-		margin-left: auto;
+		margin-inline-end: $style-spacing;
 		vertical-align: middle;
 
 		&:hover,

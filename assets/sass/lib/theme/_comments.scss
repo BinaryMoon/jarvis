@@ -63,7 +63,7 @@
 				@include for-tablet {
 
 					float: left;
-					margin-right: $grid-gutter;
+					margin-inline-end: $grid-gutter;
 					display: block;
 					height: $grid-line-height * 2.5;
 					width: auto;
@@ -79,7 +79,7 @@
 
 				> * {
 
-					margin-right: ( $grid-gutter / 2 );
+					margin-inline-end: ( $grid-gutter / 2 );
 
 				}
 
