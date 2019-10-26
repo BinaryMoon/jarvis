@@ -88,9 +88,13 @@
 
 	}
 
-	.entry-title + .entry-meta {
+	.entry-archive-header {
 
-		margin-top: $grid-line-height;
+		> * + * {
+
+			margin-top: $grid-line-height;
+
+		}
 
 	}
 
