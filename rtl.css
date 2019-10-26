@@ -198,21 +198,9 @@ blockquote.alignright {
   margin-left: auto;
   border-color: var(--foreground-color)
 }
-.wp-block-separator.is-style-dots:before {
-  padding-right: 1em;
-  padding-left: 0
-}
 .wp-block-columns .wp-block-column {
   padding-right: .375rem;
   padding-left: .375rem
-}
-.wp-block-columns .wp-block-column:first-child {
-  padding-right: 0;
-  padding-left: .375rem
-}
-.wp-block-columns .wp-block-column:last-child {
-  padding-left: 0;
-  padding-right: .375rem
 }
 .widget.widget_recent_comments table.recentcommentsavatar td.recentcommentsavatarend,
 .widget.widget_recent_comments table.recentcommentsavatar td.recentcommentsavatartop {
@@ -282,46 +270,6 @@ object {
 .comment-list li.comment #respond #cancel-comment-reply-link {
   float: left
 }
-.comment-list li.comment.depth-1 .comment-body {
-  padding-right: 0;
-  padding-left: unset
-}
-.comment-list li.comment.depth-2 .comment-body {
-  padding-right: 4%;
-  padding-left: unset
-}
-.comment-list li.comment.depth-3 .comment-body {
-  padding-right: 8%;
-  padding-left: unset
-}
-.comment-list li.comment.depth-4 .comment-body {
-  padding-right: 12%;
-  padding-left: unset
-}
-.comment-list li.comment.depth-5 .comment-body {
-  padding-right: 16%;
-  padding-left: unset
-}
-.comment-list li.comment.depth-6 .comment-body {
-  padding-right: 20%;
-  padding-left: unset
-}
-.comment-list li.comment.depth-7 .comment-body {
-  padding-right: 24%;
-  padding-left: unset
-}
-.comment-list li.comment.depth-8 .comment-body {
-  padding-right: 28%;
-  padding-left: unset
-}
-.comment-list li.comment.depth-9 .comment-body {
-  padding-right: 32%;
-  padding-left: unset
-}
-.comment-list li.comment.depth-10 .comment-body {
-  padding-right: 36%;
-  padding-left: unset
-}
 .comment-list .bypostauthor .avatar {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
 }
@@ -367,15 +315,6 @@ object {
 .menu-primary > ul > .current-menu-item {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
 }
-.menu-primary ul ul {
-  padding-right: 2.5rem
-}
-.menu-primary ul ul a {
-  padding-right: 0
-}
-.menu-primary ul ul ul {
-  padding-right: 1.5rem
-}
 .menu-primary ul a {
   padding: .5rem 1.5rem
 }
@@ -390,9 +329,6 @@ object {
     left: 1.5rem;
     right: auto
   }
-  .header-layout-2 {
-    padding-right: 10%
-  }
   .header-layout-2 .branding {
     right: 0;
     padding: 3rem .75rem;
@@ -404,12 +340,6 @@ object {
   }
   .menu-primary .menu-wrap ul {
     text-align: right
-  }
-  .menu-primary .menu-wrap .sub-menu {
-    padding-right: 1.5rem
-  }
-  .menu-primary > .menu-wrap > li.menu-item-has-children > a {
-    padding-left: 2.25rem
   }
   .menu-primary > .menu-wrap > li.menu-item-has-children:after {
     left: 1rem
@@ -443,12 +373,6 @@ object {
 }
 .widget {
   padding: .75rem 1.5rem
-}
-.child-page:nth-child(2n+2) {
-  padding-left: 0
-}
-.child-page:nth-child(2n+1) {
-  padding-right: 0
 }
 .give-page .give-list-inline li {
   margin: 0 0 0 1.5rem
