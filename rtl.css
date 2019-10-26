@@ -30,9 +30,6 @@ pre {
   padding: 1.5rem;
   margin: 3rem 0
 }
-.entry-meta > * {
-  margin-left: .75rem
-}
 .entry-meta a.current-page {
   padding: .3em .6em;
   box-shadow: -.2rem .2rem 0 var(--foreground-color)
@@ -64,11 +61,6 @@ input[type=reset]:hover,
 input[type=submit]:focus,
 input[type=submit]:hover {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-input[type=checkbox],
-input[type=radio] {
-  margin-left: .5em;
-  margin-right: auto
 }
 @supports ((-webkit-appearance:none) or (-moz-appearance:none) or (appearance:none)) {
   input[type=checkbox]:checked::after {
@@ -226,10 +218,6 @@ blockquote.alignright {
 .widget.widget_recent_comments table.recentcommentsavatar td.recentcommentsavatartop {
   padding: auto
 }
-.widget.widgt_text ul {
-  margin-right: 1.5rem;
-  margin-left: auto
-}
 .gallery .gallery-item {
   margin: 0 0 1.5rem;
   padding: 0 .375rem
@@ -293,19 +281,6 @@ object {
 }
 .comment-list li.comment #respond #cancel-comment-reply-link {
   float: left
-}
-@media (min-width:47rem) {
-  .comment-list li.comment .comment-meta .avatar {
-    float: right;
-    margin-left: 1.5rem
-  }
-  .site-header .search-link {
-    left: 1.5rem;
-    right: auto
-  }
-}
-.comment-list li.comment .comment-meta .comment-metadata > * {
-  margin-left: .75rem
 }
 .comment-list li.comment.depth-1 .comment-body {
   padding-right: 0;
@@ -383,9 +358,6 @@ object {
 .site-header .search-link {
   padding: 1.5rem 3rem
 }
-.site-header .search-link .icon {
-  margin-left: .75rem
-}
 .site-header .menu-toggle {
   text-align: right
 }
@@ -411,6 +383,13 @@ object {
   margin: 3rem 0
 }
 @media (min-width:47rem) {
+  .comment-list li.comment .comment-meta .avatar {
+    float: right
+  }
+  .site-header .search-link {
+    left: 1.5rem;
+    right: auto
+  }
   .header-layout-2 {
     padding-right: 10%
   }
@@ -465,18 +444,6 @@ object {
 .widget {
   padding: .75rem 1.5rem
 }
-.widget ul ul {
-  margin-right: 1.5rem;
-  margin-left: auto
-}
-.content-single .entry-single .alignfull {
-  margin-right: -1.5rem
-}
-@media (min-width:69rem) {
-  .content-single .entry-single .alignfull {
-    margin-right: calc((var(--wp-alignfull-size) - 66rem)/ -2)
-  }
-}
 .child-page:nth-child(2n+2) {
   padding-left: 0
 }
@@ -509,10 +476,6 @@ div.jetpack-testimonial-shortcode .testimonial-entry-content {
 div.jetpack-testimonial-shortcode .testimonial-featured-image {
   float: right
 }
-div.jetpack-testimonial-shortcode .testimonial-featured-image img {
-  margin-left: .5rem;
-  margin-right: 0
-}
 form.contact-form .grunion-field-wrap label span {
   padding: 0 .75rem
 }
@@ -528,10 +491,6 @@ body #eu-cookie-law.negative input:hover,
 body #eu-cookie-law.positive input:focus,
 body #eu-cookie-law.positive input:hover {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.toolbelt-menu-social li,
-.widgets-list-layout .bump-view {
-  margin-left: .75rem
 }
 .toolbelt-video-wrapper {
   margin: 3rem 0
@@ -581,10 +540,6 @@ body #eu-cookie-law.positive input:hover {
 .woocommerce input.button:disabled,
 .woocommerce input.button:disabled[disabled] {
   padding: .75rem
-}
-.woocommerce #reviews #comments ol.commentlist li .comment-text {
-  margin-right: 2.25rem;
-  margin-left: 0
 }
 li.woocommerce-cart-button li div.widget_shopping_cart {
   padding: .75rem

@@ -7,7 +7,8 @@ body {
 }
 
 .toolbelt-menu-social li {
-	margin-right: 0.75rem;
+	-webkit-margin-end: 0.75rem;
+	margin-inline-end: 0.75rem;
 }
 
 .toolbelt-menu-social .icon {
