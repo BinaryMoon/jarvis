@@ -47,19 +47,19 @@
 
 		ul {
 
-			padding-left: 2.5rem;
+			padding-inline-start: 2.5rem;
 			margin: 0;
 			list-style-type: $style-list-style-type;
 
 			a {
 
-				padding-left: 0;
+				padding-inline-start: 0;
 
 			}
 
 			ul {
 
-				padding-left: $grid-gutter;
+				padding-inline-start: $grid-gutter;
 
 			}
 
@@ -112,7 +112,7 @@
 
 			.sub-menu {
 
-				padding-left: ( $grid-gutter );
+				padding-inline-start: ( $grid-gutter );
 
 			}
 
@@ -140,7 +140,7 @@
 
 					> a {
 
-						padding-right: $grid-gutter * 1.5;
+						padding-inline-end: $grid-gutter * 1.5;
 
 					}
 

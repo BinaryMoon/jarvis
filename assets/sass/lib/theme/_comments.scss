@@ -109,8 +109,7 @@
 
 			&.depth-#{$i} .comment-body {
 
-				padding-left: $comments-padding;
-				padding-right: unset;
+				padding-inline-start: $comments-padding;
 				max-width: calc( #{$grid-small-width} + #{$comments-padding} );
 
 			}

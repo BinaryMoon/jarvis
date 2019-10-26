@@ -60,8 +60,7 @@ p.wp-block-subhead {
 
 			font-size: 2rem;
 			letter-spacing: 1em;
-			padding-left: 1em;
-			padding-right: 0;
+			padding-inline-start: 1em;
 			line-height: 0;
 			color: $black;
 
@@ -124,15 +123,13 @@ p.wp-block-subhead {
 
 		&:first-child {
 
-			padding-left: 0;
-			padding-right: ( $grid-gutter / 4 );
+			padding-inline-end: ( $grid-gutter / 4 );
 
 		}
 
 		&:last-child {
 
-			padding-right: 0;
-			padding-left: ( $grid-gutter / 4 );
+			padding-inline-start: ( $grid-gutter / 4 );
 
 		}
 

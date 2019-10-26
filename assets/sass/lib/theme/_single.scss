@@ -105,14 +105,14 @@
 
 	&:nth-child( 2n + 2 ) {
 
-		padding-right: 0;
+		padding-inline-end: 0;
 
 	}
 
 	&:nth-child( 2n + 1 ) {
 
 		clear: both;
-		padding-left: 0;
+		padding-inline-start: 0;
 
 	}
 
