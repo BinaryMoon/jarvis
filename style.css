@@ -669,7 +669,8 @@ input[type=checkbox]:hover, input[type=checkbox]:focus, input[type=radio]:hover,
 		width: 0.9rem;
 		height: 0.5rem;
 		border: 0.25rem solid var(--foreground-contrast-color);
-		border-right: none;
+		-webkit-border-end: none;
+		border-inline-end: none;
 		border-top: none;
 		-webkit-transform: rotate(-45deg);
 		transform: rotate(-45deg);
