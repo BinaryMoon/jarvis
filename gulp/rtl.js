@@ -66,14 +66,27 @@ const cssRTL = function( content ) {
 		'transition-property', 'unicode-bidi', '-webkit-transform', '-webkit-transform-origin'
 	];
 
-	// special properties that should be removed from rtl.css.
+	// Special properties that should be removed from rtl.css.
 	const ignore_properties = [
-		'padding: 0;',
-		'margin: 0;',
-		'border-radius: 0;',
-		'clear: both',
-		'text-align: center',
-		'margin: 0 auto',
+		/^border: 0;/,
+		/^border-color: var/,
+		/^border-radius: 0(;|\n|\r)/,
+		/^clear: both/,
+		/^float: none/,
+		/^margin: 0;/,
+		/^margin: 0 !important/,
+		/^margin: 0 auto/,
+		/^margin: ([0-9]+)(rem|px) (auto|0)(;|\n|\r)/,
+		/^margin-left: 0/,
+		/^margin-right: 0/,
+		/^margin-left: auto/,
+		/^margin-right: auto/,
+		/^padding: 0(;|\n|\r)/,
+		/^padding: ([0-9]+)(rem|px) (auto|0)(;|\n|\r)/,
+		/^padding: auto/,
+		/^padding-left: 0/,
+		/^padding-right: 0/,
+		/^text-align: center/,
 	];
 
 	// split content into array of lines so we can loop through them
@@ -97,7 +110,7 @@ const cssRTL = function( content ) {
 		if ( '{' !== last_character && '}' !== last_character && ',' !== last_character ) {
 
 			let found = properties.findIndex( p => line.startsWith( p + ':' ) );
-			let ignore = ignore_properties.findIndex( p => line.startsWith( p ) );
+			let ignore = ignore_properties.findIndex( p => { return ( p ).test( line ) } );
 
 			if ( found > -1 && ignore === -1 ) {
 				content_new.push( line );
@@ -117,11 +130,11 @@ const cssRTL = function( content ) {
 	content = content_new.join( "\n" );
 
 	// remove settings that don't matter
-	content = content.replace( /clear:\sboth;/g, '' );
-	content = content.replace( /float:\snone;/g, '' );
-	content = content.replace( /text-align:\scenter;/g, '' );
-	content = content.replace( /margin:\s0;/g, '' );
-	content = content.replace( /padding:\s0;/g, '' );
+	// content = content.replace( /clear:\sboth;/g, '' );
+	// content = content.replace( /float:\snone;/g, '' );
+	// content = content.replace( /text-align:\scenter;/g, '' );
+	// content = content.replace( /margin:\s0;/g, '' );
+	// content = content.replace( /padding:\s0;/g, '' );
 
 	// Remove permanent comments.
 	content = content.replace( /\/\*\*!/g, '/**' );
