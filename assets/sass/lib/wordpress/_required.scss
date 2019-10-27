@@ -45,6 +45,7 @@
 .aligncenter {
 
 	display: block;
+	margin-bottom: $grid-line-height;
 
 }
 
@@ -71,7 +72,7 @@ blockquote {
 .alignleft {
 
 	float: left;
-	margin: 0 $grid-gutter $grid-line-height 0;
+	margin-inline-end: $grid-gutter;
 
 }
 
@@ -79,7 +80,7 @@ blockquote {
 .alignright {
 
 	float: right;
-	margin: 0 0 $grid-line-height $grid-gutter;
+	margin-inline-start: $grid-gutter;
 
 }
 
