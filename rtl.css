@@ -35,12 +35,8 @@ input[type=submit]:hover {
   input[type=checkbox]:checked::after {
     right: .1rem
   }
-  input[type=radio] {
-    border-radius: 1.5rem
-  }
   input[type=radio]:checked::after {
-    right: .175rem;
-    border-radius: 1.5rem
+    right: .175rem
   }
 }
 input[type=date]:focus,
@@ -139,9 +135,6 @@ object {
 }
 .site-footer {
   padding: 1.5rem 1.5rem 3rem
-}
-.site-header {
-  background-position: center
 }
 .has-header-image .site-header:before {
   left: 0;

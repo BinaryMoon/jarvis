@@ -68,9 +68,11 @@ const cssRTL = function( content ) {
 
 	// Special properties that should be removed from rtl.css.
 	const ignore_properties = [
+		/^background-position: center/,
 		/^border: 0;/,
 		/^border-color: var/,
 		/^border-radius: 0(;|\n|\r)/,
+		/^border-radius: ([\.0-9]+)(rem|px|em)(;|\n|\r)/,
 		/^clear: both/,
 		/^float: none/,
 		/^margin: 0;/,
