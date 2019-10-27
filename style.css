@@ -1507,7 +1507,7 @@ p > object:only-child {
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
 	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
-	margin: 0 0 1.5rem 0;
+	margin-bottom: 1.5rem;
 }
 
 .block-info:before,

@@ -114,8 +114,7 @@ object {
 .block-info,
 .block-success {
   padding: 1.5rem 4.5rem 1.5rem 1.5rem;
-  box-shadow: -.4rem .4rem 0 var(--foreground-color);
-  margin: 0 0 1.5rem
+  box-shadow: -.4rem .4rem 0 var(--foreground-color)
 }
 .block-alert:before,
 .block-announcement:before,
