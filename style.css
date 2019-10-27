@@ -1029,6 +1029,7 @@ form.search-form input.search-field {
 .alignright,
 .aligncenter {
 	display: block;
+	margin-bottom: 1.5rem;
 }
 
 blockquote.alignleft, blockquote.alignright {
@@ -1046,13 +1047,15 @@ blockquote.alignleft, blockquote.alignright {
 /*@noflip*/
 .alignleft {
 	float: left;
-	margin: 0 1.5rem 1.5rem 0;
+	-webkit-margin-end: 1.5rem;
+	margin-inline-end: 1.5rem;
 }
 
 /*@noflip*/
 .alignright {
 	float: right;
-	margin: 0 0 1.5rem 1.5rem;
+	-webkit-margin-start: 1.5rem;
+	margin-inline-start: 1.5rem;
 }
 
 /*@noflip*/

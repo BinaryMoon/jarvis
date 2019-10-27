@@ -10,8 +10,7 @@ dl dd {
   margin: 0 1.5rem 1.5rem
 }
 blockquote {
-  padding: 0 1.5rem;
-  margin: 3rem 0
+  padding: 0 1.5rem
 }
 blockquote blockquote,
 blockquote small {
@@ -27,8 +26,7 @@ table td {
   padding: .75rem 1.5rem
 }
 pre {
-  padding: 1.5rem;
-  margin: 3rem 0
+  padding: 1.5rem
 }
 .entry-meta a.current-page {
   padding: .3em .6em;
@@ -90,22 +88,6 @@ select,
 textarea {
   padding: .75rem
 }
-input[type=date]:hover,
-input[type=datetime-local]:hover,
-input[type=email]:hover,
-input[type=month]:hover,
-input[type=number]:hover,
-input[type=password]:hover,
-input[type=search]:hover,
-input[type=tel]:hover,
-input[type=text]:hover,
-input[type=time]:hover,
-input[type=url]:hover,
-input[type=week]:hover,
-select:hover,
-textarea:hover {
-  border-color: var(--foreground-color)
-}
 input[type=date]:focus,
 input[type=datetime-local]:focus,
 input[type=email]:focus,
@@ -126,8 +108,8 @@ legend {
   padding: 0 .75rem
 }
 fieldset {
-  padding: 1.5rem;
-  margin: 3rem 0
+  margin: 0 0 1.5rem;
+  padding: 1.5rem
 }
 html {
   direction: rtl;
@@ -142,30 +124,14 @@ h6,
 p {
   margin: 0 0 1.2rem
 }
-hr {
-  margin: 3rem auto
-}
 .wp-caption {
   margin: 0 0 3rem
 }
-.wp-smiley {
-  margin: 0!important
-}
-blockquote.alignleft,
-blockquote.alignright {
-  margin-right: 0;
-  margin-left: 0
-}
 .alignleft {
-  float: right;
-  margin: 0 0 1.5rem 1.5rem
+  float: right
 }
 .alignright {
-  float: left;
-  margin: 0 1.5rem 1.5rem 0
-}
-.aligncenter {
-  margin: 3rem auto
+  float: left
 }
 .aligncenter .aligncenter,
 .alignleft .alignleft,
@@ -192,19 +158,6 @@ blockquote.alignright {
   margin-right: -.2rem;
   margin-left: -.2rem
 }
-.wp-block-separator {
-  margin-right: auto;
-  margin-left: auto;
-  border-color: var(--foreground-color)
-}
-.wp-block-columns .wp-block-column {
-  padding-right: .375rem;
-  padding-left: .375rem
-}
-.widget.widget_recent_comments table.recentcommentsavatar td.recentcommentsavatarend,
-.widget.widget_recent_comments table.recentcommentsavatar td.recentcommentsavatartop {
-  padding: auto
-}
 .gallery .gallery-item {
   margin: 0 0 1.5rem;
   padding: 0 .375rem
@@ -214,25 +167,9 @@ blockquote.alignright {
 #wp-calendar th {
   padding: .375rem 0
 }
-iframe.twitter-follow-button,
-iframe.twitter-tweet,
-iframe[src*="8tracks.com"],
-iframe[src*="bandcamp.com"],
-iframe[src*="dailymotion.com"],
-iframe[src*="itchi.io"],
-iframe[src*="slideshare.net"],
-iframe[src*="soundcloud.com"],
-iframe[src*="viddler.com"],
-iframe[src*="videopress.com"] {
-  margin: 3rem auto
-}
 iframe.instagram-media,
 object {
   margin: 3rem auto!important
-}
-.mejs-container,
-.wp-playlist {
-  margin: 3rem 0
 }
 .block-alert,
 .block-announcement,
@@ -272,12 +209,12 @@ object {
 .comment-list .bypostauthor .avatar {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
 }
-.content-comments {
-  padding: 3rem 0
-}
 @media (min-width:1200px) {
   .content-comments {
     padding: 7.5rem 0
+  }
+  .pagination {
+    margin: 7.5rem 0
   }
 }
 .content-comments .no-comments {
@@ -317,8 +254,9 @@ object {
 .menu-primary ul a {
   padding: .5rem 1.5rem
 }
-.pagination {
-  margin: 3rem 0
+.pagination .nav-links > a,
+.pagination .nav-links > span {
+  padding: .75rem 1.5rem
 }
 @media (min-width:47rem) {
   .comment-list li.comment .comment-meta .avatar {
@@ -347,28 +285,11 @@ object {
   .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
     left: 0
   }
-  .pagination {
-    margin: 6rem 0
-  }
   .comment-navigation .nav-links .nav-next,
   .image-navigation .nav-links .nav-next,
   .post-navigation .nav-links .nav-next {
     text-align: left
   }
-}
-@media (min-width:1200px) {
-  .pagination {
-    margin: 7.5rem 0
-  }
-}
-.pagination .nav-links > a,
-.pagination .nav-links > span {
-  padding: .75rem 1.5rem
-}
-.comment-navigation,
-.image-navigation,
-.post-navigation {
-  margin: 3rem 0
 }
 .widget {
   padding: .75rem 1.5rem
@@ -382,13 +303,6 @@ object {
 }
 img#wpstats {
   right: -100px
-}
-.tiled-gallery,
-main #jp-post-flair,
-main div#jp-relatedposts,
-main div.pd-rating,
-main div.sharedaddy {
-  margin: 3rem 0
 }
 div.jetpack-testimonial-shortcode .testimonial-entry {
   padding: 1.5rem .75rem
@@ -414,9 +328,6 @@ body #eu-cookie-law.negative input:hover,
 body #eu-cookie-law.positive input:focus,
 body #eu-cookie-law.positive input:hover {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.toolbelt-video-wrapper {
-  margin: 3rem 0
 }
 .woocommerce #respond input#submit,
 .woocommerce a.button,
