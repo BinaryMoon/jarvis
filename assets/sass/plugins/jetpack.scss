@@ -128,8 +128,7 @@ div.jetpack-testimonial-shortcode {
 
 			max-height: $grid-line-height;
 			width: auto;
-			margin-right: ( $grid-gutter / 3 );
-			margin-left: 0;
+			margin-inline-end: ( $grid-gutter / 3 );
 
 		}
 
@@ -294,7 +293,7 @@ body #eu-cookie-law {
 	// Thumbnail. Who knows what the class name means?
 	.bump-view {
 
-		margin-right: ( $grid-gutter / 2 );
+		margin-inline-end: ( $grid-gutter / 2 );
 		width: ( $grid-gutter * 3 );
 
 	}

@@ -2,7 +2,7 @@
 // calculate the sizes with: required-size / 16
 $font-sizes: (
 	// Base size. Only used by html and body elements.
-	base: ( size: 1rem, height: 1.5 ),				// 16px x 24px
+	base: ( size: 1rem, height: 1.75 ),				// 16px x 24px
 
 	// Font scale.
 	mega: ( size: 6rem, height: 1 ),				// 96px x 96px
@@ -10,7 +10,7 @@ $font-sizes: (
 	beta: ( size: 3rem, height: 1.25 ),				// 48px x 60px
 	gamma: ( size: 2rem, height: 1.25 ),			// 32px x 40px
 	delta: ( size: 1.625rem, height: 1.5 ),			// 26px x 39px
-	epsilon: ( size: 1.25rem, height: 1.5 ),		// 20px x 30px
+	epsilon: ( size: 1.25rem, height: 1.7 ),		// 20px x 34px
 	zeta: ( size: 0.875rem, height: 1.5 ),			// 14px x 21px
 );
 

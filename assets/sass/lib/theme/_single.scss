@@ -44,12 +44,14 @@
 
 		.alignfull {
 
-			margin-left: -$grid-gutter;
+			margin-inline-start: -$grid-gutter;
 			width: var( --wp-alignfull-size );
+			// We need this since otherwise the max-width is 100%.
+			max-width: 100vw;
 
 			@include for-big-tablet {
 
-				margin-left: calc( ( var( --wp-alignfull-size ) - #{$grid-total-width - $grid-gutter - $grid-gutter} ) / -2 );
+				margin-inline-start: calc( ( var( --wp-alignfull-size ) - #{$grid-total-width - $grid-gutter - $grid-gutter} ) / -2 );
 
 			}
 
@@ -103,14 +105,14 @@
 
 	&:nth-child( 2n + 2 ) {
 
-		padding-right: 0;
+		padding-inline-end: 0;
 
 	}
 
 	&:nth-child( 2n + 1 ) {
 
 		clear: both;
-		padding-left: 0;
+		padding-inline-start: 0;
 
 	}
 

@@ -41,7 +41,7 @@ main #jp-post-flair {
 #jp-relatedposts .jp-relatedposts-post-title {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	margin: 0;
 }
 
@@ -91,8 +91,8 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image {
 div.jetpack-testimonial-shortcode .testimonial-featured-image img {
 	max-height: 1.5rem;
 	width: auto;
-	margin-right: 0.5rem;
-	margin-left: 0;
+	-webkit-margin-end: 0.5rem;
+	margin-inline-end: 0.5rem;
 }
 
 div.jetpack-testimonial-shortcode.column-2 .testimonial-entry {
@@ -208,7 +208,8 @@ body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hov
 }
 
 .widgets-list-layout .bump-view {
-	margin-right: 0.75rem;
+	-webkit-margin-end: 0.75rem;
+	margin-inline-end: 0.75rem;
 	width: 4.5rem;
 }
 

@@ -88,4 +88,14 @@
 
 	}
 
+	.entry-archive-header {
+
+		> * + * {
+
+			margin-top: $grid-line-height;
+
+		}
+
+	}
+
 }

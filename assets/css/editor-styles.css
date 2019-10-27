@@ -2,7 +2,7 @@ body {
 	color: var(--foreground-color);
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.75;
 	font-weight: normal;
 	font-family: var(--font-body);
 	direction: ltr;
@@ -25,7 +25,7 @@ body .block-announcement {
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
 	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
-	margin: 0 0 1.5rem 0;
+	margin-bottom: 1.5rem;
 }
 
 body .block-info:before,
@@ -95,7 +95,7 @@ body .block-border-dashed {
 html {
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.75;
 	font-weight: normal;
 	font-family: var(--font-body);
 	direction: ltr;
@@ -110,7 +110,7 @@ html {
 body {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	font-family: var(--font-body);
 }
 
@@ -188,7 +188,7 @@ h3 {
 h4 {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 }
 
 h5,

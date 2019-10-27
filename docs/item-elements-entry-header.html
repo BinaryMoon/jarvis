@@ -33,7 +33,7 @@
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">components</span>
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Components</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
@@ -72,18 +72,78 @@
           </a>
         </h3>
 
+          <p class="kss-toolbar">
+            <a href="#kssref-elements-entry-header" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-elements-entry-header" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
 
           <div class="kss-description">
-            <p>Header container for archives and single posts/ pages.</p>
+            <p>A block that can be used throughout the theme. Often found on the single
+posts/ pages and archives.</p>
 
           </div>
 
 
       </div>
 
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="entry-header">
+<div class="entry-meta"><span>Dudley</span> <span><a href="#">Dursley</a></span></div>
+<h1 class="entry-title ">Philosophers Stone</h1>
+<p class="entry-meta">Chapter 1</p>
+<div class="entry-intro">It is impossible to live without failing at something, unless you live so cautiously that you might has well not have lived at all, in which case you have failed by default.</div>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-header"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-meta"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Dudley<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Dursley<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-title "</span>&gt;</span>Philosophers Stone<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-meta"</span>&gt;</span>Chapter 1<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"entry-intro"</span>&gt;</span>It is impossible to live without failing at something, unless you live so cautiously that you might has well not have lived at all, in which case you have failed by default.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
+          </details>
 
         <div class="kss-source kss-style">
-          Source: <code>lib/elements/_entry.scss</code>, line 17
+          Source: <code>lib/elements/_entry.scss</code>, line 5
         </div>
 
     </div>

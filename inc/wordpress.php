@@ -316,6 +316,8 @@ function jarvis_after_setup_theme() {
 				'comment-form',
 				'gallery',
 				'caption',
+				'style',
+				'script',
 			)
 		)
 	);

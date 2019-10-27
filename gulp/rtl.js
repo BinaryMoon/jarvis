@@ -3,7 +3,7 @@
 
 const { src, dest } = require( 'gulp' );
 const rtlcss = require( 'gulp-rtlcss' );
-const rename = require( 'gulp-rename' );
+const concat = require( 'gulp-concat' );
 const change = require( 'gulp-change' );
 const cleancss = require( 'gulp-clean-css' );
 const autoprefixer = require( 'gulp-autoprefixer' );
@@ -11,10 +11,21 @@ const autoprefixer = require( 'gulp-autoprefixer' );
 
 export default function rtl() {
 
-	return src( './style.css' )
+	let source = [
+		'./style.css',
+		'./assets/css/plugin-*.css',
+		'!./assets/css/plugin-*.min.css',
+	];
+
+	let clean_css_options = {
+		level: 2,
+		format: 'beautify'
+	};
+
+	return src( source )
+		.pipe( concat( 'rtl.css' ) )
 		.pipe( rtlcss() )
 		.pipe( change( cssRTL ) )
-		.pipe( rename( 'rtl.css' ) )
 		.pipe(
 			autoprefixer(
 				{
@@ -22,13 +33,7 @@ export default function rtl() {
 				}
 			)
 		)
-		.pipe(
-			cleancss(
-				{
-					format: 'beautify'
-				}
-			)
-		)
+		.pipe( cleancss( clean_css_options ) )
 		.pipe( dest( './' ) );
 
 }
@@ -44,8 +49,10 @@ const cssRTL = function( content ) {
 	// Processed list of lines.
 	let content_new = [];
 
-	// List of properties from https://github.com/twitter/css-flip that we will
-	// transfer.
+	/**
+	 * List of properties from https://github.com/twitter/css-flip that we will
+	 * transfer.
+	 */
 	const properties = [
 		'background-position', 'background-position-x',
 		'border-bottom-left-radius', 'border-bottom-right-radius',
@@ -59,17 +66,39 @@ const cssRTL = function( content ) {
 		'transition-property', 'unicode-bidi', '-webkit-transform', '-webkit-transform-origin'
 	];
 
-	// special properties that should not be ignored.
-	const special_properties = [
-		'padding: 0',
-		'margin: 0'
+	// Special properties that should be removed from rtl.css.
+	const ignore_properties = [
+		/^background-position: center/,
+		/^border: 0;/,
+		/^border-color: var/,
+		/^border-radius: 0(;|\n|\r)/,
+		/^border-radius: ([\.0-9]+)(rem|px|em)(;|\n|\r)/,
+		/^clear: both/,
+		/^float: none/,
+		/^margin: 0;/,
+		/^margin: 0 !important/,
+		/^margin: 0 auto/,
+		/^margin: ([\.0-9]+)(rem|px|em)(;|\n|\r)/,
+		/^margin: ([\.0-9]+)(rem|px|em) (auto|0)(;|\n|\r)/,
+		/^margin: ([\.0-9]+)(rem|px|em) ([\.0-9]+)(rem|px|em)(;|\n|\r)/,
+		/^margin: 0 ([\.0-9]+)(rem|px|em)(;|\n|\r)/,
+		/^margin-left: 0/,
+		/^margin-right: 0/,
+		/^margin-left: auto/,
+		/^margin-right: auto/,
+		/^padding: 0(;|\n|\r)/,
+		/^padding: ([\.0-9]+)(rem|px|em)(;|\n|\r)/,
+		/^padding: ([\.0-9]+)(rem|px|em) (auto|0)(;|\n|\r)/,
+		/^padding: ([\.0-9]+)(rem|px|em) ([\.0-9]+)(rem|px|em)(;|\n|\r)/,
+		/^padding: 0 ([\.0-9]+)(rem|px|em)(;|\n|\r)/,
+		/^padding: auto/,
+		/^padding-left: 0/,
+		/^padding-right: 0/,
+		/^text-align: center/,
 	];
 
-	// merge the two arrays.
-	Array.prototype.push.apply( properties, special_properties );
-
 	// split content into array of lines so we can loop through them
-	content_old = content.split( "\n" );
+	content_old = content.split( /\n|\r\n|\r|\n\r/ );
 
 	// loop through the lines
 	for ( var i = 0; i < content_old.length; i++ ) {
@@ -78,25 +107,21 @@ const cssRTL = function( content ) {
 		 * Store current line so we have less characters to type (and to
 		 * simplify code a bit)
 		 */
-		var line = content_old[ i ];
+		let line = content_old[ i ].trim().replace( '-webkit-', '' );
+
+		/**
+		 * Get the last character in the current line.
+		 */
+		let last_character = line.charAt( line.length - 1 );
 
 		// Check to see if line ends in a ;
-		if ( ';' === line.charAt( line.length - 1 ) ) {
+		if ( '{' !== last_character && '}' !== last_character && ',' !== last_character ) {
 
-			// Loop through properties and check if they match the current line
-			for ( var p = 0; p < properties.length; p++ ) {
+			let found = properties.findIndex( p => line.startsWith( p + ':' ) );
+			let ignore = ignore_properties.findIndex( p => { return ( p ).test( line ) } );
 
-				var property = properties[ p ] + ':';
-
-				// if valid property then add to the export list.
-				// Otherwise it gets ignored
-				if ( line.trim().startsWith( property ) ) {
-
-					line = line.replace( '-webkit-', '' );
-					content_new.push( line );
-
-				}
-
+			if ( found > -1 && ignore === -1 ) {
+				content_new.push( line );
 			}
 
 		} else {
@@ -113,11 +138,11 @@ const cssRTL = function( content ) {
 	content = content_new.join( "\n" );
 
 	// remove settings that don't matter
-	content = content.replace( /clear:\sboth;/g, '' );
-	content = content.replace( /float:\snone;/g, '' );
-	content = content.replace( /text-align:\scenter;/g, '' );
-	content = content.replace( /margin:\s0;/g, '' );
-	content = content.replace( /padding:\s0;/g, '' );
+	// content = content.replace( /clear:\sboth;/g, '' );
+	// content = content.replace( /float:\snone;/g, '' );
+	// content = content.replace( /text-align:\scenter;/g, '' );
+	// content = content.replace( /margin:\s0;/g, '' );
+	// content = content.replace( /padding:\s0;/g, '' );
 
 	// Remove permanent comments.
 	content = content.replace( /\/\*\*!/g, '/**' );

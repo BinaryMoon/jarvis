@@ -24,9 +24,16 @@ input {
 	&[type=radio] {
 
 		cursor: pointer;
-		margin-right: $style-spacing;
-		margin-left: auto;
+		margin-inline-end: $style-spacing;
 		vertical-align: middle;
+
+		&:hover,
+		&:focus {
+
+			background: $white;
+			color: $black;
+
+		}
 
 	}
 
@@ -34,39 +41,55 @@ input {
 
 @supports(-webkit-appearance: none) {
 
+	// Shared custom styles.
+	input {
+
+		&[type=checkbox],
+		&[type=radio] {
+
+			-webkit-appearance: none !important;
+			width: $grid-gutter !important;
+			height: $grid-gutter !important;
+			border: $border-width solid $black;
+
+			&:hover,
+			&:focus {
+
+				border: $border-width solid $black;
+
+			}
+
+			&:checked {
+
+				position: relative;
+				background: $black;
+
+			}
+
+			&:checked::after {
+
+				position: absolute;
+				content: "";
+
+			}
+
+		}
+
+	}
+
 	// Checkbox.
 	input[type="checkbox"] {
 
-		-webkit-appearance: none !important;
-		width: $grid-gutter !important;
-		height: $grid-gutter !important;
-		border: $border-width solid $black;
 		background: none;
-
-		&:focus {
-
-			border: $border-width solid $black;
-
-		}
-
-		&:checked {
-
-			position: relative;
-			background: none;
-
-		}
 
 		&:checked::after {
 
-			position: absolute;
 			top: 0.2rem;
 			left: 0.1rem;
-
-			content: "";
 			width: 0.9rem;
 			height: 0.5rem;
-			border: 0.25rem solid $black;
-			border-right: none;
+			border: 0.25rem solid $white;
+			border-inline-end: none;
 			border-top: none;
 			transform: rotate(-45deg);
 
@@ -77,36 +100,17 @@ input {
 	// Radio input.
 	input[type="radio"] {
 
-		-webkit-appearance: none;
-		width: $grid-gutter;
-		height: $grid-gutter;
 		border-radius: $grid-gutter;
-		border: $border-width solid $black;
 		padding: 0;
-
-		&:focus {
-
-			border: $border-width solid $black;
-
-		}
-
-		&:checked {
-
-			position: relative;
-			background: none;
-
-		}
 
 		&:checked::after {
 
-			position: absolute;
 			top: 0.175rem;
 			left: 0.175rem;
 			width: 0.75rem;
 			height: 0.75rem;
-			background: $black;
+			background: $white;
 			border-radius: $grid-gutter;
-			content: "";
 
 		}
 

@@ -11,8 +11,7 @@ Tags: blog, news, entertainment, grid-layout, one-column, accessibility-ready, c
 
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
-
-
+*/
 /*!
  *  ___        _____ _                  ___         _
  * | _ \_ _ __|_   _| |_  ___ _ __  ___|   \ ___ __(_)__ _ _ _
@@ -504,7 +503,7 @@ pre.compress {
 	display: block;
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	letter-spacing: initial;
 }
 
@@ -526,13 +525,15 @@ pre.compress {
 }
 
 .entry-meta > * {
-	margin-right: 0.75rem;
+	-webkit-margin-end: 0.75rem;
+	margin-inline-end: 0.75rem;
 }
 
 .entry-meta a.current-page {
 	background: var(--foreground-color);
 	color: var(--foreground-contrast-color);
 	padding: 0.3em 0.6em;
+	box-shadow: 0.2rem 0.2rem 0 var(--foreground-color);
 }
 
 .entry-intro {
@@ -564,6 +565,7 @@ pre.compress {
 
 .entry-author .avatar {
 	max-width: 100%;
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 .entry-breadcrumbs {
@@ -630,63 +632,60 @@ button:hover {
  */
 input[type=checkbox], input[type=radio] {
 	cursor: pointer;
-	margin-right: 0.5em;
-	margin-left: auto;
+	-webkit-margin-end: 0.5em;
+	margin-inline-end: 0.5em;
 	vertical-align: middle;
 }
 
+input[type=checkbox]:hover, input[type=checkbox]:focus, input[type=radio]:hover, input[type=radio]:focus {
+	background: var(--foreground-contrast-color);
+	color: var(--foreground-color);
+}
+
 @supports (-webkit-appearance: none) {
-	input[type="checkbox"] {
+	input[type=checkbox], input[type=radio] {
 		-webkit-appearance: none !important;
 		width: 1.5rem !important;
 		height: 1.5rem !important;
 		border: 0.2rem solid var(--foreground-color);
-		background: none;
 	}
-	input[type="checkbox"]:focus {
+	input[type=checkbox]:hover, input[type=checkbox]:focus, input[type=radio]:hover, input[type=radio]:focus {
 		border: 0.2rem solid var(--foreground-color);
 	}
-	input[type="checkbox"]:checked {
+	input[type=checkbox]:checked, input[type=radio]:checked {
 		position: relative;
+		background: var(--foreground-color);
+	}
+	input[type=checkbox]:checked::after, input[type=radio]:checked::after {
+		position: absolute;
+		content: "";
+	}
+	input[type="checkbox"] {
 		background: none;
 	}
 	input[type="checkbox"]:checked::after {
-		position: absolute;
 		top: 0.2rem;
 		left: 0.1rem;
-		content: "";
 		width: 0.9rem;
 		height: 0.5rem;
-		border: 0.25rem solid var(--foreground-color);
-		border-right: none;
+		border: 0.25rem solid var(--foreground-contrast-color);
+		-webkit-border-end: none;
+		border-inline-end: none;
 		border-top: none;
 		-webkit-transform: rotate(-45deg);
 		transform: rotate(-45deg);
 	}
 	input[type="radio"] {
-		-webkit-appearance: none;
-		width: 1.5rem;
-		height: 1.5rem;
 		border-radius: 1.5rem;
-		border: 0.2rem solid var(--foreground-color);
 		padding: 0;
 	}
-	input[type="radio"]:focus {
-		border: 0.2rem solid var(--foreground-color);
-	}
-	input[type="radio"]:checked {
-		position: relative;
-		background: none;
-	}
 	input[type="radio"]:checked::after {
-		position: absolute;
 		top: 0.175rem;
 		left: 0.175rem;
 		width: 0.75rem;
 		height: 0.75rem;
-		background: var(--foreground-color);
+		background: var(--foreground-contrast-color);
 		border-radius: 1.5rem;
-		content: "";
 	}
 }
 
@@ -843,7 +842,7 @@ fieldset {
 html {
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.75;
 	font-weight: normal;
 	font-family: var(--font-body);
 	direction: ltr;
@@ -858,7 +857,7 @@ html {
 body {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	font-family: var(--font-body);
 }
 
@@ -936,7 +935,7 @@ h3 {
 h4 {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 }
 
 h5,
@@ -1030,6 +1029,7 @@ form.search-form input.search-field {
 .alignright,
 .aligncenter {
 	display: block;
+	margin-bottom: 1.5rem;
 }
 
 blockquote.alignleft, blockquote.alignright {
@@ -1047,13 +1047,15 @@ blockquote.alignleft, blockquote.alignright {
 /*@noflip*/
 .alignleft {
 	float: left;
-	margin: 0 1.5rem 1.5rem 0;
+	-webkit-margin-end: 1.5rem;
+	margin-inline-end: 1.5rem;
 }
 
 /*@noflip*/
 .alignright {
 	float: right;
-	margin: 0 0 1.5rem 1.5rem;
+	-webkit-margin-start: 1.5rem;
+	margin-inline-start: 1.5rem;
 }
 
 /*@noflip*/
@@ -1096,7 +1098,7 @@ blockquote.alignleft, blockquote.alignright {
 .screen-reader-text:focus {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	padding: 15px 23px 14px;
 	background: #f1f1f1;
 	color: #222;
@@ -1149,7 +1151,7 @@ blockquote.alignleft, blockquote.alignright {
 p.wp-block-subhead {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	opacity: 1;
 }
 
@@ -1162,7 +1164,7 @@ p.wp-block-subhead {
 .wp-block-quote p {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 }
 
 .wp-block-quote.is-large p {
@@ -1188,8 +1190,8 @@ p.wp-block-subhead {
 .wp-block-separator.is-style-dots:before {
 	font-size: 2rem;
 	letter-spacing: 1em;
-	padding-left: 1em;
-	padding-right: 0;
+	-webkit-padding-start: 1em;
+	padding-inline-start: 1em;
 	line-height: 0;
 	color: var(--foreground-color);
 }
@@ -1218,13 +1220,13 @@ p.wp-block-subhead {
 }
 
 .wp-block-columns .wp-block-column:first-child {
-	padding-left: 0;
-	padding-right: 0.375rem;
+	-webkit-padding-end: 0.375rem;
+	padding-inline-end: 0.375rem;
 }
 
 .wp-block-columns .wp-block-column:last-child {
-	padding-right: 0;
-	padding-left: 0.375rem;
+	-webkit-padding-start: 0.375rem;
+	padding-inline-start: 0.375rem;
 }
 
 /*!
@@ -1268,8 +1270,8 @@ p.wp-block-subhead {
 
 .widget.widgt_text ul {
 	list-style-type: square;
-	margin-left: 1.5rem;
-	margin-right: auto;
+	-webkit-margin-start: 1.5rem;
+	margin-inline-start: 1.5rem;
 }
 
 .widget.widget_image img {
@@ -1446,7 +1448,11 @@ p.wp-block-subhead {
  * 2.7 - Password Required Form
  */
 .post-password-required form {
-	margin-bottom: 3rem;
+	margin-bottom: 6rem;
+}
+
+.post-password-required form label {
+	margin-bottom: 0.75rem;
 }
 
 .post-password-required form p:last-of-type {
@@ -1501,7 +1507,7 @@ p > object:only-child {
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
 	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
-	margin: 0 0 1.5rem 0;
+	margin-bottom: 1.5rem;
 }
 
 .block-info:before,
@@ -1605,6 +1611,10 @@ p > object:only-child {
 .content-posts .entry-thumbnail {
 	margin-bottom: 1.5rem;
 	display: block;
+}
+
+.content-posts .entry-archive-header > * + * {
+	margin-top: 1.5rem;
 }
 
 @media (min-width: 47rem) {
@@ -1761,7 +1771,8 @@ p > object:only-child {
 @media (min-width: 47rem) {
 	.comment-list li.comment .comment-meta .avatar {
 		float: left;
-		margin-right: 1.5rem;
+		-webkit-margin-end: 1.5rem;
+		margin-inline-end: 1.5rem;
 		display: block;
 		height: 3.75rem;
 		width: auto;
@@ -1779,7 +1790,8 @@ p > object:only-child {
 }
 
 .comment-list li.comment .comment-meta .comment-metadata > * {
-	margin-right: 0.75rem;
+	-webkit-margin-end: 0.75rem;
+	margin-inline-end: 0.75rem;
 }
 
 .comment-list li.comment .comment-meta .fn {
@@ -1793,63 +1805,67 @@ p > object:only-child {
 }
 
 .comment-list li.comment.depth-1 .comment-body {
-	padding-left: 0%;
-	padding-right: unset;
+	-webkit-padding-start: 0%;
+	padding-inline-start: 0%;
 	max-width: calc( 44rem + 0%);
 }
 
 .comment-list li.comment.depth-2 .comment-body {
-	padding-left: 4%;
-	padding-right: unset;
+	-webkit-padding-start: 4%;
+	padding-inline-start: 4%;
 	max-width: calc( 44rem + 4%);
 }
 
 .comment-list li.comment.depth-3 .comment-body {
-	padding-left: 8%;
-	padding-right: unset;
+	-webkit-padding-start: 8%;
+	padding-inline-start: 8%;
 	max-width: calc( 44rem + 8%);
 }
 
 .comment-list li.comment.depth-4 .comment-body {
-	padding-left: 12%;
-	padding-right: unset;
+	-webkit-padding-start: 12%;
+	padding-inline-start: 12%;
 	max-width: calc( 44rem + 12%);
 }
 
 .comment-list li.comment.depth-5 .comment-body {
-	padding-left: 16%;
-	padding-right: unset;
+	-webkit-padding-start: 16%;
+	padding-inline-start: 16%;
 	max-width: calc( 44rem + 16%);
 }
 
 .comment-list li.comment.depth-6 .comment-body {
-	padding-left: 20%;
-	padding-right: unset;
+	-webkit-padding-start: 20%;
+	padding-inline-start: 20%;
 	max-width: calc( 44rem + 20%);
 }
 
 .comment-list li.comment.depth-7 .comment-body {
-	padding-left: 24%;
-	padding-right: unset;
+	-webkit-padding-start: 24%;
+	padding-inline-start: 24%;
 	max-width: calc( 44rem + 24%);
 }
 
 .comment-list li.comment.depth-8 .comment-body {
-	padding-left: 28%;
-	padding-right: unset;
+	-webkit-padding-start: 28%;
+	padding-inline-start: 28%;
 	max-width: calc( 44rem + 28%);
 }
 
 .comment-list li.comment.depth-9 .comment-body {
-	padding-left: 32%;
-	padding-right: unset;
+	-webkit-padding-start: 32%;
+	padding-inline-start: 32%;
 	max-width: calc( 44rem + 32%);
 }
 
 .comment-list li.comment.depth-10 .comment-body {
-	padding-left: 36%;
-	padding-right: unset;
+	-webkit-padding-start: 36%;
+	padding-inline-start: 36%;
 	max-width: calc( 44rem + 36%);
+}
+
+.comment-list .bypostauthor .avatar {
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
 }
 
 .comment-list .reply,
@@ -1966,6 +1982,10 @@ p > object:only-child {
 	overflow: hidden;
 }
 
+.site-footer a {
+	font-weight: bold;
+}
+
 /*!
  * 3.5 - General Properties
  */
@@ -2076,7 +2096,8 @@ p > object:only-child {
 .site-header .search-link .icon {
 	height: 1.5rem;
 	width: 1.5rem;
-	margin-right: 0.75rem;
+	-webkit-margin-end: 0.75rem;
+	margin-inline-end: 0.75rem;
 }
 
 @media (min-width: 47rem) {
@@ -2163,7 +2184,8 @@ p > object:only-child {
 @media (min-width: 47rem) {
 	.header-layout-2 {
 		--wp-alignfull-size: 90vw;
-		padding-left: 10%;
+		-webkit-padding-start: 10%;
+		padding-inline-start: 10%;
 	}
 	.header-layout-2 .branding {
 		position: fixed;
@@ -2216,6 +2238,12 @@ p > object:only-child {
 	padding: 0.75rem 1.5rem;
 }
 
+.menu-primary > ul > .current-menu-item {
+	background: var(--foreground-color);
+	color: var(--foreground-contrast-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
+}
+
 @media (min-width: 47rem) {
 	.menu-primary > ul {
 		padding: 0;
@@ -2234,17 +2262,20 @@ p > object:only-child {
 }
 
 .menu-primary ul ul {
-	padding-left: 2.5rem;
+	-webkit-padding-start: 2.5rem;
+	padding-inline-start: 2.5rem;
 	margin: 0;
 	list-style-type: square;
 }
 
 .menu-primary ul ul a {
-	padding-left: 0;
+	-webkit-padding-start: 0;
+	padding-inline-start: 0;
 }
 
 .menu-primary ul ul ul {
-	padding-left: 1.5rem;
+	-webkit-padding-start: 1.5rem;
+	padding-inline-start: 1.5rem;
 }
 
 .menu-primary ul a {
@@ -2276,7 +2307,8 @@ p > object:only-child {
 		color: var(--foreground-contrast-color);
 	}
 	.menu-primary .menu-wrap .sub-menu {
-		padding-left: 1.5rem;
+		-webkit-padding-start: 1.5rem;
+		padding-inline-start: 1.5rem;
 	}
 	.menu-primary > .menu-wrap {
 		background: transparent;
@@ -2290,12 +2322,16 @@ p > object:only-child {
 		line-height: 2.5;
 		display: inline;
 	}
+	.menu-primary > .menu-wrap > li.menu-item-has-children > a {
+		-webkit-padding-end: 2.25rem;
+		padding-inline-end: 2.25rem;
+	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children:after {
 		font-family: var(--font-monospace);
 		content: "\25BC";
 		font-size: 12px;
 		position: absolute;
-		right: 0.75em;
+		right: 1rem;
 		top: 30%;
 	}
 	.menu-primary > .menu-wrap > li.menu-item-has-children > .sub-menu {
@@ -2496,8 +2532,8 @@ p > object:only-child {
 
 .widget ul ul {
 	list-style-type: square;
-	margin-left: 1.5rem;
-	margin-right: auto;
+	-webkit-margin-start: 1.5rem;
+	margin-inline-start: 1.5rem;
 }
 
 .widget ul:last-child {
@@ -2541,13 +2577,16 @@ p > object:only-child {
 }
 
 .content-single .entry-single .alignfull {
-	margin-left: -1.5rem;
+	-webkit-margin-start: -1.5rem;
+	margin-inline-start: -1.5rem;
 	width: var(--wp-alignfull-size);
+	max-width: 100vw;
 }
 
 @media (min-width: 69rem) {
 	.content-single .entry-single .alignfull {
-		margin-left: calc( ( var( --wp-alignfull-size ) - 66rem ) / -2);
+		-webkit-margin-start: calc( ( var( --wp-alignfull-size ) - 66rem ) / -2);
+		margin-inline-start: calc( ( var( --wp-alignfull-size ) - 66rem ) / -2);
 	}
 }
 
@@ -2577,16 +2616,18 @@ p > object:only-child {
 .child-page h2 {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.5;
+	line-height: 1.7;
 }
 
 .child-page:nth-child(2n + 2) {
-	padding-right: 0;
+	-webkit-padding-end: 0;
+	padding-inline-end: 0;
 }
 
 .child-page:nth-child(2n + 1) {
 	clear: both;
-	padding-left: 0;
+	-webkit-padding-start: 0;
+	padding-inline-start: 0;
 }
 
 .page-404 {

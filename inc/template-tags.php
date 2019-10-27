@@ -237,8 +237,8 @@ function jarvis_contributor( $user_id = null, $post_count = null ) {
 function jarvis_project_terms() {
 
 	$terms = get_terms(
-		'toolbelt-portfolio-type',
 		array(
+			'taxonomy' => 'toolbelt-portfolio-type',
 			'number' => 20,
 			'orderby' => 'count',
 			'order' => 'DESC',
