@@ -31,6 +31,9 @@ require get_parent_theme_file_path( 'inc/customizer/class-jarvis-doc-link.php' )
 // Customizer controls for setting theme properties.
 require get_parent_theme_file_path( 'inc/customizer/settings.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
+// Customizer controls for custom colours.
+require get_parent_theme_file_path( 'inc/customizer/colours.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+
 // Custom header layout.
 require get_parent_theme_file_path( 'inc/customizer/site-header.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 

@@ -11,21 +11,31 @@
 		function() {
 
 			wp.customize(
-				'background_color',
+				'jarvis_light_mode_colour',
 				function( value ) {
-					value.bind(
-						function( to ) {
+					value.bind( set_colour );
+				}
+			);
 
-							var newClass = brightness( to ) ? 'is-light-theme' : 'is-dark-theme';
-							$( 'body' ).removeClass( 'is-dark-theme is-light-theme' ).addClass( newClass );
-
-						}
-					);
+			wp.customize(
+				'jarvis_dark_mode_colour',
+				function( value ) {
+					value.bind( set_colour );
 				}
 			);
 
 		}
 	);
+
+
+	function set_colour( to ) {
+
+		document.body.style.setProperty( '--background-color-light', to );
+		document.body.style.setProperty( '--background-color-dark', to );
+		var newClass = brightness( to ) ? 'is-light-theme' : 'is-dark-theme';
+		$( 'body' ).removeClass( 'is-dark-theme is-light-theme' ).addClass( newClass );
+
+	}
 
 	/**
 	 * Calculate the brightness of the colour, and then decide if the

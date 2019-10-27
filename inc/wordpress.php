@@ -184,6 +184,7 @@ function jarvis_get_site_styles() {
 	$styles[] = jarvis_title_styles();
 	$styles[] = jarvis_get_font_css();
 	$styles[] = jarvis_get_single_css();
+	$styles[] = jarvis_get_colour_css();
 	$styles[] = jarvis_header();
 
 	return implode( $styles, ' ' );

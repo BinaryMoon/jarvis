@@ -140,6 +140,33 @@ function jarvis_get_single_css() {
 
 
 /**
+ * Get the css for the site background colours.
+ *
+ * @return string
+ */
+function jarvis_get_colour_css() {
+
+	$styles = array();
+
+	$colour_light = get_theme_mod( 'jarvis_light_mode_colour', '#eedd33' );
+	$colour_dark = get_theme_mod( 'jarvis_dark_mode_colour', '#004466' );
+
+	$styles[] = 'body { --background-color-light:' . esc_attr( $colour_light ) . '; }';
+	$styles[] = 'body { --background-color-dark:' . esc_attr( $colour_dark ) . '; }';
+
+	$styles[] = 'body { --foreground-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? '#000' : '#fff' ) . '; }';
+	$styles[] = 'body { --foreground-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? '#000' : '#fff' ) . '; }';
+
+	$styles[] = 'body { --foreground-contrast-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? '#fff' : '#000' ) . '; }';
+	$styles[] = 'body { --foreground-contrast-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? '#fff' : '#000' ) . '; }';
+
+	return implode( $styles, ' ' );
+
+}
+
+
+
+/**
  * Print custom header styles.
  *
  * This includes showing and hiding elements, and changing the heading colours.
