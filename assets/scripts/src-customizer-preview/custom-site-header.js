@@ -110,19 +110,6 @@
 				}
 			);
 
-			// Edit Site title color.
-			wp.customize(
-				'jarvis_title_color',
-				function( value ) {
-					value.bind(
-						function( new_color ) {
-							document.body.style.setProperty( '--title-color', new_color );
-						}
-					);
-				}
-			);
-
-
 		}
 	);
 
