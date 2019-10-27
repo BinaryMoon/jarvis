@@ -1,6 +1,9 @@
 q {
   padding: .25em .5em
 }
+fieldset {
+  margin: 0 0 1.5rem
+}
 ol,
 ul {
   margin: 0 0 1.5rem;
@@ -12,36 +15,17 @@ dl dd {
 blockquote {
   padding: 0 1.5rem
 }
-blockquote blockquote,
-blockquote small,
-pre {
-  padding: 1.5rem
-}
 table caption,
 table th {
-  padding: .75rem 1.5rem;
   text-align: right
-}
-table td {
-  padding: .75rem 1.5rem
 }
 .entry-meta a.current-page {
   padding: .3em .6em;
   box-shadow: -.2rem .2rem 0 var(--foreground-color)
 }
-.entry-author .avatar {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.button,
-.wp-block-button__link,
-button,
-input[type=button],
-input[type=reset],
-input[type=submit] {
-  padding: .75rem 3rem
-}
 .button:focus,
 .button:hover,
+.entry-author .avatar,
 .wp-block-button__link:focus,
 .wp-block-button__link:hover,
 button:focus,
@@ -66,22 +50,6 @@ input[type=submit]:hover {
     border-radius: 1.5rem
   }
 }
-input[type=date],
-input[type=datetime-local],
-input[type=email],
-input[type=month],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=time],
-input[type=url],
-input[type=week],
-select,
-textarea {
-  padding: .75rem
-}
 input[type=date]:focus,
 input[type=datetime-local]:focus,
 input[type=email]:focus,
@@ -100,10 +68,6 @@ textarea:focus {
 }
 legend {
   padding: 0 .75rem
-}
-fieldset {
-  margin: 0 0 1.5rem;
-  padding: 1.5rem
 }
 html {
   direction: rtl;
@@ -179,11 +143,7 @@ object {
   right: 1.5rem
 }
 .block-border {
-  padding: 1.5rem;
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.block-border-dashed {
-  padding: 1.5rem
 }
 .comment-list,
 .comment-list li.comment #respond {
@@ -194,9 +154,6 @@ object {
 }
 .comment-list .bypostauthor .avatar {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.content-comments .no-comments {
-  padding: 1.5rem
 }
 .site-footer {
   padding: 1.5rem 1.5rem 3rem
@@ -214,27 +171,11 @@ object {
   left: 0;
   right: 0
 }
-.site-header .site-header-content {
-  padding: 1.5rem
-}
-.site-header .search-link {
-  padding: 1.5rem 3rem
-}
 .site-header .menu-toggle {
   text-align: right
 }
-.menu-primary > ul {
-  padding: .75rem 1.5rem
-}
 .menu-primary > ul > .current-menu-item {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.menu-primary ul a {
-  padding: .5rem 1.5rem
-}
-.pagination .nav-links > a,
-.pagination .nav-links > span {
-  padding: .75rem 1.5rem
 }
 @media (min-width:47rem) {
   .comment-list li.comment .comment-meta .avatar {
@@ -246,7 +187,6 @@ object {
   }
   .header-layout-2 .branding {
     right: 0;
-    padding: 3rem .75rem;
     text-align: left
   }
   .menu-primary .menu-wrap {
@@ -269,9 +209,6 @@ object {
     text-align: left
   }
 }
-.widget {
-  padding: .75rem 1.5rem
-}
 .give-page .give-list-inline li {
   margin: 0 0 0 1.5rem
 }
@@ -282,9 +219,6 @@ object {
 img#wpstats {
   right: -100px
 }
-div.jetpack-testimonial-shortcode .testimonial-entry {
-  padding: 1.5rem .75rem
-}
 div.jetpack-testimonial-shortcode .testimonial-entry-content {
   margin: 0 0 .75rem
 }
@@ -294,67 +228,27 @@ div.jetpack-testimonial-shortcode .testimonial-featured-image {
 form.contact-form .grunion-field-wrap label span {
   padding: 0 .75rem
 }
-body #eu-cookie-law {
-  padding: .75rem
-}
-body #eu-cookie-law.negative input,
-body #eu-cookie-law.positive input {
-  padding: .75rem 3rem
-}
+.woocommerce #respond input#submit.alt:focus,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce #respond input#submit:focus,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button.alt:focus,
+.woocommerce a.button.alt:hover,
+.woocommerce a.button:focus,
+.woocommerce a.button:hover,
+.woocommerce button.button.alt:focus,
+.woocommerce button.button.alt:hover,
+.woocommerce button.button:focus,
+.woocommerce button.button:hover,
+.woocommerce input.button.alt:focus,
+.woocommerce input.button.alt:hover,
+.woocommerce input.button:focus,
+.woocommerce input.button:hover,
 body #eu-cookie-law.negative input:focus,
 body #eu-cookie-law.negative input:hover,
 body #eu-cookie-law.positive input:focus,
 body #eu-cookie-law.positive input:hover {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
-  padding: .75rem 3rem
-}
-.woocommerce #respond input#submit:focus,
-.woocommerce #respond input#submit:hover,
-.woocommerce a.button:focus,
-.woocommerce a.button:hover,
-.woocommerce button.button:focus,
-.woocommerce button.button:hover,
-.woocommerce input.button:focus,
-.woocommerce input.button:hover {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
-  padding: .75rem 3rem
-}
-.woocommerce #respond input#submit.alt:focus,
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:focus,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:focus,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:focus,
-.woocommerce input.button.alt:hover {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-.woocommerce #respond input#submit.disabled,
-.woocommerce #respond input#submit:disabled,
-.woocommerce #respond input#submit:disabled[disabled],
-.woocommerce a.button.disabled,
-.woocommerce a.button:disabled,
-.woocommerce a.button:disabled[disabled],
-.woocommerce button.button.disabled,
-.woocommerce button.button:disabled,
-.woocommerce button.button:disabled[disabled],
-.woocommerce input.button.disabled,
-.woocommerce input.button:disabled,
-.woocommerce input.button:disabled[disabled] {
-  padding: .75rem
-}
-li.woocommerce-cart-button li div.widget_shopping_cart {
-  padding: .75rem
 }
 li.woocommerce-cart-button li div.widget_shopping_cart ul {
   right: auto;
@@ -367,7 +261,6 @@ li.woocommerce-cart-button li div.widget_shopping_cart .total {
   padding: .75rem 0 0
 }
 .wp-post-series-box {
-  padding: 1.5rem;
   margin: 0 0 3rem
 }
 .wp-post-series-box .wp-post-series-description p {
