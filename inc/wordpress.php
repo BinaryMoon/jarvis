@@ -282,21 +282,6 @@ function jarvis_after_setup_theme() {
 	add_theme_support( 'align-wide' );
 
 	/**
-	 * Custom background.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/custom-background/
-	 */
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'jarvis_custom_background',
-			array(
-				'default-color' => 'eedd33',
-			)
-		)
-	);
-
-	/**
 	 * HTML5 FTW.
 	 *
 	 * This does not include support for the search-form since Jarvis has its

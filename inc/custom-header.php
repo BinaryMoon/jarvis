@@ -22,7 +22,6 @@ function jarvis_custom_header_support() {
 		apply_filters(
 			'jarvis_custom_header',
 			array(
-				'default-text-color' => '000000',
 				'random-default' => false,
 				'width' => 1600,
 				'height' => 900,
