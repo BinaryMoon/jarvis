@@ -13,8 +13,8 @@ blockquote {
   padding: 0 1.5rem
 }
 blockquote blockquote,
-blockquote small {
-  margin: 1.5rem 0;
+blockquote small,
+pre {
   padding: 1.5rem
 }
 table caption,
@@ -25,15 +25,9 @@ table th {
 table td {
   padding: .75rem 1.5rem
 }
-pre {
-  padding: 1.5rem
-}
 .entry-meta a.current-page {
   padding: .3em .6em;
   box-shadow: -.2rem .2rem 0 var(--foreground-color)
-}
-.entry-author {
-  margin: 4.5rem 0
 }
 .entry-author .avatar {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
@@ -162,11 +156,6 @@ p {
   margin: 0 0 1.5rem;
   padding: 0 .375rem
 }
-#wp-calendar caption,
-#wp-calendar td,
-#wp-calendar th {
-  padding: .375rem 0
-}
 iframe.instagram-media,
 object {
   margin: 3rem auto!important
@@ -196,9 +185,6 @@ object {
 .block-border-dashed {
   padding: 1.5rem
 }
-.content-posts article.entry .read-more {
-  padding: .75rem 0
-}
 .comment-list,
 .comment-list li.comment #respond {
   margin: 0 0 3rem
@@ -208,14 +194,6 @@ object {
 }
 .comment-list .bypostauthor .avatar {
   box-shadow: -.4rem .4rem 0 var(--foreground-color)
-}
-@media (min-width:1200px) {
-  .content-comments {
-    padding: 7.5rem 0
-  }
-  .pagination {
-    margin: 7.5rem 0
-  }
 }
 .content-comments .no-comments {
   padding: 1.5rem
