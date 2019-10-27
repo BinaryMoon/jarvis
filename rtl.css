@@ -1,6 +1,3 @@
-q {
-  padding: .25em .5em
-}
 fieldset {
   margin: 0 0 1.5rem
 }
@@ -17,7 +14,6 @@ table th {
   text-align: right
 }
 .entry-meta a.current-page {
-  padding: .3em .6em;
   box-shadow: -.2rem .2rem 0 var(--foreground-color)
 }
 .button:focus,
@@ -85,11 +81,6 @@ p {
 .alignright {
   float: left
 }
-.aligncenter .aligncenter,
-.alignleft .alignleft,
-.alignright .alignright {
-  padding: 0 .5em
-}
 .screen-reader-text {
   margin: -1px
 }
@@ -150,9 +141,6 @@ object {
 }
 .site-footer {
   padding: 1.5rem 1.5rem 3rem
-}
-.site-footer .sep {
-  margin: 0 .5em
 }
 .site-header {
   background-position: center
