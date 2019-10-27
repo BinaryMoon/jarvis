@@ -53,11 +53,14 @@ License URI: https://www.gnu.org/licenses/license-list.html#GPLv2
 /*!
  * 0.1 - Custom Properties
  */
-body {
-	--foreground-color: #000000;
-	--foreground-contrast-color: #ffffff;
-	--background-color: #eedd33;
-	--title-color: #000000;
+:root {
+	color-scheme: light dark;
+	--foreground-color-light: #000000;
+	--foreground-contrast-color-light: #ffffff;
+	--foreground-color-dark: #ffffff;
+	--foreground-contrast-color-dark: #000000;
+	--background-color-light: #eedd33;
+	--background-color-dark: #004466;
 	--font-body: Cambria, Georgia, serif;
 	--font-header: Cambria, Georgia, serif;
 	--font-title: Cambria, Georgia, serif;
@@ -66,9 +69,22 @@ body {
 	--wp-alignfull-size: 100vw;
 }
 
-body.is-dark-theme {
-	--foreground-color: #ffffff;
-	--foreground-contrast-color: #000000;
+body {
+	--foreground-color: var( --foreground-color-light );
+	--foreground-contrast-color: var( --foreground-contrast-color-light );
+	--background-color: var( --background-color-light );
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		--foreground-color: var( --foreground-color-dark );
+		--foreground-contrast-color: var( --foreground-contrast-color-dark );
+		--background-color: var( --background-color-dark );
+	}
+	img {
+		-webkit-filter: brightness(0.8) contrast(1.2);
+		filter: brightness(0.8) contrast(1.2);
+	}
 }
 
 /*!
@@ -2060,7 +2076,6 @@ p > object:only-child {
 	line-height: 1.2;
 	font-weight: bold;
 	margin: 0;
-	color: var(--title-color);
 }
 
 .site-header .branding .site-title a {
@@ -2080,7 +2095,6 @@ p > object:only-child {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	margin: 0;
-	color: var(--title-color);
 }
 
 .site-header .search-link {
