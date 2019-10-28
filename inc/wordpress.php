@@ -615,7 +615,6 @@ function jarvis_theme_colour() {
 <?php
 	}
 
-
 	if ( ! empty( $colour ) ) {
 ?>
 	<meta name="theme-color" content="#<?php echo esc_attr( $colour ); ?>">
