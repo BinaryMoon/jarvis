@@ -1,4 +1,6 @@
-
+/**
+ * Live preview for fonts.
+ */
 ; ( function( $ ) {
 
 	// font picker

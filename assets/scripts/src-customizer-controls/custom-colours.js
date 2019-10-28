@@ -1,10 +1,18 @@
-
+/**
+ * Modify the customizer controls for the colours panel.
+ */
 ; ( function( $ ) {
 
 	wp.customize.bind(
 		'ready',
 		function() {
 
+			/**
+			 * Check for changes in the dark mode checkbox.
+			 *
+			 * This lets us show and hide the dark mode background colour when
+			 * the checkbox is ticked. Taking it out of view when it's not needed.
+			 */
 			wp.customize(
 				'jarvis_dark_mode',
 				function( setting ) {
