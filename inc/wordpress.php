@@ -133,7 +133,7 @@ function jarvis_editor_blocks_styles() {
 	 *
 	 * @see https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds
 	 */
-	if ( ! jarvis_colour_brightness( get_background_color() ) ) {
+	if ( ! jarvis_colour_brightness( jarvis_get_background_color() ) ) {
 
 		add_theme_support( 'dark-editor-style' );
 
@@ -147,13 +147,9 @@ add_action( 'enqueue_block_editor_assets', 'jarvis_editor_blocks_styles' );
 /**
  * Get the custom properties for the site so that we can override them.
  */
-function jarvis_get_custom_properties() {
+function jarvis_get_background_color() {
 
-	$properties = array(
-		'background-color' => get_background_color(),
-	);
-
-	return $properties;
+	return get_theme_mod( 'jarvis_light_mode_colour', '#eedd33' );
 
 }
 
@@ -163,11 +159,11 @@ function jarvis_get_custom_properties() {
  */
 function jarvis_get_block_styles() {
 
-	$properties = jarvis_get_custom_properties();
+	$background_colour = jarvis_get_background_color();
 
 	$styles = array();
 
-	$styles[] = '.editor-styles-wrapper, .editor-styles-wrapper > .editor-writing-flow, .editor-styles-wrapper > .editor-writing-flow > div { background-color: #' . esc_attr( $properties['background-color'] ) . '; }';
+	$styles[] = '.editor-styles-wrapper, .editor-styles-wrapper > .editor-writing-flow, .editor-styles-wrapper > .editor-writing-flow > div { background-color: ' . esc_attr( $background_colour ) . '; }';
 
 	return implode( $styles, ' ' );
 
@@ -184,6 +180,7 @@ function jarvis_get_site_styles() {
 	$styles[] = jarvis_title_styles();
 	$styles[] = jarvis_get_font_css();
 	$styles[] = jarvis_get_single_css();
+	$styles[] = jarvis_get_colour_css();
 	$styles[] = jarvis_header();
 
 	return implode( $styles, ' ' );
@@ -280,21 +277,6 @@ function jarvis_after_setup_theme() {
 	 * Remove this if the theme does not support a full width layout.
 	 */
 	add_theme_support( 'align-wide' );
-
-	/**
-	 * Custom background.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/custom-background/
-	 */
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'jarvis_custom_background',
-			array(
-				'default-color' => 'eedd33',
-			)
-		)
-	);
 
 	/**
 	 * HTML5 FTW.
@@ -616,11 +598,26 @@ add_filter( 'wp_page_menu', 'jarvis_change_menu' );
 function jarvis_theme_colour() {
 
 	// Use the user defined background colour.
-	$colour = get_background_color();
+	$colour = jarvis_get_background_color();
+
+	if ( get_theme_mod( 'jarvis_dark_mode', false ) ) {
+
+		$colour = get_theme_mod( 'jarvis_dark_mode_colour', '#004466' );
+
+		/**
+		 * Add color scheme meta tag.
+		 * This lets browsers know to use dark mode controls where required.
+		 *
+		 * @link https://www.w3.org/TR/css-color-adjust-1/#color-scheme-meta
+		 */
+?>
+	<meta name="color-scheme" value="light dark">
+<?php
+	}
 
 	if ( ! empty( $colour ) ) {
 ?>
-		<meta name="theme-color" content="#<?php echo esc_attr( $colour ); ?>">
+	<meta name="theme-color" content="#<?php echo esc_attr( $colour ); ?>">
 <?php
 	}
 

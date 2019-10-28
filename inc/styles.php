@@ -83,10 +83,14 @@ function jarvis_get_font_css() {
 
 	$styles = array();
 
-	$styles[] = 'body { --font-body:' . $fonts[ get_theme_mod( 'jarvis_body_font', 'cambria' ) ][1] . '; }';
-	$styles[] = 'body { --font-title:' . $fonts[ get_theme_mod( 'jarvis_title_font', 'cambria' ) ][1] . '; }';
-	$styles[] = 'body { --font-header:' . $fonts[ get_theme_mod( 'jarvis_header_font', 'cambria' ) ][1] . '; }';
-	$styles[] = 'body { --font-meta:' . $fonts[ get_theme_mod( 'jarvis_meta_font', 'cambria' ) ][1] . '; }';
+	$styles[] = 'body {';
+
+	$styles[] = '--font-body:' . $fonts[ get_theme_mod( 'jarvis_body_font', 'cambria' ) ][1] . ';';
+	$styles[] = '--font-title:' . $fonts[ get_theme_mod( 'jarvis_title_font', 'cambria' ) ][1] . ';';
+	$styles[] = '--font-header:' . $fonts[ get_theme_mod( 'jarvis_header_font', 'cambria' ) ][1] . ';';
+	$styles[] = '--font-meta:' . $fonts[ get_theme_mod( 'jarvis_meta_font', 'cambria' ) ][1] . ';';
+
+	$styles[] = '}';
 
 	return implode( $styles, ' ' );
 
@@ -140,6 +144,50 @@ function jarvis_get_single_css() {
 
 
 /**
+ * Get the css for the site background colours.
+ *
+ * @return string
+ */
+function jarvis_get_colour_css() {
+
+	$styles = array();
+
+	$colour_light = jarvis_get_background_color();
+	$colour_dark = $colour_light;
+
+	/**
+	 * Only use the dark mode background colour if the setting has been enabled.
+	 * Else it will always use the default background colour.
+	 */
+	if ( get_theme_mod( 'jarvis_dark_mode', false ) ) {
+
+		$colour_dark = get_theme_mod( 'jarvis_dark_mode_colour', '#004466' );
+
+	}
+
+	$black = apply_filters( 'jarvis_colour_black', '#000' );
+	$white = apply_filters( 'jarvis_colour_white', 'rgba(255,255,255,0.9)' );
+
+	$styles[] = 'body {';
+
+	$styles[] = '--background-color-light:' . esc_attr( $colour_light ) . ';';
+	$styles[] = '--background-color-dark:' . esc_attr( $colour_dark ) . ';';
+
+	$styles[] = '--foreground-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? $black : $white ) . ';';
+	$styles[] = '--foreground-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? $black : $white ) . ';';
+
+	$styles[] = '--foreground-contrast-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? $white : $black ) . ';';
+	$styles[] = '--foreground-contrast-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? $white : $black ) . ';';
+
+	$styles[] = '}';
+
+	return implode( $styles, ' ' );
+
+}
+
+
+
+/**
  * Print custom header styles.
  *
  * This includes showing and hiding elements, and changing the heading colours.
@@ -166,8 +214,6 @@ function jarvis_title_styles() {
 	if ( 2 === $header_visibility ) {
 		$styles[] = '.branding .site-title, .branding .site-description ' . $hide;
 	}
-
-	$styles[] = 'body { --title-color: ' . esc_attr( get_theme_mod( 'jarvis_title_color', '#000000' ) ) . '}';
 
 	return implode( $styles, ' ' );
 

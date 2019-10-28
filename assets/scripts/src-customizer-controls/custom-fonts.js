@@ -1,7 +1,7 @@
-
+/**
+ * Live preview for fonts.
+ */
 ; ( function( $ ) {
-
-	var api = wp.customize;
 
 	// font picker
 	$( document ).ready(
@@ -70,7 +70,7 @@
 		var value = $input.attr( 'value' );
 		var parentID = $input.attr( 'name' );
 
-		api.instance( parentID ).set( value );
+		wp.customize.instance( parentID ).set( value );
 
 	};
 
