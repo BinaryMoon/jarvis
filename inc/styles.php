@@ -149,13 +149,21 @@ function jarvis_get_colour_css() {
 	$styles = array();
 
 	$colour_light = get_theme_mod( 'jarvis_light_mode_colour', '#eedd33' );
-	$colour_dark = get_theme_mod( 'jarvis_dark_mode_colour', '#004466' );
+	$colour_dark = $colour_light;
+
+	/**
+	 * Only use the dark mode background colour if the setting has been enabled.
+	 * Else it will always use the default background colour.
+	 */
+	if ( get_theme_mod( 'jetpack_dark_mode', false ) ) {
 
 	$styles[] = 'body { --background-color-light:' . esc_attr( $colour_light ) . '; }';
 	$styles[] = 'body { --background-color-dark:' . esc_attr( $colour_dark ) . '; }';
+		$colour_dark = get_theme_mod( 'jarvis_dark_mode_colour', '#004466' );
 
 	$styles[] = 'body { --foreground-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? '#000' : '#fff' ) . '; }';
 	$styles[] = 'body { --foreground-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? '#000' : '#fff' ) . '; }';
+	}
 
 	$styles[] = 'body { --foreground-contrast-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? '#fff' : '#000' ) . '; }';
 	$styles[] = 'body { --foreground-contrast-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? '#fff' : '#000' ) . '; }';
