@@ -159,22 +159,25 @@ function jarvis_get_colour_css() {
 	 * Only use the dark mode background colour if the setting has been enabled.
 	 * Else it will always use the default background colour.
 	 */
-	if ( get_theme_mod( 'jetpack_dark_mode', false ) ) {
+	if ( get_theme_mod( 'jarvis_dark_mode', false ) ) {
 
 		$colour_dark = get_theme_mod( 'jarvis_dark_mode_colour', '#004466' );
 
 	}
+
+	$black = apply_filters( 'jarvis_colour_black', '#000' );
+	$white = apply_filters( 'jarvis_colour_white', 'rgba(255,255,255,0.9)' );
 
 	$styles[] = 'body {';
 
 	$styles[] = '--background-color-light:' . esc_attr( $colour_light ) . ';';
 	$styles[] = '--background-color-dark:' . esc_attr( $colour_dark ) . ';';
 
-	$styles[] = '--foreground-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? '#000' : '#fff' ) . ';';
-	$styles[] = '--foreground-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? '#000' : '#fff' ) . ';';
+	$styles[] = '--foreground-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? $black : $white ) . ';';
+	$styles[] = '--foreground-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? $black : $white ) . ';';
 
-	$styles[] = '--foreground-contrast-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? '#fff' : '#000' ) . ';';
-	$styles[] = '--foreground-contrast-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? '#fff' : '#000' ) . ';';
+	$styles[] = '--foreground-contrast-color-light:' . esc_attr( jarvis_colour_brightness( $colour_light ) ? $white : $black ) . ';';
+	$styles[] = '--foreground-contrast-color-dark:' . esc_attr( jarvis_colour_brightness( $colour_dark ) ? $white : $black ) . ';';
 
 	$styles[] = '}';
 
