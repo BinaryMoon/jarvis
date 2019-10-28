@@ -21,6 +21,9 @@
 						'jarvis_dark_mode_colour',
 						function( control ) {
 
+							/**
+							 * Display the dark mode background colour.
+							 */
 							var visibility = function() {
 								if ( setting.get() ) {
 									control.container.slideDown( 180 );
