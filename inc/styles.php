@@ -152,7 +152,7 @@ function jarvis_get_colour_css() {
 
 	$styles = array();
 
-	$colour_light = get_theme_mod( 'jarvis_light_mode_colour', '#eedd33' );
+	$colour_light = jarvis_get_background_color();
 	$colour_dark = $colour_light;
 
 	/**
