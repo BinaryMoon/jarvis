@@ -202,8 +202,6 @@ function jarvis_title_styles() {
 		$styles[] = '.branding .site-title, .branding .site-description ' . $hide;
 	}
 
-	$styles[] = 'body { --title-color: ' . esc_attr( get_theme_mod( 'jarvis_title_color', '#000000' ) ) . '}';
-
 	return implode( $styles, ' ' );
 
 }
