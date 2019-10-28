@@ -27,13 +27,21 @@
 		}
 	);
 
-
+	/**
+	 * Set the background colour and make sure the font is the appropriate colour.
+	 */
 	function set_colour( to ) {
 
-		document.body.style.setProperty( '--background-color-light', to );
-		document.body.style.setProperty( '--background-color-dark', to );
-		var newClass = brightness( to ) ? 'is-light-theme' : 'is-dark-theme';
-		$( 'body' ).removeClass( 'is-dark-theme is-light-theme' ).addClass( newClass );
+		var style = document.body.style;
+
+		style.setProperty( '--background-color-light', to );
+		style.setProperty( '--background-color-dark', to );
+
+		style.setProperty( '--foreground-color-light', brightness( to ) ? '#000' : '#fff' );
+		style.setProperty( '--foreground-color-dark', brightness( to ) ? '#000' : '#fff' );
+
+		style.setProperty( '--foreground-contrast-color-light', brightness( to ) ? '#fff' : '#000' );
+		style.setProperty( '--foreground-contrast-color-dark', brightness( to ) ? '#fff' : '#000' );
 
 	}
 
