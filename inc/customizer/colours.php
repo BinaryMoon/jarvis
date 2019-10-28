@@ -32,9 +32,30 @@ function jarvis_customizer_colours( WP_Customize_Manager $wp_customize ) {
 			'jarvis_light_mode_colour',
 			array(
 				'label' => esc_html__( 'Light Mode background color', 'wp-toolbelt' ),
-				'description' => esc_html__( 'The default background colour.', 'wp-toolbelt' ),
+				'description' => esc_html__( 'The default background color.', 'wp-toolbelt' ),
 				'section' => 'colors',
 			)
+		)
+	);
+
+	/**
+	 * Dark mode background colour.
+	 */
+	$wp_customize->add_setting(
+		'jarvis_dark_mode',
+		array(
+			'default' => false,
+			'sanitize_callback' => 'jarvis_sanitize_checkbox',
+			'transport' => 'postMessage',
+		)
+	);
+
+	$wp_customize->add_control(
+		'jarvis_dark_mode',
+		array(
+			'label' => esc_html__( 'Use Dark Mode Colour', 'wp-toolbelt' ),
+			'section' => 'colors',
+			'type' => 'checkbox',
 		)
 	);
 
