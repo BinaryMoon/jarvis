@@ -1,4 +1,4 @@
 // Colours used in the theme. Not many right?
-$black: var(--foreground-color);
-$white: var(--foreground-contrast-color);
-$canvas-background: var(--background-color);
+$black: var(--foreground-color, #000);
+$white: var(--foreground-contrast-color, #fff);
+$canvas-background: var(--background-color, #fff);
