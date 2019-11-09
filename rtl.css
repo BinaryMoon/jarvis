@@ -14,7 +14,7 @@ table th {
   text-align: right
 }
 .entry-meta a.current-page {
-  box-shadow: -.2rem .2rem 0 var(--foreground-color)
+  box-shadow: -.2rem .2rem 0 var(--foreground-color,#000)
 }
 .button:focus,
 .button:hover,
@@ -29,7 +29,7 @@ input[type=reset]:focus,
 input[type=reset]:hover,
 input[type=submit]:focus,
 input[type=submit]:hover {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 @supports ((-webkit-appearance:none) or (-moz-appearance:none) or (appearance:none)) {
   input[type=checkbox]:checked::after {
@@ -53,7 +53,7 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 html {
   direction: rtl;
@@ -110,7 +110,7 @@ object {
 .block-info,
 .block-success {
   padding: 1.5rem 4.5rem 1.5rem 1.5rem;
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 .block-alert:before,
 .block-announcement:before,
@@ -121,7 +121,7 @@ object {
   right: 1.5rem
 }
 .block-border {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 .comment-list,
 .comment-list li.comment #respond {
@@ -131,7 +131,7 @@ object {
   float: left
 }
 .comment-list .bypostauthor .avatar {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 .site-footer {
   padding: 1.5rem 1.5rem 3rem
@@ -144,7 +144,7 @@ object {
   text-align: right
 }
 .menu-primary > ul > .current-menu-item {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 @media (min-width:47rem) {
   .comment-list li.comment .comment-meta .avatar {
@@ -210,7 +210,7 @@ body #eu-cookie-law.negative input:focus,
 body #eu-cookie-law.negative input:hover,
 body #eu-cookie-law.positive input:focus,
 body #eu-cookie-law.positive input:hover {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 li.woocommerce-cart-button li div.widget_shopping_cart ul {
   right: auto;

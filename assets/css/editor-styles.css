@@ -20,11 +20,11 @@ body .block-alert,
 body .block-success,
 body .block-error,
 body .block-announcement {
-	background: var(--foreground-color);
-	color: var(--foreground-contrast-color);
+	background: var(--foreground-color, #000);
+	color: var(--foreground-contrast-color, #fff);
 	padding: 1.5rem 1.5rem 1.5rem 4.5rem;
 	position: relative;
-	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color, #000);
 	margin-bottom: 1.5rem;
 }
 
@@ -81,7 +81,7 @@ body .block-intro {
 body .block-border {
 	padding: 1.5rem 1.5rem;
 	border: 0.2rem solid currentColor;
-	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color, #000);
 }
 
 body .block-border-dashed {
@@ -218,7 +218,7 @@ a:focus, a:hover {
 
 hr {
 	border: none;
-	border-bottom: 0.2rem solid var(--foreground-color);
+	border-bottom: 0.2rem solid var(--foreground-color, #000);
 	margin: 3rem auto;
 }
 

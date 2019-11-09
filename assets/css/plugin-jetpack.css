@@ -136,7 +136,7 @@ form.contact-form .grunion-field-wrap label.grunion-radio-label:last-of-type, fo
 }
 
 form.contact-form .grunion-field-wrap label span {
-	color: var(--foreground-color);
+	color: var(--foreground-color, #000);
 	font-style: italic;
 	padding: 0 0.75rem;
 	font-weight: normal;
@@ -154,8 +154,8 @@ body #eu-cookie-law {
 }
 
 body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
-	background: var(--foreground-color);
-	color: var(--foreground-contrast-color);
+	background: var(--foreground-color, #000);
+	color: var(--foreground-contrast-color, #fff);
 	display: inline-block;
 	text-decoration: none;
 	border: none;
@@ -176,7 +176,7 @@ body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
 
 body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hover, body #eu-cookie-law.negative input:focus, body #eu-cookie-law.negative input:hover {
 	text-decoration: underline;
-	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color, #000);
 }
 
 /*
