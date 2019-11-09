@@ -3,12 +3,12 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	margin-top: $grid-line-height * 3;
+	margin-top: $grid-line-height * 5;
 	margin-bottom: $grid-line-height * 3;
 
 	@include for-desktop {
 
-		margin-top: $grid-line-height * 5;
+		margin-top: $grid-line-height * 10;
 
 	}
 
