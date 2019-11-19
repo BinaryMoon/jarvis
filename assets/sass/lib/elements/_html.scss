@@ -188,7 +188,7 @@ table {
 
 		@include post-meta-data;
 		padding: ( $grid-line-height / 2 ) $grid-gutter;
-		text-align: left;
+		text-align: start;
 		font-weight: bold;
 
 	}
