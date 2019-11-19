@@ -95,6 +95,8 @@ const cssRTL = function( content ) {
 		/^padding-left: 0/,
 		/^padding-right: 0/,
 		/^text-align: center/,
+		/^text-align: start/,
+		/^text-align: end/,
 	];
 
 	// split content into array of lines so we can loop through them
