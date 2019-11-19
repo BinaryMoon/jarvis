@@ -434,7 +434,7 @@ table caption {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	padding: 0.75rem 1.5rem;
-	text-align: left;
+	text-align: start;
 	font-weight: bold;
 }
 
@@ -2126,7 +2126,7 @@ p > object:only-child {
 }
 
 .site-header .menu-toggle {
-	text-align: left;
+	text-align: start;
 	display: block;
 	width: 100%;
 }
@@ -2199,7 +2199,7 @@ p > object:only-child {
 		margin: 0;
 		-webkit-transform: rotate(180deg);
 		transform: rotate(180deg);
-		text-align: right;
+		text-align: end;
 		display: -webkit-box;
 		display: flex;
 		-webkit-box-pack: center;
@@ -2304,7 +2304,7 @@ p > object:only-child {
 		margin-right: -1.5rem;
 	}
 	.menu-primary .menu-wrap ul {
-		text-align: left;
+		text-align: start;
 		margin: 0;
 		color: var(--foreground-contrast-color, #fff);
 	}
@@ -2480,7 +2480,7 @@ p > object:only-child {
 	.image-navigation .nav-links .nav-next,
 	.comment-navigation .nav-links .nav-next,
 	.post-navigation .nav-links .nav-next {
-		text-align: right;
+		text-align: end;
 	}
 }
 

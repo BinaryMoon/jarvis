@@ -9,10 +9,6 @@ ul {
 dl dd {
   margin: 0 1.5rem 1.5rem
 }
-table caption,
-table th {
-  text-align: right
-}
 .entry-meta a.current-page {
   box-shadow: -.2rem .2rem 0 var(--foreground-color,#000)
 }
@@ -140,9 +136,6 @@ object {
   left: 0;
   right: 0
 }
-.site-header .menu-toggle {
-  text-align: right
-}
 .menu-primary > ul > .current-menu-item {
   box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
@@ -155,15 +148,11 @@ object {
     right: auto
   }
   .header-layout-2 .branding {
-    right: 0;
-    text-align: left
+    right: 0
   }
   .menu-primary .menu-wrap {
     margin-right: -1.5rem;
     margin-left: -1.5rem
-  }
-  .menu-primary .menu-wrap ul {
-    text-align: right
   }
   .menu-primary > .menu-wrap > li.menu-item-has-children:after {
     left: 1rem
@@ -171,11 +160,6 @@ object {
   .menu-primary > .menu-wrap > li.menu-item-has-children:focus-within > .sub-menu,
   .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
     left: 0
-  }
-  .comment-navigation .nav-links .nav-next,
-  .image-navigation .nav-links .nav-next,
-  .post-navigation .nav-links .nav-next {
-    text-align: left
   }
 }
 .give-page .give-list-inline li {
