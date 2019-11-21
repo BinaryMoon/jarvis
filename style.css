@@ -693,8 +693,10 @@ input[type=checkbox]:hover, input[type=checkbox]:focus, input[type=radio]:hover,
 		padding: 0;
 	}
 	input[type="radio"]:checked::after {
-		top: 0.175rem;
-		left: 0.175rem;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-0.375rem, -0.375rem);
+		transform: translate(-0.375rem, -0.375rem);
 		width: 0.75rem;
 		height: 0.75rem;
 		background: var(--foreground-contrast-color, #fff);
@@ -2492,16 +2494,27 @@ p > object:only-child {
 }
 
 .sidebar {
-	display: -webkit-box;
-	display: flex;
-	flex-wrap: wrap;
 	margin-top: 7.5rem;
 	margin-bottom: 4.5rem;
+	-webkit-column-fill: balance-all;
+	-moz-column-fill: balance-all;
+	column-fill: balance-all;
+}
+
+@media (min-width: 47rem) {
+	.sidebar {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
 }
 
 @media (min-width: 1200px) {
 	.sidebar {
 		margin-top: 15rem;
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
 	}
 }
 

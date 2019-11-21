@@ -32,7 +32,7 @@ input[type=submit]:hover {
     right: .1rem
   }
   input[type=radio]:checked::after {
-    right: .175rem
+    right: 50%
   }
 }
 input[type=date]:focus,
