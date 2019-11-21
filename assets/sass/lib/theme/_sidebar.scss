@@ -1,14 +1,19 @@
 .sidebar {
 
-	display: flex;
-	flex-wrap: wrap;
-
 	margin-top: $grid-line-height * 5;
 	margin-bottom: $grid-line-height * 3;
+	column-fill: balance-all;
+
+	@include for-tablet {
+
+		column-count: 2;
+
+	}
 
 	@include for-desktop {
 
 		margin-top: $grid-line-height * 10;
+		column-count: 3;
 
 	}
 
@@ -20,6 +25,7 @@
 	flex-basis: 20rem;
 	flex-grow: 1;
 	padding: ( $grid-line-height / 2 ) ( $grid-gutter );
+	// Display is needed to stop blocks from splitting across columns.
 	display: inline-block;
 	overflow: hidden;
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
