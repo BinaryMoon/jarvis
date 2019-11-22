@@ -28,11 +28,11 @@ input[type=submit]:hover {
   box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 @supports ((-webkit-appearance:none) or (-moz-appearance:none) or (appearance:none)) {
-  input[type=checkbox]:checked::after {
+  input[type=checkbox]:checked:after {
     right: .1rem
   }
-  input[type=radio]:checked::after {
-    right: 50%
+  input[type=radio]:checked {
+    border-width: .4rem
   }
 }
 input[type=date]:focus,
