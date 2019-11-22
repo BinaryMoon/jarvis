@@ -53,25 +53,13 @@ input {
 			width: $grid-gutter !important;
 			height: $grid-gutter !important;
 			border: $border-width solid $black;
+			background: $black;
 
 			&:hover,
 			&:focus {
 
 				border: $border-width solid $black;
-
-			}
-
-			&:checked {
-
-				position: relative;
-				background: $black;
-
-			}
-
-			&:checked::after {
-
-				position: absolute;
-				content: "";
+				background: $white;
 
 			}
 
@@ -82,18 +70,26 @@ input {
 	// Checkbox.
 	input[type="checkbox"] {
 
-		background: none;
+		&:checked {
 
-		&:checked::after {
+			background: $black;
+			position: relative;
 
-			top: 0.2rem;
-			left: 0.1rem;
-			width: 0.9rem;
-			height: 0.5rem;
-			border: 0.25rem solid $white;
-			border-inline-end: none;
-			border-top: none;
-			transform: rotate(-45deg);
+			&:after {
+
+				position: absolute;
+				content: "";
+
+				top: 0.2rem;
+				left: 0.1rem;
+				width: 0.9rem;
+				height: 0.5rem;
+				border: 0.25rem solid $white;
+				border-inline-end: none;
+				border-top: none;
+				transform: rotate(-45deg);
+
+			}
 
 		}
 
@@ -103,17 +99,13 @@ input {
 	input[type="radio"] {
 
 		border-radius: $grid-gutter;
+		transition: border ease-in-out 0.1s;
 		padding: 0;
 
-		&:checked::after {
+		&:checked {
 
-			top: 50%;
-			left: 50%;
-			transform: translate( -0.375rem, -0.375rem );
-			width: 0.75rem;
-			height: 0.75rem;
+			border-width: $border-width * 2;
 			background: $white;
-			border-radius: $grid-gutter;
 
 		}
 
