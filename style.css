@@ -987,6 +987,11 @@ form.search-form input.search-field {
 	margin: 0;
 }
 
+form.search-form button {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
 /*!
  * 2.0 - WordPress
  */
@@ -2489,25 +2494,14 @@ p > object:only-child {
 .sidebar {
 	margin-top: 7.5rem;
 	margin-bottom: 4.5rem;
-	-webkit-column-fill: balance-all;
-	-moz-column-fill: balance-all;
-	column-fill: balance-all;
-}
-
-@media (min-width: 47rem) {
-	.sidebar {
-		-webkit-column-count: 2;
-		-moz-column-count: 2;
-		column-count: 2;
-	}
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 @media (min-width: 1200px) {
 	.sidebar {
 		margin-top: 15rem;
-		-webkit-column-count: 3;
-		-moz-column-count: 3;
-		column-count: 3;
 	}
 }
 
@@ -2517,7 +2511,6 @@ p > object:only-child {
 	-webkit-box-flex: 1;
 	flex-grow: 1;
 	padding: 0.75rem 1.5rem;
-	display: inline-block;
 	overflow: hidden;
 	margin-bottom: 3rem;
 	overflow-wrap: break-word;
