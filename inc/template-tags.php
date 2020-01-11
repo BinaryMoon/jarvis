@@ -262,6 +262,16 @@ function jarvis_project_terms() {
 	// Get the term for the current page.
 	$current_term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 
+	/**
+	 * Set the class for the default portfolio archive page. If the current_term
+	 * is set then the page is not the archive page for all projects so we unset
+	 * it.
+	 */
+	$class = 'current-page';
+	if ( $current_term ) {
+		$class = '';
+	}
+
 	// All clear - let's display the terms.
 ?>
 	<p class="projects-terms entry-meta">
