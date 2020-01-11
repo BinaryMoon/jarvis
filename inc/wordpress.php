@@ -141,7 +141,7 @@ function jarvis_editor_blocks_styles() {
 
 }
 
-add_action( 'enqueue_block_editor_assets', 'jarvis_editor_blocks_styles' );
+add_action( 'enqueue_block_editor_assets', 'jarvis_editor_blocks_styles', 11 );
 
 
 /**
