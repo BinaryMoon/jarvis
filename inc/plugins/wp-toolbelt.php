@@ -12,6 +12,8 @@
 
 /**
  * Add support for Toolbelt features.
+ *
+ * @return void
  */
 function jarvis_toolbelt_after_setup_theme() {
 
@@ -33,6 +35,8 @@ add_filter( 'after_setup_theme', 'jarvis_toolbelt_after_setup_theme' );
 
 /**
  * Render Toolbelt Infinite Scroll content.
+ *
+ * @return void
  */
 function jarvis_toolbelt_infinite_scroll_render() {
 
@@ -48,6 +52,8 @@ function jarvis_toolbelt_infinite_scroll_render() {
 
 /**
  * Change the related posts thumbnail size.
+ *
+ * @return string
  */
 function jarvis_toolbelt_related_posts_thumbnail_size() {
 
@@ -60,6 +66,8 @@ add_filter( 'toolbelt_related_posts_thumbnail_size', 'jarvis_toolbelt_related_po
 
 /**
  * Display related posts.
+ *
+ * @return void
  */
 function jarvis_related_posts() {
 
@@ -81,6 +89,8 @@ function jarvis_related_posts() {
 /**
  * Disable the default related posts output.
  * Jarvis adds the posts after the comments.
+ *
+ * @return void
  */
 add_filter( 'toolbelt_related_posts', '__return_false' );
 
@@ -124,6 +134,8 @@ add_filter( 'toolbelt_display_breadcrumbs', 'jarvis_diplay_breadcrumbs' );
 
 /**
  * Display Plugin Styles.
+ *
+ * @return void
  */
 function jarvis_toolbelt_styles() {
 
@@ -169,8 +181,8 @@ add_filter( 'jarvis_footer_content', 'jarvis_toolbelt_random_post_tag' );
 /**
  * Add the random redirect shorttags to the customizer instructions.
  *
- * @param array $description List of shorttags for.
- * @return array
+ * @param array<string> $description List of shorttags for.
+ * @return array<string>
  */
 function jarvis_toolbelt_customizer_credits_description( $description ) {
 

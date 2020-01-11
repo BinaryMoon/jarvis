@@ -8,6 +8,8 @@
 
 /**
  * Add support for woocommerce
+ *
+ * @return void
  */
 function jarvis_wc_support() {
 
@@ -25,8 +27,8 @@ add_action( 'after_setup_theme', 'jarvis_wc_support' );
 /**
  * Remove Jetpack related posts from WooCommerce products
  *
- * @param  array $options Related posts options.
- * @return array
+ * @param array<string> $options Related posts options.
+ * @return array<string>
  */
 function jarvis_wc_remove_related_posts( $options ) {
 
@@ -113,6 +115,8 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 
 /**
  * Display Plugin Styles.
+ *
+ * @return void
  */
 function jarvis_woocommerce_styles() {
 

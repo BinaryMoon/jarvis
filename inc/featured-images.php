@@ -12,6 +12,8 @@
 
 /**
  * Set up the custom images sizes.
+ *
+ * @return void
  */
 function jarvis_featured_images() {
 
@@ -42,11 +44,11 @@ add_action( 'after_setup_theme', 'jarvis_featured_images' );
  * If a thumbnail doesn't exist then use the first attachment. This reduces user
  * confusion since they don't always understand or set a featured image.
  *
- * @param integer $post_id ID for the post that you want to get the thumbnail
- *                         url for.
- * @param string  $thumbnail_size Size of the thumbnail image. Defaults to
- *                                'jarvis-archive'.
- * @param array   $attr Attributes to pass to `wp_get_attachment_image_src` -
+ * @param integer       $post_id ID for the post that you want to get the
+ *                      thumbnail url for.
+ * @param string        $thumbnail_size Size of the thumbnail image. Defaults to
+ *                      'jarvis-archive'.
+ * @param array<string> $attr Attributes to pass to `wp_get_attachment_image_src` -
  *                      this will probably be css classes.
  * @return string|boolean
  */
