@@ -19,6 +19,7 @@
  * Introduced in WordPress 5.2
  *
  * @link https://make.wordpress.org/themes/2019/03/29/addition-of-new-wp_body_open-hook
+ * @return void
  */
 if ( ! function_exists( 'wp_body_open' ) ) {
 	/**
