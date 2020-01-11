@@ -11,6 +11,7 @@
  * Theme Credits Customizer properties
  *
  * @param WP_Customize_Manager $wp_customize WP Customize object. Passed by WordPress.
+ * @return void
  */
 function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 
@@ -78,13 +79,14 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
  * Update Credits without doing a full page refresh.
  *
  * @param WP_Customize_Manager $wp_customize Customizer object.
+ * @return void
  */
 function jarvis_register_customize_refresh_credits( WP_Customize_Manager $wp_customize ) {
 
 	// Ensure selective refresh is enabled.
 	if ( ! isset( $wp_customize->selective_refresh ) ) {
 
-		return false;
+		return;
 
 	}
 

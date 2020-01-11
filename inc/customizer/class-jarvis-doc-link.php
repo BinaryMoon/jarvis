@@ -26,6 +26,8 @@ class Jarvis_Doc_Link extends WP_Customize_Control {
 
 	/**
 	 * Render the control's content.
+	 *
+	 * @return void
 	 */
 	public function render_content() {
 

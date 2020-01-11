@@ -14,6 +14,8 @@
  * Add theme support for Custom Header image.
  *
  * Sets the default properties and the custom header callback {@see granule_colour_styles}.
+ *
+ * @return void
  */
 function jarvis_custom_header_support() {
 
@@ -42,7 +44,7 @@ add_action( 'after_setup_theme', 'jarvis_custom_header_support' );
  *
  * @param string $color string The colour to calculate.
  * @param int    $lighter_than The brightness to check against.
- * @return boolean true if lighter than, false otherwise.
+ * @return boolean true if lighter than $color, false otherwise.
  */
 function jarvis_colour_brightness( $color = '', $lighter_than = 130 ) {
 
@@ -73,6 +75,8 @@ function jarvis_colour_brightness( $color = '', $lighter_than = 130 ) {
  * space. Uses get_queried_object_id in case the header image is called outside
  * the_loop (before the_post has been called) so that we can be sure featured
  * images are found.
+ *
+ * @return bool|string
  */
 function jarvis_header() {
 
@@ -115,6 +119,8 @@ function jarvis_header() {
  * appropriate.
  *
  * The featured header image can be disabled in the customizer.
+ *
+ * @return bool
  */
 function jarvis_has_header_image() {
 
@@ -141,6 +147,8 @@ function jarvis_has_header_image() {
  *
  * This can vary between single posts, and all other pages (such as archives).
  * This function takes care of the different template types.
+ *
+ * @return string
  */
 function jarvis_header_height() {
 

@@ -11,6 +11,7 @@
  * Theme Colours Customizer properties
  *
  * @param WP_Customize_Manager $wp_customize WP Customize object. Passed by WordPress.
+ * @return void
  */
 function jarvis_customizer_colours( WP_Customize_Manager $wp_customize ) {
 

@@ -12,6 +12,7 @@
  * Theme Customizer properties
  *
  * @param WP_Customize_Manager $wp_customize WP Customize object. Passed by WordPress.
+ * @return void
  */
 function jarvis_customizer_settings( WP_Customize_Manager $wp_customize ) {
 
@@ -69,13 +70,14 @@ add_action( 'customize_register', 'jarvis_customizer_settings' );
  * Update Theme Elements without refreshing content.
  *
  * @param WP_Customize_Manager $wp_customize Customizer object.
+ * @return void
  */
 function jarvis_register_customize_refresh( WP_Customize_Manager $wp_customize ) {
 
 	// Ensure selective refresh is enabled.
 	if ( ! isset( $wp_customize->selective_refresh ) ) {
 
-		return false;
+		return;
 
 	}
 
@@ -124,6 +126,8 @@ add_action( 'customize_register', 'jarvis_register_customize_refresh' );
 
 /**
  * Binds JS handlers to make the Customizer preview reload changes asynchronously.
+ *
+ * @return void
  */
 function jarvis_customize_preview_js() {
 
@@ -150,6 +154,8 @@ add_action( 'customize_preview_init', 'jarvis_customize_preview_js' );
 
 /**
  * Binds JS handlers to load the Customizer controls js.
+ *
+ * @return void
  */
 function jarvis_customize_controls_js() {
 
