@@ -74,8 +74,6 @@ function jarvis_comments_link() {
 		return;
 	}
 
-	$class = '';
-
 	echo '<span class="comment-count meta">';
 
 	comments_popup_link(
@@ -93,7 +91,7 @@ function jarvis_comments_link() {
 		),
 		false,
 		false,
-		$class
+		''
 	);
 
 	echo '</span>';
@@ -250,16 +248,8 @@ function jarvis_project_terms() {
 		return;
 	}
 
-	// Highlight currently selected page.
-	$class = 'current-page';
-
 	// Get the term for the current page.
 	$current_term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-
-	// We're on a project category page, and not the main portfolio page, so reset the class.
-	if ( $current_term ) {
-		$class = '';
-	}
 
 	// All clear - let's display the terms.
 ?>
