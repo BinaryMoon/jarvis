@@ -17,7 +17,7 @@ class Jarvis_Font_Selector extends WP_Customize_Control {
 	/**
 	 * Widget properties
 	 *
-	 * @var array
+	 * @var array<string, string>
 	 */
 	public $choices = array();
 
@@ -32,9 +32,9 @@ class Jarvis_Font_Selector extends WP_Customize_Control {
 	/**
 	 * Construct the widget
 	 *
-	 * @param WP_Customize_Manager  $manager WP_Customize_Control manager object.
-	 * @param string                $id The control id.
-	 * @param array<string, string> $args The control parameters.
+	 * @param WP_Customize_Manager                       $manager WP_Customize_Control manager object.
+	 * @param string                                     $id The control id.
+	 * @param array<string, array<string, array>|string> $args The control parameters.
 	 * @return void
 	 */
 	public function __construct( $manager, $id, $args = array() ) {

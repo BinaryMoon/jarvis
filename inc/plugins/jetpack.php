@@ -66,7 +66,7 @@ add_filter( 'jetpack_implode_frontend_css', '__return_false' );
  * retina screens. It also makes the responsive styles work more nicely since
  * the images fill the screen better.
  *
- * @param array $thumbnail_size Default thumbnail properties.
+ * @param array<string, int> $thumbnail_size Default thumbnail properties.
  * @return array<string, int>
  */
 function jarvis_related_posts_thumbnail_size( $thumbnail_size ) {
@@ -89,7 +89,9 @@ add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jarvis_related_posts_
 function jarvis_jetpack_styles() {
 
 	if ( defined( 'JETPACK__VERSION' ) ) {
+
 		jarvis_print_plugin_css( 'jetpack' );
+
 	}
 
 }

@@ -28,7 +28,7 @@ add_action( 'after_setup_theme', 'jarvis_wc_support' );
  * Remove Jetpack related posts from WooCommerce products
  *
  * @param array<string> $options Related posts options.
- * @return array<string>
+ * @return array<string|false>
  */
 function jarvis_wc_remove_related_posts( $options ) {
 
