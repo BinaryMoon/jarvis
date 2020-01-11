@@ -44,6 +44,6 @@ parameters:
     ignoreErrors:
         # Uses func_get_args()
         #- '#^Function apply_filters invoked with [34567] parameters, 2 required\.$#'
-        - '#^Function add_theme_support invoked with 2 parameters, 1 required\.$#'
+        #- '#^Function add_theme_support invoked with 2 parameters, 1 required\.$#'
         # TODO Add tests/bootstrap.php with function jetpack_breadcrumbs() {}
         - '#^Function jetpack_breadcrumbs not found\.$#'
