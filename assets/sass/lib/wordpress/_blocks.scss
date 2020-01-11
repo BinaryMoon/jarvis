@@ -118,18 +118,18 @@ p.wp-block-subhead {
 
 	.wp-block-column {
 
-		padding-left: ( $grid-gutter / 4 );
-		padding-right: ( $grid-gutter / 4 );
+		padding-left: ( $grid-gutter / 2 );
+		padding-right: ( $grid-gutter / 2 );
 
 		&:first-child {
 
-			padding-inline-end: ( $grid-gutter / 4 );
+			padding-inline-start: 0;
 
 		}
 
 		&:last-child {
 
-			padding-inline-start: ( $grid-gutter / 4 );
+			padding-inline-end: 0;
 
 		}
 
