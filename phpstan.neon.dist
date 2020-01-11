@@ -47,3 +47,4 @@ parameters:
         #- '#^Function add_theme_support invoked with 2 parameters, 1 required\.$#'
         # TODO Add tests/bootstrap.php with function jetpack_breadcrumbs() {}
         - '#^Function jetpack_breadcrumbs not found\.$#'
+        - '#^Parameter \#2 \$default of function get_theme_mod expects string|false, true given\.$#'
