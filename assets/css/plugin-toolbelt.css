@@ -19,3 +19,10 @@ body {
 .toolbelt-video-wrapper {
 	margin: 3rem 0;
 }
+
+.toolbelt-footnotes {
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	margin: 3rem 0;
+}

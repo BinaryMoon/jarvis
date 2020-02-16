@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Jarvis
+# Copyright (C) 2020 Jarvis
 # This file is distributed under the same license as the Jarvis package.
 msgid ""
 msgstr ""
@@ -67,91 +67,91 @@ msgid "Search"
 msgstr ""
 
 #. translators: %s: post title
-#: inc/template-tags.php:85
+#: inc/template-tags.php:89
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:113, inc/template-tags.php:131
+#: inc/template-tags.php:119, inc/template-tags.php:137
 msgid "Read more"
 msgstr ""
 
 #. translators: %s: post title
 #. translators: %s: Post title
 #. translators: %s: Post title
-#: inc/template-tags.php:139, parts/content-single-page.php:44, parts/content-single.php:37
+#: inc/template-tags.php:145, parts/content-single-page.php:44, parts/content-single.php:37
 msgid "Read more %s"
 msgstr ""
 
 #. translators: %d: Number of articles written by a particular author.
-#: inc/template-tags.php:214
+#: inc/template-tags.php:221
 msgid "%d Article"
 msgid_plural "%d Articles"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/template-tags.php:269
+#: inc/template-tags.php:280
 msgid "Categories:"
 msgstr ""
 
-#: inc/template-tags.php:272
+#: inc/template-tags.php:283
 msgid "All"
 msgstr ""
 
-#: inc/template-tags.php:363
+#: inc/template-tags.php:377
 msgid "Top"
 msgstr ""
 
 #. translators: %1$s = theme name, %2$s = theme author website
-#: inc/template-tags.php:365
+#: inc/template-tags.php:379
 msgid "Theme: %1$s by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:377
+#: inc/template-tags.php:391
 msgid "RSS Feed"
 msgstr ""
 
-#: inc/wordpress.php:258
+#: inc/wordpress.php:271
 msgid "White"
 msgstr ""
 
-#: inc/wordpress.php:263
+#: inc/wordpress.php:276
 msgid "Light Gray"
 msgstr ""
 
-#: inc/wordpress.php:268
+#: inc/wordpress.php:281
 msgid "Black"
 msgstr ""
 
-#: inc/wordpress.php:349, parts/navigation.php:19
+#: inc/wordpress.php:362, parts/navigation.php:19
 msgid "Menu"
 msgstr ""
 
-#: inc/wordpress.php:396
+#: inc/wordpress.php:414
 msgid "Footer Widgets"
 msgstr ""
 
-#: inc/wordpress.php:398
+#: inc/wordpress.php:416
 msgid "Widgets that display at the bottom of your website. They are arranged in rows."
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:471
+#: inc/wordpress.php:489
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of categories
-#: inc/wordpress.php:479
+#: inc/wordpress.php:497
 msgid "Posted in: %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/wordpress.php:484
+#: inc/wordpress.php:502
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: %1$s will be replaced with a list of tags
-#: inc/wordpress.php:489
+#: inc/wordpress.php:507
 msgid "Tagged as: %1$s"
 msgstr ""
 
@@ -247,205 +247,205 @@ msgstr ""
 msgid "Portfolio"
 msgstr ""
 
-#: inc/customizer/archive.php:26
+#: inc/customizer/archive.php:27
 msgid "Homepage & Archive"
 msgstr ""
 
-#: inc/customizer/archive.php:47, inc/customizer/single.php:47
+#: inc/customizer/archive.php:48, inc/customizer/single.php:48
 msgid "Header Height"
 msgstr ""
 
-#: inc/customizer/archive.php:51, inc/customizer/single.php:51
+#: inc/customizer/archive.php:52, inc/customizer/single.php:52
 msgid "Small"
 msgstr ""
 
-#: inc/customizer/archive.php:52, inc/customizer/single.php:52
+#: inc/customizer/archive.php:53, inc/customizer/single.php:53
 msgid "Medium (Default)"
 msgstr ""
 
-#: inc/customizer/archive.php:53, inc/customizer/single.php:53
+#: inc/customizer/archive.php:54, inc/customizer/single.php:54
 msgid "Full Height"
 msgstr ""
 
-#: inc/customizer/archive.php:74
+#: inc/customizer/archive.php:75
 msgid "Archive Post Layout"
 msgstr ""
 
-#: inc/customizer/archive.php:78
+#: inc/customizer/archive.php:79
 msgid "Rows, no images (Default)"
 msgstr ""
 
-#: inc/customizer/archive.php:79
+#: inc/customizer/archive.php:80
 msgid "2 Columns, Featured Image"
 msgstr ""
 
-#: inc/customizer/archive.php:80
+#: inc/customizer/archive.php:81
 msgid "3 Columns, Featured Image (large screens only)"
 msgstr ""
 
-#: inc/customizer/archive.php:81
+#: inc/customizer/archive.php:82
 msgid "Rows, with Featured Image on left"
 msgstr ""
 
-#: inc/customizer/archive.php:82
+#: inc/customizer/archive.php:83
 msgid "Rows, with Featured Image on right"
 msgstr ""
 
-#: inc/customizer/class-jarvis-doc-link.php:34
+#: inc/customizer/class-jarvis-doc-link.php:36
 msgid "Jarvis is designed to be simple and flexible. Most of the settings can be changed in the Customizer. For more details check out the following links:"
 msgstr ""
 
-#: inc/customizer/class-jarvis-doc-link.php:36
+#: inc/customizer/class-jarvis-doc-link.php:38
 msgid "Getting Started"
 msgstr ""
 
-#: inc/customizer/class-jarvis-doc-link.php:37
+#: inc/customizer/class-jarvis-doc-link.php:39
 msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/customizer/class-jarvis-doc-link.php:40
+#: inc/customizer/class-jarvis-doc-link.php:42
 msgid "Theme Documentation"
 msgstr ""
 
 #. translators: %s = the name of the default font
-#: inc/customizer/class-jarvis-font-selector.php:66
+#: inc/customizer/class-jarvis-font-selector.php:69
 msgid "The default font is <strong>%s</strong>"
 msgstr ""
 
-#: inc/customizer/fonts.php:23
+#: inc/customizer/fonts.php:24
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer/fonts.php:47
+#: inc/customizer/fonts.php:48
 msgid "Title Font"
 msgstr ""
 
-#: inc/customizer/fonts.php:73
+#: inc/customizer/fonts.php:74
 msgid "Heading Font"
 msgstr ""
 
-#: inc/customizer/fonts.php:99
+#: inc/customizer/fonts.php:100
 msgid "Body Font"
 msgstr ""
 
-#: inc/customizer/fonts.php:125
+#: inc/customizer/fonts.php:126
 msgid "Meta Font"
 msgstr ""
 
-#: inc/customizer/footer.php:20
+#: inc/customizer/footer.php:21
 msgid "The footer credits area supports <strong>HTML</strong>. It also supports the following tags:"
 msgstr ""
 
-#: inc/customizer/footer.php:22
+#: inc/customizer/footer.php:23
 msgid "<strong>(c)</strong>: the copyright symbol &copy;"
 msgstr ""
 
-#: inc/customizer/footer.php:23
+#: inc/customizer/footer.php:24
 msgid "<strong>(year)</strong>: the current year. Updates automatically"
 msgstr ""
 
-#: inc/customizer/footer.php:24
+#: inc/customizer/footer.php:25
 msgid "<strong>(|)</strong>: add a gap between items"
 msgstr ""
 
-#: inc/customizer/footer.php:25
+#: inc/customizer/footer.php:26
 msgid "<strong>(privacy)</strong>: a privacy policy link"
 msgstr ""
 
-#: inc/customizer/footer.php:26
+#: inc/customizer/footer.php:27
 msgid "<strong>(feed)</strong>: a link to the site RSS Feed"
 msgstr ""
 
-#: inc/customizer/footer.php:27
+#: inc/customizer/footer.php:28
 msgid "<strong>(top)</strong>: a \"back to top\" link"
 msgstr ""
 
-#: inc/customizer/footer.php:28
+#: inc/customizer/footer.php:29
 msgid "<strong>(ptd)</strong>: the Pro Theme Design credit"
 msgstr ""
 
 #. translators: %s = the default footer content.
-#: inc/customizer/footer.php:31
+#: inc/customizer/footer.php:32
 msgid "The default theme footer can be reproduced with:<br /><strong>%s</strong>"
 msgstr ""
 
-#: inc/customizer/footer.php:33
+#: inc/customizer/footer.php:34
 msgid "Close"
 msgstr ""
 
-#: inc/customizer/footer.php:45
+#: inc/customizer/footer.php:46
 msgid "Footer Credits"
 msgstr ""
 
-#: inc/customizer/footer.php:68
+#: inc/customizer/footer.php:69
 msgid "Credits Content"
 msgstr ""
 
-#: inc/customizer/settings.php:24
+#: inc/customizer/settings.php:25
 msgid "Site Layout"
 msgstr ""
 
-#: inc/customizer/settings.php:35
+#: inc/customizer/settings.php:36
 msgid "Jarvis Theme Documentation"
 msgstr ""
 
-#: inc/customizer/single.php:26
+#: inc/customizer/single.php:27
 msgid "Single Post & Page"
 msgstr ""
 
-#: inc/customizer/single.php:76
+#: inc/customizer/single.php:77
 msgid "Use Featured Image as header image."
 msgstr ""
 
-#: inc/customizer/single.php:98
+#: inc/customizer/single.php:99
 msgid "Display Post Date"
 msgstr ""
 
-#: inc/customizer/single.php:120
+#: inc/customizer/single.php:121
 msgid "Display Post Author"
 msgstr ""
 
-#: inc/customizer/single.php:142
+#: inc/customizer/single.php:143
 msgid "Display Post Author Details"
 msgstr ""
 
-#: inc/customizer/single.php:164
+#: inc/customizer/single.php:165
 msgid "Display Categories and Tags"
 msgstr ""
 
-#: inc/customizer/site-header.php:26
+#: inc/customizer/site-header.php:27
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/site-header.php:47
+#: inc/customizer/site-header.php:48
 msgid "Header Layout"
 msgstr ""
 
-#: inc/customizer/site-header.php:51
+#: inc/customizer/site-header.php:52
 msgid "Default"
 msgstr ""
 
-#: inc/customizer/site-header.php:52
+#: inc/customizer/site-header.php:53
 msgid "Center"
 msgstr ""
 
-#: inc/customizer/site-header.php:53
+#: inc/customizer/site-header.php:54
 msgid "Side Fixed"
 msgstr ""
 
-#: inc/customizer/site-header.php:74
+#: inc/customizer/site-header.php:75
 msgid "Title Display"
 msgstr ""
 
-#: inc/customizer/site-header.php:78
+#: inc/customizer/site-header.php:79
 msgid "Display Title and Description"
 msgstr ""
 
-#: inc/customizer/site-header.php:79
+#: inc/customizer/site-header.php:80
 msgid "Display Title only"
 msgstr ""
 
-#: inc/customizer/site-header.php:80
+#: inc/customizer/site-header.php:81
 msgid "Hide Title and Description"
 msgstr ""
 
@@ -838,18 +838,18 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/plugins/wp-toolbelt.php:159
+#: inc/plugins/wp-toolbelt.php:171
 msgid "?"
 msgstr ""
 
-#: inc/plugins/wp-toolbelt.php:160
+#: inc/plugins/wp-toolbelt.php:172
 msgid "Random"
 msgstr ""
 
-#: inc/plugins/wp-toolbelt.php:184
+#: inc/plugins/wp-toolbelt.php:196
 msgid "<strong>(?)</strong>: Random Redirect with \"?\" link"
 msgstr ""
 
-#: inc/plugins/wp-toolbelt.php:185
+#: inc/plugins/wp-toolbelt.php:197
 msgid "<strong>(random)</strong>: Random Redirect with \"random\" link"
 msgstr ""
