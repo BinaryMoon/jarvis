@@ -10,7 +10,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 }
 
 /**
- * Display specified list of Google fonts with Font preview
+ * Display specified list of fonts with preview
  */
 class Jarvis_Font_Selector extends WP_Customize_Control {
 

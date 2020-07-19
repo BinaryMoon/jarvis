@@ -43,7 +43,7 @@ require get_parent_theme_file_path( 'inc/customizer/single.php' ); // phpcs:igno
 // Custom footer. To allow for custom credits/ copyright info.
 require get_parent_theme_file_path( 'inc/customizer/footer.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
-// Custom single post layout.
+// Custom archive layout.
 require get_parent_theme_file_path( 'inc/customizer/archive.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 // Custom fonts.
