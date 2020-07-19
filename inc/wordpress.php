@@ -307,6 +307,7 @@ function jarvis_after_setup_theme() {
 		apply_filters(
 			'jarvis_html5_args',
 			array(
+				'navigation-widgets',
 				'comment-list',
 				'comment-form',
 				'gallery',
