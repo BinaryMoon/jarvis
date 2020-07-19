@@ -311,6 +311,26 @@ msgstr ""
 msgid "The default font is <strong>%s</strong>"
 msgstr ""
 
+#: inc/customizer/colours.php:35
+msgid "Light Mode background color"
+msgstr ""
+
+#: inc/customizer/colours.php:36
+msgid "The default background color."
+msgstr ""
+
+#: inc/customizer/colours.php:57
+msgid "Use Dark Mode Colour"
+msgstr ""
+
+#: inc/customizer/colours.php:80
+msgid "Dark Mode background color"
+msgstr ""
+
+#: inc/customizer/colours.php:81
+msgid "This will be selected automatically for users who are using dark mode in their operating system."
+msgstr ""
+
 #: inc/customizer/fonts.php:24
 msgid "Fonts"
 msgstr ""
