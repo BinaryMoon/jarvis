@@ -49,7 +49,7 @@ add_action( 'after_setup_theme', 'jarvis_custom_header_support' );
 function jarvis_colour_brightness( $color = '', $lighter_than = 130 ) {
 
 	/**
-	 * IF no colour default to true, since this probably means we are using a
+	 * If no colour default to true, since this probably means we are using a
 	 * light background which requires a true value so we can use dark text.
 	 */
 	if ( empty( $color ) ) {
