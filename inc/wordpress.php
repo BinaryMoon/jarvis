@@ -173,7 +173,7 @@ function jarvis_get_block_styles() {
 
 	$styles[] = '.editor-styles-wrapper, .editor-styles-wrapper > .editor-writing-flow, .editor-styles-wrapper > .editor-writing-flow > div { background-color: ' . esc_attr( $background_colour ) . '; }';
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }
 
@@ -193,7 +193,7 @@ function jarvis_get_site_styles() {
 	$styles[] = jarvis_get_colour_css();
 	$styles[] = jarvis_header();
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }
 

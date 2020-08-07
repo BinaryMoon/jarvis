@@ -96,7 +96,7 @@ function jarvis_get_font_css() {
 
 	$styles[] = '}';
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles);
 
 }
 
@@ -144,7 +144,7 @@ function jarvis_get_single_css() {
 		$styles[] = 'html .entry-terms { display: none; }';
 	}
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }
 
@@ -187,7 +187,7 @@ function jarvis_get_colour_css() {
 
 	$styles[] = '}';
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }
 
@@ -223,6 +223,6 @@ function jarvis_title_styles() {
 		$styles[] = '.branding .site-title, .branding .site-description ' . $hide;
 	}
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }

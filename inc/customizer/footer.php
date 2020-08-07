@@ -44,7 +44,7 @@ function jarvis_customizer_credits( WP_Customize_Manager $wp_customize ) {
 		'jarvis_credits',
 		array(
 			'title' => esc_html__( 'Footer Credits', 'jarvis' ),
-			'description' => implode( $description, '' ),
+			'description' => implode( '', $description ),
 			'description_hidden' => true,
 			'panel' => 'jarvis_site_layout',
 		)
