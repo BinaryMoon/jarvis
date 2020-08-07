@@ -10,6 +10,9 @@
 	margin: 0 0 ( $grid-line-height * $grid-line-height-multiplier ) 0;
 	padding: 0;
 
+	content-visibility: auto;
+	contain-intrinsic-size: 40rem;
+
 	li.comment,
 	li.trackback,
 	li.pingback {
