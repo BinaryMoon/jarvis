@@ -1581,6 +1581,8 @@ p > object:only-child {
  */
 .content-posts article.entry {
 	margin-bottom: 4.5rem;
+	content-visibility: auto;
+	contain-intrinsic-size: 16rem;
 }
 
 .content-posts article.entry .read-more {
@@ -1724,6 +1726,8 @@ p > object:only-child {
 	list-style-type: none;
 	margin: 0 0 3rem 0;
 	padding: 0;
+	content-visibility: auto;
+	contain-intrinsic-size: 40rem;
 }
 
 .comment-list li.comment .comment-body,
@@ -1980,6 +1984,8 @@ p > object:only-child {
  */
 .site-footer {
 	padding: 1.5rem 1.5rem 3rem 1.5rem;
+	content-visibility: auto;
+	contain-intrinsic-size: 40rem;
 }
 
 .site-footer .sep {
