@@ -67,7 +67,6 @@
 .woocommerce a.button, .device-click
 .woocommerce button.button, .device-click
 .woocommerce input.button {
-	-webkit-transition: all 0.15s ease-in-out;
 	transition: all 0.15s ease-in-out;
 }
 
@@ -106,7 +105,6 @@
 .woocommerce a.button.alt, .device-click
 .woocommerce button.button.alt, .device-click
 .woocommerce input.button.alt {
-	-webkit-transition: all 0.15s ease-in-out;
 	transition: all 0.15s ease-in-out;
 }
 
