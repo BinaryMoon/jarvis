@@ -48,8 +48,8 @@
 	margin-bottom: 1.5rem;
 	line-height: 1.5rem;
 	width: auto;
-	background: var(--foreground-color);
-	color: var(--foreground-contrast-color);
+	background: var(--foreground-color, #000);
+	color: var(--foreground-contrast-color, #fff);
 	display: inline-block;
 	text-decoration: none;
 	border: none;
@@ -67,7 +67,6 @@
 .woocommerce a.button, .device-click
 .woocommerce button.button, .device-click
 .woocommerce input.button {
-	-webkit-transition: all 0.15s ease-in-out;
 	transition: all 0.15s ease-in-out;
 }
 
@@ -79,15 +78,15 @@
 .woocommerce input.button:focus,
 .woocommerce input.button:hover {
 	text-decoration: underline;
-	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color, #000);
 }
 
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-	background: var(--foreground-color);
-	color: var(--foreground-contrast-color);
+	background: var(--foreground-color, #000);
+	color: var(--foreground-contrast-color, #fff);
 	display: inline-block;
 	text-decoration: none;
 	border: none;
@@ -106,7 +105,6 @@
 .woocommerce a.button.alt, .device-click
 .woocommerce button.button.alt, .device-click
 .woocommerce input.button.alt {
-	-webkit-transition: all 0.15s ease-in-out;
 	transition: all 0.15s ease-in-out;
 }
 
@@ -118,7 +116,7 @@
 .woocommerce input.button.alt:focus,
 .woocommerce input.button.alt:hover {
 	text-decoration: underline;
-	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color, #000);
 }
 
 .woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled],
@@ -253,7 +251,7 @@ li.woocommerce-cart-button li div.widget_shopping_cart p.buttons a {
 }
 
 li.woocommerce-cart-button li div.widget_shopping_cart .total {
-	border-top: 0.2rem solid var(--foreground-contrast-color);
+	border-top: 0.2rem solid var(--foreground-contrast-color, #fff);
 	padding: 0.75rem 0 0 0;
 	text-align: center;
 }
@@ -268,6 +266,6 @@ li.woocommerce-cart-button li div.widget_shopping_cart .remove:focus, li.woocomm
 
 .woocommerce-store-notice,
 p.demo_store {
-	background: var(--foreground-color);
-	color: var(--foreground-contrast-color);
+	background: var(--foreground-color, #000);
+	color: var(--foreground-contrast-color, #fff);
 }

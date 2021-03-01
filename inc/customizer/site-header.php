@@ -14,6 +14,7 @@
  * Theme Customizer properties
  *
  * @param WP_Customize_Manager $wp_customize WP Customize object. Passed by WordPress.
+ * @return void
  */
 function jarvis_customizer_header( WP_Customize_Manager $wp_customize ) {
 

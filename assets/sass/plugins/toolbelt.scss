@@ -31,3 +31,10 @@ body {
 	margin: ( $grid-line-height * $grid-line-height-multiplier ) 0;
 
 }
+
+.toolbelt-footnotes {
+
+	@include modular-scale( zeta );
+	margin: ( $grid-line-height * 2 ) 0;
+
+}

@@ -20,9 +20,7 @@ main #jp-post-flair {
 }
 
 #jp-relatedposts .jp-relatedposts-items {
-	display: -webkit-box;
 	display: flex;
-	-webkit-box-pack: justify;
 	justify-content: space-between;
 }
 
@@ -136,7 +134,7 @@ form.contact-form .grunion-field-wrap label.grunion-radio-label:last-of-type, fo
 }
 
 form.contact-form .grunion-field-wrap label span {
-	color: var(--foreground-color);
+	color: var(--foreground-color, #000);
 	font-style: italic;
 	padding: 0 0.75rem;
 	font-weight: normal;
@@ -154,8 +152,8 @@ body #eu-cookie-law {
 }
 
 body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
-	background: var(--foreground-color);
-	color: var(--foreground-contrast-color);
+	background: var(--foreground-color, #000);
+	color: var(--foreground-contrast-color, #fff);
 	display: inline-block;
 	text-decoration: none;
 	border: none;
@@ -170,13 +168,12 @@ body #eu-cookie-law.positive input, body #eu-cookie-law.negative input {
 }
 
 .device-click body #eu-cookie-law.positive input, .device-click body #eu-cookie-law.negative input {
-	-webkit-transition: all 0.15s ease-in-out;
 	transition: all 0.15s ease-in-out;
 }
 
 body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hover, body #eu-cookie-law.negative input:focus, body #eu-cookie-law.negative input:hover {
 	text-decoration: underline;
-	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color);
+	box-shadow: 0.4rem 0.4rem 0 var(--foreground-color, #000);
 }
 
 /*
@@ -185,7 +182,6 @@ body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hov
 /* 2-Column Grid Layout */
 .widgets-grid-layout {
 	width: 100%;
-	display: -webkit-box;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -203,7 +199,6 @@ body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hov
 
 .widgets-list-layout li {
 	margin-bottom: 1.5rem;
-	display: -webkit-box;
 	display: flex;
 }
 
@@ -220,7 +215,6 @@ body #eu-cookie-law.positive input:focus, body #eu-cookie-law.positive input:hov
 }
 
 .widgets-list-layout .widgets-list-layout-links {
-	-webkit-box-flex: 1;
 	flex-grow: 1;
 	width: 50%;
 }

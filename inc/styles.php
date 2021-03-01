@@ -14,6 +14,8 @@
  *
  * @link https://github.com/BinaryMoon/pro-theme-design/blob/master/views/_tools/_websafe-fonts/index.php
  * @uses inc/customizer/fonts.php
+ *
+ * @return array<string, array>
  */
 function jarvis_get_fonts() {
 
@@ -76,6 +78,8 @@ function jarvis_get_fonts() {
  * Generate the css required to display the custom fonts.
  *
  * @uses inc/customizer/fonts.php
+ *
+ * @return string
  */
 function jarvis_get_font_css() {
 
@@ -92,7 +96,7 @@ function jarvis_get_font_css() {
 
 	$styles[] = '}';
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles);
 
 }
 
@@ -101,6 +105,8 @@ function jarvis_get_font_css() {
  * Get a json encoded variable containing a list of all the available fonts.
  *
  * @uses inc/customizer/fonts.php
+ *
+ * @return string
  */
 function jarvis_get_font_json() {
 
@@ -138,7 +144,7 @@ function jarvis_get_single_css() {
 		$styles[] = 'html .entry-terms { display: none; }';
 	}
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }
 
@@ -181,7 +187,7 @@ function jarvis_get_colour_css() {
 
 	$styles[] = '}';
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }
 
@@ -193,6 +199,8 @@ function jarvis_get_colour_css() {
  * This includes showing and hiding elements, and changing the heading colours.
  *
  * @see inc/custom-header.php
+ *
+ * @return string
  */
 function jarvis_title_styles() {
 
@@ -215,6 +223,6 @@ function jarvis_title_styles() {
 		$styles[] = '.branding .site-title, .branding .site-description ' . $hide;
 	}
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }

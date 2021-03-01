@@ -14,8 +14,8 @@
 /**
  * Add additional body classes to body_class function call.
  *
- * @param array $classes Array of body classes.
- * @return array
+ * @param array<string> $classes Array of body classes.
+ * @return array<string>
  */
 function jarvis_body_class( $classes ) {
 
@@ -52,10 +52,10 @@ add_filter( 'body_class', 'jarvis_body_class' );
  * Add additional post classes to post_class function call.
  *
  * @link https://core.trac.wordpress.org/ticket/28482
- * @param array  $classes Array of post classes.
- * @param string $class An array of additional class names added to the post.
- * @param int    $post_id The id of the post.
- * @return array
+ * @param array<string> $classes Array of post classes.
+ * @param string        $class An array of additional class names added to the post.
+ * @param int           $post_id The id of the post.
+ * @return array<string>
  */
 function jarvis_post_class( $classes, $class, $post_id ) {
 

@@ -14,6 +14,8 @@
  *
  * The styles are taken care of by the theme styles, so custom styles are not
  * required.
+ *
+ * @return void
  */
 function jarvis_remove_jetpack_stylesheets() {
 
@@ -38,6 +40,7 @@ add_action( 'wp_enqueue_scripts', 'jarvis_remove_jetpack_stylesheets', 100 );
  * Remove Grunion styles.
  *
  * @link https://github.com/Automattic/jetpack/blob/89a9af96b669e2e5a2ed47d3f3e07c804d6e0dd0/modules/contact-form/grunion-contact-form.php#L235-L244
+ * @return void
  */
 function jarvis_remove_grunion_style() {
 
@@ -63,8 +66,8 @@ add_filter( 'jetpack_implode_frontend_css', '__return_false' );
  * retina screens. It also makes the responsive styles work more nicely since
  * the images fill the screen better.
  *
- * @param array $thumbnail_size Default thumbnail properties.
- * @return array
+ * @param array<string, int> $thumbnail_size Default thumbnail properties.
+ * @return array<string, int>
  */
 function jarvis_related_posts_thumbnail_size( $thumbnail_size ) {
 
@@ -80,11 +83,15 @@ add_filter( 'jetpack_relatedposts_filter_thumbnail_size', 'jarvis_related_posts_
 
 /**
  * Display Plugin Styles.
+ *
+ * @return void
  */
 function jarvis_jetpack_styles() {
 
 	if ( defined( 'JETPACK__VERSION' ) ) {
+
 		jarvis_print_plugin_css( 'jetpack' );
+
 	}
 
 }

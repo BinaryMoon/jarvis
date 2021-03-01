@@ -1,14 +1,18 @@
 .sidebar {
 
+	margin-top: $grid-line-height * 5;
+	margin-bottom: $grid-line-height * 3;
 	display: flex;
 	flex-wrap: wrap;
 
-	margin-top: $grid-line-height * 3;
-	margin-bottom: $grid-line-height * 3;
+	@include for-tablet {
+
+
+	}
 
 	@include for-desktop {
 
-		margin-top: $grid-line-height * 5;
+		margin-top: $grid-line-height * 10;
 
 	}
 
@@ -20,7 +24,6 @@
 	flex-basis: 20rem;
 	flex-grow: 1;
 	padding: ( $grid-line-height / 2 ) ( $grid-gutter );
-	display: inline-block;
 	overflow: hidden;
 	margin-bottom: $grid-line-height * $grid-line-height-multiplier;
 	@include wrap-text;

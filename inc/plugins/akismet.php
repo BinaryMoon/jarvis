@@ -7,6 +7,8 @@
 
 /**
  * Display Plugin Styles.
+ *
+ * @return void
  */
 function jarvis_akismet_styles() {
 

@@ -24,24 +24,24 @@
 	},
 	"homepage": "https://github.com/BinaryMoon/jarvis#readme",
 	"devDependencies": {
-		"@babel/core": "^7.6.4",
-		"@babel/preset-env": "^7.6.3",
-		"@babel/register": "^7.6.2",
+		"@babel/core": "^7.12.7",
+		"@babel/preset-env": "^7.12.7",
+		"@babel/register": "^7.12.1",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^6.1.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-change": "^1.0.2",
-		"gulp-clean-css": "^4.2.0",
+		"gulp-clean-css": "^4.3.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-exec": "^4.0.0",
 		"gulp-filesize": "0.0.6",
 		"gulp-rename": "^1.4.0",
-		"gulp-rtlcss": "^1.4.0",
-		"gulp-sass": "^4.0.2",
+		"gulp-rtlcss": "^1.4.1",
+		"gulp-sass": "^4.1.0",
 		"gulp-svgmin": "^2.2.0",
 		"gulp-uglify": "^3.0.2",
-		"gulp-wp-pot": "^2.3.5",
-		"gulp-zip": "^5.0.1",
-		"kss": "^3.0.0-beta.25"
+		"gulp-wp-pot": "^2.5.0",
+		"gulp-zip": "^5.0.2",
+		"kss": "^3.0.1"
 	}
 }

@@ -9,12 +9,8 @@ ul {
 dl dd {
   margin: 0 1.5rem 1.5rem
 }
-table caption,
-table th {
-  text-align: right
-}
 .entry-meta a.current-page {
-  box-shadow: -.2rem .2rem 0 var(--foreground-color)
+  box-shadow: -.2rem .2rem 0 var(--foreground-color,#000)
 }
 .button:focus,
 .button:hover,
@@ -29,14 +25,14 @@ input[type=reset]:focus,
 input[type=reset]:hover,
 input[type=submit]:focus,
 input[type=submit]:hover {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 @supports ((-webkit-appearance:none) or (-moz-appearance:none) or (appearance:none)) {
-  input[type=checkbox]:checked::after {
+  input[type=checkbox]:checked:after {
     right: .1rem
   }
-  input[type=radio]:checked::after {
-    right: .175rem
+  input[type=radio]:checked {
+    border-width: .4rem
   }
 }
 input[type=date]:focus,
@@ -53,7 +49,7 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 html {
   direction: rtl;
@@ -67,6 +63,10 @@ h5,
 h6,
 p {
   margin: 0 0 1.2rem
+}
+form.search-form button {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem
 }
 .wp-caption {
   margin: 0 0 3rem
@@ -110,7 +110,7 @@ object {
 .block-info,
 .block-success {
   padding: 1.5rem 4.5rem 1.5rem 1.5rem;
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 .block-alert:before,
 .block-announcement:before,
@@ -121,7 +121,7 @@ object {
   right: 1.5rem
 }
 .block-border {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 .comment-list,
 .comment-list li.comment #respond {
@@ -131,7 +131,7 @@ object {
   float: left
 }
 .comment-list .bypostauthor .avatar {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 .site-footer {
   padding: 1.5rem 1.5rem 3rem
@@ -140,11 +140,8 @@ object {
   left: 0;
   right: 0
 }
-.site-header .menu-toggle {
-  text-align: right
-}
 .menu-primary > ul > .current-menu-item {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 @media (min-width:47rem) {
   .comment-list li.comment .comment-meta .avatar {
@@ -155,15 +152,11 @@ object {
     right: auto
   }
   .header-layout-2 .branding {
-    right: 0;
-    text-align: left
+    right: 0
   }
   .menu-primary .menu-wrap {
     margin-right: -1.5rem;
     margin-left: -1.5rem
-  }
-  .menu-primary .menu-wrap ul {
-    text-align: right
   }
   .menu-primary > .menu-wrap > li.menu-item-has-children:after {
     left: 1rem
@@ -171,11 +164,6 @@ object {
   .menu-primary > .menu-wrap > li.menu-item-has-children:focus-within > .sub-menu,
   .menu-primary > .menu-wrap > li.menu-item-has-children:hover > .sub-menu {
     left: 0
-  }
-  .comment-navigation .nav-links .nav-next,
-  .image-navigation .nav-links .nav-next,
-  .post-navigation .nav-links .nav-next {
-    text-align: left
   }
 }
 .give-page .give-list-inline li {
@@ -210,7 +198,7 @@ body #eu-cookie-law.negative input:focus,
 body #eu-cookie-law.negative input:hover,
 body #eu-cookie-law.positive input:focus,
 body #eu-cookie-law.positive input:hover {
-  box-shadow: -.4rem .4rem 0 var(--foreground-color)
+  box-shadow: -.4rem .4rem 0 var(--foreground-color,#000)
 }
 li.woocommerce-cart-button li div.widget_shopping_cart ul {
   right: auto;

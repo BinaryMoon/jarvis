@@ -7,6 +7,9 @@
 
 	padding: ( $grid-line-height ) ( $grid-gutter ) ( $grid-line-height * 2 ) ( $grid-gutter );
 
+	content-visibility: auto;
+	contain-intrinsic-size: 40rem;
+
 	.sep {
 
 		margin: 0 $style-spacing;

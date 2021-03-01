@@ -10,6 +10,8 @@
  *
  * The styles are taken care of by the theme styles, so custom styles are not
  * required.
+ *
+ * @return void
  */
 function jarvis_remove_give_stylesheets() {
 
@@ -22,6 +24,8 @@ add_action( 'wp_enqueue_scripts', 'jarvis_remove_give_stylesheets', 100 );
 
 /**
  * Display Plugin Styles.
+ *
+ * @return void
  */
 function jarvis_give_styles() {
 

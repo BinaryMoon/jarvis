@@ -19,7 +19,7 @@
  *
  * Also sets javascript properties that need to access PHP.
  *
- * @global array $wp_scripts
+ * @return void
  */
 function jarvis_enqueue() {
 
@@ -50,6 +50,8 @@ add_action( 'wp_enqueue_scripts', 'jarvis_enqueue' );
 /**
  * Output the site styles.
  * They are displayed inline for extra speed.
+ *
+ * @return void
  */
 function jarvis_print_styles() {
 
@@ -101,6 +103,8 @@ add_filter( 'style_loader_tag', 'jarvis_on_style_load', 10, 2 );
 
 /**
  * Enqueue WordPress theme styles within Gutenberg.
+ *
+ * @return void
  */
 function jarvis_editor_blocks_styles() {
 
@@ -141,11 +145,13 @@ function jarvis_editor_blocks_styles() {
 
 }
 
-add_action( 'enqueue_block_editor_assets', 'jarvis_editor_blocks_styles' );
+add_action( 'enqueue_block_editor_assets', 'jarvis_editor_blocks_styles', 11 );
 
 
 /**
  * Get the custom properties for the site so that we can override them.
+ *
+ * @return string
  */
 function jarvis_get_background_color() {
 
@@ -156,6 +162,8 @@ function jarvis_get_background_color() {
 
 /**
  * Generate styles for the block editor.
+ *
+ * @return string
  */
 function jarvis_get_block_styles() {
 
@@ -165,13 +173,15 @@ function jarvis_get_block_styles() {
 
 	$styles[] = '.editor-styles-wrapper, .editor-styles-wrapper > .editor-writing-flow, .editor-styles-wrapper > .editor-writing-flow > div { background-color: ' . esc_attr( $background_colour ) . '; }';
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }
 
 
 /**
  * Generate styles for the website front-end.
+ *
+ * @return string
  */
 function jarvis_get_site_styles() {
 
@@ -183,7 +193,7 @@ function jarvis_get_site_styles() {
 	$styles[] = jarvis_get_colour_css();
 	$styles[] = jarvis_header();
 
-	return implode( $styles, ' ' );
+	return implode( ' ', $styles );
 
 }
 
@@ -196,6 +206,7 @@ function jarvis_get_site_styles() {
  * Uses Priority 0 to make it available to lower priority callbacks.
  *
  * @global int $content_width
+ * @return void
  */
 function jarvis_content_width() {
 
@@ -210,6 +221,8 @@ add_action( 'template_redirect', 'jarvis_content_width', 0 );
 
 /**
  * Set up all the theme properties and extras.
+ *
+ * @return void
  */
 function jarvis_after_setup_theme() {
 
@@ -294,6 +307,7 @@ function jarvis_after_setup_theme() {
 		apply_filters(
 			'jarvis_html5_args',
 			array(
+				'navigation-widgets',
 				'comment-list',
 				'comment-form',
 				'gallery',
@@ -361,6 +375,8 @@ add_action( 'after_setup_theme', 'jarvis_after_setup_theme' );
 
 /**
  * Include the default site header for the site.
+ *
+ * @return void
  */
 function jarvis_include_header() {
 
@@ -373,6 +389,8 @@ add_action( 'jarvis_header', 'jarvis_include_header' );
 
 /**
  * Include the default site footer for the site.
+ *
+ * @return void
  */
 function jarvis_include_footer() {
 
@@ -387,6 +405,7 @@ add_action( 'jarvis_footer', 'jarvis_include_footer' );
  * Intitiate sidebars
  *
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
+ * @return void
  */
 function jarvis_widgets_init() {
 
@@ -594,6 +613,8 @@ add_filter( 'wp_page_menu', 'jarvis_change_menu' );
  * site.
  *
  * This helps to improve branding and personalisation.
+ *
+ * @return void
  */
 function jarvis_theme_colour() {
 
@@ -633,7 +654,7 @@ add_filter( 'wp_head', 'jarvis_theme_colour' );
  * This allows simpler styling, and consistent CSS.
  *
  * @param  string $html Link html.
- * @return string       Modified html.
+ * @return string Modified html.
  */
 function jarvis_link_pages_link( $html ) {
 
@@ -655,11 +676,15 @@ add_filter( 'wp_link_pages_link', 'jarvis_link_pages_link' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
+ *
+ * @return void
  */
 function jarvis_pingback_header() {
 
 	if ( is_singular() && pings_open() ) {
+
 		echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">';
+
 	}
 
 }
@@ -671,8 +696,8 @@ add_action( 'wp_head', 'jarvis_pingback_header' );
  * Modifies tag cloud widget arguments to display all tags in the same font size
  * and use list format for better accessibility.
  *
- * @param array $args Arguments for tag cloud widget.
- * @return array The filtered arguments for tag cloud widget.
+ * @param array<string, string|int> $args Arguments for tag cloud widget.
+ * @return array<string, string|int> The filtered arguments for tag cloud widget.
  */
 function jarvis_widget_tag_cloud_args( $args ) {
 
@@ -780,6 +805,8 @@ add_filter( 'script_loader_tag', 'jarvis_filter_script_loader_tag', 10, 2 );
 
 /**
  * Register the required plugins for this theme.
+ *
+ * @return void
  */
 function jarvis_register_required_plugins() {
 

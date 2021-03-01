@@ -10,6 +10,10 @@
 
 		margin-bottom: $grid-line-height * 3;
 
+		// Speed up rendering.
+		content-visibility: auto;
+		contain-intrinsic-size: 16rem;
+
 		.read-more {
 
 			// Add some padding for a larger clickable area.

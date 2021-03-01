@@ -23,6 +23,8 @@ input {
 	&[type=checkbox],
 	&[type=radio] {
 
+		padding: 0;
+		margin: 0;
 		cursor: pointer;
 		margin-inline-end: $style-spacing;
 		vertical-align: middle;
@@ -51,25 +53,13 @@ input {
 			width: $grid-gutter !important;
 			height: $grid-gutter !important;
 			border: $border-width solid $black;
+			background: $black;
 
 			&:hover,
 			&:focus {
 
 				border: $border-width solid $black;
-
-			}
-
-			&:checked {
-
-				position: relative;
-				background: $black;
-
-			}
-
-			&:checked::after {
-
-				position: absolute;
-				content: "";
+				background: $white;
 
 			}
 
@@ -80,18 +70,26 @@ input {
 	// Checkbox.
 	input[type="checkbox"] {
 
-		background: none;
+		&:checked {
 
-		&:checked::after {
+			background: $black;
+			position: relative;
 
-			top: 0.2rem;
-			left: 0.1rem;
-			width: 0.9rem;
-			height: 0.5rem;
-			border: 0.25rem solid $white;
-			border-inline-end: none;
-			border-top: none;
-			transform: rotate(-45deg);
+			&:after {
+
+				position: absolute;
+				content: "";
+
+				top: 0.2rem;
+				left: 0.1rem;
+				width: 0.9rem;
+				height: 0.5rem;
+				border: 0.25rem solid $white;
+				border-inline-end: none;
+				border-top: none;
+				transform: rotate(-45deg);
+
+			}
 
 		}
 
@@ -101,16 +99,13 @@ input {
 	input[type="radio"] {
 
 		border-radius: $grid-gutter;
+		transition: border ease-in-out 0.1s;
 		padding: 0;
 
-		&:checked::after {
+		&:checked {
 
-			top: 0.175rem;
-			left: 0.175rem;
-			width: 0.75rem;
-			height: 0.75rem;
+			border-width: $border-width * 2;
 			background: $white;
-			border-radius: $grid-gutter;
 
 		}
 
@@ -236,7 +231,8 @@ textarea {
 // <label class="{{modifier_class}}">Example Label</label>
 //
 // Styleguide elements.forms.label
-label {
+label,
+legend {
 
 	display: block;
 	font-weight: bold;
@@ -265,18 +261,11 @@ label {
 // <fieldset><legend>Gryffindor</legend></fieldset>
 //
 // Styleguide components.fieldset-legend
-legend {
-
-	@include post-meta-data;
-	font-family: $font-family-header;
-	padding: 0 ( $grid-gutter / 2 );
-
-}
 
 fieldset {
 
-	border: $border-width solid $black;
-	padding: $grid-line-height ( $grid-gutter );
-	margin: ( $grid-line-height * 2 ) 0;
+	border: none;
+	padding: 0;
+	margin-bottom: $grid-line-height;
 
 }

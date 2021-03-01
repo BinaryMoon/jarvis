@@ -11,6 +11,7 @@
  * Theme Colours Customizer properties
  *
  * @param WP_Customize_Manager $wp_customize WP Customize object. Passed by WordPress.
+ * @return void
  */
 function jarvis_customizer_colours( WP_Customize_Manager $wp_customize ) {
 
@@ -31,8 +32,8 @@ function jarvis_customizer_colours( WP_Customize_Manager $wp_customize ) {
 			$wp_customize,
 			'jarvis_light_mode_colour',
 			array(
-				'label' => esc_html__( 'Light Mode background color', 'wp-toolbelt' ),
-				'description' => esc_html__( 'The default background color.', 'wp-toolbelt' ),
+				'label' => esc_html__( 'Light Mode background color', 'jarvis' ),
+				'description' => esc_html__( 'The default background color.', 'jarvis' ),
 				'section' => 'colors',
 			)
 		)
@@ -53,7 +54,7 @@ function jarvis_customizer_colours( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_control(
 		'jarvis_dark_mode',
 		array(
-			'label' => esc_html__( 'Use Dark Mode Colour', 'wp-toolbelt' ),
+			'label' => esc_html__( 'Use Dark Mode Colour', 'jarvis' ),
 			'section' => 'colors',
 			'type' => 'checkbox',
 		)
@@ -76,8 +77,8 @@ function jarvis_customizer_colours( WP_Customize_Manager $wp_customize ) {
 			$wp_customize,
 			'jarvis_dark_mode_colour',
 			array(
-				'label' => esc_html__( 'Dark Mode background color', 'wp-toolbelt' ),
-				'description' => esc_html__( 'This will be selected automatically for users who are using dark mode in their operating system.', 'wp-toolbelt' ),
+				'label' => esc_html__( 'Dark Mode background color', 'jarvis' ),
+				'description' => esc_html__( 'This will be selected automatically for users who are using dark mode in their operating system.', 'jarvis' ),
 				'section' => 'colors',
 			)
 		)
