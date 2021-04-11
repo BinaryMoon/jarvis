@@ -772,7 +772,7 @@ function jarvis_get_script_file() {
  * @param string $handle The script handle.
  * @return string
  */
-function jarvis_filter_script_loader_tag( $tag = '', $handle ) {
+function jarvis_filter_script_loader_tag( $tag = '', $handle = '' ) {
 
 	$script_execution = wp_scripts()->get_data( $handle, 'script_execution' );
 
